@@ -1,51 +1,82 @@
-<html><body>
-<h3>[4] DistoX CALIBRATION WINDOW</h3>
+<html>
 
-<b>Only for DistoX, DistoX2, and DistoXBLE</b><br><p>
+<body>
+	<h3>[4] TELA CALIBRAÇÃO DistoX</h3>
 
-Tapping the <i>Calibration</i> menu in the <u>device window</u> shows the lists of the 
-<a href="page_calib_dialog.htm">calibrations</a> of the active device. You can open a calibration or
-create a new one. In both cases you are led to the <u>calibration window</u>.<br><p>
+	<p><b>Somente para DistoX, DistoX2 e DistoXBLE</b></p>
 
-The <u>calibration window</u> has text fields for
-<ul style="margin-top=0">
-<li>the name. Each calibration must have a unique name</li>
-<li>the date.</li>
-<li>a description</li>
-<li>the magnetic dip [degrees], if computed by the calibration algorithm</li>
-</ul>
-and radio buttons for the calibration algorithm. By default this is set to "auto" (ie, let TopoDroid decide which algorithm to use).<br><p>
+	<p>Ao clicar no botão <i>Calibração</i> da <u>tela dispositivos</u> é
+		apresentada a lista de <a href="page_calib_dialog.htm">calibrações</a>
+		disponíveis para o dispositivo selecionado. Você pode abrir uma
+		calibração pré-existente ou criar uma nova. Em ambos os casos você será
+		levado para a <u>tela calibração</u>.</p>
 
-<h4>BUTTONS</h4>
-<ul style="margin-top=0">
-	<li><img src="btn_save.png" width="36" border="1"> save the calibration information to the database</li>
-	<li><img src="btn_open.png" width="36" border="1"> go to the <u>calibration-data window</u></li>
-	<li><img src="btn_read.png" width="36" border="1"> display the calibration coefficients stored in the database</li>
-</ul><br><p>
+	<p>A <u>tela calibração</u> tem campos de texto para:</p>
+	<ul>
+		<li>Nome: cada calibração deve ter um nome único.</li>
+		<li>Data</li>
+		<li>Descrição</li>
+		<li>Inclinação magnética: em graus, se calculada pelo algoritmo de
+			calibração</li>
+	</ul>
 
-<h4>MENUS</h4>
-<ul style="margin-top=0">
-<li><a href="page_calib_import.htm">export</a> the calibration</li>
-<li><u>Delete</u> the calibration and its data from the database (non-recoverable action)</li>
-<li><u>Settings</u></li>
-<li><u>Help</u></li>
-</ul><br><p>
+	<p>e campos rádio para seleção do algoritmo de calibração. A opção "auto",
+		onde o Topodroid escolhe qual algoritmo usar, vem selecionada por
+		padrão.</p>
 
-<h4>CALIBRATION SETTINGS (DistoX only)</h4>
-<ul style="margin-top=0">
-<li><i>Group policy</i>: how to split the calibration data into <a href="page_groups.htm">groups</a> [default "all in groups of 4 data"]</li>
-<li><i>Group tolerance</i>: threshold to highlight calibration data with large angle distance from the group-mean [default 40 min 0]</li>
-<li><i>Error</i>: the computation of the coefficients ends if the variation of every coefficient during an iteration step is smaller than this value [default 10<sup>-6</sup>, min 0].</li>
-<li><i>Iterations</i>: the maximum number of iteration of the calibration algorithm [default 200, min 50].</li>
-<li><i>Remote data</i> immediate download.</li>
-<li><i>Raw data</i>: by default TopoDroid displays the azimuth, inclination, and roll. Select if you want to see also the raw calibration data (the components of G and M), either decimal or hex. [default "no"]</li>
-<li><i>Algorithm</i>: can be 0 (auto), 1 (linear), 2 (non-linear). If a calibration algorithm is left "auto", and this setting is not "auto", then the algorithm of the settings is used to calculate the calibration. If they are both "auto" the algorithm is chosen automatically by TopoDroid depending on the DistoX model and firmware. [default "auto"]</li>
-</ul><br><p>
+	<h4>BOTÕES</h4>
+	<ul>
+		<li><img src="btn_save.png" width="36" border="1"> grava os dados da
+			calibração no banco de dados.</li>
+		<li><img src="btn_open.png" width="36" border="1"> apresenta a <u>tela
+				de dados da calibração</u>.</li>
+		<li><img src="btn_read.png" width="36" border="1"> apresenta os
+			coeficientes de calibração armazenados no banco de dados.</li>
+	</ul>
 
-<a href="page_calib_howto.htm">Calibration howto</a><br>
-<p>
+	<h4>MENUS</h4>
+	<ul>
+		<li><a href="page_calib_import.htm">Exportar</a> a calibração.</li>
+		<li><u>Apagar</u> a calibração e seus dados do banco de dados (estão
+			ação não pode ser desfeita).</li>
+		<li><u>Configurações</u></li>
+		<li><u>Ajuda</u></li>
+	</ul>
 
-<a href="manual03.htm">&lt; Device window</a> |
-<a href="manual05.htm">Calibration data &gt;</a>
+	<h4>CONFIGURAÇÕES CALIBRAÇÃO (somente para a DistoX)</h4>
+	<ul>
+		<li><i>Regra agrupamento</i>: como agrupar os dados de calibração em <a
+			   href="page_groups.htm">grupos</a> [padrão "De 4 em 4"]</li>
+		<li><i>Tolerância grupos</i>: limite a partir do qual os dados de
+			calibração com grande distância angular para a média do grupo serão
+			destacados [padrão 40 mín 0]</li>
+		<li><i>Erro</i>: o cálculo dos coeficientes de variação termina se a
+			variação de todos os coeficientes em uma iteração é menor do que
+			este valor [padrão 10<sup>-6</sup>, mín 0].</li>
+		<li><i>Iterações algoritmo</i>: quantidade máxima de iterações do
+			algoritmo de calibração [padrão 200, mín 50].</li>
+		<li><i>Download dados remotos</i>: fazer download de dados remotos de
+			calibração imediatamente.</li>
+		<li><i>Dados brutos</i>: por padrão o Topodroid apresenta o azimute, a
+			inclinação e a rotação. Ative essa opção se quiser que sejam também
+			apresentados os dados brutos da calibração (os componentes G e M),
+			sejam em decimal ou hexadecimal. [padrão "nenhum"]</li>
+		<li><i>Algoritmo</i>: pode ser 0 (Automático), 1 (Linear) ou 2 (Não
+			linear). Se a opção "tipo de algoritmo" de uma calibração é deixada
+			em "Automático" e esta configuração não estiver em "Automático" o
+			algoritmo escolhido por esta configuração será utilizado para
+			calcular a calibração. Se ambos estiverem em "Automático" o
+			algoritmo a ser utilizado será escolhido automaticamente pelo
+			Topodroid levando em consideração o modelo e versão de firmware da
+			DistoX. [padrão "Automático"]</li>
+	</ul>
 
-</body></html>
+	<p><a href="page_calib_howto.htm">Instruções de calibração</a></p>
+
+	<p><a href="manual03.htm">&lt; Device window</a> |
+		<a href="manual05.htm">Calibration data &gt;</a>
+	</p>
+
+</body>
+
+</html>
