@@ -1,84 +1,150 @@
-<html><body>
-<h3>[5] DistoX CALIBRATION DATA</h3>
+<html>
 
-<b>Only for DistoX, DistoX2, and DistoXBLE</b><br><p>
+<body>
+    <h3>[5] DADOS CALIBRAÇÃO DistoX</h3>
 
-The <u>calibration-data window</u> displays the list of calibration data. If the calibration has no data, the window is empty but for the top buttons. Each calibration data line contains the following data information:
-<ul style="margin-top=0">
-<li>index: incremental index that identifies the data</li>
-<li>group: number of the group the data belongs to</li>
-<li>error: the difference between the calibration-corrected direction and the group average direction, in degrees</li>
-<li>azimuth, inclination, and roll, computed from the raw values without any calibration correction</li>
-<li>optionally the raw calibration data values, ie, the components of G and M in the DistoX frame, either as decimal or hex values</li>
-</ul><br><p>
+    <p><b>Somente para DistoX, DistoX2 e DistoXBLE</b></p>
 
-<h4>Colors</h4>
-The calibration data are displayed with yellow and blue text-color, alternating between even and odd group numbers. Data with no group are grey.<br><p>
+    <p>A <u>tela de dados de calibração</u> apresenta a lista de dados de
+        calibração. Se a calibração não tem nenhum dados, a tela estará vazia
+        exceto pelos botões superiores. Cada linha de dados de calibração
+        apresenta as seguintes informações:</p>
 
-The data values background color are:
-<ul>
-<li>black: normal values</li>
-<li>violet: incomplete data (not used in the calibration, but used for the groups)</li>
-<li>brown: saturated data</li>
-<li>gray: deleted data (only if deleted data are displayed)</li>
-<li>red: data with error larger than 1&deg;</li>
-<li>green: data differing from the group average value by more than the <i>group distance</i></li>
-</ul><br><p>
+    <ul>
+        <li>ID: índice incremental que identifica a linha de dados.</li>
+        <li>Grupo: número do grupo a que esta linha faz parte.</li>
+        <li>Erro: a diferença, em graus, da direção desta linha já corrigida
+            pela calibração e a direção média do grupo.</li>
+        <li>Azimute, inclinação e rotação: calculados a partir dos dados brutos
+            sem nenhuma correção da calibração.</li>
+        <li>Dados brutos de calibração: opcionalmenteos componentes G e M dos
+            dados da DistoX em valores decimais ou hexadecimais.</li>
+    </ul>
 
-<h4>ACTIONS</h4>
-<ul style="margin-top=0">
-<li>tap on a data: calibration data edit dialog</li>
-</ul><br><p>
+    <h4>Cores</h4>
+    <p>Os dados de calibração são apresentados com textos alternadamente em
+        amarelo e azul para os grupos pares e ímpares. Dados sem agrupamento são
+        cinzas.</p>
 
-<h4>BUTTONS</h4>
-<ul style="margin-top=0">
-<li><img src="btn_toggle.png" width="36" border="1"> toggle the DistoX calibration mode on and off (It may fail at the first try)</li>
-<li><img src="btn_bluetooth.png" width="36" border="1"> reset BT, or control DistoX remotely</li>
-<li><img src="btn_download.png" width="36" border="1"> download calibration data from the DistoX</li>
-<li><img src="btn_numbers.png" width="36" border="1"> assign <a href="page_groups.htm">group</a> numbers to the data, or reset the group numbers</li>
-<li><img src="btn_compute.png" width="36" border="1"> compute the <a href="page_calib_coeffs.htm">calibration coefficients</a></li>
-<li><img src="btn_cover.png" width="36" border="1"> <a href="page_calib_distrib.htm">direction distribution</a> of the calibration data</li>
-<li><img src="btn_read.png" width="36" border="1"> read and display the coefficients stored in the DistoX</li>
-<li><img src="btn_write.png" width="36" border="1"> write the calibration coefficients to the DistoX. Enabled only after the calibration coefficients have been computed. The coefficients can also be written directly from the dialog showing the result of the computation. A warning is issued in the data direction coverage is below 95% or the average error is above 0.5&deg;</li>
-<li><img src="btn_search.png" width="36" border="1"> opens the search dialog</li>
-</ul><br><p>
+    <p>A cor de fundo dos dados são:</p>
+    <ul>
+        <li>Preto: valores normais.</li>
+        <li>Violeta: dados incompletos (não usados na calibração mas usados para
+            os grupos).</li>
+        <li>Marrom: dados saturados.</li>
+        <li>Cinza: dados apagados (somente se a apresentação de dados apagados
+            estiver habilitada).</li>
+        <li>Vermelho: dados com erros superiores a 1&deg;.</li>
+        <li>Verde: dados diferindo da média do grupo por um valor superior ao
+            definido em <i>Tolerância grupos</i>.</li>
+    </ul>
 
-At the moment only on-demand data download is active for the calibration data. The downloaded data are added to the current calibration. Therefore you can take some calibration measurements, download the data, check if you are satisfied with them, if not take further data and download them, and so on until you are happy with your calibration data. Downloaded data can be "disabled" (by setting the group number to "0" (zero); 
-disabled data are not used in the computation of calibration coefficients), or deleted (usually not shown in the list of data).
-Deleted data are not taken into account in the group-number assignment and in the computation of the calibration.<br><p>
+    <h4>AÇÕES</h4>
+    <ul>
+        <li>clique em uma linha: apresenta a caixa de diálogo de edição de
+            dados.</li>
+    </ul>
 
-<h4>Bluetooth</h4>
-This button resets the TopoDroid bluetooth connection.<br>
-It also lets the user control the DistoX remotely [A]: turn on or off the laser, and take a calibration shot.
-The data is immediately downloaded if the the data download mode is set to "continuous".<br>
-In this case it is also possible to take (and download) a group of four calibration shots with a small delay between them
-(controlled by the settings "laser-wait" and "shot-wait").<br><p>
+    <h4>BOTÕES</h4>
+    <ul>
+        <li><img src="btn_toggle.png" width="36" border="1"> alterna o modo de
+            calibração da DistoX entre ligado e desligado. Pode falhar na
+            primeira tentativa.</li>
+        <li><img src="btn_bluetooth.png" width="36" border="1"> reinicia a
+            conexão bluetooth ou permite o controle remoto da DistoX.</li>
+        <li><img src="btn_download.png" width="36" border="1"> download dos
+            dados de calibração da DistoX.</li>
+        <li><img src="btn_numbers.png" width="36" border="1"> organiza os dados
+            disponíveis em <a href="page_groups.htm">grupos</a> ou reatribui
+            números aos grupos.</li>
+        <li><img src="btn_compute.png" width="36" border="1"> calcula os <a
+               href="page_calib_coeffs.htm">coeficientes de calibração</a>.</li>
+        <li><img src="btn_cover.png" width="36" border="1"> apresenta a <a
+               href="page_calib_distrib.htm">distribuição de direções</a> dos
+            dados de calibração.</li>
+        <li><img src="btn_read.png" width="36" border="1"> lê e apresenta os
+            coeficientes de calibração armazenados na DistoX.</li>
+        <li><img src="btn_write.png" width="36" border="1"> grava os
+            coeficientes de calibração na DistoX. Este botão só é habilitado
+            depois que os novos coeficientes de calibração foram calculados. Os
+            coeficientes podem também ser gravados na DistoX diretamente na
+            caixa de diálogo que apresenta os resultados do cálculo dos
+            coeficientes. Um alerta é apresentado se a cobertura de direções dos
+            dados for menor do que 95% ou se o erro médio for superior a
+            0.5&deg;.</li>
+        <li><img src="btn_search.png" width="36" border="1"> abre a caixa de
+            diálogo de pesquisa.</li>
+    </ul>
 
-The bluetooth button is disabled while TopoDroid is taking a calibration shot.<br><p>
+    <p>No momento somente é possível o download sob demanda dos dados de
+        calibração. Os dados baixados são adicionados à calibração atual. Desta
+        maneira você pode realizar algumas medidas, baixá-las, verificá-las. Se
+        quiser pode realizar mais medições e baixá-las até que você esteja
+        satisfeito com seus dados de calibração.</p>
 
-<h4>Calibration computation</h4>
-The "gear" button starts the computation of the calibration coefficients.<br>
-When the computation ends, the coefficient dialog is shown.<br>
-If there are not enough data or data groups the computation is not carried out and a warning message is displayed.<br>
-The calibration fails if the limit of the iteration is reached before the computation ends.
-This usually happens if the group numbers have been set wrongly.
-In this case a message is displayed.<br><p>
+    <p>Dados baixados podem ser desabilitados alterando o número de grupo da
+        linha para "0" (zero). Dados desabilitados não são usados no cálculo dos
+        coeficientes de calibração.</p>
 
-<h4>Warnings</h4>
-<ul style=margin-top=0">
-<li><b>saturated data</b>: data with abnormal magnetic field value. A possible cause of this is the presence of spurious magnetic fields. Saturated data have a brown background</li>
-<li><b>zero data</b>: incorrectly received calibration data. The data has zero values, and by default it is not assigned a number, although it is used in computing the groups. Zero data have a violet background</li>
-</ul><br><p>
+    <p> Podem também ser apagados deixando assim de ser apresentados na lista de
+        dados da calibração. Dados apagados não são considerados no processo de
+        agrupamento e nem no cálculo dos coeficientes de calibração.</p>
 
-<h4>MENUS</h4>
-<ul style="margin-top=0">
-<li><u>Display</u>: whether to display all data including the deleted data</li>
-<li><u>Validate</u>: <a href="page_validation.htm">validation</a> of this calibration with another one</li>
-<li><u>Settings</u>: same as for the <u>calibration window</u></li>
-<li><u>Help</u></li>
-</ul><br><p>
+    <h4>Bluetooth</h4>
+    <p>Este botão reinicia a conexão bluetooth do Topodroid.</p>
 
-<a href="manual04.htm">&lt; Calibration window</a> |
-<a href="manual06.htm">Survey data &gt;</a>
+    <p>Ele também permite que o usuário controle remotamente a DistoX [A]: ligar
+        e desligar o laser e realizar uma medida. Os dados são imediatamente
+        baixados se o tipo conexão DistoX for "Contínua".</p>
 
-</body></html>
+    <p>Neste caso também é possível medir (e baixar os resultados) de um grupo
+        de medidas para calibração com um pequeno intervalo entre elas. Este
+        recurso é controlado pelas configurações "Pausa laser" e "Pausa medida".
+    </p>
+
+    <p>O botão <i>bluetooth</i> fica desabilitado enquanto o Topodroid está
+        realizando uma medida de calibração.</p>
+
+    <h4>Cálcula da calibração</h4>
+    <p>O botão <i>engrenagem</i> inicia o cálculo dos coeficientes de
+        calibração.</p>
+
+    <p>Quando o cálculo é finalizado, a caixa de diálogo com os novos
+        coeficientes é apresentada.</p>
+
+    <p>Se não houverem dados suficientes ou grupos de dados suficientes, o
+        cálculo não é realizado e uma mensagem de alerta é apresentada.</p>
+
+    <p>O cálculo de coeficientes falha se o limite de iterações for atingido
+        antes do processamento terminar. Isto normalmente ocorre quando os
+        grupos não foram definidos corretamente. Uma mensagem de alerta é
+        apresentada nesse caso.</p>
+
+    <h4>Alertas</h4>
+    <ul>
+        <li><b>Dados saturados</b>: dados com valores anormais de campo
+            magnético. Uma causa possível é a presença de campos magnéticos
+            espúrios. Dados saturados são apresentados com fundo marrom.</li>
+        <li><b>Dados zerados</b>: dados de calibração recebidos erroneamente. Os
+            dados tem valores zero e, por padrão, não são incluídos em um grupo
+            apesar de serem considerados na distribuição de dados nos grupos.
+            Dados zerados tem um fundo violeta.</li>
+    </ul>
+
+    <h4>MENUS</h4>
+    <ul>
+        <li><u>Mostrar/ocultar apagados</u>: apresentar ou não os dados
+            apagados.</li>
+        <li><u>Validar</u>: <a href="page_validation.htm">validação</a> desta
+            calibração com outra.</li>
+        <li><u>configurações</u>: as mesmas da <u>tela calibração</u></li>
+        <li><u>Ajuda</u></li>
+    </ul>
+
+    <p><a href="manual04.htm">&lt; Tela Calibração</a> |
+        <a href="manual06.htm">Dados topos &gt;</a>
+    </p>
+
+</body>
+
+</html>
