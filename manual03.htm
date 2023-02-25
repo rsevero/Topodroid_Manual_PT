@@ -1,111 +1,162 @@
-<html><body>
-<h3>[3] DEVICE WINDOW</h3>
+<html>
 
-Before surveying you need to connect and pair Android with your device and calibrate it.
+<body>
+    <h3>[3] TELA DISPOSITIVOS</h3>
 
-Tap the <i>Device</i> button in the <u>main window</u> to open the <i>Device Window</i>.
-The list of known devices is shown in the middle. 
-The supported devices are: DistoX, DistoX2, DistoXBLE, Sap5, and Bric4.<br>
-<img src="btn_devices.png" height="36" border="1"><br><p>
+    <p>Antes de começar a topo você precisa conectar e parear seu aparelho
+        Android ao dispositivo de mensuração e calibrá-lo.</p>
 
-TopoDroid works with one device at a time.
-To select it tap on its entry in the list. The name of the selected device is shown at the top, just below the buttons.
-If no device is selected, there is a red message saying "Device not selected".<br><p>
+    <p>Clique no botão <i>Dispositivo</i> na <u>tela principal</u> para abrir a
+        <i>Tela Dispositivos</i>. A lista de dispositivos já reconhecidos será
+        apresentada na parte inferior da tela. Os seguintes tipos de
+        dispositivos são suportados: DistoX, DistoX2, DistoXBLE, SAP5 e BRIC4.
+    </p>
 
-If the device list is empty, your device needs to be connected and paired with the Android.
-This can be done with the <i>Settings</i> app.<br>
-If it does not pair automatically the DistoX PIN is "0000", four zeros.<br>
-If it does not pair automatically the Sap5 PIN is "000000", six zeros.<br><p>
+    <p><img src="btn_devices.png" height="36" border="1"></p>
 
-<b>Device nickname</b><br>
-By default TopoDroid uses the bluetooth MAC address as name for a device.
-The devices can be given nicknames to distinguish among several devices more easily.<br><p>
+    <p>O Topodroid trabalha com um dispositivo por vez. Para selecionar o
+        dispositivo clique na opção desejada da lista. O nome do dispositivo
+        selecionado aparece no topo, imediatamente abaixo dos botões. Se nenhum
+        dispositivo foi selecionado, é apresentada a mensagem "Nenhum
+        dispositivo selecionado" em vermelho.</p>
 
-<i>Note. Buttons and menus marked with [*] are specific for the DistoX and need the device to be on.</i><br><p>
+    <p>Se a lista de dispositivos estiver vazia, o seu dispositivo precisa ser
+        conectado e pareado com seu aparelho Android. Isso pode ser feito com o
+        app <i>Configurações</i> de seu Android.</p>
 
-<h4>ACTIONS</h4>
-<ul style="margin-top=0">
-<li>tap on a device entry makes it the active device</li>
-<li>long tap on a device entry sets the <a href="page_device_name.htm">nickname</a> or set the "second" DistoX</li>
-</ul><br><p>
+    <p>Se o Android não parear automaticamente com uma DistoX, use o PIN "0000":
+        quatro zeros.</p>
 
-<h4>BUTTONS</h4>
-<ul style="margin-top=0">
-<li><img src="btn_bluetooth.png" width="36" border="1"> reset bluetooth connection.</li>
-<li><img src="btn_info.png" width="36" border="1"> device information [N,*]</li>
-<li><img src="btn_memory.png" width="36" border="1"> <a href="page_memory.htm">DistoX</a> or <a href="page_bric_memory.htm">Bric4</a> memory functions [*]</li>
-<li><img src="btn_toggle.png" width="36" border="1"> toggle the DistoX calibration mode on and off [*]</li>
-<li><img src="btn_compute.png" width="36" border="1"> DistoX <a href="page_calib_dialog.htm">calibrations</a></li>
-<li><img src="btn_read.png" width="36" border="1"> read and display the calibration coefficients from the DistoX [A,*]</li>
-</ul><br><p>
+    <p>Se o Android não parear automaticamente com uma SAP5, use o PIN "000000":
+        seis zeros.</p>
 
-[*] These action need communication with the device.<br><p>
+    <p><b>Apelido do dispositivo</b></p>
 
-For the DistoX all the buttons are active.<br>
-For the Bric4, the first three buttons are active.<br>
-For the Sap5 only the first button is active.<br><p> 
+    <p>Por padrõa o Topodroid usa o endereço MAC do bluetooth como nome do
+        dispositivo. Os dipositivos podem receber apelidos para serm
+        identificados com mais facilidade.</p>
 
-If toggling the DistoX calibration mode fails at the first try, repeat it a second time.<br><p>
+    <p><b>Obs:</b> Botões e itens de menu marcados com [*] são específicos da
+        DistoX e só serão apresentados se o dispositivo selecionado for deste
+        tipo.</p>
 
-Reading the device info fails if TopoDroid is connected and downloading data. 
-This can happen when te <u>device window</u> is opened from the <u>shot window</u>.
-<br><p>
+    <h4>AÇÕES</h4>
+    <ul>
+        <li>clicar em um dispositivo na lista o seleciona como ativo.</li>
+        <li>clique longo em um dispositivo na lista abre a caixa de diálogo para
+            definir o <a href="page_device_name.htm">apelido</a> do dispositivo
+            e configurar o segundo dispositivo.</li>
+    </ul>
 
-<h4>MENUS</h4>
-<ul style="margin-top=0">
-<!-- li><u>Scan</u> for new DistoX devices [N,*]. You might have to try two or three times before the DistoX is found</li -->
-<!-- li><u>BLE Scan</u> for new BLE devices [N,*].</li -->
-<!-- li><u>Pair</u> the active DistoX with the Android, if not already paired [N,*]</li -->
-<li><u>Disconnect</u> clears the active device [A]</li>
-<li>Dump and upload <a href="page_firmware.htm">firmwares</a> to the DistoX (v. 2 and BLE) [E,*]</li>
-<li>Display log of DistoX packets [T]</li>
-<li><u>Settings</u></li>
-<li><u>Help</u></li>
-</ul><br>
+    <h4>BOTÕES</h4>
+    <ul>
+        <li><img src="btn_bluetooth.png" width="36" border="1"> reiniciar
+            conexão bluetooth.</li>
+        <li><img src="btn_info.png" width="36" border="1"> informações do
+            dispositivo [N,*]</li>
+        <li><img src="btn_memory.png" width="36" border="1"> funções de memória
+            da <a href="page_memory.htm">DistoX</a> ou <a
+               href="page_bric_memory.htm">BRIC4</a> [*]</li>
+        <li><img src="btn_toggle.png" width="36" border="1"> alternar o modo de
+            calibração da DistoX entre ligado e desligado [*]</li>
+        <li><img src="btn_compute.png" width="36" border="1"> <a
+               href="page_calib_dialog.htm">calibração</a> da DistoX</li>
+        <li><img src="btn_read.png" width="36" border="1"> ler e apresentar os
+            coeficientes de calibração da DistoX [A,*]</li>
+    </ul>
 
-<h4>DEVICE SETTINGS</h4>
-<ul style="margin-top=0">
-<li><i>Bluetooth</i>: whether to enable, disable, or check on start-up [default "check"]</li>
-<li><i>Number of new data</i>: get the number of new data before downloading them (on-demand mode) [default "no"]</li>
-</ul><br><p>
+    <p>[*] <i>Estas ações dependem de comunicação com o dispositivo.</i></p>
 
-The following settings apply only to the DistoX (which uses classical bluetooth).
-<ul style="margin-top=0">
-<li><i>Connection mode</i>. "On-demand", "continuous", or "multi" [default "on-demand"]</li>
-<!-- li><i>Auto reconnect</i>: automatically reconnect if the connection is lost in "continuous" data download-mode [default "no"]</li -->
-<li>DistoX <i>Socket</i> type. Normal or "insecure" [default is "insecure"]</li>
-<li>DistoX <i>Z6-workaround</i>: a download timeout error on Z6 phone, and possibly other devices. It is safe to leave this enabled [default "on"]</li>
-<!-- li><i>Auto pairing</i>: whether TopoDroid should try to pair with the DistoX selected from a scan [default "no"]</li -->
-</ul><br><p>
+    <p>Com uma DistoX, todos os botões são apresentados.</p>
 
-<b>Connection mode</b><br>
-There are three connections modes for the DistoX.
-<ul>
-<li>in <i>on-demand</i> mode data are downloaded in burst, and when there is no more data to download the connection is closed.</li>
-<li>in <i>continuous</i> mode TopoDroid remains connected to the DistoX and the shots are downloaded as soon as they are taken.
-If the DistoX and Android disconnect, TopoDroid repeatedly tries to reconnect.
-Otherwise, the bluetooth connection is closed.</li>
-<li>the <i>multi</i> mode is like the "on-demand" mode, but a long-tap on the "download" button, in the <i>Shot</i> window or in the <i>Sketch</i> window,
-changes the DistoX. It you have set a "second" DistoX (in the <i>Device</i> window) it is swapped with the current DistoX.
-Otherwise, you get a dialog to pick one among the paired DistoXes.</li>
-</ul>
-<br>
-With the "multi" mode, the current DistoX is shown in the title of the <i>Shot</i> and <i>Sketch</i> windows.<br>
-The connection mode applies only to the data download. Other DistoX functions use a one-shot query mode.
-<br><p>
+    <p>Com uma BRIC4, os primeiros três botões são apresentados.</p>
 
-Sap5 and Bric4 are always connected in <i>continuous</i> mode.<br><p>
+    <p>Com uma SAP5, somente o primeiro botão é apresentado.</p>
 
-<a href="page_geek.htm">Custom settings</a>: <i>Connection delay</i>, <i>Second DistoX</i>, <i>Data pause</i>, <i>Data-ready wait</i>, <i>Laser pause</i>, <i>Shot pause</i>.<br><p>
+    <p>Se a alteração de modo de calibração da DistoX não funcionar na primeira
+        tentativa, tente uma segunda vez.</p>
 
-<a href="page_device_select.htm">Devices</a><br>
-<a href="page_trouble.htm">DistoX troubleshooting</a><br>
-<a href="page_distox.htm">DistoX functions</a><br>
-<a href="page_bric.htm">Bric4 functions</a><br>
-<a href="page_sap.htm">Sap5 functions</a><br>
-<p>
+    <p>A leitura de informações do dispositivo pode falhar se o Topodroid
+        estiver conectado e fazendo download de dados. Isso pode acontecer se a
+        <u>tela dispositivos</u> tiver sido aberta a partir da <u>tela
+            medidas</u>.</p>
 
-<a href="manual02.htm">&lt; Main window</a> |
-<a href="manual04.htm">Calibration window &gt;</a>
+    <h4>MENUS</h4>
 
-</body></html>
+    <ul>
+        <li><u>Disconectar</u>: remove o dispositivo ativo [A]</li>
+        <li>Baixar e enviar <a href="page_firmware.htm">firmwares</a> para a
+            DistoX (versão 2 e BLE) [E,*]</li>
+        <li><u>Configurações</u></li>
+        <li><u>Ajuda</u></li>
+    </ul>
+
+    <h4>CONFIGURAÇÕES</h4>
+    <ul>
+        <li><i>Bluetooth</i>: "Desativado", "Verificar ao abrir app" ou
+            "Ativado" [default "Verificar ao abrir app"]</li>
+        <li><i>Quantidade dados novos</i>: obtém a quantidade de dados a serem
+            baixados antes do download dos mesmos (somente no modo "Sob
+            demanda") [padrão "desligado"]</li>
+    </ul>
+
+    <p>As configurações abaixo se referem somente à DistoX (que usa o bluetooth
+        clássico):</p>
+
+    <ul>
+        <li><i>Tipo conexão DistoX</i>. "Sob demanda", "Contínua", or "Multi"
+            [padrão "Sob demanda"]</li>
+        <li>Tipo de <i>Soquete DistoX</i>: "Padrão" or "Inseguro" [padrão
+            "Inseguro"]</li>
+        <li><i>Gambiara Z6 DistoX</i>: um erro de tempo expirado no download em
+            aparelhos Z6 e possivelmente outros modelos de aparelhos. é seguro
+            deixar essa opção ligada. [padrão "ligado"]</li>
+    </ul>
+
+    <p><b>Tipo conexão DistoX</b></p>
+
+    <p>Há três regimes de conexão de dados para a DistoX:</p>
+
+    <ul>
+        <li><i>Sob demanda</i>: os dados são baixados de uma só vez e quando não
+            há mais dados a conexão é fechada.</li>
+        <li><i>Contínua</i>: o Topodroid premanece conectado à DistoX e as
+            medidas são baixadas assim que são criadas. Se a DistoX e o Android
+            perderem a conexão, o Topodroid tenta refazer a conexão repetidas
+            vezes. Caso não tenha sucesso, a conexão bluettoth é fechada.</li>
+        <li><i>Multi</i>: é similar ao regime "Sob demanda" mas neste caso um
+            clique longo no botão "Download" tanto da tela de <i>Medidas</i>
+            como na tela de <i>Desenho de Croqui</i> troca a DistoX ativa. Se
+            você definiu uma segunda DistoX na tela <i>Dispositivos</i>, ela é
+            trocada pela DistoX ativa. Do contrário é apresentada uma caixa de
+            diálogo para que você selecione uma das DistoX pareadas.</li>
+    </ul>
+
+    <p>No regime "Multi" a DistoX atual é apresentada no título das telas
+        <i>Medidas</i> e <i>Desenho</i>.</p>
+
+    <p>O tipo de conexão só afeta o download de dados. As outras funções da
+        DistoX funcionam sempre sob demanda.</p>
+
+    <p>A SAP5 e a BRIC4 sempre se conectam no regime <i>Contínua</i>.</p>
+
+    <p>Configurações <a href="page_geek.htm">Especiais</a>: <i>Atraso
+            conexão</i>, <i>Topo 2 DistoX</i>, <i>Pausa dados</i>, <i>Tempo
+            espera dados prontos</i>, <i>Pausa laser</i>, <i>Pausa medida</i>.
+    </p>
+
+    <p><a href="page_device_select.htm">Dispositivos</a><br>
+        <a href="page_trouble.htm">Solução de problemas DistoX</a><br>
+        <a href="page_distox.htm">Funções DistoX</a><br>
+        <a href="page_bric.htm">Funções BRIC4</a><br>
+        <a href="page_sap.htm">Funções SAP5</a>
+    </p>
+
+
+    <p><a href="manual02.htm">&lt; Tela Principal</a> |
+        <a href="manual04.htm">Tela Calibração &gt;</a>
+    </p>
+
+</body>
+
+</html>
