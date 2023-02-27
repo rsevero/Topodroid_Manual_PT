@@ -1,196 +1,278 @@
-<html><body>
-<h3>[6] SURVEY DATA WINDOW</h3>
+<html>
 
-The survey <u>data window</u> displays the list of the shots of the survey.<br><p>
+<body>
+  <h3>[6] TELA DADOS TOPO</h3>
 
-The title displays the survey name, and, in multi/double device mode, the active device.
-The title color depends on the current station assignment policy:
-<ul>
-<li>blue: foreshot policies</li>
-<li>dark blue: backshot policies</li>
-<li>pink: "tripod" policy</li>
-<li>violet: "backsight" policy</li>
-<li>red: "magnetic anomaly" policy</li>
-<li>orange: "toporobot" policy</li>
-</ul><br><p>
+  <p>A <u>tela dados topo</u> apresenta a relação de medidas da topo.</p>
 
-Shot properties are shown through the foreground and background color of the shot data and station names.
-<br><p>
+  <p>O título apresenta o nome da topo e, se estiver em modo "multi" de conexão
+    DistoX, o dispositivo ativo no momento. A cor do título indica o método
+    atual para <a href="page_station_policy.htm">nomear bases</a>:</p>
 
-TopoDroid distinguishes four kinds of shots (displayed with different colors): "leg", "repeated-leg", "splay", and "blank".
-Splays can be further classified as "cross" (X), horizontal (H), vertical (V), and "scan" (shots acquired in scan mode).
-<a href="page_shot_edit1.htm">Splay classes</a> X-H-V are disabled by default [G].<br><p>
+  <ul>
+    <li>azul: método "Aux, visada" ou "Visada, aux".</li>
+    <li>azul escuro: método "Aux, contra" ou "Contra, aux".</li>
+    <li>rosa: método "Tripé".</li>
+    <li>violeta: método "Contra, aux, visada".</li>
+    <li>vermelho: método "Anomalia magnética".</li>
+    <li>laranja: método "TopoRobot".</li>
+  </ul>
 
-Shot data foreground color:
-<ol>
-<li>[white] "leg" (the first shot of a group of repeated measurements): this shot has both the "From" and the "To" station set</li>
-<li>[grey] repeated-leg data (the following shots of a group of leg shots): these shots do not need to have the stations set</li>
-<li>[blue] splay: it has only one station, usually the "From" station</li>
-<li>[green] X-splay</li>
-<li>[dark blue] H/V-splay</li>
-<li>[light green] scan splay</li>
-<li>[orange] blank shots, i.e, shots with the stations not set yet</li>
-<li>[yellow]: back-leg (backsight policy)</li>
-<li>[violet]: blank leg</li>
-</ol><p>
+  <p>Algumas características das medidas obtidas são indicadas através das cores
+    de fundo e de texto dos dados da medida e dos nomes das bases.</p>
 
-Shot data background color:
-<ul>
-<li>[reddish] <a href="page_accuracy.htm">unreliable</a> shots, i.e. shots with "abnormal" field intensities (only DistoX2)</li>
-<li>[orange] short leg</li>
-<li>[gray] commented shot</li>
-</ul><p>
+  <p>O Topodroid distingue quatro tipos de medidas através de diferentes cores:
+    "visada", "visada repetida", "auxiliar" e "em branco". As medidas auxiliares
+    podem ser classificadas em "seção" (X), horizontal (H), vertical (V) e
+    "scan" (medidas obtidas no modo scan). <a href="page_shot_edit1.htm">Tipos
+      medidas auxiliares</a> X-H-V são desabilitadas por padrão [G].</p>
 
-Station name foreground color:
-<ul>
-<li>[bright green] current station</li>
-</ul><p>
+  <p>Cores do texto dos dados das medidas:</p>
+  <ol>
+    <li>[branco] "visada" (a primeira medida de um grupo de medidas repetidas):
+      esta medida tem tanto a base DE como a base PARA definidos.</li>
+    <li>[cinza] "visada repetida" (as medidas seguintes de um grupo de medidas
+      repetidas): estas medidas não precisam ter suas bases definidas.</li>
+    <li>[azul] "auxiliar": só tem uma base definida, normalmente a base DE.</li>
+    <li>[verde] "auxiliar" (X).</li>
+    <li>[azul escuro] "auxiliar" (H/V).</li>
+    <li>[verde claro] "auxiliar" scan</li>
+    <li>[laranja] medidas "em branco", ou seja, que não tem nenhuma de suas
+      bases definidas.</li>
+    <li>[amarelo]: contravisada (método "Contra, aux, visada")</li>
+    <li>[violeta]: blank leg</li>
+  </ol>
+  <p>
 
-Station names background color:
-<ul>
-<li>[dark green] last downloaded shots</li>
-<li>[gray] shot in "multishot" selection set</li>
-<li>[dark yellow] DistoX backsight data</li>
-</ul><p>
+  <p>Cores de fundo dos dados das medidas:</p>
 
-<img src="shots_list.png" alt="shots list"/><p>
+  <ul>
+    <li>[avermelhado] medidas <a href="page_accuracy.htm">não confiáveis</a> ,
+      ou seja, medidas com valores anormais em algum dos campos (somente
+      DistoX).</li>
+    <li>[laranja] perna curta</li>
+    <li>[cinza] medida comentada</li>
+  </ul>
 
-<h4>Station names</h4>
-Station names are properties of the shot, like the azimuth or the distance.
-Unlike these, however, the names of the stations are used to "join" together the shots to form the midline.
-This affects both the midline and the sketches.<br>
-When the name of a leg station is changed, the midline can change.
-If the station has attached a x-section, this is unlinked from the midline (and can be later linked to another
-station).
-A sketch (plan or profile) can be unlinked from the midline if the name of its reference station (the origin)
-is changed.<br><p>
+  <p>Cor do texto do nome da base:</p>
+  <ul>
+    <li>[verde claro] base ativa no momento.</li>
+  </ul>
 
-<h4>ACTIONS</h4>
-<ul style="margin-top:0">
-<li>tap on the shot data opens the shot <a href="page_shot_edit1.htm">edit dialog</a></li>
-<!--li>tap on a shot clino: shot <a href="page_shot_edit2.htm">secondary actions</a></li-->
-<li>tap on a station: show/hide splays at the station</li>
-<li>long tap on a station: select/deselect the <a href="page_current.htm">"active" station</a></li>
-</ul><br><p>
+  <p>Cor de fundo do nome da base:</p>
+  <ul>
+    <li>[verde escuro] últimas medidas baixadas.</li>
+    <li>[cinza] medida produzida no modo "multishot".</li>
+    <li>[amarelo escuro] dados de contravisada da DistoX.</li>
+  </ul>
 
-<h4>BUTTONS</h4>
-<ul style="margin-top:0">
-<li><img src="btn_download.png"  width="36" border="1"> Data <a href="page_download.htm">download</a></li>
-<li><img src="btn_bluetooth.png" width="36" border="1"> <a href="page_bluetooth.htm">Bluetooth</a></li>
-<li><img src="btn_mode.png"      width="36" border="1"> Data <a href="page_displaymode.htm">display mode</a></li>
-<li><img src="btn_sketch.png"    width="36" border="1"> <a href="page_plot_list.htm">Sketches</a></li>
-<li><img src="btn_note.png"      width="36" border="1"> Survey <a href="page_survey_notes.htm">notes</a></li>
-<li><img src="btn_plus.png"      width="36" border="1"> Insert <a href="page_man_data.htm">manual</a> shot data</li>
-<li><img src="btn_station.png"   width="36" border="1"> <a href="page_saved_station.htm">Saved stations</a></li>
-<li><img src="btn_azimuth.png"   width="36" border="1"> <a href="page_azimuth.htm">Extend reference</a> azimuth</li>
-<li><img src="btn_search.png"    width="36" border="1"> <a href="page_search.htm">Station/Leg search</a></li>
-<li><img src="btn_refresh.png"   width="36" border="1"> Refresh data list</li>
-</ul><br><p>
+  <p><img src="shots_list.png" alt="shots list" /></p>
 
-<b>Long taps</b><br>
-<ul style="margin-top:0">
-<li>"Download": device switch (only for multi device modes)</li>
-<li>"Sketch": immediately open the most recent sketch</li>
-<li>"Manual data": instruments calibration dialog</li>
-<li>"Search": move to the next result</li>
-</ul><br><p>
+  <h4>Nomes de bases</h4>
 
+  <p>Os nomes das bases são propriedades da medida assin como o azimute e a
+    distância. Ao contrário destas, entretanto, os nomes das bases são usados
+    para unir as visadas para formar a linha de trena. Isso afeta tanto a linha
+    de trena quando os croquis.</p>
 
-Multi-shot selection buttons:<br>
-<ul style="margin-top:0">
-<li>set shots extend to <i>left</i></li>
-<li>flip shots extend</li>
-<li>set shots extend to <i>right</i></li>
-<li>special actions [T]</li>
-<li><i>cut</i> the shots and put them in the shot-buffer</li>
-<li><i>copy</i> the shots into the shot-buffer</li>
-<li><i>close</i> the multi-shot selection</li>
-</ul><br><p>
+  <p>Quando o nome de uma base é alterado, alinha de trena pode sofrer
+    modificações também.</p>
 
-<h4>Sketch dialog</h4>
-Through the "sketch" dialog you create a new sketch or open an existing one. There is a button to create a new sketch, and a two-column list of the current survey sketches. Items in the left column open a sketch in plan view, those in the right column open it in profile view. You can also switch between sketches from within the <u>sketch window</u>.<br><p>
-<!--
-If the 3D modelling is enabled there is also a button to create a new 3D model, and the existing 3D models are listed after the sketches.<br><p>
--->
+  <p>Se a base tiver um corte-x anexado, ele é desconectado da linha de trena e
+    pode ser posteriormente anexado a outra base.</p>
 
-<h4>MENUS</h4>
-<ul style="margin-top:0">
-<li><u>Survey info</u>: survey information window</li>
-<li><u>Recover</u>: deleted item (shot or sketch) <a href="page_undelete.htm">recovery</a></li>
-<li><u>Photo</u>: pictures taken for this survey</li>
-<li><u>Sensor</u>: sensor data taken for this survey</li>
-<li><u>3D</u>: <a href="manual15.htm">3D viewer</a></li>
-<li><u>Device</u>: switches to the device window</li>
-<li><u>Settings</u></li>
-<li><u>Help</u></li>
-</ul><br><p>
+  <p>Um croqui (planta-baixa ou perfil) pode ser desconectado da linha de trena
+    se o nome da sua "base referência" for alterada.</p>
 
-<h4>SURVEY SETTINGS</h4>
-<ul style="margin-top:0">
-  <li><i>Team</i>: the default surveying team. If the value is not empty, it is used to set the "Team" field when you create a new survey. Write your name and that of the cavers you usually survey with. [default unset]</li>
-  <li><i>Stations policy</i>: select the automatic <a href="page_station_policy.htm">station naming policy.</a> [default "splays+foresight"]</li>
-  <li><i>Station names</i> specifies the type of the station names, either alphanumeric or numeric [default "alphanumeric"]</li>
-  <li><i>Start station</i>: the default first station name for new surveys. Can be overridden in the <i>New survey</i> dialog. [default unset]</li>
-  <li><i>Thumbnail size</i>: size of the photo thumbnails [default 200, min 80, max 400]</li>
-  <li><i>Data default-export</i>: default data export format [default none]</li>
-  <li><i>Sketch origin</i>: whether to suggest always the same origin or not [default no]</li>
-  <li><i>Shared x-sections</i>: whether at-station x-section should be shared by default [default no]</li>
-  <li><i>DATA UNITS</i>
-    <ul style="margin-top:0; margin-bottom:0">
-    <li><i>Length units</i>: either meters or feet [default meters]</li>
-    <li><i>Angle units</i>: either degrees or grads [default degrees]</li>
-    <li><i>Sketch grid-cell unit</i>: either meters, yards, 2-ft, or 0.1 meter [default meters]</li>
-    </ul>
-  </li>
-  <li><i>SHOT DATA</i>
-    <ul style="margin-top:0; margin-bottom:0">
-    <li><i>Leg tolerance</i>: the angle tolerance (percent) between consecutive shots of a leg [default 0.05, min 0]. The length tolerance is the product of the angle tolerance and the length.</li>
-    <li><i>Max shot length</i>: longer shots are marked as "deleted" [default 50 m, min 20 m]</li>
-    <li><i>Min leg length</i>: shorter legs are highlighted with an orange background [default 0.5 m]</li>
-    <li><i>Min leg shots</i>: minimum number of close consecutive shots for a leg.[default 2, min 2, max 4]</li>
-    <li><i>Backshot DistoX</i>: DistoX in "backshot" mode [default no]</li>
-    <li><i>Splay vertical threshold</i> defines how the <a href="page_azimuth.htm">splay "extend"</a> is set [default 10, min 0, max 90]</li>
-    <li><i>Leg WENS threshold</i> (Therion "vthreshold"): the LRUD for manually entered shots are considered West-East-North-South when the shot inclination exceeds the vertical threshold [default 80, min 0, max 90]</li>
-    <li><i>Shot extend</i>: either fixed or relative to the <a href="page_azimuth.htm">extend reference</a> azimuth [default relative]</li>
-    <li><i>Loop closure</i> error compensation. It is advisable not to do the compensation, as this allows to see graphically the mis-closures, and spot possible survey errors [default "none"].</li>
-    <li>whether to show <i>prev/next</i> buttons in the shot edit dialog [default yes]</li>
-    <li><i>Backsight</i> fields in the shot manual input dialog [N] [default no]</li>
-    <li><i>Timer</i>: seconds of delay before measuring directions with the Android sensors [default 10, min 0]</li>
-    <li><i>Beep volume</i>: timer beep volume [N] [default 50, min 10, max 100]</li>
-    </ul>
-  </li>  
-  <li><i>LOCATION <a href="page_fixed_list.htm">settings</a></i></li>  
-  <li><i>ACCURACY <a href="page_accuracy.htm">settings</a></i></li>
-</ul><br><p>
+  <h4>AÇÕES</h4>
+  <ul>
+    <li>um clique simples nos dados da medida abre a <a
+         href="page_shot_edit1.htm">caixa de edição</a>.</li>
+    <li>um clique simples na base: mostra/esconde as medidas auxiliares da base.
+    </li>
+    <li>um clique longo na base: seleciona/deseleciona a <a
+         href="page_current.htm">base ativa</a>.</li>
+  </ul>
 
-<div style="font-size:90%">
-<a href="page_geek.htm">Custom settings</a>: <i>Latest shots and their timeout</i>, <i>Fractional extend</i>, <i>Splay classes and coloring</i>, <i>Diving mode</i>, <i>Sensors</i>.
-</div><br><p>
+  <h4>BOTÕES</h4>
+  <ul>
+    <li><img src="btn_download.png" width="36" border="1"> <a
+         href="page_download.htm">Download</a> de dados</li>
+    <li><img src="btn_bluetooth.png" width="36" border="1"> <a
+         href="page_bluetooth.htm">Bluetooth</a></li>
+    <li><img src="btn_mode.png" width="36" border="1"> <a
+         href="page_displaymode.htm">Modo de apresentação</a> dos dados</li>
+    <li><img src="btn_sketch.png" width="36" border="1"> <a
+         href="page_plot_list.htm">Croquis</a></li>
+    <li><img src="btn_note.png" width="36" border="1"> <a
+         href="page_survey_notes.htm">Comentários</a> sobre a topo</li>
+    <li><img src="btn_plus.png" width="36" border="1"> Inserir <a
+         href="page_man_data.htm">manualmente</a> uma medida</li>
+    <li><img src="btn_station.png" width="36" border="1"> <a
+         href="page_saved_station.htm">Bases gravadas</a></li>
+    <li><img src="btn_azimuth.png" width="36" border="1"> <a
+         href="page_azimuth.htm">Direção de base no perfil retificado</a></li>
+    <li><img src="btn_search.png" width="36" border="1"> <a
+         href="page_search.htm">Busca por base/visada</a></li>
+    <li><img src="btn_refresh.png" width="36" border="1"> "Atualizar" relação de
+      medidas</li>
+  </ul>
 
-To exit the survey data window double tap on the <i>BACK</i> button of your device.<br>
-If the automatic backup is enabled and the default data file format is set, the data are exported whenever the data window is closed.<br><p>
+  <p><b>Cliques longos:</b></p>
+  <ul>
+    <li>"Download": troca o dispositivo de medida (somente com o tipo de conexão
+      "multi" para a DistoX).</li>
+    <li>"Croqui": abre imediatamente o último croqui utilizado.</li>
+    <li>"Dados manuais": entrada manual de medidas.</li>
+    <li>"Busca": pular para o próximo resultado.</li>
+  </ul>
 
-<b>Warning</b>
-The first shot entry on the list may not get updated after an editing or a tap, due to a problem of Android.
-The "Refresh" button can be used to request a reload of the list, if this happen.
-<br><p>
+  <p>Botões apresentados no modo "seleção de várias medidas":</p>
+  <ul>
+    <li>Define a direção das bases no perfil retificado para a <i>esquerda</i>.
+    </li>
+    <li>Inverte a direção das bases no perfil retificado.</li>
+    <li>Define a direção das bases no perfil retificado para a <i>direita</i>.
+    </li>
+    <li>Açoes especiais. [T]</li>
+    <li><i>Recorta</i> as medidas e as armazena no registro temporário de
+      medidas.</li>
+    <li><i>Copia</i> as medidas para o registro temporário de medidas.</li>
+    <li><i>Termina</i> o modo "seleção de várias medidas".</li>
+  </ul>
 
-<b>Loop error compensation</b><br>
-It is advisable not to do the compensation, as this allows to see graphically the mis-closures, and spot possible survey errors.
-This is the default behaviour.<br><p>
+  <h4>Caixa de diálogo "Croquis"</h4>
+  <p>Através da caixa de diálogo "Croquis" você pode criar um novo croqui ou
+    abrir um croqui pré-existente. Há um botão para a criação de um novo croqui
+    e uma relação com duas colunas dos croquis já criados. Os itens na coluna da
+    esquerda abrem as plantas-baixas e os da direita abrem os perfis. Você pode
+    também mudar de um croqui para outro através dentro da <u>tela desenho</u>.
+  </p>
 
-Nevertheless TopoDroid implements a few "loop error compensation" policies.<br>
-The <i>normal</i> policy [E] distributes the loop closure errors on the network branches that make the loops.<br>
-In the <i>weighted</i> policy [E] the mis-closures of the loops are weighted according to the "branch relevance".<br>
-<!-- i don't recall exactly how this works -->
-The <i>selective</i> [T] compensation applies only the corrections of loops with mis-closure smaller than a certain percent
-(the "loop threshold" setting) of the loop length.
-The loops above threshold are displayed violet.
-<br>
-Finally, the special loop compensation based on <i>triangles</i> is for <a href="page_trilateration.htm">trilateration</a> [T].
-<br><p>
+  <h4>MENUS</h4>
+  <ul>
+    <li><u>Fechar</u>: fecha a topo atual</li>
+    <li><u>Info topo</u>: abre a tela de informarções sobre a topo</li>
+    <li><u>Recuperar/colar</u>: <a href="page_undelete.htm">recuperação</a> de
+      item apagado (medida ou croqui) [N]/[E]</li>
+    <li><u>Foto</u>: fotos armazenadas nesta topo [A]</li>
+    <li><u>Áudio</u>: áudios armazendos nesta topo [T]</li>
+    <li><u>Sensor</u>: dados de sensores diversos armazenados nesta topo [E]
+    </li>
+    <li><u>3D</u>: <a href="manual15.htm">Visualizador 3D</a> [N]</li>
+    <li><u>Dispositivo</u>: abre a tela dispositivos</li>
+    <li><u>Configurações</u></li>
+    <li><u>Ajuda</u> [N]</li>
+  </ul>
 
-<a href="manual05.htm">&lt; Calibration data</a> |
-<a href="manual07.htm">Shot list &gt;</a>
+  <h4>CONFIGURAÇÕES TOPO</h4>
+  <ul>
+    <li><i>Equipe</i>: a equipe padrão de topo. Este valor é usado como valor
+      inicial do campo "Equipe" quando você cria uma nova topo. Inclua o seu
+      nome e os dos espeleólogos com quem costuma mapear. [padrão vazio]</li>
+    <li><i>Nomear bases</i>: seleciona o <a
+         href="page_station_policy.htm">método automático de nomeamento de
+        bases.</a> [padrão "Aux, visada"]</li>
+    <li><i>Tipo nome base</i> define o tipo de nomes de bases: "alfanumérico" ou
+      "numérico" [padrão "alfanumérico"]</li>
+    <li><i>Nome base inicial</i>: o nome inicial padrão para novoas topos. Pode
+      ser alterado na caixa de diálogo <i>Nova topo</i>. [padrão "0"]</li>
+    <li><i>Tamanho miniaturas</i>: tamanho das fotos miniaturas [padrão 200, mín
+      80, máx 400] [A]</li>
+    <li><i>Base editável</i>: ddefine se os nomes das bases são editáveis na
+      relação de medidas [padrão "não"] [E]</li>
+    <li><i>Origem croqui</i>: define se a mesma origem será sugerida para todos
+      os croquis ou não [padrão "não"]</li>
+    <li><i>Cortes X compartilhados</i>: define se os cortes X das bases devem
+      ser compartilhados entre croquis [padrão "não"]</li>
+    <li><i>UNIDADES</i>
+      <ul>
+        <li><i>Unidade distância</i>: "metros" ou "pés" [padrão "metros"]</li>
+        <li><i>Unidade ângulo</i>: "graus" ou "grados" [padrão "graus"]</li>
+        <li><i>Unidade grade croqui</i>: tamanho da célula da grade dos croquis:
+          "metros", "jardas", "2 pés" ou "0,1 metro" [padrão "metros"]</li>
+        <li><i>Unidade régua</i>: a mesma da célula da grade dos croquis
+          ("célula grade"), "metros" ou "pés" [padrão "célula grade"]</li>
+      </ul>
+    </li>
+    <li><i>DADOS MEDIDAS</i>
+      <ul>
+        <li><i>Tolerância visadas</i>: o percentual de tolerância angular entre
+          duas medidas consecutivas para criar uma visada [padrão 0,05, mín 0].
+          A tolerância da distância é o produto desta valor e a distância.</li>
+        <li><i>Compr máx medida</i>: medidas mais longas são marcadas como
+          apagadas [padrão 50 m, mín 20 m]</li>
+        <li><i>Compr mín medida</i>: medidas mais curtas são apresentadas com um
+          fundo laranja [padrão 0 m]</li>
+        <li><i>Qt mín medidas/visada</i>: quantidade mínima de medidas
+          consecutivas simialres para que uma nova base seja criada
+          automaticamente [padrão 3, mín 2, máx 4] [E]</li>
+        <li><i>Lim vert med aux</i>: define como serão apresentadas as <a
+             href="page_azimuth.htm">medidas auxiliares nos perfis
+            retificados</a> [padrão 10, mín 0, máx 90] [N]</li>
+        <li><i>Lim inclin med aux</i> (Therion "vthreshold") - limite para
+          identificação de medidas auxiliares como verticais: inclinação maior
+          do que este valor são consideradas verticais [padrão 80, mín 0, máx
+          90] [N]</li>
+        <li><i>Ref fixa retif perfil</i>: ou fixa ou relativa em relação ao
+          azimute da <a href="page_azimuth.htm">referência do perfil
+            retificado</a> [padrão "relativa" (desligado)] [A]</li>
+        <li>define se os <i>botões "Ant/Próx"</i> devem ser apresentados na
+          caixa de diálogo de medidas [padrão "sim"] [A]</li>
+        <li><i>Contravisada</i> define se campos os campos de contra azimute e
+          inclinação invertida serão apresentados na caixa de diálogo de
+          inserção manual de medidas [N] [padrão "não"] [A]</li>
+        <li><i>Aviso visada</i>: tipo de aviso usado ao reconhecer
+          automaticamente visada: "nenhum", "som" or "vibração" [padrão
+          "nenhum"] [N]</li>
+      </ul>
+    </li>
+    <li><i><a href="page_fixed_list.htm">LOCALIZAÇÃO</a></i></li>
+    <li><i><a href="page_accuracy.htm">ACURÁCIA</a></i></li>
+  </ul>
 
-</body></html>
+  <p style="font-size:90%">
+    <a href="page_geek.htm">Especiais</a>: <i>Medidas recentes e seu limite de
+      tempo</i>, <i>Medidas parcial em perfis retificados</i>, <i>Classes de
+      medidas auxiliares e suas cores</i>, <i>Modo mergulho</i>,
+    <i>Sensoress</i>.
+  </p>
+
+  <p>Para sair da tela de dados topo, dê um clique duplo no botão <i>VOLTAR</i>
+    de seu aparelho Android.</p>
+
+  <p>Se o backup automático estiver habilitado e o foramto de dados padrão
+    estiver definido, os dados serão automaticamente exportados quando a tela de
+    dados topo for fechada.</p>
+
+  <p><b>Alerta</b></p>
+
+  <p>A primeira linha de dados pode não ser atualizada depois de uma edição ou
+    um clique devido a um problema do Android. O botão "Atualizar" pode ser
+    usado para pedir que a relação seja redesenhada nesses casos.</p>
+
+  <p><b>Compensação fechamento poligonal</b></p>
+
+  <p>É recomendável não ativar o recurso de compensação de fechamento de
+    poligonal para que eventuais erros de fechamento possam ser visualizados e
+    corrigidos ainda na cavidade. Essa é a configuração padrão.</p>
+
+  <p>De qualquer maneira o Topodroid implementa alguns métodos de "conpensação
+    de erros de fechamento de poligonais":</p>
+
+  <ul>
+    <li>"Normal" [E]: distribuí os erros em todos os trechos que compõem a
+      poligonal.</li>
+    <li>"Proporcional" [E]: os erros são distribuídos proporcionalmente a
+      "relevância" dos trechos.</li>
+    <li>"Triângulos" [T]: é baseado em <a
+         href="page_trilateration.htm">trilateração</a></li>
+  </ul>
+
+  <p><a href="manual05.htm">&lt; Dados calibração</a> |
+    <a href="manual07.htm">Relação medidas &gt;</a>
+  </p>
+
+</body>
+
+</html>
