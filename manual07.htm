@@ -1,7 +1,7 @@
 <html>
 
 <body>
-    <h3>[7] LISTA MEDIDAS</h3>
+    <h3>[7] MEDIDAS TOPO</h3>
 
     <p>As medidas são apresentadas em uma lista. A lista não tem cabeçalhos para
         poupar espaço. As informações de cada medida são:</p>
@@ -101,6 +101,9 @@
         </li>
         <li>marcar as medidas auxiliares como X (corte X), H (horizontal), V
             (vertical) ou normal.</li>
+        <li>calcula a direção e o mergulho do plano contendo as medidas
+            selecionadas (só fica disponível se a opção <u>Interpolar plano</u>
+            estiver habilitada).</li>
     </ul>
 
     <p>As bases da primeira visada são utilizadas como referência da
@@ -116,14 +119,20 @@
         haja medidas auxiliares selecionadas, do contrário esta opção não estará
         disponível.</p>
 
+    <p style="font-size:90%">O cálculo da direção e mergulho do plano exige que
+        todas as medidas selecionadas tenham a mesma base DE. Do contrário essa
+        função é desabilitada. O resultado é apresentado na caixa de diálogo e
+        incluído (substituído se já presente) no comentário da primeira medida
+        selecionada.</p>
+
     <p><a href="manual06.htm">&lt; Dados topo</a> |
         <a href="manual08.htm">Info topo &gt;</a>
     </p>
 
     <footer style="font-size:80%;font-style:italic">
-        <p>Última atualização: <span id="last-update-date">2023-02-25</span>
+        <p>Última atualização: <span id="last-update-date">2023-02-27</span>
             &mdash; Referente ao commit: <span
-                  id="last-update-commit">643ba60a6</span>
+                  id="last-update-commit">c249648e1</span>
         </p>
     </footer>
 
