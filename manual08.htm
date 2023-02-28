@@ -1,67 +1,113 @@
-<html><body>
-<h3>[8] SURVEY INFO WINDOW</h3>
+<html>
 
-The <i>survey</i> menu of the <u>data window</u> opens the survey <u>info window</u>. Alternatively you can open it with a
-long tap on the survey entry in the <u>main window</u>.<br><p>
+<body>
+    <h3>[8] INFO TOPO</h3>
 
-The displayed survey info are:
-<ul>
-<li>name (not editable)</li>
-<li>date</li>
-<li>team</li>
-<li>magnetic declination (if set)</li>
-<li>survey description</li>
-<li>whether the x-sections are <i>shared</i> among sketches or not</li>
-<li>whether the data-mode is <i>normal</i> or <i>diving</i> [T]</li>
-</ul>
-<br>
+    <p>A opção <i>Info Topo</i> do menu da tela <u>Medidas Topo</u> abre a tela
+        <u>Info Topo</u>. Outra forma de acessá-la é dando um clique longo na
+        linha da topo da tela <u>principal</u>.</p>
 
-The survey "team" is mandatory and cannot be empty.<br>
-The magnetic declination must be entered in decimal degrees.
-The allowed range of values is [-360&deg;, 360&deg;].
-Values outside this range are considered as "unset".<br><p>
+    <p>As seguintes informações sobre a topo são apresentadas:</p>
+    <ul>
+        <li>nome (não editável)</li>
+        <li>data</li>
+        <li>equipe (obrigatória)</li>
+        <li>declinação magnética (se definida)</li>
+        <li>descrição</li>
+        <li>indicação de que os cortes X são ou não comparttilhados entre os
+            croquis</li>
+        <li>indica se o modo de dados e o <i>normal</i> ou <i>mergulho</i> [T]
+        </li>
+    </ul>
 
+    <p>A declinação magnética só pode ser fornecida em graus decimais. O
+        intervalo de valores aceito é [-360&deg;; 360&deg;]. Valores fora deste
+        intervalo são considerados "indefinidos".</p>
 
-<h4>BUTTONS</h4>
-<ul style="margin-top=0">
-<li><img src="btn_note.png"   width="36" border="1"> survey annotations</li>
-<li><img src="btn_info.png"   width="36" border="1"> survey <a href="page_stat1.htm">statistics</a></li>
-<li><img src="btn_3d.png"     width="36" border="1"> 3D display (Cave3D) [A]</li>
-<li><img src="btn_gps.png"    width="36" border="1"> <a href="page_fixed_list.htm">geo-points</a> [A]</li>
-<li><img src="btn_photo.png"  width="36" border="1"> photo list. Tap on an entry to edit the description or delete the photo [A]</li>
-<li><img src="btn_sensor.png" width="36" border="1"> sensor measurements. Tap on an entry to edit the comment or delete the measurement [T]</li>
-</ul><br><p>
+    <h4>AÇÕES</h4>
+    <ul>
+        <li><img src="btn_note.png" width="36" border="1"> comentários sobre a
+            topo</li>
+        <li><img src="btn_info.png" width="36" border="1"> <a
+               href="page_stat1.htm">estatísticas</a> da topo</li>
+        <li><img src="btn_3d.png" width="36" border="1"> Visualização 3D
+            (Cave3D) [A]</li>
+        <li><img src="btn_gps.png" width="36" border="1"> <a
+               href="page_fixed_list.htm">pontos georreferenciados</a> [A]</li>
+        <li><img src="btn_photo.png" width="36" border="1"> lista de fotos.
+            Clique em um item da lista para editar sua descrição ou apagá-la [A]
+        </li>
+        <li><img src="btn_sensor.png" width="36" border="1"> medidas dos
+            sensores. Clique em um item para editar seu comentário ou apagar a
+            medida [T]</li>
+    </ul>
 
-<h4>MENUS</h4>
-<ul style="margin-top=0">
-<li><u>Close</u> </li>
-<li><u>Export</u></li>
-<li><u>Rename</u> [T]</li>
-<li><u>Delete</u> [A]</li>
-<li><u>Clear color</u>: clear the custom splay colors [T]</li>
-<li>Instruments <a href="page_survey_calib.htm">offsets</a> [E]</li>
-<li><a href="page_calib_check.htm">Calibration-check</a> shots [E]</li>
-<li><u>Settings</u> (same as the <u>data window</u> settings)</li>
-<li><u>Help</u></li>
-</ul><br><p>
+    <h4>MENUS</h4>
+    <ul>
+        <li><u>Fechar</u> </li>
+        <li><u>Exportar</u></li>
+        <li><u>Renomear</u> [T]</li>
+        <li><u>Apagar</u> [A]</li>
+        <li><u>Cor padrão</u>: remove as cores personalizadas das medidas
+            auxiliares [T]</li>
+        <li><a href="page_survey_calib.htm">Ajustes de instrumentos</a> [E]</li>
+        <li><a href="page_calib_check.htm">Verificar calibração</a> [E]</li>
+        <li><u>Configurações</u> (as mesmas da tela <u>Medidas Topo</u>)</li>
+        <li><u>Ajuda</u></li>
+    </ul>
 
-<h4>Export dialog</h4>
-The export dialog has a selection-list of export-formats: <i>Compass</i>, <i>cSurvey</i>, <i>Survex</i>, <i>PocketTopo</i>, <i>Polygon</i>, <i>GHTopo</i>, <i>Grottolf</i>, <i>Therion</i>, <i>Topo</i>, <i>VisualTopo</i>, <i>Walls</i>, and <i>WinKarst</i>. Furthermore the data can be exported as <i>DXF (LibreCAD)</i>, <i>CSV</i> text file, and <i>shapefile (QGIS)</i>.
-If the survey has a fixed station it can be exported as <i>KML (GoogleEarth)</i>, <i>GeoJSON</i>, and <i>track</i> file (PLT). This export fails if no the survey station is fixed. Finally you can export a <i>ZIP</i> archive which includes all the data of the survey.<br><p>
+    <h4>Caixa de diálogo Exportar Topo</h4>
+    <p>A caixa de diálog de exportação apresenta uma lista suspensa de opções
+        com os formatos de exportação disponíveis: <i>Compass</i>,
+        <i>cSurvey</i>, <i>Survex</i>, <i>PocketTopo</i>, <i>Polygon</i>,
+        <i>GHTopo</i>, <i>Grottolf</i>, <i>Therion</i>, <i>Topo</i>,
+        <i>VisualTopo</i>, <i>Walls</i> e <i>WinKarst</i>.</p>
 
-There are a number of export settings, that control the way TopoDroid writes the survey data in the various export formats.<br><p>
+    <p>Além disso as medidas da topo podem ser exportadas como <i>DXF
+            (LibreCAD)</i>, arquivo de texto <i>CSV</i> e <i>shapefile
+            (QGIS)</i>.</p>
 
-<h4>Delete dialog [A]</h4>
-The delete dialog asks for confirmation to delete the survey. Deleting the survey is unrecoverable: the survey and all associated data (photos, notes, sketch files, etc. ), except the zip archive, are deleted. Make sure to export a backup <i>ZIP</i> archive before you delete the survey.<br><p>
+    <p>Se a topo tiver uma base georeferênciada (com coordenadas geográficas
+        registradas)poderá também ser exportada como <i>KML (GoogleEarth)</i>,
+        <i>GeoJSON</i> e arquivo de <i>trilha</i> (PLT). Estas exportações
+        falharão se nenhuma base da topo estiver georeferênciada.</p>
 
-<h4>Rename dialog</h4>
-With this dialog you can rename the survey. Renaming fails if there is already a survey with the specified name.<br><p>
-The info in the database, the file of the notes, the binary sketch file, and the image and audio directory are renamed.
-However reference to section "scrap" in the sketch files are not updated until the files are opened again.
-Therefore it is advisable to go over and "open and close" all the sketches.
-<br><p>
+    <p>Por último você pode exportar um arquivo <i>ZIP</i> que conterá todas as
+        informações da topo.</p>
 
-<a href="manual07.htm">&lt; Shot list</a> |
-<a href="manual09.htm">Sketch window &gt;</a>
+    <p>Existem inúmeras configurações de exportação que controlam a forma como o
+        Topodroid traduz os dados da topo para os diversos formatos de
+        exportação.</p>
 
-</body></html>
+    <h4>Caixa de diálogo Apagar [A]</h4>
+    <p>A caixa de diálogo <u>Apagar</u> pede confirmação para apgar a topo.
+        Apagar uma topo é uma ação que não pode ser desfeita: a topo e todas as
+        suas informações associadas (fotos, notas, croqui, etc.), exceto o
+        arquivo zip, são apagadas. Por favor tenha certeza de exportar um backup
+        da topo em formato <i>ZIP</i> antes de apagar uma topo.</p>
+
+    <h4>Caixa de diálogo Renomear</h4>
+    <p>Através desta caixa de diálogo você pode renomear uma topo. A ação de
+        renomeação falhará se já houver uma topo com o novo nome proposto.</p>
+
+    <p>As informações no banco de dados, o arquivo de notas, os arquivos
+        binários dos croquis e o diretório de imagens e sons são todos
+        renomeados. Entretanto as referências as seções "scrap" (do Therion) nos
+        croquis só são atualizadas quando cada croqui for aberto novamente.
+        Desta maneira é recomendável abrir e fechar todos os croquis após
+        renomear uma topo.</p>
+
+    <p><a href="manual07.htm">&lt; Medidas Topo</a> |
+        <a href="manual09.htm">Tela Desenho &gt;</a>
+    </p>
+
+    <footer style="font-size:80%;font-style:italic">
+        <p>Última atualização: <span id="last-update-date">2023-02-28</span>
+            &mdash; Referente ao commit: <span
+                  id="last-update-commit">664e31d98</span>
+        </p>
+    </footer>
+
+</body>
+
+</html>
