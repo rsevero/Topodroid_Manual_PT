@@ -25,7 +25,7 @@
     "visada", "visada repetida", "auxiliar" e "em branco". As medidas auxiliares
     podem ser classificadas em "seção" (X), horizontal (H), vertical (V) e
     "scan" (medidas obtidas no modo scan). <a href="page_shot_edit1.htm">Tipos
-      medidas auxiliares</a> X-H-V são desabilitadas por padrão [G].</p>
+      medidas auxiliares</a> X-H-V são desabilitadas por padrão [T].</p>
 
   <p>Cores do texto dos dados das medidas:</p>
   <ol>
@@ -181,6 +181,8 @@
       80, máx 400] [A]</li>
     <li><i>Base editável</i>: ddefine se os nomes das bases são editáveis na
       relação de medidas [padrão "não"] [E]</li>
+    <li><i>Formato exportação dados</i>: formato padrão de exportação de dados
+      [padrão "nenhum"]</li>
     <li><i>Origem croqui</i>: define se a mesma origem será sugerida para todos
       os croquis ou não [padrão "não"]</li>
     <li><i>Cortes X compartilhados</i>: define se os cortes X das bases devem
@@ -210,7 +212,7 @@
         <li><i>Lim vert med aux</i>: define como serão apresentadas as <a
              href="page_azimuth.htm">medidas auxiliares nos perfis
             retificados</a> [padrão 10, mín 0, máx 90] [N]</li>
-        <li><i>Lim inclin med aux</i> (Therion "vthreshold") - limite para
+        <li><i>Lim inclin med aux</i>: (Therion "vthreshold") - limite para
           identificação de medidas auxiliares como verticais: inclinação maior
           do que este valor são consideradas verticais [padrão 80, mín 0, máx
           90] [N]</li>
@@ -219,12 +221,22 @@
             retificado</a> [padrão "relativa" (desligado)] [A]</li>
         <li>define se os <i>botões "Ant/Próx"</i> devem ser apresentados na
           caixa de diálogo de medidas [padrão "sim"] [A]</li>
-        <li><i>Contravisada</i> define se campos os campos de contra azimute e
+        <li><i>Contravisada</i>: define se os campos de contra azimute e
           inclinação invertida serão apresentados na caixa de diálogo de
           inserção manual de medidas [N] [padrão "não"] [A]</li>
         <li><i>Aviso visada</i>: tipo de aviso usado ao reconhecer
           automaticamente visada: "nenhum", "som" or "vibração" [padrão
           "nenhum"] [N]</li>
+        <li><i>Contravisada DistoX</i>: Para quando a DistoX estiver no modo
+          "contravisada" [padrão "não"] [N]</li>
+        <li><i>Fechamento poligonal</i>: compensação de erro de fechamento de
+          poligonais. É recomendável não ativar esse recurso para q ue você
+          consiga ver no croqui os erros de fechamento e, eventualmente,
+          corrigí-los ainda na caverna [padrão "nenhum"] [N]</li>
+        <li><i>Temporização medida</i>: segundos de espera antes de capturar a
+          medida [padrão 10, mín 0] [N]</li>
+        <li><i>Bip temporizador</i>: percentual de volume do bip do temporizador
+          [N] [padrão 50, mín 10, máx 100] [N]</li>
       </ul>
     </li>
     <li><i><a href="page_fixed_list.htm">LOCALIZAÇÃO</a></i></li>
@@ -257,14 +269,18 @@
     poligonal para que eventuais erros de fechamento possam ser visualizados e
     corrigidos ainda na cavidade. Essa é a configuração padrão.</p>
 
-  <p>De qualquer maneira o Topodroid implementa alguns métodos de "conpensação
-    de erros de fechamento de poligonais":</p>
+  <p>De qualquer maneira o Topodroid implementa alguns métodos de compensação
+    de erros de fechamento de poligonais:</p>
 
   <ul>
-    <li>"Normal" [E]: distribuí os erros em todos os trechos que compõem a
+    <li>"Normal" [E]: distribui os erros em todos os trechos que compõem a
       poligonal.</li>
     <li>"Proporcional" [E]: os erros são distribuídos proporcionalmente a
       "relevância" dos trechos.</li>
+    <li>"Seletiva" [T]: a compensação só é aplicada nas poligonais cujo erro
+      seja menor que um determinado percentual (opção "Limite poligonal") do
+      comprimento total da poligonal. As poligonais cujo limite esteja acima do
+      limite serão apresentadas em violeta. </li>
     <li>"Triângulos" [T]: é baseado em <a
          href="page_trilateration.htm">trilateração</a></li>
   </ul>
@@ -276,7 +292,7 @@
   <footer style="font-size:80%;font-style:italic">
     <p>Última atualização: <span id="last-update-date">2023-02-28</span>
       &mdash; Referente ao commit: <span
-            id="last-update-commit">7d0593178</span>
+            id="last-update-commit">d94307bdd</span>
     </p>
   </footer>
 
