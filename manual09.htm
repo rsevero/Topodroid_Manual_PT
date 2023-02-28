@@ -1,176 +1,162 @@
 <html><body>
-<h3>[9] SKETCH WINDOW</h3>
+<h3>[9] TELA DESENHO</h3>
 
-The <i>sketch</i> button of the <u>data window</u> opens the dialog with the list of sketches, besides the <i>New Sketch</i> button. Tap on this button to create a new survey sketch.<br><p>
+<p>O botão <i>croqui</i> da tela <u>Dados Topo</u> abre uma caixa de diálogo com a lista de croquis existentes além do botão <i>Novo</i> croqui. Clique neste botão para criar um novo croqui na topo.</p>
 
-Each sketch is made of two sketch files: one for the plan view, the other for the profile view (either extended or projected). X-sections have only one file. A new sketch is opened in the plan view. Afterwards the sketch dialog shows two columns, one for the plan, the other for the profile view, and you can choose which one to open from.<br>
-Each sketch can contain multiple scraps.<br><p>
+<p>Cada croqui é composto por dois arquivos de croquis: um para a planta-baixa e outro para o perfil (projetado ou retificado). Os cortes tem, cada um, só um arquivo. Um novo croqui é aberto na planta-baixa. A caixa de diálogo apresenta uma linha com duas colunas para cada croqui: um para a planta-baixa e outro para o perfil. Desta maneira você já pode abrir o croqui desejado diretamente. Cada croqui pode ter vários desenhos diferentes.</p>
 
-The <u>extended</u> profile view displays the midline with the shots drawn left or right, or vertical, according to their "extend". If a leg has the "extend" not set, the midline is not displayed from that leg on.
-Splays are projected on the vertical plane of the shot that is closest in azimuth, unless the user has set a given "extend" through the shot edit dialog.
-For example, for the plan view in figure, the splays in the light region are projected on the vertical plane of shot 1-2, those in the dark region on the vertical plane of 0-1.<br><p>  
+<p>O <u>perfil retificado</u> apresenta a linha de trena com as visadas desenhadas à esquerda, direta ou vertical de acordo com a "direção no perfil retificado" definida na medida. Se a "direção no perfil retificado" da visada não estiver definida, a visada não será apresentada no perfil retificado. Neste caso nenhuma visada a partir desta será apresentada.</p>
 
-The <u>projected</u> profile view displays the midline and the splays projected in the vertical plane perpendicular to the projection azimuth.<br><p>
+<p>Medidas auxiliares são projetadas no plano vertical da visada que tiver o azimute mais próximo ao da medida auxiliar em questão. A não ser que o usuário tenha explicitamente definido a "direção no perfil retificado" na caixa de diálogo de <u>edição de medida</u>. Por exemplo, no perfil apresentado na figura abaixo, as medidas auxiliares na região cinza claro serão projetadas no plano vertical da visada 1-2, já as da região cinza escuro serão projetadas no plano vertical da visada 0-1.</p> 
 
+<p>O perfil <u>projetado</u> apresenta a linha de trena e as medidas auxiliares projetadas no plano vertical perpendicular ao azimute da projeção que é definida ao se criar o perfil projetado.</p>
 
-<img src="splay_extend.png"><br><p>
+<p><img src="splay_extend.png"></p>
 
-<b>Legs</b><br>
+<p><b>Visadas</b></p>
 
-The leg colors are 
+<p>Cores das visadas:</p>
 <ul>
-<li>normal: white</li>
-<li>anomalous field values: red</li>
-<li>inconsistent with siblings: orange. These are also drawn with a zig-zag line as shown below.</li>
-</ul><br>
+<li>normal: branco</li>
+<li>campos da medida com valores anômalos (somente DistoX): vermelho</li>
+<li>inconsistente em relação às visadas irmãs: laranja. Além da cor, serão também representadas por uma linha em zig-zag conforme pode ser visto abaixo.</li>
+</ul>
 
-<img src="line_zigzag.png"><br><p>
+<p><img src="line_zigzag.png" style="width:80px;"></p>
 
-<b>Splays</b><br>
+<p><b>Medidas auxiliares</b></p>
 
-Splays can be displayed as segments or as endpoint dots [G].
-When the window is in selection mode, the splays are always displayed as segments.<br>
+<p>Medidas auxiliares podem ser apresentadas como segmentos de linha ou somente através de seus pontos finais. [T] Sempre que a tela de desenho estiver no modo "selecionar" as medidas auxiliares serão apresentadas como segmentos de linhas.</p>
 
-The splay colors are [E/G]
+<p><b>Cores das medidas auxiliares [E/T]:</b></p>
 <ul>
-<li>commented: dark green</li>
-<li>x-splay (LRUD): green</li>
-<li>h-splay: deep blue (plan), dark blue (profile)</li>
-<li>v-splay: dark blue (plan), deep blue (profile)</li>
-<li>others: light grey</li>
-</ul><br><p>
+<li>comentada: verde muito escuro</li>
+<li>medida auxiliar de corte: verde escuro</li>
+<li>medida auxiliar horizontal (H): azul (planta-baixa), azul escuro (perfil)</li>
+<li>medida auxiliar vertical (V): azul escuro (planta-baixa), azul (perfil)</li>
+<li>outras: cinza claro</li>
+</ul>
 
-It is possible to set the splay transparency (opacity level) [G].<br>
-Splays can be assigned different colors, individually or in groups (with multi-editing).
-The colors for splays can be chosen among a palette of colors or with a color picker [G].<br>
-A splay is not shown if the shot is marked for no-display in plan or profile view.<br><p>
+<p>Medidas auxiliares podem receber cores diferentes através do botão <u>Ações especiais</u> do menu de multisseleção. As cores das medidas auxiliares podem ser escolhidas a partir de uma paelta pré-definida ou livremente [T].</p>
 
-If splay dashing [G] is not disabled, they can be displayed with a dashed or a dotted line.<br>
-If the splay-dashing is set to <i>azimuth</i> the splay is dashed if the 
-angle with the "closest" leg in azimuth is above the dash azimuth-threshold, [default 60&deg;]<br>
-If the splay-dashing is set to <i>clino</i> the splay is dashed if the 
-splay clino is above the dash clino-threshold: dotted (positive clino) and dashed (negative clino).<br>
-If the splay-dashing is set <i>by the view</i> the splays dashed by the clino in the plan view and
-by the azimuth in the extended profile view. In the projected profile the splays are dashed according to the 
-angle they form with the direction of projection.<br><p>
+<p>Uma medida auxiliar não é apresentada nos desenhos se a visada ao qual a medida auxiliar está atrelada for ocultada na planta-baixa ou perfil.</p>
 
-Furthermore, in the <u>plan</u> view the splay is not displayed 
-if the inclination of the splay is over the plan-view threshold [default 80&deg;]<br>
+<p>Se o <u>Pontilhamento de medidas auxiliares</u> não estiver desabilitado, as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:</p>
 
-For <u>x-sections</u>:
 <ul>
-<li>x-splays (LRUD) are green</li>
-<li>other splays are blue: dark at TO station, light at FROM station</li>
-<li>finally, if splay-dashing is enabled, they are dotted or dashed
-if the angle between the splay and the normal to the x-section plane is below the dash angle-threshold
-[default 60&deg;] (dotted if in the direction of the normal, dashed if opposite).</li>
-</ul><br>
+  <li><i>Azimute</i>: a medida auxiliar é tracejada se o ângulo com a visada mais "próxima" (considerando o azimute) estiver acima do valor definido na opção "Lim pontilh azimute" encontrada nas configurações especiais. [padrão 60&deg;]</li>
+  <li><i>Clino</i>: a medida auxiliar é tracejada se o valor absoluto da inclinação da visada estiver acima do valor definido na opção "Lim ponth clino" encontrada nas configurações especiais: para inclinações positivas, a linha será pontilhada, para inclinações negativas a linha será tracejada [padrão 50&deg;]</li>
+  <li><i>Visualização</i>: as medidas auxiliares são tracejadas de acordo com a inclinação na planta-baixa e de acordo com o azimute no perfil retificado. Nos perfis projetados, as medidas auxiliares são tracejadas de acordo com o ângulo que formam com o azimute da projeção.</li>
+</ul>
 
-The colors of dashed and dotted splay line can be changed with appropriate settings [G].<br><p>
+<p>Além disso, na <u>planta-baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na opção "Lim aux planta-baixa" encontrada nas configurações especiais [padrão 80&deg;]</p>
 
-<b>Stations</b><br>
-The station colors are
+<p>Em cortes:</p>
 <ul>
-<li>violet: default</li>
-<li>green: active station</li>
-<li>red: stations beyond which the midline is hidden</li>
-<li>blue: stations before which the midline is hidden</li>
-<li>yellow: saved stations [T/G]</li>
-</ul><br><p>
+<li>medidas auxiliares X (EDTC): verde</li>
+<li>outras: azul. Escuro para as ligadas à base PARA e claro para as ligadas à base DE</li>
+<li>por fim, se o pontilhamento de medidas auxiliares ("Pontilh aux" em configurações especiais) estiver habilitada, elas serão pontilhadas ou tracejadas se o ângulo da medida auxiliar e a normal do plano do corte estiverem abaixo do limite definido na opção "Lim pontilh ângulo" [padrão 60&deg;] (pontilhada se estiver na direção da normal, tracejada  se estiver oposta).</li>
+</ul>
 
-<b>Interaction modes</b><br>
-The <u>sketch window</u> has four interaction modes:
-<ul style="margin-top=0">
-<li><b>move</b>: you can shift the canvas, and zoom in/out. If the "fixed references" box in the references dialog is set, shifts affect only the drawings [T]</li>
-<li><b>draw</b>: in this mode you add iconic symbols (points, including labels), and trace lines and areas (closed regions filled with a color or a pattern).</li>
-<li><b>erase</b>: to erase items, and lines/areas, or portions of them, from the sketch.</li>
-<li><b>edit</b> [A]: for point-wise changes and item properties editing, including item deleting.</li>
-</ul><br><p>
+<p>As cores das linhas tracejadas e pontilhadas das medidas auxiliares podem ser alteradas através das opções correspondentes [T].</p>
 
-Shift and zoom are possible even in <b>draw</b> and in <b>erase</b> mode using two fingers.
-If "corner-drag" is enabled, the sketch can be shifted by "dragging" it from the corners of the canvas.
-Corners are displayed as transparent gray.<br>
-Zoom controls can be enabled (either temporarily or permanently). If temporary, they show up when you tap at the bottom
-of the canvas in the middle.<br>
-In "draw mode" there is a bottom toolbar with the most recently used tools, and an "arrow" button to select other tools.<br>
-In "edit mode", when the selected item is a point, there is a bottom slider for point scale. If "corner-drag" is enabled,
-and the point item is orientable, its orientation can be rotated clockwise by dragging down from the top-right corner, and
-counterclockwise by dragging down from the top-left corner.<br><p>
+<p><b>Bases</b></p>
 
+<p>As cores das bases são:</p>
+<ul>
+<li>violeta: padrão</li>
+<li>verde: base ativa</li>
+<li>vermelho: bases a partir das quais a linha de trena não é apresentada</li>
+<li>azul: bases antes das quais a linha de trena é apresentada</li>
+<li>amarelo: bases gravadas [T]</li>
+</ul>
 
-<h4>BUTTONS</h4>
-The modes are represented by the three green buttons on the left: <i>draw</i>, <i>erase</i>, and <i>edit</i>. When one of them is "on" the relative button has a bright green color. If none is on the mode is <i>move</i>.<br><p>
+<p><b>Modos de interação</b></p>
 
-When a green button is "on", a long tap on it, opens the dialog to edit the settings relevant to the mode of the button.<br><p>
+<p>A tela <u>desenho</u> conta com quatro modos de interação:</p>
+<ul>
+<li><b>mover</b>: você pode mover o espaço de desenho, fechar ou abrir o zoom. Se a opção "Origem fixa croqui" estiver habilitada a ação de mover moverá somente o desenho e não a linha de trena [T]</li>
+<li><b>desenhar</b>: nesse modo você pode incluir ícones (pontos e rótulos), linhas e áreas (regiões fechadas prenchidas por uma cor ou padronagem).</li>
+<li><b>apagar</b>: para apgar itens, linhas, áreas ou parte delas.</li>
+<li><b>editar</b> [A]: para alterações relacionadas a pontos e propriedades diversas dos itens, incluindo apagá-los.</li>
+</ul>
 
-<img src = "btn_edit.png" height="36" border="1"><img src = "btn_erase.png" height="36" border="1"><img src = "btn_select.png" height="36" border="1">
-<br clear=all>
+<p>Mover e dar zoom são possíveis mesmo nos modos <b>desenhar</b> e <b>apagar</b> usando dois dedos simultaneamente. Se a opção "Mover canto" estiver habilitada, o croqui pode ser arrastado pelos retângulos cinzas transparentes que estarão nos cantos da tela.</p>
 
-The remaining buttons differ by the mode.<br><p>
-In the <b>move</b> mode they are:
-<ul style="margin-top=0">
-<li><img src="btn_download.png" width="36" border="1"> data <i>download</i>.  If no device is selected, this button is hidden.
-By default splays and legs are refreshed when a leg is downloaded (and identified). 
-Use the refresh button to force a centerline refresh.
-The last download shots can be highlighted blue to help distinguish them from the others [G].
-</li>
-<li><img src="btn_bluetooth.png" width="36" border="1"> <a href="page_bluetooth.htm">Bluetooth</a> reset/controls</li>
-<li><img src="btn_note.png"      width="36" border="1"> survey <a href="page_survey_notes.htm">notes</a></li>
-<li><img src="btn_mode.png"      width="36" border="1"> drawing <a href="page_drawing_refs.htm">references</a>: legs, splays, stations, metric grid, scalebar, and sketch outline.</li>
-<li><img src="btn_plan.png"      width="36" border="1"> <i>plan/profile</i> switch. <img src = "btn_splay_group.png" width="36" border="1"> <i>Splay-display mode</i>, for x-sections</li>
-<li><img src="btn_azimuth.png"   width="36" border="1"> <a href="page_azimuth.htm">"extend" reference</a></li>
-<li><img src="btn_refresh.png"   width="36" border="1"> refresh the centerline</li>
-</ul><br><p>
+<p>Os controles de zoom podem ser habilitados temporaria ou permanentemente. Se temporários, serão apresentados quando você clicar na parte inferior central da tela.</p>
 
-The <b>draw</b> mode has four buttons besides the green ones:
-<ul style="margin-top=0">
-<li><img src="btn_undo.png"  width="36" border="1"> removes the last items you have drawn, one at a time.</li>
-<li><img src="btn_redo.png"  width="36" border="1"> puts the removed item back in the sketch, one at a time. The list of removed items is emptied when you draw something new. Point-wise editing actions may also affect the list of redo.</li>
-<li><img src="btn_tools.png" width="36" border="1"> <a href="page_tools_list.htm">Drawing tool</a> switcher / picker.</li>
-<li>splay display mode: as segment or a border="1"s point.</li>
-<li><img src="btn_cont.png"  width="36" border="1"> Line <i>joining</i> or continuing</li>
-</ul><br><p>
-The icon of the <i>tools</i> button reflects the current type of drawing tools: points, lines, or areas.<br><p>
+<p>No modo "desenhar" há uma barra de ferramentas inferior que apresenta os símbolos usados mais recentemente e um botão "seta" para selecionar outros símbolos.</p>
 
-The <b>erase</b> mode has three buttons besides the green ones:
-<ul style="margin-top=0">
-<li><img src="btn_undo.png"  width="36" border="1"> <i>undo</i></li>
-<li><img src="btn_redo.png"  width="36" border="1"> <i>redo</i></li>
-<li><img src="btn_erase_all.png" width="36" border="1"> type of erasable items: all, points, lines, areas</li>
-<li><img src="btn_size.png"  width="36" border="1"> eraser size [S, M, L]</li>
-</ul><br><p>
+<p>No modo "editar", quando o item selecionado é um ponto, é apresentada uma barra de rolagem na base da tela para alterar o tamanho do ponto. Se a opção "Mover canto" estiver habilitada e o ponto for orientável, sua orientação pode ser alterada no sentido horário arraastando para baixo a partir do canto superior direito e no sentido antihorário arrastando para baixo a partir do canto superior esquerdo.</p>
 
-The <b>edit</b> [A] mode has, besides the green buttons:
-<ul style="margin-top=0">
-<li><img src="btn_select_all.png" width="36" border="1"> type of selectable items: all, points, lines, areas, shots, stations</li>
-<li><img src="btn_size.png"   width="36" border="1"> size of the selection tool [S, M, L]</li>
-<li><img src="btn_delete.png" width="36" border="1"> delete the item from the sketch (it asks for confirmation, and can be "undone").</li>
-<li><img src="btn_point.png"  width="36" border="1"> point-wise and special actions</li>
-<li><img src="btn_item.png"   width="36" border="1"> item properties edit</li>
-<li><img src="btn_range.png"  width="36" border="1"> range selection: either point-wise or local (only for lines and areas).</li>
-</ul><br><p>
-When there are selected items the first two buttons become <i>previous/next</i> navigation buttons in the set
-of the selected items.<br><p>
+<h4>BOTÕES</h4>
 
-The buttons are somewhat different for x-section sketches.
-In the <b>move</b> mode the buttons "switch", "azimuth", and "refresh" are not shown, but there
-is a button to select which splay to show. It cycles through four states: "both", "viewed station", "behind station", "none".
-Accordingly, the drawing references dialog has no box for the splays.
-<br><p>
+<p>Os modos são representados pelos três botões verdes à esquerda: <i>desenhar</i>, <i>apagar</i> e <i>editar</i>. Quando um deles estiver ativo, o botão correspondente estará em verde claro. Se nenhum estiver verde claro, a tela desenho estará no modo <i>mover</i>.</p>
 
-<b>Long tap actions</b><br>
-<ul style="margin-top=0">
-<li>A long tap on each <i>mode</i> button opens the relevant settings dialog [A].</li>
-<li>The <i>download</i> button switches the device, in multi device mode [E].</li>
-<li>In plan view, a long tap on the <i>extend reference</i> button makes the reference azimuth 
-graphically editable by sliding the finger across the display.  The button turns green [E].</li>
-<li>In the extended profile view, a long tap on the <i>display mode</i> button flips the sketch [N].</li>
-<li>With x-sections it toggles the display of splays that are off the section plane [T].</li>
-<li>A long tap on the <i>tools</i> button reverts the order of rotation of the bottom toolbar.<!-- Ineffective for the triple toolbar. --></li>
-<li>A long tap on the <i>delete</i> button removes the selected line/area point [N].</li>
-<li>A long tap on the item <i>properties edit</i> button, when the selected item is a section point, opens the xsection sketch [T].</li>
-</ul><br><p>
+<p>Quando um dos três botões está verde claro, um clique longo nele abre a tela de edição das configurações relevantes ao modo ativo.</p>
 
+<p><img src = "btn_edit.png" height="36" border="1"><img src = "btn_erase.png" height="36" border="1"><img src = "btn_select.png" height="36" border="1"></p>
+
+<p>O restante dos botões varia de acordo com o modo ativo no momento.</p>
+
+<p>No modo <b>mover</b>:</p>
+<ul>
+<li><img src="btn_download.png" width="36" border="1"> <i>download</i> de dados. Se nenhum dispositivo estiver ativo (selecionado), este botão não é apresentado. Por padrão as medidas auxiliares e as visadas são redesenhadas quando uma visada é baixada (e reconhecida). Use o botão de "redesenhar" para forçar o redesenho da linha de trena. As últimas medidas baixadas podem ser destacadas em azul para ajudar a distinguí-las do restante.</li>
+<li><img src="btn_bluetooth.png" width="36" border="1"> reiniciar ou apresentar controles <a href="page_bluetooth.htm">Bluetooth</a></li>
+<li><img src="btn_note.png"      width="36" border="1"> <a href="page_survey_notes.htm">comentários</a> da topo</li>
+<li><img src="btn_mode.png"      width="36" border="1"> <a href="page_drawing_refs.htm">o que mostrar</a>: visadas, medidas auxiliares, bases, grade, escala, contorno.</li>
+<li><img src="btn_plan.png"      width="36" border="1"> alternar entre <i>planta-baixa e perfil</i>.</li>
+<li><img src = "btn_splay_group.png" width="36" border="1"> <i>apresentação de medidas auxiliares</i> em cortes.</li>
+<li><img src="btn_azimuth.png"   width="36" border="1"> <a href="page_azimuth.htm">direção no perfil retificado</a></li>
+<li><img src="btn_refresh.png"   width="36" border="1"> redesenhar a linha de trena</li>
+</ul>
+
+<p> O modo <b>desenhar</b> apresenta quatro botões além dos três verdes:</p>
+<ul>
+<li><img src="btn_undo.png"  width="36" border="1"> <b>desfazer</b>: remove os últimos itens desenhados, um por vez.</li>
+<li><img src="btn_redo.png"  width="36" border="1"> <b>refazer</b>: redesenha os itens removidos, um por vez. A lista de itens removidos é esvaziada quando você desenha um novo item. Ações de edição de pontos também pode afetar essa lista.</li>
+<li><img src="btn_tools.png" width="36" border="1"> <a href="page_tools_list.htm">Escolha de símbolo</a>.</li>
+<li>modo de apresentação de medidas auxiliares: como linhas ou como pontos com borda.</li>
+<li><img src="btn_cont.png"  width="36" border="1"> <i>Emendas ou continuidade</i> de linhas.</li>
+</ul>
+
+<p>O ícone do botão <i>Escolha de símbolo</i> refrete o tipo atual de símbolo a ser desenhado: pontos, linhas ou áreas.</p>
+
+<p>O modo <b>apagar</b> apresenta três botões além dos três verdes:</p>
+<ul>
+<li><img src="btn_undo.png"  width="36" border="1"> <i>desfazer</i></li>
+<li><img src="btn_redo.png"  width="36" border="1"> <i>refazer</i></li>
+<li><img src="btn_erase_all.png" width="36" border="1"> tipo de símbolos a serem apagados: todos, pontos, linhas ou áreas</li>
+<li><img src="btn_size.png"  width="36" border="1"> tamanho da borracha [P, M, G]</li>
+</ul>
+
+<p>O modo <b>editar</b> apresenta, além dos três verdes:</p>
+<ul>
+<li><img src="btn_select_all.png" width="36" border="1"> tipo de item selecionável: todos, pontos, linhas, áreas, medidas, bases</li>
+<li><img src="btn_size.png"   width="36" border="1"> tamanho da ferramenta de seleção [P, M, G]</li>
+<li><img src="btn_delete.png" width="36" border="1"> apagar o item do croqui (pede confirmação e pode ser desfeito)</li>
+<li><img src="btn_point.png"  width="36" border="1"> ações especiais e relacioandas a pontos</li>
+<li><img src="btn_item.png"   width="36" border="1"> edição de propriedades do item selecionado</li>
+<li><img src="btn_range.png"  width="36" border="1"> espectro da seleção: pontos ou local (somente para linhas e áreas)</li>
+</ul>
+
+<p>Quando há itens selecionados, os dois primeiros viram botões de navegação <i>anterior/próximo</i> no conjunto de itens selecionados.</p>
+
+<p>Os botões são um pouco diferentes nos croquis de cortes:</p>
+
+<p>No modo <b>mover</b> os botões "planta-baixa e perfil", "direção perfil retificado" e "redesenhar" não existem. Há um novo botão "medidas auxiliares" que permite que se escolha quais medidas auxiliares apresentar: "todas", "base PARA", "base DE", "nenhuma". A cada clique no botão a seleção de quais medidas auxiliares apresentar é alternada para a próxima da lista. Por conta disso, o botão "o que mostrar" não apresenta opções relacionadas a medidas auxiliares.</p>
+
+<p><b>Ações de cliques longos:</b></p>
+<ul>
+<li>Em cada botão de <i>modo</i> abre a tela de configurações relevante para o modo atual [A].</li>
+<li>No botão <i>download</i> troca o dispositivo ativo se estiver com a opção "Topo 2 DistoX" habiiltada [E].</li>
+<li>Na planta-baixa, um clique longo no botão <i>direção do perfil retificado</i> faz com que o valor de referência de azimute usado para definição automática da direção possa ser alterado simplesmente deslizando o dedo pela tela. O botão é apresentado em verde nessa situação [E].</li>
+<li>No perfil retificado, um clique longo no botão "planta-baixa/perfil" abre a caixa de diálogo que permite espelhar o croqui [N].</li>
+<li>Nos cortes um clique longo no botão "medidas auxiliares" alterna a apresentação de medidas auxiliares que estão fora do plano do corte [T].</li>
+<li>No botão <i>Escolha de símbolo</i> inverte a ordem de alternância de tipos de símbolos.</li>
+<li>No botão <i>apagar</i> remove o ponto selecionado da linha ou área [N].</li>
+<li>No botão <i>edição de propriedades</i> quando o ponto selecionado é um ponto de corte, abre o croqui do corte [T].</li>
+</ul>
 
 <h4>MENUS</h4>
 When anomalies have been detected in the survey data-reduction, the "menu" button (three dots in vertical) has a red exclamation mark.
@@ -358,5 +344,12 @@ The metric grid is displayed only when a graph-paper size is set (through the <i
 
 <a href="manual08.htm">&lt; Survey info</a> |
 <a href="manual10.htm">Sketch drawing &gt;</a>
+
+<footer style="font-size:80%;font-style:italic">
+  <p>Última atualização: <span id="last-update-date">2023-02-28</span>
+      &mdash; Referente ao commit: <span
+            id="last-update-commit">664e31d98</span>
+  </p>
+</footer>
 
 </body></html>
