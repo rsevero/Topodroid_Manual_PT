@@ -6,23 +6,19 @@
     <p><i>marco.corvi@gmail.com</i></p>
     <img src="icon4.png"><br>
     <p>Topodroid é um app Android para mapeamento de cavernas. O Topodroid
-        recebe dados brutos,
-        lhe ajuda a organizá-los e produz a linha de trena imediatamente. Você
-        pode desenhar o
-        croqui com base na linha de trena durante a exploração reduzindo, dessa
-        maneira, a
-        probabilidade de erros no croqui e lhe ajudando a detectar erros nos
-        dados ainda dentro
-        da cavidade. O Topodroid tem diversas funcionalidades que lhe auxiliam a
-        ser mais
+        recebe dados brutos, ajuda a organizá-los e exibe a linha de trena
+        imediatamente. Você pode desenhar o croqui com base na linha de trena
+        durante a exploração reduzindo, dessa maneira, a probabilidade de erros
+        no croqui, ajudando a detectar erros nos dados ainda dentro da cavidade.
+        O Topodroid tem diversas funcionalidades que lhe auxiliam a ser mais
         produtivo dentro da caverna. Dessa maneira você tem um mapa praticamente
-        pronto ao final
-        da saída de exploração.</p>
+        pronto ao final da saída de exploração.</p>
 
     <p>O Topodroid torna o tempo dedicado ao trabalho dentro da caverna mais
-        eficiente. A função do Topodroid é ajudar o explorador a coletar dados
-        com mais acurácia além de
-        tornar a exploração mais agradável, não é produzir um mapa finalizado da
+        eficiente. Sua função é ajudar o explorador a coletar dados
+        com mais acurácia e
+        tornar a exploração mais agradável, não se propõe a produzir um mapa
+        finalizado da
         caverna. Para
         isso há bons programas para PC voltados para o trabalho no escritório.
     </p>
@@ -31,22 +27,23 @@
         mais baixos já
         contam com recursos para fazer download de dados, administrar nomes de
         bases e desenhar
-        croquis simples. Os níveis mais avançados podem ser usados para preparar
+        croquis simples. Os níveis mais avançados podem ser usados para ajustar
         dados e croquis
         para simplificar o trabalho no escritório.</p>
 
     <p>O Topodroid foi pensado para trabalhar com uma topo por vez, não para
         administrar projetos complexos de mapeamento que incluam diversas topos
         diferentes. Ainda assim conta com o <i>Gerenciador de Projetos
-            Therion</i> que pode ser usado para compor diversas topos em um
+            Therion</i> que ajuda a preparar projetos mais complexos para serem
+        posteriormente processados no Therion compondo diversas topos em um
         projeto e um <i>Visualizador 3D</i> com o qual você pode ver uma
         representação 3D de uma topo ou projeto.</p>
 
-    <p>O Topodroid funciona com a DistoX (versões 1, 2 e BLE), SAP5 e BRIC4.
-        Observe que os aparelhos Android (celulares, tables, etc.) assim como
-        canetas ativas podem influenciar as medidas produzidas por esses
-        dispositivos eletrônicos se estiverem suficientemente próximos. É
-        possível também cadastrar dados manualmente.</p>
+    <p>O Topodroid funciona com a DistoX (versões 1, 2 e BLE), SAP5 e BRIC4 além
+        de permitir o cadastro manual de dados.
+        Observe que os aparelhos Android (celulares, tablets, etc.), assim como
+        canetas ativas podem interferir nas medidas produzidas por esses
+        dispositivos eletrônicos se estiverem suficientemente próximos.</p>
 
     <p><i>O robô Android é reproduzido ou modificado a partir de material criado
             e compartilhado pela Google de acordo com os termos descritos na
@@ -61,8 +58,8 @@
     <p><i>O Topodroid é um app de código aberto e não contém anúncios. Ele é
             oferecido sem nenhuma garantia: ao usá-lo você reconhece que os
             autores não são responsáveis por qualquer perda de dados ou dano que
-            possa ocorrer, em particular com as DistoX, SAP5 e BRIC4. Apesar de
-            que os autores fazerem seu melhor para oferecer um app livre de
+            possa ocorrer, em particular com as DistoX, SAP5 e BRIC4, apesar dos
+            autores fazerem seu melhor para oferecer um app livre de
             defeitos, não há nenhuma garantia nesse sentido.</i></p>
 
     <hr>
@@ -83,12 +80,11 @@
 
     <h4>Diretórios de topos TopoDroid</h4>
 
-    <p>O diretório base do Topodroid é <i>Documents/TDX</i> no dispositivo
-        externo principal de armazenamento do aparelho. Contém o diretório
-        central <i>Topodroid</i>. Este diretório contém o banco de dados
-        <i>distox14.sqlite</i>, o diretório <i>zip</i>, o diretório <i>tmp</i>
-        para os arquivos temporários assim como um diretório diferente para cada
-        topo criada.
+    <p>O diretório base do Topodroid é <i>Documents/TDX</i> criado no
+        armazenamento interno do aparelho Android. Contém o subdiretório central
+        <i>Topodroid</i>, onde está o banco de dados <i>distox14.sqlite</i>, o
+        diretório <i>zip</i>, o diretório <i>tmp</i> para os arquivos
+        temporários assim como um diretório diferente para cada topo criada.
     </p>
 
     <p>Esse diretório e seus subdiretórios não são apagados quando o app é
@@ -100,7 +96,7 @@
 
     <p>Os dados da topo assim como os croquis são guardados no subdiretório
         <i>Topodroid</i> dentro de <i>TDX</i>. Cada topo tem um subdiretório
-        dentro de <i>Topodroid</i>. O diretório <i>Topodroid</i> contém o banco
+        dentro de <i>Topodroid</i>. A pasta <i>Topodroid</i> contém o banco
         de dados <i>distox14.sqlite</i>, os subdiretórios das topos e o
         diretório dos projetos Therion <i>thconfig</i>.
     </p>
@@ -115,9 +111,12 @@
 
     <ol>
         <li>faça o download do <i>adb</i> em seu PC</li>
-        <li>no Android, habilite <i>Developer options</i> (opção <i>About
-                Phone</i>, clique sete vezes em <i>Build number</i>)</li>
-        <li>habilite <i>USB debugging</i> em <i>Developer options</i></li>
+        <li>dê um toque em <b>Configurações</b> > <b>Sobre o telefone</b>, dê um
+            toque em <b>Informações do Software</b> e tecle sete vezes em
+            <b>Número da compilação</b>
+        </li>
+        <li>retorne a tela anterior, dê um toque em <b>Opções do
+                desenvolvedor</b> e selecione <b>Depuração de USB</b></li>
         <li>no PC abra o servidor <i>adb</i>. Entre o comando <i>adb
                 start-server</i></li>
         <li>conecte o Android ao PC com um cabo USB. Pode ser necessário
@@ -149,14 +148,14 @@
     </p>
 
     <p><b>Obs:</b> o Topodroid versão 5.1.40 não é capaz de importar arquivos
-        <i>zip</i> craidos pela versão 6 devido a mudanças no banco de dados.
+        <i>zip</i> criados pela versão 6 devido a mudanças no banco de dados.
     </p>
 
     <h4>Recursos de hardware</h4>
 
     <p>O Topodroid é capaz de utilizar os seguintes recursos de hardware:
-        <i>bluetooth</i>, <i>camera</i>, <i>microphone</i>, <i>GNSS</i> e
-        <i>multitouch</i>. As funcionalidades do Topodroid que dependam de um
+        <i>bluetooth</i>, <i>câmera</i>, <i>microfone</i>, <i>GNSS</i> e
+        <i>multitoque</i>. As funcionalidades do Topodroid que dependam de um
         recurso não disponível em seu aparelho Android são automaticamente
         desabilitadas.
     </p>
@@ -173,7 +172,7 @@
         algumas poucas arquiteturas: arm64_v8a, armeabi-v7a e x86_64. São as
         seguintes bibliotecas: <i>powercrust</i> e o envólucro <i>tiff</i> da
         <i>libtiff</i>. Esta última contém a <i>libjpeg</i> e a <i>libpng</i>
-        linkadas estaticamente.
+        lincadas estaticamente.
     </p>
 
     <h4>Erros e panes</h4>
@@ -192,7 +191,10 @@
             envie um email para <i>marco.corvi@gmail.com</i> <b>Inclua em sua
                 mensagem as versões do app e do Android</b>.</li>
         <li>Para outras questões e sugestões de novas funcionalidades, envie um
-            email para a lista de email do Topodroid.</li>
+            email para a <a href="mailto:topodroid@googlegroups.com">lista de
+                email do Topodroid</a>:
+            <i>&lt;topodroid@googlegroups.com&gt;</i>.
+        </li>
     </ul>
 
     <hr>
@@ -200,19 +202,12 @@
     <h4>Traduções do app:</h4>
 
     <ul>
-        <!-- li>V. Georgiev (búlgaro)</li -->
         <li>H.J. Luo (chinês)</li>
         <li>G. Chardin - D. Ros (francês)</li>
-        <!-- li>M. Keller (alemão)</li -->
         <li>B. Holl (húngaro)</li>
         <li>F. Toso (italiano)</li>
-        <!-- li>K. Borgiel (polonês)</li -->
         <li>R. Severo (português)</li>
-        <!-- li>A. Pologea (romeno)</li -->
         <li>A. Kozhenkov (russo)</li>
-        <!-- li>M. Jurecka - J. Hetesi (eslovaco)</li -->
-        <!-- li>M. Guerrero - J. Pardo (espanhol)</li -->
-        <!-- li>V. Kozly (ucraniano)</li -->
     </ul>
 
 
@@ -224,7 +219,6 @@
     <ul>
         <li>A. Kozhenkov - russo: https://github.com/akozhenkov/TD_manual_RU
         </li>
-        <!-- li>M. Guerrero - espanhol: https://github.com/xguerrero/Topodroid_manual_es</li -->
         <li>F. Toso - italiano: https://github.com/fato63/TopoItMan</li>
         <li>D. Ros - francês: http://souterweb.free.fr/</li>
         <li>B. Holl - húngaro: https://github.com/BalazsHoll/TopoDroid_manual_hu
@@ -233,9 +227,10 @@
             https://github.com/rsevero/Topodroid_Manual_PT</li>
     </ul>
 
-    <p>As traduções do Manual do Usuário podem envelhecer rapidamente caso não
+    <p>As traduções do <b>Manual do Usuário</b> podem envelhecer rapidamente
+        caso não
         sejam constantemente atualizadas. Elas são instaladas ao selecionar a
-        opção apropriada na <u>janela principal</u> (uma conexão de internet é
+        opção apropriada na tela <u>Configurações</u> (uma conexão de internet é
         necessária para isso).</p>
 
     <p>Se houver uma versão atualizada da tradução do manual instalada, o app
@@ -244,11 +239,16 @@
 
     <p><a href="manual01.htm">Introdução &gt;</a></p>
 
-    <footer style="font-size:80%;font-style:italic">
-        <p>Última atualização: <span id="last-update-date">2023-02-25</span>
+    <footer style="font-size:80%;font-style:italic;">
+        <p style="margin:0;">Última atualização: <span
+                  id="last-update-date">2023-03-04</span>
             &mdash; Referente ao commit: <span
-                  id="last-update-commit">977557a8e</span>
+                  id="last-update-commit">a6b8e8430</span>
         </p>
+        <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo
+                <i>&lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span
+                  id="translation">Edvard Magalhães
+                <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
 
 </body>
