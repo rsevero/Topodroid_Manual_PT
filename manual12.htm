@@ -1,74 +1,87 @@
 <html><body>
-<h3>[12] OVERVIEW WINDOW</h3>
+<h3>[12] VISÃO GERAL</h3>
 
-You get into the <u>overview window</u> from the <i>overview</i> menu of the <u>sketch window</u>.
-<br><p>
+<p>Você chega na tela <u>Visão Geral</u> a partir da opção de menu <u>Visão Geral</u> disponível na tela <u>Desenho</u>.</p>
 
-The <u>overview window</u> displays all the sketches together, either in plan or in extended profile view depending on the view of the
-<u>sketch window</u>.
-The <u>overview window</u> can be either in normal mode (canvas shift and zoom), or in measure-mode.<br><p>
-
-<b>BUTTONS</b><br>
-<ul style="margin-top=0">
-<li><img src="btn_measure.png" width="36" border="1"> puts the window in "measure mode"</li>
-<li><img src="btn_mode.png" width="36" border="1"> reference. Dialog to switch on/off the display of midline, splay shots, station names, metric grid, and scalebar.  There is also a checkbox to hide the cave details and show the outline only.</li>
-<li><img src="btn_angle.png" height="36" border="1"> measurement. If "angle", distance and angle between two points. If "polyline", total length of a polyline traced by tapping the positions of the nodes</li>
-<li><img src="btn_undo.png" width="36" border="1"> undo. It removes the last point of the polyline</li>
+<p>A tela <u>Visão Geral</u> apresenta todos os croquis ao mesmo tempo, seja em planta baixa, seja em perfil retificado a depender do croqui apresentado na tela <u>Desenho</u>.
+A tela <u>Visão Geral</u> tem dois modos:</p>
+<ul>
+    <li><i>Normal</i>: onde você pode arrastar e dar zoom da área de visualização.</li>
+    <li><i>Medição</i>: você pode tirar medidas entre dois pontos na área de visualização.</li>
 </ul>
-<br><p>
 
-When the window is in <i>measure mode</i> the first button has a bright green color.
-In this mode the drawing can be translated with the corner-drag (if enabled) and zoomed with the zoom buttons (if enabled).
-<br><p>
+<p><b>BOTÕES</b></p>
 
-<h4>Segment measure</h4>
-When the <u>overview window</u> is in measure-mode you can measure the distance between two points on the canvas.
-To do this you tap first on the first point: this is displayed as a pink circled cross. Next you tap on the
-second point: this is shown with a blue cross and the 2D distance is shown in the title bar, together with the differences along the X and Y axes, and the bearing (plan) or inclination (extended profile).
-The distance units is the the sketch grid units (meter, yard, 2-ft, or dm). The angle is in the current angle units (degrees or grad).<br>
-Any further tap changes the second point (and the measure values).<br><p>
-
-To end the measure tap on the "measure-mode" button.<br><p>
-
-The distance is computed in the plane of the canvas. In plan view, this is the horizontal distance. In extended profile view the Y-axis difference is the difference in elevation.<br><p>
-
-<h4>Polyline measure</h4>
-The "polyline" measure is useful to get an estimate of the "length" of the cave, more sensible than the length of the midline.
-You tap on the start of the polyline and the additional taps mark the nodes of the polyline.
-If you make a mistake tap the <i>undo</i> to remove the last points one at a time.<br><p>
-
-The title displays the distance between the two end points, the polyline length, the X-Y displacement between the endpoints, and the angle.<br><p>
-
-<img src="polyline.png" alt="polyline measure">
-<br><p>
-
-<b>MENUS</b><br>
-<ul style="margin-top=0">
-<li>Close the window</li>
-<li>Export [T]</li>
-<li>Settings</li>
-<li>Help</li>
+<ul>
+<li><img src="btn_measure.png" width="36" border="1"> <u>Modo medição</u>: ativa o modo <i>Medição</i>.</li>
+<li><img src="btn_mode.png" width="36" border="1"> <u>Referências</u>: abre caixa de diálogo onde se define quais elementos são apresentados: linha de trena, medidas auxiliares, nomes de bases, grade métrica e escala.
+Há também uma opção para ocultar os detalhes da caverna e apresentar somente o contorno.</li>
+<li><img src="btn_angle.png" height="36" border="1"> <u>Tirar medidas</u>: se "ângulo", mede distância e ângulo entre dois pontos.
+Se "polilinha", comprimento total da polilinha definida pelos pontos onde clicar.</li>
+<li><img src="btn_undo.png" width="36" border="1"> <u>Desfazer</u>: remove o último ponto da polilinha.</li>
 </ul>
-<br><p>
 
-<b>Export</b><br>
-The overview can be exported in the following formats:
+<p>Quando a tela está no modo <i>Medição</i> o primeiro botão fica em destaque com um verde claro.
+Neste modo o desenho pode ser arrastado (pelos cantos se a opção "Arrastar canto" estiver habilitada) e pode-se dar zoom (através dos botões de zoom se a opção "Controle zoom" estiver habilitada).</p>
+
+<h4>Medida "Ângulo"</h4>
+
+<p>Quando a tela <u>Visão Geral</u> está no modo <i>Medição</i> você pode tirar medidas de distância entre dois pontos na área de visualização.
+Para fazer isso você primeiro clica no primeiro ponto: ele será marcado com uma cruz rosa envolva em um círculo.
+Então você clica no segundo ponto: este será marcado com uma cruz azul e a distância 2D será apresentada na barra de título assim como as distância nos eixos X e Y além da direção entre os pontos (planta baixa) ou inclinação (perfil retificado).
+A unidade usada para indicar a distância é a mesma da grade da tela <u>Desenho</u> (metro, jard, 2 pés ou 0,1 m).
+O ângulo é apresentado na unidade definida para ângulos (graus ou grados).
+Qualquer clique adicional altera o segundo ponto e as medições apresentadas.</p>
+
+<p>Para finalizar a medição, clique no botão <i>Modo Medição</i>.</p>
+
+<p>A distância é calculada no plano da área de visuailzação.
+Na planta baixa isso é a distância horizontal.
+No perfil retificado a diferença no eixo Y é a diferença de elevação entre os pontos.</p>
+
+<h4>Medida "Polilinha"</h4>
+
+<p>O modo de medição "Polilinha é útil para se obter uma estimativa do comprimento da caverna mais útil que a extensão da linha de trena.
+Você clica no início da polilinha e cada clique adicional marca novos pontos da polilinha.
+Se você cometer um erro, clique no botão <i>Desfazer</i> para remover os últimos pontos definidos, um por vez.</p>
+
+<p>O título da tela apresenta a distância entre os dois pontos extremos, o compimento da polilinha, as distâncias nos eixos X e Y e o ângulo das extremidades.</p>
+
+<p><img src="polyline.png" alt="polyline measure"></p>
+
+<p><b>MENUS</b></p>
+<ul>
+<li><i>Fechar</i> a tela</li>
+<li><i>Exportar</i> [T]</li>
+<li><i>configurações</i></li>
+<li><i>Ajuda</i></li>
+</ul>
+
+<p><b>Exportar</b></p>
+
+<p>A visão geral pode ser exportada nos seguintes formatos:</p>
 <ul>
 <li><i>Therion</i></li>
-<li>SVG</li>
-<li>DXF (<i>LibreCAD</i>)</li>
-<li>shapefile (<i>QGIS</i>)</li>
-<li>xvi (<i>xtherion</i>)</li>
-</ul><br>
+<li><i>SVG</i></li>
+<li><i>LibreCAD</i>: DXF</li>
+<li><i>QGIS</i>: shapefile</li>
+<li><i>XTherion</i>: xvi</li>
+</ul>
 
-Each sketch is mapped to a "scrap" in the Therion export.
-For the other export formats, the sketches are put in a single drawing.<br>
-Station points are not included automatically in the therion export; only user defined station are added.<br>
-The stations are added automatically to SVG, DXF, shapefile, and xvi exports.<br>
-If there are "section" points, the x-sections are included.
-<br><p>
+<p>Cada croqui é mapeado para um "scrap" na exportação para o Therion.
+Nos outros formatos, todos os croquis são incluídos em um só arquivo.</p>
 
-<a href="manual11.htm">&lt; X-sections</a> |
-<a href="manual13.htm">Import/Export &gt;</a>
+<p>Os pontos das bases não são incluídos automaticamente na exportação para o Therion. Somente as bases definidas pelo usuário são incluídas.</p>
+
+<p>As bases são incluídas automaticamente na exportação para os formatos SVG, DXF, shapefile e xvi.</p>
+
+<p>Se houverem ponto de corte, os respectivos cortes serão incluídos.</p>
+
+<p><a href="manual11.htm">&lt; Cortes</a> |
+    <a href="manual13.htm">Importar/Exportar &gt;</a></p>
+
+<footer style="font-size:80%;font-style:italic">
+    <p>Última atualização: <span id="last-update-date">2023-03-06</span> &mdash; Referente ao commit: <span id="last-update-commit">9bea83021</span></p>
+</footer>
 
 </body></html>
