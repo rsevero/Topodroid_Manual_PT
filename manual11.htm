@@ -1,103 +1,159 @@
 <html><body>
-<h3>[11] CROSS-SECTIONS</h3>
+<h3>[11] CORTES</h3>
 
-X-sections are kind of special because they do not belong to the sketch but are independent sketches associated to either the plan or the profile.
-TopoDroid has two types of x-sections: <u>leg</u> x-sections and <u>station</u> x-sections. The former cross a leg, the latter are defined at a station.<br><p>
+<p>Cortes são especiais na medida em que eles não pertecenm a um croqui, são independentes tanto da planta baixa quando do perfil.
+O Topodroid tem dois tipos de cortes: cortes em <u>visada</u> e cortes em <b>bases</b>.
+O primeiro cruza uma visada e o último cruza uma base.</p>
 
-A plan-view x-section is always in a vertical plane and the upward direction is the vertical.<br>
-Profile-view x-sections can be either vertical or horizontal, or slanted if the appropriate setting is enabled [T].<br><p>
+<p>Um corte definido em uma planta baixa sempre representa um plano vertical e a parte de cima é a vertical.</p>
 
-You can assign a comment to an x-section.<br><p>
+<p>Cortes definidos em perfis podem tanto ser verticais quanto horizontais. Podem até mesmo ser inclinados se a configuração apropriada estiver habilitada [T].</p>
 
-<b>Leg x-sections</b><p>
-To tell TopoDroid that you want to draw a x-section you have to draw a "section" line, either in the plan view or in the profile view. The section line defines the position of the x-section and its orientation.<br><p>
+<p>Você pode atrelar um comentário a um corte.</p>
 
-A x-section is the shape of the cave in a plane that cuts it. The orientation of the x-section is the orientation of this plane, i.e., the direction of the line perpendicular to the plane, and pointing in the direction of sight. You define the orientation of the x-section by the way you trace the section line. As an indicator the section line has a tick pointing from the line to the direction of view of the x-section.<br>
-The size of this "tick" can be adjusted in the <i>settings</i> dialog.<br><p>
+<p><b>Cortes em visadas</b></p>
 
-You can choose between a photo x-section, and a sketch x-section. In the first case just take a photo that will remind you of the shape of the gallery when you will be drafting the cave map. Make sure to have a fellow caver in the picture who will serve as a size reference.<br><p>
+<p>Para criar um corte em visada você desenha uma linha de corte em uma planta baixa ou perfil.
+A linha de corte define tanto a posição quanto a orientação do corte.</p>
 
-In the second case you sketch the x-section on a canvas with the usual drawing tools of TopoDroid. As a reference TopoDroid displays the leg shot traversed by the x-section and the splay shots at its endpoints. The station in front (the one that the x-section is looking at) is centered in the grid. The splay shots in front are light grey, those behind are thinner darker grey. All the shots are displayed projected on the plane of the x-section. A white dot marks where the section plane intersects the leg [T].<br><p>
+<p>Um corte representa o formato da caverna onde passa o plano do corte.
+A orientação do corte é a mesma do plano, ou seja, a direção da linha perpendicular ao plano e apontando na direção de visualização.
+Você define a orientação do corte pela maneira que você desenha a linha de corte.
+Como forma de indicar a orientação definida a linha de corte tem um pequeno traço que sai da linha de corte na direção da visualização.
+O tamanho deste traço pode ser ajustado nas configurações.</p>
 
-Leg x-sections can be re-opened and modified by selecting, in "edit" mode, the section line or the section point, and tapping the <i>edit</i> button.<br><p>
+<p>Você pode escolher entre um corte fotográfico ou um corte desenhado.</p>
 
-<b>X-sections in plan view</b><br>
-X-sections defined in the plan view are always in a vertical plane (zero inclination). Their orientation (ie, the azimuth of the x-section plane) is determined by the angle of the section line. Very often the section plane is perpendicular to the gallery, but can be at any needed angle. For example, a section line drawn from left to right(e.g. horizontal, angle 90&deg; from the vertical) has a direction of view to the magnetic North (up, azimuth 0). If drawn slightly downwards at an angle of 120, it will have a direction of view to an azimuth of 30&deg;.<br>
-The crossed leg is displayed vertical when the x-section has the same azimuth as the leg. Otherwise it is tilted right or left.<br><p>
+<p>No primeiro caso você simplesmente tira uma foto que vai lhe ajudar a lembrar do formato da galeria quanto você estiver finalizando o mapa.
+Tenha certeza de incluir um colega espeleólogo na foto para servir de escala.</p>
 
-In plan view it is possible to make a x-section that crosses multiple legs. All the crossed legs and the splays at their stations are shown as x-section sketch reference. The crossing point is marked on every leg.<br>
+<p>No segundo caso você desenha o corte em uma área de desenho com as ferramentas normais de desenho do TopoDroid.
+Como referência o TopoDroid apresenta a visada cruzada pelo corte assim como as medidas auxiliares das duas bases ligadas por essa mesma visada.
+A base em frente (aquela para a qual o corte está olhando) estará centralizada no grid.
+As medidas auxiliares da base em frente são desenhadas em cinza claro, já as medidas auxiliares da base à trás são desenhadas em cinza mais escuro.
+Todas as medidas são representadas através de suas projeções no plano do corte.
+Um ponto branco indica onde o plano do corte intercepta a visada [T].</p>
 
-<img src="plan-xsection.png" >
-<br><p>
+<p>Os cortes em visadas podem ser reabertos e alterados selecionando, no modo <i>Editar</i>, a linha de corte ou o ponto de corte e clicando no botão <i>Editar</i>.</p>
 
-<b>X-sections in profile view</b><br>
-X-sections in the profile view can be either "horizontal" (on vertical shots in pits) or "vertical" (on more or less horizontal galleries).
+<p><b>Cortes em plantas baixas</b></p>
 
-They are considered "horizontal" if the inclination
-of the leg exceeds the value of the H-threshold setting.<br><p>
+<p>Cortes definidos em plantas baixas representam sempre um plano vertical (inclinação zero<a href="#footnote-1">[1]</a>).
+Sua orientação, ou seja, o azimute do plano do corte, é definido pelo azimute da linha de corte.
+É comum que o plano do corte seja perpendicular à galeria mas pode ser definido em qualquer outro ângulo que seja conveniente.</p>
 
-"Vertical" x-sections must be defined tracing an almost vertical section line.
-They always have the azimuth of the crossed leg (or the opposite one if the direction of the section line is the opposite of that of the leg). The crossed leg is displayed vertical as the x-section has the same azimuth as the leg.<br><p>
+<p>Por exemplo, uma linha de corte desenhada da esquerda para a direita, ou seja, em um ânguo de 90&deg; com a vertical da área de desenho, tem uma direção de visualização voltada para o norte magnético (para cima na área de desenho, azimute 0).</p>
 
-"Horizontal" x-sections are defined tracing an almost horizontal section line.
-If the section line is traced from the right to left, the x-section is oriented downwards and has -90&deg; inclination. This is a "horizontal" x-section as seen from above. Most of the times you will want to draw "horizontal" x-sections this way, as it is more natural to lay a map on a surface and look down at it. If you trace the section line from left to right the x-section is oriented upwards (inclination +90&deg;).<br><p>
+<p>Se desenhada com um declive suave em um ângulo de 120&deg;, definirá uma direção de visualização com um azimute de 30&deg;.</p>
 
-Horizontal x-sections are displayed always with the magnetic North up. They are seen from above if the section line is traced from right-left, and seen from below
-if it is traced left-right.
-A reference line 2 m long, oriented to the North, is added to them.
-If the section is seen from above the North line is to the right of the vertical direction when the declination is negative, and to the left when it is positive.
-If the section is seen from below the North line is to the left when the declination is negative and to the right when it is positive.
-The leg is shown at its azimuth<br><p>
+<p>A visada interceptada pela linha de corte é apresentada na vertical dentro do corte se o corte tiver o mesmo azimute da visada, ou seja, a linha de corte é perfeitamente perpendicular à visada.
+Do contrário a visada será apresentada pendendo para a esquerda ou para a direita conforme o caso.</p>
 
-<img src="hsection.png" >
-<br><p>
+<p>Em uma planta baixa é possível criar um corte que intercepte mais de uma visada.
+Todas as visadas interceptadas, assim como as medidas auxiliares das bases envolvidas são apresentadas no corte como referência.
+O ponto de interceptação da linha de corte com cada visada é destacado no corte com pontos brancos.</p>
 
-If the "profile slant x-section" setting is enabled it is possible to define profile-view x-sections in planes at variable inclination (a multiple of 10&deg; close to the slope of the section line).<br><p>
+<p><img src="plan-xsection-pt.png"></p>
 
-In extended profile view the leg x-section must cross a single leg.
-Multileg xsections are allowed in projected profile views.
-For vertical x-sections the azimuth of the xsection plane is orthogonal to that of the profile view.<br><p>
+<p><b>Cortes em perfis</b></p>
+
+<p>Cortes em perfis podem ser tanto horizontais (indicados para poços verticais) como verticais (indicado apra galerias razoavelmente horizontais).</p>
+
+<p>Eles são considerados horizontais se a inclinação da visada exceder o valor da configuração de limite H (<i>Lim hor corte H</i>).</p>
+
+<p>Cortes verticais devem ser criados traçando uma linha de corte o mais vertical possível.</p>
+
+<p>Usam o azimute da visada interceptada como direção de visualização (ou a direção oposta se o sentido da linha de corte for contrário ao da visada).
+A visada interceptada é apresentada na vertical já que a direção de visualização do corte tem o mesmo azimute da visada.</p>
+
+<p>Cortes horizontais são criados traçando uma linha de corte o mais horizontal possível.</p>
+
+<p>Se a linha de corte é traçada da direita para a esquerda, a direção de visualização do corte apontará para baixo, ou seja, terá uma inclinação de -90&deg;.
+Este será um corte horizontal visto de cima.
+Na maior parte das vezes você vai querer desenhar cortes horizontais desta maneira pois é mais natural por um mapa em uma surpefície e olhar para ele.</p>
+
+<p>Se você desenhar a linha de corte da esquerda para a direita o corte terá sua direção de visualização voltada para cima (inclinação de +90&deg;).</p>
+
+<p>Cortes horizontais são sempre apresentados com o norte magnético para cima.
+Representam a visão de cima se a linha de corte foi traçada da direita para a esquerda e a visão vista de baixo se traçada da esquerda para a direita.</p>
+
+<p>Uma linha de referência com 2 m de comprimento é adicionada a eles.</p>
+
+<p>Se a direção de visualização do corte vier de cima o norte verdadeiro estará à direita da vertical se a declinação magnética for negativa e à esquerda se for positiva.</p>
+
+<p>Se a direção de visualização do corte vier de baixo o norte verdadeiro estará à esquerda da vertical se a declinação magnética for negativa e à direita se for positiva.</p>
+
+<p>A visada é apresentada com seu próprio azimute.</p>
+
+<p><img src="hsection-pt.png"></p>
+
+<p>Se a opção de cortes inclinados em perfis (<i>Corte inclinado</i>) estiver habilitada será possível definir cortes em perfis com inclinações variadas.
+Será usado o múltiplo de 10&deg; mais próximo da inclinação da linha de corte.</p>
+
+<p>Em perfis retificados um corte em visada só pode interceptar uma única visada.
+Cortes interceptando várias visadas são permitidos em perfis projetados.
+Nos cortes verticais o azimute do plano do corte é ortogonal à direção de visualização do perfil no caso de um perfil projetado e à visada interceptada no caso de um perfil retificado.</p>
  
-<img src="profile-xsection.png" >
-<br><p>
+<p><img src="profile-xsection-pt.png"></p>
 
-<b>Section points</b><br>
-If the setting for the "auto section points" is checked, when you insert a x-section, either by drawing a section-line or inserting it at a station, the corresponding section point is added to the sketch.
-Section points are displayed as white squares and and orange line connecting them to the relative section line or station.<br>
-If the x-section is deleted, the corresponding section point is also deleted.<br><p>
+<p><b>Pontos de corte</b></p>
 
-<b>X-section files</b><br>
-Each x-section is saved in a separate file in the "tdr" subfolder. The files get consecutive names "MySurvey-xx0.tdr", "MySurvey-xx1.tdr", etc. The "xx0" numbering part of the name is also displayed in the Section dialog that pops up when you create or edit a section.<br>
-The file is deleted when a x-section is deleted.<br><p>
+<p>Se a configuração <i>Criar ponto corte</i> estiver habilitada um ponto de corte indicando onde apresentar o croqui do corte será criado junto com cada novo corte, seja ele um corte em visada ou em base.</p>
 
-X-sections can be exported in other formats just like the other sketches, except in <i>cSurvey</i> format.
-X-sections are included in the sketch exports in the DXF, SVG, <i>cSurvey</i>, provided there is the associated section point.<br><p>
+<p>Pontos de corte são representados por quadrados brancos ligados por uma linha laranja à linha de corte ou base a que são relacionados.</p>
 
-<b>Station x-sections</b> [E]<br>
-This is another way to insert x-sections.
-The "Station" dialog, that you get by tapping on a station point in <i>Edit</i> mode, displays the station coordinates
-and has some buttons:
+<p>Quando um corte é apagado, o ponto de corte correpondente é também apagado.</p>
+
+<p><b>Arquivos de cortes</b></p>
+
+<p>Cada corte é armazenado em um arquivo separado dentro do subdiretório "tdr".
+Os arquivos ganham nomes sucessivos "MinhaTopo-xx0.tdr", "MinhaTopo-xx1.tdr", etc.
+A parte "xx0" do nome é apresentada na caixa de diálogo apresentada quando você cria ou edita um corte.
+O arquivo é apagado quando o corte é apagado.</p>
+
+<p>Cortes podem ser exportados em outros formatos como os outros croquis exceto no formato <i>cSurvey</i>.
+Cortes são incluídos em croquis exportados em formato DXF, SVG e <i>cSurvey</i> desde que tenham pontos de corte definidos.</p>
+
+<p><b>Cortes em bases</b> [E]</p>
+
+<p>Esta é uma outra maneira de criar cortes.
+A caixa de diálogo "Base" apresentada quando você edita uma base apresenta as coordenadas da base assim como alguns botões:</p>
 <ul style="margin-top=0">
-<li>"Continue" the survey from the station. Set the station as the "active station", ie, that to which the next shot will be attached</li>
-<li>"Reset" the centerline display after the station.</li>
-<li>"Toggle" the display of the splays at the station.</li>
-<li>"X-Section" [E] opens a <u>sketch window</u> to draw a x-section at the station.</li>
+    <li><i>Gravar</i>: grava o comentário definido.</li>  
+    <li><i>Ok</i>: continua a linha de trena a partir desta base.
+    torna esta a "base ativa", ou seja, aquela na qual as novas medidas serão atreladas.</li>
+    <li><i>Medidas auxiliares</i>: mostra/oculta as medidas auxiliares desta base.</li>
+    <li><i>Corte</i> [E]: abre a tela <u>Desenho</u> para desenhar um corte nesta base.</li>
+    <li><i>Gravar base</i>: abre a caixa de diálogo <i>Bases gravadas</i> já configurada para gravar a base atual.</li>
 </ul>
 
-If the mean clino of the legs at the station is smaller than the "vertical threshold", the x-section at a station is drawn in a vertical plane passing through the station, otherwise it is horizontal.
-The station x-section is useful when you take several splay shots around the station to describe the shape of the gallery. 
-The x-section plane can be oriented with the <i>compass</i> button.
-If the station has only two legs the plane can be oriented along the bisecant of the angles formed by the (horizontal projections of the) legs. If there is only one leg it can be oriented orthogonal to that. If there are more than two legs you have to use the
-<i>compass</i> button.<br><p>
+<p>Se a inclinação média das visadas as quais esta base está ligada for menor do que o limite vertical definido na configuração <i>Lim vert aux</i>, o corte na base será desenhado em um plano vertical passando pela base, do contrário será desenhado em um plano horizontal.</p>
 
-Station x-sections can be re-opened and modified by selecting, in "edit" mode, the station or the section point, and tapping the <i>edit</i> button.<br><p>
+<p>O corte em base é útil quando você produz diversas medidas auxiliares a partir da base para descrever o formato da galeria.</p>
 
-See also<br>
-<a href="page_sketch_station.htm">Sketch station edit dialog</a>,<br>
-<a href="page_line_dialog.htm">Sketch line edit dialog</a>.
-<br><p>
+<p>A direção do plano do corte pode ser definido com o uso do botão <i>Bússola</i>. <img src="btn_compass.png" border="1" width="36"></p>
 
-<a href="manual10.htm">&lt; Sketch drawing</a> |
-<a href="manual12.htm">Overview window &gt;</a>
+<p>Se a base tem somente duas visadas ligadas a ela, o plano do corte pode ser orientado ao longo da bissecante dos ângulos formados pelas projeções horizontais dessas visadas.</p>
+
+<p>Se a base só tem uma visada ligada à ela, pode ser orientada ortogonalmente a ela.</p>
+
+<p>Se há mais de duas visadas ligada à base será necessário usar o botão <i>Bússola</i>.</p>
+
+<p>Cortes em bases podem ser reabertos e editados selecionando a base é clicando no botão <i>Corte</i> da caixa de diálogo de edição.</p>>
+
+<p>Veja também as seguintes caixas de diálogo:</p>
+<ul>
+    <li><a href="page_sketch_station.htm">Base em Croqui</a></li>
+    <li><a href="page_line_dialog.htm">Linha em Croqui</a></li>
+</ul>
+
+<p><a href="manual10.htm">&lt; Desenhando croqui</a> |
+    <a href="manual12.htm">Visão Geral &gt;</a></p>
+
+<p id="footnote-1" style="font-size:90%">[1] <i>Obs</i>: as menções à inclinação nesta página usam uma referência diferente da inclinação das medidas na linha de trena. Aqui inclinação 0&deg; é vertical, já na linha de trena, inclinação 0&deg; é horizontal.</p>
+
+<footer style="font-size:80%;font-style:italic">
+    <p>Última atualização: <span id="last-update-date">2023-03-06</span> &mdash; Referente ao commit: <span id="last-update-commit">9bea83021</span></p>
+</footer>
 
 </body></html>
