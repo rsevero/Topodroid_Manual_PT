@@ -5,17 +5,22 @@
 
 	<p><b>Somente para DistoX, DistoX2 e DistoXBLE</b></p>
 
-	<p>Ao clicar no botão <i>Calibração</i> da tela <u>Dispositivos</u> é apresentada a lista de <a href="page_calib_dialog.htm">calibrações</a> disponíveis para o dispositivo selecionado. Você pode abrir uma calibração pré-existente ou criar uma nova. Em ambos os casos você será levado para a <u>tela calibração</u>.</p>
+	<p>Ao clicar no botão <i>Calibração</i> da tela <u>Dispositivos</u> é apresentada a lista de <a href="page_calib_dialog.htm">calibrações</a> disponíveis para o dispositivo selecionado.
+	Você pode abrir uma calibração pré-existente ou criar uma nova.
+	Em todos os casos você será levado para a <u>tela calibração</u>.</p>
 
-	<p>A tela <u>Calibração</u> tem campos de texto para:</p>
+	<p>A tela <u>Calibração</u> tem campos para:</p>
 	<ul>
-		<li>Nome: cada calibração deve ter um nome único.</li>
-		<li>Data</li>
-		<li>Descrição</li>
-		<li>Inclinação magnética: em graus, se calculada pelo algoritmo de calibração</li>
+		<li><i>Nome</i>: cada calibração deve ter um nome único.</li>
+		<li><i>Data</i></li>
+		<li><i>Descrição</i></li>
+		<li><i>Inclinação magnética</i>: em graus, se calculada pelo algoritmo de calibração</li>
+		<li><i>Algoritmo</i>: seleção do algoritmo de calibração.
+		A opção "auto", onde o Topodroid escolhe qual algoritmo usar, vem selecionada por padrão.</li>
 	</ul>
 
-	<p>e campos rádio para seleção do algoritmo de calibração. A opção "auto", onde o TopoDroid escolhe qual algoritmo usar, vem selecionada por padrão.</p>
+	<p>e campos rádio para seleção do algoritmo de calibração.
+	A opção "auto", onde o TopoDroid escolhe qual algoritmo usar, vem selecionada por padrão.</p>
 
 	<h4>BOTÕES</h4>
 	<ul>
@@ -39,8 +44,11 @@
 		<li><i>Erro</i>: o cálculo dos coeficientes de variação termina se a variação de todos os coeficientes em uma iteração é menor do queeste valor [padrão 10<sup>-6</sup>, mín 0].</li>
 		<li><i>Iterações algoritmo</i>: quantidade máxima de iterações do algoritmo de calibração [padrão 200, mín 50].</li>
 		<li><i>Download dados remotos</i>: fazer download de dados remotos decalibração imediatamente.</li>
-		<li><i>Dados brutos</i>: por padrão o TopoDroid apresenta o azimute, a inclinação e a rotação. Ative essa opção se quiser que sejam também apresentados os dados brutos da calibração (os componentes G e M), sejam em decimal ou hexadecimal. [padrão "nenhum"]</li>
-		<li><i>Algoritmo</i>: pode ser 0 (Automático), 1 (Linear) ou 2 (Não linear). Se a opção "tipo de algoritmo" de uma calibração é deixada em "Automático" e esta configuração não estiver em "Automático" o algoritmo escolhido por esta configuração será utilizado para calcular a calibração. Se ambos estiverem em "Automático" o algoritmo a ser utilizado será escolhido automaticamente pelo TopoDroid levando em consideração o modelo e versão de firmware da DistoX. [padrão "Automático"]</li>
+		<li><i>Dados brutos</i>: por padrão o TopoDroid apresenta o azimute, a inclinação e a rotação.
+		Ative essa opção se quiser que sejam também apresentados os dados brutos da calibração (os componentes G e M), sejam em decimal ou hexadecimal. [padrão "nenhum"]</li>
+		<li><i>Algoritmo</i>: pode ser 0 (Automático), 1 (Linear) ou 2 (Não linear). 
+		Se a opção "tipo de algoritmo" de uma calibração é deixada em "Automático" e esta configuração não estiver em "Automático" o algoritmo escolhido por esta configuração será utilizado para calcular a calibração.
+		Se ambos estiverem em "Automático" o algoritmo a ser utilizado será escolhido automaticamente pelo TopoDroid levando em consideração o modelo e versão de firmware da DistoX. [padrão "Automático"]</li>
 	</ul>
 
 	<p><a href="page_calib_howto.htm">Instruções de calibração</a></p>
@@ -50,10 +58,8 @@
 	</p>
 
 	<footer style="font-size:80%;font-style:italic">
-		<p>Última atualização: <span id="last-update-date">2023-03-05</span>
-            &mdash; Referente ao commit: <span
-                  id="last-update-commit">a6b8e8430</span>
-		</p>
+		<p>Última atualização: <span id="last-update-date">2023-03-05</span> &mdash; Referente ao commit: <span id="last-update-commit">b4bd85c0b</span></p>
+		<p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 	</footer>
 
 </body>
