@@ -149,18 +149,21 @@ Isto pode ser alterado através da opção de configuração "Especiais &gt; Lin
 
 <h4>Seleção de intervalo</h4>
 
-<p>Linhas e áreas podem ser selecionadas individualmente (modo de seleção de pontos) ou como um intervalo.
-Para selecionar um intervalo em uma linha, o botão "tipo de intervalo" <img src="btn_range.png" style="border:1px solid black" width="36" height="36"> deve estar na opção intervalo "suave" <img src="btn_range_soft.png" style="border:1px solid black" width="36" height="36"> ou "duro" <img src="btn_range_hard.png" style="border:1px solid black" width="36" height="36">.
+<p>Linhas e áreas podem ser selecionadas individualmente (modo de seleção de pontos) ou como um intervalo.</p>
+
+<ul>
+    <li><img src="btn_range.png" width="36" border="1"> seleção de um só ponto</li>
+    <li><img src="btn_range_soft.png" width="36" border="1"> intervalo suave: os pontos selecionados são movidos de uma maneira proporcional levando em consideração a distância de cada ponto até a extremidade mais próxima do intervalo.</li>
+    <li><img src="btn_range_hard.png" width="36" border="1"> intervalo rígido: os pontos selecionados são movidos como uma peça única.</li>
+    <li><img src="btn_range_itemwise.png" width="36" border="1"> intervalo "item inteiro: seleciona o item inteiro como um intervalo.
+    Neste caso você seleciona um ponto da linha/área e atua (por exemplo, move) o item inteiro.</li>
+</ul>
+
+<p>Para selecionar um intervalo definindo suas extremidades em uma linha, o botão "tipo de intervalo" deve estar na opção suave ou rígido.
 Selecione primeiro o ponto em uma extremidade do intervalo e depois o ponto na outra extremidade.</p>
 
 <p>O intervalo é destacado em laranja.
-Seu ponto mediano é destacado com um grande ponto verde e ele controla como o intervalo de linha é deformado.
-O intervalo pode ter limites suaves ou duros.
-Com limites duros o intervalo é movido como uma peça única.
-Com limites suaves os pontos são movidos de uma maniera proporcional levando em consideração a distância de cada ponto até a extremidade mais próxima do intervalo.</p>
-
-<p>O intervalo também pode ser do tipo "item inteiro" <img src="btn_range_itemwise.png" style="border:1px solid black" width="36" height="36">, ou seja, seleiona o item inteiro como um intervalo.
-Neste caso você seleciona um ponto da linha/área e atua (por exemplo, move) o item inteiro.</p>
+Seu ponto mediano é destacado com um grande ponto verde e ele controla como o intervalo de linha é deformado.</p>
 
 <div style="font-size:90%">
 <h4>Desenhando somente com caneta</h4>
@@ -181,7 +184,8 @@ Valor maiores vão provavelmente confundir seu dedo com uma caneta.</p>
     <a href="manual11.htm">Cortes &gt;</a></p>
 
 <footer style="font-size:80%;font-style:italic">
-    <p>Última atualização: <span id="last-update-date">2023-03-06</span> &mdash; Referente ao commit: <span id="last-update-commit">0210ddb8c</span></p>
+    <p>Última atualização: <span id="last-update-date">2023-03-11</span>
+        &mdash; Referente ao commit: <span id="last-update-commit">6ea499db3</span>
 </footer>
 
 </body></html>
