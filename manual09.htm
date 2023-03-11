@@ -29,7 +29,7 @@
   <p>Cores das visadas:</p>
   <ul>
     <li>normal: branco</li>
-    <li>campos da medida com valores anômalos (somente DistoX2): vermelho</li>
+    <li>campos da medida com valores anômalos: vermelho</li>
     <li>inconsistente em relação às visadas irmãs: laranja. Além da cor, serão também representadas por uma linha em zig-zag conforme pode ser visto abaixo.</li>
   </ul>
 
@@ -137,7 +137,7 @@
     <li><img src="btn_refresh.png" style="border:1px solid black" width="36" height="36"> redesenhar a linha de trena</li>
   </ul>
 
-  <p> O modo <b>desenhar</b> apresenta quatro botões além dos três verdes:</p>
+  <p> O modo <b>desenhar</b> apresenta cinco botões além dos três verdes:</p>
   <ul>
     <li><img src="btn_undo.png" style="border:1px solid black" width="36" height="36"> <b>desfazer</b>: remove os últimos itens desenhados, um por vez.</li>
     <li><img src="btn_redo.png" style="border:1px solid black" width="36" height="36"> <b>refazer</b>: redesenha os itens removidos, um por vez. A lista de itens removidos é esvaziada quando você desenha um novo item.
@@ -145,7 +145,7 @@
     <li><img src="btn_tools.png" style="border:1px solid black" width="36" height="36"> <a href="page_tools_list.htm">Escolha de símbolo</a>.</li>
     <li><img src="btn_splay_display_mode.png" style="border:1px solid black" width="36" height="36"> modo de apresentação de medidas auxiliares: como linhas ou como pontos com borda.
     </li>
-    <li><img src="btn_cont.png" style="border:1px solid black" width="36" height="36"> <i>Emenda</i> de linhas.
+    <li><img src="btn_cont.png" style="border:1px solid black" width="36" height="36"> <i>Emenda</i> de linhas/áreas.
     </li>
   </ul>
 
@@ -203,8 +203,9 @@
     <li><a href="page_stat2.htm">Estatísticas</a>: para cortes, essa opção calcula a área do corte.</li>
     <li><u>Recarregar</u>: recarrega o croqui a partir de uma <a href="page_backup.htm">cópia backup</a>.</li>
     <li><u>Zoom geral</u>: caixa de diálogo para apresentar todo o croqui da tela e para escolher o modo de visualização retrato ou paisagem.</li>
-    <li><u>Renomear/apagar</u>: qualquer uma das duas ações afetam tanto a planta baixa como o perfil simultaneamente.
-    Croquis apagados podem ser recuperados através da opção de menu <i>Restaurar/colar</i> na tela <u>Principal</u>.</li>
+    <li><u>Renomear/apagar/dividir</u> o croqui: qualquer uma das duas primeiras ações afetam tanto a planta baixa como o perfil simultaneamente.
+    Croquis apagados podem ser recuperados através da opção de menu <i>Restaurar/colar</i> na tela <u>Principal</u>.
+    Dividir afeta somente o desenho sendo visualizado no momento.</li>
     <li><a href="page_plot_scraps.htm">Desenhos</a>: abre a caixa de diálogo dos diversos desenhos do croqui atual [T].</li>
     <li><a href="page_tools.htm">Paleta</a> de símbolos de desenho.</li>
     <li><u>Visão geral</u>: apresenta todos os croquis da topo juntos (somente para plantas-baixas e perfis retificados).</li>
@@ -227,7 +228,7 @@
         <li><i>Escala símbolo ponto</i>: escala dos símbolos dos pontos</li>
         <li><i>Tamanho rótulo</i>: tamanho dos textos dos rótulos [padrão "24 pt"]</li>
       </ul>
-    <li><i>LINHAS</i>
+    <li><i>LINHAS/ÁREAS</i>
       <ul>
         <li><i>Espessura linha</i>: espessura das linhas no desenho (as linhas de paredes tem o dobro de espessura) [padrão "1 px"]</li>
         <li><i>Escala linha</i>: escala para desenho da simbologia das linhas [padrão "3.0"]</li>
@@ -292,7 +293,7 @@
   Entretanto se diversos pontos estiverem próximos ao local onde você clicar todos eles serão selecionados mas somente um será editado.
   Você troca o ponto efetivamente sendo editado usando os botões <i>Ant/Próx</i> que podem ser visualizados abaixo.</p>
 
-  <p><img src="btn_multiselection_previous.png" style="border:1px solid black" width="36" height="36"><img src="btn_multiselection_next.png" style="border:1px solid black" width="36" height="36"></p>
+  <p><img src="btn_multiselection_previous.png" style="border:1px solid black" width="36" height="36">&nbsp;<img src="btn_multiselection_next.png" style="border:1px solid black" width="36" height="36"></p>
 
   <h4>Estilo de linha</h4>
 
@@ -327,6 +328,14 @@
     Haverá somente uma linha representando a linha pré-existente e a nova.
     Este modo afeta as ações <u>desfazer</u> pois a linha pré-existen que foi "continuada" será movida para o topo da lista de ações <u>desfazer</u>.</li>
   </ul>
+
+  <h4>Continuação de áreas [T]</h4>
+  
+  <p>Quando a opção de continuação de áreas está habilitada, áreas podem ser extendidas traçando uma linha que comece e termine próxima à borda da área.
+  O segmento que conecta esses dois pontos da borda será substituído pela nova linha traçada.
+  Uma área pode ser ampliada ou reduzida e uma concavidade vazio pode ser preenchida (veja a figura abaixo).</p>
+  
+  <p><img src="area_concavity.png" width="360" border="1"></p>
 
   <h4>Ações Ponto a Ponto [T]</h4>
 
@@ -376,7 +385,7 @@
 
   <p>No modo de inteação <i>Mover</i> só há os três botões verdes para ativar os outros modos.</p>
 
-  <p>No modo <i>Desenhar</i> há os seguintes botões adicionais: <i>desfazer</i>, <i>refazer</i>, <i>escolha de símbolos</i> e <i>emenda de linhas</i>.</p>
+  <p>No modo <i>Desenhar</i> há os seguintes botões adicionais: <i>desfazer</i>, <i>refazer</i>, <i>escolha de símbolos</i> e <i>emenda de linhas/áreas</i>.</p>
 
   <p> Os modos <i>Apagar</i> e <i>Editar</i> contam com os botões normais descritos acima.</p>
 
@@ -398,9 +407,9 @@
   </p>
 
   <footer style="font-size:80%;font-style:italic">
-    <p>Última atualização: <span id="last-update-date">2023-03-05</span>
+    <p>Última atualização: <span id="last-update-date">2023-03-11</span>
       &mdash; Referente ao commit: <span
-            id="last-update-commit">0210ddb8c</span>
+            id="last-update-commit">6ea499db3</span>
     </p>
   </footer>
 
