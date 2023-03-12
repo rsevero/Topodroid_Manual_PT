@@ -16,125 +16,139 @@ Os croquis são exportados a partir da tela <u>Desenhar</u> (um só croqui) e a 
 
 <p>A destinação das exportações de modelos 3D é escolhida através de um gerenciador de arquivos do sistema operacional.</p>
 
-<h4>SURVEY IMPORT</h4>
-TopoDroid imports survey data from TopoDroid zip archives or from files in external formats.<br>
-To import files or zip archives tap on the "Import" button.
-Files and zip archives are selected through a system filemanager.<br>
-The name of the file must not contain colon, ':'.<br><p>
+<h4>IMPORTAR TOPO</h4>
 
-The following import formats are supported:
+<p>O TopoDroid é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroid e também de arquivos em formatos externos.
+Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> na tela <u>Principal</u>.
+Os arquivos a serem importados serão selecionados através da interface do sistema.
+Os nomes dos arquivos não podem incluir dois pontos (:).</p>
+
+<p>Os seguintes formatos podem ser importados:</p>
 <ul>
 <li>Compass</li>
 <li>Survex</li>
-<li>Therion. Only data</li>
+<li>Therion: somente dados da linha de trena.</li>
 <li>VisualTopo</li>
 <li>CaveSniper</li>
-<li>PocketTopo, including sketches</li>
-<li>TopoDroid zip archives</li>
+<li>PocketTopo: incluindo croquis</li>
+<li>Arquivos zip do TopoDroid</li>
 </ul>
 
-A file import fails if a survey with the same name is already in TopoDroid.<br><p>
+<p>A importação de um arquivo falha se já houver uma topo com o mesmo nome no TopoDroid.</p>
 
-Zip import fails if the zip has a database version that is too old or is newer than the one in TopoDroid.<br><p>
+<p>A importação de um arquivo zip falha se a versão do banco de dados for antiga demais ou mais velha do que a do TopoDroid atual.</p>
 
-On import from file formats that have LRUD values, these are converted to x-splays (shown in green).<br><p>
+<p>Na importação de outros formatos, se tiverem dados EDTC, estes serão convertidos para medidas auxiliares apresentadas em verde.</p>
 
-<b>Therion import</b><br>
-Only Therion survey files with data in "normal" datamode are importable.<br>
-The "declination" command is taken into account: the read azimuth are corrected with the value
-of the declination.<br>
-TopoDroid does not import Therion scraps.<br><p>
+<p><b>Importação Therion</b></p>
 
-<b>PocketTopo import</b><br>
-TopoDroid imports both the survey data and the sketches.
-This import maps PocketTopo colors to TopoDroid drawing tools (points and lines).
-The mapping can be modified through a setting.<br><p>
+<p>Somente arquivos Therion no modo de dados "normal" são aceitos para importação.</p>
 
-<b>Compass import</b><br>
-TopoDroid converts imported compass survey from <i>normal</i> datamode to <i>diving</i> datamode [T], if the relative setting is enabled [G].<br><p>
+<p>O comando "declination" é reconhecido.
+Os valores de azimute lidos são corrigidos pela declinação.</p>
 
-<b>N.B.</b>
-Import may fail (and crash the app) due to failure on the database that TopoDroid cannot intercept.
-If this happens delete the partially imported survey and retry to import it.<br><p>
+<p>O TopoDroid não importa croquis do Therion.</p>
 
-<h4>SURVEY DATA EXPORT</h4>
-TopoDroid exports survey data to the following cave-program formats:
+<p><b>Importação PocketTopo</b></p>
+
+<p>O TopoDroid importando tanto os dados da topo quanto os croquis.
+As cores usadas PocketTopo são relacionadas a diferentes símbolos de desenho do TopoDroid (pontos e linhas).
+Essa correlação cores PocketTopo X símbolos TopoDroid pode ser alterada via opções de configuração.</p>
+
+<p><b>Importação Compass</b></p>
+
+<p>O TopoDroid converte uma topo Cmpass do modo <i>normal</i> para o modo <i>mergulho [T] se a opção adequada estiver habilitada. [G].</i></p>
+
+<p><b>Obs.</b>: A importação pode falhar (e dar pane no app) devido a algum erro no banco de dados que o TopoDroid não intercepte.
+Se isso acontecer, apague a topo importada parcialmente e tente novamente a importaçcão.</p>
+
+<h4>EXPORTAÇÃO DE DADOS DA TOPO</h4>
+
+<p>O TopoDroid exporta os dados da topo para os seguintes softwares espeleológicos:</p>
 <ul>
 <li><a href="#compass">Compass</a></li>
 <li><a href="#csurvey">cSurvey</a></li>
-<li><a href="#survex">Survex</a></li>
-<li><a href="#therion">Therion</a></li>
-<li><a href="#trobot">TopoRobot</a></li>
-<li><a href="#vtopo">VisualTopo</a></li>
-<li><a href="#walls">Walls</a></li>
-<li><a href="#winkarst">WinKarst</a></li>
 <li><a href="#ghtopo">GHTopo</a></li>
 <li><a href="#grottolf">Grottolf</a></li>
 <li><a href="#ptopo">PocketTopo</a></li>
 <li><a href="#polygon">Polygon</a></li>
+<li><a href="#survex">Survex</a></li>
+<li><a href="#therion">Therion</a></li>
 <li><a href="#topo">Topo</a></li>
+<li><a href="#trobot">TopoRobot</a></li>
+<li><a href="#vtopo">VisualTopo</a></li>
+<li><a href="#walls">Walls</a></li>
+<li><a href="#winkarst">WinKarst</a></li>
 </ul>
 
-Furthermore it exports survey data as
+<p>Além disso, exporta também os dados da topo nos seguintes formatos:</p>
 <ul>
 <li><a href="#csv">CSV</a></li>
 <li><a href="#dxf">DXF</a></li>
-<li><a href="#kml">KML</a></li>
 <li><a href="#geojson">GeoJSON</a></li>
+<li><a href="#kml">KML</a></li>
 <li><a href="#plt">trackfile</a></li>
 <li><a href="#shp">shapefile</a></li>
 </ul>
-If the survey is not georeferenced the survey data cannot be exported in the last four export formats.
-<br><p>
 
-Georeference points are exported with coordinates latitude-longitude [decimal degrees] and altitude above
-mean sea level [m].<br>
-H/V-splays are treated as normal splays in the exports.<br><p>
+<p>Se a topo não for georeferenciada, os dados da topo não poderão ser exportados nos últimos quatro formatos.</p>
 
+<p>Pontos georeferenciados são exportados com coordenads lat/long em graus decimais e altitude acima do nível médio do mar [m].</p>
 
-<b id="compass">Compass</b> (.dat)<br>
-<i>Compass</i> data file are supported both in import and in export.<br>
-Supported data format are "normal" and "diving".<br>
-Data units are 'feet' and 'degrees' (converted to meters and degrees inside TopoDroid).<br><p>
+<p>Medidas auxiliares H e V são exportadas como medidas auxiliares comuns.</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>Station prefix</u>: if given it is prepended to the station names</li>
-<li><u>Splays</u></li>
-<li><u>L/R swap</u></li>
+<p><b id="compass">Compass</b> (.dat)</p>
+
+<p>O formato de arquivos <i>Compass</i> é suportado tanto para importação como para exportação.</p>
+
+<p>São suportados tanto o modo de daddos "normal" quanto o modo "mergulho".</p>
+
+<p>As unidades dos dados lidos devem ser "pés" e "graus" que serão convertidos paraa "metros e "graus" no TopoDroid.</p>
+
+<p>Configurações:</p>
+<ul>
+<li><u>Pref base</u>: se definido, será incluído no início do nome de cada base.</li>
+<li><u>Aux Compass</u></li>
+<li><u>Inverter Esq/Dir Compass</u></li>
 </ul>
-<br><p>
 
-<b id="csurvey">cSurvey</b> (.csx)<br>
-The cSurvey export files require cSurvey v. 1.20 or later.<br>
-The <i>cSurvey</i> export from the survey <u>info window</u> includes only the 
-survey data, and does not have any sketch.<br>
-The make a <i>cSurvey</i> export with a sketch (both plan and profile),
-you should export from the <u>drawing window</u>.
-<br><p>
+<p><b id="csurvey">cSurvey</b> (.csx)</p>
 
-The <i>cSurvey</i> export includes the calibration-check shots and media files
-(audio and photo).<br><p>
+<p>Os arquivos cSurvey gerados pelo TopoDroid são compatíveis com a versão 1.20 e superiores do cSurvey.</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>station prefix</u>: whether to prefix the station names with the survey name</li>
-</ul><p>
+<p>A exportação de arquivos <i>cSurvey</i>a partir da tela <u>Info Topo</u> inclui somente os dados da topo e não os croquis.</p>
 
+<p>Para exportar croquis (planta baixa e perfil) para o <i>cSurvey</i>, faça a exportaçcão na tela <u>Desenhar</u>.</p>
 
-<b id="survex">Survex</b> (.svx)<br>
-Survey data can be exported as <i>Survex</i> files.<br>
-Data units follow the user options.<br><p>
+<p>A exportação <i>cSurvey</i> inclui as medidas de calibração e os arquivos de mídia (fotos e áudios).</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>line termination</u> can be either Unix or Windows</li>
-<li><u>named TO station</u> for splay shots (the TO name is the FROM station with a letter appended)</li>
-<li>add <u>LRUD</u> to export</li>
-</ul><p>
+<p>Configurações:</p>
+<ul>
+<li><u>Pref base</u>: se definido, será incluído no início do nome de cada base.</li>
+</ul>
 
-<b id="therion">Therion</b> (.th)<br>
-Survey data are exported in <i>Therion</i> format, using the data "normal" form.<br>
-The TopoDroid survey name is used for the Therion cave name, with underscore '_' replaced by space.<br>
-Data units follow the user options.<br><p>
+<p><b id="survex">Survex</b> (.svx)</p>
 
+<p>Os dados da topo podem ser exportados como arquivos <i>Survex</i>.</p>
+
+<p>Os dados são exportados nas unidades definidas nas opções do usuário.</p>
+
+<p>Configurações:</p>
+<ul>
+<li><u>Term linha Survex</u>: pode ser Linux ou Windows</li>
+<li><u>Base aux Survex</u>: incluir às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada.</li>
+<li><u>EDTC Survex</u>: incluir EDTC nos arquivos Survex exportados.</li>
+</ul>
+
+<p><b id="therion">Therion</b> (.th)</p>
+
+<p>Os dados da topo são exportados no formato <i>Therion</i> usando o modo "normal".</p>
+
+<p>O nome da topo é usado como o nome da caverna no Therion com os "sublinhados"substituídos por espaços.</p>
+
+<p>Os dados são exportados nas unidades definidas nas opções do usuário.</p>
+
+<p></p>
 The team names are listed but the command is commented.<br>
 The TopoDroid team string is split into the Therion <i>team</i> commands: team persons must be listed
 with the lastname possibly preceded by the firstname initial(s). For example
