@@ -6,21 +6,20 @@
   <p>O botão <i>croqui</i> da tela <u>Dados Topo</u> abre uma caixa de diálogo com a lista de croquis existentes além do botão <i>Novo</i> croqui.
   Clique neste botão para criar um novo croqui na topo.</p>
 
-  <p>Cada croqui é composto por dois arquivos de croquis: um para a planta baixa e outro para o perfil (projetado ou retificado).
-  Os cortes tem, cada um, só um arquivo.
+  <p>Cada croqui é composto por dois arquivos de croquis com diferentes pontos de vista: um para a planta baixa e outro para o perfil (projetado ou retificado).
+  Os cortes tem, cada um, um só arquivo.
   Um novo croqui é aberto na planta baixa.
   A caixa de diálogo apresenta uma linha com duas colunas para cada croqui: um para a planta baixa e outro para o perfil. 
-  Desta maneira você já pode abrir ocroqui desejado diretamente. Cada croqui pode ter vários desenhosdiferentes.</p>
+  Desta maneira você já pode abrir ocroqui desejado diretamente. Cada croqui pode ter vários desenhos diferentes.</p>
 
   <p>O <u>perfil retificado</u> apresenta a linha de trena com as visadas desenhadas à esquerda, direta ou vertical de acordo com a "direção no perfil retificado" definida na medida.
   Se a "direção no perfil retificado" da visada não estiver definida, a visada não será apresentada no perfil retificado.
   Neste caso nenhuma visada a partir desta será apresentada.</p>
 
-  <p>Medidas auxiliares são projetadas no plano vertical da visada que tiver o azimute mais próximo ao da medida auxiliar em questão.
-  A não ser que o usuário tenha explicitamente definido a "direção no perfil retificado" na caixa de diálogo de <u>edição de medida</u>.
+  <p>Medidas auxiliares são projetadas no plano vertical da visada que tiver o azimute mais próximo ao da medida auxiliar em questão, a não ser que o usuário tenha explicitamente definido a "direção no perfil retificado" na caixa de diálogo de <u>edição de medida</u>.
   Por exemplo, no perfil apresentado na figura abaixo, as medidas auxiliares na região cinza claro serão projetadas no plano vertical da visada 1-2, já as da região cinza escuro serão projetadas no plano vertical da visada 0-1.</p>
 
-  <p>O perfil <u>projetado</u> apresenta a linha de trena e as medidas auxiliares projetadas no plano vertical perpendicular ao azimute da projeção que é definida ao se criar o perfil projetado.</p>
+  <p>O perfil <u>projetado</u> apresenta a linha de trena e as medidas auxiliares projetadas no plano vertical perpendicular ao azimute da projeção. O azimute da projeção é definido ao se criar o perfil projetado e não pode ser alterado posteriormente.</p>
 
   <p><img src="splay_extend.png"></p>
 
@@ -29,8 +28,8 @@
   <p>Cores das visadas:</p>
   <ul>
     <li>normal: branco</li>
-    <li>campos da medida com valores anômalos: vermelho</li>
-    <li>inconsistente em relação às visadas irmãs: laranja. Além da cor, serão também representadas por uma linha em zig-zag conforme pode ser visto abaixo.</li>
+    <li>medida com valores anômalos: vermelho</li>
+    <li>inconsistente em relação às visadas irmãs: laranja. Além da cor, serão também representadas por uma linha em zigue-zague conforme pode ser visto abaixo.</li>
   </ul>
 
   <p><img src="line_zigzag.png" style="width:80px;"></p>
@@ -38,7 +37,7 @@
   <p><b>Medidas auxiliares</b></p>
 
   <p>Medidas auxiliares podem ser apresentadas como segmentos de linha ou somente através de seus pontos finais [T].
-  Sempre que a tela de desenho estiver no modo "selecionar" as medidas auxiliares serão apresentadas como segmentos de linhas.</p>
+  Sempre que a tela de desenho estiver no modo "seleção" as medidas auxiliares serão apresentadas como segmentos de linhas.</p>
 
   <p><b>Cores das medidas auxiliares [E/T]:</b></p>
   <ul>
@@ -50,31 +49,31 @@
   </ul>
 
   <p>Medidas auxiliares podem receber cores diferentes através do botão <u>Ações especiais</u> do menu de multisseleção.
-  As cores das medidas auxiliares podem ser escolhidas a partir de uma paelta pré-definida ou livremente [T].
+  As cores das medidas auxiliares podem ser escolhidas a partir de uma paleta pré-definida ou livremente [T].
   </p>
 
-  <p>Uma medida auxiliar não é apresentada nos desenhos se a visada ao qual a medida auxiliar está atrelada for ocultada na planta baixa ou perfil.</p>
+  <p>Uma medida auxiliar não é apresentada nos desenhos se a visada a que a medida auxiliar está atrelada for ocultada na planta baixa ou perfil.</p>
 
-  <p>Se o <u>Pontilhamento de medidas auxiliares</u> não estiver desabilitado, as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:</p>
+  <p>Se o <u>Pontilhamento de medidas auxiliares</u>  estiver habilitado (Configurações Especiais:Dados Medida Auxiliar), as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:</p>
 
   <ul>
-    <li><i>Azimute</i>: a medida auxiliar é tracejada se o ângulo com a visada mais "próxima" (considerando o azimute) estiver acima do valor definido na opção "Lim pontilh azimute" encontrada nas configurações especiais. [padrão 60&deg;]</li>
-    <li><i>Clino</i>: a medida auxiliar é tracejada se o valor absoluto da inclinação da visada estiver acima do valor definido na opção "Lim ponth clino" encontrada nas configurações especiais: para inclinações positivas, a linha será pontilhada, para inclinações negativas a linha será tracejada [padrão 50&deg;]</li>
+    <li><i>Clino</i>: a medida auxiliar é tracejada se o valor absoluto da inclinação da visada estiver acima do valor definido na opção "Lim ponth clino" encontrada nas configurações especiais. Para inclinações positivas, a linha será pontilhada, para inclinações negativas a linha será tracejada [padrão 50&deg;]</li>
+    <li><i>Azimute</i>: a medida auxiliar é tracejada se o ângulo com a visada mais "próxima" (considerando o azimute) estiver acima do valor definido na opção "Lim pontilh azimute" (Configurações Especiais: Dados Medidas Auxiliares). [padrão 60&deg;]</li>
     <li><i>Visualização</i>: as medidas auxiliares são tracejadas de acordo com a inclinação na planta baixa e de acordo com o azimute no perfil retificado.
     Nos perfis projetados, as medidas auxiliares são tracejadas de acordo com o ângulo que formam com o azimute da projeção.</li>
   </ul>
 
-  <p>Além disso, na <u>planta baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na opção "Lim aux planta baixa" encontrada nas configurações especiais [padrão 80&deg;]
+  <p>Além disso, na <u>planta baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na opção "Lim aux planta baixa" (Configurações Especiais: Dados Medidas Auxiliares) [padrão 80&deg;]
   </p>
 
   <p>Em cortes:</p>
   <ul>
     <li>medidas auxiliares X (EDTC): verde</li>
-    <li>outras: azul. Escuro para as ligadas à base PARA e claro para as ligadas à base DE</li>
-    <li>por fim, se o pontilhamento de medidas auxiliares ("Pontilh aux" em configurações especiais) estiver habilitada, elas serão pontilhadas ou tracejadas se o ângulo da medida auxiliar e a normal do plano do corte estiverem abaixo do limite definido na opção "Lim pontilh ângulo" [padrão 60&deg;] (pontilhada se estiver na direção da normal, tracejada se estiver oposta).</li>
+    <li>outras: azul escuro para as ligadas à base PARA e claro para as ligadas à base DE</li>
+    <li>por fim, se o pontilhamento de medidas auxiliares ("Pontilh aux" em Configurações Especiais: Dados Medidas Auxiliares) estiver habilitado, elas serão pontilhadas ou tracejadas se o ângulo da medida auxiliar e a normal do plano do corte estiverem abaixo do limite definido na opção "Lim pontilh ângulo" [padrão 60&deg;] (pontilhada se estiver na direção da normal, tracejada se estiver oposta).</li>
   </ul>
 
-  <p>As cores das linhas tracejadas e pontilhadas das medidas auxiliares podem ser alteradas através das opções correspondentes [T].</p>
+  <p>As cores das linhas tracejadas, pontilhadas e recentes das medidas auxiliares podem ser alteradas através das opções correspondentes [T].</p>
 
   <p><b>Bases</b></p>
 
@@ -82,7 +81,7 @@
   <ul>
     <li>violeta: padrão</li>
     <li>verde: base ativa</li>
-    <li>vermelho: bases a partir das quais a linha de trena não é apresentada</li>
+    <li>vermelho: bases a partir das quais a linha de trena está oculta</li>
     <li>azul: bases antes das quais a linha de trena é apresentada</li>
     <li>amarelo: bases gravadas [T]</li>
   </ul>
@@ -92,32 +91,32 @@
   <p>A tela <u>desenho</u> conta com quatro modos de interação:</p>
   <ul>
     <li><b>mover</b>: você pode mover o espaço de desenho, fechar ou abrir o zoom.
-    Se a opção "Origem fixa croqui" estiver habilitada a ação de mover moverá somente o desenho e não a linha de trena [T]</li>
-    <li><b>desenhar</b>: nesse modo você pode incluir ícones (pontos e rótulos), linhas e áreas (regiões fechadas prenchidas por uma cor ou padronagem).
+    Se a opção "Origem fixa croqui" estiver habilitada em "Configurações principais:Dados topo" a ação de mover moverá somente o desenho e não a linha de trena [T]</li>
+    <li><b>desenhar</b>: nesse modo você pode incluir símbolos (pontos e rótulos), linhas e áreas (regiões fechadas preenchidas por uma cor ou com um padrão).
     </li>
-    <li><b>apagar</b>: para apgar itens, linhas, áreas ou parte delas.</li>
+    <li><b>apagar</b>: para apagar itens, linhas, áreas ou parte delas.</li>
     <li><b>editar</b> [A]: para alterações relacionadas a pontos e propriedades diversas dos itens, incluindo apagá-los.</li>
   </ul>
 
   <p>Mover e dar zoom são possíveis mesmo nos modos <b>desenhar</b> e <b>apagar</b> usando dois dedos simultaneamente.
   Se a opção "Mover canto" estiver habilitada, o croqui pode ser arrastado pelos retângulos cinzas transparentes que estarão nos cantos da tela.</p>
 
-  <p>Os controles de zoom podem ser habilitados temporaria ou permanentemente.
-  Se temporários, serão apresentados quando você clicar na parte inferior central da tela.</p>
+  <p>O controle de zoom pode ser habilitado temporaria ou permanentemente em Configurações principais:Desenho croqui.
+  Se temporáriamente, será apresentado quando você clicar na parte inferior central da tela.</p>
 
-  <p>No modo "desenhar" há uma barra de ferramentas inferior que apresenta os símbolos usados mais recentemente e um botão "seta" para selecionar outros símbolos.</p>
+  <p>No modo "desenhar" há uma barra de ferramentas inferior que apresenta os símbolos usados mais recentemente e uma "seta" para selecionar outros símbolos.</p>
 
   <p>No modo "editar", quando o item selecionado é um ponto, é apresentada uma barra de rolagem na base da tela para alterar o tamanho do ponto. 
   Se a opção "Arrastar canto" estiver habilitada e o ponto for orientável, sua direção pode ser alterada no sentido horário arrastando para baixo a partir do canto superior direito e no sentido antihorário arrastando para baixo a partir do canto superior esquerdo.</p>
 
   <h4>BOTÕES</h4>
 
+  <p><img src="btn_edit.png" height="36" border="1"><img src="btn_erase.png" height="36" border="1"><img src="btn_select.png" height="36" border="1"></p>
+
   <p>Os modos são representados pelos três botões verdes à esquerda: <i>desenhar</i>, <i>apagar</i> e <i>editar</i>.
   Quando um deles estiver ativo, o botão correspondente estará em verde claro. Se nenhum estiver verde claro, a tela desenho estará no modo <i>mover</i>.</p>
 
   <p>Quando um dos três botões está verde claro, um clique longo nele abre a tela de edição das configurações relevantes ao modo ativo.</p>
-
-  <p><img src="btn_edit.png" height="36" border="1"><img src="btn_erase.png" height="36" border="1"><img src="btn_select.png" height="36" border="1"></p>
 
   <p>O restante dos botões varia de acordo com o modo ativo no momento.</p>
 
