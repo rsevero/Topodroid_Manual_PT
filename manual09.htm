@@ -232,6 +232,7 @@
         <li><i>Espessura linha</i>: espessura das linhas no desenho (as linhas de paredes têm o dobro desta espessura) [padrão "1 px"]</li>
         <li><i>Escala linha</i>: escala para desenho da simbologia das linhas [padrão "3.0"]</li>
         <li><i>Estilo linha</i>: forma como a linha é desenhada: "Detalhada", "Normal", "Grosseira", "Bézier" (curva paramétrica interpolada), "Simplificada" [padrão "normal"]</li>
+        <li><i>Fechar linh fecháveis</i>: fechar linhas cujos tipos sejam fecháveis [padrão "sim"]</li>
         <li><i>Dist mín pontos linha</i>: distância mínima entre pontos de uma linha de tipo normal [padrão "5 px"] </li>
         <li><i>Tam marca corte</i> tamanho da marca indicando direção do corte [padrão "5 px"]</li>
         <li><i>Usar ponto corte</i>: adicionar ponto indicando posição do corte às linhas de corte [padrão "sim"]</li>
@@ -328,7 +329,8 @@
   <p>Linhas e áreas podem ser desenhadas no modo "retracejar".</p>
 
   <p>Um clique longo no botão <i>Escolha de símbolo</i> alternadamente liga e desliga o modo "retracejar".
-  Quando o modo "retracejar" está ativo, o indicador de linha/área no botão estará em branco.</p>
+  Quando o modo "retracejar" está ativo, o indicador de linha/área no botão estará em branco.
+  A parcela retracejada da linha/área não é transformada (Bézier, unir a pontos próximos, grau de detalhamento da linha, etc.).</p>
 
   <p>Para retracejar uma parte de uma linha, desenhe uma nova linha que comece e/ou termine próxima a essa linha.</p> 
 
@@ -409,7 +411,7 @@
   </p>
 
   <footer style="font-size:80%;font-style:italic">
-		<p style="margin:0;">Última atualização: <span id="last-update-date">2023-03-22</span> &mdash; Referente ao commit: <span id="last-update-commit">bec8a9bd5</span></p>
+		<p style="margin:0;">Última atualização: <span id="last-update-date">2023-03-24</span> &mdash; Referente ao commit: <span id="last-update-commit">a776a93b8</span></p>
 		<p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
   </footer>
 
