@@ -7,16 +7,17 @@ Pode-se também aproximar e afastar a visualização dando zoom com dois dedos.
 O norte magnético da planta baixa e a parte superior dos perfis apontam para cima.
 Não é possível rotacionar a área de trabalho.</p>
 
-<p>Clique no botão <i>Desenhar</i>: o app entra no modo <b>Desenhar</b> e o botão fica em destaque em verde claro.
+<p>Clique no botão <i>Desenhar</i> <img width=36 border="1" src="btn_edit.png">: o app entra no modo <b>Desenhar</b> e o botão fica em destaque em verde claro.
 Agora você pode desenhar com seus dedos (dois dedos seguem arrastando e dando zoom).
-Com os botões <i>Desfazer</i> e <i>Refazer</i> você pode cancelar as últimas alterações nos elementos do desenho (desenhar, editar ou apagar objetos) e voltar a aplicar as mesmas alterações.</p>
+Com os botões <i>Desfazer</i> <img width=36 border="1"
+src="btn_undo.png"> e <i>Refazer</i> <img width=36 border="1" src="btn_redo.png"> você pode cancelar as últimas alterações nos elementos do desenho (desenhar, editar ou apagar objetos) e voltar a aplicar as mesmas alterações.</p>
 
 <p>Existem três tipos de ferramentas de desenho: ponto (ícones), linha e área (região preenchida).
 Rótulos de texto são um tipo de ponto.</p>
 
 <p>A lista com os últimos seis tipos de símbolos usados no desenho são apresentados na barra na base da tela.
 Para selecionar um tipo de símbolo, clique no seu ícone na barra inferior que possui em sua direita setas para abrir a caixa de diálogo para seleção de mais opções de símbolos.
-Um clique no botão <i>Escolher símbolo</i> alterna entre "pontos", "linhas" e "áreas". Um clique longo neste mesmo botão inverte essa ordem de alternância.</p>
+Um clique no botão <i>Escolher símbolo</i> <img width=36 border="1" src="btn_tools.png"> alterna entre "pontos", "linhas" e "áreas". Um clique longo neste mesmo botão inverte essa ordem de alternância.</p>
 
 <p>No modo <b>Desenhar</b> o croqui pode ser movido com um só toque arrastando algum dos quatro cantos  da área de desenho e pode-se dar zoom através dos controles de zoom se essas funcionalidades tiverem sido habilitadas em "Configurações: Desenho croqui".
 Dessa maneira você pode trabalhar com uma caneta sem a necessidade de usar dois dedos.</p>
@@ -24,126 +25,128 @@ Dessa maneira você pode trabalhar com uma caneta sem a necessidade de usar dois
 <h4>Pontos</h4>
 
 <p>Os símbolos de pontos são ícones.
-Para adicionar um símbolo ao croqui toque na área de desenho onde quer que seja criado o ponto.</p>
+Para adicionar um símbolo ao croqui escolha um e toque na área de desenho onde quer que seja inserido o ponto.</p>
 
-<p>Se o ponto for rotacionável, será desenhado com a orientação escolhida (selecionável através da barra de rolagem disponível na caixa de diálogo de seleção de tipo de ponto).
-Essa orientação pode ser alterada com um toque na tela ligeiramente arrastado na direção desejada no momento da criação do ponto.
-Com um arrasto para longe e perto, pode-se alterar o tamanho do ponto.
-Com um arrasto ainda mais longo você pode definir tanto a direção como o tamanho do ícone.</p>
+<p>Se o ponto for rotacionável, será desenhado com a orientação escolhida (selecionável através da barra de rolagem disponível no alto da caixa de diálogo de seleção de tipo de ponto).
+Essa orientação pode ser alterada no momento de sua criação, com um toque circulr na direção desejada.
+Com um arrasto para longe ou perto, pode-se alterar o tamanho do ponto.
+Com um arrasto ainda mais longo você pode definir tanto a direção como o tamanho do ícone.
+Outra forma de girar o ponto é selecioná-lo e deslizar o dedo para baixo a partir dos cantos superiores da área de desenho (a opção "Arrastar canto" deve estar habilitada).</p>
 
-<p>Com pontos tipo "rótulo" você precisa também entrar um texto na caixa de diálogo apresentada.</p>
+<p>Para o ponto tipo "rótulo" você precisa também entrar um texto na caixa de diálogo apresentada.</p>
 
 <p><img src="point_gesture-pt.png" alt="Point item drawing" width="140" border="1"></p>
 
 <h4>Linhas</h4>
 
-<p>Os diferentes símbolos de linhas são representados por estilos de desenho de linhas.
-Linhas tem uma orientação: quando uma linha é selecionada, no modo de <b>Edição</b>, só orientação é apresentada por um pequeno traço amarelo no seu lado esquerdo.</p>
+<p>Ao desenha uma linha o TopoDroid adota o estilo selecionado em "Configuração linhas:Estilo linha", que oferece as opções: “detalhada”, “normal”, “grosseira”, “Bézier (curva)” e “simplificada”. </p>
 
-<p>A grossura da linha é uma das configurações disponíveis.
-Há uma opção para definir a grossura das linhas de trenas e medidas auxiliares e outra para as linhas desenhadas.</p>
+<p>Os diferentes símbolos de linhas são representados por estilos de desenho de linhas.
+Linhas tem uma orientação: quando uma linha é selecionada, no modo de <b>Edição</b>, sua orientação é apresentada por um pequeno traço amarelo no seu extremo esquerdo, em seu ponto inicial.</p>
+
+<p>A espessura da linha é uma das configurações disponíveis.
+Há uma opção para definir a largura das linhas de trenas e medidas auxiliares (em "Configurações Tela de desenho") e outra para as linhas desenhadas (em "Configurações Linhas").</p>
 
 <p><b>Linhas de corte</b></p>
 
-<p>A linha de corte é especial pois é sempre transformada em um único segmento reto de linha com um pequeno traço no final indicando o ponto de vista do corte.
+<p>A linha de corte sinaliza a posição do corte transversal.
+Ela é especial pois é sempre transformada em um único segmento de reta com um pequeno traço no final indicando a orientação do corte.
 Um ponto tipo corte é automaticamente criado conectado no fim da linha de corte.
 Esse ponto tem a opção "scrap" predefinida para o croqui do corte e é automaticamente apagado quando se apaga a linha de corte.</p>
 
-<p>Linhas de corte não podem ser apagada com a ferramenta <i>Borracha</i>.
-Para remover uma linha de corte, selecione-a com a ferramenta <i>Edição</i> e apague-a com o botão <b>Apagar</b>.</p>
+<p>Linhas de corte não podem ser apagada com a ferramenta <i>Borracha</i> <img width=36 border="1" src="btn_erase.png">.
+Para remover uma linha de corte, selecione-a com a ferramenta <i>Edição</i> <img width=36 border="1" src="btn_select.png"> e apague-a com o botão <b>Apagar</b>. <img width=36 src="btn_delete.png" border="1"></p>
 
-<p>Seus pontos não podem ser movidos na área de desenho como os pontos dos outros tipos de pontos e linhas e nem podem ser apagados.
-As ações ponto a ponto não podem ser aplicadas às extremidades de linhas de seção.</p>
+<p>Um corte pode ser editado através do botão de propriedades <img width=36 border="1" src="btn_item.png">.
+Seus pontos intermediários não podem ser movidos na área de desenho como outros tipos de pontos e linhas e nem podem ser apagados.
+As ações ponto a ponto não podem ser aplicadas às extremidades de linhas de corte.</p>
 
 <h4>Áreas</h4>
 
-<p>Áreas são representadas por regiões preenchidas com cores ou padronagens.
-Para desenhar uma área, desenho o seu contorno.
+<p>Áreas são representadas por polígonos preenchidas com cores ou padronagens.
+Para criar uma área, desenhe o seu contorno.
 Você não precisa ser muito preciso pois o TopoDroid fechará a área automaticamente.</p>
 
 <p>A área de água é especial pois ela pode ser fechada horizontalmente nos perfis e cortes de forma a representar claramente a superfície horizontal de um corpo aquático.
-Para desenhar uma área de água em um perfil ou corte, desenhe somente a parte inferior do corpo d'água.</p>
+Para desenhar uma área de água em um perfil ou corte, desenhe somente a parte inferior do corpo d´água.</p>
 
 <h4>Desfazer, refazer, apagar e editar</h4>
 
 <p>Erros no desenho podem ser corrigidos.
-O botão <i>Desfazer</i> remove o último item.
-Para apagar um símbolo desenho a mais tempo sem perder todo o trabalho realizado depois há duas opções: os modos <i>Apagar</i> e <i>Editar</i>.</p>
+O botão <i>Desfazer</i> <img
+width=36 border="1" src="btn_undo.png"> remove o último item.
+Para apagar um símbolo desenhado a mais tempo sem perder todo o trabalho posterior há duas opções: os modos <i>Apagar</i> <img width=36
+border="1" src="btn_erase.png"> e <i>Editar</i> <img width=36
+border="1" src="btn_select.png">.</p>
 
-<p>O funcionamento do modo <i>Apagar</i> é bastante intuitivo: ele remove todo por onde seu dedo passar exceto bases, medidas e linhas de corte.
+<p>O funcionamento do modo <i>Apagar</i> é bastante intuitivo: ele remove tudo por onde seu dedo passar exceto bases, medidas e linhas de corte.
 Exatamente como uma borracha no papel: se seu dedo passar no meio de uma linha, somente sua parte intermediária será apagada restando duas linhas.
-Entretanto a ferramenta pode ser configurada para apagar somente um tipo de símbolo: pontos, linhas ou áreas.</p>
+Entretanto, através do botão <i>O que apagar</i> <img width=36 border="1" src="btn_erase_all.png"> você pode escolher apagar somente um tipo de símbolo: pontos, linhas ou áreas.</p>
 
-<p>O modo <i>Editar</i> não é tão intuitivo mas é bastante poderoso pois permite as ações ponto a ponto.
+<p>O modo <i>Editar</i> não é tão intuitivo mas é bastante poderoso pois disponibiliza as ações ponto a ponto <im width=36 border="1" src="btn_point.png">.
 Nesse modo todos os itens do desenho são apresentados com pequenos pontos verdes.
 Para selecionar um item, clique diretamente em um desses pontos verdes (símbolos do tipo pontos só tem um ponto verde).
-Se há vários pontos verdes próximos um ao outro, todos eles serão selecionados para edição (e destacados com um círculo rosa) mas somente um deles estará ativo para edição (grande círculo verde).
-Se não for o ponto que você quer editar, alterne entre os pontos selecionados com os botões <i>Anterior</i> e <i>Próximo:</i></p>
-
-<p><img src="btn_multiselection_previous.png" style="border:1px solid black" width="36" height="36"><img
-    src="btn_multiselection_next.png" style="border:1px solid black" width="36" height="36">
-</p>
+Se há vários pontos verdes próximos um ao outro, todos eles serão selecionados para edição (e ganharão um leve círculo rosa) mas somente um deles estará ativo para edição (grande círculo verde).
+Se não for o ponto que você quer editar, alterne entre os pontos selecionados com os botões <i>Anterior</i> <img width=36 border="1" src="btn_multiselection_previous.png"> e <i>Próximo</i> <img width=36 border="1" src="btn_multiselection_next.png">.</p>
 
 <p>Exceto pelas extremidades das linhas de seção, os pontos dos itens desenhados podem ser movidos na área de desenho selecionando-os e então arrastando-os.</p>
 
-<p>A ferramenta de edição pode ser configurada para selecionar somente pontos de um tipo de símbolo: pontos, linhas, áreas, visadas ou bases.</p>
+<p>O modo <i>edição</i> possui o botão <i>tipo de item selecionável</i> <img width=36 border="1" src="btn_select_all.png"> que permite selecionar somente pontos de um tipo de símbolo: pontos, linhas, áreas, medidas ou bases.</p>
 
-<p>O tamanho dos pontos verdes e o tamanho do raio de seleção são duas <i>configurações</i>.</p>
+<p>O tamanho doraio dos pontos verdes e o tamanho do raio da ferramenta seleção são duas configurações distintas, disponíveis em "Configurações: Desenho croqui: Tela de desenho".</p>
 
-<p>Segmentos de linhas Bézier têm dois pontos de controle.
-Eles são armazenados junto ao ponto da linha e quando este é selecionado, os dois pontos de controle são apresentados como pontos rosa.
-Cada um deles pode ser movido clicando e arrastando no ponto desejado.</p>
+<p>Segmentos de linhas Bézier têm dois pontos de controle vermelhos.
+Eles são apresentados junto ao ponto da linha e podem ser movidos clicando e arrastando no ponto desejado.</p>
 
-<p>Para limpar a seleção, clique em um outro lugar qualquer da área de desenho.</p>
+<p>Para limpar uma seleção, clique em um outro lugar qualquer da área de desenho.</p>
 
-<p>O ponto pode ser apagado ou ter suas <a href="page_item_edit.htm">propriedades</a> alteradas através do botão "Edição de propriedades":</p>
+<p>O ponto pode ser apagado ou ter suas <a href="page_item_edit.htm">propriedades</a> alteradas através do botão "Edição de propriedades" <img style="border:1px solid black" width=36 src="btn_item.png"></span>.</p>
 
-<p><img src="btn_item.png" style="border:1px solid black" width="36" height="36"></p>
+<p>Através deste botão também é possível editar medidas e bases.</p>
 
-<p>Também é possível editar medidas e bases.</p>
-
-<p>Ao editar um símbolo do tipo ponto que seja orientável é possível rodar o ponto deslizando o dedo para baixo a partir dos cantos superiores da área de desenho se a opção "Arrastar canto" estiver habilitada.</p>
-
-<p>Uma medida da topo (visada ou medida auxiliar) apresenta um ponto verde no seu centro para que possa ser selecionada.
+<p>Visadas ou medidas auxiliares apresentam um ponto verde central, pelo qual podem ser selecionadas.
 Quando uma medida é selecionada em um perfil retificado, uma linha amarela partindo desse ponto verde central é apresentada do lado oposto à direção no perfil retificado ou de ambos os lados se a direção da medida no perfil retificado for vertical.
-A direção da medida no perfil retificado pode ser alterada clicando na porção esquerda, direita ou novametne no ponto verde central.</p>
+A direção da medida no perfil retificado pode ser alterada nas propriedades ou clicando, seja na porção esquerda, na direita ou novamente no ponto verde central.</p>
 
 <h4>Ações de edição ponto a ponto [A]</h4>
 
-<p><img src="btn_point.png" style="border:1px solid black" width="36" height="36" style="float:left;margin:5px 10px 0 0;">As ações de edição ponto a ponto só estão disponíveis para itens desenhados.
+<p>As ações de edição ponto a ponto <img src="btn_point.png" style="border:1px solid black" width="36" height="36"> só estão disponíveis para os itens desenhados.
 O botão apresenta um menu com as opções de edição disponíveis para pontos [P], linhas [L] e áreas [A]:</p>
 
 <ul>
-<li><i>Juntar ao ponto próximo</i> [P,L,A]: move o ponto para que coincida com o ponto mais próximo no desenho atual.
+<li><i>Juntar ao ponto mais próximo</i> [P,L,A]: move o ponto para que coincida com o ponto mais próximo no desenho atual.
 Nada acontece se não houver algum ponto próximo.</li>
-<li><i>Juntar à linha/medida auxiliar próxima</i> [L,A:T]: linhas são deformadas para passar pelas linha ou extremidade de medida auxiliar próxima o suficiente.
+<li><i>Juntar à linha/medida auxiliar próxima</i> [L,A:T]: linhas são deformadas para passar pela linha ou extremidade de medida auxiliar próxima o suficiente.
 Se um ponto de uma área está próximo a um ponto de uma linha as partes que vem antes e depois dele são substituídas por partes que seguem a linha.
-Essa funcionalidade depende da configuração apropriada estar habilitada.</li>
-<li><i>Inserir ponto(s)</i> [L:A]: quando há somente um ponto selecionado, um novo ponto é inserido após o ponto selecionado e é inserido na relação de pontos selecionados podendo, então, ser escolhido através dos botões <i>Anterior/Próximo</i>.
+Essa funcionalidade depende da configuração "Colar linha/área" estar habilitada em "Configurações Especiais: Linhas".</li>
+<li><i>Inserir ponto(s)</i> [L:A]: quando há somente um ponto selecionado, um novo ponto é acrescentado após o ponto selecionado e é inserido na relação de pontos selecionados podendo, então, ser escolhido através dos botões <i>Anterior/Próximo</i>.
 Quando um conjunto de pontos estiver selecionado, novos pontos serão incluídos entre cada dois pontos do conjunto.
 Um clique longo move o ponto selecionado junto ao ponto mais próximo e inseri outro ponto depois do ponto selecionado. [T]</li>
 <li><i>Apagar ponto</i> [L:A]: apaga o ponto da linha/área.
 O ponto selecionado da linha/área pode também ser apagado com um clique longo no botão <i>Apagar</i>.</li>
-<li><i>Endireitar segmento</i> [L:T]: torna o segmento reto removendo os pontos de controle Bézier.</li>
-<li><i>Suavizar segmento</i> [L:T]: suaviza o segmento inserindo pontos de controle a 1/3 e 2/3 do comprimento do segmento.
-Posteriormente os novos pontos de controle podem ser movidos para ajustar a curvatura.</li>
-<li><i>Cortar linha</i> [L]: corta a linha no ponto selecionado, transformando a linha anterior em duas linhas diferentes.</li>
-<li><i>Unir à linha</i> [L:T, exceto "linha de corte"]: une a linha a outra do mesmo tipo.
-Somente para pontos nas extremidades e deve haver um ponto da extremidade de outra linha próximo.</li>
-<li><i>Multisseleção</i> [P,L,A:T]: ativa o modo multisseleção.</li>
+<li><i>Deixar segmento reto</i> [L:T]: torna o segmento reto removendo os pontos de controle Bézier.
+Essa funcionalidade depende da configuração “Suavizar/endireitar segmento” estar habilitada em "Configurações Especiais: Linhas".</li>
+<li><i>Suavizar segmento</i> [L:T]: suaviza o segmento inserindo pontos de controle Bézier a 1/3 e 2/3 do comprimento do segmento.
+Posteriormente os novos pontos de controle podem ser movidos para ajustar a curvatura.
+Essa funcionalidade depende da configuração “Suavizar/endireitar segmento” estar habilitada em "Configurações Especiais: Linhas".</li>
+<li><i>Cortar linha no ponto</i> [L]: corta a linha no ponto selecionado, transformando a linha anterior em duas linhas diferentes.</li>
+<li><i>Ligar à linha</i> [L:T, exceto "linha de corte"]: une a linha a outra do mesmo tipo.
+Somente para pontos nas extremidades e deve haver próximo um ponto da extremidade de outra linha.</li>
+<li><i>Multisseleção</i> [P,L,A:T]: permite selecionar mais de uma linha ou área, sobre as quais pode-se aplicar as opções “apagar”, “simplificar, “unir” e “terminar”.
+Essa funcionalidade depende da configuração “Multisseleção caminho” estar habilitada em "Configurações Especiais: Linhas".</li>
 </ul>
 
 <h4>Modo multisseleção [T]</h4>
 
 <p>A multisseleção de itens de desenho vem, por padrão, desabilitada.
-Isto pode ser alterado através da opção de configuração "Especiais &gt; Linha &gt; Multisseleção caminho".</p>
+Isto pode ser alterado através da opção de "Configurações Especiais: Linha: Multisseleção caminho".</p>
 
 <p>O modo multisseleção permite que diversos objetos do mesmo tipo (ponto/linha/área) sejam selecionados ao mesmo tempo e sofram as mesmas ações:</p>
 
 <ul>
 <li><i>Apagar</i> [P,L,A]: apaga os itens selecionados</li>
 <li><i>Simplificar</i> [L,A]: simplifica as linhas removendo alguns pontos</li>
-<li><i>Unir</i> [L]: une os itens selecionados em um só</li>
+<li><i>Unir</i> [L]: une as extremidades das linhas selecionadas</li>
 <li><i>Sair</i>: sai do modo multisseleção</li>
 </ul>
 
@@ -159,16 +162,18 @@ Isto pode ser alterado através da opção de configuração "Especiais &gt; Lin
     Neste caso você seleciona um ponto da linha/área e atua (por exemplo, move) o item inteiro.</li>
 </ul>
 
-<p>Para selecionar um intervalo definindo suas extremidades em uma linha, o botão "tipo de intervalo" deve estar na opção suave ou rígido.
+<p>Para selecionar um intervalo definindo suas extremidades em uma linha, o botão "tipo de intervalo" <img width=36 style="border:1px solid black" src="btn_range.png"> deve estar na opção suave <img width=36 style="border:1px solid black" src="btn_range_soft.png"> ou rígido <img width=36 style="border:1px solid black" src="btn_range_hard.png">.
 Selecione primeiro o ponto em uma extremidade do intervalo e depois o ponto na outra extremidade.</p>
 
-<p>O intervalo é destacado em laranja.
-Seu ponto mediano é destacado com um grande ponto verde e ele controla como o intervalo de linha é deformado.</p>
+<p>Ao ser selecionado, o intervalo passa de amarelo para laranja e seu ponto mediano é destacado com um grande ponto verde, por onde pode ser controlado como o intervalo de linha é modificado.
+O intervalo pode ter limites suaves ou duros. Com limites duros o intervalo é movido como uma peça única. Com limites suaves os pontos são movidos de uma maneira proporcional levando em consideração a distância de cada ponto até a extremidade mais próxima do intervalo.</p>
+
+<p>O intervalo também pode ser do tipo "item inteiro" <img width=36 style="border:1px solid black" src="btn_range_itemwise.png">, ou seja, stodo o intervalo é editado em bloco.</p>
 
 <div style="font-size:90%">
 <h4>Desenhando somente com caneta</h4>
 
-<p>A opção "Desenh só caneta" permite que você encoste um dedo na tela enquanto desenha com uma caneta.</p>
+<p>A opção "Desenh só caneta", disponível em "Configurações Especiais: Desenho croqui", permite que você encoste um dedo na tela enquanto desenha com uma caneta.</p>
 
 <p>Para habilitar esse recurso, você deve definir um valor positivo para o "tamanho da caneta".
 O valor 1 costuma ser suficiente para canetas de ponta fina.
@@ -183,9 +188,9 @@ Valor maiores vão provavelmente confundir seu dedo com uma caneta.</p>
 <p><a href="manual09.htm">&lt; Tela Desenho</a> |
     <a href="manual11.htm">Cortes &gt;</a></p>
 
-<footer style="font-size:80%;font-style:italic">
-    <p>Última atualização: <span id="last-update-date">2023-03-11</span>
-        &mdash; Referente ao commit: <span id="last-update-commit">6ea499db3</span>
-</footer>
+    <footer style="font-size:80%;font-style:italic">
+		<p style="margin:0;">Última atualização: <span id="last-update-date">2023-03-25</span> &mdash; Referente ao commit: <span id="last-update-commit">a776a93b8</span></p>
+		<p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+  </footer>
 
 </body></html>
