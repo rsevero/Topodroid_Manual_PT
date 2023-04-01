@@ -14,10 +14,10 @@ A tela <u>Visão Geral</u> tem dois modos:</p>
 
 <ul>
 <li><img src="btn_measure.png" style="border:1px solid black" width="36" height="36"> <u>Modo medição</u>: ativa o modo <i>Medição</i>.</li>
-<li><img src="btn_mode.png" style="border:1px solid black" width="36" height="36"> <u>Referências</u>: abre caixa de diálogo onde se define quais elementos são apresentados: linha de trena, medidas auxiliares, nomes de bases, grade métrica e escala.
+<li><img src="btn_mode.png" style="border:1px solid black" width="36" height="36"> <u>Referências</u>: abre caixa de diálogo onde se define quais elementos são apresentados: linha de trena (visadas), medidas auxiliares, nomes de bases, grade métrica e escala.
 Há também uma opção para ocultar os detalhes da caverna e apresentar somente o contorno.</li>
 <li><img src="btn_angle.png" height="36" border="1"> <u>Tirar medidas</u>: se "ângulo", mede distância e ângulo entre dois pontos.
-Se "polilinha", comprimento total da polilinha definida pelos pontos onde clicar.</li>
+Se "polilinha", mede comprimento total da polilinha definida pela sequência de pontos onde clicar.</li>
 <li><img src="btn_undo.png" style="border:1px solid black" width="36" height="36"> <u>Desfazer</u>: remove o último ponto da polilinha.</li>
 </ul>
 
@@ -26,10 +26,10 @@ Neste modo o desenho pode ser arrastado (pelos cantos se a opção "Arrastar can
 
 <h4>Medida "Ângulo"</h4>
 
-<p>Quando a tela <u>Visão Geral</u> está no modo <i>Medição</i> você pode tirar medidas de distância entre dois pontos na área de visualização.
-Para fazer isso você primeiro clica no primeiro ponto: ele será marcado com uma cruz rosa envolva em um círculo.
-Então você clica no segundo ponto: este será marcado com uma cruz azul e a distância 2D será apresentada na barra de título assim como as distância nos eixos X e Y além da direção entre os pontos (planta baixa) ou inclinação (perfil retificado).
-A unidade usada para indicar a distância é a mesma da grade da tela <u>Desenho</u> (metro, jard, 2 pés ou 0,1 m).
+<p>Quando a tela <u>Visão Geral</u> está no modo <i>Medição ângulo</i> você pode tirar medidas de distância entre dois pontos na área de visualização.
+Para fazer isso primeiro você clica no ponto inicial: ele será marcado com uma cruz rosa envolva em um círculo.
+Então você clica no segundo ponto: este será marcado com uma cruz azul e a distância 2D será apresentada na barra de título assim como as distâncias nos eixos X e Y além da direção entre os pontos (planta baixa) ou inclinação (perfil retificado).
+A unidade usada para indicar a distância é a mesma da grade da tela <u>Desenho</u> (metros, jardas, 2 pés ou 0,1 m).
 O ângulo é apresentado na unidade definida para ângulos (graus ou grados).
 Qualquer clique adicional altera o segundo ponto e as medições apresentadas.</p>
 
@@ -41,11 +41,11 @@ No perfil retificado a diferença no eixo Y é a diferença de elevação entre 
 
 <h4>Medida "Polilinha"</h4>
 
-<p>O modo de medição "Polilinha é útil para se obter uma estimativa do comprimento da caverna mais útil que a extensão da linha de trena.
-Você clica no início da polilinha e cada clique adicional marca novos pontos da polilinha.
+<p>O modo de medição "Polilinha" é útil para se obter uma estimativa do comprimento da caverna funcionando melhor que a extensão da linha de trena.
+Você clica no início da polilinha e cada clique adicional marca novos segmentos na polilinha.
 Se você cometer um erro, clique no botão <i>Desfazer</i> para remover os últimos pontos definidos, um por vez.</p>
 
-<p>O título da tela apresenta a distância entre os dois pontos extremos, o compimento da polilinha, as distâncias nos eixos X e Y e o ângulo das extremidades.</p>
+<p>O cabeçalho da tela apresenta a distância entre os pontos inicial e final, o comprimento da polilinha, as distâncias nos eixos X e Y e o azimute do ponto inicial para o final.</p>
 
 <p><img src="polyline.png" alt="polyline measure"></p>
 
@@ -53,7 +53,7 @@ Se você cometer um erro, clique no botão <i>Desfazer</i> para remover os últi
 <ul>
 <li><i>Fechar</i> a tela</li>
 <li><i>Exportar</i> [T]</li>
-<li><i>configurações</i></li>
+<li><i>Configurações</i></li>
 <li><i>Ajuda</i></li>
 </ul>
 
@@ -61,11 +61,12 @@ Se você cometer um erro, clique no botão <i>Desfazer</i> para remover os últi
 
 <p>A visão geral pode ser exportada nos seguintes formatos:</p>
 <ul>
-<li><i>Therion</i></li>
+<li><i>Therion</i> (th2)</li>
 <li><i>SVG</i></li>
-<li><i>LibreCAD</i>: DXF</li>
-<li><i>QGIS</i>: shapefile</li>
-<li><i>XTherion</i>: xvi</li>
+<li><i>LibreCAD</i> (dxf)</li>
+<li><i>QGIS</i>: shapefile (shz)</li>
+<li><i>XTherion</i> (xvi)</li>
+<li><i>PDF</i> (xvi)</li>
 </ul>
 
 <p>Cada croqui é mapeado para um "scrap" na exportação para o Therion.
@@ -73,15 +74,17 @@ Nos outros formatos, todos os croquis são incluídos em um só arquivo.</p>
 
 <p>Os pontos das bases não são incluídos automaticamente na exportação para o Therion. Somente as bases definidas pelo usuário são incluídas.</p>
 
-<p>As bases são incluídas automaticamente na exportação para os formatos SVG, DXF, shapefile e xvi.</p>
+<p>As bases são incluídas automaticamente na exportação para os formatos SVG, DXF, shapefile, PDF e xvi.</p>
 
-<p>Se houverem ponto de corte, os respectivos cortes serão incluídos.</p>
+<p>Se houverem pontos de corte, os respectivos cortes serão incluídos.
+Os arquivos exportados são gravados na pasta <i>Documents/TDX/TopoDroid/NOME_DA_TOPO/out</i></p>
 
 <p><a href="manual11.htm">&lt; Cortes</a> |
     <a href="manual13.htm">Importar/Exportar &gt;</a></p>
 
-<footer style="font-size:80%;font-style:italic">
-    <p>Última atualização: <span id="last-update-date">2023-03-06</span> &mdash; Referente ao commit: <span id="last-update-commit">9bea83021</span></p>
-</footer>
+    <footer style="font-size:80%;font-style:italic">
+		<p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-01</span> &mdash; Referente ao commit: <span id="last-update-commit">f28996ef3</span></p>
+		<p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+  </footer>
 
 </body></html>
