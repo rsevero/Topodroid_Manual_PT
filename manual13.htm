@@ -190,39 +190,48 @@ Os comandos Therion "units", "flag", "extend", "mark" e "station" são reconheci
 
 <p>Pontos com coordenadas geográficas ("fix") são lidos mas não são considerados pois o comando "cs" não é suportado.</p>
 
-<b id="trobot">TopoRobot</b> (.trb)<br>
-Survey data can be exported as <i>TopoRobot</i> files. The <i>TopoRobot</i> station naming policy
-must have been selected. If the station names follow TopoRobot convention "series.number", they are used.<br><p>
+<p><b id="trobot">TopoRobot</b> (.trb)</p>
 
-<b id="vtopo">VisualTopo</b> (.tro, .trox)<br>
-<i>VisualTopo</i> data file are supported both in import and in export.<br>
-VisualTopo splays are included if enabled.<br>
-By default LRUD are at the TO station, but they can be set at the FROM station.<br> 
-Data units are 'meters' and 'degrees'.<br><p>
+<p>Os dados da topo podem ser exportados no formato <i>TopoRobot</i>.
+A política de nomeação de bases <i>TopoRobot</i> precisa ter sido selecionada.
+Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses nomes serão usados.</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>Trox</u> format. By default data are saved in "tro" format</li>
-<li><u>Splays</u></li>
-<li><u>LRUD at From</u></li>
-<li><u>Station suffix</u>: if given it is appended to the station names</li>
+<p><b id="vtopo">VisualTopo</b> (.tro, .trox)</p>
+
+<p>Arquivos no formato <i>VisualTopo</i> são suportados tanto para exportação como para importação.</p>
+
+<p>Medidas auxiliares são incluídas se estiverem habilitadas.</p>
+
+<p>Por padrão as medidas auxiliares EDTC são referenciadas às bases PARA mas esse comportamento pode ser alterado para que referenciem as bases DE.</p>
+
+<p>As unidades de medida usadas são "metros" e "graus".</p>
+
+<p>Configurações:</p>
+<ul>
+<li><u>Formato Trox</u>: por padrão os dados são gravados no formato "tro".</li>
+<li><u>Aux VisualTopo</u>: define se medidas auxiliares serão incluídas.</li>
+<li><u>EDTC em DE</u>: define se as medidas auxiliares serão referenciadas às bases DE ou PARA.</li>
 </ul>
-<br><p>
 
-<b id="walls">Walls</b> (.srv)<br>
-Survey data can be exported as <i>Walls</i> files (partially tested).<br>
-Data units follow the user options.<br>
-If the "Walls splays" setting is set the splay shots are exported as "named" splays (as for Compass).
-Otherwise they are exported as "anonymous point shots", with length the projected length.
-The vertical component of these shots can be recovered from the inclination. See the <i>Walls</i> manual.<br> 
-<p>
+<p><b id="walls">Walls</b> (.srv)</p>
 
-<b id="winkarst">WinKarst</b> (.sur)<br>
-Survey data can be exported as <i>WinKarst</i> files (untested).<br><p>
+<p>Os dados da topo podem ser exportados no formato <i>Walls</i> (testado parcialmente).</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>Station prefix</u>: if given it is prepended to the station names</li>
+<p>As unidades de medidas são as definidas pelo usuário.</p>
+
+<p>Se a opção "Aux Compass/Walls" estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas".
+Do contrário, são exportadas como "medidas anonimas" tendo seu comprimento ajustado para a projeção relevante.
+O componente vertical dessas medidas pode ser recuperado através da inclinação.
+Veja o manual do <i>Walls</i>.</p>
+
+<p><b id="winkarst">WinKarst</b> (.sur)</p>
+
+<p>Os dados da topo podem ser exportados no formato <i>WinKarst</i> (não testado).</p>
+
+<p>Configurações:</p>
+<ul>
+<li><u>Pref base</u>: prefixo incluído nos nomes das bases na exportação.</li>
 </ul>
-<br><p>
 
 <b id="ptopo">PocketTopo</b> (.top)<br>
 TopoDroid supports <i>PocketTopo</i> both in import and in export.<br><p>
