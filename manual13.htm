@@ -315,78 +315,101 @@ Nesse caso cada linha de dados é composta por:</p>
 <li><u>Separ linha CSV</u>: separador de linhas nos arquivos CSV exportados (Linux ou Windows)</li>
 </ul>
 
-<b id="dxf">DXF</b> (.dxf)<br>
-Survey data are exported as 3D DXF (<i>LibreCAD</i>) with layers
-<ul style="margin-top=0">
-<li>stations</li>
-<li>legs</li>
-<li>splays</li>
-</ul><br>
-Data are corrected with the magnetic declination.<br><p>
+<p><b id="dxf">DXF</b> (.dxf)</p>
 
-Settings:<ul style="margin-top=0">
-<li>Splay <u>endpoints</u>: if enabled they are marked with crosses</li>
-</ul><br><p>
+<p>Os dados da topo podem ser exportados no formato 3D DXF <i>LibreCAD</i> com camada:</p>
 
-<b id="plt">PLT</b> (.plt)<br>
-Survey data can be exported as track file (<i>OziExplorer</i>) if you have georeferenced a station.
-If the survey contains disjoint pieces, the track file includes all the pieces with a georeferenced station.
-Data are corrected with the magnetic declination.<br><p>
-
-<b id="kml">KML</b> (.kml)<br>
-Survey data can be exported as KML file (<i>Keyhole Markup Language</i>) if you have georeferenced at least a station.
-If the survey contains disjoint pieces, the KML export includes all the pieces with a georeferenced station.
-Data are corrected with the magnetic declination.<br><p>
-
-Settings:<ul style="margin-top=0">
-<li><u>stations</u></li>
-<li><u>splays</u></li>
+<ul>
+<li>bases</li>
+<li>visadas</li>
+<li>medidas auxiliares</li>
 </ul>
-<br><p>
 
-<b id="geojson">GeoJSON</b> (.json)<br>
-Survey data can be exported as GeoJSON file (<i>RFC 7946</i>) if you have georeferenced at least a station.
-Shots are exported as <i>LineString</i>, stations as <i>Point</i>. 
-If the survey contains disjoint pieces, the GeoJSON export includes all the pieces with a georeferenced station.
-Data are corrected with the magnetic declination.<br><p>
+<p>Os dados são exportados com correção relativa à declinação magnética.</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>stations</u></li>
-<li><u>splays</u></li>
+<p>Configurações:</p>
+
+<ul>
+<li><u>Final aux DXF</u>: medidas auxiliares exportadas com marcas em cruz na sua extremidade final</li>
 </ul>
-<br><p>
 
+<p><b id="plt">PLT</b> (.plt)</p>
 
-<b id="shp">Shapefile</b> (.shp .shx .dbf)<br>
-Survey data can be exported as shapefile. 
-There is a shapefile for the stations and one for the shots (both legs and splays).
-If the survey contains disjoint pieces, a shapefile is exported for each pieces with a georeferenced station.
-Data are corrected with the magnetic declination.
-Each shapefile consists of three files: the data file (shp), the index file (shx), and the attributes file (dbf).
-The files are zip-compressed and the zip is saved in the folder "shp" with extension ".shz".
-<br><p>
+<p>Os dados da topo podem ser exportados como arquivo de trilha no formato <i>OziExplorer</i> se houver alguma base geoferenciada.</p>
 
-If you have georeferenced at least a station and checked the appropriate checkbox in the export dialog,
-the data are exported in the WGS84 reference system, and corrected with the magnetic declination.<br>
-Otherwise the data are exported in local coordinates and the magnetic declination correction is not applied.<br><p>
+<p>Se a topo tiver partes desconectadas entre si, o arquivo de trilhas exportado conterá todas as partes que contarem com alguma base georeferenciada.
+Os dados são exportados com correção relativa à declinação magnética.</p>
 
-The "stations" DBF contains only the field "name".<br><p>
+<p><b id="kml">KML</b> (.kml)</p>
 
-The "shots" DBF contains the fields
-<ul style="margin-top=0">
-<li><i>type</i>: either "leg" or "splay"</li>
-<li><i>from</i> station</li>
-<li><i>to</i> station ("-" for splays)</li>
-<li>shot <i>flag</i> as hex: 1-surface, 2-duplicate, 4-commented</li>
-<li>shot <i>comment</i></li>
-</ul><br>
+<p>Os dados da topo podem ser exportados como arquivo KML no formato <i>Keyhole Markup Language</i> se houver alguma base geoferenciada.</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>stations</u>: whether to export the stations</li>
-<li><u>splays</u>: whether to include the splays</li>
-</ul><br><p>
+<p>Se a topo tiver partes desconectadas entre si, o arquivo de trilhas exportado conterá todas as partes que contarem com alguma base georeferenciada.
+Os dados são exportados com correção relativa à declinação magnética.</p>
 
+<p>Configurações:</p>
 
+<ul>
+<li><u>Base KML/GeoJSON/SHP</u>: incluir bases no arquivo KML exportado</li>
+<li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo KML exportado</li>
+</ul>
+
+<p><b id="geojson">GeoJSON</b> (.json)</p>
+
+<p>Os dados da topo podem ser exportados como arquivo <i>GeoJSON</i> (conforme definido no <a href="https://www.rfc-editor.org/rfc/rfc7946">RFC 7946</a>) se houver alguma base geoferenciada.</p>
+
+<p>Medidas são exportadas como <i>LineString</i> e bases como <i>Point</i>.</p>
+
+<p>Se a topo tiver partes desconectadas entre si, o arquivo exportado conterá todas as partes que contarem com alguma base georeferenciada.
+Os dados são exportados com correção relativa à declinação magnética.</p>
+
+<p>Configurações:</p>
+
+<ul>
+<li><u>Base KML/GeoJSON/SHP</u>: incluir bases no arquivo GeoJSON exportado</li>
+<li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo GeoJSON exportado</li>
+</ul>
+
+<p><b id="shp">Shapefile</b> (.shp .shx .dbf)</p>
+
+<p>Os dados da topo podem ser exportados no formato <i>ShapeFile</i>.</p>
+
+<p>É criado um shapefile para as bases e outro para as medidas (visadas e medidas auxiliares).
+</p>
+
+<p>Se a topo tiver partes desconectadas entre si, será criado um shapefile para cada partes que contar com alguma base georeferenciada.
+Os dados são exportados com correção relativa à declinação magnética.</p>
+
+<p>Cada shapefile é composto por três arquivos: dados (.shp), índice (.shx) e atributos (.dbf).
+Os três arquivos são compactados no formato zip. O arquivo zip é gravado no diretório "shp" com a extensão ".shz".</p>
+
+<p>Se houver ao menos uma base georeferenciada e a opção apropriada tiver sido amrcada na caixa de diálogo de exportação, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
+Do contrário os dados serão exportados no sistema local de coordenadas sem correção relativa à declinação magnética.</p>
+
+<p>O arquivo DBF das bases contém somente o campo "nome".</p>
+
+<p>O arquivo DBF das medidas contém os seguintes campos:</p>
+
+<ul>
+<li><i>type</i>: ou "leg" (visada) ou "splay" (medida auxiliar)</li>
+<li><i>from</i>: base DE</li>
+<li><i>to</i>: base PARA ("-" nas medidas auxiliares)</li>
+<li><i>flag</i>: categoria da medida em formato hexadecimal:
+  <ul>
+    <li>1: superfície</li>
+    <li>2: duplicada</li>
+    <li>4: comentada</li>
+  </ul>
+</li>
+<li><i>comment</i>: comentário</li>
+</ul>
+
+<p>Configurações:</p>
+
+<ul>
+<li><u>Base KML/GeoJSON/SHP</u>: incluir bases no arquivo shapefile exportado</li>
+<li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo shapefile exportado</li>
+</ul>
 
 <h4>SKETCH EXPORT</h4>
 
