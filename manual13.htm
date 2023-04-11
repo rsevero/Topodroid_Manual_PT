@@ -62,7 +62,7 @@ Essa correlação cores PocketTopo X símbolos TopoDroid pode ser alterada via o
 <p><b>Obs.</b>: A importação pode falhar (e dar pane no app) devido a algum erro no banco de dados que o TopoDroid não intercepte.
 Se isso acontecer, apague a topo importada parcialmente e tente novamente a importaçcão.</p>
 
-<h4>EXPORTAÇÃO DE DADOS DA TOPO</h4>
+<h4>Exportação de dados da topo</h4>
 
 <p>O TopoDroid exporta os dados da topo para os seguintes softwares espeleológicos:</p>
 <ul>
@@ -411,145 +411,132 @@ Do contrário os dados serão exportados no sistema local de coordenadas sem cor
 <li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo shapefile exportado</li>
 </ul>
 
-<h4>SKETCH EXPORT</h4>
+<h4>Exportação de croquis</h4>
 
-TopoDroid exports survey sketches to the following formats:
+<p>O TopoDroid exporta croquis nos seguintes formatos:</p>
+
 <ul>
-<li><a href="#csx">cSurvey</a></li>
-<li><a href="#th2">Therion</a></li>
-<li><a href="#tunnel">Tunnel</a></li>
-<li><a href="#xvi">xtherion</a></li>
 <li><a href="#cave3d">Cave3D</a></li>
+<li><a href="#csx">cSurvey</a></li>
 <li><a href="#dxf2">DXF</a></li>
-<!-- li><a href="#png">PNG image</a></li -->
 <li><a href="#pdf">PDF file</a></li>
 <li><a href="#shp2">shapefile</a></li>
 <li><a href="#svg">SVG</a></li>
+<li><a href="#th2">Therion</a></li>
+<li><a href="#tunnel">Tunnel</a></li>
+<li><a href="#xvi">XVI</a></li>
 </ul>
 
+<p><b id="csx">cSurvey</b> (.csx)</p>
 
-<b id="csx">cSurvey</b> (.csx)<br>
-The cSurvey export files require cSurvey v. 1.20 or later.<br>
-These exports contain both the plan and profile sketches, as well as the survey data.
-When "section" points are define the section drawings are added at the point.<br>
+<p>Os arquivos exportados no formato <i>cSurvey</i> podem ser lidos no cSurvey versão 1.20 ou superior.</p>
 
-The cSurvey "cave" attribute is set with the survey name, and the "branch" attribute with the sketch name (without the suffix 'p' or 's').
-The midline legs and splays and the sketch items share these attributes.<br><p>
+<p>Estes arquivos contém tanto a planta baixa como o perfil, além dos dados da topo.
+Se houverem pontos do tipo "corte" definidos, os croquis dos cortes são incluídos no local definido pelo ponto.</p>
 
-If your survey has only one sketch this is a complete export of your work (except for the x-sections).
-If the survey has more than one sketch, you must export each sketch individually and merge the exports with <i>cSurvey</i>.<br><p>
+<p>O atributo cSurvey "cave" é definido com o nome da topo, e o atributo "branch" com o nome do croqui (sem o sufixo "p" ou "s").
+As visadas, medidas auxiliares e elementos dos croquis compartilham esses atributos.</p>
 
-The sketch items are distributed on suitable <i>cSurvey</i> layers.<br><p>
+<p>Se a topo contém um só croqui, ele será uma exportação completa do trabalho (com exceção dos cortes).
+Se a topo for composta de mais de um croqui, você precisará exprotar cada croqui individualmente e mesclar os arquivos no <i>cSurvey</i>.</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>station prefix</u> whether to add a prefix to the station names</li>
-<li><u>point spacing</u> maximum distance between interpolating points on smooth lines</li>
-</ul><p>
+<p>Os elementos dos croquis são distribuídos em camadas apropriadas do <i>cSurvey</i>.</p>
 
-<b id="th2">Therion</b> (.th2)<br>
-Sketches are exported in Therion format as one sketch per file, if exported from the <u>sketch window</u>,
-or as a file containing all the sketches with the same view, plan or extended, if exported
-from the <u>overview window</u>. In the latter there is a scrap for each sketch, and x-section scraps
-are included if the automatic "section" points are enabled.
-<br><p>
+<p>Configurações:</p>
 
-The Therion <i>scrap</i> names are composed of the survey name, the sketch name and a suffix, either 'p', for plan, or 's', for profile.<br>
-For multi-scrap sketches the Therion <i>scrap</i> names of the scraps, beyond the first, are appended also a scrap number, beginning
-with 1.<br>
-X-section Therion <i>scrap</i> names are composed of the survey name, a two letter code, 'xx', and a number.<br><p>
+<ul>
+<li><u>Pref base</u>: incluir prefixo nos nomes das bases</li>
+<li><u>Espaçamento ponto</u>: distância máxima entre pontos em uma linha suave exportada</li>
+</ul>
 
-When a sketch with section points is exported through the <u>export</u> dialog, the x-sections of the section points are
-also exported.<br><p>
+<p><b id="th2">Therion</b> (.th2)</p>
 
-It the sketch contains symbols that are not included in the Therion set, you must prepend the
-prefix "u:" to the unsupported symbol names, before using the th2 file.<br><p>
+<p>Os croquis são exportados no formato <i>Therion</i> com um croqui por arquivo, se exportados a partir da tela de <u>Desenho</u>, ou em um único arquivo contendo todos os croquis com a mesma visualização (planta baixa, perfil retificado ou projetado) se exportado a partir da tela <u>Visão geral</u>.
+Neste último caso haverá um "scrap" para cada croqui.
+Os croquis dos cortes são incluídos se houverem pontos do tipo "corte" definidos.</p>
 
-Settings:<ul style="margin-top=0">
-<li>automatic <u>station-points</u>. [default: yes].</li>
-<li>add <u>splays</u> to the scrap (as lines of type "splay") [default: no].</li>
-<li>add a xtherion command to read the <u>XVI</u> image of the sketch [default: no].</li>
-<li>export <u>scale</u>. Default 1:100</li>
-<li><u>point spacing</u> minimum distance between points on polylines. Intermediate points are not exported. Default 20 cm</li>
-</ul><p>
+<p>O nome dos <i>scraps</i> Therion são compostos pelo nome da topo, nome do croqui e um sufixo (ou "p" para planta baixa ou "s" para perfil).</p>
 
-XVI images are not automatically exported with the Therion "th2" file, even if a xtherion command to include it is added to
-the therion file, because it would not contain more information than the therion file.
-The command can be used to load in xtherion an XVI image created by another program.
-<br><p>
+<p>Para croquis com diversos desenhos, é adicionado ao final do nome do <i>scrap</i> Therion, um número identificando o desenho, começando com 1.</p>
 
-<!--
-<u>Note</u>. With version 3.1 TopoDroid saves sketches "natively" in its binary format.<br>
-Previous versions used Therion format.
-The conversion from Therion to binary is "automatic" when you open a sketch: if TopoDroid does not find the binary file, it looks for the Therion file.<br>
-From v. 4.1.2 TopoDroid does not load any more sketches in Therion format.<br>
--->
+<p>Os nomes dos <i>scraps</i> Therion dos cortes são compostos pelo nome da topo, um código de duas letras e um número.</p>
 
-<b id="tunnel">Tunnel</b> (.xml)<br>
-Sketch can be exported in Tunnel XML format. The files are saved in the "tnl" subdirectory.<br>
-The following lines are mapped to Tunnel lines: wall, presumed, pit, chimney, and slope. 
-All the other lines are mapped to Tunnel line "details".<br>
-Area borders are mapped to Tunnel line "filled".<br>
-The following points are mapped to Tunnel points: air-draught, archeo, blocks, clay, column, curtain, flowstone, gradient,
-guano, mud, pebbles, popcorn, sand, soda-straw, stalactite, stalagmite, water, water-flow.
-All the other points are mapped to Tunnel point "bedrock".<br>
-<p>
+<p>Quando um croqui com pontos do tipo "corte" é exportado através da caixa de diálogo "Exportar", os cortes cujos pontos correspondentes do tipo "corte" estiverem definidos serão também exportados.</p>
 
-<b id="xvi">Xtherion</b> (.xvi)<br>
-The "xvi" export can be inserted as background image in xtherion.<br>
-Lines of type "wall" are red, "slope" orange, "section" gray, all others are brown.
-Area borders are black.
-Point icons are rendered in a simplified way.
-Label rendering supports only latin characters and digits and a few characters ('+', '-', '/', '_', '&gt;', '&lt;', '?').
-Other characters are replaced by a "diamond".<br>
-The grid cell are 1 m.
-<br><p>
+<p>Se o croqui contiver símbolos não suportados pelo Therion, você deverá incluir o prefixo "u:" nos nomes dos símbolos não suportados antes de ler o arquivo th2 no Therion.</p>
 
-The XVI settings are among Therion settings:<ul style="margin-top=0">
-<li>Drawing <u>section-point</u>: if section points are automatically added to section lines,
-the section drawing is inserted in the xvi file, at the "section" point</li>
-<li><u>grid</u> lines added to the export (cell size in the current grid units). Default no</li>
-<li>export <u>scale</u>. Default 1:100</li>
-</ul><p>
+<p>Configurações:</p>
 
-<b id="cave3d">Cave3D</b> (.c3d)<br>
-Sketch exported in "c3d" format can be lifted in the 3D model inside the 3D viewer.<br>
-<br><p>
+<ul>
+<li><u>Ponto corte</u>: criar automaticamente ponto de corte atrelado a cada novo corte indicando posição onde apresentar o croqui do corte [padrão sim].</li>
+<li><u>Med aux Therion</u>: adicionar linhas "u:splay" aos arquivos th2 [padrão não].</li>
+<li><u>Imagem XVI</u>: incluir um comando xtherion no arquivo th2 para ler a imagem XVI do croqui [padrão não].</li>
+<li><u>Escala Therion</u>: escala da exportação de arquivos th2/xvi [padrão 1:100].</li>
+<li><u>Dist mín ponto linha</u>: distância mínima entre pontos de uma linha de tipo normal. Pontos intermediários não são exportados [padrão 20 cm].</li>
+</ul>
 
-<b id="dxf2">DXF</b> (.dxf)<br>
-Sketches can be exported as 2D DXF files. You can assign layers to individual symbol types (point, line, area) or levels.
-Use the Z coordinate to separate scraps or levels. The DXF file contains only a few basic line types.<br><p>
+<p>Imagens no formato XVI não são automaticamente exportadas com os arquivos "th2" do Therion mesmo que seja incluído o comando xtherion para lê-la pois essas imagens não conteriam nenhuma informação além da já presente no arquivo "th2".
+O comando de leitura de imagem XVI pode ser usado para carregar no xtherion uma imgem XVI criada por outro programa.</p>
 
-Sketches can be exported as DXF <i>9</i> AC1009, <i>12</i> (R13) AC1012, and <i>14</i> (R14) AC1014.
-For DXF-9 areas are exported with only the border and are not colored inside.
-<br><p>
+<p><b id="tunnel">Tunnel</b> (.xml)</p>
 
-It is possible to include in the DXF file, the x-sections (for which the sketch contains a "section" point),
-and the X-Y axis.
-<br><p>
+<p>Os croquis podem ser exportados no formato <i>Tunnel</i> (.xml).</p>
 
-Settings:<ul style="margin-top=0">
-<li>DXF version: 9 (R12), 12 (R13), or 14 (R14). Default "9"</li>
-<li><u>section-point</u>: if a section line has the relative section point,
-the drawing of the section is inserted in the export, at the "section" point</li>
-<li><u>XY reference</u>: whether to insert the XY axes reference</li>
-<!-- li><u>stations</u>: whether to insert station points</li -->
-<!-- li><u>interpolated curves</u>: whether to draw cubics as interpolated polylines</li -->
-<!-- li><u>point spacing</u> maximum distance between interpolating points on smooth lines. Default 20 cm</li -->
-<li>Scraps layer: DXF layers by scraps or type. Default "scraps"</li>  
-</ul><p>
+<p>Os arquivos são gravados no subdiretório "tnl".</p>
 
-<!-- b id="png">PNG</b> (.png)<br>
-Image file in PNG format is used only to export sketches.<br>
-The setting "levels" affects PNG exports: the export includes only the visible items.<br><p>
+<p>Os tipos de linhas abaixo são convertidas para linhas Tunnel: parede, presumida, poço, chaminé e rampa (desnível).
+Todos os outros tipos de linhas são convertidas para linhas Tunnel do tipo "details".</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>image resolution</u> (1 means that 1 m = 40 pixels). The PNG resolution that fits therion th2 export is 5.0.
-If the system does not have enough memory to create the image at the set resolution, TopoDroid uses a smaller resolution until the export succeeds (or it gets so small that the program gives up trying).</li>
-<li><u>background color</u>: whether to set the background color white, temporarily.</li>
-<li><u>grid</u>: whether to include or not</li>
-<li><u>splays</u>: whether to include or not</li>
-<li><u>stations</u>: whether to include or not</li>
-</ul><p -->
+<p>Bordas de áreas são convertidas para linhas Tunnel do tipo "filled".</p>
+
+<p>Os seguintes tipos de pontos são convertidos para pontos Tunnel: água, areia, argila, arqueo, blocos, canudo, coluna, corrente de ar, cortina, escorrimento, estalactite, estalagmite, fluxo de água, gradiente, guâno, lama, pipoca e seixos.
+Todos os outros tipos de pontos são convertidos para pontos Tunnel do tipo "bedrock".</p>
+
+<p><b id="xvi">Xtherion</b> (.xvi)</p>
+
+<p>Os arquivos XVI exportados podem ser inseridos como imagens de fundo no xtherion.</p>
+
+<p>As linhas do tipo "parede" são vermelhas, "rampas" são laranjas, "corte" são cinzas e todas as outras são marrons.
+Bordas de áreas são pretas.
+Os ícones dos pontos são representados de uma maneira simplificada.
+A representação de textos suporta somente os caracteres latinos, os dígitos e alguns poucos caracteres ('+', '-', '/', '_', '&gt;', '&lt;', '?').
+Outros caracteres são representados por um "diamante".</p>
+
+<p>A célula da grade é de 1 m.</p>
+
+<p>As configurações XVI estão junto às configurações Therion:</p>
+
+<ul>
+<li><u>Ponto corte</u>: se há pontos de corte definidos, o croqui do corte é incluído no arquivo XVI, na posição definida pelo ponto "corte"</li>
+<li><u>Grade</u>: incluir linhas de grade no arquivo exportado (tamanho da célula igual a da grade atual) [padrão não]</li>
+<li><u>Escala Therion</u>: escala de exportação [padrão 1:100]</li>
+</ul>
+
+<p><b id="cave3d">Cave3D</b> (.c3d)</p>
+
+<p>Os croquis exportados no formato <i>Cave3D</i> (.c3d) podem ser carregados como modelos 3D no Visualizador 3D.</p>
+
+<p><b id="dxf2">DXF</b> (.dxf)</p>
+
+<p>Os croquis podem ser exportados como arquivos <i>DXF</i> 2D.</p>
+
+<p>Você pode definir camadas para tipos de símbolos (pontos, linhas e áreas) ou para níveis.
+Use a coordenada Z para separar desenhos ou níveis.
+Os arquivos DXF suportam somente alguns poucos tipos básicos de linhas.</p>
+
+<p>Os croquis podem ser exportados como arquivos DXF nas seguintes versões: <i>R12 (AC1009)</i>, <i>R13 (AC1012)</i> e <i>R14 (AC1014)</i>.
+No caso de arquivos na versão R12 as áreas são exportadas somente com as bordas e não são preenchidas.</p>
+
+<p>É possível incluir nos arquivos DXF tanto os cortes (aqueles que tiverem um ponto tipo "corte" correspondente definido) e os eixos X-Y.</p>
+
+<p>Configurações:</p>
+
+<ul>
+<li><u>Versão DXF</u>: R12 (AC1009), R13 (AC1012) e R14 (AC1014) [padrão "R12 (AC1009)"].</li>
+<li><u>Ponto corte</u>: se a linha "corte" tem um ponto "corte" definido, o croqui do corte é inserido na exportação na posição definida pelo pornto "corte".</li>
+<li><u>Incluir referência XY</u>: define se os eixos de referência XY devem ser incluídos.</li>
+<li><u>Camadas croquis</u>: camadas nos arquivos DXF por desenhos ou tipos [padrão "desenhos"].</li>  
+</ul>
 
 <b id="pdf">PDF</b> (.pdf)<br>
 Sketch can be exported as PDF files.
@@ -561,13 +548,6 @@ it includes only the reference items (stations, splays, grid, etc.) that are dis
 The text of labels, scalebar value and stations are reduced by 1/4.
 The 1 m grid is not drawn at scales smaller than 1:100.
 The color of certain items (eg, labels) is inverted, for visibility.<br><p>
-
-<!--
-Settings:<ul style="margin-top=0">
-<li><u>background color</u>: whether to set the background color white, temporarily.</li>
-<li><u>splays</u>: whether to include or not the splays [unused]</li>
-</ul><p>
--->
 
 <b id="shp2">Shapefile</b> (.shp)<br>
 Sketches can be exported as shapefile, with stations, shots, and lines.
