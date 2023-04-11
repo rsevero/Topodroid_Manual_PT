@@ -220,7 +220,7 @@ Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses
 <p>As unidades de medidas são as definidas pelo usuário.</p>
 
 <p>Se a opção "Aux Compass/Walls" estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas".
-Do contrário, são exportadas como "medidas anonimas" tendo seu comprimento ajustado para a projeção relevante.
+Do contrário, são exportadas como "medidas anônimas" tendo seu comprimento ajustado para a projeção relevante.
 O componente vertical dessas medidas pode ser recuperado através da inclinação.
 Veja o manual do <i>Walls</i>.</p>
 
@@ -252,56 +252,68 @@ Esse mapeamento pode ser alterado através de opções de configuração.</p>
 <p>Pode acontecer que o croqui importado não esteja alinhado com os dados da topo.
 Nessa situação você pode arrastar o croqui na tela de <u>desenho</u> para que encaixe na linha de trena.</p>
 
-<b id="polygon">Polygon</b> (.cave)<br>
-TopoDroid can export survey data in <i>Polygon</i> format. 
-Fixed points are exported as lat-long.<br><p>
+<p><b id="polygon">Polygon</b> (.cave)</p>
+
+<p>Os dados da topo podem ser exportados no formato <i>Polygon</i>.</p>
+
+<p>Pontos com coordenadas geográficas são exportados como lat-long.</p>
+
+<p><b id="ghtopo">GHTopo</b> (.gtx)</p>
+
+<p>Os dados da topo podem ser exportados no formato <i>GHTopo</i> (testado parcialmente).</p>
+
+<p><b id="grottolf">Grottolf</b> (.grt)</p>
+
+<p>Os dados da topo podem ser exportados no formato <i>Grottolf</i> (não testado).</p>
+
+<p>Se a primeira base tiver coordenadas geográficas, elas são exportadas, do contrário, são usadas coordenadas locais.
+O perfil nas bases é calculado projetando as medidas auxiliares no plano vertical perpendicular à visada.</p>
 
 
-<b id="ghtopo">GHTopo</b> (.gtx)<br>
-TopoDroid can export survey data in <i>GHTopo</i> format (partially tested).<br><p>
+<p><b id="topo">Topo</b> (.cav)</p>
 
+<p>Os dados da topo podem ser exportados no formato <i>Topo</i>.</p>
 
-<b id="grottolf">Grottolf</b> (.grt)<br>
-TopoDroid can export survey data in <i>Grottolf</i> format (untested). 
-If the first station has geographical coordinates these are exported, otherwise local coordinates are used.
-The profile at the stations are computed by projecting the splay shots onto a vertical plane perpendicular to the
-leg.<br><p>
+<p>Configurações (em configurações "Survex"):</p>
 
+<ul>
+<li><u>Term linha Survex/Topo</u> pode ser Linux ou Windows.</li>
+</ul>
 
-<b id="topo">Topo</b> (.cav)<br>
-Survey data can be exported as <i>Topo</i> files.<br><p>
+<p><b id="csv">CSV</b> (.csv)</p>
 
-Settings (under "Survex" settings):<ul style="margin-top=0">
-<li><u>line termination</u> can be either Unix or Windows</li>
-</ul><p>
+<p>Os dados da topo podem ser exportados no formato <i>CSV</i> (campos separados por vírgulas):</p>
 
+<ul>
+<li>Bases DE e PARA</li>
+<li>Distância, azimute e inclinação</li>
+<li>direção no perfil retificado</li>
+</ul>
 
-<b id="csv">CSV</b> (.csv)<br>
-Survey data can be exported as a list of records with comma-separated fields:
-<ul style="margin-top=0">
-<li>"from" and "to" stations</li>
-<li>distance, azimuth, clino</li>
-<li>flag</li>
-</ul><br>
-Shot comments are not exported. A brief header is prepended to the data list.<br>
+<p>Os comentários das medidas não são exprotadas.
+Um cabeçalho indicando o conteúdo de cada coluna é anexado aos dados.</p>
 
-The survey raw data can be exported in CSV format. In this case each record (line) has
-<ul style="margin-top=0">
-<li>shot id</li>
-<li>"from" and "to" stations</li>
-<li>distance, azimuth, clino, roll</li>
-<li>acceleration, magnetic field, dip</li>
-<li>timestamp, type (device or manual), device-address</li>
-<li>extend, flag, leg_type, status, comment</li>
-</ul><br>
-In the raw data export the leg shots are not averaged, but exported individually.<br><p>
+<p>Os dados brutos podem também ser exportados em formato CSV.
+Nesse caso cada linha de dados é composta por:</p>
 
-Settings:<ul style="margin-top=0">
-<li><u>raw data</u>: whether to export the raw data</li>
-<li><u>separator</u>: fields separator (comma, pipe or tab)</li>
-<li><u>EOL</u>: record separator (lf or cr+lf)</li>
-</ul><br><p>
+<ul>
+<li>ID</li>
+<li>Bases DE e PARA</li>
+<li>Distância, azimute, inclinação e rotação</li>
+<li>Aceleração, campo magnético e mergulho</li>
+<li>Carimbo de horário, tipo (dispositivo ou manual) e endereço do dispositivo</li>
+<li>Direção no perfil retificado, categoria, tipo, situação e comentário</li>
+</ul>
 
+<p>Na exportação de dados brutos as visadas não tem seus valores calculados (média), são exportados em formato original, individualmente. </p>
+
+<p>Configurações:</p>
+
+<ul>
+<li><u>CSV bruto</u>: habilita a exportação de dados brutos em formato CSV</li>
+<li><u>Separ campo CSV</u>: separador de campos nos arquivos CSV exportados (vírgula, traço vertical ou tab)</li>
+<li><u>Separ linha CSV</u>: separador de linhas nos arquivos CSV exportados (Linux ou Windows)</li>
+</ul>
 
 <b id="dxf">DXF</b> (.dxf)<br>
 Survey data are exported as 3D DXF (<i>LibreCAD</i>) with layers
