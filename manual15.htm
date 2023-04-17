@@ -106,60 +106,63 @@ Liga e desliga as projeções das paredes na planta baixa e no perfil.</li>
 </li>
 </ul>
 
-<b>TITLE LINE</b><br>
-The title bar shows the viewing parameters:
+<p><b>BARRA DE TÍTULO</b></p>
+
+<p>A barra de título da tela apresenta os seguintes parâmetros:</p>
+
 <ul>
-<li><i>C</i> and <i>A</i> clino and azimuth of the viewpoint.</li>
-<li><i>S</i> is the zoom factor.</li>
-<li><i>T</i> are the X-Y translations of the model.</li>
-<li><i>L</i> are the clino and azimuth of the light.</li>
+<li><i>C</i> e <i>A</i>: inclinação e azimute do ponto de vista.</li>
+<li><i>S</i>: nível de zoom.</li>
+<li><i>T</i>: translações XY do modelo.</li>
+<li><i>L</i>: inclinação e azimute da iluminação.</li>
 </ul>
-<br><p>
 
-<b>EXPORTS</b><br>
-Model can be exported as DXF, KML, STL or STL-binary, CGAL, LAS-binary, and shapefile.<br>
-The exported file is saved in the folder "c3export" of the current working directory.
-<br><p>
+<p><b>EXPORTAÇÕES</b></p>
 
-There are options to include splays, walls, stations and surface in export.<br>
-The model can be also serialized in a text file.
-<br><p>
+<p>O modelo 3D pode ser exportado nos formatos: CGAL, DXF, KML, LAS binário, Shapefile e STL (ou STL binário), .</p>
 
-<b>GRID/FRAME</b><br>
-The grid/frame lines are green (west-east), blue (south-north), and red (vertical).<br>
-In perspective the grid looks greenish to the north/south because the green lines stack together closer.
-And it looks blueish to the west/east.
-To help distinguish the for cardinal directions, the grid gets slightly reddish at the west-south corner.<br>
-By default the grid is below the survey, but it can be set above it (optionally).
-<br><p>
+<p>O arquivo exportado é gravado no subdiretório "c3export" do diretório de trabalho atual·</p>
 
-<b>SURVEY</b><br>
-The survey splays can be hidden, displayed as lines or endpoints.<br>
-The survey legs can be uncolored or colored by survey, by depth (red-to-blue) or by
-the depth beneath the surface (blue-to-red) if the model has a DEM surface.<br>
+<p>Há configurações para controlar a inclusão de medidas auxiliares, paredes, bases e superfície no arquivo exportado.</p>
 
-When uncolored the survey legs are white, the surface legs green, the duplicate legs orange, 
-and the commented legs light blue.<br>
+<p>O modelo 3D pode também ser serializado em um arquivo de texto.</p>
 
-The "surface", "duplicate", and "commented" legs can be turned on/off with the <i>leg dialog</i> which
-is opened by a long-tap on the fourth button.
-<br><p>
+<p><b>GRADE/MOLDURA</b></p>
 
-<b>WALLS</b><br>
-The wall model is not computed automatically when the file is opened, but it must be
-requested by the user through the "wall" menu.
-There are three models: <i>simple hull</i>, <i>pseudo convex-hull</i>, and <i>powercrust</i>.
-The first two are suitable when the splay are not dense. The third one is for dense splays.<br>
+<p>As linhas da grade/moldura são verde (leste/oeste), azul (norte/sul) e vermelha (vertical).</p>
 
-The wall model depends on the number and the quality of the splays.
-Poor splays will result in a poor model.<br>
+<p>Na visualização em perspectiva a grade tem tons esverdeados na direção norte/sul pois as linhas verdes se aproximam.
+E fica azulado na direção oeste/leste.
+Para facilitar a identificação das direções cardinais a grade é ligeiramente avermelhada na quina sudoeste.</p>
 
-The computation is done in background.
-When done the wall can be displayed with the "wall" button.<br><p>
+<p>Por padrão a grade é apresentada abaixo da topo mas isso pode ser alterado através da configuração apropriada.</p>
 
-The powercrust model includes also the projection of the walls on the horizontal plane (plan view), and on a vertical curtain
-along the survey (profile view). Their display is enabled through the "walls" menu.
-<br><p>
+<p><b>TOPO</b></p>
+
+<p>As medidas auxiliares podem ser ocultadas ou apresentadas como linhas ou como pontos marcando suas extremidades.</p>
+
+<p>As visadas podem ser apresentadas sem coloração especial ou coloridas por topo, por altitude (vermelho para azul) ou por profundidade abaixo da superfície (azul para vermelho) se o modelo 3D tiver uma superfície DEM.</p>
+
+<p>Quando sem coloração especial as visadas são brancas, as visadas de superfície são verdes, as visadas duplicadas são laranjas e as visadas comentadas são azul-claro.</p>
+
+<p>As visadas "de superfície", "duplicadas" e "comentadas" podem ser ligadas e desligadas através da caixa de diálogo <i>Visadas visíveis</i> que é apresentada com um clique longo no botão <i>Grade</i> (último botão).</p>
+
+<p><b>PAREDES</b></p>
+
+<p>A modelagem de paredes não é realizada automaticamente quando o arquivo é aberto.
+Ela deve ser requerida através da opção de menu <i>Modelagem paredes</i>.
+Há três modos sistemas diferentes de modelagem: <i>casco simples</i>, <i>casco pseudo convexo</i> e <i>powercrust</i>.
+Os dois primeiros são indicados para quando não há uma grande quantidade de medidas auxiliares.
+O terceiro é indicado para quando houver uma rede densa de medidas auxiliares.</p>
+
+<p>A modelagem de paredes depende da quantidade e qualidade de medidas auxiliares.
+Medidas auxiliares ruins resultam em uma modelagem de paredes ruim.</p>
+
+<p>O processamento da modelagem é realizado em background.
+Quando finalizada as paredes podem ser apresentadas através do botão <i>Paredes</i>.</p>
+
+<p>A modelagem powercrust apresenta também a projeção das paredes no plano orizontal (planta baixa) e na cortina vertical ao longo da topo (perfil).
+A apresentação dessas projeções é controlada através da opção de menu <i>Modelagem paredes</i>.</p>
 
 <b>SURFACE</b><br>
 If the (Therion or Loch) model contains surface data (Digital Elevation Model), the surface can be displayed either gray or
