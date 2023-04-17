@@ -16,69 +16,95 @@ Se as coordenadas tiverem sido definidas em um sistema cartográfico (projetado)
 Do contrário os pontos fixos serão posicionados considerando as distâncias do equador e do meridiano de referência com a latitude multiplicada pelo raio do meridiano e a longitude multiplicada pelo raio do círculo paralelo respectivamente.</p>
 
 <p>As coordenadas em sistema cartográficos de referência não levam em consideração a convergência dos meridianos.
-Dessa maneira o norte não é o norte cartográfico mas sim a direçlão do meridiano.</p>
+Dessa maneira o norte não é o norte cartográfico mas sim a direção do meridiano.</p>
 
 <p>Não é realizada nenhuma conversão de coordenadas.
 Assim, todas as topos em um mesmo projeto devem estar referênciadas em um mesmo sistema de coordenadas.</p>
 
-<h4>BUTTONS</h4>
-<ul style="margin-top:0">
-<li><i>Mode</i>: either rotate the model or move the model or the light (if there is a DEM).  Two-finger always scale and translate the model.</li>
-<li><i>View</i>: either perspective or orthographic.</li>
-<li><i>Stations</i>: hide or show stations, as green points or names.</li>
-<li><i>Splays</i>: hide or sow splays, as segments or endpoints.</li>
-<li><i>Walls</i>: hide or show walls (if created).</li>
-<li><i>Surface</i>: hide or show surface DEM (if present).</li>
-<li><i>Color</i>: centerline color-coding. White, by-survey, or depth.</li>
-<li><i>Frame</i>: frame, either XY grid or XYZ axes.</li>
-</ul><br>
-The button icons are adjusted to the state of the program.
-<br><p>
+<h4>BOTÕES</h4>
 
-A few buttons have long-tap actions:
 <ul>
-<li><i>View</i>: Adjust the focal parameter of the perspective.</li>
-<li><i>Stations</i>: Toggle station selection on/off.</li>
-<li><i>Color</i>: Select the surveys to show or hide.</li>
-<li><i>Frame</i>: Open the <i>leg dialog</i> (display of surface/duplicate/commented legs).</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_turn.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_move.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_light.png"> <i>Modo</i>: rodar o modelo ou mover o modelo ou a fonte de luz (se houver um DEM definido).
+Clicando com dois dedos simultaneamente é possível dar zoom ou mover o modelo.</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_orthogonal.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_perspective.png"> <i>Visualização</i>: ou ortográfica ou em perspectiva.</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_no_dot.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_point_dot.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_station_name_dot.png"> <i>Bases</i>: ocultar, mostrar com ponto, mostrar com nome.</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_none.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_line.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_splays_point.png"> <i>Medidas auxiliares</i>: ocultar, mostrar como linhas ou como pontos.</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_wall_no.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_wall.png"> <i>Paredes</i>: ocultar ou mostrar (se tiverem sido criadas).</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_surface_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_surface_on.png"> <i>Superfície</i>: ocultar ou mostrar superfície DEM (se disponível).</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_color.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_survey.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_depth.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_color_surface.png"> <i>Cor</i>: cor da linha de trena: branca, por topo, por profundidade ou superfície.</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_grid.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_axes.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_frame_no.png"> <i>Grade</i>: grade XY, eixos XYZ ou nenhuma.</li>
 </ul>
-<br><p>
+
+<p>Os ícones dos botões são alterados para indicar a seleção atual.</p>
+
+<p>Alguns botões tem ações disparadas por cliquers longos:</p>
+
+<ul>
+<li><i>Visualização</i>: ajusta a distância focal da perspectiva.</li>
+<li><i>Bases</i>: liga e desliga a possibilidade de selecionar bases.</li>
+<li><i>Cor</i>: seleciona as topos a serem apresentadas e ocultadas.</li>
+<li><i>Grade</i>: abre a caixa de diálogo <i>Visadas visíveis</i> (apresentação de visadas de superfície, duplicadas e comentadas).</li>
+</ul>
 
 <h4>MENU</h4>
-<ul style="margin-top:0">
-<li><i>Open file</i>: Select a survey file from the working folder.</li>
-<li><i>Export</i>: Export dialog.</li>
-<li><i>Info</i>: Survey statistics.</li>
-<li><i>3D-Rose diagram</i>: Distribution of 3D directions.</li>
-<li><i>Rose diagram</i>: Distribution of azimuth directions.</li>
-<li><i>Reset</i>: Reset to orthogonal top view, at zoom one.</li>
-<li><i>Viewpoint</i>: Select a point of view among top, north, east, south, and west. For example "south" means looking at the cave from the South.</li>
-<li><i>Surface</i>: Transparency and DEM file. Centreline projection on surface.</li>
-<li><i>Wall models</i>: Create or clear a wall 3D reconstruction. Toggle plan/profile projections of walls</li>
-<li><i>Sketches</i></li>
-<li><i>Options</i></li>
-<li><i>Help</i></li>
-</ul><br><p>
 
-<h4>OPTIONS</h4>
-<ul style="margin-top:0">
-<li><i>Base path</i>: Folder containing the survey files</li>
-<li><i>Selection radius</i>: Radius of selection for stations [1.0]</li>
-<li><i>Station dialog</i>: whether to open the station dialog for the selected station [n].</li>
-<li><i>Station points</i>: whether to always display station points (green) [n].</li>
-<li><i>Top grid</i>: Show the grid on the top [n].</li>
-<li><i>Grid extent</i>: amount of grid extent around the survey [10 cells].</li>
-<li><i>Below horizon view</i>: whether to allow viewpoints below the horizon [n].</li>
-<li><i>DEM buffer</i>: Extent of surface model around the survey on loading the surface model from a DEM file.</li>
-<li><i>DEM max size</i>: maximum size of surface DEM in each direction [400 cells].</li>
-<li><i>DEM reduction</i>: how to reduce the DEM if too large (subsample or clip) [subsample].</li>
-<li><i>All splay</i>: Whether to use all the splays for the walls</li>
-<li><i>Split triangles</i>: Whether to split intersecting wall triangles</li>
-<li><i>Randomize points</i>: Add a small random vector to splays</li>
-<li><i>Stretch walls</i>: Shift wall points by a small quantity along the leg</li>
-<li><i>Powercrust</i>: Algorithm "delta" parameter</li>
-<li><i>Bluetooth device</i>: name of the Bluetooth device.</li>
-</ul><br><p>
+<ul>
+<li><i>Abrir</i>: abrir um arquivo de topo do diretório de trabalho.</li>
+<li><i>Exportar</i>: abre a caixa de diálogo <i>Exportar modelo 3D</i>.</li>
+<li><i>Info</i>: informações estatísticas do modelo.</li>
+<li><i>Diagrama Ico</i>: distribuição de direções 3D.</li>
+<li><i>Diagrama Rose</i>: distribuição dos azimutes.</li>
+<li><i>Reiniciar</i>: retornar para visualização ortogonal de cima, com zoom 1.</li>
+<li><i>Ponto de vista</i>: alterar o ponto de vista: topo, leste, norte, oeste, sul.
+Por exemplo "sul" quer dizer olhar para a caverna a partir do sul.</li>
+<li><i>Superfície</i>: arquivo DEM e sua transparência.
+Projecão da linha de trena na superfície.</li>
+<li><i>Paredes</i>: criar ou limpar a reconstrução 3D de paredes.
+Liga e desliga as projeções das paredes na planta baixa e no perfil.</li>
+<li><i>Configurações</i></li>
+<li><i>Ajuda</i></li>
+</ul>
+
+<h4>CONFIGURAÇÕES</h4>
+
+<ul>
+<li><i>Diretório trabalho</i>: diretório com as topos.</li>
+<li>
+    <u>Visualizador 3D</u>:
+    <ul>
+        <li><i>Visão abaixo horizonte</i>: permitir pontos de vista abaixo do horizonte [padrão não].</li>
+        <li><i>Ponto base</i>: sempre mostrar pontos (verdes) representando bases [padrão não].</li>
+        <li><i>Raio ponto base</i>: raio dos pontos das bases [8 pxl].</li>
+        <li><i>Tam nome base</i>: tamanhos dos nomes das bases [20 pt].</li>
+        <li><i>Raio seleção</i>: raio da ferramenta de seleção [1.0]</li>
+        <li><i>Mensagem distância</i>: usar mensagem no lugar de caixa de diálogo para distância [padrão não]</li>
+        <li><i>Caixa Diálogo base</i>: usar caixa de diálogo no lugar de caixa de edição [padrão não].</li>
+        <li><i>Grade topo</i>: apresentar grade no topo [padrão não].</li>
+        <li><i>Extensão grade</i>: tamanho da extensão da grade ao redor da planta baixa [10 células].</li>
+        <li>
+            <u>DEM</u>:
+            <ul>
+                <li><i>Buffer DEM</i>: extensão do modelo de superfície DEM ao redor da topo a ser carregada do arquivo DEM.</li>
+                <li><i>Tam máx DEM</i>: Tamanho máximo da superfície DEM em cada direção [padrão 400 células].</li>
+                <li><i>Redução DEM</i>: Modo de redução DEM (subamostragem ou cortar) [padrão subamostragem].</li>
+            </ul>
+        </li>
+        <li>
+            <u>MODELAGEM PAREDES</u>:
+            <ul>
+                <li><i>Uso aux</i>: quais medidas auxiliares usar: nenhum, normal, corte [padrão normal]</li>
+                <li><i>Todas aux</i>: usar todas as medidas auxiliares na modelagem de paredes [padrão não]</li>
+                <li><i>Aux projetada</i>: projetar as medidas auxiliares em um plano normal [padrão não]</li>
+                <li><i>Lim aux</i>: medidas auxiliares fora da visada a manter [0.5]</li>
+                <li><i>Partir triângulos</i>: partir triângulos de paredes que se interceptarem [padrão sim]</li>
+                <li><i>Ruído pontos</i>: pequeno vetor aleatório adicionado às medidas auxiliares ao modelar paredes [padrão 0.1]</li>
+                <li><i>Alongar paredes</i>: distância a alongar pontos das paredes na direção da visada [padrão 0.1]</li>
+                <li><i>Delta Powercrust</i>: parâmetro "delta" do algoritmo powercrust [padrão 0.1]</li>
+            </ul>
+        </li>
+    </ul>
+</li>
+</ul>
 
 <b>TITLE LINE</b><br>
 The title bar shows the viewing parameters:
