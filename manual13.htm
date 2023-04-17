@@ -649,15 +649,68 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
   <li><i>Form export aut croqui</i>: se definido, os croquis serão automaticamente exportados no formato escolhido quando fechados.
   Os arquivos exportados são gravados no subdiretório "out" do diretório da topo.
   A exportação automática de croquis cria uma carga extra no app e, por isso, não é definida por padrão.</li>
+  <li><b>Compass</b>:
+    <ul>
+      <li><i>Inverter Esq/Dir</i>: inverter Esquerda e Direita na exportação para o Compass.</li>
+    </ul>
+  </li>
+<li><b>Compass/cSurvey/WinKarst</b>:
+  <ul>
+  <li><i>Pref base</i>: incluir prefixo nos nomes das bases na exportação [padrão não].</li>
+  </ul>
+</li>
+<li><b>Compass/TopoRobot/WinKarst/Polygon/VisualTopo</b>:
+  <ul>
+  <li><i>Âng aux EDTC</i>: ângulo mínimo entre uma medida auxiliar e uma visada para ser uma medida auxiliar EDTC [padrão 0.0].
+  Essa configuração também é usada nos arquivos <b>Therion/Survex</b> se EDTC estiver habilitada para eles.</li>
+  <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares Teto/Chão [padrão 0].</li>
+  <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares Esquerda/Direita [padrão 90].</li>
+  </ul>
+</li>
 <li><b>Compass/VisualTopo</b>:
   <ul>
     <li><i>Estimar ref. retif. perfil</i>: estimar referência para retificação do perfil na importação de arquivos <b>Compass/VisualTopo</b> [padrão sim]</li>
+  </ul>
+</li>
+<li><b>DXF</b>:
+  <ul>
+    <li><i>Final aux</i>: marcar final de medida auxiliar DXF com cruzes [padrão não].</li>
+    <li><i>Versão</i>: para o arquivo exportado: R12, R13 ou R14.
+    Na versão R12 as linhas Bézier são convertidas em sequências de segmentos de reta e as áreas não são preenchidas.
+    Nas versões R13 e R14 são usados splines e preenchimentos de áreas mas esses recursos ainda estão sendo testados.</li>
+    <li><i>Splines</i>: interpolação cúbica de splines DXF [padrão sim].</li>
+    <li><i>Referência</i>: incluir eixos XY na exportação de croquis DXF [padrão não].</li>
+    <li><i>Camadas croquis</i>: criar camadas DXF por croquis [padrão sim].</li>
+  </ul>
+</li>
+<li><b>KML/GeoJSON</b>:
+  <ul>
+    <li><i>Incluir base</i>: incluir bases nos arquivos KML/GeoJSON/ShapeFile exportados [padrão sim].</li>
+    <li><i>Incluir aux</i>: incluir medidas auxiliares nos arquivos KML/GeoJSON/ShapeFile exportados [padrão não].</li>
   </ul>
 </li>
 <li><b>PocketTopo</b>:
   <ul>
     <li><i>Esquema cor</i>: mapeamento de cores do PocketTopo para itens do croqui.</li> 
   </ul> 
+</li>
+<li><b>Survex</b>:
+  <ul>
+    <li><i>Base aux</i>: incluir às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada [padrão não].</li>
+  </ul>
+</li>
+<li><b>Survex/Topo</b>:
+<ul>
+  <li><i>Term linha</i>: terminação de linha Survex/Topo (Linux ou Windows) [padrão Linux].</li>
+</ul>
+</li>
+<li><b>SVG</b>:
+  <ul>
+    <li><i>Programa alvo</i>: programa SVG alvo para exportação [Inkscape].</li>
+    <li><i>Grade</i>: incluir grade no arquivo SVG/XVI exportado [padrão não].</li>
+    <li><i>Orient linha</i>: incluir indicadores de orientação de linha nos arquivos SVG exportados [padrão não].</li>
+    <li><i>Espess ELEMENTO</i>: configurações independentes para definir as espessuras das linhas nos seguintes elementos (ponto, rótulo, linha, grade, medidas, marca de orientação de linha)</li>
+  </ul>
 </li>
 <li><b>Therion</b>:
 <ul> 
@@ -669,63 +722,10 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
   <li><i>Med aux Therion</i>: adicionar linhas "u:splay" aos arquivos th2 [padrão sim].</li>
 </ul>
 </li>
-<li><b>Compass/cSurvey/WinKarst</b>:
-<ul>
-<li><i>Pref base</i>: incluir prefixo nos nomes das bases na exportação [padrão não].</li>
-</ul>
-</li>
-<li><b>Compass/TopoRobot/WinKarst/Polygon/VisualTopo</b>:
+<li><b>Therion/Survex</b>:
   <ul>
-  <li><i>Âng aux EDTC</i>: ângulo mínimo entre uma medida auxiliar e uma visada para ser uma medida auxiliar EDTC [padrão 0.0].
-  Essa configuração também é usada nos arquivos <b>Survex/Therion</b> se EDTC estiver habilitada para eles.</li>
-  <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares Teto/Chão [padrão 0].</li>
-  <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares Esquerda/Direita [padrão 90].</li>
+    <li><i>EDTC</i>: incluir EDTC nos arquivos Survex/Therion exportados [padrão não].</li>
   </ul>
-</li>
-<li><b>Compass</b>:
-<ul>
-  <li><i>Inverter Esq/Dir</i>: inverter Esquerda e Direita na exportação para o Compass.</li>
-</ul>
-</li>
-<li><b>Survex/Topo</b>:
-<ul>
-  <li><i>Term linha</i>: terminação de linha Survex/Topo (Linux ou Windows) [padrão Linux].</li>
-</ul>
-</li>
-<li><b>Survex</b>:
-<ul>
-  <li><i>Base aux</i>: incluir às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada [padrão não].</li>
-</ul>
-</li>
-<li><b>Survex/Therion</b>:
-<ul>
-  <li><i>EDTC</i>: incluir EDTC nos arquivos Survex/Therion exportados [padrão não].</li>
-</ul>
-</li>
-<li><b>SVG</b>:
-  <ul>
-    <li><i>Programa alvo</i>: programa SVG alvo para exportação [Inkscape].</li>
-    <li><i>Grade</i>: incluir grade no arquivo SVG/XVI exportado [padrão não].</li>
-    <li><i>Orient linha</i>: incluir indicadores de orientação de linha nos arquivos SVG exportados [padrão não].</li>
-    <li><i>Espess ELEMENTO</i>: configurações independentes para definir as espessuras das linhas nos seguintes elementos (ponto, rótulo, linha, grade, medidas, marca de orientação de linha)</li>
-  </ul>
-</li>
-<li><b>KML/GeoJSON</b>:
-<ul>
-  <li><i>Incluir base</i>: incluir bases nos arquivos KML/GeoJSON/ShapeFile exportados [padrão sim].</li>
-  <li><i>Incluir aux</i>: incluir medidas auxiliares nos arquivos KML/GeoJSON/ShapeFile exportados [padrão não].</li>
-</ul>
-</li>
-<li><b>DXF</b>:
-<ul>
-  <li><i>Final aux</i>: marcar final de medida auxiliar DXF com cruzes [padrão não].</li>
-  <li><i>Versão</i>: para o arquivo exportado: R12, R13 ou R14.
-  Na versão R12 as linhas Bézier são convertidas em sequências de segmentos de reta e as áreas não são preenchidas.
-  Nas versões R13 e R14 são usados splines e preenchimentos de áreas mas esses recursos ainda estão sendo testados.</li>
-  <li><i>Splines</i>: interpolação cúbica de splines DXF [padrão sim].</li>
-  <li><i>Referência</i>: incluir eixos XY na exportação de croquis DXF [padrão não].</li>
-  <li><i>Camadas croquis</i>: criar camadas DXF por croquis [padrão sim].</li>
-</ul>
 </li>
 </ul>
 
@@ -738,7 +738,7 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
 <a href="manual14.htm">Projetos &gt;</a>
 
 <footer style="font-size:80%;font-style:italic">
-  <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-12</span> &mdash; Referente ao commit: <span id="last-update-commit">fbfe232d4</span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-17</span> &mdash; Referente ao commit: <span id="last-update-commit">0a12d22a3</span></p>
   <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
 
