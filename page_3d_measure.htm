@@ -1,32 +1,44 @@
-<html><body>
-<h4>3d VIEWER - Measure dialog</h4>
+<html>
+    <body>
+<h4>Visualizador 3D - Distância bases</h4>
 
-When the fixed station is selected, its coordinates appear in a blue bar 
-at the bottom of the screen.<br>
+<p>Quando uma base é selecionada, suas coordenadas são apresentadas em uma barra azul na parte inferior da tela.</p>
 
-This bar has two button:
+<p>Esta barra apresenta dois botões:</p>
+
 <ul>
-<li>the first sets the station as center of rotations</li>
-<li>the second switches the program in "measure mode": tapping on another
-station brings up the <i>Measure</i> dialog with the result of the measurement.</li>
-</ul><br><p>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_station_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_station_on.png"> <i>Base</i>: marca a base atual como centro das operações de rotação (fica destacada em laranja)</li>
+<li><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_ruler_off.png"><img style="border:1px solid black" width="36" height="36" src="btn_3d_measure_ruler_on.png"> <i>Medir</i>: ativa o modo "medir".
+Ao clicar-se em uma segunda base, será apresentada a caixa de diálogo <i>Distância bases</i>.</li>
+</ul>
 
-The <i>Measure</i> dialog show the distance between the fixed station and another one.<br>
+<p>A caixa de diálogo <i>Distância bases</i> apresenta as distâncias entre duas bases:</p>
+
 <ul>
-<li>the full names of the two stations</li>
-<li>the East, North, and vertical displacement between the two stations</li>
-<li>the 3D distance</li>
-<li>the distance in the horizontal plane</li>
-<li>the azimuth and inclination of the straight line between the two stations</li>
-<li>if it exists, the length of the shortest path along the cave midline between the two stations,
-and the positive and negative denivelation</li>
-</ul><br><p> 
+<li>o nome completo de ambas;</li>
+<li>o deslocamento oeste, norte e vertical entre as duas;</li>
+<li>distância 3D;</li>
+<li>distância 2D no plano horizontal;</li>
+<li>azimute e inclinação da linha de ligação direta entre as duas;</li>
+<li>se hovuer, o comprimento do caminho mais curto através da linha de trena entre as duas assim como os desníveis positivo e negativo.</li>
+</ul> 
 
-<b>Denivelation</b><br>
-The positive and negative denivelation are computed summing the vertical components of upwards and downwards legs, respectively.
-Only legs with inclination over 10&deg; are considered.
-Above 30&deg; the leg vertical component is fully taken into account.
-Between 10 and 30&deg; the vertical component is linearly interpolated, ie, multiplied by (clino-10)/20.<br><p>
+<p><b>Desnível</b></p>
 
+<p>Os desníveis positivo e negativo são calculados somando as componentes verticais respectivamente para cima e para baixo das visadas:</p>
 
-</body></html>
+<ul>
+    <li>Visadas com inclinação cujos valores absolutos sejam inferiores a 10&deg; não são consideradas.</li>
+    <li>Entre 10 e 30&deg; o componente vertical é interpolado linearmente, ou seja, multiplicado por (clino-10)/20.</li>
+    <li>Acima de 30&deg; o componente vertical é considerado em seu valor total.</li>
+</ul>
+
+<p><a href="manual16.htm">Índice</a></p>
+
+<footer style="font-size: 80%; font-style: italic; clear: both;">
+    <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-18</span> &mdash; Referente ao commit: <span id="last-update-commit">f1f00f1e6</span></p>
+    <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+</footer>
+
+</body>
+</html>
