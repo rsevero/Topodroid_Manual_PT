@@ -1,44 +1,46 @@
-<html><body>
+<html>
+    <body>
+        <h4>RECARREGAR CROQUI</h4>
 
-<h4>SKETCH RELOAD</h4>
+        <p>A tela é aberta através da opção de menu <i>Recarregar</i> disponível na tela <u>Desenho</u>.</p>
 
-This window is opened by the <u>Reload</u> menu of the <u>sketch window</u>.<br><p>
+        <p>O TopoDroid mantém uma série de backups dos arquivos de croquis a partir dos quais um croqui pode ser recuperado.</p>
 
-TopoDroid maintains backup copies of sketch files, from which the sketch can be recovered.<br>
-TopoDroid keeps a set of backup copies for each sketch file.
-These are named with suffixes "bck", "bck0", "bck1", and so on. They are stored in the 
-<i>tdr</i> subdirectory (binary sketch files). Whenever a sketch is saved the backup copies are rotated
-(eg, "bck1" is renamed "bck2", and so on; "bck" is renamed "bck0"),
-the old "tdr" file is renamed with suffix "bck", and the sketch is saved to a new "tdr" file.
-<br><p>
+        <p>Esse conjunto de arquivos é nomeado com as extensões "bck", "bck0", "bck1" e assim por diante.
+        Eles são gravados no subdiretório "tdr".
+        Sempre que um croqui é gravado, os arquivos de backup são rotacionados (o arquivo "bck1" é renomeado "bck2" e assim por diante; "bck" é renomeado "bck0"), o antigo arquivo "tdr" é renomeado "bck" e o croqui é gravado em um novo arquivo "tdr". </p>
 
-A sketch is saved whenever it is closed, or you toggle between plan and profile view, or open a x-section,
-or switch to another sketch.
-<br>
-It is also saved whenever it is modified (eg, a new item is added, or part of the sketch is erased)
-while it is open. Upon a modification a timer is started and when it expires the sketch is saved.
-The wait-time is a setting (default 60 seconds).
-<br>
-The number of backups is another setting.
-<br><p>
+        <p>Um croqui é gravado sempre que for fechado, que a visualização for alternada entre planta aixa e perfil, for aberto um corte ou for trocado por outro croqui.</p>
 
-The <u>Sketch Backup</u> window displays a preview of the sketch backups.
-One backup at a time is displayed. Some info about the backup are shown in the title: 
-<ul>
-<li>how long ago it was written, with suffixes for minutes (m), hours (h), days (d), months (M) and years (Y)</li>
-<li>size of the file, in square brackets, in bytes</li>
-<li>backup number</li>
-</ul>
-<br><p> 
+        <p>É também gravado quando é modificado enquanto está aberto (por exemplo, um novo item é incluído, ou parte de um croqui é apagado).
+        Após uma modificação um temporizador é iniciado e quando ele expirar o croqui será salvo novamente.
+        O tempo padrão desse temporizador é configurável (<i>Especiais > Desenho croqui > Intervalo backup</i>) com duração padrão de 60s.</p>
 
-There are two buttons to move back and forth in the backup list.
-<br><p>
+        <p>A quantidade de backups armazenada também é configurável (<i>Especiais > Desenho croqui > Qt backups</i>).</p>
 
-The menus are
-<ul>
-<li><i>Close</i> the window without reloading the sketch from a backup</li>
-<li><i>Reload</i> the sketch from the displayed backup (and close the window)</li>
-<li><i>Help</i></li>
-</ul><br><p>
+        <p>A tela <u>Backup de croqui</u> apresenta uma pré-visualização do backup selecionado.
+        Algumas informações sobre o backup são apresentadas na barra superior:</p>
+ 
+        <ul>
+            <li>a quanto tempo o bakcup foi gravado: com sufixos para minutos (m), horas (d), meses (M) e anos (Y);</li>
+            <li>tamanho do arquivo em bytes entre colchetes;</li>
+            <li>número do arqivo de backup.</li>
+        </ul>
 
-</body></html>
+        <p>Há dois botões para mover para frente e para trás na lista de backups <img src="btn_multiselection_previous.png" style="border:1px solid black" width="36" height="36"><img src="btn_multiselection_next.png" style="border:1px solid black" width="36" height="36"> e o último <img src="btn_backup_reload.png" style="border:1px solid black" width="36" height="36"> para voltar para o croqui mais recente fechando a tela <u>Backup de croqui</u>.</p>
+
+        <p><b>MENU</b></p>
+
+        <ul>
+            <li><i>Fechar</i>: fecha a tela sem carregar nenhum backup</li>
+            <li><i>Ajuda</i></li>
+        </ul>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-19</span> &mdash; Referente ao commit: <span id="last-update-commit">db3bb617d</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
