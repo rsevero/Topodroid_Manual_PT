@@ -1,58 +1,49 @@
-<html><body>
+<html>
+    <body>
+        <h4>Direção no perfil retificado</h4>
 
-<h4>EXTEND REFERENCE</h4>
+        <p>A caixa de diálogo é acessada através do botão <i>Azimute</i> <img src="btn_azimuth.png" style="border:1px solid black" width="36" height="36"><img src="btn_left.png" style="border:1px solid black" width="36" height="36"><img src="btn_right.png" style="border:1px solid black" width="36" height="36"> disponível tanto na tela <u>Medidas topo</u> quanto na tela <u>Desenho</u>.</p>
 
-This dialog is opened from the <u>Azimuth</u> button either in the survey <u>data window</u>
-or in the <u>sketch window</u>.<br><p>
+        <p>A direção no perfil retificado define como a medida será representada no perfil retificado.</p>
 
-The extend reference is used to assign the profile "extend" direction to the midline legs.<br>
-The "extend" direction is not automatically set for the splays.<br><p>
+        <p>A direção no perfil retificado é automaticamente definida somente para as visadas e não para as medidas auxiliares.</p>
 
-The <i>Azimuth</i> button displays either a long arrow inside a circle, oriented to the 
-current extend reference direction, or a short arrow directed left or right (for fixed "extend").<br>
-When the profile "extend" is compute using the "extend reference" it is set to right if it differs from the
-reference by less than 90&deg;. Otherwise it is set to left.
-<br><p>
+        <p>O botão <i>Azimute</i> é representado ou por uma longa seta apontando para cima (para definição automática de direção considerando um azimute de referência) ou por uma seta curta apontando para a esquerda ou direita (para direções fixas).</p>
 
-When the <i>Fixed extend reference</i> setting is enabled, the <i>Azimuth</i> button has only two states, either LEFT or RIGHT.
-Tapping the button switches between them. The new shots extend is set according to the state
-of the button.<br><p>
+        <p>Quando no modo automático, a direção é definida para a direita se a diferença entre o azimute da visada e o azimute de referência for menor do que 90&deg; menos  o <i>Lim vert aux</i> (configuração disponível em <i>Dados topo > Dados Medidas > Lim vert aux</i>) e para a esquerda se for maior do que 90&deg; mais o <i>Lim vert aux</i> e vertical no restante dos casos.</p>
 
-This dialog has
-<ul>
-<li>"extend reference" <b>azimuth</b></li>
-<li>slider to change its value between -180 and 180&deg;</li>
-<li><b>text field</b> to enter the azimuth numerical value, between 0 and 360</li>
-<li><b>compass</b> sets the value using the Android magnetic sensors</li>
-<li><b>left</b> forces "extend" to LEFT (-1)</li>
-<li><b>right</b> forces "extend" to RIGHT (+1)</li>
-<li><b>ok</b>: use the azimuth for the "extend"</li>
-</ul>
-<br><p>
+        <p>Quando a opção <i>Dados topo > Dados Medidas > Ref fix perf retific</i> estiver habilitada, o botão de azimuite só apresentará as opções esquerda <img src="btn_left.png" style="border:1px solid black" width="36" height="36"> e direita <img src="btn_right.png" style="border:1px solid black" width="36" height="36">.
+        Clicando no botão as duas opções são alternadas.
+        As novas visadas terão suas direções no perfil retificado definidas de acordo.</p>
 
-<b>Sketch extend reference mode</b><br>
-The extend reference azimuth can be changed also in the plan view of a sketch [E].
-A long tap on the <i>Azimuth</i> button turns the window in "extend reference" mode. In this mode an
-finger slide across the display rotates the reference azimuth (the canvas is not shifted).
-To get out of this mode lift the finger from the screen.<br><p>
+        <p>Quando a opção <i>Dados topo > Dados Medidas > Ref fix perf retific</i> estiver desabilitada, o botão <i>Azimute</i> abre a caixa de diálogo <i>Direção perfil retificado</i>:</p>
 
-<b>Leg extend</b><br>
-When a new shot is downloaded TopoDroid sets its "extend" automatically.
-This holds also for shots entered manually, if the "extend" in the shot dialog is left "unset".
-By default the "extend" is either LEFT, RIGHT, or VERT (vertical), depending on the angle the shot makes with the reference azimuth.<br>
-If the angle is smaller than 90&deg; minus the <i>extend vertical threshold</i> the leg is extended RIGHT.
-If it is larger than 90&deg; plus the <i>extend vertical threshold</i> the leg is extended LEFT.
-Otherwise it is extended VERT.<br><p>
+        <ul>
+            <li><b>azimute</b>: referência para definição automática de direção no perfil retificado</li>
+            <li>barra de rolagem para definir o valor de referência variando de -180&deg; a 180&deg;</li>
+            <li><b>campo de texto</b>: para definir o valor númerico do azimute de referência entre 0&deg; e 360&deg;</li>
+            <li><b>bússola</b>: define o valor de referência usando a bússola do dispositivo Android</li>
+            <li><b>esquerda</b>: define a esquerda como direção fixa no perfil refiticado</li>
+            <li><b>direita</b>: define a direita como direção fixa no perfil refiticado</li>
+            <li><b>Ok</b>: usa o azimute atual como referência</li>
+        </ul>
 
-The <i>Extend Reference</i> dialog allows to change the reference azimuth, by rotating it clockwise or counterclockwise.
-Alternatively, the reference azimuth can be set using the Android compass sensors.
-A warning is shown if the sensor accuracy is low or there is a sensor failure.
-<br><p>
+        <p><b>Direção no perfil retificado de visadas</b></p>
 
-It is also possible to fix the "extend" for coming shots to either LEFT or RIGHT, by selecting the appropriate buttons in the dialog.<br><p>
+        <p>Quando uma nova visada é baixada o TopoDroid define automaticamente sua direção no perfil retificado.
+        Isso vale também para as visadas cadastradas manualmente se nenhuma opção de direção no perfil retificado na caixa de diálogo de cadastro manual de visada for escolhida.
+        A direção é definida de acordo com as opções escolhidas na caixa de diálogo <i>Direção perfil retificado</i>.</p>
 
-<b>Splay extend</b><br>
-The "extend" of splay shots is determined according to that of the legs at the splay station and the azimuth between the splay and the legs.
-The splay is extended as if it were projected on the closest of the vertical planes passing through the legs.<br><p>
+        <p><b>Direção no perfil retificado de medidas auxiliares</b></p>
 
-</body></html>
+        <p>A direção no perfil retificado de medidas auxiliares é definida de acordo com as direções das visadas que chegam na base a qual a medida auxiliar está ligada levando em consideração o azimute das mesmas.
+        A medida auxiliar é projetada no plano vertical mais próximo passando pelas visadas que chegam na base.</p>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-19</span> &mdash; Referente ao commit: <span id="last-update-commit">b20ceacc4</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
