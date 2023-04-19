@@ -2,7 +2,7 @@
 <html><body>
 <h4>DEVICE SELECT</h4>
 
-TopoDroid supports the following device:
+TopoDroidX supports the following device:
 <ul>
 <li>DistoX (first version)</li>
 <li>DistoX2 (second version)</li>
@@ -13,21 +13,21 @@ TopoDroid supports the following device:
 
 All devices must be paired with the Android.<br><p>
 
-Normally TopoDroid works with only one device. 
+Normally TopoDroidX works with only one device. 
 The data can be downloaded continuously (<i>continuous</i> mode) or in batch (<i>on-demand</i> mode).
 The difference between the two modes is that the <i>continuous</i> mode remains active when the data download
 is finished, or the connection with the device is lost, while the <i>on-demand</i> mode is closed. <br><p>
 
 Sap5 and Bric4 download the data only in continuous mode.<br><p>
 
-With DistoX's TopoDroid can work with more than one device at once, although 
+With DistoX's TopoDroidX can work with more than one device at once, although 
 the data are still downloaded from only one device at a tine.<br>
 The <i>data download mode</i> must be set to <i>multi</i>.
 When it is so a long-tap on the <i>download</i> button brings up a dialog to choose from which DistoX to download the data.<br><p>
 
 <b>Shetland Attack Pony</b><br>
 
-TopoDroid supports the model of the Shetland Attack Pony, version 5 (Sap5), with bluetooth.<br>
+TopoDroidX supports the model of the Shetland Attack Pony, version 5 (Sap5), with bluetooth.<br>
 The device must have been previously "paired" with Android, using the <i>Settings</i> app.
 The PIN is "000000" (six zeros).<br>
 Afterward the Sap5 is listed among the known devices in the <i>Device Window</i>.
@@ -51,7 +51,7 @@ The calibration of the Sap5 is done by the device and does not require an extern
 
 <b>Bric4</b><br>
 
-TopoDroid supports the Bric version 4.<br>
+TopoDroidX supports the Bric version 4.<br>
 The device must have been previously "paired" with Android, using the <i>Settings</i> app.<br>
 Afterward the Bric4 is listed among the known devices in the <i>Device Window</i>.
 It appears as "Bric4 code MAC-address", where the code is the four-digit code of the Bric4, for example "0039".<br>
@@ -59,14 +59,14 @@ To select the Bric4 as current device tap on the its entry in the list.<br><p>
 
 Once connected to a client, the Bric4 remembers the connection, even if turned off, therefore it stays
 "always connected".<br>
-When TopoDroid is connected, shot readings are immediately transferred to Android.
-If TopoDroid is not connected, the data are kept in memory, and transferred when the app is
+When TopoDroidX is connected, shot readings are immediately transferred to Android.
+If TopoDroidX is not connected, the data are kept in memory, and transferred when the app is
 next connected.<br><p>
 
 The Bric4 data transmission protocol includes acknowledgment by Android,
 but it does <u>not</u> include acknowledgment of the reception of the data by the app. 
 The protocol has a few seconds delay between the connection and the first data transfer, 
-and TopoDroid has a one-second delay after the last data, before closing the connection.
+and TopoDroidX has a one-second delay after the last data, before closing the connection.
 By this means usually no shot is lost, although this is not guaranteed and shots <u>are lost</u>
 if the app is not notified by Android before the next shot arrives.
 <br><p> 
@@ -79,11 +79,11 @@ The calibration of the Bric4 is done by the device and does not require an exter
 The Bric4 can be controlled from the app. In particular it is possible to turn the laser on/off, and to take
 shots. The Bric4 has also a "scan mode" in which readings are taken continuously, about two every second.<br><p>
 
-TopoDroid can follow three different data protocols (according to a setting in the "custom" set).
+TopoDroidX can follow three different data protocols (according to a setting in the "custom" set).
 The first receives only the primary data (distance, azimuth and clino) which do not include the data ID number assigned by the Bric4.
-The other two receive the complete data. They differ as whether TopoDroid uses the provided ID number or assigns its own numbers.
+The other two receive the complete data. They differ as whether TopoDroidX uses the provided ID number or assigns its own numbers.
 <br>
-When the complete data are received TopoDroid records the Bric4 error codes and values in the shot comment.
+When the complete data are received TopoDroidX records the Bric4 error codes and values in the shot comment.
 <br><p>
 
 

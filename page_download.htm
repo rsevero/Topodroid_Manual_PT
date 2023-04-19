@@ -12,7 +12,7 @@ and these are especially long if you took several shots in the between.<br><p>
 
 When the Bluetooth connection with the device is broken (eg. the device gets too far from the Android, or it is switched off)
 in <i>on-demand</i> mode, the data download is interrupted.
-In <i>continuous</i> mode TopoDroid retries to connect to the device every few seconds.<br><p>
+In <i>continuous</i> mode TopoDroidX retries to connect to the device every few seconds.<br><p>
 
 When the survey <u>data window</u> is closed the data download connection is terminated. The download connection is not interrupted when the
 window is paused (the display switches off). If you open a sketch while the download connection is active in <i>continuous</i> mode,
@@ -30,14 +30,14 @@ In this case switch the DistoXBLE off and on, and try again to download data.<br
 The data download from the <i>Bric4</i> can be limited to only the essential values (distance, azimuth, clino, and little more), or
 complete, with all the information transferred by the Bric4 protocol.<br><p>
 
-The complete protocol includes the "index" of the shot. By default TopoDroid uses the <i>Bric4 index</i> as data index
-in the database table, if it receives it. Since the data index must be unique, if TopoDroid receives a shot with an index that
+The complete protocol includes the "index" of the shot. By default TopoDroidX uses the <i>Bric4 index</i> as data index
+in the database table, if it receives it. Since the data index must be unique, if TopoDroidX receives a shot with an index that
 is already in the database, a novel value is used instead of the <i>Bric4 index</i>.<br>
 
 The Bric4 index can be reset with the <i>Advanced menu | Memory clear</i> BRIC4 command.<br>
 
-It is possible to disable the use of the <i>Bric4 index</i> [G], and let TopoDroid assign incremental values to the data index.<br><p> 
+It is possible to disable the use of the <i>Bric4 index</i> [G], and let TopoDroidX assign incremental values to the data index.<br><p> 
 
-<!-- u>WARNING</u>. The first shot after a Bric4 "memory clear" does not arrive to TopoDroid.<br><p -->
+<!-- u>WARNING</u>. The first shot after a Bric4 "memory clear" does not arrive to TopoDroidX.<br><p -->
 
 </body></html>

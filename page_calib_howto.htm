@@ -22,17 +22,17 @@ You can take more individual calibration data.<br><p>
 The calibration data that will form a group must be taken with care. Inaccurate group data will result in a bad calibration.
 Therefore use fixed points (eg, a point in the wall, or on a tree) and far apart (a few meters) so that the accuracy of pointing the laser is better than the wanted calibration accuracy (2 cm at 5 m are about 0.2&deg;).<br><p>
 
-After you have taken the calibration data, download them with TopoDroid. You do not need to wait to take all the calibration
+After you have taken the calibration data, download them with TopoDroidX. You do not need to wait to take all the calibration
 data to download them: when you download some data these are added to those already in the calibration.
-Therefore if, by mistake you take five data instead of four, download the data and delete one of them in TopoDroid.<br><p>
+Therefore if, by mistake you take five data instead of four, download the data and delete one of them in TopoDroidX.<br><p>
 
-Before computing the calibration you must tell TopoDroid how the calibration data are divided in groups, i.e., how groups are assigned to data.
+Before computing the calibration you must tell TopoDroidX how the calibration data are divided in groups, i.e., how groups are assigned to data.
 The groups are denoted with positive numbers. A data with group number zero or no group, is not used to compute the calibration.
 Deleted data have group -1 and are usually not shown in the list.<br><p>
 
-TopoDroid implements two policies to assign groups automatically:
+TopoDroidX implements two policies to assign groups automatically:
 <ul>
-<li><i>TopoDroid</i>: all data divided in groups of four data. This is the default policy</li>
+<li><i>TopoDroidX</i>: all data divided in groups of four data. This is the default policy</li>
 <li><i>PocketTopo</i>: four groups of four data, followed by individual data</li>
 <!-- li>"data group assignment based on the angle discrepancy between data</li -->
 </ul>
