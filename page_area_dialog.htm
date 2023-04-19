@@ -1,38 +1,43 @@
-<html><body>
+<html>
+    <body>
+        <h4>CROQUI: ÁREA</h4>
 
-<h4>SKETCH AREA</h4>
+        <p>A caixa de diálogo é aberta quando um ponto de uma linha de limite de área é selecionada (no modo <i>Edição</i> da tela de <u>Desenho</u>) e o botão <i>Edição de propriedades</i> <img src="btn_item.png" style="border:1px solid black" width="36" height="36"> é clicado.</p>
 
-This dialog is opened when you select a point of the border of an area (in edit mode of the <u>sketch window</u>),
-and tap the <i>Edit</i> button.<br><p>
+        <p>O tipo de área pode ser alterado escolhendo uma nova opção na list <i>dropdown</i> disponível.</p>
 
-You can change the type of area, by selecting it from the scroll down list.<br><p>
+        <p>Outras propriedades que podem ser controladas:</p>
 
-Area properties:
-<ul>
-<li><b>visibility</b> of the area border</li>
-<li><b>layers</b>, canvas views the area belongs to</li> 
-</ul>
-<br><p>
+        <ul>
+            <li><b>Borda visível</b>: define a visibilidade da borda da área</li>
+            <li><b>Categorias</b>: visualizações às quais a área pertence</li> 
+        </ul>
 
-The area border visibility is written in the Therion export, so that it can be used when the survey map is generated.<br>
-TopoDroid displays the area shaded region without a border if the visibility is off. Otherwise a light grey border is shown.<br>
-The default value of the area border visibility is a setting.<br><p>
+        <p>A visibilidade da área é registrada no arquivo Therion exportado de modo que seja considerada no mapa exportado por este software.</p>
 
-<b>Point decimation</b><br>
-The number of border points can be reduced by either 
-keeping one point every two (single check) or one every four (double check).<br>
-<img src="btn_decimate.png" width="36" border="1">
-<br><p>
+        <p>O TopoDroid apresenta a área sombreada sem borda se a visibilidade da borda estiver desligada.
+        Do contrário a borda é representada por uma linha cinza clara.</p>
 
-<div style="font-size=90%">
-<b>Layers</b><br>
-Finally you can change the canvas views to area belongs to.
-The views are presented as checkboxes with the view letter-code.
-The area is not displayed if all its views are OFF.
-The border points will nevertheless be shown in edit mode, so that the area edit dialog remains accessible.
-</div><br><p>
+        <p>O valor padrão de visibilidade da borda de áreas é controlada pela opção de configuração <i>Desenho croqui > Linhas > Visib borda área</i>.</p>
 
-The <i>BACK</i> key closes the dialog.
-<br><p>
+        <p><b>Redução pontos</b></p>
 
-</body></html>
+        <p>A quantidade de pontos na linha da borda pode ser reduzida mantendo um ponto a cada dois (clique simples) ou um ponto a cada quatro (clique duplo) no botão <i>Reduzir pontos</i> <img src="btn_decimate.png" style="border:1px solid black" width="36" height="36">.</p>
+
+        <p><b>Camadas</b></p>
+
+        <p>Você pode alterar as visualizações nas quais a área é apresentada.
+        As visualizações são representadas por <i>checkboxes</i> códificados por letras simples.
+        A área não é apresentada se todas as visualizações estiverem desmarcadas.
+        Os pontos da borda serão apresentados de qualquer maneira no modo de edição para qeu a caixa de diálogo de edição permaneça acessível.</p>
+
+        <p>O botão <i>Voltar</i> do dispositivo Android fecha a caixa de diálogo.</p>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-19</span> &mdash; Referente ao commit: <span id="last-update-commit">f0bc33d4e</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
