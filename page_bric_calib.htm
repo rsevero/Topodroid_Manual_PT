@@ -1,59 +1,80 @@
 <html>
-<body>
+    <body>
+        <h4>CALIBRAÇÃO BRIC4</h4>
 
-<h4>Bric4 CALIBRATION</h4>
+        <p>A calibração do BRIC4 é realizada inteiramente no próprio aparelho.</p>
 
-The Bric4 calibration is done on-board.<br>
-There are two calibration procedures for the orientation: 
-a complete calibration, and a quick calibration that updates the correction of the magnetic sensor values.<br><p>
+        <p>Há dois procedimentos de calibração: a calibração completa que atualiza os sensores magnéticos e os acelerômetros e a calibração rápida que atualiza somente os valores relativos aos sensores magnéticos.</p>
 
-<b>Complete calibration</b><br>
+        <p><b>Calibração completa</b></p>
 
-The complete calibration requires to acquire four data at different roll in several directions
-(at least 14), covering
-all possible orientations.<br><p>
+        <p>A calibração completa exige que você realize quatro medidas em quatro diferentes rotações em diversas direções (no mínimo 14) cobrindo todas as orientações possíveis.</p>
 
-Go to <i>Menu</i>, <i>Calibration</i>, <i>CAL: Full INC&amp;AZM</i>.<br>
-A message with instructions appears. Press any button to continue.<br>
-The display shows status and group distribution while performing the calibration.<br>
-Take four shots for each point rotating the device about 60 degrees around the laser direction.<br>
-Four dots show the number of shots taken for the group.<br>
-The markings in two horizontal bars show where the distribution of the completed groups magnetic and
-accelerometric values. Cursors under the bars show the position for the group that is being taken.<br><p>
-<ul>
-<li>The device automatically detects when a new group is started</li>
-<li>If fewer than four shot are taken the group is not saved</li>
-<li>If more than four data are taken, only the last four are used</li>
-<li>It is possible to <i>Reset</i> the current group and restart it</li>
-</ul>
-When 14 groups are taken the <i>Done</i> key appears. Pressing it starts the computation of the calibration.
-More groups can be taken before computing the calibration.<br>
-After the computation of the calibration a report is displayed.<br><p>
+        <p>Vá até <i>Menu > Calibration > CAL: Full INC&amp;AZM</i> no BRIC4.</p>
+
+        <p>Uma mensagem com instruções será apresentada.
+        Pressione qualquer botão para continuar.</p>
+
+        <p>A tela apresenta a situação atual da calibração assim como a distribuição dos grupos de medidas durante a realização da calibração.</p>
+
+        <p>Realize quatro medidas em cada direção rodando o BRIC4 cerca de 90&deg; em torno da direção do laser.</p>
+
+        <p>Quatro círculos indicam a quantidade de medidas já realizadas em cada direção.</p>
+
+        <p>traços verticais nas duas barras horizontais indicam a distribuição das direções já medidas tanto em relação aos sensores magnéticos como em relação aos acelerômetros.
+        Cursores abaixo das barras indicam a posição da direção cujas medidas estão sendo realizadas no momento:</p>
+
+        <ul>
+            <li>O aparelho detecta automaticamente quando um novo grupo/direção é iniciado.</li>
+            <li>Se menos de quatro medidas forem realizadas em uma direção o grupo não é gravado.</li>
+            <li>Se mais de quatro medidas forem realizadas na mesma direção, somente as últimas quatro são armazenadas.</li>
+            <li><i>Reset</i>: reinicia o grupo/direção atual.</li>
+        </ul>
+
+        <p>Quando 14 grupos/direções tiverem sido capturados o botão <i>Done</i> aparece.
+        Mais grupos/direções podem ser capturados.
+        Um clique nele inicia o processo de cálculo dos valores de calibração.
+        Depois de completar o cálculo dos valores de calibração, um pequeno relatório é apresentado.</p>
+
+        <p><b>Calibração rápida do azimute</b></p>
  
- 
-<b>Quick azimuth calibration</b><br>
+        <p>Vá até <i>Menu > Calibration > CAL: Quick AZM</i> no BRIC4.</p>
 
-Go to <i>Menu</i>, <i>Calibration</i>, <i>CAL: Quick AZM</i>.<br>
-A message with instructions appears. Press any button to continue.<br>
-A grid with a cross-hair is displayed.<br>
-The device must take samples of the sensor values that cover all directions.<br>
-Turn the device slowly around in every direction. When the device need to take a sample the
-backlight turns off and sampling for that point begins. When the sample is taken there is
-a beep.<br>
-When the grid is full the calibration computation begins and a report is displayed.<br><p>
+        <p>Uma mensagem com instruções será apresentada.
+        Pressione qualquer botão para continuar.</p>
 
-Note. The calibration can be interrupted at any time by pressing <i>Abort</i>.<br><p>
+        <p>Uma grade com um cursor de linhas cruzadas é apresentado.</p>
 
+        <p>O aparelho precisa capturar valores que cubram todas as direções.</p>
 
-<b>Distance calibration</b><br>
+        <p>Gire o aparelho lentamente em todas as direções.
+        Quando o aparelho precisa capturar um valor a luz de fundo da tela se apaga e a captura dos valores começa.
+        Quando o valor é capturado, o aparelho emite um aviso sonoro (beep).</p>
 
-Go to <i>Menu</i>, <i>Calibration</i>, <i>CAL: Rangefinder</i>.<br>
-A message with instructions appears. Press any button to continue.<br>
-Place a target at a specified distance of 1 m, or 3 ft, from a station point. The distance must be measured with
-an accurate instrument.<br>
-Take four shots and ensure their values are equal.<br>
-Press <i>Done</i>. A calibration report is displayed.<br>
- 
+        <p>Quando a grade estiver completa o cálculo dos valores de calibração é iniciado e um relatório é apresentado ao final.</p>
 
-</body>
+        <p style="font-size: 90%; font-style: italic;"><b>Nota:</b> Ambos processos de calibração podem ser interrompidos a qualquer momento pressionando o botão <span style="font-style: normal;">Abort</span>.</p>
+
+        <p><b>Calibração de distância</b></p>
+
+        <p>Vá até <i>Menu > Calibration > CAL: Rangefinder</i> no BRIC4.</p>
+
+        <p>Uma mensagem com instruções será apresentada.
+        Pressione qualquer botão para continuar.</p>
+
+        <p>Posicione um alvo na distância escolhida (1 m ou 3 pés) a partir do ponto de onde será efetuada a medição.
+        Essa distância precisa ter sido medida com um instrumento preciso e acurado.</p>
+
+        <p>Realize quatro medições e verifique que todas são iguais.</p>
+
+        <p>Pressione <i>Done</i>.
+        O relatório da calibração será apresentado.</p>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-20</span> &mdash; Referente ao commit: <span id="last-update-commit">54fb22096</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
 </html>
