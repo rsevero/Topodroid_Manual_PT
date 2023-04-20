@@ -1,35 +1,50 @@
-<html><body>
+<html>
+    <body>
+        <h4>COEFICIENTES DE CALIBRAÇÃO DistoX</h4>
 
-<h4>DistoX CALIBRATION COEFFICIENTS</h4>
+        <p>A caixa de diálogo apresenta os 24 coeficientes das transformações lineares de calibração para os vetores <b>G</b> e <b>M</b> (12 coeficientes cada) e 3 coeficientes dos termos não-lineares (somente para a DistoX2 versão 2.3 ou superior).</p>
 
-This dialog displays the 24 coefficients of the calibration linear transformations for the <b>G</b> and the <b>M</b> vectors (12 coefficients each) and 3 coefficients of the non-linear terms (only DistoX2 v. 2.3 or higher).<br><p>
+        <p>É usada em três situações diferentes:</p>
 
-It is used in three different situations:
-<ul>
-<li>The <i>Read</i> button of the <u>Device window</u> display the coefficients read from the DistoX.</li>
-<li>The <i>Read</i> button of the <u>Calibration Info window</u> displays the coefficients stored in the database</li>
-<li>The <i>Compute</i> button of the <u>Calibration Data window</u> displays the computed coefficients</li>
-</ul>
+        <ul>
+            <li>O botão <i>Ler coeficientes</i> <img src="btn_read.png" style="border:1px solid black;" width="36" height="36"> na tela <u>Dispositivos</u> apresenta os coeficientes lidos da DistoX.</li>
+            <li>O botão <i>Apresentar coeficientes</i> <img src="btn_read.png" style="border:1px solid black;" width="36" height="36"> na tela <u>Info calibração</u> apresenta os coeficientes armazenados na base de dados.</li>
+            <li>O botão <i>Calcular coeficientes de calibração</i> <img src="btn_compute.png" style="border:1px solid black" width="36" height="36"> na tela <u>Dados calibração</u> apresenta os coeficientes calculados.</li>
+        </ul>
 
-In the last case the dialog displays also an histogram of the residual errors of the calibration data,
-the average error (and the "delta" of the original algorithm), the standard deviation of the error distribution,
-the maximum error, and the number of iterations taken by the calibration computation.<br>
-Assuming that the azimuth-clino error distribution is normal, the standard deviation of the errors should be slightly over half the average value.<br><p>
+        <p>No último caso a caixa de diálogo também apresenta:</p>
+        
+        <ul>
+            <li>um histograma com os erros residuais dos dados de calibração;</li>
+            <li>o erro médio (e o "delta" do algoritmo original);</li>
+            <li>o desvio padrão da distribuição de erro;</li>
+            <li>o erro máximo e</li>
+            <li>a quantidade de iterações necessárias para o cálculo dos coeficientes.</li>
+        </ul>
 
-The error of a calibration data is the angle between the data direction and the average direction of the group the data belongs to, after having taken the calibration correction into account. The errors are reported in degrees.<br><p>
+        <p>Se a distribuição do erro azimute/clino for normal, o desvio padrão dos erros deverá estar ligeiramente acima da metade do valor médio.</p>
 
-The histogram has ticks on the horizontal axis at 0.5&deg; (yellow line), 1.0&deg; (red line), and 1.5&deg;.<br>
-On the vertical axis the tick marks are 10 and 20.<br><p>
+        <p>O erro dos dados de calibração é o ângulo entre a direção do dado e a direção média do grupo de dados ao qual ele pertence após ter levado em conta a correção pela calibração.
+        Os erros são expressos em graus.</p>
 
-The "delta" of the original algorithm is the square-root average of the residual differences between calibrated G-M vectors and the vectors that satisfy the minimization condition.
-It gives an estimate of the calibration accuracy (precision of the instrument):
-"delta" is roughly 5/4 of the accuracy in degrees.<br><p>
+        <p>O histograma tem marcas no eixo horizontal em 0,5&deg; (linha amarela), 1,0&deg; (linha vermelha) e 1,5&deg;.</p>
 
-The dialog displays also the magnetic dip [degrees] computed by the calibration algorithm.<br><p>
+        <p>No eixo vertical as marcas indicam 10 e 20.</p>
 
-This dialog has a button to <b>write</b> the coefficients to the DistoX.<br>
-A warning is given if the data direction distribution is below 95%, or the calibration average error is above 0.5&deg;.
-<br><p>
+        <p>O "delta" do algoritmo original é a média da raiz quadrada das diferenças residuais entre os vetores calibrados G/M e os vetores que satisfazem as condições de minimização.
+        Ele indica a estimativa da acurácia da calibração (precisão do instrumento): o "delta" é aproximadamente 5/4 da acurácia em graus.</p>
 
+        <p>A caixa de diálogo apresenta também o mergulho magnético (em graus) calculado pelo algoritmo de calibração.</p>
 
-</body></html>
+        <p>A caixa de diálogo tem um botão <i>Enviar</i> que envia os coeficientes de calibração calculados para a DistoX.</p>
+
+        <p>Um alerta é apresetnado se a distribuição das direções dos dados for menor do que 95% ou o erro médio da calibração for superior a 0,5&deg;.</p>
+        
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-20</span> &mdash; Referente ao commit: <span id="last-update-commit">dfb42d6d7</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
