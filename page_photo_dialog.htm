@@ -6,7 +6,7 @@
 <div style="font-size=90%">
 This dialog is opened from the <i>Photo</i> button in the secondary <i>Shot edit</i> dialog, or when a "photo" point
 or a photo xsection are inserted
-in the <u>sketch window</u>.<br><p>
+in the <u>Drawing window</u>.<br><p>
 
 There is a text field for the <b>comment</b> to the photo you are going to take,
 and a checkbox for the choice of the camera implementation.<br><p>
@@ -17,13 +17,13 @@ Buttons:
 <li><b>Cancel</b> closes the dialog.</li>
 </ul><br><p>
 
-TopoDroidX contains a simple implementation of a camera. 
+TopoDroid contains a simple implementation of a camera. 
 Its unique feature is that it stores the azimuth and inclination of the device in exif tags in the image file. 
 The azimuth is stored as GPS_LONGITUDE and the inclination as GPS_LATITUDE (with sign).
 <br>
-The following exif tags are set by TopoDroidX:
+The following exif tags are set by TopoDroid:
 <ul>
-<li><i>Software</i>: "TopoDroidX" and its version, separated by a space [Android 7 and up]</li>
+<li><i>Software</i>: "TopoDroid" and its version, separated by a space [Android 7 and up]</li>
 <li><i>Orientation</i></li>
 <li><i>Datetime</i> [yyyy.MM.dd]</li>
 <li><i>GPS latitude</i>: inclination [1/100&deg;]</li>
@@ -34,12 +34,12 @@ The following exif tags are set by TopoDroidX:
 </ul>
 <br><p>
 
-For "photo" point or photo xsection the display of the TopoDroidX camera has a centered overlaid cross-hair.<br><p>
+For "photo" point or photo xsection the display of the TopoDroid camera has a centered overlaid cross-hair.<br><p>
 
-TopoDroidX uses Android sensors to get the direction (azimuth and clino). 
+TopoDroid uses Android sensors to get the direction (azimuth and clino). 
 A warning is displayed if the sensor accuracy is low or there is a sensor failure.<br><p>
 
-The TopoDroidX camera has three buttons on the lower right.
+The TopoDroid camera has three buttons on the lower right.
 <ul>
 <li><b>camera</b>. Red: ready, tap to take a picture. Blue: on hold, tap to turn camera active.</li>
 <li><b>save</b> saves the picture. Grayed until a picture has been taken.</li>
@@ -53,7 +53,7 @@ Zoom buttons are brought up by tapping the screen in the mid-bottom.
 To go through large zoom steps tap the zoom buttons repeatedly fast.<br><p>
 
 <b>Camera implementation</b><br>
-TopoDroidX has two camera implementations: the first uses the old Android camera API,
+TopoDroid has two camera implementations: the first uses the old Android camera API,
 the second uses the new Android camera2 API.<br>
 The default is the old camera.<br><p>
 
