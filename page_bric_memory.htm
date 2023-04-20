@@ -1,33 +1,37 @@
 <html>
-<body>
+    <body>
+        <h4>MEMÓRIA BRIC4</h4>
 
-<h4>Bric4 MEMORY</h4>
+        <p>A caixa de diálogo é acessada através do botão <i>Memória</i> <img src="btn_memory.png" style="border:1px solid black" width="36" height="36"> disponível na tela <u>Dispositivo</u>.</p>
 
-This dialog is opened from the <i>Memory</i> button of the <u>Device window</u>.<br><p>
+        <p>Nesta caixa de diálogo é possível:</p>
 
-With this dialog you can
-<ul>
-<li><b>reset</b> the Bric4 last time (year, month, day, hour, minute. second)</li>
-<li><b>clear</b> the Bric4 memory</li>
-</ul><br><p>
+        <ul>
+            <li><b>Redefinir último horário</b>: alterar horário da última leitura de dados da BRIC4 (ano, mês, dia, hora, minuto, segundo)</li>
+            <li><b>Limpar memória</b>: apaga todas as medidas na memória do BRIC4</li>
+        </ul>
 
-<b>Bric4 Last Time</b><br>
-After resetting the Bric4 last time the device will resend all the stored data more recent than
-the "last time".<br>
-TopoDroid will refuse to reset to a time in the future.
-<br><p>
+        <p><b>Último horário BRIC4</b></p>
 
-The fields of the last-time are shown above the "Reset" button.<br><p>
+        <p>Após redefinir o último horário do BRIC4 o aparelho vai enviar todas as medidas realizadas após o novo horário defnido.</p>
 
-The minutes and seconds of the Android time are shown on the right below the last-time fields
-to help set the Bric4 time in agreement with the Android time.<br><p>
+        <p>O TopoDroidX não redefine o último horário para um valor futuro.</p>
 
-<b>Clear Memory</b><br>
-Clearing the memory erases all the old data from the memory and resets the shot counter to 1.<br>
-The old surveys remains on the Bric4 internal sd-card.
-<br><p>
+        <p>Os campos no novo último horário a ser definido são apresentados acima do botão <i>Redefinir último horário</i>.</p>
 
+        <p>Os minutos e segundos atuais do Android são apresentados abaixo e à direita dos campos de novo horário para facilitar a sincronia dos relógios do BRIC4 e do Android.</p>
 
+        <p><b>Limpar memória</b></p>
 
-</body>
+        <p>Limpar a memória apaga todas as medidas da memória do BRIC4 e reinicia o contador de medidas para 1.</p>
+
+        <p>As topos antigas permanecem no cartão de memória interno (SD-Card) do BRIC4.</p>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-20</span> &mdash; Referente ao commit: <span id="last-update-commit">64d4108b1</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
 </html>
