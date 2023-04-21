@@ -1,97 +1,119 @@
 <html>
-<body>
+    <body>
+        <h4>CORES TopoDroidX</h4>
 
-<h4>TopoDroid COLOR CODINGS</h4>
+        <p><b>Tela <u>DADOS TOPO</u></b></p>
 
+        <p><b>Nome da topo na barra superior</b></p>
 
-<b>Station naming policy</b><br>
-<ul>
-<li>forward leg [default]: blue</li>
-<li>backward leg: dark blue</li>
-<li>foresight + backsight: violet</li>
-<li>tripod: pink</li>
-<li>magnetic anomaly: red</li>
-<li>TopoRobot: orange</li>
-</ul><br><p>
+        <p>Política de nomeamento automático de bases:</p>
+        <ul>
+            <li><i>Visada [padrão]</i>: azul</li>
+            <li><i>Contra visada</i>: azul escuro</li>
+            <li><i>Contra visada + visada</i>: violeta</li>
+            <li><i>Tripé</i>: rosa</li>
+            <li><i>Anomalia magnética</i>: vermelho</li>
+            <li><i>TopoRobot</i>: laranja</li>
+        </ul>
 
-<b>Survey data</b><br>
-Foreground color:<br>
-<ul>
-<li>white: leg shot</li>
-<li>grey: leg repeated shot</li>
-<li>blue: splay</li>
-<li>green: x-splay</li>
-<li>dark-blue: h-splay</li>
-<li>deep-blue: v-splay</li>
-<li>orange: blank shot</li>
-<li>violet:</li>
-<li>others: user-assigned color</li>
-</ul><br>
+        <p><b>Dados topo</b></p>
 
-Background color:<br>
-<ul>
-<li>black: normal</li>
-<li>red: unreliable shot</li>
-<li>grey: commented shot</li>
-<li>orange: short leg</li>
-</ul><br><p>
+        <p>Cor do texto:</p>      
 
-<b>Survey stations</b><br>
-Foreground color:<br>
-<ul>
-<li></li>
-<li>green: active station</li>
-</ul><br>
+        <ul>
+            <li><i>branco</i>: visada</li>
+            <li><i>cinza</i>: medida repetida de visada</li>
+            <li><i>azul</i>: medida auxiliar</li>
+            <li><i>verde</i>: medida auxiliar de corte</li>
+            <li><i>azul escuro</i>: medida auxiliar horizontal</li>
+            <li><i>azul profundo</i>: medida auxiliar vertical</li>
+            <li><i>laranja</i>: medida sem base</li>
+            <li><i>violeta</i>:</li>
+            <li><i>outras</i>: cores definidas pelo usuário</li>
+        </ul>
 
-Background color:<br>
-<ul>
-<li>black: normal</li>
-<li>dark green: latest data</li>
-<li>grey: multiselection</li>
-<li>dark yellow: DistoX backsight</li>
-</ul><br><p>
+        <p><b>Cor de fundo:</b></p>
 
+        <ul>
+            <li><i>preto</i>: normal</li>
+            <li><i>vermelho</i>: medida pouco confiável</li>
+            <li><i>cinza</i>: medida com comentário</li>
+            <li><i>laranja</i>: medida curta</li>
+        </ul>
 
-<b>Sketch legs</b><br>
-<ul>
-<li>white: normal</li>
-<li>red: unreliable</li>
-<li>orange: inconsistency with siblings</li>
-</ul><br><p>
+        <p><b>Bases</b></p>
 
-<b>Survey splays</b><br>
-<ul>
-<li>blue: normal</li>
-<li>dark-green: commented</li>
-<li>green, dark-blue, deep-blue: splay classes</li>
-<li>others: user-assigned color</li>
-</ul><br><p>
+        <p>Cor do texto:</p>
 
-<b>Survey stations</b><br>
-<ul>
-<li>violet: normal</li>
-<li>green: active station</li>
-<li>red: midline hidden after the station</li>
-<li>blue: midline hidden before the station</li>
-<li>yellow: saved station</li>
-</ul><br><p>
+        <ul>
+            <li><i>verde</i>: base selecionada</li>
+            <li><i>mesma cor do texto dos dados da topo</i>: base não selecionada</li>
+        </ul>
 
-<b>Calibration data</b><br>
-Foreground color:<br>
-<ul>
-<li>blue, orange: data groups</li>
-<li>grey: unused data</li>
-</ul><br>
+        <p>Cor de fundo:</p>
 
-Background color:<br>
-<ul>
-<li>violet: partially downloaded data (not used)</li>
-<li>red: error above 1 degree</li>
-<li>green: large difference from group average</li>
-<li>brown: saturated data</li>
-<li>grey: deleted data (group -1)</li>
-</ul><br><p>
+        <ul>
+            <li><i>preto</i>: normal</li>
+            <li><i>verde escuro</i>: dados mais recentes</li>
+            <li><i>cinza</i>: multisseleção</li>
+            <li><i>amarelo escuro</i>: contra visada DistoX</li>
+        </ul>
 
+        <p><b>Visadas</b></p>
 
-</body>
+        <ul>
+            <li><i>branco</i>: normal</li>
+            <li><i>vermelho</i>: não confiável</li>
+            <li><i>laranja</i>: inconsistência com medidas irmãs</li>
+        </ul>
+
+        <p><b>Medidas auxiliares</b></p>
+
+        <ul>
+            <li><i>azul</i>: normal</li>
+            <li><i>verde escuro</i>: comentada</li>
+            <li><i>verde, azul escuro e azul profundo</i>: classes de medidas auxiliares</li>
+            <li><i>outras</i>: cores definidas pelo usuário</li>
+        </ul>
+
+        <p><b>Tela <u>DESENHO</u></b></p>
+
+        <p><b>Bases:</b></p>
+
+        <ul>
+            <li><i>rosa</i>: normal</li>
+            <li><i>verde</i>: base selecionada</li>
+            <li><i>vermelha</i>: linha de trena oculta após esta base</li>
+            <li><i>violeta</i>: linha de trena oculta antes desta base</li>
+            <li><i>amarelo</i>: base gravada</li>
+        </ul>
+
+        <p><b>Tela <u>DADOS CALIBRAÇÃO</u></b></p>
+
+        <p><b>dados de calibração</b></p>
+
+        <p>Cor do texto:</p>
+
+        <ul>
+            <li><i>azul e laranja</i>: grupos de dados</li>
+            <li><i>cinza</i>: dados não usados</li>
+        </ul>
+
+        <p>Cor do fundo:</p>
+
+        <ul>
+            <li><i>violeta</i>: dados parcialmente baixados (não usados)</li>
+            <li><i>vermelho</i>: erro acima de 1 grau</li>
+            <li><i>verde</i>: grande diferença da média do grupo</li>
+            <li><i>marrom</i>: dados de sensores saturados</li>
+            <li><i>cinza</i>: dados apagados (grupo -1)</li>
+        </ul>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-21</span> &mdash; Referente ao commit: <span id="last-update-commit">5c0ea8551</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
 </html>
