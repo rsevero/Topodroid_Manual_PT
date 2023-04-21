@@ -1,38 +1,44 @@
-<html><body>
+<html>
+    <body>
+        <h4>IMPORTAÇÃO E EXPORTAÇÃO DE CALIBRAÇÕES DistoX</h4>
 
-<h4>DistoX CALIBRATION Import/Export</h4>
+        <p><b>Importar calibração</b></p>
 
-<b>Calibration import</b><br>
-A calibration can be imported from a CSV calibration file.<br><p>
+        <p>Uma calibração pode ser importada a partir de um arquivo csv com dados de calibração.</p>
 
-The import dialog is opened from the <i>Import</i> button in the <i>Calibration</i> list dialog.<br><p>
+        <p>A caixa de diálogo de importação pode ser acessada através do botão <i>Importar</i> na caixa de diálogo <i>Calibrações</i>.</p>
 
-This dialog displays the list of the calibration CSV files.<br>
-Tap the entry you want to import.<br><p>
+        <p>A caixa de diálogo apresenta a lista de arquivos csv de calibração.
+        Clique no arquivo que quiser importar.</p>
 
-The import fails if the file does not contain a calibration,
-or the calibration is already present.<br>
-It can also fail if the device bluetooth address written in the calibration is different from that of the
-current device.<br><p>
+        <p>A importação falha se o arquivo não contiver dados de calibração no formato esperado ou se se tratar de uma calibração já existente.</p>
 
-<b>Calibration CSV export</b><br>
+        <p>Pode também falhar se o endereço Blouettoth registrado no arquivo de calibração for diferente do endereço do dispositivo atual.</p>
 
-A DistoX calibration can be exported in CSV (text) format.<br><p>
+        <p><b>Exportar calibração</b></p>
 
-Te export dialog is opened from the <i>Export</i> menu of the <u>Calibration Info window</u>.<br><p>
+        <p>Uma calibração DistoX pode ser exportada em formato csv (texto).</p>
 
-The calibration CSV export format contains the calibration details (name, date, device bluetooth address, comment, algorithm), followed by the calibration data,
-and the calibration coefficients.<br><p>
+        <p>A caixa de diálogo <u>Exportar calibração</u> pode ser acessada através da opção de menu <i>Exportar</i> na tela <u>Info calibração</u>.</p>
 
-Each data line contains:
-<ul>
-<li>data index</li>
-<li>G and M values (six integers)</li>
-<li>group</li>
-<li>azimuth, clino and roll</li>
-<li>error</li>
-<li>status</li>
-</ul>
-<br><p>
+        <p>O arquivo de calibração csv contém os detalhes da calibração (nome, data, endereço Bluetooth do dispositivo, comentário e algoritmo usado) seguido dos dados brutos e dos coeficientes calculados.</p>
 
-</body></html>
+        <p>Cada linha de dados contém:</p>
+
+        <ul>
+            <li>identificador da linha de dados</li>
+            <li>valores G e M (seis números inteiros)</li>
+            <li>grupo</li>
+            <li>azimute, inclinação e rotação</li>
+            <li>erro</li>
+            <li>situação</li>
+        </ul>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-21</span> &mdash; Referente ao commit: <span id="last-update-commit">ad509d58d</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
