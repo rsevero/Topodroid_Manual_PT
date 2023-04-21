@@ -1,65 +1,73 @@
-<html><body>
+<html>
+    <body>
+        <h4>COMO CALIBRAR A DistoX</h4>
 
-<h4>DistoX HOW TO CALIBRATE</h4>
+        <p>A DistoX precisa ser calibrada antes de ser usada.
+        A calibração é uma transformação dos dados brutos fornecidos pelos sensores da DistoX que corrige as imperfeições de alinhamento dos sensores, seus desalinhamentos com o laser e os efeitos dos componentes eletrônicos no campo magnético.</p>
 
-The DistoX needs to be calibrated before using. The calibration is a transformation of the data that accounts for
-the non-perfect orthogonality of the axis of the sensors, their misalignment with the laser direction,
-and effects of the electronics on the magnetic field.<br><p>
+        <p>Para calcular os coeficientes dessa transformação você precisa realizar uma série de medidas para calibração "acuradas" registrando os dados brutos dos sensores.
+        isso é feito com a DistoX no modo <i>Calibração</i>.</p>
 
-To compute the coefficients of this transformation, you must take a number of "accurate" calibration data
-recording the raw readings of the sensors. This occurs when the DistoX is in "calibration mode".<br><p>
+        <p>Os dados para calibração devem ser capturados em um lugar livre de influências magnéticas, ou seja, dentro de uma caverna ou no meio do mato.
+        Fique atento a objetos metálicos e aparelhos eletrônicos que possam afetar a DistoX, especialmente os que você estiver eventualmente carregando.</p>
 
-The calibration data must be taken in a place free from magnetic influences, eg, in a cave or in a wood.
-Beware of metal objects and electronic objects that might affect the DistoX.<br><p>
+        <p>Os dados devem cobrir todas as direções e para cada direção você deve capturar quatro medidas rodando a trena em torno do eixo do laser.</p>
 
-The data must cover all directions and for each direction you must take a group of four data at different rotation about the laser axis.<br> 
-The best way is to take 14 groups of four data each, eight groups in the directions of the corners of a cube, and six in those of the centers of the faces. The four data in each group should be taken rotating the DistoX by 90&deg; between one and the next. You can take more than 14 groups of data; the more the better.<br>
-At a minimum you must take four groups of four data (with different roll) in four directions at 90&deg; in the horizontal plane,
-as if these directions were going from the center of a cube towards the center of four side-faces.
-The other 40 data do not have to be taken very carefully if the <i>PocketTopo</i> group policy is used, because they are treated as individual data.
-You can take more individual calibration data.<br><p>
+        <p>A melhor forma de fazer isso é criar 14 grupos de quatro medidas cada onde oito deles apontam para os vértices de um cubo imaginário que circunde o espaço de calibração e seis apontem para os centros das faces deste mesmo cubo.As quatro medidas em cada grupo devem ser realizadas rodando a DistoX 90&deg; entre cada uma.
+        Você pode capturar mais de 14 grupos; quanto mais melhor.</p>
 
-The calibration data that will form a group must be taken with care. Inaccurate group data will result in a bad calibration.
-Therefore use fixed points (eg, a point in the wall, or on a tree) and far apart (a few meters) so that the accuracy of pointing the laser is better than the wanted calibration accuracy (2 cm at 5 m are about 0.2&deg;).<br><p>
+        <p>No mínimo você deve capturar quatro grupos de dados (com quatro medidas cada cada uma delas com uma rotação diferente) em quatro direções no plano horizontal: saindo do centro do cubo para o centro de cada uma das quatro faces verticais do cubo.
+        As outras 40 medidas não precisam ser realizadas com tanto cuidado se você usar o agrupamento de dados <i>PocketTopo</i> porque cada uma delas será tratada individualmente.
+        Você pode capturar mais de 40 medidas individuais se quiser.</p>
 
-After you have taken the calibration data, download them with TopoDroid. You do not need to wait to take all the calibration
-data to download them: when you download some data these are added to those already in the calibration.
-Therefore if, by mistake you take five data instead of four, download the data and delete one of them in TopoDroid.<br><p>
+        <p>Os dados de calibração que vão formar um grupo devem ser capturados com cuidado.
+        Dados imprecisos de um grupo resultam em uma calibração ruim.
+        Desta maneira é recomendável que você use pontos fixos como alvos (um ponto na parede ou em uma árvore) e distantes entre si alguns metros de maneira que a acurácia do laser seja superior a acurácia desejada para a calibração (2 cm a 5 m de distância representam cerca de 0,2&deg;).</p>
 
-Before computing the calibration you must tell TopoDroid how the calibration data are divided in groups, i.e., how groups are assigned to data.
-The groups are denoted with positive numbers. A data with group number zero or no group, is not used to compute the calibration.
-Deleted data have group -1 and are usually not shown in the list.<br><p>
+        <p>Após capturar os dados de calibração, baixe esses dados para o TopoDroidX.
+        Você não precisa ter todos os dados de calibração na DistoX para baixá-los: ao baixar alguns dados eles são adicionados aos dados que eventualmente já estejam no TopoDroidX.
+        Desta maneira, se por engano você fizer cinco capturas no lugar das quatro desejadas, baixe-as e apague a errada no TopoDroidX.</p>
 
-TopoDroid implements two policies to assign groups automatically:
-<ul>
-<li><i>TopoDroid</i>: all data divided in groups of four data. This is the default policy</li>
-<li><i>PocketTopo</i>: four groups of four data, followed by individual data</li>
-<!-- li>"data group assignment based on the angle discrepancy between data</li -->
-</ul>
-<br>
-The group numbers can be assigned or changed by editing the calibration data. Tap on a data entry in the list to open the data editing dialog.
-<br>
+        <p>Antes de calcular os coeficientes de calibração é necessário informar o TopoDroidX como os dados de calibração devem ser agrupados.
+        Os grupos são identificados por números positivos.
+        Dados com o número de grupo zero ou nenhum grupo não são usados para o cálculo da calibração.
+        Dados apagados tem o grupo -1 e normalmente não são apresentados na lista.</p>
 
-When the groups are defined, you can compute the calibration.
-Besides the calibration coefficients, the dialog shows the average error (and the "delta" of the original algorithm),
-the standard deviation of the error, and the maximal error.
-Furthermore there is a histogram with the distribution of errors for the calibration data. This plot has two vertical lines:
-a yellow mark at 0.5&deg; and a red one at 1.0&deg;<br><p>
+        <p>O TopoDroidX possue duas políticas diferentes para agrupamento automático de dados de calibração:</p>
 
-<img src="calib_data.png" >
-<br>
+        <ul>
+            <li><i>TopoDroidX</i>: todos os dados são agrupados em grupos de 4 medidas.
+            Está é a política padrão de agrupamento.</li>
+            <li><i>PocketTopo</i>: quatro grupos de quatro medidas seguidos de dados individuais (não agrupados).</li>
+        </ul>
 
-To summarize, to calibrate the DistoX you need to:
-<ul>
-<li>turn the DistoX in calibration mode</li>
-<li>take the data of the calibration data</li>
-<li>download the data to the app</li>
-<li>assign the groups to the data (automatically or manually)</li>
-<li>compute the calibration coefficients</li>
-<li>upload the coefficients to the DistoX</li>
-<li>revert the DistoX to normal mode</li>
-</ul>
-<br><p>
+        <p>Os números dos grupos pordem ser atribuídos ou alterados editando os dados de calibração.
+        Clique em uma linha de dados na lista para abrir a caixa de diálogo de edição de dados.</p>
 
-</body></html>
+        <p>Após atribuir grupos aos dados é possível calcular os coeficientes de calibração.
+        Além dos coeficientes de calibração, a caixa de diálogo apresentada ao final do cálculo apresenta também o erro médio (e o "delta" do algoritmo original), o desvio padrão do erro e o erro máximo.
+        Além disso há um histograma com a distribuição dos erros dos dados de calibração.
+        Esse gráfico tem duas linhas verticais: uma marca amarela a 0,5&deg; e uma vermelha a 1,0&deg;.</p>
 
+        <p><img src="calib_data.png"></p>
+
+        <p>Em resumo, para calibrar a DistoX você:</p>
+     
+        <ul>
+            <li>ative o modo "calibração" na DistoX</li>
+            <li>capture os dados de calibração</li>
+            <li>baixe os dados para o TopoDroidX</li>
+            <li>atribua grupos aos dados (automatica ou manualmente)</li>
+            <li>calcule os coeficientes de calibração</li>
+            <li>envie os coeficientes para a DistoX</li>
+            <li>volte a DistoX para o modo "normal"</li>
+        </ul>
+        
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-21</span> &mdash; Referente ao commit: <span id="last-update-commit">e252abee6</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
