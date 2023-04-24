@@ -1,22 +1,30 @@
-<html><body>
+<html>
+    <body>
+        <h4>DADOS TOPO: O QUE APRESENTAR</h4>
 
-<h4>SURVEY DATA DISPLAY MODE</h4>
+        <p>A caixa de diálogo pode ser acessada através do botão <i>Quais medidas apresentar</i> <img src="btn_mode.png" style="border:1px solid black" width="36" height="36"> na tela <u>Dados topo</u>.</p>
 
-This dialog is opened from the <i>Reference</i> button in the <u>Survey Data window</u>.<br><p>
+        <ul>
+            <li><b>IDs medidas</b></li>
+            <li><b>Medidas auxiliares</b>: medidas com uma só base.</li>
+            <li><b>Últimas medidas auxiliares</b>: medidas auxiliares mais recentes.
+            Só disponível se a opção de configuração <i>Especiais >> Dados topo >> Aux recentes</i> estiver habilitada.
+            Tempo definido através da configuração <i>Especiais >> Dados topo >> Lim aux recente</i> em segundos.</li>
+            <li><b>Medidas vazias</b>: medidas sem bases.</li>
+            <li><b>Visadas repetidas</b>: medidas repetidas de uma mesma visada.</li>
+        </ul>
 
-<ul>
-<li><b>shot id</b></li>
-<li><b>splay</b>: shots with only one station</li>
-<li><b>blank</b>: shots with no stations</li>
-<li><b>repeated leg</b>: shots close to the preceding leg</li>
-</ul>
-<br><p>
+        <p>Os IDs das medidas são únicos, crescentes e atribuídos pelo TopoDroidX às medidas da topo.</p>
 
-The shot id's are unique increasing indices assigned by TopoDroid to the shots of the survey.<br><p>
-  
-If the splay shots are hidden it is still possible to show the splay
-shots for an individual station. Tapping on the station name in a leg shot, makes the splay shots at that station visible.
-Tapping again on the station name (even in a splay shot) hides them.<br><p>
-  
+        <p>Mesmo que as medidas auxialires estejam ocultas, é possível visualizar as medidas auxialires de uma base específica.
+        Clique no nome da base em uma visada para que as medidas auxiliares dessa base sejam apresentadas.
+        Clicando novamente no nome da base (mesmo em uma medida auxiliar) volta a ocultar as medidas auxiliares.</p>
 
-</body></html>
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-24</span> &mdash; Referente ao commit: <span id="last-update-commit">9fdbc11b9</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
