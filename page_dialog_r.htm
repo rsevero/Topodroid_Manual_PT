@@ -1,19 +1,22 @@
-<html><body>
-<h4>Android R dialog</h4>
+<html>
+    <body>
+        <h4>Caixa de diálogo Android R</h4>
 
-Starting with Android-11, TopoDroid cannot access files in the usual way, as of a Google requirement.<br>
+        <p>A partir do Android 11 o TopoDroidX não pode mais acessar arquivos da maneira usual por uma exigência da Google.</p>
 
-The app private files (device database, drawing symbols, firmware files, etc.) are stored
-in the app private space, "Android/data/com.topodroid.TDX/files", where other apps do not have
-access.<br>
-This folder is deleted by the system when you uninstall the app.
-<br> 
+        <p>Os arquivos privados do app (banco de dados de dispositivos, símbolos de deesenho, arquivos de firmware, etc.) ficam armazenados no espaço privado do app ("Android/data/com.topodroid.TDX/files") onde outros apps não têm acesso.
+        Esse diretório é apagado pelo Android quando você desinstala o app.</p>
 
-The survey database and files are stored under "Documents/TDX/TopoDroid".<br>
-This folder is not deleted by the system when you uninstall the app,
-but <b>TopoDroid cannot access it any more if you uninstall and reinstall the app.</b><br>
-In that case you have to rename "Documents/TDX" and cold-start TopoDroid so that it creates
-its new "TDX".<br>
+        <p>O banco de dados de topos e arquivos são armazenados em "Documents/TDX/TopoDroid".
+        Este diretório não é apagado pelo Android quando você desinstala o app mas o <b>TopoDroidX não tem acesso a ele após uma reinstalação.</b></p>
 
+        <p>Nesse caso você precisa renomear o diretório "Documents/TDX" e começar a nova instalação do TopoDroidX do zero de forma que crie um novo diretório "TDX".</p>
 
-</body></html>
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-24</span> &mdash; Referente ao commit: <span id="last-update-commit">5a27adc69</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
