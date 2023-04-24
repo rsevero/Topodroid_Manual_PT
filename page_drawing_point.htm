@@ -1,35 +1,39 @@
 <html>
-<body>
+    <body>
+        <h4>CROQUI: PONTO</h4>
 
-<h4>SKETCH POINT</h4>
+        <p>A caixa de diálogo é apresentada quando se seleciona um ponto e se clica no botão <i>Editar</i> <img src="btn_item.png" style="border:1px solid black" width="36" height="36"> na tela <u>Desenho</u> no modo "editar";</p>
 
-This dialog is opened when you select a point symbol and tap the
-<i>Edit</i> button in the <u>Drawing window</u> (in "edit" mode).<br><p>
+        <p>Propriedaes de pontos:</p>
 
-Point properties:
-<ul>
-<li><b>size</b> (XS, S, M, L, XL)</li>
-<li><b>orientation</b>, if the point is orientable</li>
-<li><b>layers</b>, the canvas views on which the point is displayed [T]</li>
-<li><b>text</b>, if the point has text associated</li>
-<li>additional Therion <b>options</b></li>
-</ul>
-<br><p>
+        <ul>
+            <li><b>tamanho</b>: XS (<i>extra small</i>/extra pequeno), S (<i>small</i>/pequeno), M (<i>medium</i>/médio), L (<i>large</i>/grande), XL (<i>extra large/extra grande)</i></li>
+            <li><b>orientação</b>: barra de rolagem para definir a orientação do ponto se o ponto for orientável</li>
+            <li><b>camadas</b>: grupo de checkboxes identificados por letras que definem quais visualizações de croquis apresentarão o ponto [T]</li>
+            <li><b>comentário</b>: campo texto livre que apresenta a informação textual eventualmente anexada ao ponto</li>
+            <li><b>opções Therion</b>: campo texto livre para definição de propriedades específicas do Therion para os tipos de ponto onde isso puder ser relevante</li>
+        </ul>
 
-The canvas views are presented as checkboxes with the view letter-code. You can change the views the point belongs to.
-The point icon is not displayed if all its views are OFF.
-The selectable point will nevertheless be shown in edit mode, so that the point edit dialog remains accessible.
-<br><p>
+        <p>As visualizações de croquis são representadas por checkboxes codificados por letras.
+        É possível alterar as visualizações onde o ponto é apresentado.
+        O ponto não é apresentado se todas as visualizações possíves forem desativadas.
+        O ponto será sempre apresentado no modo de edição de maneira que a caixa de diálogo do ponto seja sempre acessível.</p>
 
-<b>Cancel</b> closes the dialog.<br>
+        <p><b>Cancelar</b> fecha a caixa de diálogo sem gravar as alterações.</p>
 
-<b>Save</b> confirms the changes and closes the dialog.<br><p>
+        <p><b>Gravar</b> confirma as altearções feitas e fecha a caixa de diálogo.</p>
 
-With <i>side-drag</i> enabled, the point orientation can be changed also by sliding up and down on the left and right sides of the canvas.<br><p>
+        <p>Se a opção <i>Desenho croqui >> Arrastar canto</i> estiver habilitada a orientação do ponto pode também ser alterada arrastando o dedo para baixo a partir dos cantos superiores esquerdo e direito da tela (que rodam o ponto no sentido anti-horário e horário respectivamente).</p>
 
-The <i>BACK</i> key closes the dialog without saving the changes.<br><p>
+        <p>O botão <i>Back</i> do aparelho Android fechar a caixa de diálogo sem gravar as alterações.</p>
 
-<a href="page_section_point.htm">Section</a> point dialog<br><p>
+        <p><a href="page_section_point.htm">Caixa de diálogo ponto tipo corte</a></p>
+        
+        <p><a href="manual16.htm">Índice</a></p>
 
-</body>
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-24</span> &mdash; Referente ao commit: <span id="last-update-commit">0a8b70b15</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
 </html>
