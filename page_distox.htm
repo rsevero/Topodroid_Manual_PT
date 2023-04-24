@@ -1,139 +1,135 @@
 <html>
-<body>
+    <body>
+        <h4>GUIA DE REFERÊNCIA DistoX</h4>
 
-<h4>DistoX REFERENCE GUIDE</h4>
+        <p><i>Resumo das funcionalidades da DistoX</i></p>
 
-<i>Here is a summary of the DistoX functions.<br>
-The official user manuals are available at http://paperless.bheeb.ch</i>
-<br><p>
+        <p>Os manuais oficiais da DistoX estão disponíveis em <a href="http://paperless.bheeb.ch">http://paperless.bheeb.ch</a></p>
 
-PIN code:<br>
-If the Distox does not pair automatically use PIN "0000" four zeroes.<br><p>
+        <p>Código PIN: se a DistoX não parear automaticamente, use o código PIN "0000" (quatro zeros).</p>
 
-Error codes:<br>
-<ul>
-<li>252: too high temperature</li>
-<li>253: too low temperature</li>
-<li>255: too weak signal</li>
-<li>256: too strong signal</li>
-<li>257: too much background light</li>
-<li>260: interrupted laser beam</li>
-</ul>
-<br><p>
+        <p>Códigos de erro:</p>
 
-<ul>
-<li>DIST: power on / start laser / measure</li>
-<li>CLR: cancel current operation, switch laser off</li>
-<li>CLR (2 secs): switch device off</li>
-<li>MEM: memory entries</li>
-<li>REF: toggle distance reference</li>
-</ul>
-<br><p>
+        <ul>
+            <li><i>252</i>: temperatura excessivamente alta</li>
+            <li><i>253</i>: temperatura excessivamente baixa</li>
+            <li><i>255</i>: sinal muito fraco</li>
+            <li><i>256</i>: sinal muito forte</li>
+            <li><i>257</i>: excesso de luz de fundo</li>
+            <li><i>260</i>: raio laser interrompido</li>
+        </ul>
 
-<h3>DistoX2 - X310</h3>
+        <p>Funções principais:</p>
 
-<ul>
-<li>TIMER (laser on): start timer (automatic measurement)</li>
-<li>TIMER (laser off): set timer interval (with PLUS/MINUS)</li>
-<li>SMART: extra measure info</li>
-<li>FUNC: device info</li>
-</ul>
-<br><p>
+        <ul>
+            <li><i>DIST</i>: ligar dispositivo / ligar laser | medir</li>
+            <li><i>CLR</i>: cancelar opeção atual / desligar laser</li>
+            <li><i>CLR (2 segundos)</i>: desligar dispositivo</li>
+            <li><i>MEM</i>: visualizar medidas em memória</li>
+            <li><i>REF</i>: alternar ponto zero da medida de distância</li>
+        </ul>
 
-Two seconds:<br>
-<ul>
-<li>DIST (with laser on): measure</li>
-<li>CLR: power off</li>
-<li>CLR+SMART: toggle calib. mode</li>
-<li>CLR+MEM: clear unsent memory</li>
-<li>CLR+FUNC: toggle bluetooth</li>
-<li>CLR+MINUS: locked power off</li>
-<li>REF: front reference</li>
-<li>REF+FUNC: back reference</li>
-<li>REF+PLUS: toggle display light</li>
-<li>REF+MINUS: toggle beep</li>
-<li>MEM: distance units</li>
-<li>MEM+SMART: angle units (deg/grad)</li>
-<li>MEM+FUNC: toggle silent mode</li>
-<li>MEM+MINUS: toggle backsight mode [2.4]</li>
-<li>SMART+MINUS: toggle triple-shot check [2.4]</li>
-<li>DIST+PLUS: continuous measurement, CLEAR off [2.6]</li>
-</ul>
-<br><p>
+        <h3>DistoX2 - X310</h3>
 
-Five seconds:<br>
-<ul>
-<li>FUNC+SMART: change battery type</li>
-<li>FUNC+CLR+MEM: factory reset</li>
-<li>DIST+PLUS+MINUS (switching on): bootloader mode</li>
-</ul>
-<br><p>
+        <ul>
+            <li><i>TIMER (laser ligado)</i>: começar temporizador (medida automática)</li>
+            <li><i>TIMER (laser desligado)</i>: define o intervalo do temporizador com os botões MAIS e MENOS</li>
+            <li><i>SMART</i>: informações extras da medida</li>
+            <li><i>FUNC</i>: informações sobre o dispositivo</li>
+        </ul>
 
+        <p>Cliques longos (2 segundos):</p>
 
-Extra measure info:<br>
-<ol>
-<li>azimuth, H distance, V distance, distance</li>
-<li>roll, dip</li>
-<li>M, G</li>
-<li>on-board accel. raw x,y,z (*)</li>
-<li>separate accel. raw x,y,z (*)</li>
-<li>magnetic raw x,y,z (*)</li>
-</ol>
-<br>
+        <ul>
+            <li><i>DIST (laser ligado)</i>: medir</li>
+            <li><i>CLR</i>: desligar dispositivo</li>
+            <li><i>CLR+SMART</i>: alternar modo "calibração"</li>
+            <li><i>CLR+MEM</i>: apagar medidas não enviadas</li>
+            <li><i>CLR+FUNC</i>: alternar modo bluetooth</li>
+            <li><i>CLR+MINUS</i>: desligar ativando modo "travado para ligar" (indicado para quando for transportar o dispositivo e quiser diminiur o risco de que ligue sozinha)</li>
+            <li><i>REF</i>: alterna referência de medida de distância para a frente do dispositivo</li>
+            <li><i>REF+FUNC</i>: alterna referência de medida de distância para a fundo recuado do dispositivo</li>
+            <li><i>REF+PLUS</i>: alterna iluminação de fundo de tela</li>
+            <li><i>REF+MINUS</i>: alterna beep sonoro</li>
+            <li><i>MEM</i>: unidade de distância</li>
+            <li><i>MEM+SMART</i>: unidade de ângulos (graus/radianos)</li>
+            <li><i>MEM+FUNC</i>: alterna modo "medir sem armazenar na memória"</li>
+            <li><i>MEM+MINUS</i>: alterna modo contra visada (a partir da firmware versão 2.4)</li>
+            <li><i>SMART+MINUS</i>: alterna verificação de três medidas (a partir da firmware versão 2.4)</li>
+            <li><i>DIST+PLUS</i>: modo de medição contínua.
+            CLEAR desliga este modo. (a partir da firmware versão 2.6)</li>
+        </ul>
 
-<ol>
-<li>combined accel. x,y,z</li>
-<li>magnetic x,y,z</li>
-<li>on-board accel. x,y,z (*)</li>
-<li>separate accel. x,y,z (*)</li>
-</ol>
-<br><p>
+        <p>Cliques extra longos (5 segundos):</p>
 
-Device info:<br>
-<ol>
-<li>battery</li>
-<li>hw/fw version, serial number</li>
-<li>display light level (1:10) [2.3]</li>
-<li>beep tone (0:5) [2.6]</li>  
-<li>endpiece offset (-126:127) [2.3]</li>
-</ol>
-<br><p>
+        <ul>
+            <li><i>FUNC+SMART</i>: trocar tipo de bateria</li>
+            <li><i>FUNC+CLR+MEM</i>: reiniciar para valores de fábrica</li>
+            <li><i>DIST+PLUS+MINUS (ao ligar)</i>: entrar no modo bootloader</li>
+        </ul>
 
-<h3>DistoX - A3</h3>
+        <p>Informações extras da medidas:</p>
 
-<ul>
-<li>AREA (back ref.): continuous display of azimuth+clino (*)</li>
-<li>AREA+REF (front ref.): continuous display of roll+dip (*)</li>
-<li>AREA*2: firmware version and serial number</li>
-<li>UNITS: toggle display light</li>
-<li>AREA*2+REF*2+CLR: toggle silent mode</li>
-</ul>
-(*) Do not take measurements in this mode
-<br><p>
+        <ol>
+            <li>azimute, distância horizontal, distância vertical, distância</li>
+            <li>rotação e mergulho</li>
+            <li>M e G</li>
+            <li>valores brutos dos acelerômetros internos x,y,z<a href="#footnote-1"><sup>*</sup></a></li>
+            <li>valores brutos dos acelerômetros separados x,y,z<a href="#footnote-1"><sup>*</sup></a></li>
+            <li>valores brutos dos magnetômetros x,y,z<a href="#footnote-1"><sup>*</sup></a></li>
+        </ol>
 
-Two seconds:<br>
-<ul>
-<li>UNITS (in back ref.): distance units</li>
-<li>UNITS (in front ref.): cycle angle units / BT</li>
-<li>MEM*10+UNITS: toggle calib. mode</li>
-</ul>
-<br>
+        <p>Info dispositivo:</p>
 
-Five seconds:<br>
-<ul>
-<li>CLR+PLUS: toggle beep</li>
-</ul>
-<br>
+        <ol>
+            <li>nível da bateria</li>
+            <li>versões do hardware e da firmware e número de série</li>
+            <li>intensidade da luz de fundo (1:10) (a partir da versão 2.3)</li>
+            <li>intensidade do beep (0:5) (a partir da versão 2.6)</li>  
+            <li>tamanho do suporte do dispositivo (-126:127) (a partir da versão 2.3)</li>
+        </ol>
 
-"Angle units / BT" cycle<br>
-<ul>
-<li>compass off, BT off</li>
-<li>compass on (deg), BT off</li>
-<li>compass on (grad), BT off</li>
-<li>compass on (deg), BT on</li>
-<li>compass on (grad), BT on</li>
-</ul>
-<br><p>
+        <h3>DistoX - A3</h3>
 
-</body>
+        <ul>
+            <li><i>AREA (referência no fundo)</i>: apresentação contínua de azimute e inclinação<a href="#footnote-1"><sup>*</sup></a></li>
+            <li><i>AREA+REF (referência frontal)</i>: apresentação contínua de rotação e mergulho<a href="#footnote-1"><sup>*</sup></a></li>
+            <li><i>AREA*2</i>: versão da firmware e número de série</li>
+            <li><i>UNITS</i>: troca luz de fundo</li>
+            <li><i>AREA*2+REF*2+CLR</i>: alterna modo "medir sem armazenar na memória"</li>
+        </ul>
+
+        <p>Cliques longos (2 segundos)</p>
+
+        <ul>
+            <li><i>UNITS (referência no fundo)</i>: unidade de distância</li>
+            <li><i>UNITS (referência frontal)</i>: alterna unidade de ângulos e Bluetooth</li>
+            <li><i>MEM*10+UNITS</i>: alterna modo calibração</li>
+        </ul>
+
+        <p>Cliques extra longos (5 segundos)</p>
+
+        <ul>
+        <li><i>CLR+PLUS</i>: alterna beep</li>
+        </ul>
+
+        <p>Sequência de unidade de ângulos e Bluetooth:</p>
+
+        <ul>
+            <li>bússola e Bluetooth desligados</li>
+            <li>bússola ligada em graus e Bluetooth desligado</li>
+            <li>bússola ligada em grados e Bluetooth desligado</li>
+            <li>bússola ligada em graus e Bluetooth ligado</li>
+            <li>bússola ligada em grados e Bluetooth ligado</li>
+        </ul>
+        
+        <p id="footnote-1" style="font-size: 90%;">[*] Não faça medidas neste modo.</p>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-24</span> &mdash; Referente ao commit: <span id="last-update-commit">6ee9b52d1</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
 </html>
