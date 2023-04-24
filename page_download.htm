@@ -1,43 +1,52 @@
-<html><body>
+<html>
+    <body>
+        <h4>DOWNLOAD DADOS</h4>
 
-<h4>DATA DOWNLOAD</h4>
+        <p>O botão <i>Download</i> <img src="btn_download.png" style="border:1px solid black" width="36" height="36"> inicia uma conexão com o dispositivo para baixar dados.
+        Enquanto a conexão estiver ativa, o botão permanece vermelho.
+        Se você estiver usando o tipo de conexão <i>sob demanda</i> a conexão será fechada quando não houver mais dados a serem baixados.
+        No tipo de conexão <i>contínua</i> a conexão permanece aberta (e dados são continuamente baixados assim que são produzidos) até que a conexão entre o dispositivo e o aparelho Android seja perdida.</p>
 
-The <i>Download</i> button starts a connection with the device to download data.
-While the connection is active it stays red. If you are using the <i>on-demand</i> download-mode the connection is closed when there are no more data to retrieve.
-With the <i>continuous</i> download-mode the connection remains open (and data are continuously downloaded as soon as they are taken)
-until the device and the Android lose the Bluetooth connection.  Which mode is best suited for you depends on your habits.
-With the <i>on-demand</i> mode you can concentrate on sketching and other tasks without being bothered by incoming data, and when you download the data
-you can focus on them (they are highlighted blue). On the other hand <i>on-demand</i> download requires pauses to get the data,
-and these are especially long if you took several shots in the between.<br><p>
+        <p>Qual modo é mais adequado depende dos seus hábitos e do tipo de dispositivo usado.</p>
 
-When the Bluetooth connection with the device is broken (eg. the device gets too far from the Android, or it is switched off)
-in <i>on-demand</i> mode, the data download is interrupted.
-In <i>continuous</i> mode TopoDroid retries to connect to the device every few seconds.<br><p>
+        <p>Com o modo <i>sob demanda</i> você pode se concentrar em desenhar e outras tarefas sem ser incomodado por novos dados sendo capturados e, quando decidir baixar novos dados, poderá se concentrar neles (estarão destacados em azul).
+        Por outro lado o modo <i>sob demanda</i>exige pausas para obter novos dados e essas pausas podem ser longas se várias medidas foram capturas desde o último download.</p>
 
-When the <u>Survey Data window</u> is closed the data download connection is terminated. The download connection is not interrupted when the
-window is paused (the display switches off). If you open a sketch while the download connection is active in <i>continuous</i> mode,
-the connection is maintained and the data are downloaded (and displayed in the sketch).<br><p>
+        <p>Quando a conexão Bluetooth é perdida (por exemplo se o dispositivo ficar longe demais do Android ou for desligado):</p>
 
-For the <i>Sap5</i> and <i>Bric4</i> data are always downloaded in <i>continuous</i> mode.<br><p>
+        <ul>
+            <li>no modo <i>sob demanda</i>: o download de dados é interrompido.</li>
+            <li>no modo <i>contínua</i>: o TopoDroidX tenta reestabelecer a conexão repetidamente em intervalos de poucos segundos.</li>
+        </ul>
 
-<b>DistoXBLE</b><p>
+        <p>Quando o tela <u>Dados topo</u> é fecahda a conexão para download de dados é encerrada.
+        A conexão de download não é interrompida quando a tela é pausada (por exemplo quando a tela do Android é desligada).
+        Se você abrir um croqui enquanto a conexão de download estiver ativa no modo <i>contínua</i> a conexão permanece ativa e dados seguem sendo baixados (e apresentados no croqui).</p>
 
-The data download from the DistoXBLE may fail the first time immediately after the <b>Android Bluetooth</b> has been enabled (ie, turned on).
-In this case switch the DistoXBLE off and on, and try again to download data.<br><p>
+        <p>Para o <i>SAP5</i> e o <i>BRIC4</i> a conexão é sempre do tipo <i>contínua</i>.</p>
 
-<b>Bric4</b><br>
+        <p><b>DistoXBLE</b></p>
 
-The data download from the <i>Bric4</i> can be limited to only the essential values (distance, azimuth, clino, and little more), or
-complete, with all the information transferred by the Bric4 protocol.<br><p>
+        <p>O download de dados da DistoXBLE pode falhar na primeira tentativa imediatamente após o Bluetooth do Android tiver sido habilitado.
+        Nesse caso desligue e religue a DistoXBLE e tente novamente fazer o download de dados.</p>
 
-The complete protocol includes the "index" of the shot. By default TopoDroid uses the <i>Bric4 index</i> as data index
-in the database table, if it receives it. Since the data index must be unique, if TopoDroid receives a shot with an index that
-is already in the database, a novel value is used instead of the <i>Bric4 index</i>.<br>
+        <p><b>BRIC4</b></p>
 
-The Bric4 index can be reset with the <i>Advanced menu | Memory clear</i> BRIC4 command.<br>
+        <p>O download de dados da <i>BRIC4</i> pode ser limitado somente aos valores essenciais (distância, azimute, inclinação e pouco mais) ou ser completo com todas as informações transferidas pelo protocolo da BRIC4.</p>
 
-It is possible to disable the use of the <i>Bric4 index</i> [G], and let TopoDroid assign incremental values to the data index.<br><p> 
+        <p>No modo completo é incluido o índice da medida.
+        Por padrão o TopoDroidX usa o índice do BRIC4 como índice de dados no banco de dados, se recebê-lo do BRIC4.
+        Como o índice de dados precisa ser único, se o TopoDroidX receber uma medida com um índice já existente no banco de dados, um novo valor será usado no lugar do valor recebido.</p>
 
-<!-- u>WARNING</u>. The first shot after a Bric4 "memory clear" does not arrive to TopoDroid.<br><p -->
+        <p>O índice BRIC4 pode ser reiniciado para seu valor original através da opção de menu <i>Advanced menu >> Memory clear</i> do BRIC4.</p>
 
-</body></html>
+        <p>É possível desabilitar o uso do índice do BRIC4 [T] fazendo com que o TopoDroidX atribua valores incrementais aos dados baixados.</p>
+
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-24</span> &mdash; Referente ao commit: <span id="last-update-commit">6ee9b52d1</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
+</html>
