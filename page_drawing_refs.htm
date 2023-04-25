@@ -1,72 +1,83 @@
 <html>
-<body>
+    <body>
+        <h4>CROQUI: O QUE MOSTRAR</h4>
 
-<h4>SKETCH REFERENCES</h4>
+        <p>A caixa de diálogo pode ser acessada clicando no botão <i>O que mostrar</i> <img src="btn_mode.png" style="border:1px solid black" width="36" height="36"> na tela <u>Desenho</u> no modo <i>mover</i>.</p>
 
-This dialog is opened from the <i>Reference</i> button of the <u>Drawing window</u>.<br><p>
+        <p>Opções disponíveis:</p>
 
-The column contains the sketch references,
-<ul>
-<li><b>legs</b>, survey midline (white)</li>
-<li><b>splays</b> (grey)</li>
-<li><b>latest</b> splays [G]</li>
-<li><b>stations</b> names (violet)</li>
-<li><b>grid</b>, metric or yard</li>
-<li><b>scalebar</b>, reference scalebar and magnetic North/Upward arrow</li>
-<li><b>outline</b>, outline of another sketch</li>
-</ul><br><p>
+        <ul>
+            <li><b>Visadas</b>: linha de trena (branco)</li>
+            <li><b>Medidas auxiliares</b>: (cinza)</li>
+            <li><b>Últimas medidas auxiliares</b>: [T]</li>
+            <li><b>Bases</b>: nomes das bases (violeta)</li>
+            <li><b>Grade</b>: em metros ou jardas</li>
+            <li><b>Escala</b>: escala gráfica e norte magnético (seta vertical)</li>
+            <li><b>Contorno</b>: contornos de outros croquis</li>
+            <li><b>Deslocar croqui X linha de trena</b>: permite deslocar o croqui em relação à linha de trena de maneira independente (use com cuidado!!) [T]</li>
+            <li><b>Fundo</b>: camada <i>F</i> dedicada aos elementos de fundo do croqui [T]</li>
+            <li><b>Decoração</b>: camada <i>D</i> dedicada aos elementos intermediários do croqui [T]</li>
+            <li><b>Cobertura</b>: camada <i>C</i> dedicada aos elementos superiores do croqui [T]</li>
+            <li><b>Avulsos</b>: camada <i>A</i> dedicada a outros elementos do croqui [T]</li>
+        </ul>
 
-The "latest" splays can be highlighted in light blue color [G].
-With <i>on-demand</i> download mode, these are the splays that have been downloaded most recently.
-With <i>continuous</i> mode, these are all the splays downloaded during the last highlighting interval.
-<br><p>
+        <p>As "últimas medidas auxiliares" podem ser destacadas em azul claro. [T]
+        Com a conexão Bluetooth no modo <i>sob demanda</i> essas serão as medidas auxiliares baixadas mais recentemente.
+        Com a conexão Bluetooth no modo <i>contínua</i> essas serão as medidas auxiliares baixadas no último intervalo de tempo com destaque.</p>
 
-There are three grids,
-<ol>
-<li>a grid at 1 unit spacing (dark grey)</li>
-<li>a grid at 10 units spacing (grey)</li>
-<li>a grid at 100 units spacing (light grey)</li>
-</ol>
-<br>
-The grid units can be 1m, 1y, 2ft, 0.1m. The default is 1 m.<br>
-TopoDroid shows only the grids that are appropriate for the zoom of the sketch display.
-<br><p>
+        <p>Há três escalas para a grade:</p>
 
-The scalebar is adapted to the grid units (m, y, ft, dm) and has a small arrow indicating the magnetic North/Upward direction.
-If the survey declination is set the true North is indicated as a light blue line, at the declination angle to the magnetic North.
-If the magnetic declination is small the North blue line is very close to the magnetic North arrow.
-The legend on the scalebar has the same size as the station names.<br><p>
+        <ol>
+            <li>com 1 unidade de espeçamento (cinza escuro)</li>
+            <li>com 10 unidades de espaçamento (cinza)</li>
+            <li>com 100 unidades de espaçamento (cinza claro)</li>
+        </ol>
 
-If there are other sketches, the outline of another sketch can be displayed (in grey) to help drawing
-the sketch. Checking the box opens a new dialog to pick the sketch to display, or to clear the outline
-display.<br>
-The outline of an x-section can be displayed at the relative section point.
-The display of the outline is turned on and off through the edit dialog of the section points.<br>
-The display of all the outlines is cleared when the sketch is closed.<br><p>
+        <p>As opções de unidades de espaçamento da grade são 1 metro, 1 jarda, 2 pés e 0,1 metro.</p>
 
-<b>Sketch shift and scale</b><br>
+        <p>O TopoDroidX apresenta da grade com a escala adequada para o nível de zoom atual da tela de desenho.</p>
 
-A further checkbox [E/G] specifies whether the reference should be held fixed when
-shifting the drawing with a two-finger touch. 
-This is used to adjust a sketch imported from PocketTopo to the reference
-in the case it gets imported with a translation.
-The sketch can be zoomed with a three-finger touch.
-<br><p>
+        <p>A escala se adapta às unidades escolhidas para a grade (metro, jarda, pé ou decimetro) e é acompanhada de uma pequena seta indicando a direção do norte magnético (para cima).
+        Se a declinação magnética da topo tiver sido definida, o norte geográfico é indicado por uma linha azul clara formando o ângulo da declinação magnética com o norte magnético.
+        Se a declinação magnética for pequena a linha azul clara do norte geográfico ficará bastante próxima à seta do norte magnético.
+        O texto da legenda da escala tem o mesmo tamanho dos nomes das bases.</p>
 
-<b>Canvas views</b> (levels)<br>
+        <p>Se houver outros croquis, o contorno deles pode ser apresentado (em cinza) para ajudar a desenhar o croqui atual.
+        Ao clicar-se na opção <b>Deslocar croqui X linha de trena</b> uma nova caixa de diálogo é aberta para que sejam escolhidos quais croquis terão seus contornos apresentados ou para fazer com que nenhum contorno seja apresentado.</p>
 
-When canvas views are enabled [G], there is another column, on the right, to switch the views on and off.<br>
-A drawing item is displayed if it belongs to at least a view that is ON.<br>
-The <b>Base</b> (B) view is always ON. The other views are
-<ul>
-<li><b>Floor</b> (F)</li>
-<li><b>Fills</b> (D)</li>
-<li><b>Ceiling</b> (C)</li>
-<li><b>Artifacts</b> (A)</li>
-</ul>
-<br><p>
+        <p>O contorno de um corte pode ser apresentado em relação ao ponto do corte.
+        A apresentação do contorno é controlado através da caixa de diálogo de edição dos pontos de corte.</p>
 
-The views are denoted by an uppercase letter, B, F, D, C, and A, as indicated above.<br><p>
+        <p>A apresentação de todos os contornos é desabilitada quando o croqui é fechado.</p>
 
-</body>
+        <p><b>Arrasto e zoom de croquis</b></p>
+
+        <p>Um checkbox extra [T] define se a referência (visadas, medidas auxiliares, bases, etc.) devem permanecer fixas quando arrastar o croqui usando dois dedos.
+        Dessa maneira é possível ajustar um croqui importado de um arquivo PocketTopo para a referência atual caso apareça desalinhado.
+        É possível dar zoom no croqui usando três dedos.</p>
+
+        <p><b>Camadas tela de desenho</b></p>
+
+        <p>Quando as camadas de tela estão habilitadas [T] (configuração <i>Especiais >> Desenho croqui >> Camada</i>) é apresentada em uma segunda coluna à direita os checkboxes para definir quais camadas devem ser apresentadas.</p>
+
+        <p>Um elemento do croqui é apresentado se ele pertencer a pelo menos uma camada que esteja visível.</p>
+
+        <p>A camada <b>Base</b> está sempre visível. As outras camadas são:</p>
+
+        <ul>
+            <li><b>Fundo</b> (F)</li>
+            <li><b>Decoração</b> (D)</li>
+            <li><b>Cobertura</b> (C)</li>
+            <li><b>Avulsos</b> (A)</li>
+        </ul>
+
+        <p>As camadas são representadas pelas letras maiúsculas B, F, D, C e A conforme indicado acima.</p>
+        
+        <p><a href="manual16.htm">Índice</a></p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-25</span> &mdash; Referente ao commit: <span id="last-update-commit">360c43bac</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+    </body>
 </html>
