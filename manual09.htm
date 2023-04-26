@@ -53,23 +53,24 @@
 
   <p>Uma medida auxiliar não é apresentada nos desenhos se a visada a que a medida auxiliar está atrelada for ocultada na planta baixa ou perfil.</p>
 
-  <p>Se o <u>Pontilhamento de medidas auxiliares</u>  estiver habilitado (Configurações Especiais:Dados Medida Auxiliar), as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:</p>
+  <p>Se a configuração <i>Especiais >> Dados medida auxiliar >> Pontilh aux</i> estiver habilitada, as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:</p>
 
   <ul>
-    <li><i>Clino</i>: a medida auxiliar é tracejada se o valor absoluto da inclinação da visada estiver acima do valor definido na opção "Lim ponth clino" encontrada nas configurações especiais. Para inclinações positivas, a linha será pontilhada, para inclinações negativas a linha será tracejada [padrão 50&deg;]</li>
-    <li><i>Azimute</i>: a medida auxiliar é tracejada se o ângulo com a visada mais "próxima" (considerando o azimute) estiver acima do valor definido na opção "Lim pontilh azimute" (Configurações Especiais: Dados Medidas Auxiliares). [padrão 60&deg;]</li>
+    <li><i>Clino</i>: a medida auxiliar é tracejada se o valor absoluto da inclinação da visada estiver acima do valor definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim ponth clino</i>.
+    Para inclinações positivas, a linha será pontilhada, para inclinações negativas a linha será tracejada [padrão 50&deg;]</li>
+    <li><i>Azimute</i>: a medida auxiliar é tracejada se o ângulo com a visada mais "próxima" (considerando o azimute) estiver acima do valor definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim pontilh azimute</i>. [padrão 60&deg;]</li>
     <li><i>Visualização</i>: as medidas auxiliares são tracejadas de acordo com a inclinação na planta baixa e de acordo com o azimute no perfil retificado.
     Nos perfis projetados, as medidas auxiliares são tracejadas de acordo com o ângulo que formam com o azimute da projeção.</li>
   </ul>
 
-  <p>Além disso, na <u>planta baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na opção "Lim aux planta baixa" (Configurações Especiais: Dados Medidas Auxiliares) [padrão 80&deg;]
+  <p>Além disso, na <u>planta baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim aux planta baixa</i>. [padrão 80&deg;]
   </p>
 
   <p>Em cortes:</p>
   <ul>
     <li>medidas auxiliares X (EDTC): verde</li>
     <li>outras: azul escuro para as ligadas à base PARA e claro para as ligadas à base DE</li>
-    <li>por fim, se o pontilhamento de medidas auxiliares ("Pontilh aux" em Configurações Especiais: Dados Medidas Auxiliares) estiver habilitado, elas serão pontilhadas ou tracejadas se o ângulo da medida auxiliar e a normal do plano do corte estiverem abaixo do limite definido na opção "Lim pontilh ângulo" [padrão 60&deg;] (pontilhada se estiver na direção da normal, tracejada se estiver oposta).</li>
+    <li>por fim, se a configuração <i>Especiais >> Dados medida auxiliar >> Pontilh aux</i> estiver habilitada, as medidas auxiliares serão pontilhadas ou tracejadas se o ângulo da medida auxiliar e a normal do plano do corte estiverem abaixo do limite definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim pontilh ângulo</i> [padrão 60&deg;] (pontilhada se estiver na direção da normal, tracejada se estiver oposta).</li>
   </ul>
 
   <p>As cores das linhas tracejadas, pontilhadas e recentes das medidas auxiliares podem ser alteradas através das opções correspondentes [T].</p>
@@ -90,7 +91,7 @@
   <p>A tela <u>desenho</u> conta com quatro modos de interação:</p>
   <ul>
     <li><b>mover</b>: você pode mover o espaço de desenho, fechar ou abrir o zoom.
-    Se a opção "Origem fixa croqui" estiver habilitada em "Configurações principais:Dados topo" a ação de mover moverá somente o desenho e não a linha de trena [T]</li>
+    Se a configuração <i>Especiais >> Dados topo >> Origem fixa croqui</i> estiver habilitada a ação de mover moverá somente o desenho e não a linha de trena [T]</li>
     <li><b>desenhar</b>: nesse modo você pode incluir símbolos (pontos e rótulos), linhas e áreas (regiões fechadas preenchidas por uma cor ou com um padrão).
     </li>
     <li><b>apagar</b>: para apagar itens, linhas, áreas ou parte delas.</li>
@@ -98,15 +99,15 @@
   </ul>
 
   <p>Mover e dar zoom são possíveis mesmo nos modos <b>desenhar</b> e <b>apagar</b> usando dois dedos simultaneamente.
-  Se a opção "Mover canto" estiver habilitada, o croqui pode ser arrastado pelos retângulos cinzas transparentes que estarão nos cantos da tela.</p>
+  Se a configuração <i>Desenho croqui >> Arrastar canto</i> estiver habilitada, o croqui pode ser arrastado pelos retângulos cinzas transparentes que estarão nos cantos da tela.</p>
 
-  <p>O controle de zoom pode ser habilitado temporaria ou permanentemente em Configurações principais:Desenho croqui.
+  <p>O controle de zoom pode ser habilitado temporaria ou permanentemente na configuração <i>Desenho croqui >> Controle zoom</i>.
   Se temporáriamente, será apresentado quando você clicar na parte inferior central da tela.</p>
 
   <p>No modo "desenhar" há uma barra de ferramentas inferior que apresenta os símbolos usados mais recentemente e uma "seta" para selecionar outros símbolos.</p>
 
   <p>No modo "editar", quando o item selecionado é um ponto, é apresentada uma barra de rolagem na base da tela para alterar o tamanho do ponto. 
-  Se a opção "Arrastar canto" estiver habilitada e o ponto for orientável, sua direção pode ser alterada no sentido horário arrastando para baixo a partir do canto superior direito e no sentido antihorário arrastando para baixo a partir do canto superior esquerdo.</p>
+  Se a configuração <i>Desenho croqui >> Arrastar canto</i> estiver habilitada e o ponto for orientável, sua direção pode ser alterada no sentido horário arrastando para baixo a partir do canto superior direito e no sentido antihorário arrastando para baixo a partir do canto superior esquerdo.</p>
 
   <h4>BOTÕES</h4>
 
@@ -213,7 +214,7 @@
 
   <h4>CONFIGURAÇÕES CROQUIS</h4>
   <ul>
-    <li><i>Mover canto</i>: habilita o arrasto do croqui pelos cantos da tela de desenho.</li>
+    <li><i>Arrastar canto</i>: habilita o arrasto do croqui pelos cantos da tela de desenho.</li>
     <li><i>Controle zoom</i>: define como os controles de zoom +/- são apresentados em aparelhos multitoque [B].
     Os controles de zoom podem ficar ocultos, apresentados momentaneamente ou ficar visíveis permanentemente.</li>
     <li><i>Lim hor corte H</i>: limite horizontal para cortes horizontais (para perfis projetados).</li>
