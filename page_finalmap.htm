@@ -1,27 +1,47 @@
-<html><body>
+<html>
+   <body>
+      <h4>THE FINAL MAP</h4>
 
-<h4>THE FINAL MAP</h4>
+      <p>Esta página descreve o uso do <i>Therion</i> e do <i>cSurvey</i> para produzir o mapa final.</p>
 
-This section describes the use of <i>Therion</i> or <i>cSurvey</i> to draft the final map.<br><p>
+      <p><b>Therion</b></p>
 
-<b>Therion</b><br>
-If you want to compile the <i>Therion</i> project you must supply a <i>thconfig</i> file which can be as simple as<br>
-<code>
-   source my_survey.th
-<br>
-   export map -proj plan -o my_cave_p.pdf 
-<br>
-   export map -proj extended -o my_cave_s.pdf
-</code><br><p>
+      <p>Se você quiser compilar o projeto no <i>Therion</i> você deve produzir um arquivo <i>thconfig</i> que pode ser simples como:</p>
 
-You need to have exported the survey data as Therion ".th" file, and the survey sketches as Therion ".th2" files.<br>
-The data file contains commands to input sketch files. However they are commented and you need uncomment them.<br>
-The data file contains commands to define a map for each sketch (scrap). For simple surveys you can leave these commented.<br><p>
+      <p>
+         <code>
+            source my_survey.th
+         <br>
+            export map -proj plan -o my_cave_p.pdf 
+         <br>
+            export map -proj extended -o my_cave_s.pdf
+         </code>
+      </p>
 
-Alternatively you can export the sketches as Therion ".xvi" files and retrace them using <i>xtherion</i>.<br><p>
+      <p>Para isso você deverá antes ter exportado os dados da topo como um arquivo ".th" do Therion e os croquis como arquivos ".th2".</p>
 
-<b>cSurvey</b><br>
-Export the sketch as cSurvey ".csx" file.<br>
-Open the exported file with <i>cSurvey</i>: you will have the data sheet filled with survey data and the sketches properly aligned in the drawing canvas of <i>cSurvey</i>.<br><p>
+      <p>O arquivo de dados da topo contém os comandos para ler os aquivos dos croquis.
+      Entretanto eles estão comentados exigindo que você os descomente para que sejam efetivamente lidos.</p>
 
-</body></html>
+      <p>O arquivo de dados contém também comandos que definem um mapa para cada croqui (<i>scrap</i>).
+      Para topos simples você pode deixar esses comandos comentados.</p>
+
+      <p>Alternativamente você pode exportar os croquis como arqivos ".xvi" do xTherion e redesenha-los lá.</p>
+
+      <p><b>cSurvey</b></p>
+
+      <p>Exporte os roquis como arquivos ".csx" do cSurvey.</p>
+
+      <p>Abra o arquivo exportado com o <i>cSurvey</i>: você terá uma planilha de dados preenchida com os dados da topo e os croquis alinhados adequadamente na área de desenho do <i>cSurvey</i>.</p>
+        
+      <p>
+         <a href="manual16.htm">Principais funcionalidades</a> |
+         <a href="manual17.htm">Índice remissivo</a>
+     </p>
+     
+     <footer style="font-size: 80%; font-style: italic; clear: both;">
+         <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-29</span> &mdash; Referente ao commit: <span id="last-update-commit">608d1e279</span></p>
+         <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+     </footer>
+ </body>
+</html>
