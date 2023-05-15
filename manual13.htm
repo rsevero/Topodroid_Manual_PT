@@ -18,7 +18,7 @@ Os croquis são exportados a partir da tela <u>Desenhar</u> (agrupados em um só
 <h4>IMPORTAR TOPO</h4>
 
 <p>O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos em formatos externos.
-Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" style="background-color: black;" width="36" height="36"> na tela <u>Principal</u>.
+Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" style="background-color: black" width="36" height="36"> na tela <u>Principal</u>.
 Os arquivos a serem importados serão selecionados através da interface do sistema.
 Os nomes dos arquivos não podem incluir dois pontos (:).</p>
 
@@ -49,18 +49,18 @@ Os valores de azimute lidos são corrigidos pela declinação.</p>
 
 <p><b>Importação PocketTopo</b></p>
 
-<p>O TopoDroidX importando tanto os dados da topo quanto os croquis.
-As cores usadas PocketTopo são relacionadas a diferentes símbolos de desenho do TopoDroidX (pontos e linhas).
-Essa correlação cores PocketTopo X símbolos TopoDroidX pode ser alterada via opções de configuração.</p>
+<p>O TopoDroidX importa tanto os dados da topo quanto os croquis.
+As cores usadas no PocketTopo são relacionadas a diferentes símbolos de desenho do TopoDroidX (pontos e linhas).
+Essa correlação de cores (P)ocketTopo X símbolos TopoDroidX) pode ser alterada através da opções de configuração <i>Importar/Exportar >> Importar >> Esquema cor</i>.</p>
 
 <p><b>Importação Compass</b></p>
 
-<p>O TopoDroidX converte uma topo Cmpass do modo <i>normal</i> para o modo <i>mergulho [T] se a opção adequada estiver habilitada. [G].</i></p>
+<p>O TopoDroidX converte uma topo Compass do modo <i>normal</i> para o modo <i>mergulho [A] se a opção de configuração i>Importar/Exportar >> Importar >> Estimar ref retif perfil</i> estiver habilitada [G].</i></p>
 
-<p><b>Obs.</b>: A importação pode falhar (e dar pane no app) devido a algum erro no banco de dados que o TopoDroidX não intercepte.
-Se isso acontecer, apague a topo importada parcialmente e tente novamente a importaçcão.</p>
+<p><b>Obs.</b>: A importação pode falhar (e dar pane no app) devido a algum erro no banco de dados que o TopoDroidX não detecte.
+Se isso acontecer, apague a topo importada parcialmente e repita a importação.</p>
 
-<h4>Exportação de dados da topo</h4>
+<h4>EXPORTAR TOPO</h4>
 
 <p>O TopoDroidX exporta os dados da topo para os seguintes softwares espeleológicos:</p>
 <ul>
@@ -86,8 +86,7 @@ Se isso acontecer, apague a topo importada parcialmente e tente novamente a impo
 <li><a href="#geojson">GeoJSON</a></li>
 <li><a href="#gpx">GPX</a></li>
 <li><a href="#kml">KML</a></li>
-<li><a href="#plt">trackfile</a></li>
-<li><a href="#shp">shapefile</a></li>
+<li><a href="#shp">Shapefile</a></li>
 </ul>
 
 <p>Se a topo não for georeferenciada, os dados da topo não poderão ser exportados nos últimos quatro formatos.</p>
@@ -104,11 +103,11 @@ Se isso acontecer, apague a topo importada parcialmente e tente novamente a impo
 
 <p>As unidades dos dados lidos devem ser "pés" e "graus" que serão convertidos paraa "metros e "graus" no TopoDroidX.</p>
 
-<p>Configurações:</p>
+<p>Tanto na janela de exportação quanto na págin de configurações <i>Importar/exportar >> Compass </i> constam as seguintes opções:</p>
 <ul>
-<li><u>Pref base</u>: se definido, será incluído no início do nome de cada base.</li>
-<li><u>Aux Compass</u></li>
-<li><u>Inverter Esq/Dir Compass</u></li>
+<li><u>Pref base</u>: se ativado, será incluído o prefixo no início do nome de cada base, prefixo a ser determinado no ato de exportação.</li>
+<li><u>Aux Compass</u>: habilita a exportação das medidas auxiliares.</li>
+<li><u>Inverter Esq/Dir Compass</u>: inverte as medidas na exportação para o Compass.</li>
 </ul>
 
 <p><b id="csurvey">cSurvey</b> (.csx)</p>
@@ -123,7 +122,7 @@ Se isso acontecer, apague a topo importada parcialmente e tente novamente a impo
 
 <p>Configurações:</p>
 <ul>
-<li><u>Pref base</u>: se definido, será incluído no início do nome de cada base.</li>
+<li><u>Pref base</u>: se definido, será automaticamente incluído no início do nome de cada base.</li>
 </ul>
 
 <p><b id="survex">Survex</b> (.svx)</p>
@@ -134,8 +133,8 @@ Se isso acontecer, apague a topo importada parcialmente e tente novamente a impo
 
 <p>Configurações:</p>
 <ul>
-<li><u>Term linha Survex</u>: pode ser Linux ou Windows</li>
-<li><u>Base aux Survex</u>: incluir às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada.</li>
+<li><u>Term linha Survex</u>: a terminação de linha pode ser Linux ou Windows</li>
+<li><u>Base aux Survex</u>: inclui às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada.</li>
 <li><u>EDTC Survex</u>: incluir EDTC nos arquivos Survex exportados.</li>
 </ul>
 
@@ -147,7 +146,7 @@ Se isso acontecer, apague a topo importada parcialmente e tente novamente a impo
 
 <p>Os dados são exportados nas unidades definidas nas opções do usuário.</p>
 
-<p>Os nomes dos integrantes da equipe são incluídos comentados.</p>
+<p>Os nomes dos integrantes da equipe são incluídos nos comentários.</p>
 
 <p>A equipe definida no TopoDroidX é repartida em comandos <i>team</i> do Therion.
 Os nomes dos integrantes da equipe devem estar listados pelo último sobrenome eventualmente precedido de um nome/sequência de abreviações.
@@ -168,22 +167,21 @@ Para medidas auxiliares que não tenham direção no perfil retificado definida,
 <p>As coordenadas geográficas (longitude, latitude e altitude) são exportadas como textos comentados.
 Se o ponto usa coordenadas CRS personalizadas, elas também são incluídas precedidas do nome CRS correspondente.</p>
 
-<p>Além disso, comandos "input" para cada arquivo th2 e as definições dos mapas para cada croqui são incluídos ao final como textos comentados.</p>
+<p>Além disso, são incluídos ao final como textos comentados os comandos "input" para cada arquivo th2 e para as definições dos mapas de cada croqui.</p>
 
 <p>Os arquivos <i>Therion</i> exportados incluem as medidas de verificação de calibração como textos comentados.</p>
 
-<p>Configurações:</p>
+<p>Configurações <i>Importar/exportar >> Therion</i>:</p>
 <ul>
-<li><u>Comando config Therion</u>: quando habilitada faz com que os dados da topo sejam envolvidos em um conjunto de comandos de configuração do Therion.</li>
-<li><u>Mapa Therion início</u>: quando habilitada faz com que os comandos "map" sejam posicionados antes dos dados da linha de trena.</li>
-<li><u>EDTC Survex/Therion</u>: inclui medidas auxiliares EDTC (esquerda/direita/teto/chão) nos arquivos exportados.</li>
-<li><u>Comando config Therion</u>: faz com que o TopoDroidX exporte um arquivo de configuração do Therion com os dados da linha de trena embutidos.
-Este arquivo contém os comandos de configuração necessários para a criação de um PDF da planta baixa e outro do perfil retificado.
-Rodando o Therion no arquio exportado produz um mapa PDF simples.
-Os comandos "input" dos arquivos dos croquis permanecem comentados e devem ser ajsutados (descomentados) para ativar a leitura dos arquivos "th2" apropriados.</li>
+<li><u>Comando config Therion</u>: quando habilitada faz com que os dados da topo sejam envolvidos em um conjunto de comandos de configuração do Therion. [A]</li>
+<li><u>Mapa Therion início</u>: quando habilitada faz com que os comandos "map" sejam posicionados antes dos dados da linha de trena. [A]</li>
+<li><u>Med Aux Therion</u>: adiciona linhas "u:splay" aos arquivos th2. [A]</li>
+<li><u>EDTC Survex/Therion</u>: inclui medidas auxiliares EDTC (esquerda/direita/teto/chão) nos arquivos exportados. [A]</li>
+<li><u>Escala Therion</u>: inclui a escala na exportação de arquivos th2/xvi. [E] </li>
+<li><u>Imagem XVI</u>: quando habilitado insere a imagem xvi no arquivo th2. [E] </li>
 </ul>
 
-<p>A leitura de arquivos <i>Therion</i> pelo TopoDroidX é bastante limitada.
+<p>A leitura de arquivos <i>Therion</i> pelo TopoDroidX é limitada.
 Somente dados no formato "normal" são compreendidos.
 Os comandos Therion "units", "flag", "extend", "mark" e "station" são reconhecidos.</p>
 
@@ -744,7 +742,7 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date">2023-05-07</span> &mdash; Referente ao commit: <span id="last-update-commit">fa0f960b5</span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date">2023-05-15</span> &mdash; Referente ao commit: <span id="last-update-commit">0222a549b</span></p>
   <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
 
