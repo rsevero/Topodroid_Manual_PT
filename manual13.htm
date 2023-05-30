@@ -203,11 +203,11 @@ Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses
 
 <p>As unidades de medida usadas são "metros" e "graus".</p>
 
-<p>Configurações:</p>
+<p>Configurações auxiliares estão disponíveis em <i>IMPORTAR/EXPORTAR >> Visual Topo</i>:</p>
 <ul>
-<li><u>Formato Trox</u>: por padrão os dados são gravados no formato "tro".</li>
-<li><u>Aux VisualTopo</u>: define se medidas auxiliares serão incluídas.</li>
-<li><u>EDTC em DE</u>: define se as medidas auxiliares serão referenciadas às bases DE ou PARA.</li>
+<li><u>Aux VisualTopo</u>: define se as medidas auxiliares serão incluídas. [A]</li>
+<li><u>EDTC em DE</u>: quando habilitado, as medidas auxiliares são referenciadas às bases DE. [N]</li>
+<li><u>Formato Trox</u>: por padrão os dados são gravados no formato "tro". [N]</li>
 </ul>
 
 <p><b id="walls">Walls</b> (.srv)</p>
@@ -216,7 +216,7 @@ Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses
 
 <p>As unidades de medidas são as definidas pelo usuário.</p>
 
-<p>Se a opção "Aux Compass/Walls" estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas".
+<p>Se a opção <i>IMPORTAR/EXPORTAR >> Compass >> Aux Compass/Walls</i> estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas". [A]
 Do contrário, são exportadas como "medidas anônimas" tendo seu comprimento ajustado para a projeção relevante.
 O componente vertical dessas medidas pode ser recuperado através da inclinação.
 Veja o manual do <i>Walls</i>.</p>
@@ -232,7 +232,7 @@ Veja o manual do <i>Walls</i>.</p>
 
 <p>Configurações:</p>
 <ul>
-<li><u>Pref base</u>: prefixo incluído nos nomes das bases na exportação.</li>
+<li><u>Pref base</u>: um prefixo sreá incluído nos nomes das bases no arquivo exportado.</li>
 </ul>
 
 <p><b id="ptopo">PocketTopo</b> (.top)</p>
@@ -241,15 +241,14 @@ Veja o manual do <i>Walls</i>.</p>
 
 <p>Os arquivos PocketTopo exportados contém somente os dados da topo.</p>
 
-<p>Se a política de nomeação de bases <i>TopoRobot</i> estiver selecionada e os nomes das bases seguir o padrão TopoRobot "series.number" esses nomes serão usados na exportação.
-Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses nomes serão usados, do contrário os nomes das bases serão convertidos para números.
-Letras são substituídas por dois dígitos cada.
+<p>Se a configuração <i>Dados Topo >> Nomear bases</i> estiver na opção <i>TopoRobot</i> e os nomes das bases seguirem o padrão TopoRobot — "series.number" —, esses nomes são usados na exportação, do contrário os nomes das bases são convertidos em números.
+As letras são substituídas por dois dígitos cada.
 Por exemplo, 'a' é substituído por '00', 'b' por '01' e assim sucessivamente, 'A' por '50', 'B' por '51' e assim por diante.
 Todos os outros caracteres, não alfanuméricos são substituídos por '99'.</p>
 
 <p>Os perfis "outline" e "profile" são importados.
-O <i>PocketTopo</i> só utiliza algumas poucas cores para distinguir tipos de linhas, desta forma um <a href="page_pt_cmap.htm">mapeamento</a> de cores para tipos de linhas do TopoDroidX é usado.
-Esse mapeamento pode ser alterado através de opções de configuração.</p>
+O <i>PocketTopo</i> só utiliza algumas poucas cores para distinguir tipos de linhas, desta forma é usado um <a href="page_pt_cmap.htm">mapeamento</a> de cores para tipos de linhas do TopoDroidX.
+Esse mapeamento pode ser alterado através da configuração <i>IMPORTAR/EXPORTAR >> IMPORTAR >> Esquema cor</i>.</p>
 
 <p>Pode acontecer que o croqui importado não esteja alinhado com os dados da topo.
 Nessa situação você pode arrastar o croqui na tela de <u>desenho</u> para que encaixe na linha de trena.</p>
@@ -279,7 +278,7 @@ O perfil nas bases é calculado projetando as medidas auxiliares no plano vertic
 <p>Configurações (em configurações "Survex"):</p>
 
 <ul>
-<li><u>Term linha Survex/Topo</u> pode ser Linux ou Windows.</li>
+<li><u>Term linha Survex/Topo</u> pode ser formato Linux ou Windows.</li>
 </ul>
 
 <p><b id="csv">CSV</b> (.csv)</p>
@@ -292,10 +291,10 @@ O perfil nas bases é calculado projetando as medidas auxiliares no plano vertic
 <li>direção no perfil retificado</li>
 </ul>
 
-<p>Os comentários das medidas não são exprotadas.
+<p>Os comentários das medidas não são exportados.
 Um cabeçalho indicando o conteúdo de cada coluna é anexado aos dados.</p>
 
-<p>Os dados brutos podem também ser exportados em formato CSV.
+<p>Os dados brutos também podem ser exportados em formato CSV.
 Nesse caso cada linha de dados é composta por:</p>
 
 <ul>
@@ -307,19 +306,19 @@ Nesse caso cada linha de dados é composta por:</p>
 <li>Direção no perfil retificado, categoria, tipo, situação e comentário</li>
 </ul>
 
-<p>Na exportação de dados brutos as visadas não tem seus valores calculados (média), são exportados em formato original, individualmente. </p>
+<p>Na exportação de dados brutos as visadas não têm seus valores calculados (média), são exportados em formato original, individualmente. </p>
 
-<p>Configurações:</p>
+<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> CSV</i>: [T]</p>
 
 <ul>
 <li><u>CSV bruto</u>: habilita a exportação de dados brutos em formato CSV</li>
-<li><u>Separ campo CSV</u>: separador de campos nos arquivos CSV exportados (vírgula, traço vertical ou tab)</li>
+<li><u>Separ campo CSV</u>: escolhe o tipo de separador de campos nos arquivos CSV exportados (vírgula, traço vertical ou tabulação)</li>
 <li><u>Separ linha CSV</u>: separador de linhas nos arquivos CSV exportados (Linux ou Windows)</li>
 </ul>
 
 <p><b id="dxf">DXF</b> (.dxf)</p>
 
-<p>Os dados da topo podem ser exportados no formato 3D DXF <i>LibreCAD</i> com camada:</p>
+<p>Os dados da topo podem ser exportados no formato 3D DXF <i>LibreCAD</i> com as camadas:</p>
 
 <ul>
 <li>bases</li>
@@ -329,18 +328,15 @@ Nesse caso cada linha de dados é composta por:</p>
 
 <p>Os dados são exportados com correção relativa à declinação magnética.</p>
 
-<p>Configurações:</p>
+<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> DXF</i>: [T]</p>
 
 <ul>
-<li><u>Final aux DXF</u>: medidas auxiliares exportadas com marcas em cruz na sua extremidade final</li>
+<li><u>Final aux</u>: as medidas auxiliares exportadas possuem a extremidade final com marcas em cruz.</li>
+<li><u>Versão</u>: permite selecionar a versão de destino entre R12, R13 e R14.</li>
+<li><u>Splines</u>: habilita a interpolação cúbica de splines.</li>
+<li><u>Referência</u>: inclui os eixos XY na exportação de croquis DXF.</li>
+<li><u>Camadas croquis</u>: habilita a criação de camadas DXF por croquis.</li>
 </ul>
-
-<p><b id="plt">PLT</b> (.plt)</p>
-
-<p>Os dados da topo podem ser exportados como arquivo de trilha no formato <i>OziExplorer</i> se houver alguma base geoferenciada.</p>
-
-<p>Se a topo tiver partes desconectadas entre si, o arquivo de trilhas exportado conterá todas as partes que contarem com alguma base georeferenciada.
-Os dados são exportados com correção relativa à declinação magnética.</p>
 
 <p><b id="kml">KML</b> (.kml)</p>
 
