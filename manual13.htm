@@ -421,7 +421,7 @@ Do contrário os dados serão exportados no sistema local de coordenadas sem cor
   </li>
 </ul>
 
-<h4>Exportação de croquis</h4>
+<h4 style="text-transform: uppercase;">Exportação de croquis</h4>
 
 <p>O TopoDroidX exporta croquis nos seguintes formatos:</p>
 
@@ -430,11 +430,11 @@ Do contrário os dados serão exportados no sistema local de coordenadas sem cor
 <li><a href="#csx">cSurvey</a></li>
 <li><a href="#dxf2">DXF</a></li>
 <li><a href="#pdf">PDF file</a></li>
-<li><a href="#shp2">shapefile</a></li>
+<li><a href="#shp2">SHP (ShapeFile)</a></li>
 <li><a href="#svg">SVG</a></li>
 <li><a href="#th2">Therion</a></li>
 <li><a href="#tunnel">Tunnel</a></li>
-<li><a href="#xvi">XVI</a></li>
+<li><a href="#xvi">XVI (xTherion)</a></li>
 </ul>
 
 <p><b id="csx">cSurvey</b> (.csx)</p>
@@ -442,7 +442,7 @@ Do contrário os dados serão exportados no sistema local de coordenadas sem cor
 <p>Os arquivos exportados no formato <i>cSurvey</i> podem ser lidos no cSurvey versão 1.20 ou superior.</p>
 
 <p>Estes arquivos contém tanto a planta baixa como o perfil, além dos dados da topo.
-Se houverem pontos do tipo "corte" definidos, os croquis dos cortes são incluídos no local definido pelo ponto.</p>
+Se houverem sido definidos pontos do tipo "corte", os croquis dos cortes são incluídos no local definido pelo ponto.</p>
 
 <p>O atributo cSurvey "cave" é definido com o nome da topo, e o atributo "branch" com o nome do croqui (sem o sufixo "p" ou "s").
 As visadas, medidas auxiliares e elementos dos croquis compartilham esses atributos.</p>
@@ -452,11 +452,13 @@ Se a topo for composta de mais de um croqui, você precisará exprotar cada croq
 
 <p>Os elementos dos croquis são distribuídos em camadas apropriadas do <i>cSurvey</i>.</p>
 
+<p>Na caixa de diálogo de exportação será oferecida a opção para acrescentar o prefixo da caverna aos nomes das bases.</p>
+
 <p>Configurações:</p>
 
 <ul>
-<li><u>Pref base</u>: incluir prefixo nos nomes das bases</li>
-<li><u>Espaçamento ponto</u>: distância máxima entre pontos em uma linha suave exportada</li>
+<li><i> IMPORTAR/EXPORTAR >> cSurvey >> Pref base</i>: incluir prefixo nos nomes das bases. [N[</li>
+<li><i> IMPORTAR/EXPORTAR >> Espaçamento ponto</i>: distância máxima entre pontos em uma linha suave exportada. [E]</li>
 </ul>
 
 <p><b id="th2">Therion</b> (.th2)</p>
@@ -475,18 +477,24 @@ Os croquis dos cortes são incluídos se houverem pontos do tipo "corte" definid
 
 <p>Se o croqui contiver símbolos não suportados pelo Therion, você deverá incluir o prefixo "u:" nos nomes dos símbolos não suportados antes de ler o arquivo th2 no Therion.</p>
 
+<p>Na caixa de diálogo de exportação serão oferecidas as opções de configuração:</p>
+
+<ul>
+  <li><u>Medidas auxiliares</u>: adicionar linhas "u:splay" aos arquivos th2.</li>
+  <li><u>Imagem XVI</u>: incluir um comando xtherion no arquivo th2 para ler a imagem XVI do croqui.</li>
+  <li><u>Planta baixa e perfil</u>: produzir arquivos th2 tanto para a plana baixa como para o perfil deste croqui.</li>
+  <li><u>Escala 1:</u> define escala dos arquivos th2/xvi produzidos.</li>
+  <li><u>Espaçamento pontos</u>: espaçamento mínimo entre pontos consecutivos de linhas.</li>
+</ul>
+
 <p>Configurações:</p>
 
 <ul>
-<li><u>Ponto corte</u>: criar automaticamente ponto de corte atrelado a cada novo corte indicando posição onde apresentar o croqui do corte [padrão sim].</li>
-<li><u>Med aux Therion</u>: adicionar linhas "u:splay" aos arquivos th2 [padrão não].</li>
-<li><u>Imagem XVI</u>: incluir um comando xtherion no arquivo th2 para ler a imagem XVI do croqui [padrão não].</li>
-<li><u>Escala Therion</u>: escala da exportação de arquivos th2/xvi [padrão 1:100].</li>
-<li><u>Dist mín ponto linha</u>: distância mínima entre pontos de uma linha de tipo normal. Pontos intermediários não são exportados [padrão 20 cm].</li>
+  <li><u>Ponto corte</u>: criar automaticamente ponto de corte atrelado a cada novo corte indicando posição onde apresentar o croqui do corte.</li>
 </ul>
 
-<p>Imagens no formato XVI não são automaticamente exportadas com os arquivos "th2" do Therion mesmo que seja incluído o comando xtherion para lê-la pois essas imagens não conteriam nenhuma informação além da já presente no arquivo "th2".
-O comando de leitura de imagem XVI pode ser usado para carregar no xtherion uma imgem XVI criada por outro programa.</p>
+<p>Imagens no formato XVI não são automaticamente exportadas com os arquivos "th2" do Therion mesmo que seja incluído o comando xTherion para lê-las pois essas imagens não possuem nenhuma informação além da já presente no arquivo "th2".
+O comando de leitura de imagem XVI pode ser usado para carregar no xTherion uma imagem XVI criada por outro programa.</p>
 
 <p><b id="tunnel">Tunnel</b> (.xml)</p>
 
@@ -494,32 +502,36 @@ O comando de leitura de imagem XVI pode ser usado para carregar no xtherion uma 
 
 <p>Os arquivos são gravados no subdiretório "tnl".</p>
 
-<p>Os tipos de linhas abaixo são convertidas para linhas Tunnel: parede, presumida, poço, chaminé e rampa (desnível).
-Todos os outros tipos de linhas são convertidas para linhas Tunnel do tipo "details".</p>
+<p>Os tipos de linhas abaixo são convertidos para linhas Tunnel: parede, presumida, poço, chaminé e rampa (desnível).
+Todos os outros tipos de linhas são convertidos para linhas Tunnel do tipo "details".</p>
 
 <p>Bordas de áreas são convertidas para linhas Tunnel do tipo "filled".</p>
 
 <p>Os seguintes tipos de pontos são convertidos para pontos Tunnel: água, areia, argila, arqueo, blocos, canudo, coluna, corrente de ar, cortina, escorrimento, estalactite, estalagmite, fluxo de água, gradiente, guâno, lama, pipoca e seixos.
 Todos os outros tipos de pontos são convertidos para pontos Tunnel do tipo "bedrock".</p>
 
-<p><b id="xvi">Xtherion</b> (.xvi)</p>
+<p><b id="xvi">xTherion</b> (.xvi)</p>
 
-<p>Os arquivos XVI exportados podem ser inseridos como imagens de fundo no xtherion.</p>
+<p>Os arquivos XVI exportados podem ser inseridos como imagens de fundo no xTherion.</p>
 
 <p>As linhas do tipo "parede" são vermelhas, "rampas" são laranjas, "corte" são cinzas e todas as outras são marrons.
 Bordas de áreas são pretas.
 Os ícones dos pontos são representados de uma maneira simplificada.
-A representação de textos suporta somente os caracteres latinos, os dígitos e alguns poucos caracteres ('+', '-', '/', '_', '&gt;', '&lt;', '?').
+A representação de textos suporta somente os caracteres latinos, os dígitos e alguns poucos caracteres especiais ('+', '-', '/', '_', '&gt;', '&lt;', '?').
 Outros caracteres são representados por um "diamante".</p>
 
 <p>A célula da grade é de 1 m.</p>
 
-<p>As configurações XVI estão junto às configurações Therion:</p>
+<p>Configuração oferecida na caixa de diálogo de exportação:</p>
 
 <ul>
-<li><u>Ponto corte</u>: se há pontos de corte definidos, o croqui do corte é incluído no arquivo XVI, na posição definida pelo ponto "corte"</li>
-<li><u>Grade</u>: incluir linhas de grade no arquivo exportado (tamanho da célula igual a da grade atual) [padrão não]</li>
-<li><u>Escala Therion</u>: escala de exportação [padrão 1:100]</li>
+  <li><u>Medidas auxiliares</u>: adicionar as medidas auxiliares no arquivo XVI.</li>
+</ul>
+
+<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> Therion</i> que afetam a exportação de arquivos XVI:</p>
+
+<ul>
+  <li><u>Escala Therion</u>: escala de exportação dos arquivos XVI.</li>
 </ul>
 
 <p><b id="cave3d">Cave3D</b> (.c3d)</p>
