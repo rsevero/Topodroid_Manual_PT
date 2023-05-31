@@ -345,11 +345,11 @@ Nesse caso cada linha de dados é composta por:</p>
 <p>Se a topo tiver partes desconectadas entre si, o arquivo de trilhas exportado conterá todas as partes que contarem com alguma base georeferenciada.
 Os dados são exportados com correção relativa à declinação magnética.</p>
 
-<p>Configurações:</p>
+<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]</p>
 
 <ul>
-<li><u>Base KML/GeoJSON/SHP</u>: incluir bases no arquivo KML exportado</li>
-<li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo KML exportado</li>
+<li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
+<li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
 </ul>
 
 <p><b id="geojson">GeoJSON</b> (.json)</p>
@@ -361,16 +361,16 @@ Os dados são exportados com correção relativa à declinação magnética.</p>
 <p>Se a topo tiver partes desconectadas entre si, o arquivo exportado conterá todas as partes que contarem com alguma base georeferenciada.
 Os dados são exportados com correção relativa à declinação magnética.</p>
 
-<p>Configurações:</p>
+<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]</p>
 
 <ul>
-<li><u>Base KML/GeoJSON/SHP</u>: incluir bases no arquivo GeoJSON exportado</li>
-<li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo GeoJSON exportado</li>
+<li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
+<li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
 </ul>
 
 <p><b id="gpx">GPX</b> (.gpx)</p>
 
-<p>Os arquivos <i>GPX</i>  (.gpx) exportados incluem as bases como "waypoints" e a linha de trena como "track".</p>
+<p>Os arquivos <i>GPX</i>  (.gpx) exportados incluem as bases como pontos de passagem (<i>waypoints</i>) e a linha de trena como trajeto (<i>track</i>).</p>
 
 <p><b id="shp">Shapefile</b> (.shp .shx .dbf)</p>
 
@@ -379,13 +379,12 @@ Os dados são exportados com correção relativa à declinação magnética.</p>
 <p>É criado um shapefile para as bases e outro para as medidas (visadas e medidas auxiliares).
 </p>
 
-<p>Se a topo tiver partes desconectadas entre si, será criado um shapefile para cada partes que contar com alguma base georeferenciada.
-Os dados são exportados com correção relativa à declinação magnética.</p>
+<p>Se a topo tiver partes desconectadas entre si, será criado um shapefile para cada partes que contar com alguma base georeferenciada.</p>
 
 <p>Cada shapefile é composto por três arquivos: dados (.shp), índice (.shx) e atributos (.dbf).
 Os três arquivos são compactados no formato zip. O arquivo zip é gravado no diretório "shp" com a extensão ".shz".</p>
 
-<p>Se houver ao menos uma base georeferenciada e a opção apropriada tiver sido amrcada na caixa de diálogo de exportação, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
+<p>Se houver ao menos uma base georeferenciada e a configuração <i>IMPORTAR/EXPORTAR >> SHP >> Croqui georeferenciado</i> estiver habilitada, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
 Do contrário os dados serão exportados no sistema local de coordenadas sem correção relativa à declinação magnética.</p>
 
 <p>O arquivo DBF das bases contém somente o campo "nome".</p>
@@ -406,11 +405,20 @@ Do contrário os dados serão exportados no sistema local de coordenadas sem cor
 <li><i>comment</i>: comentário</li>
 </ul>
 
-<p>Configurações:</p>
+<p>Configurações disponíveis em:</p>
 
 <ul>
-<li><u>Base KML/GeoJSON/SHP</u>: incluir bases no arquivo shapefile exportado</li>
-<li><u>Aux KML/GeoJSON/SHP</u>: incluir medidas auxilares no arquivo shapefile exportado</li>
+  <li><i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]
+    <ul>
+      <li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
+      <li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
+    </ul>
+  </li>
+  <li><i>IMPORTAR/EXPORTAR >> ShapeFile</i>: [T]
+    <ul>
+      <li><u>Croqui georeferenciado</u>: habilita a exportação do croqui no formato WGS84, lat-long</li>
+    </ul>
+  </li>
 </ul>
 
 <h4>Exportação de croquis</h4>
