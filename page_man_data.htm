@@ -1,27 +1,30 @@
-<html><body>
+<html>
+    <body>
+        <h4 style="text-transform: uppercase;">Entrada manual de dados</h4>
 
-<h4>MANUAL DATA INPUT</h4>
+        <p>Se você não tiver um dispositivo Bluetooth é possível entrar dados manualmente.</p>
 
-If you do not have a bluetooth device you can still enter the shot data manually. 
-The <i>Add</i> button opens the dialog for the shot data input. 
-You must enter the station names and the shot data (length, azimuth, and clino).
-The <i>reverse</i> button swaps the stations, ie, reverse the shot.<br><p>
+        <p>O botão <i>Adicionar</i> <img src="btn_plus.png" style="background-color: black" width="36" height="36"> da tela <u>Dados topo</u> abre a caixa de diálogo para a entrada de dados de uma medida.</p>
 
-If only the backward fields are filled in (the forward fields are left empty)
-the shot is entered with the backward data.<br><p>
+        <p>Você deve cadastrar os nomes de bases e os dados (distância, azimute e inclinação).</p>
 
-To add a splay shot enter "." (period) or "-" (dash) in the TO station.
-LRUD can be added to a splay shot, thus providing additional splay shots.
-In this case the LRUD refer to the FROM station.<br><p>
+        <p>O botão <i>Inverter</i> inverte os nomes das bases, ou seja, transforma a medida na sua contra medida.</p>
 
-There is a warning if, upon editing a leg shot, it differs from another leg between the same stations more than one fourth in length, or 15&deg;.<br><p>
+        <p>É possível preencher somente os dados da contra visada deixando os campos das informações da visada em branco quando a opção de configuração <i>Dados topo >> Dados medidas >> Contra visada</i> [A] estiver habilitada. </p>
 
-Buttons:
-<ul>
-<li><b>Save</b> inserts the shot into the survey, and updates the station names incrementing them so that
-the dialog is ready to input the next shot</li>
-<li><b>OK</b> inserts the shot in the survey, and closes the dialog.</li>
-</ul><br><p>
+        <p>Para cadastrar uma medida auxiliar use "." (ponto) ou "-" (hífen) como nome da base PARA.</p>
+
+        <p>Medidas EDTC podem ser incluídas em uma visada criando automaticamente medidas auxiliares correspondentes.
+        Neste caso as medidas EDTC se referem à base DE.</p>
+
+        <p>Um alerta é apresentado se, ao editar uma visada, esta diferir de outra visada já existente entre as mesmas bases em mais de um quarto da distância ou 15°.</p>
+
+        <p>Botões:</p>
+
+        <ul>
+            <li><b>Gravar</b>: cria a medida e atualiza os nomes de bases incrementando o próximo nome de base a ser criado de forma que a caixa já esteja pronta para cadastrar a próxima visada.</li>
+            <li><b>OK</b>: cria a medida na topo e fecha a caixa de diálogo.</li>
+        </ul>
 
 <b>Using Android for the direction</b><br>
 Azimuth and clino can be set using the Android sensors [G]:<br>

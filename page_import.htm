@@ -1,32 +1,39 @@
-<html><body>
+<html>
+    <body>
+        <h4>Importação topo</h4>
 
-<h4>SURVEY IMPORT</h4>
+        <p>Essa caixa de diálogo é acessada com um clique no botão <i>Importar</i> na tela <u>Principal</u>. </p>
 
-This dialog is opened with a tap on the <i>Import</i> button of the <u>Main window</u>.<br><p>
+        <p>Apresenta a lista de formatos suportados: dat (Compass), svx (Survex), th (Therion), tro e trox (VisualTopo), csn (CaveSniper), top (PocketTopo) e arquivos zip do TopoDroidX. </p>
 
-It displays the list of supported import file formats:
-dat (Compass), svx (Survex), th (Therion), tro and trox (VisualTopo),
-csn (CaveSniper), top (PocketTopo), and TopoDroid zip archives.<br>
-The import file is selected with the system content provider.<br><p>
+        <p>O arquivo a ser importado é selecionado através da tela padrão do Android. </p>
 
-For some formats it is possible to customize the import through a few flags.<br>
+        <p>A importação de alguns formatos pode ser configurada através de opções específicas.</p>
 
-<b>Compass (dat) import options</b>
-<ul>
-<li><i>LRUD</i> if enabled LRUD values are imported and converted to splay shots</li>
-<li><i>Leg first</i> if enabled LRUD splays are placed after the leg</li>
-<li><i>Diving datamode</i> enable for data diving mode in the Compass file [T]</li>
-</ul><br><p>
+        <p><b>Compass (dat)</b></p>
 
+        <ul>
+            <li><i>Importar EDTC</i>: quando habilitada, os valores das medidas EDTC são importadas e convertidas para medidas auxiliares.</li>
+            <li><i>Visada antes de EDTC</i>: quando habilitada, as medidas EDTC são importadas após a respectiva visada.</li>
+            <li><i>Modo de dados 'mergulho'</i>: habilita importação de arquivos no modo 'mergulho'. [T]</li>
+        </ul
 
-<b>VisualTopo (tro, trox) import options</b>
-<ul>
-<li><i>LRUD</i> if enabled LRUD values are imported and converted to splay shots</li>
-<li><i>Leg first</i> if enabled LRUD splays are placed after the leg</li>
-</ul><br><p>
+        <p><b>VisualTopo (tro, trox)</b></p>
 
-<b>N.B.</b>
-Import may fail (and crash the app) due to failure on the database that TopoDroid cannot intercept.
-If this happens delete the partially imported survey and retry to import it.<br><p>
+        <ul>
+            <li><i>Formato de arquivo Trox</i></li>
+            <li><i>Importar EDTC</i>: quando habilitada, os valores das medidas EDTC são importadas e convertidas para medidas auxiliares.</li>
+            <li><i>Visada antes de EDTC</i>: quando habilitada, as medidas EDTC são importadas após a respectiva visada.</li>
+        </ul>
 
-</body></html>
+        <p><b>Obs.</b>: a importação pode falhar (e derrubar o APP) devido a um erro no banco de dados que o TopoDroidX não consiga interceptar.</p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-06-06</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit">598517a69</span></p>
+            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            <p style="margin:0;">Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+          
+    </body>
+</html>
