@@ -93,7 +93,7 @@ become effective.<br><p>
 <li>SVG export:<br>
   <ul>
   <li>SVG roundtrip [no]</li>
-  <li>Add grid to SVG export. [no]</li>
+  <li>Add sketch grid to SVG export. [no]</li>
   <li>Line orientation. [no]</li>
   <li>Include splays. [no]</li>
   <li>Point stroke. [0.5]</li>
@@ -119,7 +119,7 @@ become effective.<br><p>
   <ul>
   <li>Image resolution [0.5, 100]. Default 1.5 [x200 px]</li>
   <li>Background color (RGB in 0-100). [0 0 0, ie, black]</li>
-  <li>Grid: add metric grid</li>
+  <li>Grid: add metric sketch grid</li>
   <li>Splays: add splay lines</li>
   <li>Stations: add stations</li>
   </ul>
@@ -221,8 +221,8 @@ Custom Data settings
 <li>Diving mode</li>
 <li>Recent data highlight</li>
 <li>Recent data timeout</li>
-<li>Fractional "extend"</li>
-<li>Backshot DistoX. [no]</li>
+<li>Fractional "extend": whether to allow fractional extend. [no]</li>
+<li>Backshot DistoX: whether to swap stations for DistoX backshots. [no]</li>
 <li>Plane interpolation</li>
 <li>Android sensors [no]</li>
 <li>Loop closure: none, normal, weighted, selective, triangulation [no]</li>
@@ -240,7 +240,7 @@ Custom Data settings
 
 <b>Sketching</b><br>
 <ul>
-<!-- li>Drawing tool picker {recent,list,grid,triple grid}. [most-recent]</li -->
+<!-- li>Drawing tool picker {recent, list, grid, triple grid}. [most-recent]</li -->
 <li>Corner drag. Enable corner-drag in <u>Drawing window</u> and <u>Overview window</u>. [no]</li>
 <li>Zoom controls {off,temporary,permanent}. [off]</li>
 <li>x-section horizontal threshold</li>
@@ -272,7 +272,7 @@ Line Tools
 <ul>
 <li>Lines width (N.B. wall line are twice this). [1 px]</li>
 <li>Line style scale factor</li>
-<li>Line style {Bezier,fine,normal,coarse, simplified}. [normal]</li>
+<li>Line style {Bezier, fine, normal, coarse, simplified}. [normal]</li>
 <li>Line close. Whether to close lines of "closed" type. [yes]</li>
 <li>Line-point spacing. Minimum distance between line points. [10 px]</li>
 <li>Section lines "direction tick" size [1,20]. Default 8 [x unit]</li>
@@ -363,17 +363,27 @@ Surface DEM
 
 Wall model
 <ul>
-<li>Using splays</li>
-<li>All splays</li>
-<li>Projected splays</li>
-<li>Splay threshold</li>
-<li>Split triangles</li>
-<li>Random split</li>
-<li>Stretch split</li>
-<li>Powercrust delta parameter</li>
-</ul><br><p>
+<li><i>Splays</i> use {none, normal, xsection} [normal]</li>
+<li>Hull wall model<ul>
+  <li><i>Project splays</i> on the normal plane [no]</li>
+  <li>Splay <i>threshold</i>: use only splays extending out of the shot (angle cosine) [0.5 ie 30&deg;]</li>
+</ul></li>
+<li>Convex hull wall model<ul>
+  <li>All splays [yes]</li>
+  <li>Split intersecting <i>triangles</i> [yes]</li>
+  <li>Random <i>point shift</i> [0.1m]</li>
+  <li><i>Leg</i> stretch [0.1 m]</li>
+</ul></li>
+<li>Powercrust wall model<ul>
+  <li><i>Delta</i> parameter</li>
+</ul></li>
+</ul><p>
 
-<!-- 3D modeling -->
+3D modeling
+<ul>
+<li>3D model enable [no]</li>
+<li>Splay <i>buffer</i> (unused) [2]</li>
+</ul><br><p>
 
 <!-- ========================================== -->
 

@@ -1,106 +1,57 @@
-<html>
-    <body>
-        <h3>GUIA RÁPIDO TopoDroidx</h3>
+<html><body>
 
-        <p>Esta página cobre as funcionalidades básicas do TopoDroidX.
-        Consulte o <a href="manual00.htm">Manual do Usuário</a> para maiores detalhes.</p>
+<h3>TopoDroid QUICK GUIDE</h3>
 
-        <p><b>[1] Pareando um dispositivo com o Android</b></p>
+This page covers the basics of TopoDroid. Refer to the user manual for more details.<br><p>
 
-        <p>O dispositivo de medição a ser usado deve ser previamente pareado com o Android.
-        Isso deve ser feito para todos os tipos de dispositivos (DistoX, SAP5 e BRIC4).
-        Use o app "Configurações de seu Android.
-        Ligue seu dispositivo, vá até "rede | bluetooth" e procure por dispositivos bluetooth disponíveis.
-        Seu dispositivo deverá aparecer na lista.
-        Selecione-o e use o PIN "0000" (quatro zeros em sequência) se o Android sperdir um PIN.
-        Se o seu dispositivo seguidamente pedir o PIN, troque a configuração <i>Dispositivos >> Soquete DistoX</i> para a opção "Inseguro".</p>
+<b>[1] Pair the device with Android</b><br>
+The device must be paired with the Android. This should be done also for bluetooth Low-Energy devices (Sap5, Bric4).
+Do that with the "Settings" app. Go to "network | bluetooth", turn the device on, and scan for devices. Your device should be found. Select it and enter the PIN "0000" (four zeros) to pair it with Android if asked to.
+If your device repeatedly asks the pin, set the socket to "insecure" in TopoDroid settings.<br><p>
 
-        <p><b>[2] Selecione o dispostivo no TopoDroidX</b></p>
+<b>[2] Select the device in TopoDroid</b><br>
+Start TopoDroid. To tell it to work with your device, tap the <i>Device</i> button. The name and address of your device should appear in the list. To select it tap its address, so that it appears in the top row.<br><p>
 
-        <p>Inicie o TopoDroidX.
-        Para que o TopoDroidX trabalhe com o dispositivo desejado, clique no botão <i>Dispostivo</i> <img src="btn_distox.png" style="background-color: black" width="36" height="36"> na tela <u>Principal</u>.
-        O nome e o endereço MAC do seu dispositivo deverá ser apresentado na lista.
-        Para selecioná-lo, clique no seu endereço de forma que passe a ser apresentado na parte superior da tela</p>
+<b>[3] Calibrate the device</b><br>
+If your device is not calibrated, you need to calibrate it. 
+For the DistoX this can be done with TopoDroid: refer to the user manual.<br>
+For the Sap5 and the Bric4 this is done by the device, without the app.<p>
 
-        <p><b>[3] Calibre o dispositivo</b></p>
+<b>[4] Create a new survey</b><br>
+Tap on the <i>plus</i> button in the <u>Main window</u>, and enter the survey name and the surveyors in the dialog. Close the dialog tapping "Save".<br><p>
 
-        <p>Se o seu dispositivo não foi calibrado, você precisará calibrá-lo.
-        No caso da DistoX você precisará do TopoDroidX para isso: <a href="page_calib_howto.htm">Calibração DistoX</a>.
-        No caso do SAP5 e da BRIC4, isso é feito diretamente no dispositivo, sem o auxílio do TopoDroidX.</p>
+<b>[5] Open the survey</b><br>
+Tapping the survey name in the list of the <u>Main window</u>, takes you to the <u>Survey Data window</u>.<br>
+This step can be skipped if you press "Open" in step [4].<br><p>
 
-        <p><b>[4] Crie uma nova topo</b></p>
+<b>[6] Take shots and download them</b><br>
+Take the survey shots: go to the first station, take the splay shots, them measure the leg at least three times.
+Move to the next station and repeat this procedure.<br>
+Tap the <i>download</i> button, the leftmost, in the <u>Survey Data window</u>. The download should start and the data appear in a list. Stations are automatically assigned. Make sure TopoDroid did not make any mistake. In case correct them by editing the shot.<br><p>
 
-        <p>Clique no botão <i>Mais</i> <img src="btn_plus.png" style="background-color: black" width="36" height="36"> na tela <u>Principal</u> e informe o nome da topo e os nomes dos integrantes da equipe de topo na caixa de diálogo apresentada.
-        Feche a caixa de diálogo clicando no botão <i>Gravar</i>.</p>
+<b>[7] Create a sketch</b><br>
+Each TopoDroid sketch consists of a plan view and an extended profile view.
+Tap on the the <i>sketch</i> button (the fourth), and tap on <i>new sketch</i>: enter the name of a station that serves as sketch origin in the second field. Tap <i>OK</i> to open the <u>Drawing window</u> for the new sketch.<br><p>
 
-        <p><b>[5] Abra a topo</b></p>
+<b>[8] Draw the sketch</b><br>
+TopoDroid displays a canvas with a sketch grid, the midline, the splays, and the stations. This is the plan view. Select the "draw" mode (leftmost button) and start drawing (lines). Switch off the "draw" mode tapping it again, and go to the profile view (sixth button). Draw the profile. Close the window and return to the shot list.<br><p>
 
-        <p>Clique no nome da topo na lista apresentada na tela <u>Principal</u> para que seja apresentada a tela <u>Dados topo</u>.
-        Este passo pode ser omitido se você clicar no botão <i>Abrir</i> no passo [4].</p>
+<b>[9] Complete the survey</b><br>
+Repeat from point [6], Take a couple more legs. At step [7] tap the sketch name to re-open it in the <u>Drawing window</u>.<br><p>
 
-        <p><b>[6] Realize medições e baixe-as para o TopoDroidX</b></p>
+<b>[10] Make a ZIP backup</b><br>
+When you are done go to the <u>Survey Info window</u>, choose the <i>Export</i> menu, and select the <i>ZIP</i> format: this creates a zip archive of your survey.<br><p>
 
-        <p>Realize as medições desejadas: vá até a primeira base, produza as medidas auxiliares e então meça a visada três vezes.
-        Vá até a próxima base e repita esse procedimento.</p>
+<b>[11] Export the data</b><br>
+Then export the survey data in the format of your PC cave program. Open again the menu and tap <i>Export</i>.
+Pick your file-format. For some formats you can also choose some export options.<br><p>
 
-        <p>Clique no botão <i>Baixar</i> <img src="btn_download.png" style="background-color: black" width="36" height="36"> na tela <u>Dados topo</u>.
-        O download deve começar e os dados devem aparecer na lista.
-        Os nomes das bases são criados automaticamente.
-        Verifique que o TopoDroidX nomeou as bases corretamente.
-        Se for necessário, corrija os nomes errados editando a medida.</p>
+<b>[12] Export the sketch</b><br>
+Back to the <u>Drawing window</u> open the menu (rightmost button) and select <i>Export</i>. Pick you favourite format, and tap <i>Save</i>. For <i>cSurvey</i> you need to export only the plan view. For other formats you must also export the profile view. You might need to export also the xsections.<br><p>
 
-    <p><b>[7] Crie um croqui</b></p>
+<b>[13] Transfer exports</b><br>
+The exported files are in the <i>out</i> subfolder of the survey folder.
+Transfer them to the PC and finish your cave map.<br><p>
 
-    <p>Cada croqui do TopoDroidX é composto por uma planta baixa e um perfil (retificado ou projetado).
-    Clique no botão <i>Croqui</i> <img src="btn_sketch.png" style="background-color: black" width="36" height="36"> e clique no botão <i>Novo</i>: informe, no segundo campo, o nome da base que servirá de origem do novo croqui.
-    Clique no botão <i>Ok</i> para abrir a tela <u>Desenho</u> com o novo croqui.</p>
-
-    <p><b>[8] Desenhando o croqui</b></p>
-
-    <p>O TopoDroidX apresenta a tela com a grade, a linha de trena, as medidas auxiliares e as bases.
-    Esta é a planta baixa.
-    Selecione o modo <b>Desenhar</b> clicando no botão <i>Desenhar</i> <img src="btn_edit.png" style="background-color: black" width="36" height="36"> e comece a desenhar linhas.
-    Deslique o modo <b>Desenhar</b> clicando novamente no mesmo botão e clique no botão <i>Planta baixa/Perfil</i> <img src="btn_plan.png" style="background-color: black" width="36" height="36"> para visualizar o perfil.
-    Desenhe o perfil.
-    Feche a tela e retorne para a tela <u>Dados topo</u>.</p>
-
-    <p><b>[9] Termine a topo</b></p>
-
-    <p>Repita os passos a partir do [6], meça mais visadas.
-    No passo [7], clique no nome do croqui para reabrí-lo na tela <u>Desenhho</u>.</p>
-
-    <p><b>[10] Crie um backup em formato ZIP</b></p>
-
-    <p>Quando tiver terminado, vá até a tela <u>Info topo</u> clicando na opção de menu <i>Info topo</i> escolha a opçao de menu <i>Exportar</i> e selecione o formato <i>ZIP</i>: dessa maneira será criado um arquivo zip com todos os dados de sua topo.</p>
-
-    <p><b>[11] Exporte os dados</b></p>
-
-    <p>Exporte os dados da topo no formato mais adequado para seu software de finalização de mapas no PC.
-    Abra novamente o menu e clique em <i>Exportar</i>.
-    Selecione o formato adequado.
-    Para alguns formatos são apresentadas algumas <a href="manual13.htm">opções específicas</a>.</p>
-
-    <p><b>[12] Exporte o croqui</b></p>
-
-    <p>Voltando a tela <u>Desenhar</u> abra o menu e clique na opção <i>Exportar</i>.
-    Selecione seu formato favorito e clique em <i>Gravar</i>.
-    Para o formato <i>cSurvey</i> você só precisa exportar a planta baixa.
-    Para os outros formatos é necessário exportar separadamente o perfil.
-    Você pode precisar exportar também os cortes.</p>
-
-    <p><b>[13] Transfira os arquivos exportados</b></p>
-
-    <p>Os arquivos exportados estarão disponí9veis o subdiretório <i>out</i> no diretório da topo.
-    Transfira-os para seu PC e termine seu mapa.</p>
-      
-    <p>
-        <a href="manual16.htm">Principais funcionalidades</a> |
-        <a href="manual17.htm">Índice remissivo</a>
-    </p>
-    
-    <footer style="font-size: 80%; font-style: italic; clear: both;">
-        <p style="margin:0;">Última atualização: <span id="last-update-date">2023-05-07</span> &mdash; Referente ao commit: <span id="last-update-commit">fa0f960b5</span></p>
-        <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-    </footer>
-  </body>
-</html>
+</body></html>
+ 
