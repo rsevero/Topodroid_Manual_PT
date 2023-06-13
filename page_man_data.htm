@@ -26,36 +26,46 @@
             <li><b>OK</b>: cria a medida na topo e fecha a caixa de diálogo.</li>
         </ul>
 
-<b>Using Android for the direction</b><br>
-Azimuth and clino can be set using the Android sensors [G]:<br>
-<img src="btn_compass.png" width="36" border="1" > the reference axis is the direction of the long side of the device.
-A timer (10 s by default) lets you point the device before measuring.<br>
-<img src="btn_photo.png" width="36" border="1" > the reference axis is the normal to the display: 
-look at the TO station on the screen and start the timer when the station is in the
-middle of the cross-hair.<br>
-A warning is shown if the sensor accuracy is low or there is a sensor failure.<br><p>
+        <p><b>usando o Android para definir direção</b></p>
 
-<b>LRUD</b><br>
-If LRUD are specified the respective splay shots are also inserted.
-Additionally you can select whether these refer to the FROM station (default) or to the TO station.<br><p>
+        <p>O azimute e a inclinação podem ser definidos usando-se os sensores do dispositivo Android: [T]</p>
 
-If the shot clino is smaller than the <i>v-threshold</i> setting, the LRUD are in a vertical plane:
-U is upwards, D downwards, L horizontal to the left of the shot (i.e., with azimuth that of the shot minus 90&deg;),
-and R horizontal to the right of the shot.<br><p>
+        <ul>
+            <li>
+                <img src="btn_compass.png" style="background-color: black" width="36" height="36"> : o eixo de referência é a direção do lado mais comprido do dispositivo.
+                Um temporizador (de 10s por padrão) permite que você ajuste a posição do disposito antes da medição ser realizada.
+            </li>
+            <li>
+                <img src="btn_photo.png" style="background-color: black" width="36" height="36"> : o eixo de referência é a normal da tela do dispositivo: olhe para a base PARA na tela e inicie o temporizador quando a base estiver no centro do cursor. Um alerta é apresentado se a sensibilidade do sensor estiver baixa ou houver uma falha no sensor.
+            </li>
+        </ul>
 
-If the shot clino is greater than the <i>v-threshold</i> setting, the LRUD are in a horizontal plane:
-L is west, R is east, U is north, and D is south.<br><p>
+        <p><b>EDTC</b></p>
 
-<b>Units</b><br>
-Data must be entered in the current units.
-For example if the length units are "feet", distances must be entered in "feet".<br><p>
+        <p>Se as medidas EDTC tiverem sido definidas as respectivas medidas auxiliares são também inseridas.
+        É possível também definir se as medidas EDTC definidas são relativas à base PARA ou à base DE.</p>
 
-<div style="font-size=90%">
-<b>Diving mode</b><br>
-In diving mode the shot data are depth, azimuth, and distance.
-The azimuth is assumed taken with a normal compass, with graduation increasing clockwise.
-The azimuth entries are converted as if taken with a caving (geological) compass.
-For example an entry of 340&deg; is converted to 20&deg;.
-</div><br><p>
+        <p>Se a inclinação da visada for menor do que o valor definido na configuração <i>Dados topo >> Dados medidas >> Lim inclin OLNS</i> as medidas EDTC serão posicionadas no plano vertical: E na horizontal à esquerda da visada (ou seja, com o azimute igual ao da visada menos 90&deg;), D na horizontal à direita da visada, T para cima e C para baixo.</p>
 
-</body></html>
+        <p>Se a inclinação da visada for maior do que o valor definido na configuração <i>Dados topo >> Dados medidas >> Lim inclin OLNS</i> as medidas EDTC serão posicionadas no plano horizontal: E à oeste, D à leste, T ao norte e C ao sul.</p>
+
+        <p><b>Unidades</b></p>
+
+        <p>Os dados devem ser registrados na unidade de medidas definida na configuração <i>Dados topo >> Unidades >> Unidade distância</i>: metros ou pés.</p>
+
+        <p><b>Modo mergulho</b></p>
+
+        <p>No modo mergulho os dados que definem as visadas são profundidade, azimute e distância.
+        Trata-se o azimute fornecido como se obtido através de uma bússola comum com a graduação crescendo em sentido horário.
+        Os dados de azimute são convertidos como se tivessem sido obtidas com uma bússola espeleológica (bússola de geólogo).
+        Por exemplo, um valro de 340&deg; é convertido para 20&deg;.</p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-13</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+          
+    </body>
+</html>
