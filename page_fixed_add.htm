@@ -1,50 +1,63 @@
 <html>
-<body>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h2>Inserção de ponto georeferenciado</h2>
 
-<h4>GEO_POINT INSERT</h4>
+        <p>Essa caixa de diálogo é apresentada ao se clicar no botão <i>Criar</i> na tela <a href="page_fixed_list.htm">Pontos georeferenciados</a></p>
 
-This dialog is opened from the <i>Add</i> button in the <a href="page_fixed_list.htm">Geo-points</a> window.<br><p>
+        <p>Essa caixa de diálogo apresenta seis caixas de texto</p>
 
-This dialog has four text fields:
-<ul>
-<li>longitude</li>
-<li>latitude</li>
-<!-- li>ellipsoidic altitude</li -->
-<li>geoid altitude [m]</li>
-<li>accuracy [m]</li>
-</ul>
+        <ul>
+            <li><b>Base</b>: nome da base a qual se quer associar as coordenadas geográficas</li>
+            <li><b>Longitude</b>: gg:mm:ss.sss</li>
+            <li><b>Latitude</b>: gg:mm:ss.sss</li>
+            <li><b>Alt. geóide</b>: em metros</li>
+            <li><b>Acurácia</b>: em metros</li>
+            <li><b>Comentário</b></li>
+        </ul>
 
-To the left of the <i>longitude</i> there is button to specify whether the longitude is east (positive)
-or west (negative). Tapping the button switches between "E" and "W".<br><p>
+        <p>O nome da base informado aqui deve ser exatamente igual ao usado na tela <u>Dados topo</u> incluindo o uso de letras maiúsculas e minúsculas.</p>
 
-To the left of the <i>latitude</i> there is button to specify whether the latitude is north (positive)
-or south (negative). Tapping the button switches between "N" and "S".<br><p>
+        <p>À esquerda do campo <i>Longitude</i> há um botão para definir se a longitude é oriental (à leste, positiva: L) ou ocidental (à oeste, negativa: O). Clicando no botão é alternado entre L e O.</p>
 
-Longitude and latitude can be entered as degrees-minutes-seconds (dd:mm:ss.ss) or as decimal degrees.
-Alternative separators for colon are space, single quote, and the degree symbol.
-Alternative separators for the decimal point are comma and slash.
-<br><p>
+        <p>À esquerda do campo <i>Latitude</i> há um botão para definir se a latitude é boreal (à norte, positiva: N) ou austral (à sul, negativa: S). Clicando no botão é alternado entre N e S.</p>
 
-Longitude and latitude can have a negative sign.<br><p>
+        <p>Tanto a longitude quanto a latitude podem ser informadas no formato graus:minutos:segundos (gg:mm:ss.sss) ou no formato de graus decimais (dd.dddddd).
+        Separadores alternativos aos dois pontos também aceitos: espaço, aspas simples e símbolo de grau. Separados alternativos ao ponto decimal também aceitos: vírgula e barra.</p>
 
-Altitudes are entered in meters. Altitudes are referred to the geoid and can be negative.<br><p>
+        <p>A longitude e a latitude podem ter sinais negativos.</p>   
 
-Buttons:
-<ul>
-<li><b>Clipboard</b>: the coordinates saved to clipboard as "lat,long[,alt]" are copied from the clipboard to the
-respective text fields. With this button you can use the app <i>GPSTest</i> to get the coordinates (altitude must be
-checked when saving data to the clipboard in <i>GPSTest</i>).</li>
-<li><b>View</b> invokes a map app (provided you have one installed) to display the point.</li>
-<li>with <b>Proj4</b> you can enter the coordinates in another Coordinate Reference System. The app <i>Proj4</i>
-is invoked, and you must select the CRS and enter the coordinates on the left side: longitude/East, latitude/North, and geoid altitude.
-Units of altitude and cartographic coordinates are meters. 
-Units of geographical coordinates can be either decimal degrees or degree-minute-seconds.
-Next you tap the conversion arrow and
-the coordinates are converted to geographical WGS84 and sent back to TopoDroid.</li>
-<li><b>Save</b> saves a record with the fixed station data in the database.</li>
-</ul>
-<br><p>
+        <p>Altitudes devem ser informadas em metros em relação à geóide e podem ser negativas.</p>
 
-</body>
+        <p>Botões:</p>
+
+        <ul>
+            <li>
+                <b>Colar</b>: coordenadas disponíveis na área de tranferência no formato "lat,long[,alt]" são copiadas da área de transferência para os respectivos campos de texto.
+                Com esse botão você pode incluir coordenadas obtidas através do app <i>GPSTest</i>.
+                Verifique a altitude ao transferir as coordenadas do <i>GPSTest</i> para a área de transferência.
+            </li>
+            <li><b>Mapa</b>: abre o app de mapa (assumindo que haja um instalado no dispositivo) para que apresente o ponto.</li>
+            <li>
+                <b>Proj4</b>: abre o app Proj4 através do qual você pode converter coordenadas em outros Sistemas de Referência de Coordenadas (SRC).
+                No Proj4 você deverá selecionar o SRC adequado e informar as coordenadas nos campos da esquerda: longitude/leste, latitude/norte e altura em relação à geóide.
+                As unidades de altitude e coordenadas cartográficas são o metro.
+                As unidades de coordenadas geográficas podem tanto ser graus decimais como graus:minutos:segundos.
+                A seguir clique na seta de conversão para que sejam convertidas para coordenadas geográficas no datum WGS84 e enviadas para o TopoDroidX.
+            </li>
+            <li><b>Gravar</b>: grava os dados de georeferenciamento da base no banco de dados.</li>
+        </ul>
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">69a594deb</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+        </footer>
+          
+    </body>
 </html>
-
