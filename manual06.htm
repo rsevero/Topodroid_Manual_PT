@@ -1,5 +1,6 @@
 <html>
 <body>
+  <link rel="stylesheet" href="manual.css">
   <h3>[6] TELA DADOS TOPO</h3>
 
   <p>A <u>tela dados topo</u> apresenta a relação de medidas da topo.</p>
@@ -82,16 +83,16 @@
 
   <h4>BOTÕES</h4>
   <ul>
-    <li><img src="btn_download.png" style="background-color: black" width="36" height="36"> <a href="page_download.htm">Download</a> de dados</li>
-    <li><img src="btn_bluetooth.png" style="background-color: black" width="36" height="36"> <a href="page_bluetooth.htm">Bluetooth</a></li>
-    <li><img src="btn_mode.png" style="background-color: black" width="36" height="36"> <a href="page_displaymode.htm">Quais medidas apresentar</a></li>
-    <li><img src="btn_sketch.png" style="background-color: black" width="36" height="36"> <a href="page_plot_list.htm">Croquis</a></li>
-    <li><img src="btn_note.png" style="background-color: black" width="36" height="36"> <a href="page_survey_notes.htm">Comentários</a> sobre a topo</li>
-    <li><img src="btn_plus.png" style="background-color: black" width="36" height="36"> Inserir uma medida <a href="page_man_data.htm">manualmente</a></li>
-    <li><img src="btn_station.png" style="background-color: black" width="36" height="36"> <a href="page_saved_station.htm">Bases gravadas</a></li>
-    <li><img src="btn_azimuth.png" style="background-color: black" width="36" height="36"> <a href="page_azimuth.htm">Direção no perfil retificado</a></li>
-    <li><img src="btn_search.png" style="background-color: black" width="36" height="36"> <a href="page_search.htm">Pesquisa de bases e visadas</a></li>
-    <li><img src="btn_refresh.png" style="background-color: black" width="36" height="36"> "Atualizar" relação de medidas</li>
+    <li><img src="btn_download.png" class="app_button"> <a href="page_download.htm">Download</a> de dados</li>
+    <li><img src="btn_bluetooth.png" class="app_button"> <a href="page_bluetooth.htm">Bluetooth</a></li>
+    <li><img src="btn_mode.png" class="app_button"> <a href="page_displaymode.htm">Quais medidas apresentar</a></li>
+    <li><img src="btn_sketch.png" class="app_button"> <a href="page_plot_list.htm">Croquis</a></li>
+    <li><img src="btn_note.png" class="app_button"> <a href="page_survey_notes.htm">Comentários</a> sobre a topo</li>
+    <li><img src="btn_plus.png" class="app_button"> Inserir uma medida <a href="page_man_data.htm">manualmente</a></li>
+    <li><img src="btn_station.png" class="app_button"> <a href="page_saved_station.htm">Bases gravadas</a></li>
+    <li><img src="btn_azimuth.png" class="app_button"> <a href="page_azimuth.htm">Direção no perfil retificado</a></li>
+    <li><img src="btn_search.png" class="app_button"> <a href="page_search.htm">Pesquisa de bases e visadas</a></li>
+    <li><img src="btn_refresh.png" class="app_button"> "Atualizar" relação de medidas</li>
   </ul>
 
   <p><b>Cliques longos:</b></p>
@@ -104,15 +105,15 @@
 
   <p>Botões apresentados no modo multisseleção:</p>
   <ul>
-    <li><img src="btn_left.png" style="background-color: black" width="36" height="36"> Define a direção das bases no perfil retificado para a <i>esquerda</i>.</li>
-    <li><img src="btn_multishot_flip_extend.png" style="background-color: black" width="36" height="36"> Inverte a direção das bases no perfil retificado.</li>
-    <li><img src="btn_right.png" style="background-color: black" width="36" height="36"> Define a direção das bases no perfil retificado para a <i>direita</i>.
+    <li><img src="btn_left.png" class="app_button"> Define a direção das bases no perfil retificado para a <i>esquerda</i>.</li>
+    <li><img src="btn_multishot_flip_extend.png" class="app_button"> Inverte a direção das bases no perfil retificado.</li>
+    <li><img src="btn_right.png" class="app_button"> Define a direção das bases no perfil retificado para a <i>direita</i>.
     </li>
-    <li><img src="btn_multishot_special_actions.png" style="background-color: black" width="36" height="36"> Ações especiais. [T]</li>
-    <li><img src="btn_multiselection_delete.png" style="background-color: black" width="36" height="36"> <i>Apaga</i> as medidas e as armazena no registro de medidas apagadas.
+    <li><img src="btn_multishot_special_actions.png" class="app_button"> Ações especiais. [T]</li>
+    <li><img src="btn_multiselection_delete.png" class="app_button"> <i>Apaga</i> as medidas e as armazena no registro de medidas apagadas.
     Alerta: as medidas auxiliares atreladas a uma base apagada são também apagadas.</li>
-    <li><img src="btn_multiselection_cut.png" style="background-color: black" width="36" height="36"> <i>Copia</i> as medidas e as armazena no registro temporário de medidas.</li>
-    <li><img src="btn_clear.png" style="background-color: black" width="36" height="36"> <i>Fecha</i> o modo multisseleção.</li>
+    <li><img src="btn_multiselection_cut.png" class="app_button"> <i>Copia</i> as medidas e as armazena no registro temporário de medidas.</li>
+    <li><img src="btn_clear.png" class="app_button"> <i>Fecha</i> o modo multisseleção.</li>
   </ul>
 
   <h4>Caixa de diálogo Desenhos</h4>
@@ -221,8 +222,10 @@
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date">2023-05-11</span> &mdash; Referente ao commit: <span id="last-update-commit">e28ee08dc</span></p>
-  <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+  <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+  <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
 
 </body>

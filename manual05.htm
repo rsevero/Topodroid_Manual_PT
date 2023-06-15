@@ -1,5 +1,6 @@
 <html>
 <body>
+    <link rel="stylesheet" href="manual.css">
     <h3>[5] DADOS CALIBRAÇÃO DistoX</h3>
 
     <p><b>Somente para DistoX, DistoX2 e DistoXBLE</b></p>
@@ -37,19 +38,19 @@
 
     <h4>BOTÕES</h4>
     <ul>
-        <li><img src="btn_toggle.png" style="background-color: black" width="36" height="36"> alterna o modo de calibração da DistoX entre ligado e desligado.
+        <li><img src="btn_toggle.png" class="app_button"> alterna o modo de calibração da DistoX entre ligado e desligado.
         Pode falhar na primeira tentativa.</li>
-        <li><img src="btn_bluetooth.png" style="background-color: black" width="36" height="36"> reinicia a conexão bluetooth ou permite o controle remoto da DistoX.</li>
-        <li><img src="btn_download.png" style="background-color: black" width="36" height="36"> download dos dados de calibração da DistoX.</li>
-        <li><img src="btn_numbers.png" style="background-color: black" width="36" height="36"> organiza os dados disponíveis em <a href="page_groups.htm">grupos</a> ou reatribui números aos grupos.</li>
-        <li><img src="btn_compute.png" style="background-color: black" width="36" height="36"> calcula os <a href="page_calib_coeffs.htm">coeficientes de calibração</a>.</li>
-        <li><img src="btn_cover.png" style="background-color: black" width="36" height="36"> apresenta a <a href="page_calib_distrib.htm">distribuição de direções</a> dos dados de calibração.</li>
-        <li><img src="btn_read.png" style="background-color: black" width="36" height="36"> lê e apresenta os coeficientes de calibração armazenados na DistoX.</li>
-        <li><img src="btn_write.png" style="background-color: black" width="36" height="36"> grava os coeficientes de calibração na DistoX.
+        <li><img src="btn_bluetooth.png" class="app_button"> reinicia a conexão bluetooth ou permite o controle remoto da DistoX.</li>
+        <li><img src="btn_download.png" class="app_button"> download dos dados de calibração da DistoX.</li>
+        <li><img src="btn_numbers.png" class="app_button"> organiza os dados disponíveis em <a href="page_groups.htm">grupos</a> ou reatribui números aos grupos.</li>
+        <li><img src="btn_compute.png" class="app_button"> calcula os <a href="page_calib_coeffs.htm">coeficientes de calibração</a>.</li>
+        <li><img src="btn_cover.png" class="app_button"> apresenta a <a href="page_calib_distrib.htm">distribuição de direções</a> dos dados de calibração.</li>
+        <li><img src="btn_read.png" class="app_button"> lê e apresenta os coeficientes de calibração armazenados na DistoX.</li>
+        <li><img src="btn_write.png" class="app_button"> grava os coeficientes de calibração na DistoX.
         Este botão só é habilitado depois que os novos coeficientes de calibração foram calculados.
         Os coeficientes podem também ser gravados na DistoX diretamente na caixa de diálogo que apresenta os resultados do cálculo dos coeficientes.
         Um alerta é apresentado se a cobertura de direções dos dados for menor do que 95% ou se o erro médio for superior a 0.5&deg;.</li>
-        <li><img src="btn_search.png" style="background-color: black" width="36" height="36"> abre a caixa de diálogo de pesquisa.</li>
+        <li><img src="btn_search.png" class="app_button"> abre a caixa de diálogo de pesquisa.</li>
     </ul>
 
     <p>No momento somente é possível o download sob demanda dos dados de calibração. 
@@ -115,9 +116,11 @@
         </div>
         
         <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-29</span> &mdash; Referente ao commit: <span id="last-update-commit">266f5bb62</span></p>
-            <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
         </footer>
-
+          
     </body>
 </html>

@@ -1,5 +1,6 @@
 <html>
     <body>
+        <link rel="stylesheet" href="manual.css">
 <h3>[10] DESENHANDO CROQUI</h3>
 
 <p>A área de desenho apresenta a linha de trena e as medidas auxiliares.
@@ -8,17 +9,16 @@ Pode-se também aproximar e afastar a visualização dando zoom com dois dedos.
 O norte magnético da planta baixa e a parte superior dos perfis apontam para cima.
 Não é possível rotacionar a área de trabalho.</p>
 
-<p>Clique no botão <i>Desenhar</i> <img width=36 border="1" src="btn_edit.png">: o app entra no modo <b>Desenhar</b> e o botão fica em destaque em verde claro.
+<p>Clique no botão <i>Desenhar</i> <img class="app_button" src="btn_edit.png">: o app entra no modo <b>Desenhar</b> e o botão fica em destaque em verde claro.
 Agora você pode desenhar com seus dedos (dois dedos seguem arrastando e dando zoom).
-Com os botões <i>Desfazer</i> <img width=36 border="1"
-src="btn_undo.png"> e <i>Refazer</i> <img width=36 border="1" src="btn_redo.png"> você pode cancelar as últimas alterações nos elementos do desenho (desenhar, editar ou apagar objetos) e voltar a aplicar as mesmas alterações.</p>
+Com os botões <i>Desfazer</i> <img class="app_button" src="btn_undo.png"> e <i>Refazer</i> <img class="app_button" src="btn_redo.png"> você pode cancelar as últimas alterações nos elementos do desenho (desenhar, editar ou apagar objetos) e voltar a aplicar as mesmas alterações.</p>
 
 <p>Existem três tipos de ferramentas de desenho: ponto (ícones), linha e área (região preenchida).
 Rótulos de texto são um tipo de ponto.</p>
 
 <p>A lista com os últimos seis tipos de símbolos usados no desenho são apresentados na barra na base da tela.
 Para selecionar um tipo de símbolo, clique no seu ícone na barra inferior que possui em sua direita setas para abrir a caixa de diálogo para seleção de mais opções de símbolos.
-Um clique no botão <i>Escolher símbolo</i> <img width=36 border="1" src="btn_tools.png"> alterna entre "pontos", "linhas" e "áreas". Um clique longo neste mesmo botão inverte essa ordem de alternância.</p>
+Um clique no botão <i>Escolher símbolo</i> <img class="app_button" src="btn_tools.png"> alterna entre "pontos", "linhas" e "áreas". Um clique longo neste mesmo botão inverte essa ordem de alternância.</p>
 
 <p>No modo <b>Desenhar</b> o croqui pode ser movido com um só toque arrastando algum dos quatro cantos  da área de desenho e pode-se dar zoom através dos controles de zoom se essas funcionalidades tiverem sido habilitadas em "Configurações: Desenho croqui".
 Dessa maneira você pode trabalhar com uma caneta sem a necessidade de usar dois dedos.</p>
@@ -55,10 +55,10 @@ Ela é especial pois é sempre transformada em um único segmento de reta com um
 Um ponto tipo corte é automaticamente criado conectado no fim da linha de corte.
 Esse ponto tem a opção "scrap" predefinida para o croqui do corte e é automaticamente apagado quando se apaga a linha de corte.</p>
 
-<p>Linhas de corte não podem ser apagada com a ferramenta <i>Borracha</i> <img width=36 border="1" src="btn_erase.png">.
-Para remover uma linha de corte, selecione-a com a ferramenta <i>Edição</i> <img width=36 border="1" src="btn_select.png"> e apague-a com o botão <b>Apagar</b>. <img width=36 src="btn_delete.png" border="1"></p>
+<p>Linhas de corte não podem ser apagada com a ferramenta <i>Borracha</i> <img class="app_button" src="btn_erase.png">.
+Para remover uma linha de corte, selecione-a com a ferramenta <i>Edição</i> <img class="app_button" src="btn_select.png"> e apague-a com o botão <b>Apagar</b>. <img src="btn_delete.png" class="app_button"></p>
 
-<p>Um corte pode ser editado através do botão de propriedades <img width=36 border="1" src="btn_item.png">.
+<p>Um corte pode ser editado através do botão de propriedades <img class="app_button" src="btn_item.png">.
 Seus pontos intermediários não podem ser movidos na área de desenho como outros tipos de pontos e linhas e nem podem ser apagados.
 As ações ponto a ponto não podem ser aplicadas às extremidades de linhas de corte.</p>
 
@@ -74,25 +74,22 @@ Para desenhar uma área de água em um perfil ou corte, desenhe somente a parte 
 <h4>Desfazer, refazer, apagar e editar</h4>
 
 <p>Erros no desenho podem ser corrigidos.
-O botão <i>Desfazer</i> <img
-width=36 border="1" src="btn_undo.png"> remove o último item.
-Para apagar um símbolo desenhado a mais tempo sem perder todo o trabalho posterior há duas opções: os modos <i>Apagar</i> <img width=36
-border="1" src="btn_erase.png"> e <i>Editar</i> <img width=36
-border="1" src="btn_select.png">.</p>
+O botão <i>Desfazer</i> <img class="app_button" src="btn_undo.png"> remove o último item.
+Para apagar um símbolo desenhado a mais tempo sem perder todo o trabalho posterior há duas opções: os modos <i>Apagar</i> <img class="app_button" src="btn_erase.png"> e <i>Editar</i> <img class="app_button" src="btn_select.png">.</p>
 
 <p>O funcionamento do modo <i>Apagar</i> é bastante intuitivo: ele remove tudo por onde seu dedo passar exceto bases, medidas e linhas de corte.
 Exatamente como uma borracha no papel: se seu dedo passar no meio de uma linha, somente sua parte intermediária será apagada restando duas linhas.
-Entretanto, através do botão <i>O que apagar</i> <img width=36 border="1" src="btn_erase_all.png"> você pode escolher apagar somente um tipo de símbolo: pontos, linhas ou áreas.</p>
+Entretanto, através do botão <i>O que apagar</i> <img class="app_button" src="btn_erase_all.png"> você pode escolher apagar somente um tipo de símbolo: pontos, linhas ou áreas.</p>
 
 <p>O modo <i>Editar</i> não é tão intuitivo mas é bastante poderoso pois disponibiliza as ações ponto a ponto <im width=36 border="1" src="btn_point.png">.
 Nesse modo todos os itens do desenho são apresentados com pequenos pontos verdes.
 Para selecionar um item, clique diretamente em um desses pontos verdes (símbolos do tipo pontos só tem um ponto verde).
 Se há vários pontos verdes próximos um ao outro, todos eles serão selecionados para edição (e ganharão um leve círculo rosa) mas somente um deles estará ativo para edição (grande círculo verde).
-Se não for o ponto que você quer editar, alterne entre os pontos selecionados com os botões <i>Anterior</i> <img width=36 border="1" src="btn_multiselection_previous.png"> e <i>Próximo</i> <img width=36 border="1" src="btn_multiselection_next.png">.</p>
+Se não for o ponto que você quer editar, alterne entre os pontos selecionados com os botões <i>Anterior</i> <img class="app_button" src="btn_multiselection_previous.png"> e <i>Próximo</i> <img class="app_button" src="btn_multiselection_next.png">.</p>
 
 <p>Exceto pelas extremidades das linhas de seção, os pontos dos itens desenhados podem ser movidos na área de desenho selecionando-os e então arrastando-os.</p>
 
-<p>O modo <i>edição</i> possui o botão <i>tipo de item selecionável</i> <img width=36 border="1" src="btn_select_all.png"> que permite selecionar somente pontos de um tipo de símbolo: pontos, linhas, áreas, medidas ou bases.</p>
+<p>O modo <i>edição</i> possui o botão <i>tipo de item selecionável</i> <img class="app_button" src="btn_select_all.png"> que permite selecionar somente pontos de um tipo de símbolo: pontos, linhas, áreas, medidas ou bases.</p>
 
 <p>O tamanho doraio dos pontos verdes e o tamanho do raio da ferramenta seleção são duas configurações distintas, disponíveis em "Configurações: Desenho croqui: Tela de desenho".</p>
 
@@ -101,7 +98,7 @@ Eles são apresentados junto ao ponto da linha e podem ser movidos clicando e ar
 
 <p>Para limpar uma seleção, clique em um outro lugar qualquer da área de desenho.</p>
 
-<p>O ponto pode ser apagado ou ter suas <a href="page_item_edit.htm">propriedades</a> alteradas através do botão "Edição de propriedades" <img style="background-color: black" width=36 src="btn_item.png"></span>.</p>
+<p>O ponto pode ser apagado ou ter suas <a href="page_item_edit.htm">propriedades</a> alteradas através do botão "Edição de propriedades" <img class="app_button" src="btn_item.png"></span>.</p>
 
 <p>Através deste botão também é possível editar medidas e bases.</p>
 
@@ -111,7 +108,7 @@ A direção da medida no perfil retificado pode ser alterada nas propriedades ou
 
 <h4>Ações de edição ponto a ponto [A]</h4>
 
-<p>As ações de edição ponto a ponto <img src="btn_point.png" style="background-color: black" width="36" height="36"> só estão disponíveis para os itens desenhados.
+<p>As ações de edição ponto a ponto <img src="btn_point.png" class="app_button"> só estão disponíveis para os itens desenhados.
 O botão apresenta um menu com as opções de edição disponíveis para pontos [P], linhas [L] e áreas [A]:</p>
 
 <ul>
@@ -156,20 +153,20 @@ Isto pode ser alterado através da opção de "Configurações Especiais: Linha:
 <p>Linhas e áreas podem ser selecionadas individualmente (modo de seleção de pontos) ou como um intervalo.</p>
 
 <ul>
-    <li><img src="btn_range.png" width="36" border="1"> seleção de um só ponto</li>
-    <li><img src="btn_range_soft.png" width="36" border="1"> intervalo suave: os pontos selecionados são movidos de uma maneira proporcional levando em consideração a distância de cada ponto até a extremidade mais próxima do intervalo.</li>
-    <li><img src="btn_range_hard.png" width="36" border="1"> intervalo rígido: os pontos selecionados são movidos como uma peça única.</li>
-    <li><img src="btn_range_itemwise.png" width="36" border="1"> intervalo "item inteiro: seleciona o item inteiro como um intervalo.
+    <li><img src="btn_range.png" class="app_button"> seleção de um só ponto</li>
+    <li><img src="btn_range_soft.png" class="app_button"> intervalo suave: os pontos selecionados são movidos de uma maneira proporcional levando em consideração a distância de cada ponto até a extremidade mais próxima do intervalo.</li>
+    <li><img src="btn_range_hard.png" class="app_button"> intervalo rígido: os pontos selecionados são movidos como uma peça única.</li>
+    <li><img src="btn_range_itemwise.png" class="app_button"> intervalo "item inteiro: seleciona o item inteiro como um intervalo.
     Neste caso você seleciona um ponto da linha/área e atua (por exemplo, move) o item inteiro.</li>
 </ul>
 
-<p>Para selecionar um intervalo definindo suas extremidades em uma linha, o botão "tipo de intervalo" <img width=36 style="background-color: black" src="btn_range.png"> deve estar na opção suave <img width=36 style="background-color: black" src="btn_range_soft.png"> ou rígido <img width=36 style="background-color: black" src="btn_range_hard.png">.
+<p>Para selecionar um intervalo definindo suas extremidades em uma linha, o botão "tipo de intervalo" <img class="app_button" src="btn_range.png"> deve estar na opção suave <img class="app_button" src="btn_range_soft.png"> ou rígido <img class="app_button" src="btn_range_hard.png">.
 Selecione primeiro o ponto em uma extremidade do intervalo e depois o ponto na outra extremidade.</p>
 
 <p>Ao ser selecionado, o intervalo passa de amarelo para laranja e seu ponto mediano é destacado com um grande ponto verde, por onde pode ser controlado como o intervalo de linha é modificado.
 O intervalo pode ter limites suaves ou duros. Com limites duros o intervalo é movido como uma peça única. Com limites suaves os pontos são movidos de uma maneira proporcional levando em consideração a distância de cada ponto até a extremidade mais próxima do intervalo.</p>
 
-<p>O intervalo também pode ser do tipo "item inteiro" <img width=36 style="background-color: black" src="btn_range_itemwise.png">, ou seja, stodo o intervalo é editado em bloco.</p>
+<p>O intervalo também pode ser do tipo "item inteiro" <img class="app_button" src="btn_range_itemwise.png">, ou seja, stodo o intervalo é editado em bloco.</p>
 
 <div style="font-size:90%">
 <h4>Desenhando somente com caneta</h4>
@@ -198,9 +195,12 @@ Valor maiores vão provavelmente confundir seu dedo com uma caneta.</p>
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-    <p style="margin:0;">Última atualização: <span id="last-update-date">2023-04-29</span> &mdash; Referente ao commit: <span id="last-update-commit">266f5bb62</span></p>
-    <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-</footer>
-
-</body>
-</html>
+    <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+    <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+    <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+  </footer>
+  
+  </body>
+  </html>
+  

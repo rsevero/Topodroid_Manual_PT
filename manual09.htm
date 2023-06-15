@@ -1,5 +1,6 @@
 <html>
 <body>
+  <link rel="stylesheet" href="manual.css">
   <h3>[9] TELA DESENHO</h3>
 
   <p>O botão <i>croqui</i> da tela <u>Dados Topo</u> abre uma caixa de diálogo com a lista de croquis existentes além do botão <i>Novo</i> croqui.
@@ -111,7 +112,7 @@
 
   <h4>BOTÕES</h4>
 
-  <p><img src="btn_edit.png" height="36" border="1"><img src="btn_erase.png" height="36" border="1"><img src="btn_select.png" height="36" border="1"></p>
+  <p><img src="btn_edit.png" class="app_button"><img src="btn_erase.png" class="app_button"><img src="btn_select.png" class="app_button"></p>
 
   <p>Os modos são representados pelos três botões verdes à esquerda: <i>desenhar</i>, <i>apagar</i> e <i>editar</i>.
   Quando um deles estiver ativo, o botão correspondente estará em verde claro. Se nenhum estiver verde claro, a tela desenho estará no modo <i>mover</i>.</p>
@@ -122,50 +123,50 @@
 
   <p>No modo <b>mover</b>:</p>
   <ul>
-    <li><img src="btn_download.png" style="background-color: black" width="36" height="36"> <i>download</i> de dados.
+    <li><img src="btn_download.png" class="app_button"> <i>download</i> de dados.
     Se nenhum dispositivo estiver ativo (selecionado), este botão não é apresentado. 
     Por padrão as medidas auxiliares e as visadas são redesenhadas quando uma visada é baixada (e reconhecida).
-    Use o botão <i>Redesenhar</i> <img src="btn_close.png" style="background-color: black" width="36" height="36"> para forçar o redesenho da linha de trena.
+    Use o botão <i>Redesenhar</i> <img src="btn_close.png" class="app_button"> para forçar o redesenho da linha de trena.
     As últimas medidas baixadas podem ser destacadas em azul para ajudar a distingui-las do restante.</li>
-    <li><img src="btn_bluetooth.png" style="background-color: black" width="36" height="36"> reiniciar ou apresentar controles <i><a href="page_bluetooth.htm">Bluetooth</a></i></li>
-    <li><img src="btn_mode.png" style="background-color: black" width="36" height="36"> <i><a href="page_drawing_refs.htm">o que mostrar</a></i>: visadas, medidas auxiliares, bases, grade, escala, contorno de outros desenhos.</li>
-    <li><img src="btn_plan.png" style="background-color: black" width="36" height="36"> alternar entre <i>planta baixa e perfil</i>.</li>
-    <li><img src="btn_note.png" style="background-color: black" width="36" height="36"> <i><a href="page_survey_notes.htm">comentários</a></i> da topo</li>
-    <li><img src="btn_splay_group.png" style="background-color: black" width="36" height="36"> <i>apresentação de medidas auxiliares</i> em cortes.</li>
-    <li><img src="btn_azimuth.png" style="background-color: black" width="36" height="36"> <i><a href="page_azimuth.htm">direção no perfil retificado</a></i></li>
-    <li><img src="btn_refresh.png" style="background-color: black" width="36" height="36"> <i>redesenhar</i> a linha de trena</li>
+    <li><img src="btn_bluetooth.png" class="app_button"> reiniciar ou apresentar controles <i><a href="page_bluetooth.htm">Bluetooth</a></i></li>
+    <li><img src="btn_mode.png" class="app_button"> <i><a href="page_drawing_refs.htm">o que mostrar</a></i>: visadas, medidas auxiliares, bases, grade, escala, contorno de outros desenhos.</li>
+    <li><img src="btn_plan.png" class="app_button"> alternar entre <i>planta baixa e perfil</i>.</li>
+    <li><img src="btn_note.png" class="app_button"> <i><a href="page_survey_notes.htm">comentários</a></i> da topo</li>
+    <li><img src="btn_splay_group.png" class="app_button"> <i>apresentação de medidas auxiliares</i> em cortes.</li>
+    <li><img src="btn_azimuth.png" class="app_button"> <i><a href="page_azimuth.htm">direção no perfil retificado</a></i></li>
+    <li><img src="btn_refresh.png" class="app_button"> <i>redesenhar</i> a linha de trena</li>
   </ul>
 
   <p> O modo <b>desenhar</b> apresenta, além dos botões verdes:</p>
   <ul>
-    <li><img src="btn_undo.png" style="background-color: black" width="36" height="36"> <i>desfazer</i>: remove os últimos itens desenhados, um por vez.</li>
-    <li><img src="btn_redo.png" style="background-color: black" width="36" height="36"> <i>refazer</i>: redesenha os itens removidos, um por vez. A lista de itens removidos é esvaziada quando você desenha um novo item.
+    <li><img src="btn_undo.png" class="app_button"> <i>desfazer</i>: remove os últimos itens desenhados, um por vez.</li>
+    <li><img src="btn_redo.png" class="app_button"> <i>refazer</i>: redesenha os itens removidos, um por vez. A lista de itens removidos é esvaziada quando você desenha um novo item.
     Ações de edição de pontos também pode afetar essa lista.</li>
-    <li><img src="btn_tools.png" style="background-color: black" width="36" height="36"> <i><a href="page_tools_list.htm">Escolha de símbolo</a></i>.</li>
-    <li><img src="btn_splay_display_mode.png" style="background-color: black" width="36" height="36"> <i>modo de apresentação de medidas auxiliares</i>: como linhas ou como pontos com borda.
+    <li><img src="btn_tools.png" class="app_button"> <i><a href="page_tools_list.htm">Escolha de símbolo</a></i>.</li>
+    <li><img src="btn_splay_display_mode.png" class="app_button"> <i>modo de apresentação de medidas auxiliares</i>: como linhas ou como pontos com borda.
     </li>
-    <li><img src="btn_cont.png" style="background-color: black" width="36" height="36"> <i>Retracejar</i> linhas/áreas.
+    <li><img src="btn_cont.png" class="app_button"> <i>Retracejar</i> linhas/áreas.
     </li>
   </ul>
 
-  <p>O ícone do botão <i>Escolha de símbolo</i> <img src="btn_tools.png" style="background-color: black" width="36" height="36"> indica o tipo atual de símbolo a ser desenhado: pontos, linhas ou áreas.</p>
+  <p>O ícone do botão <i>Escolha de símbolo</i> <img src="btn_tools.png" class="app_button"> indica o tipo atual de símbolo a ser desenhado: pontos, linhas ou áreas.</p>
 
   <p>O modo <b>apagar</b> apresenta, além dos botões verdes:</p>
   <ul>
-    <li><img src="btn_undo.png" style="background-color: black" width="36" height="36"> <i>desfazer</i></li>
-    <li><img src="btn_redo.png" style="background-color: black" width="36" height="36"> <i>refazer</i></li>
-    <li><img src="btn_erase_all.png" style="background-color: black" width="36" height="36"> <i>o que apagar</i>: tipo de símbolos a serem apagados: todos, pontos, linhas ou áreas</li>
-    <li><img src="btn_size.png" style="background-color: black" width="36" height="36"> <i>tamanho da borracha</i> [P, M, G]</li>
+    <li><img src="btn_undo.png" class="app_button"> <i>desfazer</i></li>
+    <li><img src="btn_redo.png" class="app_button"> <i>refazer</i></li>
+    <li><img src="btn_erase_all.png" class="app_button"> <i>o que apagar</i>: tipo de símbolos a serem apagados: todos, pontos, linhas ou áreas</li>
+    <li><img src="btn_size.png" class="app_button"> <i>tamanho da borracha</i> [P, M, G]</li>
   </ul>
 
   <p>O modo <b>editar</b> apresenta, além dos três verdes:</p>
   <ul>
-    <li><img src="btn_select_all.png" style="background-color: black" width="36" height="36"> <i>tipo de item selecionável</i>: todos, pontos, linhas, áreas, medidas, bases</li>
-    <li><img src="btn_size.png" style="background-color: black" width="36" height="36"> <i>tamanho da ferramenta de seleção</i> [P, M, G]</li>
-    <li><img src="btn_delete.png" style="background-color: black" width="36" height="36"> <i>apagar</i> o item do croqui (pede confirmação e pode ser desfeito no modo desenhar)</li>
-    <li><img src="btn_point.png" style="background-color: black" width="36" height="36"> <i>ações compostas</i></li>
-    <li><img src="btn_item.png" style="background-color: black" width="36" height="36"> <i>editar</i> propriedades do item selecionado</li>
-    <li><img src="btn_range.png" style="background-color: black" width="36" height="36"> <i>tipo de intervalo</i>: ponto a ponto, intervalo suave, intervalo duro ou item completo (somente para linhas e áreas)</li>
+    <li><img src="btn_select_all.png" class="app_button"> <i>tipo de item selecionável</i>: todos, pontos, linhas, áreas, medidas, bases</li>
+    <li><img src="btn_size.png" class="app_button"> <i>tamanho da ferramenta de seleção</i> [P, M, G]</li>
+    <li><img src="btn_delete.png" class="app_button"> <i>apagar</i> o item do croqui (pede confirmação e pode ser desfeito no modo desenhar)</li>
+    <li><img src="btn_point.png" class="app_button"> <i>ações compostas</i></li>
+    <li><img src="btn_item.png" class="app_button"> <i>editar</i> propriedades do item selecionado</li>
+    <li><img src="btn_range.png" class="app_button"> <i>tipo de intervalo</i>: ponto a ponto, intervalo suave, intervalo duro ou item completo (somente para linhas e áreas)</li>
   </ul>
 
   <p>Quando há itens selecionados, os dois primeiros viram botões de navegação <i>anterior/próximo</i> no conjunto de itens selecionados.</p>
@@ -173,27 +174,27 @@
   <p>Os botões são um pouco diferentes nos croquis de cortes:</p>
 
   <p>No modo <b>mover</b> não existem os botões "planta baixa/perfil", "direção perfil retificado" e "redesenhar".
-  Há um novo botão "medidas auxiliares" <img style="background-color: black" width="36" height="36" src="btn_splay_display_mode.png"> que permite que se escolha quais medidas auxiliares apresentar: "todas", "base PARA", "base DE", "nenhuma".
+  Há um novo botão "medidas auxiliares" <img class="app_button" src="btn_splay_display_mode.png"> que permite que se escolha quais medidas auxiliares apresentar: "todas", "base PARA", "base DE", "nenhuma".
   A cada clique no botão ocorre a seleção de quais medidas auxiliares apresentar, alternando para a próxima da lista.
-  Por conta disso, o botão "o que mostrar" <img style="background-color: black" width="36" height="36" src="btn_mode.png"> não apresenta opções relacionadas a medidas auxiliares.</p>
+  Por conta disso, o botão "o que mostrar" <img class="app_button" src="btn_mode.png"> não apresenta opções relacionadas a medidas auxiliares.</p>
 
   <p><b>Ações de cliques longos:</b></p>
   <ul>
     <li>Quando selecionado um <i>modo</i>, seu botão abre a respectiva tela de configurações [A].</li>
-    <li>No botão <i>download</i> <img style="background-color: black" width="36" height="36" src="btn_download.png"> troca o dispositivo ativo se estiver com a opção "Topo 2 DistoX" habilitada [E].</li>
-    <li>Na planta baixa, um clique longo no botão <i>direção do perfil retificado</i> <img style="background-color: black" width="36" height="36" src="btn_azimuth.png"> faz com que o valor de referência de azimute usado para definição automática da direção possa ser alterado simplesmente deslizando o dedo pela tela.
+    <li>No botão <i>download</i> <img class="app_button" src="btn_download.png"> troca o dispositivo ativo se estiver com a opção "Topo 2 DistoX" habilitada [E].</li>
+    <li>Na planta baixa, um clique longo no botão <i>direção do perfil retificado</i> <img class="app_button" src="btn_azimuth.png"> faz com que o valor de referência de azimute usado para definição automática da direção possa ser alterado simplesmente deslizando o dedo pela tela.
     O botão é apresentado em verde nessa situação [E].</li>
-    <li>No perfil retificado, um clique longo no botão "planta baixa/perfil" <img style="background-color: black" width="36" height="36" src="btn_plan.png"> abre a caixa de diálogo que permite espelhar o croqui [N].</li>
-    <li>Nos cortes um clique longo no botão "medidas auxiliares" <img style="background-color: black" width="36" height="36" src="btn_splay_display_mode.png"> alterna a apresentação de medidas auxiliares que estão fora do plano do corte [T].
+    <li>No perfil retificado, um clique longo no botão "planta baixa/perfil" <img class="app_button" src="btn_plan.png"> abre a caixa de diálogo que permite espelhar o croqui [N].</li>
+    <li>Nos cortes um clique longo no botão "medidas auxiliares" <img class="app_button" src="btn_splay_display_mode.png"> alterna a apresentação de medidas auxiliares que estão fora do plano do corte [T].
     </li>
-    <li>No botão <i>Escolha de símbolo</i> <img style="background-color: black" width="36" height="36" src="btn_tools.png"> habilita/deshabilita a função "retracejar" (linhas e áreas).</li>
-    <li>No botão <i>apagar</i> <img style="background-color: black" width="36" height="36" src="btn_erase.png"> remove o ponto selecionado da linha ou área [N].
+    <li>No botão <i>Escolha de símbolo</i> <img class="app_button" src="btn_tools.png"> habilita/deshabilita a função "retracejar" (linhas e áreas).</li>
+    <li>No botão <i>apagar</i> <img class="app_button" src="btn_erase.png"> remove o ponto selecionado da linha ou área [N].
     </li>
-    <li>No botão <i>edição de propriedades</i> <img style="background-color: black" width="36" height="36" src="btn_item.png"> quando o ponto selecionado é um ponto de corte, abre o croqui do corte [T].</li>
+    <li>No botão <i>edição de propriedades</i> <img class="app_button" src="btn_item.png"> quando o ponto selecionado é um ponto de corte, abre o croqui do corte [T].</li>
   </ul>
 
   <h4>MENUS</h4>
-  <p>Quando o processo de análise das medidas encontrar anomalias, o botão "menu" vai apresentar um sinal de exclamação em vermelho <img src="btn_sketch_anomalies.png" style="background-color: black" width="36" height="36">.
+  <p>Quando o processo de análise das medidas encontrar anomalias, o botão "menu" vai apresentar um sinal de exclamação em vermelho <img src="btn_sketch_anomalies.png" class="app_button">.
   Um clique longo neste botão abre uma caixa de diálogo listando as anomalias.</p>
   <ul>
     <li><u>Mudar/Fechar</u>: mudar para outro croqui ou fechar o croqui atual.</li>
@@ -310,7 +311,7 @@
   Entretanto se diversos pontos estiverem próximos ao local onde você clicar todos eles serão selecionados mas somente um será editado.
   Você troca o ponto em edição usando os botões <i>Ant/Próx</i> que podem ser visualizados abaixo.</p>
 
-  <p><img src="btn_multiselection_previous.png" style="background-color: black" width="36" height="36">&nbsp;<img src="btn_multiselection_next.png" style="background-color: black" width="36" height="36"></p>
+  <p><img src="btn_multiselection_previous.png" class="app_button">&nbsp;<img src="btn_multiselection_next.png" class="app_button"></p>
 
   <h4>Estilo de linha</h4>
 
@@ -418,8 +419,10 @@
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date">2023-05-07</span> &mdash; Referente ao commit: <span id="last-update-commit">fa0f960b5</span></p>
-  <p style="margin:0;">Tradução: <span id="translation">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span> &mdash; Revisão: <span id="revision">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+  <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+  <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
 
 </body>
