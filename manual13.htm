@@ -46,6 +46,8 @@ Os nomes dos arquivos não podem incluir dois pontos (:).</p>
 <p>O comando "declination" é reconhecido.
 Os valores de azimute lidos são corrigidos pela declinação.</p>
 
+<p>A hierarquia da topo pode ser anexada aos nomes das bases. [T]</p>
+
 <p>O TopoDroidX não importa croquis do Therion.</p>
 
 <p><b>Importação PocketTopo</b></p>
@@ -573,6 +575,8 @@ No caso de arquivos na versão R12 as áreas são exportadas somente com as bord
 A grade de 1 m não é desenhada para escalas menores que 1:100.
 As cores de alguns itens (por exemplo rótulos) são invertidas para aumentar sua visibilidade.</p>
 
+<p>Na caixa de diálogo de exportação é oferecida a opção de definição da escala.</p>
+
 <p><b id="shp2">Shapefile</b> (.shp)</p>
 
 <p>Os croquis podem ser exportados como <i>Shapefile</i> com bases, visadas e linhas.</p>
@@ -639,34 +643,62 @@ Do contrário os dados serão exportados no sistema local de coordenadas sem cor
 
 <p>Cada desenho tem as suas camadas <i>pontos</i>, <i>linhas</i> e <i>áreas</i>.</p>
 
-<p>A escala de exportação é 1:100.</p>
+<p>A escala de exportação é 1:100, ou outra configurável na caixa de diálogo de exportação.</p>
 
-<p>Se as classes de medidas auxiliares estiverem habilitadas, as medidas auxiliares receberão cores relativas a suas classes: as normais em cinza, as horizontais em verde-água claro, as verticais em azul-aço e as de cortes em azul-céu claro.
+<p>Se a configuração <i>Especiais >> Dados Medida Auxiliar >> Classes aux</i> estiver habilitada, as medidas auxiliares receberão cores relativas a suas classes: as normais em cinza, as horizontais em verde-água claro, as verticais em azul-aço e as de cortes em azul-céu claro.
 As classes de medidas auxiliares não são suportadas em exportações "round-trip".</p>
 
 <p>Linhas estilizadas são exportadas sem seus estilos mas sua direção pode ser indicada habilitando a configuração "Direção da linha".</p>
 
-<p>Configurações:</p>
+<p>Configurações auxiliares são oferecidas na caixa de diálogo de exportação:</p>
+
 <ul>
-<li><u>Programa SVG</u>: programa SVG alvo para exportação: Inkscape ou Illustrator. Isso altera a escala usada na exportação.</li>
-<li><u>Ponto corte</u>: se ponto "corte" são automaticamente atrelados a linhas "corte", o croqui do corte é inserido no arquivo exprotado na posição definida pelo ponto</li>
-<li><u>Ponto base</u>: se habilitada, todas as bases são incluídas no arquivo exprotado, do contrário somente as escolhidas pelo usuário são incluídas</li>
-<li><u>Espaçamento pontos</u>: distância máxima entre pontos interpolados em linhas suaves</li>
-<li><u>Circuito SVG</u>: croquis são exportados prontos para circuitos Walls/Compass [padrão não]</li>
-<li><u>Grade</u>: incluir grade no arquivo exportado (tamanho da célula na unidade atual da grade) [padrão não]</li>
-<li><u>Direção da linha</u>: incluir marca indicando direção da linha [padrão não]</li> 
-<li><u>Espessura linha</u>: rótulos, ícones, linhas, bordas de áreas, linahs da grade, visadas e marcas de direção em linhas</li>
-<li><u>Tam base</u>: tamanho do nome das bases [padrão 20]</li>
+  <li><i>Circuito</i>: croquis são exportados prontos para circuitos Walls/Compass [padrão não].
+  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Circuito SVG</i>. [N]</li>
+  <li><i>Grade</i>: inclui grade no arquivo exportado (tamanho da célula na unidade atual da grade) [padrão não].
+  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Grade</i>. [N]</li>
+  <li><i>Orientação da linha</i>: incluir marca indicando orientação da linha [padrão não].
+  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Orient linha</i>. [N]</li>
+  <li><i>Medidas auxiliares</i>: inclui as medidas auxiliares no arquivo exportado.
+  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Medidas auxiliares</i>. [N]</li>
+  <li><i>Incluir cortes</i>: inclui os cortes no arquivo exportado.</li>
+  <li><i>Escala</i>: permite especificar a escala de exportação.</li>
 </ul>
 
-<h4>Configurações de importação/exportação</h4>
+<p>Outras configurações que influenciam nesta exportação são:</p>
 
 <ul>
-  <li><i>Form export dados</i>: formato padrão de exportação de dados [padrão nenhum]</li>
-  <li><i>Form export croqui</i>: formato padrão de exportação de croquis [padrão nenhum]</li>
+  <li><i>Especiais >> SVG</i>:
+    <ul>
+      <li><i>Programa alvo</i>: programa SVG alvo para exportação: Inkscape ou Illustrator. Isso altera a escala usada na exportação. [N]</li>
+      <li><i>Ponto corte</i>: se ponto "corte" são automaticamente atrelados a linhas "corte", o croqui do corte é inserido no arquivo exportado na posição definida pelo ponto. [N]</li>
+      <li><i>Espess linha</i>: define a espessura das linhas nos arquivos SVG exportados como rótulos, ícones, linhas, bordas de áreas, linhas da grade, visadas e marcas de direção em linhas. [N]</li>
+    </ul>
+  </li>
+  <li><i>IMPORTAR/EXPORTAR</i>:
+    <ul>
+      <li><i>Espaçamento ponto</i>: distância máxima entre pontos interpolados em linhas suaves. [E]</li>
+    </ul>
+  </li>
+  <li><i>Desenho croqui >> Desenho</i>:
+    <ul>
+      <li><i>Tam nome base</i>: tamanho do nome das bases [padrão 20]. [B]</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Configurações IMPORTAR/EXPORTAR</h4>
+
+<ul>
+  <li><i>Form export dados</i>: formato padrão de exportação de dados [padrão nenhum] [B]</li>
+  <li><i>Form export croqui</i>: formato padrão de exportação de croquis [padrão nenhum] [B]</li>
   <li><i>Form export aut croqui</i>: se definido, os croquis serão automaticamente exportados no formato escolhido quando fechados.
   Os arquivos exportados são gravados no subdiretório "out" do diretório da topo.
-  A exportação automática de croquis cria uma carga extra no app e, por isso, não é definida por padrão.</li>
+  A exportação automática de croquis cria uma carga extra no app e, por isso, não é definida por padrão. [N]</li>
+  <li><i>Âng aux EDTC</i>: ângulo mínimo necessário entre uma medida auxiliar e uma visada para ser considerada uma medida auxiliar EDTC em arquivos Compass, Topodroid, TopoRobot, WinKarst, Polygon e VisualTopo. [A]</li>
+  <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares teto/chão. [A]</li>
+  <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares esquerda e direita. [A]</li>
+  <li><i>Espaçamento ponto</i>: distância máxima entre pontos em uma linha suave exportada (m). [E]</li>
   <li><b>Compass</b>:
     <ul>
       <li><i>Inverter Esq/Dir</i>: inverter Esquerda e Direita na exportação para o Compass.</li>
@@ -764,8 +796,8 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-07-27</span></p>
+  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">f30f91026</span></p>
   <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
   <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
