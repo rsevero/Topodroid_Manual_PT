@@ -1,84 +1,107 @@
 <html>
-<body>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h2>Importação de pontos georeferenciados</h2>
 
-<h4>GEO_POINT IMPORT</h4>
+        <p>Esta caixa de diálogo é apresentada ao clicar-se no botão <i>Importar</i>  <img src="btn_import.png" class="app_button"> disponível na tela <a href="page_fixed_list.htm">Pontos georeferenciados</a>.</p>
 
-This dialog is opened from the <i>Import</i> button of the <a href="page_fixed_list.htm">Geo-points</a> window.<br><p>
+        <p>Através dessa caixa de diálogo é possível importar para o TopoDroidX as coordenadas de um ponto obtidas através de um dos app GNSS suportados:</p>
 
-With this dialog you can import in TopoDroid the coordinates of a point acquired with one of the supported GNSS apps.
-<br>
-<img src="gnss_apps.png">
-<br><p>
+        <p><img src="gnss_apps.png"></p>
 
-<b>MobileTopographer</b><br>
-TopoDroid reads the point coordinates from a <i>MobileTopographer</i> point-list file.<br>
-If you do not select a <i>MobileTopographer</i> point-list file the app behaviour is undefined.
-<br><p>
-<ol>
-<li><img src="mobiletopographer_flag.png"> Open <i>MobileTopographer</i> and find the point coordinates.</li>
-<li><img src="mobiletopographer_plus.png"> When you have reached a sufficient accuracy in the coordinates, save the point.</li>
-<li><img src="mobiletopographer_points.png"> You can also enter the point coordinates by hand (and save the point).</li>
-<li><img src="mobiletopographer_disk.png"> Save the point list. The list is saved in "MobileTopographer/pointlist"</li>
-<li>Import the coordinates in TopoDroid. The saved points are shown in a list; tap on the point to import.</li>
-</ol><br>
-<img src="mobiletopographer_updown.png"> Optionally, you can go to the list of saved points in <i>MobileTopographer</i>, and
-move the point you just got to the top with the arrows.<br><p>
+        <h3>MobileTopographer</h3>
 
-<b>GPS Logger</b><br>
-The app displays the point coordinates and other infos.
-The track files are saved in the folder "gnss_log". They have an header with device info, and the points data in CSV records:
-constellation, latitute, longitude, altitude, speed, accuracy, and time.<br>
-The log can contain also raw GNSS measurements, navigation messages, and NMEA sentences.<br>
-<ol>
-<li><img src="gpslogger_btn1.png"> Start recording the track points.</li>
-<li><img src="gpslogger_btn2.png"> Stop the track recording.</li>
-<li>Finalize the track. The track is added to the "tracklist".</li>
-</ol>
-<br><p>
+        <p>O TopoDroidX é capaz de ler as coordenadas de um arquivo de lista de pontos  <i>MobileTopographer</i>.</p>
 
-<b>GPSTest</b><br>
-The app displays the point coordinates and satellites data: fix, constellation, carrier frequencies, carrier/noise ratio, flags, elevation, azimuth.
-The point can be shown on the map (option in the "settings").
-<ol>
-<li><img src="gpstest_btn1.png"> Open the share/export dialog.</li>
-<li><img src="gpstest_btn2.png"> The point coordinates can be copied to clipboard</li>
-<li><img src="gpstest_btn3.png"> or saved to file. It is important to check the "Include altitude" box.</li>
-</ol>
-<br><p>
+        <p>Se o arquivo selecionado não for um arquivo de lista de pontos  <i>MobileTopographer</i> o comportamento do TopoDroidX não é definido.</p>
 
-<b>GPX Recorder</b><br>
-The points coordinates are saved in a track file that can be read by TopoDroid.
-Track files are in the folder "gpx_recorder".
-The format is xml and the points data are latitude, longitude, altitiude, and time.<br>
-<ol>
-<li><img src="gpxrecorder_start.png"> Start recording the points coordinates</li>
-<li><img src="gpxrecorder_stop.png"> Stop the recording.</li>
-</ol>
-<br><p>
+        <ol>
+            <li><img src="mobiletopographer_flag.png"> Abra o <i>MobileTopographer</i> e capture as coordenadas do ponto.</li>
+            <li><img src="mobiletopographer_plus.png"> Quando tiver alcançado uma acurácia suficiente, grave o ponto.</li>
+            <li><img src="mobiletopographer_points.png"> Você também pode fornecer as coordenadas do ponto manualmente (não esqueça de gravar o ponto).</li>
+            <li><img src="mobiletopographer_disk.png"> Grave a lista de pontos.
+            Esta lista é gravada em "MobileTopographer/pointlist"</li>
+            <li>Importe as coordenadas no TopoDroidX.
+            Os pontos gravados são apresentados na lista.
+            Clique no ponto desejado para que seja importado.</li>
+        </ol>
 
-<b>GPS Point</b><br>
-TopoDroid reads the coordinates exported to a point file: latitude, longitude, altitude, and accuracy.<br>
-<ol>
-<li>The app displays a list of saved points</li>
-<li><img src="gpspoint_btn1.png"> Open the GNSS interface</li> 
-<li><img src="gpspoint_btn2.png"> Acquire the GNSS position</li> 
-<li>The app displays the point with the circle of uncertainty on the map. The point coordinates, and other infos, are shown in a box.</li>
-<li>Save the point when done.</li>
-<li>Select the point from the list, and export to (text) file.</li>
-</ol>
-<img src="gpspoint_point.png"><br><p>
+        <p><img src="mobiletopographer_updown.png"> Você pode mover o ponto recém criado para o topo da lista de pontos no <i>MobileTopographer</i> usando as setas.</p>
 
-<b>GPS Position</b><br>
-The app displays the point coordinates and the satellite data.<br>
-<ol>
-<li><img src="gpsposition_btn1.png"></li>
-<li><img src="gpsposition_btn3.png"> Display the satellites data: fix, azimut, elevation, carrier/noise ratio, and flags (almanac, epherids)</li>
-<li><img src="gpsposition_btn2.png"> The position can be copied to clipboard</li>
-<li>or it can be saved to a file.</li>
-</ol>
-<br><p>
+        <h3>GPS Logger</h3>
 
+        <p>O app apresenta as coordenadas do ponto e outras informações.
+        Os arquivos de trilhas são gravados no diretório "gnss_log".
+        Eles tem um cabeçalho com informações sobre o dispositivo além dos dados dos pontos em formato CSV: constelação de satélites, latitude, longitude, altitude, velocidade, acurácia e horário.</p>
 
+        <p>O log pode também contar com medidas GNSS brutas, mensagens de navegação e frases NMEA.</p>
 
-</body>
+        <ol>
+            <li><img src="gpslogger_btn1.png"> Começar a registrar pontos de trilha.</li>
+            <li><img src="gpslogger_btn2.png"> Parar o registro de trilha.</li>
+            <li>Finalize a trilha que será, então, incluída na lista de trilhas.</li>
+        </ol>
+
+        <h3>GPSTest</h3>
+
+        <p>O app apresenta as coordenadas do ponto e as informações dos satélites: posição, constelação, frequências de transporte, nível de ruído, marcadores, elevação e azimute.
+        O ponto pode ser apresentado no mapa através de uma configuração em "settings".</p>
+
+        <ol>
+            <li><img src="gpstest_btn1.png"> Abra a caixa de diálogo "share/export".</li>
+            <li><img src="gpstest_btn2.png"> As coordenadas do ponto podem ser copiadas para a área de armazenamento.</li>
+            <li><img src="gpstest_btn3.png"> ou gravadas em um arquivo.
+            É importante ativar a opção "Include altitude".</li>
+        </ol>
+
+        <h3>GPX Recorder</h3>
+
+        <p>As coordenadas dos pontos é gravada em um arquivo de trilha que pode ser lido pelo TopoDroidX.
+        Os arquivos de trilhas são armazenados no diretório "gpx_recorder".
+        O formato do arquivo é XML e as seguintes informações dos pontos são disponibilizadas: latitude, longitude, altitude e horário.</p>
+
+        <ol>
+            <li><img src="gpxrecorder_start.png"> Inicie o registro de coordenadas de pontos.</li>
+            <li><img src="gpxrecorder_stop.png"> Interrompa a gravação.</li>
+        </ol>
+
+        <h3>GPS Point</h3>
+
+        <p>O TopoDroidX lê as coordenadas exportadas para um arquivo de pontos: latitude, longitude, altitude e acurácia.</p>
+
+        <ol>
+            <li>O app apresenta a relação de pontos gravados.</li>
+            <li><img src="gpspoint_btn1.png"> Abra a interface GNSS.</li> 
+            <li><img src="gpspoint_btn2.png"> Obtenha a posição GNSS.</li> 
+            <li>TO app apresenta o ponto acompanhado de um círculo que indica a incerteza no mapa.
+            As coordenadas do ponto assim como outras informações são apresentadas em uma caixa.</li>
+            <li>Grave o ponto.</li>
+            <li>Selecione o ponto desejado na list e exporte para um arquivo texto.</li>
+        </ol>
+
+        <p><img src="gpspoint_point.png"></p>
+
+        <h3>GPS Position</h3>
+
+        <p>O app apresenta as coordenadas do ponto e as informações dos satélites.</p>
+
+        <ol>
+            <li><img src="gpsposition_btn1.png"></li>
+            <li><img src="gpsposition_btn3.png"> Apresenta as informações sobre os satélites: coordendas obtidas, azimute, elevação, nível de ruído e marcadores (almanaque e efeméride).</li>
+            <li><img src="gpsposition_btn2.png"> As coordenadas obtidas podem ser copiadas para a área de armazenamento.</li>
+            <li>ou podem ser gravadas em um arquivo.</li>
+        </ol>
+
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-07-27</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">c2b0050de</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+          
+    </body>
 </html>
