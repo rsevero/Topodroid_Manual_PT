@@ -18,7 +18,7 @@ Os croquis são exportados a partir da tela <u>Desenhar</u> (agrupados em um só
 
 <h4>IMPORTAR TOPO</h4>
 
-<p>O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos em formatos externos.
+<p>O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos externos em diversos formatos.
 Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
 Os arquivos a serem importados serão selecionados através da interface do sistema.
 Os nomes dos arquivos não podem incluir dois pontos (:).</p>
@@ -170,13 +170,14 @@ Para medidas auxiliares que não tenham direção no perfil retificado definida,
 <p>As coordenadas geográficas (longitude, latitude e altitude) são exportadas como textos comentados.
 Se o ponto usa coordenadas CRS personalizadas, elas também são incluídas precedidas do nome CRS correspondente.</p>
 
-<p>Além disso, são incluídos ao final como textos comentados os comandos "input" para cada arquivo th2 e para as definições dos mapas de cada croqui.</p>
+<p>Além disso, são incluídos ao final como textos comentados os comandos "input" para cada arquivo th2 e para as definições dos mapas de cada croqui.
+Esses textos precisam ser descomentados para que sejam efetivamente incluídos na saída PDF do Therion.</p>
 
 <p>Os arquivos <i>Therion</i> exportados incluem as medidas de verificação de calibração como textos comentados.</p>
 
 <p>Configurações <i>Importar/exportar >> Therion</i>:</p>
 <ul>
-<li><u>Comando config Therion</u>: quando habilitada faz com que os dados da topo sejam envolvidos em um conjunto de comandos de configuração do Therion. [A]</li>
+<li><u>Comando config Therion</u>: quando habilitada um arquivo thconfig simples com comandos de configuração do Therion é criado. [A]</li>
 <li><u>Mapa Therion início</u>: quando habilitada faz com que os comandos "map" sejam posicionados antes dos dados da linha de trena. [A]</li>
 <li><u>Med Aux Therion</u>: adiciona linhas "u:splay" aos arquivos th2. [A]</li>
 <li><u>EDTC Survex/Therion</u>: inclui medidas auxiliares EDTC (esquerda/direita/teto/chão) nos arquivos exportados. [A]</li>
@@ -220,9 +221,7 @@ Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses
 <p>As unidades de medidas são as definidas pelo usuário.</p>
 
 <p>Se a opção <i>IMPORTAR/EXPORTAR >> Compass >> Aux Compass/Walls</i> estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas". [A]
-Do contrário, são exportadas como "medidas anônimas" tendo seu comprimento ajustado para a projeção relevante.
-O componente vertical dessas medidas pode ser recuperado através da inclinação.
-Veja o manual do <i>Walls</i>.</p>
+Do contrário, são exportadas como "medidas anônimas".</p>
 
 <p>Configurações:</p>
 <ul>
@@ -796,8 +795,8 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-07-27</span></p>
-  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">f30f91026</span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-09-24</span></p>
+  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e8fea1798</span></p>
   <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
   <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
