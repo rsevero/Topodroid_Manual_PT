@@ -56,45 +56,45 @@
 
         <p><i>GPSTest</i>: a criação de logs deve estar habilitada no app. É suficiente que se inclua nos logs as coordenadas. O arquivo de log é gravado quando o app é fechado e é armazenado no diretório <i>gnss_log</i>. Além disso as coordenadas geográficas gravadas na área de armazenamento pelo app <i>GPSTest</i> podem ser transferidas para os campos da caixa de diálogo <i>Inserir coordenadas</i>. Verifique que a opção para armazenar também a altitude na área de armazenamento está habilitada no  <i>GPSTest</i>.</p>
 
-        
+        <p><i>GPS Logger</i>: os arquivos de trilhas devem ser exportados no formato CSV.
+        O TopoDroidX usa o elipsóide de altitude e a acurácia.</p>
 
-<i>GPS Logger</i> track files must be exported in "csv" format. TopoDroid uses the ellipsoid altitude and the accuracy.<br><p>
+        <p><b>Dicas de uso de apps GNSS</b> (procure na internet por detalhes e instruções de uso): </p>
 
-<b>GNSS app advices</b> (search internet for details and how to do)<br>
-<ul>
-<li>Enable "force full GNSS measurement"</li>
-<li>If available disable "kinematic Kalman filtering"</li>
-<li>If available set location "static mode"</li>
-<li>If available disable "A-GSP". Disable "mobile data" and clear A-GPS data</li>
-<li>Disable location "wi-fi and bluetooth fix"</li>
-</ul><br>
+        <ul>
+            <li>Habilite "force full GNSS measurement"</li>
+            <li>Se disponível, desabilite "kinematic Kalman filtering"</li>
+            <li>Se disponível defina localização "static mode"</li>
+            <li>Se disponível, desabilite "A-GSP". Desabilite "mobile data" e limpe os dados A-GPS</li>
+            <li>Desabilite localização via wifi e bluetooth</li>
+        </ul>
 
-Note. Disabling battery optimization for the app is necessary only if you want to prevent the
-system closing the app when it is not in foreground.<br><p>
+        <p><b>Observação:</b> desabilitar a otimização de bateria para o app só é necessário se você precisar prevenir que o sistema feche o app quando ele não estiver em primeiro plano.</p>
 
-<h4>Location settings</h4>
+        <h3>Configurações de localização:</h3>
 
-<ul style="margin-top:0; margin-bottom:0">
-<li><i>Coordinates units</i>: either dd.mm.ss or decimal degrees [A]</li>
-<li><i>C.R.S.</i> coordinate reference system [default is long-lat] (disabled)</li>
-<li><i>Negative altitudes</i> [default no]</li>
-<li><i>Editable altitudes</i> [default no]</li>
-<li><i>Fine position time</i> [default 60 s]</li>
-<li><i>Geopoint app</i> [default none]</li>
-</ul>
+        <ul>
+            <li><i>Dados topo >> Localização</i>:</li>
+            <ul>
+                <li><i>Unidade coordenadas</i>: unidade para visualização de coordenadas (gruas decimais ou graus, minutos e segundos) [A]</li>
+                <li><i>SRC</i> nome do sistema de referência de coordenadas como usado no Proj4 [long-lat]</li>
+                <li><i>Altitude negativa</i>: permitir altitudes negativas [não]</li>
+                <li><i>Altitude editável</i>: permitir edição de altitudes [não]</li>
+                <li><i>Tempo loc precisa</i>: tempo de espera para localização precisa em segundos [60s]</li>
+                <li><i>App GNSS</i>: app GNSS usada (nenhuma|Mobile Topographer|GPX Recorder|GPS Position|GPSTest|GPS Logger) [nenhuma]</li>
+            </ul>
+        </ul>
 
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
 
-
-<p>
-    <a href="manual16.htm">Principais funcionalidades</a> |
-    <a href="manual17.htm">Índice remissivo</a>
-</p>
-
-<footer style="font-size: 80%; font-style: italic; clear: both;">
-    <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-09-24</span></p>
-    <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">72e47c838</span></p>
-    <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-</footer>
-  
-</body>
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-09-25</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">29e5e0865</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+    
+    </body>
 </html>
