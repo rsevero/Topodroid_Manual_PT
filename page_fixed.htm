@@ -3,44 +3,54 @@
         <link rel="stylesheet" href="manual.css">
         <h2>Edição coordenadas</h2>
 
-This dialog is opened tapping a point entry in the <a href="page_fixed_list.htm">Geo-points list</a> window.<br><p>
+        <p>Essa caixa de diálogo é apresentada ao clicar-se em um dos pontos da lista na tela <a href="page_fixed_list.htm">Geopontos</a>.</p>
 
-The dialog shows
-<ul>
-<li>longitude, latitude and geoid altitude</li>
-<li>point <b>name</b> and <b>comment</b></li>
-<li>magnetic <b>declination</b> at the point (at the current date)</li>
-</ul><br><p>
+        <p>A caixa apresenta:</p>
+        <ul>
+            <li>longitude, latitude e altitude em relação ao geóide</li>
+            <li><b>nome</b> e <b>comentário</b> do ponto</li>
+            <li><b>declinação</b> magnética no ponto na data atual</li>
+        </ul>
 
-Buttons
-<ul>
-<li><b>View</b> the point in a Location app (provided you have one installed)</li>
-<li><b>Clear</b> converted coordinates. This action is immediate.</li>
-<li><b>Convert</b> the geo-point coordinates to another reference system (using the app Proj4)</li>
-<li><b>Delete</b> the geo-point record</li>
-</ul>
+        <h3>Botões</h3>
+        <ul>
+            <li><b>Limpar conversão</b>: apaga as coordenadas convertidas (essa ação é imediata)</li>
+            <li><b>Converter</b>: converte as coordenadas deste geoponto para outro sistema de referência usando o app Proj4</li>
+            <li><b>Mapa</b>: apresenta o ponto em um app de localização que esteja disponível no dispositivo Android</li>
+            <li><b>Grvaar</b>: grava as informações atuais do geoponto</li>
+            <li><b>Apagar</b>: apaga este geoponto the geo-point record</li>
+        </ul>
 
-If the coordinates of the geo-point have been entered manually, they can be edited.
-Coordinates taken with GNSS or imported from a GNSS app cannot be changed.
-The geoid altitude is editable, irrespective of the input method, if the appropriate setting
-is set.<br><p>
+        <p>Se as coordenadas do geoponto tiverem sido cadastradas manualmente, elas poderão ser editadas.
+        Coordenadas obtidas através do GNSS ou importadas de um app GNSS não podem ser alteradas.
+        A altitude em relação ao geóide pode ser editada sempre, não importando a forma de obtenção dos dados se a opção de configuração <i>Dados topo >> Localização >> Altitude editável</i> estiver habilitada.</p>
 
-A long-tap on the longitude or the latitude changes the display from DMS to degree and vice versa.<br><p>
+        <p>Um clique longo na longitude ou na latitude alterna o formato de apresentação das coordenadas de graus decimais <i>(gg.gggggg)</i> para graus, minutos, segundos <i>(gg°mm'ss.ss")</i>.</p>
 
-The geoid altitude is computed from the ellipsoidic altitude using the geoid model EGM2008.<br><p>
+        <p>A altura em relação ao geóide é calculada a partir da altitude relativa à elipsóide usando o modelo EGM2008 do geóide.</p>
 
-The <b>Convert</b> button computes the geo-point coordinates in another Coordinate Reference System,
-using the app Proj4. The geoid altitude is used in the conversion.
-The converted coordinates (East, North, and altitude) and the estimated meridian convergence [deg]
-are displayed and stored in the database with the geo-point.<br><p>
+        <p>O botão <b>Converter</b> calcula as coordenadas do geoponto em outro Sistema de Referência de Coordenadas usando o app Proj4.
+        A altitude relativa ao geóide é usada nessa conversão.
+        As coordenadas convertidas (Leste, Norte e altitude) e a convergência meridiana estimada em graus são apresentadas e armazenadas no banco de dados de geopontos.</p>
 
-The magnetic declination is computed using the World Magnetic Model for 2020-2025 (this is replaced 
-with a more recent WMM when it is released).
-The uncertainty of the WMM model declination can be as large as 0.4 degrees in temperate regions.<br>
-Check the <b>save</b> box to set the magnetic declination into the survey.<br><p>
+        <p>A declinação magnética é calculada usando o Modelo Magnético Global (MMG) para os anos de 2020/2025.
+        O modelo será atualizado quando uma nova versão for lançada.
+        A incerteza da declinação fornecida pelo MMG pode chegar a 0,4° em regiões temperadas.</p>
 
-The <b>Save</b> button commits the changes to the database.<br><p>
+        <p>Clique no checkbox junto à declinação magn[etica para que a declinação magnética informada seja aplicada à topo.</p>
 
+        <p>O botão <b>Gravar</b> registra as alterações no banco de dados.</p>
 
-</body>
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-10-01</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">b584f6c6a</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+    
+    </body>
 </html>
