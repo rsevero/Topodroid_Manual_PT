@@ -4,3 +4,12 @@ img.app_button {
     width: 36px;
     height: 36px;
 }
+
+.notbold {
+    font-weight: normal;
+}
+
+.italicnotbold {
+    font-style: italic;
+    font-weight: normal;
+}
