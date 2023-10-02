@@ -13,3 +13,17 @@ img.app_button {
     font-style: italic;
     font-weight: normal;
 }
+
+.italic {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+p, ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
