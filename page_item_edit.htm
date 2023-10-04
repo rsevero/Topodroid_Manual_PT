@@ -1,72 +1,69 @@
 <html>
-<body>
-<h4>SKETCH ITEM PROPERTIES EDITOR</h4>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h2>Editor de propriedades de elemento de desenho</h2>
 
-The sketch item properties editor dialog is opened by selecting a point (or the point) of the sketch item and from the <i>Note</i> button.
-<br><p>
+        <p>Esta caixa de diálogo é apresentada ao se selecionar um ponto isolado ou um ponto de uma linha e clicar-se no botão <i>Notas</i> <img src="btn_item.png" class="app_button">.</p>
 
-<b>Point items</b> properties:
-<ul>
-<li><b>size</b> (one of XS, S, M, L, XL)</li>
-<li><b>orientation</b>, if the point item is orientable</li>
-<li><b>layers</b>, the canvas views on which the point is displayed [T]</li>
-<li><b>text</b>, for "label" points</li>
-<li>generic Therion <b>options</b></li>
-</ul>
-<br>
+        <h3>Pontos</h3>     
+        <ul>
+            <li><b>Tamanho</b>: XS (extra pequeno), S (pequeno), M (médio), L (grande), XL (extra grande)</li>
+            <li><b>Orientação</b>: se for um ponto orientável</li>
+            <li><b>Texto do rótulo</b>: somente para pontos do tipo rótulo</li>
+            <li><b>Opções</b>: usado exclusivamente na exportação para o Therion</li>
+        </ul>
 
-<b>Line items</b> properties:
-<ul>
-<li>line <b>type</b></li>
-<li><b>outline</b> (either "out" or "in")</li>
-<li><b>direction</b>, i.e. whether the line is directed or reversed</li>
-<li><b>layers</b>, the canvas views on which the line is displayed [T]</li>
-<li>a polycubic line can be made polyline, i.e., composed of segments instead of cubics</li>
-<li>the line can be <b>subsampled</b>, by removing intermediate points</li>
-<li>the line can be <b>closed</b>, by appending a last point at the position of the first</li> 
-<li>generic Therion <b>options</b></li>
-</ul>
-<br>
+        <h3>Linhas</h3>
+        <ul>
+            <li><b>Tipo de linha</b></li>
+            <li><b>Opções</b>: usado exclusivamente na exportação para o Therion</li>
+            <li><b>Contorno</b>: indica se a parte a ser tornada invisível do croqui está para fora ou para dentro da linha. Usada exclusivamente na exportação para o Therion</li>
+            <li><b>Camadas</b>: indica em quais <a href="page_drawing_refs.htm#layers">camadas</a> a linha será apresentada [T]</li>
+            <li><b>Direção</b> <img src="btn_reverse.png" class="app_button">: indica se a direção da linha é normal ou invertida. Usada exclusivamente na exportação para o Therion</li>
+            <li><b>Reta</b> <img src="btn_straight.png" class="app_button">: transforma uma linha Bézier em uma polilinha, ou seja, uma linha composta de segmentos de reta consecutivos</li>
+            <li><b>Simplificar</b> <img src="btn_decimate.png" class="app_button">: simplifica a linha removendo pontos intermediários</li>
+            <li><b>Fechar</b> <img src="btn_close_no.png" class="app_button">: fecha a linha adicionando um ponto no final da linha com a mesma posição do ponto inicial</li> 
+        </ul>
 
-<b>Area items</b> properties:
-<ul>
-<li>area <b>type</b></li>
-<li><b>visibility</b> of the area border</li>
-<li><b>orientation</b>, if the area is orientable</li>
-<li><b>layer</b>, the canvas views on which the line is displayed [T]</li>
-<li>generic Therion <b>options</b></li>
-</ul>
-<br>
+        <h3>Área</h3>
+        <ul>
+            <li><b>Tipo de área</b></li>
+            <li><b>Visibilidade da borda</b></li>
+            <li><b>Simplificar</b> <img src="btn_decimate.png" class="app_button">: simplifica a linha da borda da área removendo pontos intermediários</li>
+            <li><b>Orientação</b>: se o tipo de área for orientável</li>
+        </ul>
 
-<b>Survey stations</b> properties
-(see also <a href="page_sketch_station.htm">sketch station editing</a>):
-<ul>
-<li>make the station the <b>active</b> one, i.e. to continue the survey from it</li>
-<li>show the hidden midline (only if applicable)</li>
-<li>toggle the display of <b>splays</b> at the station (overriding the global choice of splay display)</li>
-<li>adding the station to the Therion export (if "therion auto-station" option is disabled)</li>
-<li>at-station <b>x-section</b> buttons</li>
-</ul>
-<br>
-<br><p>
+        <h3>Bases</h3>
+        <p>Veja <a href="page_sketch_station.htm">editor de bases no croqui</a>.</p>
 
-<b>Survey shots</b> properties:
-<ul>
-<li><b>stations</b></li>
-<li>shot <b>comment</b></li>
-<li>the <b>extend</b> value</li>
-<li>the <b>flags</b>: "duplicate", "surface", or "commented"</li>
-<li>midline hiding</li>
-<li><b>auto-walls</b> generation [E]</li>
-<li>custom <b>color</b> (for splays) [T]</li>
-</ul>
-<br>
+        <h3>Medidas</h3>
+        <ul>
+            <li><b>Nomes das bases</b></li>
+            <li><b>Comentário</b></li>
+            <li><b>Direção no perfil retificado</b></li>
+            <li>Os seguintes indicadores (liga/desliga):
+                <ul>
+                    <li><b>Duplicada</b> <img src="btn_duplicate.png" class="app_button">: indica que esta é uma medida repetida</li>
+                    <li><b>Superfície</b> <img src="btn_surface_no.png" class="app_button">: indica que é uma medida na superfície (não deve entrar na contagem de desenvolvimento da caivdade)</li>
+                    <li><b>Comentada</b> <img src="btn_comment.png" class="app_button">: indica que se trata de uma medida comentada (que não será considerada)</li>
+                </ul>
+            </li>
+            <li><b>Ocultar a partir da base</b>: veja <a href="page_sketch_station.htm#midline_hiding">ocultando linha de trena</a></li>
+            <li><b>Cor</b>: escolher cor (somente para medidas auxiliares). Essa cor personalizada é apresentada tanto na lista de medidas como também é usada para identificar a medida auxiliar no croqui.
+            É armazenda no banco de dados mas não é exportada no arquivo zip.
+            As cores personalizadas podem ser removidas através da opção de menu <i>Cor padrão</i> na tela <u>Info topo</u>. [T]</li>
+        </ul>
 
-<div style="font-size=90%">
-The custom color is associated to the survey splay in the list, and is used to identify the splay in the sketches.
-It is saved in the database, but it is not exported in the ZIP.<br>
-The custom splay colors are cleared by a menu in the <u>Survey Info window</u>.
-</div><br><p>
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
 
-</body>
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-10-04</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">c829dc655</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+    
+    </body>
 </html>
