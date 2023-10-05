@@ -1,9 +1,9 @@
 <html>
     <body>
         <link rel="stylesheet" href="manual.css">
-        <h4>RECARREGAR CROQUI</h4>
+        <h1>RECARREGAR CROQUI</h1>
 
-        <p>A tela é aberta através da opção de menu <i>Recarregar</i> disponível na tela <u>Desenho</u>.</p>
+        <p>Esta tela é aberta através da opção de menu <i>Recarregar</i> disponível na tela <u>Desenho</u>.</p>
 
         <p>O TopoDroidX mantém uma série de backups dos arquivos de croquis a partir dos quais um croqui pode ser recuperado.</p>
 
@@ -11,11 +11,11 @@
         Eles são gravados no subdiretório "tdr".
         Sempre que um croqui é gravado, os arquivos de backup são rotacionados (o arquivo "bck1" é renomeado "bck2" e assim por diante; "bck" é renomeado "bck0"), o antigo arquivo "tdr" é renomeado "bck" e o croqui é gravado em um novo arquivo "tdr". </p>
 
-        <p>Um croqui é gravado sempre que for fechado, que a visualização for alternada entre planta aixa e perfil, for aberto um corte ou for trocado por outro croqui.</p>
+        <p>Um croqui é gravado sempre que: for fechado; a visualização for alternada entre planta baixa e perfil; for aberto um corte ou for trocado por outro croqui.</p>
 
         <p>É também gravado quando é modificado enquanto está aberto (por exemplo, um novo item é incluído, ou parte de um croqui é apagado).
         Após uma modificação um temporizador é iniciado e quando ele expirar o croqui será salvo novamente.
-        O tempo padrão desse temporizador é configurável (<i>Especiais > Desenho croqui > Intervalo backup</i>) com duração padrão de 60s.</p>
+        O tempo padrão desse temporizador é de 60s e pode ser configurado (<i>Especiais >> Desenho croqui >> Intervalo backup</i>).</p>
 
         <p>A quantidade de backups armazenada também é configurável (<i>Especiais > Desenho croqui > Qt backups</i>).</p>
 
@@ -25,12 +25,12 @@
         <ul>
             <li>a quanto tempo o bakcup foi gravado: com sufixos para minutos (m), horas (d), meses (M) e anos (Y);</li>
             <li>tamanho do arquivo em bytes entre colchetes;</li>
-            <li>número do arqivo de backup.</li>
+            <li>número do arquivo de backup.</li>
         </ul>
 
-        <p>Há dois botões para mover para frente e para trás na lista de backups <img src="btn_multiselection_previous.png" class="app_button"><img src="btn_multiselection_next.png" class="app_button"> e o último <img src="btn_backup_reload.png" class="app_button"> para voltar para o croqui mais recente fechando a tela <u>Backup de croqui</u>.</p>
+        <p>Há dois botões para mover para frente e para trás na lista de backups <img src="btn_multiselection_previous.png" class="app_button"><img src="btn_multiselection_next.png" class="app_button"> e outro <img src="btn_backup_reload.png" class="app_button"> para retornar ao croqui mais recente fechando a tela <u>Backup de croqui</u>.</p>
 
-        <p><b>MENU</b></p>
+        <h2>MENU</h2>
 
         <ul>
             <li><i>Fechar</i>: fecha a tela sem carregar nenhum backup</li>
@@ -43,8 +43,8 @@
         </p>
         
         <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-10-15</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">3b999d96e</span></p>
             <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
             <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
         </footer>
