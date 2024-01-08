@@ -39,6 +39,30 @@ Os nomes dos arquivos não podem incluir dois pontos (:).</p>
 
 <p>Na importação de outros formatos, se tiverem dados EDTC, estes serão convertidos para medidas auxiliares apresentadas em verde.</p>
 
+<p><b>Importação Zip</b></p>
+
+<p>A importação de arquivos Zip falha se a versão do banco de dados dos dados a serem importados for excessivamente antiga ou se for mais nova do que a usada pelo TopoDroidX instalado.</p>
+
+<p>Os códigos de erro são:</p>
+
+<ul>
+  <li>1: error de entrada/saída (<i>IO error</i>)</li>
+  <li>2: versão do TopoDroidX muito antiga</li>
+  <li>3: banco de dados muito antigo no arquivo zip</li>
+  <li>4: banco de dados muito novo no arquivo zip</li>
+  <li>5: nome da topo diferente do nome do arquivo zip</li>
+  <li>6: topo já existente</li>
+  <li>7: falha ao abrir banco de dados</li>
+  <li>8: erro SQL no zip</li>
+  <li>9: erro de formato de número</li>
+  <li>10: erro no formato do arquivo manifest</li>
+  <li>11: arquivo manifest não encontrado</li>
+  <li>12: erro de entrada/saída (IO error) no arquivo manifest</li>
+  <li>13: erro inesperado</li>
+</ul>
+
+<p><b>Obs.:</b> as cores costumizadas das medidas auxiliares não são importadas a não ser que a opção de configuração apropriada esteja ativada.</p>
+
 <p><b>Importação Therion</b></p>
 
 <p>Somente arquivos Therion no modo de dados "normal" são aceitos para importação.</p>
@@ -766,7 +790,7 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
   <li><i>Mapa Therion início</i> mapas Therion antes dos dados da topo [padrão não]</li>
   <li><i>Bases Therion</i>: incluir automaticamente bases aos arquivos Therion.
     Se você quer usar os arquivos de croquis no Therion, eles precisam ter os pontos das bases para definir sua escala.
-    Você pode escolher manualmente quais pontos incluir editando o croqui à mão ou deixar o TopoDroidX incluir as bases.
+    Você pode escolher manualmente quais pontos incluir editando o croqui à mão ou deixar o TopomanDroidX incluir as bases.
     Dessa maneira serão incluídas todas as bases que estiverem "dentro" do desenho (dentro do envólucro convexo do desenho). [padrão sim]</li>
   <li><i>Med aux Therion</i>: adicionar linhas "u:splay" aos arquivos th2 [padrão sim].</li>
 </ul>
@@ -795,8 +819,8 @@ As classes de medidas auxiliares não são suportadas em exportações "round-tr
 </div>
 
 <footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-09-24</span></p>
-  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e8fea1798</span></p>
+  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-01-08</span></p>
+  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">be345fc31</span></p>
   <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
   <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
 </footer>
