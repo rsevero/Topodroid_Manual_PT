@@ -1,66 +1,76 @@
 <html>
-<body>
+    <body>
+        <h1>Novo croqui</h1>
 
-<h3>NEW SKETCH</h3>
+        <p>Esta caixa de diálogo é apresentada ao clicar-se no botão <i>Novos</i> na caixa de diálogo <i>Desenhos</i> que, por sua vez, é apresentada ao clicar-se no botão <i>Croquis</i> <img src="btn_sketch.png" class="app_button"> na tela <i>Dados topo</i>.</p>
 
-This dialog is opened from the <i>New sketch</i> button in the <i>Sketch list</i> dialog.<br><p>
+        <p>Tem dois campos de texto e um botão de confirmação:</p>
 
-It has two text field and a confirmation button.
-<ul>
-<li><b>name</b> is the name assigned to the sketch.</li>
-<li><b>reference station</b></li>
-<!-- li><b>landscape</b> mode [T] [default no]</li -->
-<li><b>projected</b> profile checkbox (by default the profile is "extended") [E]</li>
-<li><b>projection azimuth</b>, for projected profile view [E]</li>
-<li><b>dangling</b> sketch (origin not attached to midline)</li>
-</ul><br><p>
+        <ul>
+            <li><b>Nome</b>: usado para identificar o croqui.</li>
+            <li><b>Base referência</b></li>
+            <li><b>Perfil projetado</b>: por padrão o perfil é retificado. [E]</li>
+        </ul>
 
-You can use either the <b>name</b> suggested by TopoDroid
-(an increasing integer number) or enter a mnemonic name. Each sketch is saved with two files, one for the plan,
-the other for the profile. The filenames are obtained composing the survey name, the sketch name, and a suffix 
-("p" for plan, "s" for profile). For example the sketch "2" of the survey "cave" is saved in the two files
-"cave-2p.tdr" and "cave-2s.tdr".<br><p>
+            <p>Você pode aceitar o <b>nome</b> sugerido pelo TopoDroidX (um número interiro incremental) ou entrar um nome mnmônico.
+            Cada croqui é salvo em dois arquivos: um para a planta baixa e outro para o perfil.
+            Os nomes dos arquivos são resultado da composição do nome da topo, do croqui e de um sufixo ("p" para planta baixa e "s" para perfil).
+            Por exemplo, o croqui "2" da topo "caverna" é gravado nos arquivos: "caverna-2p.tdr" e "caverna-2s.tdr".</p>
 
-TopoDroid will give a warning if the name coincides with the name of an existing sketch.
-In particular it is not possible to have two sketches with names differing only by the characters case
-since the two sketches would have the same file because the filesystem is case insensitive.<br><p>
+            <p>O TopoDroidX apresentará um alerta se o nome escolhido coincidir com o nome de um croqui existente.
+            Não é possível criar dois croquis cujos nomes se diferenciem somente por letras maiúsculas X minúsculas pois os nomes dos arquivos desses croquis seriam tratados como iguais no sistema de arquivos insensível à caixa alta/baixa.</p>
 
-<b>WARNING</b>.
-The name of the sketch cannot contain the character '/' (slash), which is the pathname separator.
-Slashes are replaced with dashes '-'.<br><p>
+            <h2>ALERTA</h2>
 
-<b>Reference station</b><br>
-The reference station (origin) defines how the sketch is translated with respect to the survey midline.
-The survey midline defines the sketch scale (the drawing is scaled at 40 canvas units per meter) and rotation, but leaves undefined
-how the drawing is translated with respect to the midline. This uncertainty is resolved by specifying the
-reference station to be at (0,0) in the reference frame of the sketch canvas.<br><p>
+            <p>
+                O nome do croqui não pode conter o caracter '/' (barra) pois é o caracter usado pelo Android como separador de diretórios.
+                Barras são substituídas por hífens '-'.
+            </p>
 
-The reference station also determines the survey midline <b>data reduction</b> for the sketch.
-From the sketch point of view the midline is built starting from the reference station and continuing
-as long as data can be attached. The resulting midline
-forms a tree, rooted at the reference station. In order to make the canvas less cluttered, 
-is possible to hide the display of portion of the midline, either
-after a station, or before it (i.e., between the reference station and the station).
-This is explained in the "Sketch station" dialog.<br><p>
+            <h2>Base referência</h2>
 
-If the survey has "fixed station origin" [setting], TopoDroid prefills the "reference station" with the first survey station.
-Otherwise it uses the last station or the active station if this is set.
-You can change it if you want another station as sketch reference.<br><p>
+            <p>
+                A base referência (origem) define como o croqui é transladado em relação à linha de trena da topografia.
+                A linha de trena define a escala do croqui (o desenho é feito na escala de 40 unidades da tela por metro) e sua rotação, mas deixa indefinido como o croqui é transladado em relação à linha de trena. Essa incerteza é sanada definindo que a base de referência fica no ponto (0, 0) em relação ao espaço de desenho do croqui.
+            </p>
 
-The app signals an error if the reference station does not exist in the survey data.
-It can be forced to use an non-existing station by checking the "dangling" checkbox.<br>
-In this case the sketch will not have a midline reference, neither splays nor stations,
-until the reference station is assigned to a leg.<br><p>
+            <p>
+                A base de referência também determina a <b>redução de dados</b> da linha de trena para o croqui.
+                Do ponto de vista do croqui a linha de trena é uma linha que se inicia na base de referência e continua enquanto houver medidas que possam ser ligadas a ela.
+                A linha de trena resultante forma uma árvore, com raiz na base de referência. 
+                Para deixar a tela menos poluída, é possível ocultar a exibição de parte da linha de trena, seja após uma base, seja antes dela (ou seja, entre a base de referência e a base escolhida).
+                Isso é explicado na caixa de diálogo <a href="page_sketch_station.htm">Base croqui</a>.
+            </p>
 
-If the <b>projected</b> checkbox is checked the sketch profile is projected,
-The direction of view, ie, the projection azimuth, is chosen with a graphical dialog that allows to rotate the
-survey midline around a vertical axis.<br><p>
-Otherwise the sketch profile is extended and the  <b>projection azimuth</b> is not shown.<br><p>
+            <p>
+                Se a configuração <i>Origem fixa croqui</i> estiver habilitada, o TopoDroidX preenche automaticamente o campo <i>Base referência</i> com a primeira base da topo.
+                Do contrário, ele usa a última base criada ou a base ativa se esta estiver definida.
+                Você pode alterar esse valor se quiser que outra base sirva de referência para o novo croqui.
+            </p>
 
-<div style="font-size=90%">
-In <b>landscape</b> mode the magnetic North and the vertical are towards the left side of the screen, in plan and profile views, respectively.
-Likewise, the x-sections have the vertical to the left side.
-</div><br><p>
+            <p>
+                O TopoDroidX sinaliza um erro se a base referência não existir nos dados da topografia.
+                Pode-se forçar o uso de uma base inexistente marcando a caixa de seleção <i>Croqui solto</i>. [T]
+                Nesse caso o croqui não terá base de referência, nem medidas auxiliares nem bases até que uma visada seja criada com a base de referência.
+            </p>
 
-</body>
-</html>
+            <p>
+                Se a caixa de seleção <i>Perfil projetado</i> estiver marcada o perfil do croqui será do tipo projetado.
+                A direção do perfil, ou seja, o azimute da projeção, é definido através de uma caixa de diálogo gráfica que permite rotacionar a linha de trena em torno de um eixo vertical centralizado na base de referência.
+                Se a caixa de seleção não estiver marcada o perfil é retificado e não é apresentada a caixa de diálogo para definição do azimute da projeção.
+            </p>
+
+            <p>
+                <a href="manual16.htm">Principais funcionalidades</a> |
+                <a href="manual17.htm">Índice remissivo</a>
+            </p>
+    
+            <footer style="font-size: 80%; font-style: italic; clear: both;">
+                <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-05</span></p>
+                <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">57fd971ad</span></p>
+                <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            </footer>
+        
+        </body>
+    </html>
+    
