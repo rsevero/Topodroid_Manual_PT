@@ -1,71 +1,108 @@
-<html><body>
+<html>
+    <body>
+        <h1>Nova topo</h1>
 
-<h3>NEW SURVEY</h3>
+        <p>
+            Esta caixa de diálogo é apresentada ao clicar-se no botão <i>Adicionar</i> <img src="btn_plus.png" class="app_button"> na tela <u>Principal</u>.
+        </p>
 
-This dialog is opened from the <i>Add</i> button in the <u>Main window</u>.<br><p>
+        <p>
+            Informações sobre a nova topo:
+        </p>
 
-Information for the new survey:
-<ul>
-<li><i>name</i></li>
-<li><i>date</i></li>
-<li><i>team</i></li>
-<li><i>initial station</i></li>
-<li>magnetic <i>declination</i></li>
-<li>survey <i>description</i></li>
-<li>at-station <i>x-sections</i>, shared or private</li>
-<li>diving <i>data-mode</i> [T]</li>
-</ul>
-<br><p>
+        <ul>
+            <li><i>Nome</i></li>
+            <li><i>Data</i></li>
+            <li><i>Equipe</i></li>
+            <li><i>Base inicial</i></li>
+            <li><i>Declinação magnética</i></li>
+            <li><i>Descrição</i></li>
+            <li><i>Cortes não compartilhados</i></li>
+            <li><i>Modo mergulho de dados</i> [T]</li>
+        </ul>
 
-The <i>name</i> is mandatory. 
-The survey names are used to list surveys in the
-<u>Main window</u> and TopoDroid distinguishes surveys by their name (although each survey has a unique numerical id in the database).<br>
-The name must be unique in the database. Names that differ only by the characters case are not different because
-the filesystem is case insensitive. TopoDroid raises a warning if the new survey name coincide with the name of an existing survey
-except for the characters case.<br><p>
+        <p>
+            O <i>nome</i> é obrigatório. 
+            Os nomes das topos são usados para listar as topos na <u>Tela principal</u> e o TopoDroidX distingue as topos pelo nome (embora cada topo tenha um id numérico único no banco de dados).
+        </p>
+        <p>
+            O nome deve ser único no banco de dados.
+            Nomes que diferem somente pela caixa de letras não são diferentes porque o sistema de arquivos é insensível à caixa de letras.
+            O TopoDroidX apresenta um alerta se o novo nome de topo coincide com o nome de uma topo existente exceto pela caixa de letras.
+        </p>
 
-<b>WARNING</b>.
-The name of the survey cannot contain spaces, nor the characters '/' (slash, which is the pathname separator), ':' (colon),
-'*' (star), and '\' (backslash).
-Backslashes are dropped.
-Spaces are replaced with '_' (underscore), slashes and colons with dashes '-', and stars with '+' (plus).<br><p>
+        <h2>
+            ALERTA
+        </h2>
 
+        <p>
+            O nome da topo não pode conter espaços, nem os caracteres '/' (barra, que é o separador de diretórios), ':' (dois pontos), '*' (asterisco) e '\' (barra invertida).
+            Barras invertidas são eliminadas.
+            Espaços são substituídos por '_' (sublinhado), barras e dois pontos por hífens '-', e asteriscos por '+' (mais).
+        </p>
 
-The <i>date</i> is written with format "yyyy.mm.dd". For example January 6, 2015 is "2015.01.06". It is preset to the current date.<br><p>
+        <p>
+            A <i>data</i> é escrita no formato "aaaa.mm.dd".
+            Por exemplo, 6 de janeiro de 2015 é "2015.01.06".
+            É pré-definida para a data atual.
+        </p>
 
-The <i>team</i> is mandatory and cannot be left empty.<br><p>
+        <p>
+            O campo <i>equipe</i> é obrigatório e não pode ser deixado em branco.
+        </p>
 
-The <i>description</i> is empty. It can safely be left so, although it is a good practice to take the time to write a description of the survey.<br><p>
+        <p>
+            A <i>descrição</i> pode ser deixada vazia mas é uma boa prática escrever uma descrição para a topo.
+        </p>
 
-The <i>magnetic declination</i> is "unset" by default. If you know it you can enter it here, otherwise you can look it up in the web after you have found the coordinates of a fixed point (say, the cave entrance) with the GNSS [A].
-The declination must be entered in decimal degrees.
-The accepted range of values is [-360&deg;, 360&deg;].
-Any value outside this interval is considered as "unset".<br><p>
+        <p>
+            A <i>declinação magnética</i> é "não definida" por padrão. 
+            Se você sabe a declinação magnética você pode entrar aqui, caso contrário você pode procurar na web depois de ter encontrado as coordenadas de um ponto fixo (digamos, a entrada da caverna) com o GNSS [A].
+            A declinação deve ser inserida em graus decimais.
+            O intervalo aceito de valores é [-360°, 360°].
+            Qualquer valor fora deste intervalo é considerado como "não definido".
+        </p>
 
-At-station <i>x-sections</i> can be either shared among the survey sketches, or private to each sketch.
-This choice must be made when the survey is created and cannot be modified later because
-it affects the existing sketches.<br><p>
+        <p>
+            Se a caixa de seleção <i>Cortes não compartilhados</i> estiver marcada, os cortes de seção transversal (x-sections) não são compartilhados entre os croquis da topo.
+            Se a caixa de seleção não estiver marcada, os cortes de seção transversal são compartilhados entre os croquis da topo.
+            Esta escolha deve ser feita quando a topo é criada e não pode ser modificada posteriormente porque afeta os croquis existentes.
+        </p>
 
-<b>Buttons</b><br>
-<i>Save</i>: the new survey name is added to the database.<br>
-<i>Open</i>: saves and starts the <i>Shot list</i> activity immediately.<br><p>
+        <p>
+            O <i>modo mergulho de dados</i> é um recurso experimental.
+            Os dados podem ser inseridos somente manualmente, e no seguinte formato:
+            <ul>
+                <li>Base DE</li>
+                <li>Base PARA</li>
+                <li>Profundidade na base DE</li>
+                <li>Azimute da direção DE-PARA</li>
+                <li>Distância entre as bases DE e PARA</li>
+                <li>EDTC na base DE (opcional)</li>
+            </ul>
+        </p>
 
-<b>Diving data-mode</b><br>
-The diving data-mode is an experimental feature.
-Data can be entered only manually, and in the following format:
-<ul>
-<li>FROM station</li>
-<li>TO station</li>
-<li>depth at the FROM station</li>
-<li>azimuth of the direction FROM-TO</li>
-<li>distance between the FROM and the TO station</li>
-<li>LRUD at the FROM station (optional)</li>
-</ul>
-<br><p>
+        <p>
+            No modo mergulho não são aceitas contravisadas.
+        </p>
 
-Backshot data are not supported in "diving" data-mode.
-<br><p>
+        <h2>Botões</h2>
 
+        <ul>
+            <li><i>Salvar</i>: a nova topo é adicionada ao banco de dados.</li>
+            <li><i>Abrir</i>: salva e abre a tela <i>Dados medidas</i> imediatamente.</li>
+        </ul>
 
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
 
-</body></html>
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-08</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">9c277c159</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+    
+    </body>
+</html>
