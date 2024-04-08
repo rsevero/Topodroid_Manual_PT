@@ -1,41 +1,72 @@
-<html><body>
-<h3>Android PERMISSIONS</h3>
+<html>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h1>Permissões Android</h1>
 
-<b>Storage</b><br>
-TopoDroid saves the survey data and sketches, and the calibrations, in the <i>primary external storage</i>.<br>
-It cannot work without read/write access to the storage.
-<br><p>
+        <h2>Armazenamento</h2>
 
-<b>Internet</b><br>
-The network connection is necessary only if you want to install a translation of the user manual.<br>
-TopoDroid does not uses the network in any other way, and it is safe to disable this permission.
-<br><p>
+        <p>
+            O TopoDroidX salva os dados da topografia, os croquis e as calibrações no <i>armazenamento externo primário</i> do dispositivo.
+            Ele não pode funcionar sem acesso de leitura/escrita ao armazenamento.
+        </p>
 
-<b>Bluetooth</b><br>
-TopoDroid requires bluetooth access to communicate with the devices.<br>
-If the survey data are entered manually, it can be used without bluetooth.<br>
-TopoDroid uses also bluetooth pairing, to pair with newly discovered devices.
-Discovery and pairing can be done with the "settings" app.
-<br><p> 
+        <h2>Internet</h2>
 
-<b>Camera</b><br>
-TopoDroid can use the camera to take pictures.<br>
-TopoDroid camera management is not so feature-rich as that of a "camera" app, but it stores
-the direction of view (azimuth and inclination) in the pictures.<br>
-It should be safe to use TopoDroid without this permission.
-<br><p>
+        <p>
+            A conexão de rede é necessária somente se você quiser instalar uma tradução do manual do usuário.
+            O TopoDroidX não usa a rede de outra forma sendo portanto seguro desabilitar essa permissão.
+        </p>
 
-<b>Audio</b><br>
-TopoDroid uses the microphone to record audio notes (for shots and audio points).<br>
-If this permission is not granted, audio recording is disabled.<br>
-It should be safe to use TopoDroid without this permission.
-<br><p>
+        <h2>Bluetooth</h2>
 
-<b>Location</b><br>
-TopoDroid uses the device GNSS to get the geographical position of a point, but it can import it from
-<i>MobileTopographer</i>.<br>
-It should be safe to use TopoDroid without this permission.
-<br><p>
+        <p>
+            O TopoDroidX requer acesso ao bluetooth para se comunicar com os dispositivos de medição.
+        </p>
+        <p>
+            Se os dados da topografia forem inseridos manualmente, ele pode ser usado sem bluetooth.
+            O TopoDroidX usa o emparelhamento bluetooth para emparelhar com dispositivos recém-descobertos.
+            A descoberta e o emparelhamento podem ser feitos com o aplicativo "Configurações" do dispositivo Android.
+        </p>
 
+        <h2>Câmera</h2>
 
-</body></html>
+        <p>
+            O TopoDroidX pode usar a câmera para tirar fotos.
+        </p>
+        <p>
+            A gestão da câmera do TopoDroidX não é tão rica em recursos quanto a de um aplicativo de "câmera", mas armazena a direção da visão (azimute e inclinação) nas fotos.
+            É possível usar o TopoDroidX sem essa permissão.
+        </p>
+
+        <h2>Áudio</h2>
+
+        <p>
+            O TopoDroidX usa o microfone para gravar notas de áudio (para bases e pontos do tipo áudio).
+        </p>
+        <p>
+            Se essa permissão não for concedida, a gravação de áudio é desabilitada.
+            É possível usar o TopoDroidX sem essa permissão.
+        </p>
+
+        <h2>Localização</h2>
+
+        <p>
+            O TopoDroidX usa o GNSS do dispositivo para obter a posição geográfica de um ponto, mas pode também importá-la de um <a href="page_fixed_import.htm">app externo</a>.
+        </p>
+        <p>
+            É possível usar o TopoDroidX sem essa permissão.
+        </p>
+
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-08</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">34954ac2f</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+
+    </body>
+</html>
