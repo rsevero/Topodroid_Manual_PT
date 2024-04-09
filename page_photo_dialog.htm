@@ -1,69 +1,106 @@
 <html>
-<body>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h1>Dados da foto</h1>
 
-<h3>SHOT/SKETCH PHOTO</h3>
+        <p>
+            Esta caixa de diálogo é aberta a partir do botão <i>Foto</i> <img src="btn_photo.png" class="app_button"> na versão extendida da tela <i>Dados medida</i>, ou quando um ponto do tipo "foto" ou uma foto de corte são inseridos na tela <u>Desenho</u>.
+        </p>
 
-<div style="font-size=90%">
-This dialog is opened from the <i>Photo</i> button in the secondary <i>Shot edit</i> dialog, or when a "photo" point
-or a photo xsection are inserted
-in the <u>Drawing window</u>.<br><p>
+        <p>
+            Há um campo de texto para o <b>comentário</b> da foto que você vai tirar, e uma caixa de seleção para a escolha da implementação de câmera a ser utilizada.
+        </p>
 
-There is a text field for the <b>comment</b> to the photo you are going to take,
-and a checkbox for the choice of the camera implementation.<br><p>
+        <p>
+            Botões:
+        </p>
 
-Buttons:
-<ul>
-<li><b>OK</b> closes the dialog and starts to take a photo.</li>
-<li><b>Cancel</b> closes the dialog.</li>
-</ul><br><p>
+        <ul>
+            <li><b>OK</b>: fecha a caixa de diálogo e inicia o processo de captura da imagem.</li>
+            <li><b>Cancelar</b>: fecha a caixa de diálogo.</li>
+        </ul>
 
-TopoDroid contains a simple implementation of a camera. 
-Its unique feature is that it stores the azimuth and inclination of the device in exif tags in the image file. 
-The azimuth is stored as GPS_LONGITUDE and the inclination as GPS_LATITUDE (with sign).
-<br>
-The following exif tags are set by TopoDroid:
-<ul>
-<li><i>Software</i>: "TopoDroid" and its version, separated by a space [Android 7 and up]</li>
-<li><i>Orientation</i></li>
-<li><i>Datetime</i> [yyyy.MM.dd]</li>
-<li><i>GPS latitude</i>: inclination [1/100&deg;]</li>
-<li><i>GPS latitude ref</i>: "N" or "S"</li>
-<li><i>GPS longitude</i>: azimuth [1/100&deg;]</li>
-<li><i>GPS longitude ref</i>: "E"</li>
-<li><i>Image description</i>: azimuth and inclination in 1/100&deg;, separated by a space</li>
-</ul>
-<br><p>
+        <p>
+            O TopoDroid contém uma implementação simples de uma câmera.
+            Seu recurso especial é que armazena o azimute e a inclinação do dispositivo em <i>tags exif</i> no arquivo de imagem.
+            O azimute é armazenado como GPS_LONGITUDE e a inclinação como GPS_LATITUDE (com sinal).
+        </p>
 
-For "photo" point or photo xsection the display of the TopoDroid camera has a centered overlaid cross-hair.<br><p>
+        <p>
+            As seguintes <i>tags exif</i> são definidas pelo TopoDroid:
+        </p>
 
-TopoDroid uses Android sensors to get the direction (azimuth and clino). 
-A warning is displayed if the sensor accuracy is low or there is a sensor failure.<br><p>
+        <ul>
+            <li><i>Software</i>: "TopoDroid" e sua versão, separados por um espaço [Android 7 e acima]</li>
+            <li><i>Orientação</i>: orientação da imagem.</li>
+            <li><i>Data e hora</i> [aaaa.MM.dd]</li>
+            <li><i>Latitude GPS</i>: inclinação [1/100&deg;]</li>
+            <li><i>Ref. Latitude GPS</i>: "N" ou "S"</li>
+            <li><i>Longitude GPS</i>: azimute [1/100&deg;]</li>
+            <li><i>Ref. Longitude GPS</i>: "E"</li>
+            <li><i>Descrição da imagem</i>: azimute e inclinação em 1/100&deg;, separados por um espaço</li>
+        </ul>
 
-The TopoDroid camera has three buttons on the lower right.
-<ul>
-<li><b>camera</b>. Red: ready, tap to take a picture. Blue: on hold, tap to turn camera active.</li>
-<li><b>save</b> saves the picture. Grayed until a picture has been taken.</li>
-<li><b>back</b> closes the window without saving the picture.</li>
-</ul>
+        <p>
+            A implementação de câmera do TopoDroidX não é tão rica em recursos quanto a de um aplicativo de "câmera" normal, mas armazena a direção da visão (azimute e inclinação) nas fotos.
+        </p>
 
-With the screen up the picture is portrait.
-When the screen is turned to the left or to the right the picture is landscape.<br><p>
+        <p>
+            Quando usada para registrar a image para um ponto do tipo "foto" ou a iamge para um corte do tipo "foto" a câmera do TopoDroidX exibe uma "mira" centralizada sobre a imagem.
+        </p>
 
-Zoom buttons are brought up by tapping the screen in the mid-bottom.
-To go through large zoom steps tap the zoom buttons repeatedly fast.<br><p>
+        <p>
+            O TopoDroidX usa os sensores do dispositivo Android para obter a direção (azimute e inclinação).
+            Um aviso é exibido se a precisão do sensor é baixa ou se houver uma falha no sensor.
+        </p>
 
-<b>Camera implementation</b><br>
-TopoDroid has two camera implementations: the first uses the old Android camera API,
-the second uses the new Android camera2 API.<br>
-The default is the old camera.<br><p>
+        <p>
+            A câmera do TopoDroidX tem três botões no canto inferior direito.
+        </p>
 
-With the new camera2 API there is a limit of five attempts of picture capture,
-after which the <i>camera</i> button is no longer available.<br><p>
+        <ul>
+            <li><b>Câmera</b>: Em vermelho: pronto, toque para tirar uma foto. Em azul: em espera, toque para ativar a câmera.</li>
+            <li><b>Salvar</b>: salva a imagem. Desativado até que uma imagem seja tirada.</li>
+            <li><b>Voltar</b>: fecha a janela sem salvar a imagem.</li>
+        </ul>
 
-A warning is displayed, if the JPEG image saving fails.<br><p> 
+        <p>
+            A câmera do TopoDroidX tem dois modos de operação: <i>retrato</i> e <i>paisagem</i>. Quando o dispositivo Android está na vertical, a imagem é capturada em formato retrato. Quando o dispositivo Android é virado para a esquerda ou para a direita, a imagem é capturada em formato paisagem.
+        </p>
 
-</div><br><p>
+        <p>
+            Os botões de zoom são exibidos tocando na tela na parte inferior do meio.
+            Para passar por etapas de zoom grandes, toque rapidamente nos botões de zoom.
+        </p>
 
-</body>
+        <h2>Implementação da câmera</h2>
+
+        <p>
+            O TopoDroidX tem duas implementações de câmera: a primeira usa a antiga API de câmera do Android, a segunda usa a nova API do Android: camera2.
+        </p>
+
+        <p>
+            A implementação padrão de câmera é a antiga.
+        </p>
+
+        <p>
+            Com a nova API camera2 há um limite de cinco tentativas de captura de imagem, após o qual o botão <i>câmera</i> não está mais disponível.
+        </p>
+
+        <p>
+            Um alerta é apresentado se houver uma falha na gravação da imagem JPEG.
+        </p>
+
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-09</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">266bd6b41</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+
+    </body>
 </html>
-
