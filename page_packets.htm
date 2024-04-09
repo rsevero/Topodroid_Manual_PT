@@ -1,33 +1,57 @@
 <html>
-<body>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h1>Log de pacotes DistoX</h1>
 
-<h3>DistoX PACKET LOGS</h3>
+        <p>
+            Esta caixa de diálogo é aberta a partir do menu <i>Pacotes</i> da tela <u>Dispositivos</u>.
+        </p>
 
-<div style="font-size=90%">
-This dialog is opened from the <i>Packets</i> menu of the <u>Device window</u>.<br><p>
+        <p>
+            Exibe a lista de pacotes registrados.
+            Os pacotes mais recentes estão no topo da lista.
+        </p>
 
-It displays the list of logged packet.
-The most recent packets are at the top of the list.
-<br><p>
+        <p>
+            Os itens com fundo preto são pacotes recebidos do DistoX.
+            Aqueles com fundo mais claro são enviados ao DistoX.
+        </p>
 
-Items with a black background are packets received from the DistoX.
-Those with a lighter background are sent to the DistoX.<br>
-The text color depends on the type of the packet:
-<ul>
-<li>white: data packet (D)</li>
-<li>grey: vector packet (V)</li>
-<li>brown: G packet (G)</li>
-<li>orange: M packet (M)</li>
-<li>green: command packets (C)</li>
-<li>yellow: other packets (X)</li>
-</ul><br><p>
+        <p>
+            A cor do texto depende do tipo do pacote:
+        </p>
 
-DistoX packets are logged only if the <i>Packet</i> setting is enabled.<br>
-The packet database is in the private app files folder.
-<br><p>
+        <ul>
+            <li>branco: pacote de dados (D)</li>
+            <li>cinza: pacote de vetor (V)</li>
+            <li>marrom: pacote G (G)</li>
+            <li>laranja: pacote M (M)</li>
+            <li>verde: pacotes de comando (C)</li>
+            <li>amarelo: outros pacotes (X)</li>
+        </ul>
 
-The dialog has two buttons to clear the log of the packets older than a day or than a week, respectively.
-</div><br>
+        <p>
+            Os pacotes do DistoX são registrados somente se a configuração <i>Especiais > Log pacote</i> estiver habilitada.
+        </p>
 
-</body>
+        <p>
+            O banco de dados de pacotes está na pasta de arquivos privados do aplicativo.
+        </p>
+
+        <p>
+            O diálogo tem dois botões para limpar o log dos pacotes mais antigos do que um dia ou do que uma semana, respectivamente.
+        </p>
+
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-09</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">266bd6b41</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+
+    </body>
 </html>
