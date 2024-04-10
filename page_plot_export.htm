@@ -1,56 +1,79 @@
 <html>
-<body>
+    <body>
+        <link rel="stylesheet" href="manual.css">
+        <h1>Exportação de croquis</h1>
 
-<h3>SKETCH EXPORTS</h3>
+        <p>
+            Os croquis são armazenados no formato binário do TopoDroidX e podem ser exportados como
+        </p>
 
-Sketches are stored in TopoDroid binary format, and can be exported as
-<ul>
-<li><i>Therion</i> ".th2" file</li>
-<li><i>cSurvey</i> ".csx" file</li>
-<li><i>Tunnel</i> ".xml" file</li>
-<li>2D DXF (<i>LibreCAD/AutoCAD</i>)</li>
-<li>SVG (<i>Inkscape/Adobe Illustrator</i>)</li>
-<li>PDF</li>
-<li>shapefile (<i>QGIS</i>)</li>
-<li><i>xtherion</i> image ".xvi"</li>
-<!-- li>PNG image file</li -->
-</ul><br><p>
+        <ul>
+            <li><i>Therion</i>: arquivo ".th2"</li>
+            <li><i>cSurvey</i>: arquivo ".csx"</li>
+            <li><i>DXF</i>: arquivo 2D compatível com <i>LibreCAD/AutoCAD</i></li>
+            <li><i>SVG</i>: arquivo compatível com <i>Inkscape/Adobe Illustrator</i></li>
+            <li><i>Shapefile</i>: arquivo compatível com <i>QGIS</i></li>
+            <li><i>PDF</i></li>
+            <li><i>XVI</i>: arquivo de imagem <i>xtherion</i> ".xvi"</li>
+        </ul>
 
+        <p>
+            Além da exportação, há uma opção para salvar automaticamente um croqui em um dos formatos de exportação suportados sempre que o croqui é fechado.
+        </p>
 
-In addition to the export, there
-is an option to automatically save a sketch in one of the supported export formats whenever it is closed.<br><p>
+        <p>
+            Os arquivos de exportação <b>cSurvey</b> contém tanto os croquis de planta quanto de perfil.
+            Se os pontos do tipo "corte" estiverem definidos, ele também contém os cortes.
+            Os cortes não são incluídos nos arquivos cSurvey.
+        </p>
 
-The <b>cSurvey</b> export file contains both the plan and the profile sketches. If the "section" points are defined, it has also the x-sections.
-X-sections are not exported as cSurvey files.<br><p>
+        <p>
+            Os croquis podem ser exportados como arquivos <b>DXF</b> 2D. As versões de DXF suportadas são 9, 12 e 14.
+        </p>
 
-<!--
-The resolution of <b>PNG</b> images is an adjustable setting. However a larger and more detailed image requires more CPU time and may fail due to memory limits. If it fails TopoDroid tries reducing the resolution until it succeeds exporting the sketch as PNG image file.<br><p -->
+        <p>
+            A exportação de arquivos <b>shapefile</b> inclui bases, medidas e croquis. Todos os objetos de desenho são convertidos para segmentos de linhas retas.
+            As tabelas de atributos contêm os dados do objeto (por exemplo, tipo de ponto, orientação, etc.).
+            Os arquivos que compõem uma exportação de shapefile são compactados em um arquivo zip.
+        </p>
 
-Sketches can be exported as 2D <b>DXF</b> files. Supported DXF versions are 9, 12, and 14.<br><p>
+        <p>
+            Algumas configurações de exportação, específicas do formato selecionado, podem ser substituídas na caixa de diálogo de exportação.
+        </p>
 
-The <b>shapefile</b> export includes stations, shots, and drawing. All the drawing objects are converted to linestring.
-The attribute tables contain the object data (eg, point type, orientation, etc.).
-The files comprising a shapefile export are compressed in a zip archive.
-<br><p>
+        <h2>Exportação da Visão Geral</h2>
 
-A few export settings, specific to the selected format, can be overridden in the export dialog.<br><p>
+        <p>
+            Os croquis também podem ser exportados da "Janela de visão geral" nos seguintes formatos:
+        </p>
 
-<b>Overview export</b><br>
-Sketches can be exported also from the "Overview Window" in the following formats
-<ul>
-<li><i>Therion</i> ".th2" file</li>
-<li>2D DXF (<i>LibreCAD/AutoCAD</i>)</li>
-<li>SVG (<i>Inkscape/Adobe Illustrator</i>)</li>
-<li>shapefile (<i>QGIS</i>)</li>
-<li>PDF</li>
-<li>".xvi" file (<i>xtherion</i>)</li>
-</ul>
-<br><p>
+        <ul>
+            <li><i>Therion</i>: arquivo ".th2"</li>
+            <li><i>DXF</i>: arquivo 2D compatível com <i>LibreCAD/AutoCAD</i></li>
+            <li><i>SVG</i>: arquivo compatível com <i>Inkscape/Adobe Illustrator</i></li>
+            <li><i>Shapefile</i>: arquivo compatível com <i>QGIS</i></li>
+            <li><i>PDF</i></li>
+            <li><i>XVI</i>: arquivo de imagem <i>xtherion</i> ".xvi"</li>
+        </ul>
 
-The export of the <u>overview window</u> includes all the sketches of the current view (either plan or profile).<br>
-If there are "section" points, the x-sections are also included.
-<br><p>
+        <p>
+            A exportação na tela <u>Visão Geral</u> inclui todos os croquis da visualização atual (tanto planta como perfil).
+        </p>
 
+        <p>
+            Se houver pontos do tipo "corte", os cortes também são incluídos.
+        </p>
 
-</body>
+        <p>
+            <a href="manual16.htm">Principais funcionalidades</a> |
+            <a href="manual17.htm">Índice remissivo</a>
+        </p>
+
+        <footer style="font-size: 80%; font-style: italic; clear: both;">
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-10</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">8bd3688f7</span></p>
+            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        </footer>
+
+    </body>
 </html>
