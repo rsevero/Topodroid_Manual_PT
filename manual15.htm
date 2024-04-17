@@ -1,79 +1,99 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-<h2>[15] Visualizador 3D (Cave3D)</h2>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>[15] Visualizador 3D (Cave3D)</h1>
 
-<p>O Visualizador 3D do TopoDroidX foi criado para ser utilizado dentro da caverna não dependendo de conexão com a internet.</p>
+    <p>
+      O Visualizador 3D do TopoDroidX foi criado para ser utilizado dentro da caverna não dependendo de conexão com a internet.
+    </p>
 
-<p>Ele pode também carregar outros formatos de arquivo:Therion (th, thconfig), Loch (lox), Compass (dat, mak), Survex (3d) e VisualTopo (tro, trox). </p>
+    <p>
+      Ele pode também carregar outros formatos de arquivo:Therion (th, thconfig), Loch (lox), Compass (dat, mak), Survex (3d) e VisualTopo (tro, trox).
+    </p>
 
-<p>O modelo 3D pode ser aberto tanto a partir da opção de menu <u>3D</u> na tela <i>Dados da topo</i> quanto a partir da tela <i>Info topo</i>.</p>
+    <p>
+      O modelo 3D pode ser aberto tanto a partir da opção de menu <u>3D</u> na tela <i>Dados da topo</i> quanto a partir da tela <i>Info topo</i>.
+    </p>
 
-<p>O modelo 3D de um projeto pode ser aberto a partir do botão correspondente na tela <i>Projeto</i>.</p>
+    <p>
+      O modelo 3D de um projeto pode ser aberto a partir do botão correspondente na tela <i>Projeto</i>.
+    </p>
 
-<p>O modelo é apresentado com uma grade (azul norte e verde leste) ou conjunto de três eixos (rosa para cima) de referência.</p>
+    <p>
+      O modelo é apresentado com uma grade (azul norte e verde leste) ou conjunto de três eixos (rosa para cima) de referência.
+    </p>
 
-<p>Se os dados (topo ou projeto) contar com pontos fixos (com coordenadas geográficas), estes serão usados para calcular as coordenadas dos pontos do modelo.
-Se as coordenadas tiverem sido definidas em um sistema cartográfico (projetado), este será usado.
-Do contrário os pontos fixos serão posicionados considerando as distâncias do equador e do meridiano de referência com a latitude multiplicada pelo raio do meridiano e a longitude multiplicada pelo raio do círculo paralelo respectivamente.</p>
+    <p>
+      Se os dados (topo ou projeto) contar com pontos fixos (com coordenadas geográficas), estes serão usados para calcular as coordenadas dos pontos do modelo.
+      Se as coordenadas tiverem sido definidas em um sistema cartográfico (projetado), este será usado.
+      Do contrário os pontos fixos serão posicionados considerando as distâncias do equador e do meridiano de referência com a latitude multiplicada pelo raio do meridiano e a longitude multiplicada pelo raio do círculo paralelo respectivamente.
+    </p>
 
-<p>As coordenadas em sistema cartográficos de referência não levam em consideração a convergência dos meridianos.
-Dessa maneira o norte não é o norte cartográfico mas sim a direção do meridiano.</p>
+    <p>
+      As coordenadas em sistema cartográficos de referência não levam em consideração a convergência dos meridianos.
+      Dessa maneira o norte não é o norte cartográfico mas sim a direção do meridiano.
+    </p>
 
-<p>Não é realizada nenhuma conversão de coordenadas.
-Assim, todas as topos em um mesmo projeto devem estar referênciadas em um mesmo sistema de coordenadas.</p>
+    <p>
+      Não é realizada nenhuma conversão de coordenadas.
+      Assim, todas as topos em um mesmo projeto devem estar referênciadas em um mesmo sistema de coordenadas.
+    </p>
 
-<h3>BOTÕES</h3>
+    <h2>Botões</h2>
 
-<ul>
-<li><img class="app_button" src="btn_3d_turn.png"><img class="app_button" src="btn_3d_move.png"><img class="app_button" src="btn_3d_light.png"> <i>Modo</i>: rodar o modelo ou mover o modelo ou a fonte de luz (se houver um DEM definido).
-Clicando com dois dedos simultaneamente é possível dar zoom ou mover o modelo.</li>
-<li><img class="app_button" src="btn_3d_orthogonal.png"><img class="app_button" src="btn_3d_perspective.png"> <i>Projeção</i>: ou ortográfica ou em perspectiva.</li>
-<li><img class="app_button" src="btn_3d_station_no_dot.png"><img class="app_button" src="btn_3d_station_point_dot.png"><img class="app_button" src="btn_3d_station_name_dot.png"> <i>Bases</i>: ocultar, mostrar com ponto, mostrar com nome.</li>
-<li><img class="app_button" src="btn_3d_splays_none.png"><img class="app_button" src="btn_3d_splays_line.png"><img class="app_button" src="btn_3d_splays_point.png"> <i>Medidas auxiliares</i>: ocultar, mostrar como linhas ou como pontos.</li>
-<li><img class="app_button" src="btn_3d_wall_no.png"><img class="app_button" src="btn_3d_wall.png"> <i>Paredes</i>: ocultar ou mostrar (se tiverem sido criadas).</li>
-<li><img class="app_button" src="btn_3d_surface_off.png"><img class="app_button" src="btn_3d_surface_on.png"> <i>Superfície</i>: ocultar ou mostrar superfície DEM (se disponível).</li>
-<li><img class="app_button" src="btn_3d_color.png"><img class="app_button" src="btn_3d_color_survey.png"><img class="app_button" src="btn_3d_color_depth.png"><img class="app_button" src="btn_3d_color_surface.png"> <i>Cor</i>: cor da linha de trena: branca, por topo, por profundidade ou superfície.</li>
-<li><img class="app_button" src="btn_3d_frame_grid.png"><img class="app_button" src="btn_3d_frame_axes.png"><img class="app_button" src="btn_3d_frame_no.png"> <i>Grade</i>: grade XY, eixos XYZ ou nenhuma.</li>
-</ul>
-
-<p>Os ícones dos botões são alterados para indicar a seleção atual.</p>
-
-<p>Alguns botões tem ações disparadas por cliquers longos:</p>
-
-<ul>
-<li><i>Projeção</i>: ajusta a distância focal da perspectiva.</li>
-<li><i>Bases</i>: liga e desliga a possibilidade de selecionar bases.</li>
-<li><i>Cor</i>: seleciona as topos a serem apresentadas e ocultadas.</li>
-<li><i>Grade</i>: abre a caixa de diálogo <i>Visadas visíveis</i> (apresentação de visadas de superfície, duplicadas e comentadas).</li>
-</ul>
-
-<h3>MENU</h3>
-
-<ul>
-<li><i>Abrir</i>: abrir um arquivo de topo do diretório de trabalho.</li>
-<li><i>Exportar</i>: abre a caixa de diálogo <i>Exportar modelo 3D</i>.</li>
-<li><i>Info</i>: informações estatísticas do modelo.</li>
-<li><i>Diagrama Rose 3D</i>: distribuição de direções 3D.</li>
-<li><i>Diagrama Rose</i>: distribuição dos azimutes.</li>
-<li><i>Reiniciar</i>: retornar para projeção ortogonal de cima, com zoom 1.</li>
-<li><i>Ponto de vista</i>: alterar o ponto de vista: topo, leste, norte, oeste, sul.
-Por exemplo "sul" quer dizer olhar para a caverna a partir do sul.</li>
-<li><i>Superfície DEM</i>: arquivo DEM e sua transparência.
-Projecão da linha de trena na superfície.</li>
-<li><i>Paredes</i>: criar ou limpar a reconstrução 3D de paredes.
-Liga e desliga as projeções das paredes na planta baixa e no perfil.</li>
-<li><i>Configurações</i></li>
-<li><i>Ajuda</i></li>
-</ul>
-
-<h3>CONFIGURAÇÕES</h3>
-
-<ul>
-<li><i>Diretório trabalho</i>: diretório com as topos.</li>
-<li>
-    <u>Visualizador 3D</u>:
     <ul>
+      <li><img class="app_button" src="btn_3d_turn.png"><img class="app_button" src="btn_3d_move.png"><img class="app_button" src="btn_3d_light.png"> <i>Modo</i>: rodar o modelo ou mover o modelo ou a fonte de luz (se houver um DEM definido).
+      Clicando com dois dedos simultaneamente é possível dar zoom ou mover o modelo.</li>
+      <li><img class="app_button" src="btn_3d_orthogonal.png"><img class="app_button" src="btn_3d_perspective.png"> <i>Projeção</i>: ou ortográfica ou em perspectiva.</li>
+      <li><img class="app_button" src="btn_3d_station_no_dot.png"><img class="app_button" src="btn_3d_station_point_dot.png"><img class="app_button" src="btn_3d_station_name_dot.png"> <i>Bases</i>: ocultar, mostrar com ponto, mostrar com nome.</li>
+      <li><img class="app_button" src="btn_3d_splays_none.png"><img class="app_button" src="btn_3d_splays_line.png"><img class="app_button" src="btn_3d_splays_point.png"> <i>Medidas auxiliares</i>: ocultar, mostrar como linhas ou como pontos.</li>
+      <li><img class="app_button" src="btn_3d_wall_no.png"><img class="app_button" src="btn_3d_wall.png"> <i>Paredes</i>: ocultar ou mostrar (se tiverem sido criadas).</li>
+      <li><img class="app_button" src="btn_3d_surface_off.png"><img class="app_button" src="btn_3d_surface_on.png"> <i>Superfície</i>: ocultar ou mostrar superfície DEM (se disponível).</li>
+      <li><img class="app_button" src="btn_3d_color.png"><img class="app_button" src="btn_3d_color_survey.png"><img class="app_button" src="btn_3d_color_depth.png"><img class="app_button" src="btn_3d_color_surface.png"> <i>Cor</i>: cor da linha de trena: branca, por topo, por profundidade ou superfície.</li>
+      <li><img class="app_button" src="btn_3d_frame_grid.png"><img class="app_button" src="btn_3d_frame_axes.png"><img class="app_button" src="btn_3d_frame_no.png"> <i>Grade</i>: grade XY, eixos XYZ ou nenhuma.</li>
+    </ul>
+
+    <p>
+      Os ícones dos botões são alterados para indicar a seleção atual.
+    </p>
+
+    <p>
+      Alguns botões tem ações disparadas por cliquers longos:
+    </p>
+
+    <ul>
+      <li><i>Projeção</i>: ajusta a distância focal da perspectiva.</li>
+      <li><i>Bases</i>: liga e desliga a possibilidade de selecionar bases.</li>
+      <li><i>Cor</i>: seleciona as topos a serem apresentadas e ocultadas.</li>
+      <li><i>Grade</i>: abre a caixa de diálogo <i>Visadas visíveis</i> (apresentação de visadas de superfície, duplicadas e comentadas).</li>
+    </ul>
+
+    <h2>Menu</h2>
+
+    <ul>
+      <li><i>Abrir</i>: abrir um arquivo de topo do diretório de trabalho.</li>
+      <li><i>Exportar</i>: abre a caixa de diálogo <i>Exportar modelo 3D</i>.</li>
+      <li><i>Info</i>: informações estatísticas do modelo.</li>
+      <li><i>Diagrama Rose 3D</i>: distribuição de direções 3D.</li>
+      <li><i>Diagrama Rose</i>: distribuição dos azimutes.</li>
+      <li><i>Reiniciar</i>: retornar para projeção ortogonal de cima, com zoom 1.</li>
+      <li><i>Ponto de vista</i>: alterar o ponto de vista: topo, leste, norte, oeste, sul.
+      Por exemplo "sul" quer dizer olhar para a caverna a partir do sul.</li>
+      <li><i>Superfície DEM</i>: arquivo DEM e sua transparência.
+      Projecão da linha de trena na superfície.</li>
+      <li><i>Paredes</i>: criar ou limpar a reconstrução 3D de paredes.
+      Liga e desliga as projeções das paredes na planta baixa e no perfil.</li>
+      <li><i>Configurações</i></li>
+      <li><i>Ajuda</i></li>
+    </ul>
+
+    <h2>Configurações</h2>
+
+    <ul>
+      <li><i>Diretório trabalho</i>: diretório com as topos.</li>
+      <li>
+      <u>Visualizador 3D</u>:
+      <ul>
         <li><i>Visão abaixo horizonte</i>: permitir pontos de vista abaixo do horizonte [padrão não].</li>
         <li><i>Ponto base</i>: sempre mostrar pontos (verdes) representando bases [padrão não].</li>
         <li><i>Raio ponto base</i>: raio dos pontos das bases [8 pxl].</li>
@@ -84,194 +104,280 @@ Liga e desliga as projeções das paredes na planta baixa e no perfil.</li>
         <li><i>Grade topo</i>: apresentar grade no topo [padrão não].</li>
         <li><i>Extensão grade</i>: tamanho da extensão da grade ao redor da planta baixa [10 células].</li>
         <li>
-            <u>DEM</u>:
-            <ul>
-                <li><i>Buffer DEM</i>: extensão do modelo de superfície DEM ao redor da topo a ser carregada do arquivo DEM.</li>
-                <li><i>Tam máx DEM</i>: Tamanho máximo da superfície DEM em cada direção [padrão 400 células].</li>
-                <li><i>Redução DEM</i>: Modo de redução DEM (subamostragem ou cortar) [padrão subamostragem].</li>
-            </ul>
+        <u>DEM</u>:
+        <ul>
+          <li><i>Buffer DEM</i>: extensão do modelo de superfície DEM ao redor da topo a ser carregada do arquivo DEM.</li>
+          <li><i>Tam máx DEM</i>: Tamanho máximo da superfície DEM em cada direção [padrão 400 células].</li>
+          <li><i>Redução DEM</i>: Modo de redução DEM (subamostragem ou cortar) [padrão subamostragem].</li>
+        </ul>
         </li>
         <li>
-            <u>MODELAGEM PAREDES</u>:
-            <ul>
-                <li><i>Uso aux</i>: quais medidas auxiliares usar: nenhum, normal, corte [padrão normal]</li>
-                <li><i>Todas aux</i>: usar todas as medidas auxiliares na modelagem de paredes [padrão não]</li>
-                <li><i>Aux projetada</i>: projetar as medidas auxiliares em um plano normal [padrão não]</li>
-                <li><i>Lim aux</i>: medidas auxiliares fora da visada a manter [0.5]</li>
-                <li><i>Partir triângulos</i>: partir triângulos de paredes que se interceptarem [padrão sim]</li>
-                <li><i>Ruído pontos</i>: pequeno vetor aleatório adicionado às medidas auxiliares ao modelar paredes [padrão 0.1]</li>
-                <li><i>Alongar paredes</i>: distância a alongar pontos das paredes na direção da visada [padrão 0.1]</li>
-                <li><i>Delta Powercrust</i>: parâmetro "delta" do algoritmo PowerCrust [padrão 0.1] (disponível somente na versão de debug do app)</li>
-            </ul>
+        <u>MODELAGEM PAREDES</u>:
+        <ul>
+          <li><i>Uso aux</i>: quais medidas auxiliares usar: nenhum, normal, corte [padrão normal]</li>
+          <li><i>Todas aux</i>: usar todas as medidas auxiliares na modelagem de paredes [padrão não]</li>
+          <li><i>Aux projetada</i>: projetar as medidas auxiliares em um plano normal [padrão não]</li>
+          <li><i>Lim aux</i>: medidas auxiliares fora da visada a manter [0.5]</li>
+          <li><i>Partir triângulos</i>: partir triângulos de paredes que se interceptarem [padrão sim]</li>
+          <li><i>Ruído pontos</i>: pequeno vetor aleatório adicionado às medidas auxiliares ao modelar paredes [padrão 0.1]</li>
+          <li><i>Alongar paredes</i>: distância a alongar pontos das paredes na direção da visada [padrão 0.1]</li>
+          <li><i>Delta Powercrust</i>: parâmetro "delta" do algoritmo PowerCrust [padrão 0.1] (disponível somente na versão de debug do app)</li>
+        </ul>
         </li>
+      </ul>
+      </li>
     </ul>
-</li>
-</ul>
 
-<p><b>BARRA DE TÍTULO</b></p>
+    <h3>Barra de Título</h3>
 
-<p>A barra de título da tela apresenta os seguintes parâmetros:</p>
+    <p>
+      A barra de título da tela apresenta os seguintes parâmetros:
+    </p>
 
-<ul>
-<li><i>C</i> e <i>A</i>: inclinação e azimute do ponto de vista.</li>
-<li><i>S</i>: nível de zoom.</li>
-<li><i>T</i>: translações XY do modelo.</li>
-<li><i>L</i>: inclinação e azimute da iluminação.</li>
-</ul>
+    <ul>
+      <li><i>C</i> e <i>A</i>: inclinação e azimute do ponto de vista.</li>
+      <li><i>S</i>: nível de zoom.</li>
+      <li><i>T</i>: translações XY do modelo.</li>
+      <li><i>L</i>: inclinação e azimute da iluminação.</li>
+    </ul>
 
-<p><b>EXPORTAÇÕES</b></p>
+    <h3>EXPORTAÇÕES</h3>
 
-<p>O modelo 3D pode ser exportado nos formatos: CGAL, DXF, GPX, KML, LAS binário, Shapefile e STL (ou STL binário).</p>
+    <p>
+      O modelo 3D pode ser exportado nos formatos: CGAL, DXF, GPX, KML, LAS binário, Shapefile e STL (ou STL binário).
+    </p>
 
-<p>O local de gravação do arquivo exportado é escolhido através da caixa de diálogo de administração de arquivos do Android.</p>
+    <p>
+      O local de gravação do arquivo exportado é escolhido através da caixa de diálogo de administração de arquivos do Android.
+    </p>
 
-<p>A caixa de diálogo conta com configurações para controlar a inclusão de medidas auxiliares, paredes, bases e superfície no arquivo exportado (paredes e superfície não são suportados por todos os formatos).</p>
+    <p>
+      A caixa de diálogo conta com configurações para controlar a inclusão de medidas auxiliares, paredes, bases e superfície no arquivo exportado (paredes e superfície não são suportados por todos os formatos).
+    </p>
 
-<p>O modelo 3D pode também ser serializado em um arquivo de texto.</p>
+    <p>
+      O modelo 3D pode também ser serializado em um arquivo de texto.
+    </p>
 
-<p>A exportação em formato GPX pode incluir todas as topos do projeto em um track único ou incluir um track para cada topo.
-Essa funcionalidade é controlada pela configuração <i>Importar/Exportar >> GPX track único</i>.</p>
+    <p>
+      A exportação em formato GPX pode incluir todas as topos do projeto em um track único ou incluir um track para cada topo.
+      Essa funcionalidade é controlada pela configuração <i>Importar/Exportar >> GPX track único</i>.
+    </p>
 
-<p>O modelo é exportado em um sistema de referência métrica projetada centralizada no primeiro ponto com coordenadas geográficas.
-O eixo Y é o norte magnético ou geográfico a depender de a declinação magnética ter sido definida ou não.
-Se o modelo for georeferenciado, o centro terá um deslocamento calculado a partir do meridiano central e do equador.</p>
+    <p>
+      O modelo é exportado em um sistema de referência métrica projetada centralizada no primeiro ponto com coordenadas geográficas.
+      O eixo Y é o norte magnético ou geográfico a depender de a declinação magnética ter sido definida ou não.
+      Se o modelo for georeferenciado, o centro terá um deslocamento calculado a partir do meridiano central e do equador.
+    </p>
 
-<p><b>GRADE/MOLDURA</b></p>
+    <h3>Grade/moldura</h3>
 
-<p>As linhas da grade/moldura são verde (oeste/leste), azul (norte/sul) e vermelha (vertical).</p>
+    <p>
+      As linhas da grade/moldura são verde (oeste/leste), azul (norte/sul) e vermelha (vertical).
+    </p>
 
-<p>Na projeção em perspectiva a grade tem tons esverdeados na direção norte/sul pois as linhas verdes se aproximam.
-E fica azulado na direção oeste/leste.
-Para facilitar a identificação das direções cardinais a grade é ligeiramente avermelhada na quina sudoeste.</p>
+    <p>
+      Na projeção em perspectiva a grade tem tons esverdeados na direção norte/sul pois as linhas verdes se aproximam.
+      E fica azulado na direção oeste/leste.
+      Para facilitar a identificação das direções cardinais a grade é ligeiramente avermelhada na quina sudoeste.
+    </p>
 
-<p>Por padrão a grade é apresentada abaixo da topo mas isso pode ser alterado através da configuração apropriada.</p>
+    <p>
+      Por padrão a grade é apresentada abaixo da topo mas isso pode ser alterado através da configuração apropriada.
+    </p>
 
-<p><b>TOPO</b></p>
+    <h3>Topo</h3>
 
-<p>As medidas auxiliares podem ser ocultadas ou apresentadas como linhas ou como pontos marcando suas extremidades.</p>
+    <p>
+      As medidas auxiliares podem ser ocultadas ou apresentadas como linhas ou como pontos marcando suas extremidades.
+    </p>
 
-<p>As visadas podem ser apresentadas sem coloração especial ou coloridas por topo, por altitude (vermelho para azul) ou por profundidade abaixo da superfície (azul para vermelho) se o modelo 3D tiver uma superfície DEM.</p>
+    <p>
+      As visadas podem ser apresentadas sem coloração especial ou coloridas por topo, por altitude (vermelho para azul) ou por profundidade abaixo da superfície (azul para vermelho) se o modelo 3D tiver uma superfície DEM.
+    </p>
 
-<p>Quando sem coloração especial as visadas são brancas, as visadas de superfície são verdes, as visadas duplicadas são laranjas e as visadas comentadas são azul-claro.</p>
+    <p>
+      Quando sem coloração especial as visadas são brancas, as visadas de superfície são verdes, as visadas duplicadas são laranjas e as visadas comentadas são azul-claro.
+    </p>
 
-<p>As visadas "de superfície", "duplicadas" e "comentadas" podem ser ligadas e desligadas através da caixa de diálogo <i>Visadas visíveis</i> que é apresentada com um clique longo no botão <i>Grade</i> (último botão).</p>
+    <p>
+      As visadas "de superfície", "duplicadas" e "comentadas" podem ser ligadas e desligadas através da caixa de diálogo <i>Visadas visíveis</i> que é apresentada com um clique longo no botão <i>Grade</i> (último botão).
+    </p>
 
-<p><b>PAREDES</b></p>
+    <h3>Paredes</h3>
 
-<p>A modelagem de paredes não é realizada automaticamente quando o arquivo é aberto.
-Ela deve ser requerida através da opção de menu <i>Modelagem paredes</i>.
-Há dois modos sistemas diferentes de modelagem: <i>casco simples</i> e <i>casco pseudo convexo</i>.
-Os dois primeiros são indicados para quando não há uma grande quantidade de medidas auxiliares.
-O terceiro é indicado para quando houver uma rede densa de medidas auxiliares.</p>
+    <p>
+      A modelagem de paredes não é realizada automaticamente quando o arquivo é aberto.
+      Ela deve ser requerida através da opção de menu <i>Modelagem paredes</i>.
+      Há dois modos sistemas diferentes de modelagem: <i>casco simples</i> e <i>casco pseudo convexo</i>.
+      Os dois primeiros são indicados para quando não há uma grande quantidade de medidas auxiliares.
+      O terceiro é indicado para quando houver uma rede densa de medidas auxiliares.
+    </p>
 
-<p>A modelagem de paredes depende da quantidade e qualidade de medidas auxiliares.
-Medidas auxiliares ruins resultam em uma modelagem de paredes ruim.</p>
+    <p>
+      A modelagem de paredes depende da quantidade e qualidade de medidas auxiliares.
+      Medidas auxiliares ruins resultam em uma modelagem de paredes ruim.
+    </p>
 
-<p>O processamento da modelagem é realizado em background.
-Quando finalizada as paredes podem ser apresentadas através do botão <i>Paredes</i>.</p>
+    <p>
+      O processamento da modelagem é realizado em background.
+      Quando finalizada as paredes podem ser apresentadas através do botão <i>Paredes</i>.
+    </p>
 
-<p>A modelagem PowerCrust (disponível somente na versão de debug do app) apresenta também a projeção das paredes no plano orizontal (planta baixa) e na cortina vertical ao longo da topo (perfil).
-A apresentação dessas projeções é controlada através da opção de menu <i>Modelagem paredes</i>.</p>
+    <p>
+      A modelagem PowerCrust (disponível somente na versão de debug do app) apresenta também a projeção das paredes no plano orizontal (planta baixa) e na cortina vertical ao longo da topo (perfil).
+      A apresentação dessas projeções é controlada através da opção de menu <i>Modelagem paredes</i>.
+    </p>
 
-<p><b>SUPERFÍCIE</b></p>
+    <h3>Superfície</h3>
 
-<p>Se o modelo 3D (Therion ou Loch) contar com dados de superfície (Digital Elevation Model/DEM) a superfície será apresentada em cinza ou com textura (se disponível).</p>
+    <p>
+      Se o modelo 3D (Therion ou Loch) contar com dados de superfície (Digital Elevation Model/DEM) a superfície será apresentada em cinza ou com textura (se disponível).
+    </p>
 
-<p>A caixa de diálogo de superfície conta com um botão para carregar um arquivo DEM.
-Os formatos suportados são ascii (.asc ou .ascii) e grade therion (.grid).
-Somente a parte relevante do arquivo DEM é carregado.</p>
+    <p>
+      A caixa de diálogo de superfície conta com um botão para carregar um arquivo DEM.
+      Os formatos suportados são ascii (.asc ou .ascii) e grade therion (.grid).
+      Somente a parte relevante do arquivo DEM é carregado.
+    </p>
 
-<p>A topo e os dados DEM devem estar no mesmo Sistema Cartográfico de Referência de Coordenadas.
-Se a topo tiver somente coordenadas long-lat (WGS84), o datum WGS84 será usado.</p>
+    <p>
+      A topo e os dados DEM devem estar no mesmo Sistema Cartográfico de Referência de Coordenadas.
+      Se a topo tiver somente coordenadas long-lat (WGS84), o datum WGS84 será usado.
+    </p>
 
-<p>A área representada pelo DEM deve cobrir a área do modelo 3D.</p>
+    <p>
+      A área representada pelo DEM deve cobrir a área do modelo 3D.
+    </p>
 
-<p>A transparência da superfície é ajustável.
-Se completamente opaca, as partes da superfície que estejam atrás de outras partes ficarão ocultas.</p>
+    <p>
+      A transparência da superfície é ajustável.
+      Se completamente opaca, as partes da superfície que estejam atrás de outras partes ficarão ocultas.
+    </p>
 
-<p>A projeção da linha de trena na superfície pode ser apresentada (em azul).</p>
+    <p>
+      A projeção da linha de trena na superfície pode ser apresentada (em azul).
+    </p>
 
-<p>Quando um modelo tem uma superfície DEM, ele pode ser colorido de acordo com sua profundidade abaixo da superfície.</p>
+    <p>
+      Quando um modelo tem uma superfície DEM, ele pode ser colorido de acordo com sua profundidade abaixo da superfície.
+    </p>
 
-<p>Se um modelo tem uma superfície DEM, uma textura para a superfície pode ser carregada a partir de um arquivo.
-Os formatos suportados são GeoTIFF e OSM.</p>
+    <p>
+      Se um modelo tem uma superfície DEM, uma textura para a superfície pode ser carregada a partir de um arquivo.
+      Os formatos suportados são GeoTIFF e OSM.
+    </p>
 
-<p>O arquivo GeoTIFF deve estar no mesmo Sistema Cartográfico de Referência de Coordenadas que a topo.</p>
+    <p>
+      O arquivo GeoTIFF deve estar no mesmo Sistema Cartográfico de Referência de Coordenadas que a topo.
+    </p>
 
-<p style="font-size: 90%; font-style: italic;"><b>Nota técnica:</b> se o arquivo estiver no formato 24 bits não comprimido ou usar um mapa de cores o Cave3D tentará ler somente a área correspondente ao DEM, do contrário toda a imagem será lida e a parte relevante será extraída.</p>
+    <p style="font-style: italic;">
+      <b>Nota técnica:</b> se o arquivo estiver no formato 24 bits não comprimido ou usar um mapa de cores o Cave3D tentará ler somente a área correspondente ao DEM, do contrário toda a imagem será lida e a parte relevante será extraída.
+    </p>
 
-<p>Uma textura no formato OSM (WGS84) só pode ser carregada para topos e projetos abertos diretamente do TopoDroidX (que não tenham sido lidos diretamente de arquivos externos).
-A textura apresenta as linhas OSM.</p>
+    <p>
+      Uma textura no formato OSM (WGS84) só pode ser carregada para topos e projetos abertos diretamente do TopoDroidX (que não tenham sido lidos diretamente de arquivos externos).
+      A textura apresenta as linhas OSM.
+    </p>
 
-<p>É possível visualizar um ponto (apresentado em amarelo) na superfície informando as coordenadas leste/norte do ponto no Sistema Cartográfico de Referência de Coordenadas do modelo.</p>
+    <p>
+      É possível visualizar um ponto (apresentado em amarelo) na superfície informando as coordenadas leste/norte do ponto no Sistema Cartográfico de Referência de Coordenadas do modelo.
+    </p>
 
-<p>Modelos carregados do TopoDroidX também podem receber pontos GNSS.
-Se o TopoDroidX tiver permissão de usar os serviços de localização do Android e este serviço estiver habilitado, é possível marcar um ponto na superfície usando o GNSS do Android. O app apresenta os últimos 10 pontos.</p>
+    <p>
+      Modelos carregados do TopoDroidX também podem receber pontos GNSS.
+      Se o TopoDroidX tiver permissão de usar os serviços de localização do Android e este serviço estiver habilitado, é possível marcar um ponto na superfície usando o GNSS do Android. O app apresenta os últimos 10 pontos.
+    </p>
 
-<p><b>BASES: AÇÕES</b></p>
+    <h3>Bases: Ações</h3>
 
-<p>Por padrão, quando as bases são apresentadas, elas podem ser selecionadas clicando no nome da base ou em seu ponto.</p>
+    <p>
+      Por padrão, quando as bases são apresentadas, elas podem ser selecionadas clicando no nome da base ou em seu ponto.
+    </p>
 
-<p>A opção de seleção de bases por ser habilitada ou desabilitada com um clique longo no botão <i>Bases</i>.
-Quando as bases estão selecionáveis, há um ponto vermelho no ícone do botão <i>Bases</i>.</p>
+    <p>
+      A opção de seleção de bases por ser habilitada ou desabilitada com um clique longo no botão <i>Bases</i>.
+      Quando as bases estão selecionáveis, há um ponto vermelho no ícone do botão <i>Bases</i>.
+    </p>
 
-<p>A base selecionada é destacada em vermelho e suas coordenadas são apresentadas em uma barra azul na parte inferior da tela.
-Se o modelo tiver um DEM, a profundidade da base abaixo da superfície é também apresentada.</p>
+    <p>
+      A base selecionada é destacada em vermelho e suas coordenadas são apresentadas em uma barra azul na parte inferior da tela.
+      Se o modelo tiver um DEM, a profundidade da base abaixo da superfície é também apresentada.
+    </p>
 
-<p>Para deselecionar a base, clique novamente na base ou na barra de informações.</p>
+    <p>
+      Para deselecionar a base, clique novamente na base ou na barra de informações.
+    </p>
 
-<p>Para medir a distância entre a base selecionada e outra base, clique no botão <img class="app_button" src="btn_3d_measure_ruler_off.png"><img class="app_button" src="btn_3d_measure_ruler_on.png"> <i>Medir</i> na barra azul e clique em outra base.
-Uma caixa de diálogo é apresentada com as seguintes informações:</p>
+    <p>
+      Para medir a distância entre a base selecionada e outra base, clique no botão <img class="app_button" src="btn_3d_measure_ruler_off.png"><img class="app_button" src="btn_3d_measure_ruler_on.png"> <i>Medir</i> na barra azul e clique em outra base.
+      Uma caixa de diálogo é apresentada com as seguintes informações:
+    </p>
 
-<ul>
-    <li>distância 3D;</li>
-    <li>componentes leste, norte e vertical;</li>
-    <li>distância no plano 2D.</li>
-</ul>
+    <ul>
+      <li>distância 3D;</li>
+      <li>componentes leste, norte e vertical;</li>
+      <li>distância no plano 2D.</li>
+    </ul>
 
-<p>Se as duas bases estiverem conectadas através da linha de trena, suas distância "na caverna" é também apresentada.
-O caminho pela caverna (seguindo a linha de trena) é marcado em verde.</p>
+    <p>
+      Se as duas bases estiverem conectadas através da linha de trena, suas distância "na caverna" é também apresentada.
+      O caminho pela caverna (seguindo a linha de trena) é marcado em verde.
+    </p>
 
-<p>Opcionalmente os valores podem ser apresentados em uma mensagem temporária no lugar de ser apresentada em uma caixa de diálogo.</p>
+    <p>
+      Opcionalmente os valores podem ser apresentados em uma mensagem temporária no lugar de ser apresentada em uma caixa de diálogo.
+    </p>
 
-<p>Quando o botão <img class="app_button" src="btn_3d_measure_station_off.png"><img class="app_button" src="btn_3d_measure_station_on.png"> <i>Base</i> estiver marcado na barra azul, a base permanecerá fixa na tela durante operações de rotação e a base selecionada estará descatada em laranja.</p>
+    <p>
+      Quando o botão <img class="app_button" src="btn_3d_measure_station_off.png"><img class="app_button" src="btn_3d_measure_station_on.png"> <i>Base</i> estiver marcado na barra azul, a base permanecerá fixa na tela durante operações de rotação e a base selecionada estará descatada em laranja.
+    </p>
 
-<p><b>MODELAGEM DE CROQUIS</b> (Experimental)</p>
+    <h3>Modelagem de croquis (Experimental)</h3>
 
-<p>Com as topos e modelos carregados diretamente do TopoDroidX é possível "modelar" os croquis 2D para serem apresentados no modelo 3D.
-O croqui precisa ser exprotado no TopoDroidX no formato "Cave3D".
-O arquivo exportado estará no subdiretório "c3d".
-O próximo passo é carregá-lo no visualizador 3D.
-Dessa maneira o croqui será modelado para se adaptar ao modelo 3D.</p>
+    <p>
+      Com as topos e modelos carregados diretamente do TopoDroidX é possível "modelar" os croquis 2D para serem apresentados no modelo 3D.
+      O croqui precisa ser exprotado no TopoDroidX no formato "Cave3D".
+      O arquivo exportado estará no subdiretório "c3d".
+      O próximo passo é carregá-lo no visualizador 3D.
+      Dessa maneira o croqui será modelado para se adaptar ao modelo 3D.
+    </p>
 
-<p></p>
+    <p>
+      A caixa de diálogo <u>Croqui</u> apresenta a relação de croquis abertos.
+    </p>
 
-<p>A caixa de diálogo <u>Croqui</u> apresenta a relação de croquis abertos.</p>
+    <p>
+      Cada item é acompanhado de dois checkboxes: o primeiro para controlar a apresentação do croqui e o segundo para remover o croqui.
+      Qualquer alteração precisa ser confirmado através do botão <i>Ok</i>.
+    </p>
 
-<p>Cada item é acompanhado de dois checkboxes: o primeiro para controlar a apresentação do croqui e o segundo para remover o croqui.
-Qualquer alteração precisa ser confirmado através do botão <i>Ok</i>.</p>
+    <p>
+      Há um botão para carregar um novo croqui.
+    </p>
 
-<p>Há um botão para carregar um novo croqui.</p>
+    <p>
+      E por último há um botão para redesenhar os ícones dos pontos se desaparecerem.
+    </p>
 
-<p>E por último há um botão para redesenhar os ícones dos pontos se desaparecerem.</p>
-
-<div style="float: left; margin-bottom: 10pt;">
-    <div>
+    <div style="float: left; margin-bottom: 10pt;">
+      <div>
         <a href="manual14.htm">&lt; Gerenciador de Projetos</a> |
         <a href="manual18.htm">Desenho 3D &gt;</a>
-    </div>
-    <div>
+      </div>
+      <div>
         <a href="manual16.htm">Principais funcionalidades</a> |
         <a href="manual17.htm">Índice remissivo</a>
+      </div>
     </div>
-</div>
 
-<footer style="font-size: 80%; font-style: italic; clear: both;">
-    <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
-    <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">fc95df8e0</span></p>
-    <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-    <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-</footer>
-  
-</body>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-17</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">4abfa48c0</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
