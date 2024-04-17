@@ -112,11 +112,11 @@
         </ul>
         </li>
         <li>
-        <u>MODELAGEM PAREDES</u>:
+        <u>MODELAGEM PAREDES</u> (algumas configurações são relevantes somente para alguns tipos de modelos de paredes):
         <ul>
-          <li><i>Uso aux</i>: quais medidas auxiliares usar: nenhum, normal, corte [padrão normal]</li>
+          <li><i>Uso aux</i>: qual medida auxiliar usar: nenhum, normal, corte [padrão normal]</li>
           <li><i>Todas aux</i>: usar todas as medidas auxiliares na modelagem de paredes [padrão não]</li>
-          <li><i>Aux projetada</i>: projetar as medidas auxiliares em um plano normal [padrão não]</li>
+          <li><i>Aux projetada</i>: usar medidas auxiliares projetadas em um plano normal [padrão não]</li>
           <li><i>Lim aux</i>: medidas auxiliares fora da visada a manter [0.5]</li>
           <li><i>Partir triângulos</i>: partir triângulos de paredes que se interceptarem [padrão sim]</li>
           <li><i>Ruído pontos</i>: pequeno vetor aleatório adicionado às medidas auxiliares ao modelar paredes [padrão 0.1]</li>
@@ -164,10 +164,14 @@
       Essa funcionalidade é controlada pela configuração <i>Importar/Exportar >> GPX track único</i>.
     </p>
 
-    <p>
+    <!-- <p>
       O modelo é exportado em um sistema de referência métrica projetada centralizada no primeiro ponto com coordenadas geográficas.
       O eixo Y é o norte magnético ou geográfico a depender de a declinação magnética ter sido definida ou não.
       Se o modelo for georeferenciado, o centro terá um deslocamento calculado a partir do meridiano central e do equador.
+    </p> -->
+
+    <p>
+      Se o modelo estiver georeferenciado as exportações KML, GPX e shapefile são exportadas com coordenadas geográficas WGS84.
     </p>
 
     <h3>Grade/moldura</h3>
