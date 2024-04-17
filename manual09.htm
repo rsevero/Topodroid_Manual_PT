@@ -1,43 +1,61 @@
 <html>
   <body>
     <link rel="stylesheet" href="manual.css">
-    <h1>[9] TELA DESENHO</h1>
+    <h1>[9] Tela Desenho</h1>
 
-    <p>O botão <i>croqui</i> da tela <u>Dados Topo</u> abre uma caixa de diálogo com a lista de croquis existentes além do botão <i>Novo</i> croqui.
-    Clique neste botão para criar um novo croqui na topo.</p>
+    <p>
+      O botão <i>croqui</i> da tela <u>Dados Topo</u> abre uma caixa de diálogo com a lista de croquis existentes além do botão <i>Novo</i> croqui.
+      Clique neste botão para criar um novo croqui na topo.
+    </p>
 
-    <p>Cada croqui é composto por dois arquivos de croquis com diferentes pontos de vista: um para a planta baixa e outro para o perfil (projetado ou retificado).
-    Os cortes tem, cada um, um só arquivo.
-    Um novo croqui é aberto na planta baixa.
-    A caixa de diálogo apresenta uma linha com duas colunas para cada croqui: um para a planta baixa e outro para o perfil. 
-    Desta maneira você já pode abrir ocroqui desejado diretamente. Cada croqui pode ter vários desenhos diferentes.</p>
+    <p>
+      Cada croqui é composto por dois arquivos de croquis com diferentes pontos de vista: um para a planta baixa e outro para o perfil (projetado ou retificado).
+      Os cortes tem, cada um, um só arquivo.
+      Um novo croqui é aberto na planta baixa.
+      A caixa de diálogo apresenta uma linha com duas colunas para cada croqui: um para a planta baixa e outro para o perfil.
+      Desta maneira você já pode abrir ocroqui desejado diretamente. Cada croqui pode ter vários desenhos diferentes.
+    </p>
 
-    <p>O <u>perfil retificado</u> apresenta a linha de trena com as visadas desenhadas à esquerda, direta ou vertical de acordo com a "direção no perfil retificado" definida na medida.
-    Se a "direção no perfil retificado" da visada não estiver definida, a visada não será apresentada no perfil retificado.
-    Neste caso nenhuma visada a partir desta será apresentada.</p>
+    <p>
+      O <u>perfil retificado</u> apresenta a linha de trena com as visadas desenhadas à esquerda, direta ou vertical de acordo com a "direção no perfil retificado" definida na medida.
+      Se a "direção no perfil retificado" da visada não estiver definida, a visada não será apresentada no perfil retificado.
+      Neste caso nenhuma visada a partir desta será apresentada.
+    </p>
 
-    <p>Medidas auxiliares são projetadas no plano vertical da visada que tiver o azimute mais próximo ao da medida auxiliar em questão, a não ser que o usuário tenha explicitamente definido a "direção no perfil retificado" na caixa de diálogo de <u>edição de medida</u>.
-    Por exemplo, no perfil apresentado na figura abaixo, as medidas auxiliares na região cinza claro serão projetadas no plano vertical da visada 1-2, já as da região cinza escuro serão projetadas no plano vertical da visada 0-1.</p>
+    <p>
+      Medidas auxiliares são projetadas no plano vertical da visada que tiver o azimute mais próximo ao da medida auxiliar em questão, a não ser que o usuário tenha explicitamente definido a "direção no perfil retificado" na caixa de diálogo de <u>edição de medida</u>.
+      Por exemplo, no perfil apresentado na figura abaixo, as medidas auxiliares na região cinza claro serão projetadas no plano vertical da visada 1-2, já as da região cinza escuro serão projetadas no plano vertical da visada 0-1.
+    </p>
 
-    <p>O perfil <u>projetado</u> apresenta a linha de trena e as medidas auxiliares projetadas no plano vertical perpendicular ao azimute da projeção. O azimute da projeção é definido ao se criar o perfil projetado e não pode ser alterado posteriormente.</p>
+    <p>
+      O perfil <u>projetado</u> apresenta a linha de trena e as medidas auxiliares projetadas no plano vertical perpendicular ao azimute da projeção. O azimute da projeção é definido ao se criar o perfil projetado e não pode ser alterado posteriormente.
+    </p>
 
-    <p><img src="splay_extend.png"></p>
+    <p>
+      <img src="splay_extend.png">
+    </p>
 
     <h2>Visadas</h2>
 
-    <p>Cores das visadas:</p>
+    <p>
+      Cores das visadas:
+    </p>
     <ul>
       <li>normal: branco</li>
       <li>medida com valores anômalos: vermelho</li>
       <li>inconsistente em relação às visadas irmãs: laranja. Além da cor, serão também representadas por uma linha em zigue-zague conforme pode ser visto abaixo.</li>
     </ul>
 
-    <p><img src="line_zigzag.png" style="width:80px;"></p>
+    <p>
+      <img src="line_zigzag.png" style="width:80px;">
+    </p>
 
     <h2>Medidas auxiliares</h2>
 
-    <p>Medidas auxiliares podem ser apresentadas como segmentos de linha ou somente através de seus pontos finais [T].
-    Sempre que a tela de desenho estiver no modo "seleção" as medidas auxiliares serão apresentadas como segmentos de linhas.</p>
+    <p>
+      Medidas auxiliares podem ser apresentadas como segmentos de linha ou somente através de seus pontos finais [T].
+      Sempre que a tela de desenho estiver no modo "seleção" as medidas auxiliares serão apresentadas como segmentos de linhas.
+    </p>
 
     <h3>Cores das medidas auxiliares [E/T]</h3>
     <ul>
@@ -48,13 +66,18 @@
       <li>outras: cinza claro</li>
     </ul>
 
-    <p>Medidas auxiliares podem receber cores diferentes através do botão <u>Ações especiais</u> do menu de multisseleção.
-    As cores das medidas auxiliares podem ser escolhidas a partir de uma paleta pré-definida ou livremente [T].
+    <p>
+      Medidas auxiliares podem receber cores diferentes através do botão <u>Ações especiais</u> do menu de multisseleção.
+      As cores das medidas auxiliares podem ser escolhidas a partir de uma paleta pré-definida ou livremente [T].
+      </p>
+
+    <p>
+      Uma medida auxiliar não é apresentada nos desenhos se a visada a que a medida auxiliar está atrelada for ocultada na planta baixa ou perfil.
     </p>
 
-    <p>Uma medida auxiliar não é apresentada nos desenhos se a visada a que a medida auxiliar está atrelada for ocultada na planta baixa ou perfil.</p>
-
-    <p>Se a configuração <i>Especiais >> Dados medida auxiliar >> Pontilh aux</i> estiver habilitada, as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:</p>
+    <p>
+      Se a configuração <i>Especiais >> Dados medida auxiliar >> Pontilh aux</i> estiver habilitada, as medidas auxiliares podem ser apresentadas tracejadas ou pontilhadas:
+    </p>
 
     <ul>
       <li><i>Clino</i>: a medida auxiliar é tracejada se o valor absoluto da inclinação da visada estiver acima do valor definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim ponth clino</i>.
@@ -64,21 +87,26 @@
       Nos perfis projetados, as medidas auxiliares são tracejadas de acordo com o ângulo que formam com o azimute da projeção.</li>
     </ul>
 
-    <p>Além disso, na <u>planta baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim aux planta baixa</i>. [padrão 80&deg;]
+    <p>
+      Além disso, na <u>planta baixa</u> as medidas auxiliares não são apresentadas se sua inclinação estiver acima do valor definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim aux planta baixa</i>. [padrão 80&deg;]
     </p>
 
-    <h3>Em cortes:</h3>
+    <h3>Em cortes</h3>
     <ul>
       <li>medidas auxiliares X (EDTC): verde</li>
       <li>outras: azul escuro para as ligadas à base PARA e claro para as ligadas à base DE</li>
       <li>por fim, se a configuração <i>Especiais >> Dados medida auxiliar >> Pontilh aux</i> estiver habilitada, as medidas auxiliares serão pontilhadas ou tracejadas se o ângulo da medida auxiliar e a normal do plano do corte estiverem abaixo do limite definido na configuração <i>Especiais >> Dados medida auxiliar >> Lim pontilh ângulo</i> [padrão 60&deg;] (pontilhada se estiver na direção da normal, tracejada se estiver oposta).</li>
     </ul>
 
-    <p>As cores das linhas tracejadas, pontilhadas e recentes das medidas auxiliares podem ser alteradas através das opções correspondentes [T].</p>
+    <p>
+      As cores das linhas tracejadas, pontilhadas e recentes das medidas auxiliares podem ser alteradas através das opções correspondentes [T].
+    </p>
 
     <h2>Bases</h2>
 
-    <p>As cores das bases são:</p>
+    <p>
+      As cores das bases são:
+    </p>
     <ul>
       <li>violeta: padrão</li>
       <li>verde: base ativa</li>
@@ -89,7 +117,9 @@
 
     <h2>Modos de interação</h2>
 
-    <p>A tela <u>desenho</u> conta com quatro modos de interação:</p>
+    <p>
+      A tela <u>desenho</u> conta com quatro modos de interação:
+    </p>
     <ul>
       <li><b>mover</b>: você pode mover o espaço de desenho, fechar ou abrir o zoom.
       Se a configuração <i>Especiais >> Dados topo >> Origem fixa croqui</i> estiver habilitada a ação de mover moverá somente o desenho e não a linha de trena [T]</li>
@@ -99,32 +129,48 @@
       <li><b>editar</b> [A]: para alterações relacionadas a pontos e propriedades diversas dos itens, incluindo apagá-los.</li>
     </ul>
 
-    <p>Mover e dar zoom são possíveis mesmo nos modos <b>Desenhar</b> e <b>Apagar</b> usando dois dedos simultaneamente.
-    Se a configuração <i>Desenho croqui >> Arrastar canto</i> estiver habilitada, o croqui pode ser arrastado pelos retângulos cinzas transparentes que estarão nos cantos da tela.</p>
+    <p>
+      Mover e dar zoom são possíveis mesmo nos modos <b>Desenhar</b> e <b>Apagar</b> usando dois dedos simultaneamente.
+      Se a configuração <i>Desenho croqui >> Arrastar canto</i> estiver habilitada, o croqui pode ser arrastado pelos retângulos cinzas transparentes que estarão nos cantos da tela.
+    </p>
 
-    <p>O controle de zoom pode ser habilitado temporaria ou permanentemente na configuração <i>Desenho croqui >> Controle zoom</i>.
-    Se temporáriamente, será apresentado quando você clicar na parte inferior central da tela.</p>
+    <p>
+      O controle de zoom pode ser habilitado temporaria ou permanentemente na configuração <i>Desenho croqui >> Controle zoom</i>.
+      Se temporáriamente, será apresentado quando você clicar na parte inferior central da tela.
+    </p>
 
-    <p>No modo <b>Desenhar</b> há uma barra de ferramentas inferior que apresenta os símbolos usados mais recentemente e uma "seta" para selecionar outros símbolos.</p>
+    <p>
+      No modo <b>Desenhar</b> há uma barra de ferramentas inferior que apresenta os símbolos usados mais recentemente e uma "seta" para selecionar outros símbolos.
+    </p>
 
-    <p>No modo <b>Editar</b>, quando o item selecionado é um ponto, é apresentada uma barra de rolagem na base da tela para alterar o tamanho do ponto. 
-    Se a configuração <i>Desenho croqui >> Arrastar canto</i> estiver habilitada e o ponto for orientável, sua direção pode ser alterada no sentido horário arrastando para baixo a partir do canto superior direito e no sentido antihorário arrastando para baixo a partir do canto superior esquerdo.</p>
+    <p>
+      No modo <b>Editar</b>, quando o item selecionado é um ponto, é apresentada uma barra de rolagem na base da tela para alterar o tamanho do ponto.
+      Se a configuração <i>Desenho croqui >> Arrastar canto</i> estiver habilitada e o ponto for orientável, sua direção pode ser alterada no sentido horário arrastando para baixo a partir do canto superior direito e no sentido antihorário arrastando para baixo a partir do canto superior esquerdo.
+    </p>
 
     <h2>BOTÕES</h2>
 
-    <p><img src="btn_edit.png" class="app_button"><img src="btn_erase.png" class="app_button"><img src="btn_select.png" class="app_button"></p>
+    <p>
+      <img src="btn_edit.png" class="app_button"><img src="btn_erase.png" class="app_button"><img src="btn_select.png" class="app_button">
+    </p>
 
-    <p>Os modos são representados pelos três botões verdes à esquerda: <i>desenhar</i>, <i>apagar</i> e <i>editar</i>.
-    Quando um deles estiver ativo, o botão correspondente estará em verde claro. Se nenhum estiver verde claro, a tela desenho estará no modo <i>mover</i>.</p>
+    <p>
+      Os modos são representados pelos três botões verdes à esquerda: <i>desenhar</i>, <i>apagar</i> e <i>editar</i>.
+      Quando um deles estiver ativo, o botão correspondente estará em verde claro. Se nenhum estiver verde claro, a tela desenho estará no modo <i>mover</i>.
+    </p>
 
-    <p>Quando um dos três botões está verde claro, um clique longo nele abre a tela de edição das configurações relevantes ao modo ativo.</p>
+    <p>
+      Quando um dos três botões está verde claro, um clique longo nele abre a tela de edição das configurações relevantes ao modo ativo.
+    </p>
 
-    <p>O restante dos botões varia de acordo com o modo ativo no momento.</p>
+    <p>
+      O restante dos botões varia de acordo com o modo ativo no momento.
+    </p>
 
     <h3>Modo <span class="italicnotbold">mover</span></h3>
     <ul>
       <li><img src="btn_download.png" class="app_button"> <i>download</i> de dados.
-      Se nenhum dispositivo estiver ativo (selecionado), este botão não é apresentado. 
+      Se nenhum dispositivo estiver ativo (selecionado), este botão não é apresentado.
       Por padrão as medidas auxiliares e as visadas são redesenhadas quando uma visada é baixada (e reconhecida).
       Use o botão <i>Redesenhar</i> <img src="btn_close.png" class="app_button"> para forçar o redesenho da linha de trena.
       As últimas medidas baixadas podem ser destacadas em azul para ajudar a distingui-las do restante.</li>
@@ -148,7 +194,9 @@
       <li><img src="btn_cont.png" class="app_button"> <i>Unir</i>: somente para linhas e se a opção <i></i> estiver desabilitada. Quando o recurso <i>Unir</i> estiver ativado, as linhas iniciadas ou terminadas próximas a outra linha do mesmo grupo se unida a ela. O recurso "Unir" não tem nenhum efeito sobre as linhas que não podem ser unidas (linha de corte, por exemplo).</li>
     </ul>
 
-    <p>O ícone do botão <i>Escolha de símbolo</i> <img src="btn_tools.png" class="app_button"> indica o tipo atual de símbolo a ser desenhado: pontos, linhas ou áreas.</p>
+    <p>
+      O ícone do botão <i>Escolha de símbolo</i> <img src="btn_tools.png" class="app_button"> indica o tipo atual de símbolo a ser desenhado: pontos, linhas ou áreas.
+    </p>
 
     <h3>Modo <span class="italicnotbold">apagar</span></h3>
     <ul>
@@ -168,13 +216,17 @@
       <li><img src="btn_range.png" class="app_button"> <i>tipo de intervalo</i>: ponto a ponto, intervalo suave, intervalo duro ou item completo (somente para linhas e áreas)</li>
     </ul>
 
-    <p>Quando há itens selecionados, os dois primeiros viram botões de navegação <i>anterior/próximo</i> no conjunto de itens selecionados.</p>
+    <p>
+      Quando há itens selecionados, os dois primeiros viram botões de navegação <i>anterior/próximo</i> no conjunto de itens selecionados.
+    </p>
 
     <h3>Nos croquis de cortes</h3>
-    <p>No modo <b>mover</b> não existem os botões "planta baixa/perfil", "direção perfil retificado" e "redesenhar".
-    Há um novo botão "medidas auxiliares" <img class="app_button" src="btn_splay_display_mode.png"> que permite que se escolha quais medidas auxiliares apresentar: "todas", "base PARA", "base DE", "nenhuma".
-    A cada clique no botão ocorre a seleção de quais medidas auxiliares apresentar, alternando para a próxima da lista.
-    Por conta disso, o botão "o que mostrar" <img class="app_button" src="btn_mode.png"> não apresenta opções relacionadas a medidas auxiliares.</p>
+    <p>
+      No modo <b>mover</b> não existem os botões "planta baixa/perfil", "direção perfil retificado" e "redesenhar".
+      Há um novo botão "medidas auxiliares" <img class="app_button" src="btn_splay_display_mode.png"> que permite que se escolha quais medidas auxiliares apresentar: "todas", "base PARA", "base DE", "nenhuma".
+      A cada clique no botão ocorre a seleção de quais medidas auxiliares apresentar, alternando para a próxima da lista.
+      Por conta disso, o botão "o que mostrar" <img class="app_button" src="btn_mode.png"> não apresenta opções relacionadas a medidas auxiliares.
+    </p>
 
     <h3>Ações de cliques longos</h3>
     <ul>
@@ -192,8 +244,10 @@
     </ul>
 
     <h2>MENUS</h2>
-    <p>Quando o processo de análise das medidas encontrar anomalias, o botão "menu" vai apresentar um sinal de exclamação em vermelho <img src="btn_sketch_anomalies.png" class="app_button">.
-    Um clique longo neste botão abre uma caixa de diálogo listando as anomalias.</p>
+    <p>
+      Quando o processo de análise das medidas encontrar anomalias, o botão "menu" vai apresentar um sinal de exclamação em vermelho <img src="btn_sketch_anomalies.png" class="app_button">.
+      Um clique longo neste botão abre uma caixa de diálogo listando as anomalias.
+    </p>
     <ul>
       <li><u>Mudar/Fechar</u>: mudar para outro croqui ou fechar o croqui atual.</li>
       <li><u>Exportar</u>: o croqui pode ser <a href="page_plot_export.htm">exportado</a> nos seguintes formatos: <i>Therion</i> th2, <i>cSurvey</i>, DXF, SVG, PDF, xvi (<i>xtherion</i>), shapefile (<i>QGIS</i>), <i>Tunnel</i> e <i>Cave3D</i>.
@@ -255,15 +309,19 @@
       </li>
     </ul>
 
-    <p style="font-size:90%">Na tela <u>principal</u>, <a href="page_geek.htm">Configurações Especiais</a>:</p>
+    <p
+    >Na tela <u>principal</u>, <a href="page_geek.htm">Configurações Especiais</a>:
+  </p>
     <ul>
       <li><i>Paleta</i>: Habilita paletas adicionais</li>
       <li><i>Log pacote</i>: Habilitar log de pacotes DistoX</li>
       <li><i>Editor croqui</i>: Habilitar editor de croquis avulsos [T]</li>
     </ul>
 
-    <p style="font-size:90%"><a href="page_geek.htm">Configurações Especiais: Desenho croqui</a>:</p>
-    <ul style="font-size:90%">
+    <p>
+      <a href="page_geek.htm">Configurações Especiais: Desenho croqui</a>:
+    </p>
+    <ul>
       <li><i>Escalar/deslocar croqui</i>: habilitar escalonamento e deslocamento de croquis.</li>
       <li><i>Partir/unir croqui</i>: habilitar função de partir e unir croquis.</li>
       <li><i>Dsenh só caneta</i>: tamanho da caneta para permitir que a mão toque a tela ao desenhar somente com caneta. [0: ignorar]</li>
@@ -277,7 +335,9 @@
       <li><i>Corte inclinado</i>: visualização de perfis de cortes inclinados.</li>
     </ul>
 
-    <p style="font-size:90%"><a href="page_geek.htm">Configurações Especiais: Linhas</a>:</p>
+    <p>
+      <a href="page_geek.htm">Configurações Especiais: Linhas</a>:
+    </p>
     <ul>
       <li><i>Âng endireitar</i>: ângulo mínimo das quinas de linhas endireitadas.</li>
       <li><i>Prec interp Bézier</i>: exatidão da interpolação cúbica das curvas Bézier.</li>
@@ -293,27 +353,37 @@
     </ul>
 
     <h2>Cache de croquis</h2>
-    <p>Depois de abertos, os croquis são mantidos em memória, em um cache.
-    Isso acelera a troca entre a tela de <u>Medidas Topo</u> e a tela de <u>Desenho</u> já que o croqui não precisa ser relido do arquivo.
-    O cache de croquis é esvaziado quando a topo é fechada.</p>
+    <p>
+      Depois de abertos, os croquis são mantidos em memória, em um cache.
+      Isso acelera a troca entre a tela de <u>Medidas Topo</u> e a tela de <u>Desenho</u> já que o croqui não precisa ser relido do arquivo.
+      O cache de croquis é esvaziado quando a topo é fechada.
+    </p>
 
     <h3>Formato de dados dos arquivos de croquis</h3>
-    <p>Cada croqui é gravado em um arquivo cada vez que é modificado ou quando a tela de <u>Desenho</u> muda de visualização.
-    Por questões de performance o TopoDroidX grava os croquis em um formato binário.</p>
+    <p>
+      Cada croqui é gravado em um arquivo cada vez que é modificado ou quando a tela de <u>Desenho</u> muda de visualização.
+      Por questões de performance o TopoDroidX grava os croquis em um formato binário.
+    </p>
 
     <h2>Seleção de pontos [A]</h2>
-    <p>Para fazer qualquer edição, você precisa inicialmente selecionar um ponto: seja de um símbolo do tipo ponto, ou um ponto de uma linha ou área, uma base ou um ponto intermediário de uma medida.
-    O ponto fica verde quando selecionado.</p>
+    <p>
+      Para fazer qualquer edição, você precisa inicialmente selecionar um ponto: seja de um símbolo do tipo ponto, ou um ponto de uma linha ou área, uma base ou um ponto intermediário de uma medida.
+      O ponto fica verde quando selecionado.
+    </p>
 
     <p>Para fazer isso, clique o mais próximo possível ao ponto desejado.
     Entretanto se diversos pontos estiverem próximos ao local onde você clicar todos eles serão selecionados mas somente um será editado.
     Você troca o ponto em edição usando os botões <i>Ant/Próx</i> que podem ser visualizados abaixo.</p>
 
-    <p><img src="btn_multiselection_previous.png" class="app_button">&nbsp;<img src="btn_multiselection_next.png" class="app_button"></p>
+    <p>
+      <img src="btn_multiselection_previous.png" class="app_button">&nbsp;<img src="btn_multiselection_next.png" class="app_button">
+    </p>
 
     <h2>Estilo de linha</h2>
 
-    <p>O TopoDroidX tem cinco estilos de linhas (forma como a linha é desenhada):</p>
+    <p>
+      O TopoDroidX tem cinco estilos de linhas (forma como a linha é desenhada):
+    </p>
     <ul>
       <li><i>Normal</i> [padrão]: as linhas são desenhadas como polilinhas (sequência de segmentos de reta).</li>
       <li><i>Detalhada</i>: os segmentos de reta são mais curtos.</li>
@@ -325,55 +395,87 @@
     </ul>
 
     <h2>Retracejar</h2>
-    <p>Linhas e áreas podem ser desenhadas no modo "retracejar".</p>
+    <p>
+      Linhas e áreas podem ser desenhadas no modo "retracejar".
+    </p>
 
-    <p>Um clique longo no botão <i>Escolha de símbolo</i> alternadamente liga e desliga o modo "retracejar".
-    Quando o modo "retracejar" está ativo, o indicador de linha/área no botão estará em branco.
-    A parcela retracejada da linha/área não é transformada (Bézier, unir a pontos próximos, grau de detalhamento da linha, etc.).</p>
+    <p>
+      Um clique longo no botão <i>Escolha de símbolo</i> alternadamente liga e desliga o modo "retracejar".
+      Quando o modo "retracejar" está ativo, o indicador de linha/área no botão estará em branco.
+      A parcela retracejada da linha/área não é transformada (Bézier, unir a pontos próximos, grau de detalhamento da linha, etc.).
+    </p>
 
-    <p>Para retracejar uma parte de uma linha, desenhe uma nova linha que comece e/ou termine próxima a essa linha.</p> 
+    <p>
+      Para retracejar uma parte de uma linha, desenhe uma nova linha que comece e/ou termine próxima a essa linha.
+    </p>
 
-    <p>Linhs do tipo "corte" não podem ser retracejadas.</p>
+    <p>
+      Linhs do tipo "corte" não podem ser retracejadas.
+    </p>
 
-    <p>Áreas podem ser retracejadas desenhando uma área que comece e termine próxima à borda da área.
-    O segmento que conecta esses dois pontos da borda será substituído pela nova linha traçada.
-    Uma área pode ser ampliada ou reduzida e uma concavidade vazio pode ser preenchida (veja a figura abaixo).</p>
+    <p>
+      Áreas podem ser retracejadas desenhando uma área que comece e termine próxima à borda da área.
+      O segmento que conecta esses dois pontos da borda será substituído pela nova linha traçada.
+      Uma área pode ser ampliada ou reduzida e uma concavidade vazio pode ser preenchida (veja a figura abaixo).
+    </p>
 
-    <p>A ação de retracejar pode ser desfeita e refeita.</p>
-    
-    <p><img src="area_concavity.png" width="360" border="1"></p>
+    <p>
+      A ação de retracejar pode ser desfeita e refeita.
+    </p>
+
+    <p>
+      <img src="area_concavity.png" width="360" border="1">
+    </p>
 
     <h2>Ações Compostas [T]</h2>
 
-    <p>No modo “Edição”, cada nó (ponto verde) de linhas e áreas desenhadas podem ser editadas clicando-se sobre elas.
-    Quando selecionado o ponto fica destacado e pode ser movido, bem como o botão <i>Ações compostas</i> oferecerá as seguintes opções para linhas: “juntar ao ponto mais próximo”, “duplicar ponto”, “apagar ponto”, “corta a linha no ponto” e “ligar à linha”.
-    Para as áreas estarão disponíveis as opções: “juntar ao ponto mais próximo”, “duplicar ponto” e “apagar ponto”.</p>
+    <p>
+      No modo “Edição”, cada nó (ponto verde) de linhas e áreas desenhadas podem ser editadas clicando-se sobre elas.
+      Quando selecionado o ponto fica destacado e pode ser movido, bem como o botão <i>Ações compostas</i> oferecerá as seguintes opções para linhas: “juntar ao ponto mais próximo”, “duplicar ponto”, “apagar ponto”, “corta a linha no ponto” e “ligar à linha”.
+      Para as áreas estarão disponíveis as opções: “juntar ao ponto mais próximo”, “duplicar ponto” e “apagar ponto”.
+    </p>
 
     <h2>Orientação da tela: retrato/paisagem</h2>
 
-    <p>Na tela principal, em Configurações, pode-se definir a orientação da tela do aplicativo, escolhendo entre as opções “indefinida”, “retrato” e “paisagem”.
-    No modo retrato o norte magnético e a vertical para cima apontam para o topo da tela respectivamente na planta baixa e nos perfis.
-    Se a declinação magnética da topo estiver definida, o norte verdadeiro é apresentado como um ângulo (traço azul) em relação ao norte magnético.</p>
+    <p>
+      Na tela principal, em Configurações, pode-se definir a orientação da tela do aplicativo, escolhendo entre as opções “indefinida”, “retrato” e “paisagem”.
+      No modo retrato o norte magnético e a vertical para cima apontam para o topo da tela respectivamente na planta baixa e nos perfis.
+      Se a declinação magnética da topo estiver definida, o norte verdadeiro é apresentado como um ângulo (traço azul) em relação ao norte magnético.
+    </p>
 
-    <p>No modo paisagem o norte magnético e a vertical para cima são apresentados apontando para a lateral esquerda do aparelho de maneira que, na planta baixa e no perfil, o Leste e a Direita apontam para cima.
-    No modo paisagem a barra de símbolos se reposiciona de forma que fique no topo quando o aparelho estiver deitado.</p>
+    <p>
+      No modo paisagem o norte magnético e a vertical para cima são apresentados apontando para a lateral esquerda do aparelho de maneira que, na planta baixa e no perfil, o Leste e a Direita apontam para cima.
+      No modo paisagem a barra de símbolos se reposiciona de forma que fique no topo quando o aparelho estiver deitado.
+    </p>
 
-    <p>Os croquis são sempre gravados e exportados com o norte magnético e a vertical apontando ambos para cima.</p>
+    <p>
+      Os croquis são sempre gravados e exportados com o norte magnético e a vertical apontando ambos para cima.
+    </p>
 
-    <p><b>Alerta:</b> se o croqui sumir da tela, alterne entre planta baixa e perfil para forçar o TopoDroidX a redesenhá-lo.</p>
+    <p>
+      <b>Alerta:</b> se o croqui sumir da tela, alterne entre planta baixa e perfil para forçar o TopoDroidX a redesenhá-lo.
+    </p>
 
     <h2>Modo Editor de Arquivos</h2>
 
-    <p>A tela de <i>Desenho</i> é aberta no modo Editor de Arquivos quando é aberta a partir do botão <u>croqui</u> disponível na tela <i>Principal</i>.
-    Arquivos de croquis do TopoDroidX (.tdr) e arquivo simples do therion (.th2) podem ser abertos e editados. As alterações não são gravadas automaticamente devendo-se usar a opção de menu "Gravar".</p>
+    <p>
+      A tela de <i>Desenho</i> é aberta no modo Editor de Arquivos quando é aberta a partir do botão <u>croqui</u> disponível na tela <i>Principal</i>.
+      Arquivos de croquis do TopoDroidX (.tdr) e arquivo simples do therion (.th2) podem ser abertos e editados. As alterações não são gravadas automaticamente devendo-se usar a opção de menu "Gravar".
+    </p>
 
-    <p>Arquivos ".tdr" do TopoDroidX não são atrelados a uma topo.
-    As bases são carregadas do arquivo como "bases do usuário".</p>
+    <p>
+      Arquivos ".tdr" do TopoDroidX não são atrelados a uma topo.
+      As bases são carregadas do arquivo como "bases do usuário".
+    </p>
 
-    <p>A sintaxe dos arquivos ".th2" do Therion não é completamente suportada.
-    Em particular áreas com bordas multilinhas não são suportadas pois o TopoDroidX só comporta áreas com bordas definidas por uma única linha.</p>
+    <p>
+      A sintaxe dos arquivos ".th2" do Therion não é completamente suportada.
+      Em particular áreas com bordas multilinhas não são suportadas pois o TopoDroidX só comporta áreas com bordas definidas por uma única linha.
+    </p>
 
-    <p>Quando a tela <i>Desenho</i> é aberta no modo Editor de Arquivos, os botões e as opções de menu mudam. Os menus:</p>
+    <p>
+      Quando a tela <i>Desenho</i> é aberta no modo Editor de Arquivos, os botões e as opções de menu mudam. Os menus:
+    </p>
 
     <ul>
       <li><i>Fechar</i> a tela</li>
@@ -386,20 +488,33 @@
       <li><i>Ajuda</i></li>
     </ul>
 
-    <p>No modo de interação <i>Mover</i> só há os três botões verdes para ativar os outros modos.</p>
+    <p>
+      No modo de interação <i>Mover</i> só há os três botões verdes para ativar os outros modos.
+    </p>
 
-    <p>No modo <i>Desenhar</i> há os seguintes botões adicionais: <i>desfazer</i>, <i>refazer</i>, <i>escolha de símbolos</i> e <i>emenda de linhas/áreas</i>.</p>
+    <p>
+      No modo <i>Desenhar</i> há os seguintes botões adicionais: <i>desfazer</i>, <i>refazer</i>, <i>escolha de símbolos</i> e <i>emenda de linhas/áreas</i>.
+    </p>
 
-    <p> Os modos <i>Apagar</i> e <i>Editar</i> contam com os botões normais descritos acima.</p>
+    <p>
+      Os modos <i>Apagar</i> e <i>Editar</i> contam com os botões normais descritos acima.
+    </p>
 
-    <p>O arquivo th2 pode conter mais de um desenho. Como o croqui não é atrelado a uma topo, não há uma linha de trena, ou seja, não há nem visadas e nem medidas auxiliares.</p>
+    <p>
+      O arquivo th2 pode conter mais de um desenho. Como o croqui não é atrelado a uma topo, não há uma linha de trena, ou seja, não há nem visadas e nem medidas auxiliares.
+    </p>
 
-    <p>Só serão apresentadas bases se o arquivo th2 tiver pontos do tipo base.
-    Neste caso elas serão mostradas como pontos com o nome da base ao lado.</p>
+    <p>
+      Só serão apresentadas bases se o arquivo th2 tiver pontos do tipo base.
+      Neste caso elas serão mostradas como pontos com o nome da base ao lado.
+    </p>
 
-    <p>A grade só é apresentada se um tamanho de papel milimetrado tiver sido definido através da caixa de diálogo <i>Zoom Geral</i>.</p>
+    <p>
+      A grade só é apresentada se um tamanho de papel milimetrado tiver sido definido através da caixa de diálogo <i>Zoom Geral</i>.
+    </p>
 
-    <p><a href="page_tools.htm">Paleta de símbolos de desenho</a><br>
+    <p>
+      <a href="page_tools.htm">Paleta de símbolos de desenho</a><br>
       <a href="page_therion_stations.htm">Ponto tipo base do Therion</a><br>
       <a href="page_undo.htm">Pilha das ferramentas desfazer/refazer</a><br>
       <a href="page_shift.htm">Arrasto e espelhamento de croquis</a>
@@ -413,15 +528,14 @@
       <div>
         <a href="manual16.htm">Principais funcionalidades</a> |
         <a href="manual17.htm">Índice remissivo</a>
+      </div>
     </div>
-  </div>
 
-  <footer style="font-size: 80%; font-style: italic; clear: both;">
-    <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-12-31</span></p>
-    <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">84a5f03ea</span></p>
-    <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-    <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-  </footer>
-
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-17</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">4abfa48c0</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
   </body>
 </html>
