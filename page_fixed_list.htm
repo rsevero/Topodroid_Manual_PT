@@ -31,6 +31,9 @@
 
         <ul>
             <li><b>Fechar</b>: fecha a tela</li>
+            <li><b>App GNSS</b>: alterna entre os apps GNSS externos suportados instalados.
+              Se houver um ou nenhum app GNSS externo suportado instalado, essa opção de menu não é apresentada.
+              Esta opção de menu afeta a configuração <i>Dados topo > Localização > App GNSS</i>.</li>
             <li><b>Ajuda</b></li>
         </ul>
 
@@ -42,11 +45,11 @@
             <li><i>Mobile Topographer</i>: arquivo de pontos. Uma caixa de diálogo é aberta para que seja escolhido o ponto a ser importado.</li>
             <li><i>GPX Recorder</i>:  arquivo de trilha no formato GPX. O último ponto da trilha é importado.</li> 
             <li><i>GPS Position</i>: arquivo de ponto em formato CSV. O TopoDroidX calcula a média das posições dos pontos.</li> 
-            <li><i>GPS Test</i>: coordenadas em um aqruivo de log. O TopoDroidX usa a última coordenada.</li> 
+            <li><i>GPSTest</i>: coordenadas em um aqruivo de log. O TopoDroidX usa a última coordenada.</li> 
             <li><i>GPS Logger</i>: arquivo de trilha em formato TXT. O TopoDroidX usa o último ponto da trilha.</li>
         </ul>
 
-        <p>O nome do ponto (base) importado a partir do <i>GPX Recorder</i>, <i>GPX Position</i> e <i>GPS Test</i> é definido automaticamente pelo TopoDroidX como um número com o prefixo "#".</p>
+        <p>O nome do ponto (base) importado a partir do <i>GPX Recorder</i>, <i>GPX Position</i> e <i>GPSTest</i> é definido automaticamente pelo TopoDroidX como um número com o prefixo "#".</p>
 
         <p><i>Mobile Topographer</i>: os arquivos de listas de pontos são armazenados no diretório <i>MobileTopographer/pointlists</i>.</p>
 
@@ -54,7 +57,7 @@
 
         <p><i>GPS Position</i>: os arquivos são armazenados no <i>dispositivo principal de armazenamento do celular</i>.</p>
 
-        <p><i>GPS Test</i>: a criação de logs deve estar habilitada no app. É suficiente que se inclua nos logs as coordenadas. O arquivo de log é gravado quando o app é fechado e é armazenado no diretório <i>gnss_log</i>. Além disso as coordenadas geográficas gravadas na área de armazenamento pelo app <i>GPS Test</i> podem ser transferidas para os campos da caixa de diálogo <i>Inserir coordenadas</i>. Verifique que a opção para armazenar também a altitude na área de armazenamento está habilitada no <i>GPSTest</i>.</p>
+        <p><i>GPSTest</i>: a criação de logs deve estar habilitada no app. É suficiente que se inclua nos logs as coordenadas. O arquivo de log é gravado quando o app é fechado e é armazenado no diretório <i>gnss_log</i>. Além disso as coordenadas geográficas gravadas na área de armazenamento pelo app <i>GPSTest</i> podem ser transferidas para os campos da caixa de diálogo <i>Inserir coordenadas</i>. Verifique que a opção para armazenar também a altitude na área de armazenamento está habilitada no <i>GPSTest</i>.</p>
 
         <p><i>GPS Logger</i>: os arquivos de trilhas devem ser exportados no formato TXT.
         O TopoDroidX usa o elipsóide de altitude e a acurácia.</p>
@@ -92,8 +95,8 @@
         </p>
 
         <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-20</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">29e5e0865</span></p>
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-23</span></p>
+            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">22fa75ef3</span></p>
             <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
             <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
         </footer>
