@@ -1,35 +1,59 @@
-<html><body>
-<h3>SAVED STATIONS</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Bases gravadas</h1>
 
-This dialog is opened from the <i>Station</i> button in the <u>Survey Data window</u>,
-or from the <i>edit station</i> dialog of the <u>Drawing window</u>.<br><p>
+    <p>
+      Esta caixa de diálogo é aberta a partir do botão <i>Base</i> <img src="btn_station.png" class="app_button"> na tela <u>Dados topo</u>, ou clicando no botão <i>Gravar base</i> disponível na caixa de diálogo <i>Editar base</i> acessível na tela <u>Desenho</u>.
+    </p>
 
-The "saved stations" are stations saved for later reference, eg, at a crossway, to go back and continue the
-survey from there, or to mark a possible lead to check in a future trip.<br><p>
+    <p>
+      As "bases gravadas" são bases salvas para referência futura, por exemplo, em um cruzamento, para voltar e continuar o levantamento a partir dali, ou para marcar uma possível continuação a ser verificada em uma viagem futura.
+    </p>
 
-The dialog displays the list of saved stations. You select one by tapping it.<br><p>
+    <p>
+      A caixa de diálogo exibe a lista de bases gravadas.
+      Você seleciona uma clicando nela.
+    </p>
 
-The selected station is shown in the text fields.
-Opened from the <u>Survey Data window</u>, the text field contains the last station, or the active station if this is set.
-Opened from the edit-station dialog, the text field contains the station.<br><p>
+    <p>
+      A base selecionada é detalhada nos campos de texto.
+      Quando acessada a partir da tela <u>Dados topo</u>, o campo de texto contém a última base criada, ou a base ativa se esta estiver definida.
+      Quando acessada a partir da caixa de diálogo de edição de base, o campo de texto contém a bae selecionada.
+    </p>
 
-Each saved station must have a brief description (comment) or a flag set.<br><p>
+    <p>
+      Cada base gravada deve ter uma breve descrição (comentário) ou uma característica definida através das caixas de seleção dispníveis:
+    </p>
 
-<ul>
-<li>selected <b>station</b></li>
-<li>station <b>flag</b>, if any ("fixed" or "painted")</li>
-<li>station <b>comment</b></li>
-</ul><br>
+    <ul>
+      <li><b>Base</b>: nome da base selecionada</li>
+      <li><b>Característias</b>: define características da base, se houver ("fixa" ou "pintada")</li>
+      <li><b>Comentário</b>: informações sobre a base</li>
+    </ul>
 
-Buttons:
-<ul>
-<li><b>Clear</b> the station fields: name comment and flag</li>
-<li><b>Save</b> the station into the database</li>
-<li><b>Active</b>: set the station as the "active" station</li>
-<li><b>Delete</b> the station from the database (non recoverable)</li>
-<li><b>Close</b> closes the dialog</li>
-</ul>
-<br><p>
+    <p>
+      Botões:
+    </p>
 
-</body>
+    <ul>
+      <li><b>Limpar</b>: limpa os campos que caracterizam a base: comentário e características definidas através de caixa de seleção</li>
+      <li><b>Gravar</b>: grava a base no banco de dados</li>
+      <li><b>Apagar</b>: apaga a base do banco de dados (não recuperável)</li>
+      <li><b>Fechar</b>: fecha a caixa de diálogo</li>
+      <li><b>Selecionar</b>: define a base como a base "ativa"</li>
+    </ul>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-29</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">d44279229</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
