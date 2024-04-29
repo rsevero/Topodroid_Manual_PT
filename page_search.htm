@@ -1,25 +1,73 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Pesquisa bases e medidas</h1>
 
-<h3>STATION/SHOT SEARCH</h3>
+    <p>
+      Esta caixa de diálogo é aberta ao clicar no botão <i>Pesquisar</i> <img src="btn_search.png" class="app_button"> da tela <u>Dados topo</u>.
+    </p>
 
-This dialog is opened from the <i>Search</i> button of the <u>Survey Data window</u>.<br><p>
+    <p>
+      Ela possui um campo de texto para inserir o nome da base a ser pesquisada, e uma caixa de seleção para incluir também as medidas auxiliares na pesquisa.
+    </p>
 
-It has a text field to enter the name of the station to search, and a checkbox 
-to include also the splay shots in the search.<br><p>
+    <p>
+      Botões de pesquisa por bases:
+    </p>
 
-The <b>search</b> button closes the dialog and move the first matching shot to the top of the display.<br><p>
+    <ul>
+      <li><i>Visadas</i>: pesquisa por visadas ligadas à base com o nome informado.
+        Informar somente uma base.</li>
+      <li><i>Todas</i>: pesquisa por visadas e medidas auxiliares ligadas à base informada.
+        Informar somente uma base.</li>
+      <li><i>Visadas 2 bases</i>: pesquisa por bases que possuem a estação e a medida informadas.
+        Informar o nome de duas bases separadas por espaço.</li>
+    </ul>
 
-There are also three buttons to search for legs, and one for splays [T]:
-<ul>
-<li>duplicate legs</li>
-<li>surface legs</li>
-<li>legs with extend not set</li>
-<li>reverse splays</li>
-</ul><br><p>
+    <p>
+      Há também três botões para pesquisar por determinadas características de visadas, e um de medidas auxiliares [T]:
+    </p>
 
-The search is carried out only on the displayed data, and the search matches are highlighted 
-with a yellow background on the stations column.<br>
-A long tap on the <i>Search</i> button scroll the shot list moving the next match to the top on the display.<br>
-The search is cleared by tapping any button.<br><p>
+    <ul>
+      <li>Visadas:
+        <ul>
+          <li><i>Duplicadas</i></li>
+          <li><i>Superfície</i></li>
+          <li><i>Fora perfil</i></li>
+        </ul>
+      </li>
+      <li>Medidas auxiliares:
+        <ul>
+          <li><i>Invertidas</i></li>
+        </ul>
+    </ul>
 
-</body></html>
+    <p>
+      O botão <b>pesquisar</b> fecha a caixa de diálogo e move a primeira visada encontrada para o topo da tela.
+    </p>
+
+    <p>
+      A pesquisa é realizada apenas nos dados exibidos, e as medidas encontradas são destacadas com um fundo amarelo na coluna do nome das bases.
+    </p>
+
+    <p>
+      Um toque longo no botão <i>Pesquisar</i> <img src="btn_search.png" class="app_button"> rola a lista de medidas movendo a próxima medida encontrada para o topo da tela.
+    </p>
+
+    <p>
+      A pesquisa é cancelada ao tocar em qualquer botão.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-29</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">2fd407f8d</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
