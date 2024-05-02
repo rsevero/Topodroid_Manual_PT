@@ -1,26 +1,49 @@
 <html>
-<body>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Criar medida com sensor</h1>
 
-<h3>SENSOR MEASUREMENTS</h3>
+    <p>
+      Esta caixa de diálogo é apresentada a partir do botão <i>Sensores</i> <img src="btn_sensor.png" class="app_button"> na caixa de diálogo <i>Edição medida</i>.
+    </p>
 
-<div style="font-size=90%">
-This dialog is opened from the <i>Sensor</i> button in the secondary <i>Shot edit</i> dialog.<br><p>
+    <p>
+      Ela conta com uma lista de opções de sensores internos além da opção "externo" que exige a definição do tipo do sensor no campo de texto seguinte.
+    </p>
 
-It has list a checkboxes to select a builtin sensor, or an external sensor (in this case you must enter the
-"sensor" name).<br><p>
+    <p>
+      Há três campos de texto
+    </p>
 
-There are three text fields
-<ul>
-<li><b>name</b> of sensor. Either one of the listed builtin sensors, or it must be typed in if if you select
-an "external" sensor</li>
-<li><b>values</b> Automatically updated for builtin sensors. Manually entered for "external" sensors.</li>
-<li><b>comment</b></li>
-</ul>
+    <ul>
+      <li><b>Tipo</b>: obrigatório quando marcada a opção "externo".
+        O campo é preenchido automaticamente ao se selecionar um dos sensores internos.</li>
+      <li><b>Valor</b>: atualizado automaticamente para sensores internos.
+        Deve ser atualizado manualmente inserido para sensores externos</li>
+      <li><b>Comentário</b></li>
+    </ul>
 
-<b>Save</b> stores the measurement in the database.<br><p>
+    <h2>Botões</h2>
 
-The Android <i>BACK</i> key closes the dialog without saving.<br><p>
-</div>
+    <ul>
+      <li><b>Cancelar</b>: fecha a caixa de diálog sem fazer nenhuma alteração.</li>
+      <li><b>Gravar</b>: armazena a medida no banco de dados.</li>
+    </ul>
 
-</body>
+    <p>
+      O botão <i>Voltar</i> do Android fecha a caixa de diálogo sem salvar nenhuma alteração.<br><p>
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-02</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">4fcb453af</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
