@@ -1,23 +1,33 @@
 <html>
-<body>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Edição de medida de sensor</h1>
 
-<h3>SENSOR MEASUREMENT EDIT</h3>
+    <p>
+      Esta caixa de diálogo é apresentada quando você seleciona uma medida de sensor e clica no botão <i>Editar</i> na tela <u>Lista de sensores</u>.
+    </p>
 
-<div style="font-size=90%">
-This dialog is opened tapping a sensor measurement entry in the <i>Sensor list</i> dialog.<br><p>
+    <p>
+      Ela exibe algumas informações sobre a medida (título, tipo, medida e valor) e um campo para alterar o <b>comentário</b>.
+    </p>
 
-It displays some info about the measurement (title, type, shot, and value) and a field
-to change the sensor <b>comment</b>.<br><p>
+    <h2>Botões</h2>
 
-Buttons
-<ul>
-<li><b>OK</b> saves the changes and closes the dialog</li>
-<li><b>Delete</b> deletes the measurement</li>
-</ul><br><p>
+    <ul>
+      <li><b>Apagar</b> exclui a medida. Ela não é removida do banco de dados mas somente marcada como "apagada". Ela pode ser recuperada com um aplicativo que edite diretamente o banco de dados <i>SQLite</i>.</li>
+      <li><b>OK</b> salva as alterações e fecha a caixa de diálogo</li>
+    </ul>
 
-<b>Delete</b> does not remove the sensor measurement from the database, but marks it as "deleted".
-It can be recovered with a <i>SQLite</i> app.<br><p>
-</div>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
-</body>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-02</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">6e7fc6e41</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
