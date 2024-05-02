@@ -1,35 +1,55 @@
 <html>
-<body>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Edição de ponto de corte</h1>
 
-<h3>SKETCH SECTION POINT</h3>
+    <p>
+      Esta caixa de diálogo é aberta quando você seleciona um ponto de corte e clica no botão <i>Editar</i> <img src="btn_item.png" class="app_button"> na tela <u>Desenho</u> (em modo "editar").<br><p>
+    </p>
 
-This dialog is opened when you select a section-point item and tap the
-<i>Edit</i> button in the <u>Drawing window</u> (in "edit" mode).<br><p>
+    <p>
+      Propriedades do ponto:
+    </p>
 
-Point properties:
-<ul>
-<li><b>size</b> (XS, S, M, L, XL)</li>
-<li><b>layers</b>, the canvas views on which the point is displayed [T]</li>
-<li>Therion <b>options</b>: the sketch point has always the "-scrap" option followed by the name of the x-section</li>
-<li><b>x-section</b> checkbox to display the xsection outline in the sketch</li>
-</ul>
-<br><p>
+    <ul>
+      <li><b>Tamanho</b>: XS (<i>extra small</i>/extra pequeno), S (<i>small</i>/pequeno), M (<i>medium</i>/médio), L (<i>large</i>/grande), XL (<i>extra large</i>/extra grande)</li>
+      <li><b>Camadas</b>: em quais visualizações o ponto é exibido. Esta propriedade somente é apresentada se a opção de configuração <i>Especiais > Desenho croqui > Camadas</i> estiver definida como <i>por item</i>. [T] Veja <a href="page_drawing_point.htm#layers">Camadas</a>.</li>
+      <li><b>Opções Therion</b>: pontos do tipo corte sempre tem a opção "-scrap" seguida do nome do corte</li>
+      <li><b>Corte</b>: caixa de seleção para exibir o contorno da seção no croqui</li>
+    </ul>
 
-The canvas views are presented as checkboxes with the view letter-code. You can change the views the point belongs to.
-The point icon is not displayed if all its views are OFF.
-The selectable point will nevertheless be shown in edit mode, so that the point edit dialog remains accessible.
-<br><p>
+    <p>
+      As camadas do croqui são apresentadas como checkboxes com o código de letra da visualização correspondente.
+      Você pode alterar as camadas às quais o ponto pertence.
+      O ícone do ponto não é exibido se todas as camdas estiverem DESLIGADAS.
+      O ponto selecionável será, no entanto, sempre exibido no modo de edição, para que a caixa de diálogo de edição do ponto permaneça acessível.
+    </p>
 
-<b>Cancel</b> closes the dialog.<br>
 
-<b>Save</b> confirms the changes and closes the dialog.<br><p>
+    <h2>Botões</h2>
 
-The <b>Sketch</b> button to open the x-section sketch, if it exists.
-Changes to the xsections sketch are not propagated to the outline in the sketch: to update it,
-close the outline and open it again.
-<br><p>
+    <ul>
+      <li><b>Cancelar</b>: fecha a caixa de diálogo sem salvar as alterações</li>
+      <li><b>Gravar</b>: grava as alterações feitas e fecha a caixa de diálogo</li>
+      <li><b>Croqui</b>: abre o croqui do corte, se existir.
+        Alterações no croqui do corte não são propagadas para o contorno no croqui.
+        Para atualizá-lo, desabilite o contorno e habilite-o novamente.</li>
+    </ul>
 
-The <i>BACK</i> key closes the dialog without saving the changes.<br><p>
+    <p>
+      O botão <i>Voltar</i> do dispositivo Android fecha a caixa de diálogo sem salvar as alterações.
+    </p>
 
-</body>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-02</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ac9274e32</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
