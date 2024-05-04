@@ -192,7 +192,7 @@
     <h3 id="shapefile">Shapefile</h3>
 
     <ul>
-      <li><i>Georeferenced sketch</i>: export georeferenced plan-sketch [no]</li>
+      <li><i>Croqui georreferenciado</i>: croqui exportado em WGS 84 long-lat. [não]</li>
     </ul>
 
     <hr style="height:1px;background-color:black;">
@@ -200,80 +200,96 @@
     <h3 id="dxf">DXF</h3>
 
     <ul>
-      <li><i>DXF splay endpoints</i> [yes]</li>
-      <li><i>DXF version</i> {6,12,16}. [6]</li>
-      <li><i>DXF splines</i>: use splines for Bezier segments</li>
-      <li><i>DXF reference</i>: X-Y axes are DXF sketch export</li>
-      <li><i>Scrap layers</i>: DXF layers by scraps</li>
+      <li><i>Final aux</i>: marcar final de medidas auxiliares com cruzes nos arquivos DXF exportados. [sim]</li>
+      <li><i>Versão</i>: versão alvo dos arquivos DXF exportados. {6,12,16}. [6]</li>
+      <li><i>Splines</i>: interpolação cúbica de splines DXF. [não]</li>
+      <li><i>Referência</i>: incluir eixos X-Y nos arquivos DXF exportados. [não]</li>
+      <li><i>Camadas croquis</i>: criar camadas nos arquivos DXF exportados. [não]</li>
     </ul>
 
+    <hr style="height:1px;background-color:black;">
 
-<li>KML export:
-  <ul>
-    <li><i>KML stations</i>: add stations to KML export. [yes]</li>
-    <li><i>KML splays</i>: add splays to KML export. [no]</li>
-  </ul>
-</li>
-<li>GPX export:<br>
-  <ul>
-    <li><i>GPX single track</i> export [yes]</li>
-  </ul>
-</li>
-<!-- <li>Shapefile export:<br>
-  <ul>
-  <li>Export georeferenced plan-sketch [no]</li>
-  </ul>
-</li> -->
-<li>CSV export:<br>
-  <ul>
-    <li><i>Complete CSV</i>: export whole data to csv. [no]</li>
-    <li><i>CSV separator</i>: field separator [pipe]</li>
-    <li><i>CSV eol</i>: line separator [line-feed]</li>
-  </ul>
-</li>
-</ul>
+    <h3 id="kml">KML</h3>
 
-<hr style="height:2px;background-color:black;">
+    <ul>
+      <li><i>Incluir base</i>: incluir bases nos arquivos KML exportados. [sim]</li>
+      <li><i>Incluir aux</i>: incluir medidas auxiliares nos arquivos KML exportados. [não]</li>
+    </ul>
 
-<h2 id="survey_data">Survey Data</h2>
-<ul>
-  <li><i>Team</i>: default survey team. By default it is unset. When you create a new survey you must enter the team.</li>
-  <li><i>Stations policy</i>: survey stations name assignment policy {none, splay+fore, splay+back, fore+splay, back+splay, back+splay+fore, tripod, magn.anomaly}.
-    The number of choices varies with the activity level.
-    Default "splay+fore".</li>
-  <li><i>Station names</i>: {alphanumeric,numeric}. [alphanumeric]</li>
-  <li><i>Initial station name</i>: by default it is unset, and the program uses "0".</li>
-  <li><i>Thumbnails size</i>: photo thumbnails size [80,400]. [200 px]</li>
-  <li><i>Editable stations</i>: inline-editable stations [no]</li>
-  <li><i>Sketch origin</i>: origin in common to all sketches or not</li>
-  <li><i>Shared x-sections</i>: x-sections shared among sketches</li>
-</ul>
+    <hr style="height:1px;background-color:black;">
 
-<hr style="height:1px;background-color:black;">
+    <h3 id="gpx">GPX</h3>
 
-<h3 id="units">Units</h3>
-<ul>
-  <li><i>Length units</i>: {m, ft}. [m]</li>
-  <li><i>Angle units</i>: {deg, grad}. [deg]</li>
-  <li><i>Sketch units</i>: sketch grid units {m, yd, 2ft, dm}. [m]</li>
-  <li><i>Ruler units</i>: measure ruler units {cell, m, ft}.</li>
-</ul>
+    <ul>
+      <li><i>GPX track único</i>: exportar topos como um track único no arquivo GPX. [sim]</li>
+    </ul>
 
-<hr style="height:1px;background-color:black;">
+    <hr style="height:2px;background-color:black;">
 
-<h3 id="shot_data">Shot Data</h3>
-<ul>
-  <li><i>Leg tolerance</i>: tolerance among the shots of same leg &gt; 0%. [0.05, ie, 5%]</li>
-  <li><i>Maximum shot length</i> [50 m]</li>
-  <li><i>Minimum leg length</i> [30 cm]</li>
-  <li><i>Leg minimum shots</i>: minimum number of shots per leg. [3]</li>
-  <li><i>Shjot vertical extend</i>: shot vertical threshold. Region around 90&deg;, where shots are extended "vertical" [0,90]. [10&deg;]</li>
-  <li><i>Leg WENS threshold</i>: leg vertical threshold [0,90]. [80&deg;]</li>
-  <li><i>Fixed extend reference</i>: "extend" reference. Settable or fixed extend L/R reference. [no]</li>
-  <li><i>Prev/Next buttons</i>: prev/next buttons in the shot edit dialog. [yes]</li>
-  <li><i>Backsight</i>: backsight fileds in user entered shot dialog. [no]</li>
-  <li><i>Leg-shot feedback</i>: leg identification feedback {none, sound, haptic} [no]</li>
-</ul>
+    <h3 id="csv">CSV</h3>
+
+    <ul>
+      <li><i>CSV completo</i>: exportar todos os dados no CSV. [não]</li>
+      <li><i>Separ campo CSV</i>: caracter usado para separar campos nos arquivos CSV exportados {vírgula, traço vertical, tab}. [traço vertical]</li>
+      <li><i>Final linha CSV</i>: caracter usado para finalizar linhas nos arquivos CSV exportados {Linux, Windows} [Linux]</li>
+    </ul>
+
+    <hr style="height:2px;background-color:black;">
+
+    <h2 id="survey_data">Dados topo</h2>
+    <ul>
+      <li>
+        <i>Equipe</i>: equipe padrão para novas topos.
+        Campo vem vazio por padrão.
+        Quando você cria uma nova topo você deve inserir a equipe.
+      </li>
+      <li>
+        <i>Nomear bases</i>: método usado para nomear automaticamente novas bases {não | aux, visada | aux contra | contra, aux, visada | tripé | anomalia magnética | visada, aux | contra, aux | TopoRobot}.
+        As opções disponíveis variam de acordo com o nível de recursos escolhido.
+        [aux, visada]
+      </li>
+      <li><i>Tipo nome base</i>: tipos de caracteres usados para nomear bases {alfanumérico, numérico}. [alfanumérico]</li>
+      <li>
+        <i>Nome base inicial</i>: por padrão é vazio.
+        Nesse caso o TopoDroidX usa "0".
+      </li>
+      <li>
+        <i>Tam miniatura</i>: tamanho da versão miniatura das fotos.
+        Pode variar entre 80 e 400 pixels. [200 px]
+      </li>
+      <li><i>Base editável</i>: nomes de bases editáveis na lista de medidas [não]</li>
+      <li><i>Origem fixa croqui</i>: mesma origem sugerida para todos os croquis. [não]</li>
+      <li><i>Cortes compartilhados</i>: cortes em bases compartilhados entre croquis. [não]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="units">Unidades</h3>
+    <ul>
+      <li><i>Distância</i>: unidade usada para visualização de distâncias {metros, pés}. [metros]</li>
+      <li><i>Ângulo</i>: unidade usada para visualização de ângulos {graus, grados}. [graus]</li>
+      <li><i>Grade croqui</i>: unidade usada na grade dos croquis {metros, jardas, 2 pés, 0,1 metro}. [metros]</li>
+      <li><i>Régua</i>: unidade de comprimento da ferramenta de medição {célula grade, metros, pés}. [célula grade]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="shot_data">Dados medidas</h3>
+    <ul>
+      <li><i>Toler visadas</i>: tolerância máxima aceita entre medidas consecutivas de uma mesma visada &gt; 0%. [0,05 ou seja 5%]</li>
+      <li><i>Compr máx medida</i>: comprimento máximo de medidas. [50 m]</li>
+      <li><i>Compr mín visada</i>: comprimento mínimo de visadas. [30 cm]</li>
+      <li><i>Qt mín medidas/visada</i>: quantidade mínima de medidas similares para uma nova base ser criada automaticamente. [3]</li>
+      <li><i>Lim vert aux</i>: ângulo máximo medida a partir da vertical (90&deg;), até onde visadas são definidas no perfil retificado como vertical [0,90]. [10&deg;]</li>
+      <li>
+        <i>Lim inclin OLNS</i>: inclinação da visada abaixo do qual medidas auxiliares EDTC.
+        Acima deste valor são considerados OLNS (Oeste-Leste-Norte-Sul) [0,90]. [80&deg;]
+      </li>
+      <li><i>Ref fix perf retific</i>: referência fixa para definição de direção de visada em perfil retificado. [não]</li>
+      <li><i>Botões Ant/Próx</i>: apresentar botões Anterior/Próximo na tela de medidas. [sim]</li>
+      <li><i>Contra visada</i>: apresentar campos de contra azimute e inclinação invertida na inserção manual de medidas. [não]</li>
+      <li><i>Aviso visada</i>: tipo de aviso ao reconhecer nova visada {nenhum, som, vibração} [nenhum]</li>
+    </ul>
 
 <hr style="height:1px;background-color:black;">
 
