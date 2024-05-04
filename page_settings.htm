@@ -1,184 +1,213 @@
-<html><body>
-<h1>TopoDroid SETTINGS</h1>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Configurações</h1>
 
-<h2>Index</h2>
-<ul>
-  <li><a href="#main">Main</a></li>
-  <li><a href="#import_export">Import/Export</a></li>
-  <li><a href="#survey_data">Survey data</a>
+    <h2>Índice</h2>
     <ul>
-      <li><a href="#units">Units</a></li>
-      <li><a href="#shot_data">Shot data</a></li>
-      <li><a href="#location">Location</a></li>
-      <li><a href="#accuracy">Accuracy</a></li>
+      <li><a href="#main">Main</a></li>
+      <li><a href="#import_export">Import/Export</a></li>
+      <li><a href="#survey_data">Survey data</a>
+        <ul>
+          <li><a href="#units">Units</a></li>
+          <li><a href="#shot_data">Shot data</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#accuracy">Accuracy</a></li>
+        </ul>
+      </li>
+      <li><a href="#sketching">Sketching</a>
+        <ul>
+          <li><a href="#points">Points</a></li>
+          <li><a href="#lines">Lines</a></li>
+          <li><a href="#sketch">Sketch</a></li>
+        </ul>
+      </li>
+      <li><a href="#devices">Devices</a>
+        <ul>
+          <li><a href="#calibrations">Calibrations</a></li>
+        </ul>
+      </li>
+      <li><a href="#3d_viewer">3D viewer</a>
+        <ul>
+          <li><a href="#dem">DEM</a></li>
+          <li><a href="#wall_model">Wall model</a></li>
+        </ul>
+      </li>
+      <li><a href="#custom_main">Custom main</a>
+        <ul>
+          <li><a href="#custom_survey_data">Custom Survey Data</a></li>
+          <li><a href="#custom_splay_data">Custom Splay data</a></li>
+          <li><a href="#custom_sketching">Custom Sketching</a></li>
+          <li><a href="#custom_lines">Custom Lines</a></li>
+          <li><a href="#custom_devices">Custom Devices</a></li>
+          <li><a href="#custom_import_export">Custom import/export</a></li>
+        </ul>
+      </li>
+      <li><a href="#settings_import_export">Settings import/export</a></li>
     </ul>
-  </li>
-  <li><a href="#sketching">Sketching</a>
-    <ul>
-      <li><a href="#points">Points</a></li>
-      <li><a href="#lines">Lines</a></li>
-      <li><a href="#sketch">Sketch</a></li>
-    </ul>
-  </li>
-  <li><a href="#devices">Devices</a>
-    <ul>
-      <li><a href="#calibrations">Calibrations</a></li>
-    </ul>
-  </li>
-  <li><a href="#3d_viewer">3D viewer</a>
-    <ul>
-      <li><a href="#dem">DEM</a></li>
-      <li><a href="#wall_model">Wall model</a></li>
-    </ul>
-  </li>
-  <li><a href="#custom_main">Custom main</a>
-    <ul>
-      <li><a href="#custom_survey_data">Custom Survey Data</a></li>
-      <li><a href="#custom_splay_data">Custom Splay data</a></li>
-      <li><a href="#custom_sketching">Custom Sketching</a></li>
-      <li><a href="#custom_lines">Custom Lines</a></li>
-      <li><a href="#custom_devices">Custom Devices</a></li>
-      <li><a href="#custom_import_export">Custom import/export</a></li>
-    </ul>
-  </li>
-  <li><a href="#settings_import_export">Settings import/export</a></li>
-</ul>
 
-<hr style="height:2px;background-color:black;">
+    <hr style="height:2px;background-color:black;">
 
-<h2 id="main">Principais</h2>
-<ul>
-  <li><a href="page_cwd.htm">Diretório trabalho</a> padrão indefinido (ou seja "TopoDroid").</li>
-  <li><i>Tam texto</i>: tamanho do textonos itens das listas. &gt;= 1. [14]</li>
-  <li><i>Tam botões</i>: {small, normal, medium, large, huge}. [normal]</li>
-  <li><i>Activity level</i> {basic, normal, advanced, expert, tester}. [normal]</li>
-  <li><i>Keyboard</i>. Enable <a href="page_keypad.htm">custom keyboards</a> instead of Android default keyboard.</li>
-  <li><i>No keyboard cursor</i></li>
-  <!-- li>Co-surveying service. Default OFF</li -->
-  <li><i>User manual</i>: available translations. To change this setting from english to something else TopoDroid needs internet access {English, Spanish, Italian, Russian, hungarian, French, Portuguese, Chinese}.</li>
-  <li>App <a href="page_language.htm">language</a> {default, English, Spanish, Italian, Russian, hungarian, French, Portuguese, Chinese}. Default "default" (i.e. system locale)</li>
-  <li><i>Screen orientation</i> (unspecified, portrait, landscape) [unspecified]</li>
-  <!-- li>Backup clear menu</li -->
-</ul>
+    <h2 id="main">Principais</h2>
+    <ul>
+      <li><a href="page_cwd.htm">Diretório trabalho</a> padrão indefinido (ou seja "TopoDroid").</li>
+      <li><i>Tam texto</i>: tamanho do texto nos itens das listas. &gt;= 1. [14]</li>
+      <li><i>Tam botões</i>: {pequeno, normal, médio, grande, enorme}. [normal]</li>
+      <li><i>Nível recursos</i>: {básico, normal, avançado, especialista, teste}. [normal]</li>
+      <li><i>Teclado</i>. habilitar <a href="page_keypad.htm">teclados especiais</a> no lugar do teclado padrão do Android.</li>
+      <li><i>Sem cursor</i>: desabilitar o curso do teclado especial do TopoDroidX</li>
+      <li><i>Idioma manual</i>: traduções disponíveis: {inglês, espanhol, italiano, russo, húngaro, francês, português, chinês}. Para alterar essa configuração para alguma opção diferente de inglês o TopoDroidX depende de uma conexão de internet.</li>
+      <li><a href="page_language.htm">Idioma app</a> {padrão, inglês, espanhol, italiano, russo, húngaro, francês, português, chinês}. [padrão] (ou seja, idioma do Android)</li>
+      <li><i>Orient tela</i>: (indefinida, retrato, paisagem) [indefinida]</li>
+    </ul>
 
-<hr style="height:2px;background-color:black;">
+    <hr style="height:2px;background-color:black;">
 
-<h2 id="import_export">Import/Export</h2>
-<ul>
-<li>General
-  <ul>
-    <li><i>Data export format</i>: default data export type {cave,cav,csv,csx,dat,dxf,grt,gtx,srv,sur,svg,svx,th,top,tro} [none]</li>
-    <li><i>Sketch export format</i>: default sketch export type {none,th,csx,dxf,svg,xvi} [none]</li>
-    <li><i>Sketch auto-export format</i> [none]</li>
-    <li>Compass <i>LRUD splay angle</i>. LRUD minimum splay-leg angle.</li>
-    <li><i>UD splay clino</i>: Up/Down minimum splay clino. [0&deg;]</li>
-    <li><i>LR splay clino</i>: Left/Right maximum splay clino. [90&deg;]</li>
-    <li><i>Point spacing</i>: distance between line points</li>
-  </ul>
-</li>
-<li>Enable: sets which export format options are available at the export dialog.
-  Supported formats:
-  <ul>
-    <li>Compass (DAT)</li>
-    <li>cSurvey (CSX)</li>
-    <li>GHTopo (GTX)</li>
-    <li>Polygon (CAVE)</li>
-    <li>Survex (SVX)</li>
-    <li>Therion (TH)</li>
-    <li>Topo (CAV)</li>
-    <li>TopoRobot (TAB)</li>
-    <li>VisualTopo (TRO, TROX)</li>
-    <li>Walls (SRV)</li>
-    <li>Winkarst (SUR)</li>
-    <li>CSV</li>
-    <li>DXF</li>
-    <li>KML</li>
-    <li>GPX</li>
-  </ul>
-</li>
-<li>Import:
-  <ul>
-    <li><a href="page_pt_cmap.htm">PocketTopo color map</a>: map of PocketTopo colours to TopoDroid types</li>
-    <li><i>Estimate LR extend</i> on import of Compass and VisualTopo files. [yes]</li>
-    <!-- li>Import datamode: normal or diving. Diving applies only to Compass. [normal]</li -->
-  </ul>
-</li>
-<li>Survex export:
-  <ul>
-    <li><i>Survex/Topo line termination</i>: end-of-line {Linux,Windows}. [Linux]</li>
-    <li><i>Survex splays station</i>: add splays TO station. [no]</li>
-    <li><i>Survex/Therion LRUD</i>: Add LRUD to the export. [no]</li>
-  </ul>
-</li>
-<li>Therion export:
-  <ul>
-    <li><i>Therion config</i>: create thconfig [no]</li>
-    <li><i>Therion maps first</i>: put Therion map commands before survey data. [no]</li>
-    <li><i>Splays</i>: add splay lines to Therion scraps. [yes]</li>
-    <li><i>Survex/Therion LRUD</i>: add LRUD to the export. [no]</li>
-    <li><i>Therion scale</i>: export scale. [1:100]</li>
-    <li><i>xvi image</i>: insert reference to xvi image in th2 files</li>
-  </ul>
-</li>
-<li>cSurvey export:
-  <ul>
-    <li><i>Station prefix</i> [none]</li>
-  </ul>
-</li>
-<li>Compass export:
-  <ul>
-    <li>Compass <i>station prefix</i>. [no]</li>
-    <li><i>Compass splays</i>: add splays to Compass files</li>
-    <li><i>Compass swap LR</i>: swap Left and Right on Compass export. [no]</li>
-  </ul>
-</li>
-<li>VisualTopo export:
-  <ul>
-    <li><i>VisualTopo splays</i>: add splays to VisualTopo files</li>
-    <li><i>LRUD at FROM</i> station</li>
-    <li><i>Trox format</i>: file format, tro or trox</li>
-  </ul>
-</li>
-<li>Walls export:
-  <ul>
-    <li><i>Walls splays</i>: include splays in Walls files</li>
-  </ul>
-</li>
-<li>SVG export:
-  <ul>
-    <li><i>SVG roundtrip</i>: round-trip ready SVG export [no]</li>
-    <li><i>Grid</i>: add sketch grid to SVG export. [no]</li>
-    <li><i>Line orientation</i> [no]</li>
-    <li><i>SVG splays</i>: include splays. [no]</li>
-    <li><i>Point stroke</i> [0.5]</li>
-    <li><i>Label stroke</i> [1.5]</li>
-    <li><i>Line stroke</i> [2.5]</li>
-    <li><i>Grid stroke</i> [2.5]</li>
-    <li><i>Shot stroke</i> [2.5]</li>
-    <li><i>Orientation tick</i> size. [12]</li>
-    <li><i>Station size</i> [32]</li>
-    <li><i>Label size</i> [48]</li>
-    <li><i>SVG program</i>: target SVG program. Inkscape or Illustrator</li>
-  </ul>
-</li>
-<li>DXF export:
-  <ul>
-    <li><i>DXF splay endpoints</i> [yes]</li>
-    <li><i>DXF version</i> {6,12,16}. [6]</li>
-    <li><i>DXF splines</i>: use splines for Bezier segments</li>
-    <li><i>DXF reference</i>: X-Y axes are DXF sketch export</li>
-    <li><i>Scrap layers</i>: DXF layers by scraps</li>
-  </ul>
-</li>
-<!-- li>PNG:<br>
-  <ul>
-  <li>Image resolution [0.5, 100]. Default 1.5 [x200 px]</li>
-  <li>Background color (RGB in 0-100). [0 0 0, ie, black]</li>
-  <li>Grid: add metric sketch grid</li>
-  <li>Splays: add splay lines</li>
-  <li>Stations: add stations</li>
-  </ul>
-</li -->
+    <h2 id="import_export">Importar/Exportar</h2>
+    <ul>
+      <li><i>Form export dados</i>: formato padrão de exportação de dados. {nenhum,cave,cav,csv,csx,dat,dxf,grt,gtx,srv,sur,svg,svx,th,top,tro} [nenhum]</li>
+      <li><i>Form export croqui</i>: formato padrão de exportação de croqui. {nenhum,th,csx,dxf,svg,xvi} [nenhum]</li>
+      <li><i>Form export aut croqui</i>: formato de exportação automática de croqui. {nenhum,th,csx,dxf,svg,xvi} [nenhum]</li>
+      <li><i>Âng aux EDTC</i>: ângulo mínimo entre uma medida auxiliar e uma visada para que uma medida auxiliar seja considerada EDTC (Esquerda/Direita/Teto/Chão) na exportação. [0]</li>
+      <li><i>Incl mín TC</i>: inclinação mínima nas medidas TC (Teto/Chão). [0&deg;]</li>
+      <li><i>Incl máx ED</i>: inclinação máxima das medidas ED (Esquerda/Direita). [90&deg;]</li>
+      <li><i>Espaçamento ponto</i>: distância máxima entre pontos em uma linha Bezier exportada.</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="enable">Habilitar</h3>
+
+    <p>
+      Define quais opções de formato de exportação estão disponíveis na caixa de diálogo de exportação.
+      Formatos suportados:
+    </p>
+    <ul>
+      <li>Compass (DAT)</li>
+      <li>cSurvey (CSX)</li>
+      <li>GHTopo (GTX)</li>
+      <li>Polygon (CAVE)</li>
+      <li>Survex (SVX)</li>
+      <li>Therion (TH)</li>
+      <li>Topo (CAV)</li>
+      <li>TopoRobot (TAB)</li>
+      <li>VisualTopo (TRO, TROX)</li>
+      <li>Walls (SRV)</li>
+      <li>Winkarst (SUR)</li>
+      <li>CSV</li>
+      <li>DXF</li>
+      <li>KML</li>
+      <li>GPX</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="import">Importar</h3>
+    <ul>
+      <li><i>Mapa cor PocketTopo</i>: definição do mapeamento entre cores das linhas PocketTopo e tipos de linhas Therion.</li>
+      <li><i>Estimar ref retif perfil</i>: estimar referência para retificação de perfil na importação de arquivos Compass e VisualTopo. [sim]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="survex">Survex</h3>
+
+    <ul>
+      <li><i>Term linha</i>: tipo de terminação de linha a ser usado nos arquivos exportados {Linux,Windows}. [Linux]</li>
+      <li><i>Base aux</i>: incluir às medidas auxilaires exportadas em foramto Survex um nome de base PARA cujo nome é composto da base DE e uma letra adicionada. [não]</li>
+      <li><i>EDTC</i>: incluir medidas EDTC (Esquerda/Direita/Teto/Chão) nos arquivos Survex e Therion exportados. [não]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="therion">Therion</h3>
+
+    <ul>
+      <li><i>Criar arq config Therion</i>: criar arquivo thconfig na exportação Therion. [não]</li>
+      <li><i>Mapa Therion início</i>: incluir as menções aos mapas Therion no início dos dados da topo. [não]</li>
+      <li><i>Med aux therion</i>: adicionar linhas <i>u:splay</i> aos arquivos th2. [não]</li>
+      <li><i>EDTC</i>: incluir medidas EDTC (Esquerda/Direita/Teto/Chão) nos arquivos Survex e Therion exportados. [não]</li>
+      <li><i>Escala Therion</i>: escala de exportação de arquivos th2/xvi. [1:100]</li>
+      <li><i>Imagem XVI</i>: incluir chamada no arquivo th2 para imagem XVI. [não]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="csurvey">cSurvey</h3>
+
+    <ul>
+      <li><i>Pref base</i>: incluir prefixo nos nomes das bases na exportação de arquivos Compass, cSurvey e WinKarst. [vazio]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="compass">Compass</h3>
+
+    <ul>
+      <li><i>Pref base</i>: incluir prefixo nos nomes das bases na exportação de arquivos Compass, cSurvey e WinKarst. [vazio]</li>
+      <li><i>Aux Compass/Walls</i>: exportar medidas auxiliares em arquivos Compass/Walls ou como <i>12 12-1</i> ou como <i>12 -</i>.</li>
+      <li><i>Inverter Esq/Dir</i>: inverter as medidas auxiliares esquerda e direita nos arquivos Compass exportados. [não]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="visualtopo">VisualTopo</h3>
+
+    <ul>
+      <li><i>Aux VisualTopo</i>: incluir medidas auxiliares em arquivos VisualTopo. [não]</li>
+      <li><i>EDTC em DE</i>: medidas auxiliares ETDC na base DE em arquivos VisualTopo. [não]</li>
+      <li><i>Form Trox</i>: exportação VisualTopo cria arquivos trox no lugar de arquivos tro. [não]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="walls">Walls</h3>
+
+    <ul>
+      <li><i>Med aux Walls</i>: incluir medidas auxiliares nos arquivos Walls exportados. [não]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="svg">SVG</h3>
+
+    <ul>
+      <li><i>Circuito SVG</i>: exportar arquivos SVG preparados para circuito. [não]</li>
+      <li><i>Grade</i>: incluir grade no arquivo SVG/XVI exportado. [não]</li>
+      <li><i>Orient linha</i>: incluir indicador de orientação de linha nos arquivos SVG exportados. [não]</li>
+      <li><i>Med aux SVG</i>: incluir medidas auxiliares nos arquivos SVG exportados. [não]</li>
+      <li><i>Espess ponto</i>: espessura da linha usada para desenhar os símbolos de pontos nos arquivos SVG exportados. [0.5]</li>
+      <li><i>Espess rótulo</i>: espessura da linha usada para os textos dos rótulos nos arquivos SVG exportados. [1.5]</li>
+      <li><i>Espess linha</i>: espessura da linha nos arquivos SVG exportados. [2.5]</li>
+      <li><i>Espess grade</i>: espessura da linha usada para desenhar a grade nos arquivos SVG exportados. [2.5]</li>
+      <li><i>Espess ponto</i>: espessura da linha usada para desenhar as visadas nos arquivos SVG exportados. [2.5]</li>
+      <li><i>Tam orient linha</i>: tamanho da indicação de orientação de linha usada nos arquivos SVG exportados. [12]</li>
+      <li><i>Tam base</i>: tamanho do texto usado para nomear bases nos arquivos SVG exportados. [32]</li>
+      <li><i>Tam rótulo</i>: tamanho do texto usado para rótulos nos arquivos SVG exportados. [48]</li>
+      <li><i>Programa alvo</i>: qual programa usado como modelo na exportação {Inkscape, Illustrator} [Illustrator]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="shapefile">Shapefile</h3>
+
+    <ul>
+      <li><i>Georeferenced sketch</i>: export georeferenced plan-sketch [no]</li>
+    </ul>
+
+    <hr style="height:1px;background-color:black;">
+
+    <h3 id="dxf">DXF</h3>
+
+    <ul>
+      <li><i>DXF splay endpoints</i> [yes]</li>
+      <li><i>DXF version</i> {6,12,16}. [6]</li>
+      <li><i>DXF splines</i>: use splines for Bezier segments</li>
+      <li><i>DXF reference</i>: X-Y axes are DXF sketch export</li>
+      <li><i>Scrap layers</i>: DXF layers by scraps</li>
+    </ul>
+
+
 <li>KML export:
   <ul>
     <li><i>KML stations</i>: add stations to KML export. [yes]</li>
