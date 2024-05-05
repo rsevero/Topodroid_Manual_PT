@@ -291,65 +291,67 @@
       <li><i>Aviso visada</i>: tipo de aviso ao reconhecer nova visada {nenhum, som, vibração} [nenhum]</li>
     </ul>
 
-<hr style="height:1px;background-color:black;">
+    <hr style="height:1px;background-color:black;">
 
-<h3 id="location">Location</h3>
-<ul>
-  <li><i>Coordinate units</i>: location units {ddmmss, dec.deg}. [ddmmss]</li>
-  <li><i>CRS</i>: name of CRS, as used in Proj4. [Long-Lat, ie, geographic WGS84]</li>
-  <li><i>Neg. altitudes</i>: allow negative altitudes</li>
-  <li><i>Editable altitude</i></li>
-  <li><i>Fine-position</i>: fine position time in seconds</li>
-  <li><i>GNSS app</i>: preferred GNSS app {non-specified, Mobile Topographer, GPX Recorder, GPS Position, GPSTest, GPS Logger} [non-specified]</li>
-</ul>
+    <h3 id="location">Localização</h3>
+    <ul>
+      <li><i>Unidade coordenada</i>: unidade para visualização de coordenadas {graus decimais | graus, minutos, segundos}. [graus, minutos, segundos]</li>
+      <li><i>SRC</i>: nome do Sistema de Referência de Coordenadas como usado no app Proj4. [Long-Lat, ou seja, WGS84 geográfico]</li>
+      <li><i>Altitude negativa</i>: permitir altitudes negativas.</li>
+      <li><i>Altitude editável</i>: permitir edição de altitudes.</li>
+      <li><i>Tempo loc precisa</i>: tempo de espera para obtenção de localização precisa, em segundos.</li>
+      <li><i>App GNSS</i>: app GNSS externa {nenhum, Mobile Topographer, GPX Recorder, GPS Position, GPSTest, GPS Logger} [nenhum]</li>
+    </ul>
 
-<hr style="height:1px;background-color:black;">
+    <hr style="height:1px;background-color:black;">
 
-<h3 id="accuracy">Accuracy</h3>
-<ul>
-  <li><i>Acceleration tolerance</i>: percent tolerance for the shots acceleration &gt; 0. [1%]</li>
-  <li><i>Magnetic field tolerance</i>: percent tolerance for the shots magnetic field &gt; 0. [1%]</li>
-  <li><i>Magnetic dip tolerance</i>: tolerance over the shots magnetic dip &gt; 0. [2.0&deg;]</li>
-  <li><i>Sibling threshold</i>: threshold for sibling shots tolerance &gt; 0. [5%]</li>
-</ul>
+    <h3 id="accuracy">Acurácia</h3>
+    <ul>
+      <li><i>Toler aceleração</i>: percentual de tolerância de diferença de valores de aceleração em relação ao seu valor médio acima do qual a medida será considerada pouco confiável (somente DistoX) &gt; 0. [1%]</li>
+      <li><i>Toler campo magnético</i>: percentual de tolerância de diferença de valores de campo magnético em relação ao seu valor médio acima do qual a medida será considerada pouco confiável (somente DistoX) &gt; 0. [1%]</li>
+      <li><i>Toler merg magnético</i>: percentual de tolerância de diferença de valores de mergulho magnético em relação ao seu valor médio acima do qual a medida será considerada pouco confiável (somente DistoX) &gt; 0. [2.0&deg;]</li>
+      <li><i>Lim irmã</i>: diferença percentual máxima entre os valores de visadas acima do qual são consideradas irmãs ruins &gt; 0. [5%]</li>
+    </ul>
 
-<hr style="height:2px;background-color:black;">
+    <hr style="height:2px;background-color:black;">
 
-<h2 id="sketching">Sketching</h2>
-<ul>
-  <!-- li>Drawing tool picker {recent, list, grid, triple grid}. [most-recent]</li -->
-  <li><i>Corner drag</i>: enable corner-drag in <u>Drawing window</u> and <u>Overview window</u>. [no]</li>
-  <li><i>Zoom controls</i> {off,temporary,permanent}. [off]</li>
-  <li><i>X-section H-threshold</i>: x-section horizontal threshold</li>
-  <li><i>Midline check</i>: check if stations are attached to midline. [yes]</li>
-  <li><i>Leg extend check</i>: check if leg extends are set [yes]</li>
-  <li><i>Toolbar size</i>: recent tool number {3, 4, 5, 6}. [4]</li>
-</ul>
+    <h2 id="sketching">Desenho croqui</h2>
+    <ul>
+      <li><i>Arrastar canto</i>: habilitar o arrasto do croqui pelos cantos na tela de desenho. [não]</li>
+      <li><i>Controle zoom</i>: controle do zoom em telas multitoque {desligado,temporário,permanente}. [desligado]</li>
+      <li><i>Lim hor corte H</i>: limite horizontal para cortes serem considerados horizontais em perfis.</li>
+      <li><i>Verif linha trena</i>: verificar se todas as bases estão conectadas à linha de trena. [sim]</li>
+      <li><i>Verif perfil retif</i>: verificar se todas as visadas tem uma direção no perfil retificado definida. [sim]</li>
+      <li><i>Tam barra ferramentas</i>: tamanho da barra de ferramentas {3, 4, 5, 6}. [4]</li>
+    </ul>
 
-<hr style="height:1px;background-color:black;">
+    <hr style="height:1px;background-color:black;">
 
-<h3 id="points">Points</h3>
-<ul>
-  <li><i>Non-zoomed point icons</i>: point icons not zoomed [no]</li>
-  <li><i>Point tools scale</i> [1.2]</li>
-  <li><i>Labels size</i> [24 px]</li>
-</ul>
+    <h3 id="points">Pontos</h3>
+    <ul>
+      <li><i>Ícone ponto sem zoom</i>: ícones de pontos não são afetados pelo zoom. [não]</li>
+      <li><i>Escala símbolo ponto</i>: escala dos símbolos dos pontos. [1.2]</li>
+      <li><i>Tam rótulo</i>: tamanho dos textos dos rótulos. [24 px]</li>
+    </ul>
 
-<hr style="height:1px;background-color:black;">
+    <hr style="height:1px;background-color:black;">
 
-<h3 id="lines">Lines</h3>
-<ul>
-  <li><i>Line width</i>: drawing line width (N.B. wall line are twice this). [1 px]</li>
-  <li><i>Line style scale</i>: scale factor of line drawing styles</li>
-  <li><i>Line style</i> {Bezier, fine, normal, coarse, simplified}. [normal]</li>
-  <li><i>Line-point spacing</i>: minimum distance between line points. [10 px]</li>
-  <li><i>Close closed lines</i>: whether to close lines of "closed" type. [yes]</li>
-  <li><i>Slope line l-size</i>: section lines "direction tick" size [1,20]. Default 8 [x unit]</li>
-  <li><i>Section line tick size</i>: size of the section line tick</li>
-  <li><i>Section points</i>: add Therion section point to section line. [yes]</li>
-  <li><i>Line join</i>: enable line join</li>
-  <li><i>Area border visibility</i> area border default visibility [yes]</li>
-</ul>
+    <h3 id="lines">Linhas</h3>
+    <ul>
+      <li>
+        <i>Espess linha</i>: espessura das linhas no desenho.
+        Obs.: as linhas de parede tem o dobro dessa espessura. [1 px]
+      </li>
+      <li><i>Escala linha</i>: escala para desenho da simbologia das linhas.</li>
+      <li><i>Estilo linha</i>: estilo das linhas, forma como é desenhada {detalhada, normal, grosseira, Bézier (curva), simplificada}. [normal]</li>
+      <li><i>Dist mín ponto linha</i>: distância mínima entre pontos de uma linha de tipo normal. [10 px]</li>
+      <li><i>Fechar linhas fecháveis</i>: linhas fecháveis devem ser fechadas automaticamente. [sim]</li>
+      <li><i>Tam desnível</i>: tamanho do desnível em linhas tipo desnível {1,20}. [8]</li>
+      <li><i>Tam marca corte</i>: tamanho da marca indicando direção do corte.</li>
+      <li><i>Ponto corte</i>: criar automaticamente ponto de corte atrelado a cada novo corte indicando posição onde apresentar o croqui do corte. [sim]</li>
+      <li><i>Unir linha</i>: habilitar opção para unir linha. [não]</li>
+      <li><i>Visib borda área</i> visibilidade padrão das bordas de áreas. [sim]</li>
+    </ul>
 
 <hr style="height:1px;background-color:black;">
 
