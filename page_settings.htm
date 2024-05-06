@@ -355,151 +355,131 @@
 
 <hr style="height:1px;background-color:black;">
 
-<h3 id="sketch">Sketch</h3>
+<h3 id="sketch">Desenho</h3>
 <ul>
-  <li><i>Survey line width</i> [0.5,10]. [1 px]</li>
-  <li><i>Station name size</i> [24 px]</li>
-  <li><i>Green dots size</i>: green dots radius [0.5,100]. [5 px]</li>
-  <li><i>Selection radius</i> [24 px]</li>
-  <li><i>Eraser size</i> [36 px]</li>
-  <li><i>Shift sensitivity</i> [60 px]</li>
-  <li><i>Pointing tolerance</i>: pointing radius. [16 px]</li>
-  <li><i>Splay transparency</i> [80% opacity]</li>
+  <li><i>Espess linha</i>: espessura das linhas (visadas e medidas auxiliares) {0,5; 10}. [1 px]</li>
+  <li><i>Tam nome base</i>: tamanho dos nomes das bases. [24 px]</li>
+  <li><i>Raio ponto verde</i>: raio dos pontos verdes no modo edição {0,5; 100}. [5 px]</li>
+  <li><i>Raio seleção</i>: raio da ferramenta de seleção do croqui. [24 px]</li>
+  <li><i>Tam borracha</i>: raio da ferramenta borracha. [36 px]</li>
+  <li><i>Sensib desloc</i>: sensibilidade no deslocamento  em pixels por passo. [60 px]</li>
+  <li><i>Desloc máx selec</i>: deslocamento máximo entre início e fim de um toque na seleção. [16 px]</li>
+  <li><i>Transp aux</i>: transparência aplicada às medidas auxiliares {0: transparente, 100: opaca}. [80%]</li>
 </ul>
 
 <hr style="height:2px;background-color:black;">
 
-<h2 id="devices">Devices</h2>
+<h2 id="devices">Dispositivos</h2>
 <ul>
-  <li><i>Bluetooth</i>: check if BT is enabled on start. [yes]</li>
-  <li><i>Data connection mode</i>: {on-demand, continuous, multi}. [on-demand]</li>
-  <!-- li>Auto reconnect (in continuous mode). [yes]</li -->
-  <li><i>Number of new data</i>: get the number of new data before batch download</li>
-  <li><i>Socket</i>: BT socket type {normal,insecure}. [device dependent default]</li>
-  <li><i>Z6 workaround</i>: enable Z6 data download workaround [yes]</li>
-  <li><i>Auto-pairing</i> [yes]</li>
-  <li><i>Connection feedback</i>: type of connection status feedback {none, sound haptic} [none]</li>
-  <li><i>Unname devices</i>: manually add unnamed devices</li>
+  <li><i>Bluetooth</i>: habilitar verificação do Bluetooth na abertura do aplicativo {desativado, verificar ao abrir app, ativado}. [ativado]</li>
+  <li><i>Tipo conexão DistoX</i>: {sob demanda, contínua, multi}. [sob demanda]</li>
+  <li><i>Obter qt dados novos</i>: obter a quantidade de novos dados antes de baixá-los. [não]</li>
+  <li><i>Soquete DistoX</i>: tipo de soquete bluetoth para DistoX {normal, inseguro}. [padrão varia entre os vários tipos de dispositivos]</li>
+  <li><i>Gambiarra Z6 DistoX</i>: Gambiarra Z6 para download dos dados da DistoX. [sim]</li>
+  <li><i>Pareamento automático</i>: parear automaticamente após a busca com os novos dispositivos encontrados. [sim]</li>
+  <li><i>Feedback conexão</i>: tipo de feedback ao estabelecer conexão bluetooth com dispositivo. {nenhum, som, vibração} [nenhum]</li>
+  <li><i>Dispostivos sem nome</i>: habilitar opção para cadastrar nomes de dispositivos. [não]</li>
 </ul>
 
 <hr style="height:1px;background-color:black;">
 
-<h3 id="calibrations">Calibrations</h3>
+<h3 id="calibrations">Calibrações</h3>
 <ul>
-  <li><i>Group policy</i>: default group policy {TopoDroid, PocketTopo). [TopoDroid]</li>
-  <li><i>Group tolerance</i>: tolerance among shots in the same group. [40&deg;]</li>
-  <li><i>Algorithm error</i>: calibration algorithm termination error. [0.000001]</li>
-  <li><i>Algorithm iterations</i>: calibration maximum iterations. [200]</li>
-  <li><i>Download remote data</i>: download remote calibration data immediately</li>
-  <li><i>Raw data</i>: show calibration raw data. {None, Decimal, Hex, G Decimal, G Hex, M Decimal, M Hex} [None]</li>
-  <!-- li>Default calibration algorithm {auto,linear,non-linear}. [auto]</li -->
-  <!-- li>Parameters for the min-algo: alpha, beta, gamma, delta</li -->
+  <li><i>Regra agrupamento</i>: regra padrão para agrupamento dos dados de calibração. {De 4 em 4, só os primeiros 16). [De 4 em 4]</li>
+  <li><i>Toler grupos</i>: tolerância máxima entre medidas de um mesmo grupo. [40&deg;]</li>
+  <li><i>Erro algoritmo</i>: limite de errro para interrupção do cálculo dos coeficientes de calibração. [0.000001]</li>
+  <li><i>Qt iter algoritmo</i>: calibration maximum iterations. [200]</li>
+  <li><i>Download dado remot</i>: fazer download de dados remotos de calibração imediatamente. [sim]</li>
+  <li><i>Dado bruto</i>: exibir dados brutos. {nenhum, Decimal, Hex, G Decimal, G Hex, M Decimal, M Hex} [nenhum]</li>
 </ul>
 
 <hr style="height:2px;background-color:black;">
 
-<h2 id="3d_viewer">3D viewer</h2>
+<h2 id="3d_viewer">Visualizador 3D</h2>
 <ul>
-  <li><i>Below-horizon views</i>: allow below-horizon views.</li>
-  <li><i>Station points</i>: always display stations.</li>
-  <li><i>Station point size</i>: size of station points.</li>
-  <li><i>station text size</i>: sze of station text.</li>
-  <li><i>Selection radius</i></li>
-  <li><i>Selection radio</i></li>
-  <li><i>Distance message</i>: show distance message instead of box.</li>
-  <li><i>Station dialog</i>: show station dialog instead of box.</li>
-  <li><i>Top grid</i>: grid over instead of below model.</li>
-  <li><i>Grid extent</i></li>
+  <li><i>Visão abaixo horizonte</i>: permitir pontos de vista abaixo do horizonte. [não]</li>
+  <li><i>Ponto base</i>: sempre mostrar pontos (verdes) representando bases. [não]</li>
+  <li><i>Raio ponto base</i>: raio dos pontos das bases. [8 pxl]</li>
+  <li><i>Tam nome base</i>: tamanho dos nomes das bases. [20 pt]</li>
+  <li><i>Raio seleção</i>: raio da ferramenta de seleção. [50 pxl]</li>
+  <li><i>Mensagem distância</i>: usar mensagem no lugar de caixa de diálogo para distância. [não]</li>
+  <li><i>Caoxa diálogo base</i>: usar caixa de diálogo no lugar de caixa de edição. [não]</li>
+  <li><i>Grade no topo</i>: Apresentar grade sobre o modelo. [não]</li>
+  <li><i>Extensão grade</i>: tamanho da extensão da grade ao redor da planta baixa.</li>
 </ul>
 
 <hr style="height:1px;background-color:black;">
 
 <h3 id="dem">DEM</h3>
 <ul>
-  <li><i>DEM buffer</i>: extension of DEM buffer around survey.</li>
-  <li><i>DEM max size</i></li>
-  <li><i>DEM reduce</i>: DEM reduction mode. {Subsample, Clip} [Subsample]</li>
+  <li><i>Buffer DEM</i>: extensão do modelo de superfície DEM ao redor da topo a ser carregada do arquivo DEM.</li>
+  <li><i>Tam máx DEM</i>: tamanho máximo da superfície DEM em cada direção.</li>
+  <li><i>Redução DEM</i>: modo de redução DEM. {subamostragem, cortar} [subamostragem]</li>
 </ul>
 
 <hr style="height:1px;background-color:black;">
 
-<h3 id="wall_model">Wall model</h3>
+<h3 id="wall_model">Modelagem paredes</h3>
 <ul>
-  <li><i>Splay usage</i>: which splay to use {skip, normal, xsection} [normal]</li>
-  <li><i>All splays</i>: whether to use all splays for walls.</li>
-  <li><i>Projected walls</i>: whether to use splays projected on a normal plane.</li>
-  <li><i>Splay threshold</i>: splays outside the shot to keep.</li>
-  <li><i>Split triangles</i>: whether to split intersecting wall triangles.</li>
-  <li><i>Randomize points</i>: small random vector added to splays.</li>
-  <li><i>Stretch walls</i>: shift wall points by a small quantity along the leg</li>
-  <li><i>Powercrust Delta</i>: exclude splays differing from nearby too much.</li>
-  <!-- <li>Hull wall model
-    <ul>
-      <li><i>Project</i> splays on the normal plane [no]</li>
-      <li>Splay <i>threshold</i>: use only splays extending out of the shot (angle cosine) [0.5 ie 30&deg;]</li>
-    </ul>
-  </li>
-  <li>Convex hull wall model
-    <ul>
-      <li>All splays [yes]</li>
-      <li>Split intersecting <i>triangles</i> [yes]</li>
-      <li>Random <i>point shift</i> [0.1m]</li>
-      <li><i>Leg</i> stretch [0.1 m]</li>
-    </ul>
-  </li>
-  <li>Powercrust wall model
-    <ul>
-    <li><i>Delta</i> parameter</li>
-    </ul>
-  </li> -->
+  <li><i>Uso aux</i>: qual tipo de medida auxiliar usar {ignorar, normal, corte} [normal]</li>
+  <li><i>Todas aux</i>: usar todas as medidas auxiliares para modelar paredes. [sim]</li>
+  <li><i>Aux projetadas</i>: projetar as medidas auxiliares em um plano normal. [não]</li>
+  <li><i>Lim aux</i>: medidas auxiliares fora da visada a manter.</li>
+  <li><i>Partir triângulos</i>: partir triângulos de paredes que se interceptam. [sim]</li>
+  <li><i>Ruído pontos</i>: pequeno vetor aleatório adicionado às medidas auxiliares ao modeloar paredes. [0,1]</li>
+  <li><i>Alongar paredes</i>: distância a alongar pontos das paredes na direção das visadas.</li>
+  <li><i>Delta PowerCrust</i>: parâmetro delta do algoritmo PpowerCrust.</li>
 </ul>
 
 <hr style="height:2px;background-color:black;">
 
-<h2 id="custom_main">Custom main</h2>
+<h2 id="custom_main">Especiais</h2>
 <ul>
-  <li><i>Single back</i>: closes windows with single back</li>
-  <li><i>Palettes</i>: additional palettes menu</li>
-  <li><i>Packets log</i></li>
-  <li><i>Sketch editing</i>: Therion th2 editing</li>
-  <!-- li>Developer mode</li -->
+  <li><i>Voltar único</i>: fechar janelas com um único clique no botão "Voltar" do dispositivo Android. [não]</li>
+  <li><i>Paleta</i>: Habilitar paletas adicionais de símbolos de desenho. [não]</li>
+  <li><i>Log pacote</i>: habilitar log de pacotes. [não]</li>
+  <li><i>Editor croqui</i>: habilitar editor de croquis em arquivos Therion (th2) avulsos. [não]</li>
+  <li><i>
+    Developer mode</i>: modo desenvolvedor.
+    Esta opção só é disponibilizada em versões de desenvolvimento do app [T]. [não]
+  </li>
 </ul>
 
 <hr style="height:1px;background-color:black;">
 
-<h3 id="custom_survey_data">Custom Survey Data</h3>
+<h3 id="custom_survey_data">Dados topo (especiais)</h3>
 <ul>
-  <li><i>Diving mode</i></li>
-  <li><i>Recent shots</i>: recent data highlight</li>
-  <li><i>Recent data timeout</i></li>
-  <li><i>Fractional extend</i>: whether to allow fractional extend. [no]</li>
-  <li><i>Backshot DistoX</i>: whether to swap stations for DistoX backshots. [no]</li>
-  <li><i>Plane fitting</i>: enable plane fitting of splays</li>
-  <li><i>Sensores</i>: enable Android sensors [no]</li>
-  <li><i>Loop closure</i>: none, normal, weighted, selective, triangulation [no]</li>
-  <li><i>Loop threshold</i>: loop selective closure threshold (percent of loop length)</li>
-  <li><i>Android compass</i>: enable Android compass/clino</li>
-  <li><i>Shot direction timer</i>: shot direction timer countdown. [10 s]</li>
-  <li><i>Timer-beep volume</i>: shot direction timer beep volume [10,100]. [50%]</li>
-  <li><i>Blunder shots</i>: skip blunder leg-shots</li>
-  <li><i>Splay station re-assign</i>: maintain assigned splay stations on renumbering</li>
-  <li><i>Splay group-rename</i>: splay group-station assign only forward</li>
+  <li><i>Modo mergulho</i>: habilitar modo mergulho. [não]</li>
+  <li><i>Aux recentes</i>: destacar medidas auxiliares recentes. [não]</li>
+  <li><i>Lim aux recente</i>: limite de tempo após o qual as medidas auxiliares não serão mais consideradas recentes (em segundos). [30]</li>
+  <li><i>Proj vis escala</i>: define se as visadas poderão ser escalonadas ao serem projetadas nos perfis retificados. [não]</li>
+  <li><i>Contra visada DistoX</i>: DistoX configurada no modo "contra visada". [não]</li>
+  <li><i>Interpolar plano</i>: habilitar função de interpolação de plano que contém visadas (direção e mergulho). [não]</li>
+  <li><i>Sensores</i>: habilitar sensores do Android. [não]</li>
+  <li><i>Fech poligonal</i>: compensação de erro de fechamento de poligonais {nenhuma, normal, proporcional, seletiva, por triângulos}. [nenhuma]</li>
+  <li><i>Lim poligonal</i>: limite percentual de compensação de poligonal no modo de compensação seletiva. [1]</li>
+  <li><i>Bússola/clino Android</i>: habilitar bússola e clinômetro do Android. [não]</li>
+  <li><i>Espera medida</i>: tempo de espera antes de capturar uma medida através de comandos enviados pelo TopoDroidX para a trena em segundos. [10]</li>
+  <li><i>Volume bip temporizador</i>: nível de volume do bip do temporizador de captura de medida {10, 100}. [50%]</li>
+  <li><i>Medida com erro</i>: ignorar medidas com erro. [não]</li>
+  <li><i>Reatribuir base aux</i>: manter medidas auxiliares relacionadas ao renumerar. [não]</li>
+  <li><i>Renomear grupo aux</i>: renomear em grupo atuar somente nas medidas auxiliares subsequentes e não nas anteriores. [não]</li>
 </ul>
 
 <hr style="height:1px;background-color:black;">
 
-<h3 id="custom_splay_data">Custom Splay data</h3>
+<h3 id="custom_splay_data">Dados medidas auxiliares (especiais)</h3>
 <ul>
-  <li>Splay classes</li>
-  <li>Splay coloring</li>
-  <li>Splay plan-view threshold. [80&deg;]</li>
-  <li>Splay dash-mode: none, by azimuth, by clino, by the view. [none]</li>
-  <li>Splay dash clino threshold. [50&deg;]</li>
-  <li>Splay dash azimuth threshold. [60&deg;]</li>
-  <li>Splay dash angle threshold. [60&deg;]</li>
-  <li>Color of dash splay</li>
-  <li>Color of dot splay</li>
-  <li>Color of latest splays</li>
+  <li><i>Classes aux</i>: habilitar classes de medidas auxiliares. [não]</li>
+  <li><i>Cores aux</i>: habilitar coloração de medidas auxiliares {nenhuma, livre, paleta}. [nenhuma]</li>
+  <li><i>Lim aux planta baixa</i>: esconder medidas auxiliares com inclinação acima deste valor an planta baixa. [80&deg;]</li>
+  <li><i>Tracej aux</i>: tracejamento de medidas auxiliares na planta baixa, nos perfis ou em ambos {nenhum, clino, azimute, visualização}. [nenhum]</li>
+  <li><i>Lim tracej clino</i>: acima desta inclinação as medidas auxilaires serão tracejadas nas plantas baixas. [50&deg;]</li>
+  <li><i>Lim tracej azimute</i>: medidas auxiliares divergindo do azimute da visada acima deste limite serão tracejadas nos perfis. [60&deg;]</li>
+  <li><i>Lim tracej ângulo</i>: abaixo deste ângulo com o plano de corte a medida auxiliar será tracejada nos cortes. [60&deg;]</li>
+  <li><i>Cor aux tracej</i>: cor das medidas auxiliares tracejadas.</li>
+  <li><i>Cor aux ponth</i>: cor das medidas auxiliares pontilhadas.</li>
+  <li><i>Cor aux recente</i>: cor das medidas auxiliares recentes.</li>
 </ul>
 
 <hr style="height:1px;background-color:black;">
@@ -591,23 +571,5 @@ to import all the settings or only the functional ones.<br>
 If there is a problem parsing the file, the settings are not changed.<br>
 Some interface settings (like the buttons size) need to restart the app to
 become effective.<br><p>
-
-<!-- <div style="font-size:90%">
-Auto-walls
-<ul>
-<li>Wall type. [none]</li>
-<li>Plan splay clino</li>
-<li>Profile splay clino</li>
-<li>Minimum separation along the shot</li>
-<li>Concavity</li>
-<li>Point separation on the wall</li>
-</ul>
-</div><br> -->
-
-<!-- 3D modeling
-<ul>
-<li>3D model enable [no]</li>
-<li>Splay <i>buffer</i> (unused) [2]</li>
-</ul><br><p> -->
 
 </body></html>
