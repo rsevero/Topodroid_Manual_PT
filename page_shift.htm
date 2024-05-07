@@ -1,38 +1,62 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Espelhando e deslocando croquis</h1>
 
-<h3>SKETCH FLIP AND SHIFT</h3>
+    <h2>Espelhando perfil [E]</h2>
 
-<div style="font-size=90%">
-<b>Profile sketch flip</b> [E]<br>
-When viewing the profile, a long tap on the <i>Plan/Profile</i> button opens a confirmation dialog to flip the profile sketch horizontally.
-<br>
-The dialog has a checkbox to reverse the "extend" value of the shots as well.
-This is enabled by default.
-Only the shots that are displayed in the profile, are reversed, ie, their "extend" is changed.
-Therefore shot hidden behind a station are not affected.
-By this means you can reverse only a portion of the survey data.
-<br>
-Shots "extend" can also be reversed with a multi-selection in the <u>Survey Data window</u>.
-<br><p>
+    <p>
+      Quando visualizando o perfil, um toque longo no botão <i>Plano/Perfil</i> <img src="btn_plan.png" class="app_button"> abre um diálogo de confirmação para espelhar o croqui do perfil horizontalmente.
+    </p>
 
-<b>Sketch transform</b> [E]<br>
+    <p>
+      A caixa de diálogo tem uma caixa de seleção para inverter o valor da direção das bases.
+      Esta caixa de seleção vem habilitada por padrão.
+      Apenas as bases que são exibidas no perfil em questão são invertidas, ou seja, sua direção é alterada.
+      Portanto, bases ocultas atrás de uma outra base não são afetadas.
+      Dessa forma, você pode inverter apenas uma parte dos dados da topo.
+    </p>
 
-Shifting, scaling and arbitrary affine transformations are enabled by custom settings [G].<br><p>
+    <p>
+      A inversão da direção no perfil de bases também pode ser alterada através de uma seleção múltipla na tela <u>Dados topo</u>.
+    </p>
 
-The drawing can be shifted as a whole by selecting the <i>Fix ref</i> checkbox in the sketch reference dialog.
-Then in <i>move/zoom</i> mode the drawing can be shifted by dragging it with two fingers.<br><p>
+    <h2>Transformando croquis [E]</h2>
 
-Scaling and affine transformation are accomplished by touching the screen with three fingers. The motion of the fingers
-defines the parameters of the affine transformation. In this way the sketch can be arbitrarily scaled, rotated
-and skewed.<br>
-If the general affine transform is not enabled, the sketch is only scaled.<br><p>
+    <p>
+      A transformação de croquis é uma funcionalidade avançada que permite ao usuário mover, escalar e transformar croquis de forma arbitrária.
+      A transformação de croquis é habilitada através da opção de configuração <i>Especiais > Desenho croqui > Escalonar/deslocar croqui</i> [T].
+    </p>
 
+    <p>
+      O desenho pode ser deslocado como um todo selecionando a caixa de seleção <i>Deslocar croqui X linha de trena (CUIDADO!)</i> na caixa de diálogo de referência do croqui apresentada ao clicar-se no botão <i>O que mostrar</i> <img src="btn_mode.png" class="app_button">.
+      Em seguida, no modo <i>mover/zoom</i>, o desenho pode ser deslocado arrastando-o com dois dedos.
+    </p>
 
-<b>WARNING</b><br>
-Sketch transformation is CPU intensive, especially for large sketches,
-because it changes the coordinates of every drawing point, 
-and the app may appear unresponsive if the sketch is big.<br><p>
-</div>
+    <p>
+      A escala e a transformação afim são realizadas tocando a tela com três dedos. O movimento dos dedos define os parâmetros da transformação afim.
+      Dessa forma, o croqui pode ser arbitrariamente escalado, rotacionado e inclinado.
+      Se a opção de configuração <i>Especiais > Desenho croqui > Transformação afim</i> estiver desabilitada, o croqui pode ser somente escalonado.
+    </p>
 
+    <h3>Alerta</h3>
 
-</body></html>
+    <p>
+      A transformação de croquis demanda muita CPU, especialmente para croquis grandes, pois ela altera as coordenadas de todos os pontos do desenho.
+      Por conta disso o aplicativo pode parecer não responder se o croqui for grande.
+      Tenha paciência.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-07</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">b9d43b7f3</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
