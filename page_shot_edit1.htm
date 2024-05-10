@@ -46,15 +46,31 @@
     <h2>Botões (ícones)</h2>
 
     <ul>
-      <li><img src="btn_duplicate.png" class="app_button">: marcar como "duplicada" [A]</li>
-      <li><img src="btn_surface.png" class="app_button">: marcar como "superfície" [A]</li>
-      <li><img src="btn_comment.png" class="app_button">: marcar como "comentada" [A]</li>
-      <li><img src="btn_leg_after.png" class="app_button">: a medida pertence à visada imediatamente anterior.</li>
-      <li><img src="btn_leg_before.png" class="app_button">: a medida pertence à visada imediatamente posterior.</li>
-      <li><img src="btn_backleg.png" class="app_button">: a visada é uma contra visada.</li>
-      <li><img src="btn_numbers.png" class="app_button">: reatribuir estações de medida a partir desta perna seguindo a política de nomenclatura de estações atual. Ambas as estações DE e PARA devem ter sido especificadas.</li>
-      <li><img src="btn_splays_no.png" class="app_button"> aplicar a mudança de estação a todas as visadas no grupo da visada de splay.</li>
-      <li><img src="btn_plan_profile.png" class="app_button"> ocultar o splay no croqui, ou no perfil, ou em ambos (somente splay) [A]</li>
+      <li><img src="btn_duplicate.png" class="app_button"> marcar como "duplicada" [A]</li>
+      <li><img src="btn_surface.png" class="app_button"> marcar como "superfície" [A]</li>
+      <li><img src="btn_comment.png" class="app_button"> marcar como "comentada" [A]</li>
+      <li>
+        <img src="btn_leg_after.png" class="app_button"> a medida pertence à visada imediatamente anterior.
+        Isso fará com que a medida atual seja tratada como uma das medidas repetidas que definiram a visada anterior.
+        Quaisquer nomes de bases definidos nessa medida serão apagados para fazer com que essa medida seja tratada como medida repetida.
+      </li>
+      <li>
+        <img src="btn_leg_before.png" class="app_button"> a medida pertence à visada imediatamente posterior.
+        Isso fará com que a medida atual seja tratada como uma das medidas repetidas que definiram a visada posterior.
+        Os nomes de base da visada seguinte serão copiados para a medida atual para que ela passa a ser tratada como uma das medidas repetidas da visada seguinte.
+      </li>
+      <li><img src="btn_backleg.png" class="app_button"> marca a visada como sendo uma contra visada.</li>
+      <li>
+        <img src="btn_numbers.png" class="app_button"> renomear as bases das medidas a partir desta visada seguindo a regra de nomeamento de bases atual.
+        Ambas as bases DE e PARA devem ter sido especificadas.
+        Renomeia as bases das medidas auxiliares também, mantendo a relação entre medidas auxiliares e bases se a opção de configuração <i>Especiais> dados topo > Renomear base aux</i> estiver habilitada.
+        <b>
+          CUIDADO!
+          Esta ação pode afetar muitas medidas e só pode ser desfeita manualmente.
+        </b>
+      </li>
+      <li><img src="btn_splays_no.png" class="app_button"> aplicar a mudança de base a todas as medidas auxiliares adjacentes à medida auxiliar atual que estejam ligadas à mesma base, tratando-as como um grupo de medidas auxiliares.</li>
+      <li><img src="btn_plan_profile.png" class="app_button"> mostrar a medida auxiliares na planta e no perfil, ou só na planta, ou só no perfil ou em nenhum dos dois. [A]</li>
       <li><img src="btn_xsplay.png" class="app_button"> limpar (ou definir) a classe de splay para este splay, e possivelmente os splays anteriores [A]</li>
     </ul>
 
@@ -65,67 +81,61 @@
       <li><b>Mais/Menos</b>: mostrar/ocultar ações adicionais [A]</li>
       <li><b>Cancelar</b>: fechar a caixa de diálogo sem salvar</li>
     </ul>
-<ul>
-<li><img src="btn_duplicate.png" width="36" border="1" > "duplicate" flag [A]</li>
-<li><img src="btn_surface.png" width="36" border="1" > "surface" flag [A]</li>
-<li><img src="btn_comment.png" width="36" border="1" > "commented" flag [A]</li>
-<li><img src="btn_leg_after.png" width="36" border="1" > the shot belongs to the immediately preceding leg.</li>
-<li><img src="btn_leg_before.png" width="36" border="1" > the shot belongs to the immediately following leg.</li>
-<li><img src="btn_backleg.png" width="36" border="1" > the shot is a backsight leg.</li>
-<li><img src="btn_numbers.png" width="36" border="1" > reassign shot stations from this leg onward following the current station naming policy. Both FROM and TO stations must have been specified</li>
-<li><img src="btn_splays_no.png" width="36" border="1" > apply the station change to all splays in the group of the splay shot.</li>
-<li><img src="btn_plan_profile.png" width="36" border="1" > hide the splay in either the plan, or the profile view, or both (splay only) [A]</li>
-<li><img src="btn_xsplay.png" width="36" border="1" > clear (or set) splay class for this splay, and possibly the previous splays [A]</li>
-<li><b>OK</b>: save the changes and close the dialog</li>
-<li><b>Save</b>: save the changes without closing the dialog</li>
-<li><b>More/Less</b>: show/hide additional actions [A]</li>
-<li><b>Cancel</b>: close the dialog without saving</li>
-</ul>
-<br><p>
 
-The shot flags, "duplicate", "surface" and "commented", are mutually exclusive.
-The survey data info take into account these flags.
-The export of the shot is also affected by the shot flag, either with an export flag, if the format supports it, or as comment.<br><p>
+    <p>
+      As marcas "duplicada", "superfície" e "comentada" são mutuamente exclusivas.
+      O cálculo de dados da topo consideram essas marcas.
+      A exportação das medidas também é afetada por essas marcas, seja com uma marca nos dados exportados, se o formato de exportação tiver suporte para esse tipo de marca, seja como um comentário.<br><p>
+    </p>
 
-There is a warning if, upon editing a leg shot, it differs from another leg between the same stations more than one fourth in length, or 15&deg;.<br><p>
+    <p>
+      Um alerta é exibido se, ao editar uma visada, ela diferir de outra visada entre as mesmas bases em mais de um quarto do comprimento, ou 15&deg;.
+    </p>
 
-<b>Station cut-n-paste</b><br>
-Station names can be 'cut', 'copied', and 'pasted' across the app, in any dialog where there is a station entry
-field.<br><p>
+    <h2>Corte e cola de bases</h2>
 
-Long-tapping the station entry field opens the drop-down menu with the three options
-<ul>
-<li>cut</li>
-<li>copy</li>
-<li>paste</li>
-</ul>
+    <p>
+      Os nomes das bases podem ser "cortados", "copiados" e "colados" em todo o aplicativo, em qualquer diálogo onde haja um campo de entrada de base.
+    </p>
 
-<div style="font-size=90%">
-<b>Station reassignment</b><br>
-Station reassignment can be initiated only from a leg.
-By default the reassignment affects all the shots following the leg up to the end.
-If the custom setting <i>splay station</i> is disabled, the stations of splay shots are not reassigned.
-<br><p>
+    <p>
+      Um clique longo no campo de entrada de nome de base abre um menu suspenso com as seguintes três opções:
+    </p>
 
-Normal reassignment should be used only for very last few legs, in case a leg
-has not been detected (eg. only two data), or erroneously detected (very close splays
-taken as a leg).<br><p>
+    <ul>
+      <li>cortar</li>
+      <li>copiar</li>
+      <li>colar</li>
+    </ul>
 
-More control on the shots that are reassigned is achieved with the "multi-shot" selection,
-where the user can pick the shots to reassign individually.
-<br><p>
-</div>
+    <h2>Renomear bases automaticamente</h2>
 
-<div style="font-size=90%">
-<b>Splay group</b><br>
-A group of splays consists of all the splays between two legs.
-Splay group station change applies only to the contiguous set of splays with same station as the edit shot.
-Only FROM station must have been specified.
-<br><p>
+    <p>
+      A ação de renomear automaticamente bases pode ser iniciada apenas a partir de uma visada.
+      Por padrão, a renomeação afeta todas as medidas seguintes à visada até o final.
+      Se a opção de configuração <i>Especiais > Dados topo > Renomear base aux</i> estiver desativada, as bases das medidas auxiliares não são alteradas.
+    </p>
 
-If the custom setting "Splay group" is set, only the splays after the editing shot are modified.
-<br><p>
-</div>
+    <p>
+      A renomeação automática de bases só deve ser usada para as medidas bem no final da lista, caso uma visada não tenha sido detectada (por exemplo, apenas duas medidas similares), ou tenha sido erroneamente detectada (medidas auxiliares muito parecidas identificadas como uma visada).
+    </p>
+
+    <p>
+      Através da multisseleção de medidas é possível ter mais controle sobre a renomeação automática de bases pois o usuário pode escolher uma a uma as medidas que terão suas bases renomeadas.
+    </p>
+
+    <h2>Grupo de medidas auxiliares</h2>
+
+    <p>
+      Um grupo de medidas auxiliares é composto por todas as medidas auxiliares entre duas visadas.
+      A mudança de base do grupo de medidas auxiliares se aplica somente ao conjunto contíguo de medidas auxiliares com a mesma base que a medida editada.
+      Somente a base DE deve ter sido especificada.
+    </p>
+
+    <p>
+      Se a configuração <i>Especiais > Dados topo > Renomear aux só próx</i> estiver habilitada, somente as medidas auxiliares posteriores à medida editada serão renomeadas, deixando as anteriores inalteradas.
+    </p>
+
 
 <div style="font-size=90%">
 <b>Splay classes</b><br>
