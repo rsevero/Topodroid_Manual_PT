@@ -71,7 +71,7 @@
       </li>
       <li><img src="btn_splays_no.png" class="app_button"> aplicar a mudança de base a todas as medidas auxiliares adjacentes à medida auxiliar atual que estejam ligadas à mesma base, tratando-as como um grupo de medidas auxiliares.</li>
       <li><img src="btn_plan_profile.png" class="app_button"> mostrar a medida auxiliares na planta e no perfil, ou só na planta, ou só no perfil ou em nenhum dos dois. [A]</li>
-      <li><img src="btn_xsplay.png" class="app_button"> limpar (ou definir) a classe de splay para este splay, e possivelmente os splays anteriores [A]</li>
+      <li><img src="btn_xsplay.png" class="app_button"> limpar (ou definir) a classe de medida auxiliar para esta medida auxiliar, e possivelmente as medidas auxiliares anteriores [A]</li>
     </ul>
 
     <h2>Botões (linha inferior)</h2>
@@ -136,94 +136,142 @@
       Se a configuração <i>Especiais > Dados topo > Renomear aux só próx</i> estiver habilitada, somente as medidas auxiliares posteriores à medida editada serão renomeadas, deixando as anteriores inalteradas.
     </p>
 
+    <h2>
+      Classes de medidas auxiliares
+    </h2>
 
-<div style="font-size=90%">
-<b>Splay classes</b><br>
-Splay classes are enabled with a "custom setting". There are four classes:
-<ul>
-<li><i>normal</i>, generic, splays. Blue</li>
-<li><i>x-section</i> splays. Green</li>
-<li><i>horizontal</i>, plan-view, splays. Dark blue</li>
-<li><i>vertical</i>, profile-view, splays. Violet</li>
-</ul>
+    <p>
+      As classes de medidas auxiliares são habilitadas através da configuração <i>Especiais > Dados medida auxiliar > Classes aux</i>.
+      Existem quatro classes:
+    </p>
 
-The <i>Splay class</i> button cycles through these four classes.
-The splay shot is set to the chosen class, when the data are saved.
-If the "all splay" button is checked, the class is set also to all previous contiguous
-"normal" splays.<br><p>
+    <ul>
+      <li><i>normal</i>: genéricas, desenahdas em azul.</li>
+      <li><i>corte</i>: desenhadas em verde.</li>
+      <li><i>horizontal</i>: apresentadas em plantas e desenhadas em azul escuro.</li>
+      <li><i>vertical</i>: apresentadas em perfis e desenhadas em violeta.</li>
 
-Splay classes can also be set with the "multi-shot" selection.
-In multi-shot you can select splays that are not contiguous and assign them all a splay class.<br><p>
+      <p>
+        O botão <i>Classe de medida auxiliar</i> <img src="btn_xsplay.png" class="app_button"> alterna entre essas quatro classes.
+        A medida auxiliar é definida como a classe escolhida quando os dados são salvos.
+        Se a opção "todas as medidas auxiliares" <img src="btn_splays_no.png" class="app_button"> estiver marcada, a classe também é definida para todas as medidas auxiliares "normais" anteriores contíguas.
+      </p>
 
-If you take splays shots in a consistent way, splay classes can be set editing the leg shot and checking the
-splay group button.
-You must take first the x-section splays starting with +90 and going around in circle.
-Next you take the H-splays. Finally you take the splays in the vertical plane starting again with +90.<br><p>
-</div>
+      <p>
+        As classes de medidas auxiliares são usadas para desenhar as medidas auxiliares em cores diferentes no perfil, planta e corte.
+        As medidas auxiliares "corte" são desenhadas em verde, as "horizontais" em azul escuro e as "verticais" em violeta.
+      </p>
 
+      <p>
+        As classes de medidas auxiliares também podem ser definidas atravé da multisseleção de medidas.
+        Na muiltisseleção é possível selecionar medidas auxiliares não contíguas e atribuir a todas a mesma classe.
+      </p>
 
-<b>Additional actions</b><br>
+      <p>
+        Se você tirar medidas auxiliares de forma consistente, as classes de medidas auxiliares podem ser definidas editando a última medida auxiliar  de cada grupo e marcando o botão de grupo de medidas auxiliares.
+        Você deve tirar primeiro as medidas auxiliares de corte começando com +90&deg; e seguindo em círculo.
+        Em seguida, você tira as medidas auxiliares horizontais.
+        Finalmente, você tira as medidas auxiliares no plano vertical começando novamente com +90&deg;.
+      </p>
 
-At an activity level "Basic" or "Normal" the additional actions are only a button to <i>delete</i> the shot.<br><p>
+      <h2>
+        Ações adicionais
+      </h2>
 
-At higher activity levels it has more buttons:<p>
+      <p>
+        No nível de recursos "Básico" ou "Normal", as ações adicionais são apenas um botão para <i>excluir</i> <img src="btn_delete.png" class="app_button"> a medida.
+      </p>
 
-<ul>
-<li><img src="btn_photo.png" width="36" border="1" > <a href="page_photo_dialog.htm">photo</a></li>
-<li><img src="btn_audio.png" width="36" border="1" > <a href="page_audio.htm">audio</a> comment</li>
-<li><img src="btn_sensor.png" width="36" border="1" > <a href="page_sensors.htm">Sensor measurements</a></li>
-<li><img src="btn_shot.png" width="36" border="1" > add a shot before this (manually entering the data)</li>
-<li><img src="btn_split.png" width="36" border="1" > split the survey at this shot (creating a new survey or append to another survey)</li>
-<li><b>Color</b>, only for splays</li>
-<li><img src="btn_delete.png" width="36" border="1" > delete the shot</li>
-<li><img src="btn_calib_check.png" width="36" border="1" > mark the shot as calibration-check (only for legs)</li>
-</ul>
-<br><p>
+      <p>
+        Em níveis de recursos mais elevados, há mais botões:
+      </p>
 
-For legs there are also fields to add intermediate LRUD.<br><p>
+      <ul>
+        <li><img src="btn_photo.png" class="app_button"> <a href="page_photo_dialog.htm">foto</a></li>
+        <li><img src="btn_audio.png" class="app_button"> <a href="page_audio.htm">áudio</a></li>
+        <li><img src="btn_sensor.png" class="app_button"> <a href="page_sensors.htm">medições de sensores</a></li>
+        <li><img src="btn_shot.png" class="app_button"> incluir manualmente uma medida antes desta</li>
+        <li><img src="btn_split.png" class="app_button"> dividir a topo nesta medida (criar uma nova topo ou anexar a outra topo)</li>
+        <li><b>Cor</b>: define a cor, apenas para medidas auxiliares</li>
+        <li><img src="btn_delete.png" class="app_button"> excluir a medida</li>
+        <li><img src="btn_calib_check.png" class="app_button"> marcar a medida como "de calibração" (apenas para visadas)</li>
+      </ul>
 
-The <b>delete</b> button does not remove the shot from the database.
-The shot gets marked as "deleted" and can be later recovered with the
-<a href="./page_undelete.htm">Recovery</a> dialog.
-If the shot is the first shot of a leg you can also delete all the shots of the leg, by
-checking the checkbox besides the buttons.
-<br><p>
+      <p>
+        Em se tratando de visadas, há também campos para incluir medidas EDTC (Esquerda/Direita/Teto/Chão) intermediárias.
+      </p>
 
-Leg shots have also a <b>calibration</b> button. This button marks the shot as "calibration-check".
-These shots are not used in the survey, and their data should be taken at different roll angles.
-They are recorded in the database, and are a record of the reliability of the device calibration
-when the survey was done. They can be displayed with the
-<a href="./page_undelete.htm">Recovery</a> dialog.
-<br><p>
+      <p>
+        O botão <b>Apagar</b> <img src="btn_delete.png" class="app_button"> não remove medidas do banco de dados.
+        A medida é marcada como "apagada" e pode ser recuperada posteriormente através da caixa de diálogo <a href="./page_undelete.htm">Restaurar</a>.
+        Se a medida for a primeira de uma visada, você também pode excluir todas as medidas da visada, marcando a caixa de seleção ao lado dos botões.
+      </p>
 
-<b>Survey split</b><br>
-This button opens a dialog for the new survey info.
-Next the survey data are assigned to the new survey, beginning with this shot.
-Afterwards the program continues with the new survey.
-You may need to split surveys when you have data from two (separate) survey pieces stored in the device:
-these are downloaded to a single survey which must be then split accordingly.<br>
+      <p>
+        As vidadas contam também com um botão <b>calibração</b> <img src="btn_calib_check.png" class="app_button">.
+        Este botão marca a visada como "verificação de calibração".
+        Essas medidas não são usadas na topo e seus dados devem ser obtidos em ângulos de rotação diferentes do dispositivo de medição.
+        Elas são registradas no banco de dados e são um registro da confiabilidade da calibração do dispositivo quando a topo foi feita.
+        Elas podem ser exibidas com a caixa de diálogo <a href="./page_undelete.htm">Restaurar</a>.
+      </p>
 
-At tester level you get also the option to <b>move</b> the data to another survey.
-Select the target survey from the pull-down option set, and tap the "Move" button.
-<br><p>
+      <h2>
+        Dividir topo
+      </h2>
 
-<b>Warning</b>. It is advisable to make a zip archive before splitting/moving the
-survey and back it up to a safe place.<br><p>
+      <p>
+        O botão <b>Dividir topo</b> <img src="btn_split.png" class="app_button"> abre uma caixa de diálogo para informações sobre a nova topo.
+        No nível de recursos "Teste" é apresentada inicialmente uma caixa de diálogo para que seja definido se a topo será divida (criando-se uma novo topo) ou movida para uma topo existente.
+        Em seguida, caso se esteja dividindo a topo no nível "Teste", ou inicialmente, para os níveis de recursos anteriores a "Teste", é apresentada a caixa de diálogo para informações sobre a nova topo.
+      </p>
 
-<b>At-station LRUD</b><br>
-LRUD shots, at either the FROM or the TO station, are added by filling the four LRUD edit boxes
-and tapping the <i>Add LRUD</i> button. <br>
-It is also possible to add "intermediate" LRUD entering the distance (in the current units) along the shot,
-between the LRUD point and the FROM station.<br>
-For splay shots there is only the FROM station.<br>
-"Intermediate" LRUD are appended to the data list, the others are added before the shot.<br>
-The manual LRUD are marked as "x-splays".<br>
-<br><p>
+      <p>
+        Em seguida, os dados da topo são atribuídos à nova topo, começando com esta medida.
+        Após isso, o programa continua com a nova topo.
+        Você pode precisar dividir topos quando tiver dados de duas (partes) de topo armazenados no dispositivo: esses são baixados para uma topo única que deve ser dividida de acordo.
+      </p>
 
-<b>Splay color</b><br>
-For splays there is also a button to assign a color to the shot.<br>
-The shot list is not immediately updated with colors.
-To display the splay with color press the "Refresh" button.<br><p>
+      <h3>
+        Aviso
+      </h3>
 
-</body>
-</html>
+      <p>
+        É aconselhável exportar um arquivo zip com os dados da topo antes de dividir/mover a topo e fazer um backup em um local seguro.
+      </p>
+
+      <h2>
+        Medidas EDTC na base
+      </h2>
+
+      <p>
+        As medidas EDTC (Esquerda/Direita/Teto/Chão) são medidas adicionais que podem ser inseridas em uma visada.
+        As medidas EDTC são medidas incluídas manualmente e são adicionadas preenchendo as quatro caixas de edição EDTC, escolhendo se as medidas EDTC são relativas à base DE, à PARA ou se é intermediária, e clicando por fim no botão <i>Incluir EDTC</i>.
+        Em se tratando de medidas EDTC "intermediárias" (terceira opção), deve-se também indicar a distância (nas unidades atuais) ao longo da medida a partir da base DE até o ponto onde foram obtidas as medidas EDTC.
+        As medidas EDTC "intermediárias" são adicionadas ao final da lista de dados.
+        As outras são adicionadas antes da visada.
+        As medidas EDTC manuais são marcadas como medidas auxiliares da classe "corte".
+      </p>
+
+      <h2>
+        Cor da medida auxiliar
+      </h2>
+
+      <p>
+        Para medidas auxiliares há também um botão para atribuir uma cor à medida.
+        A lista de medidas não é atualizada imediatamente com as cores.
+        Para exibir a medida com cor, pressione o botão "Atualizar".
+      </p>
+
+      <p>
+        <a href="manual16.htm">Principais funcionalidades</a> |
+        <a href="manual17.htm">Índice remissivo</a>
+      </p>
+
+      <footer style="font-size: 80%; font-style: italic; clear: both;">
+          <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-13</span></p>
+          <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">4f9f295bc</span></p>
+          <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      </footer>
+
+    </body>
+  </html>
