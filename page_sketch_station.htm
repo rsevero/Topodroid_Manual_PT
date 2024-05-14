@@ -1,81 +1,128 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Desenho: base</h1>
 
-<h3>SKETCH STATION</h3>
+    <p>
+      Esta caixa de diálogo é apresentada quando você clica no botão <i>Editar propriedades</i> <img src="btn_item.png" class="app_button"> na janela <u>Desenho</u>.
+      Ela exibe a posição da base &mdash; Leste, (magnético) Norte e Z (para cima) &mdash; em relação à origem do desenho e o comentário da base (campo editável) [T].
+    </p>
 
-This dialog displays the station position, East, (magnetic) North, and Z (upwards) relative to the sketch origin, and 
-the station comment (editable field) [T].
-<br>
+    <h2>
+      Ações
+    </h2>
 
-Actions:
-<ul>
-<li>enter or edit the station comment and save it [T]</li>
-<li>make the station "active", ie, continue the survey from this station.</li>
-<li>show the hidden midline (if applicable)</li>
-<li>force showing/hiding the display of the splay shots at the station</li>
-<li>at-station x-section buttons</li>
-<li>go to the <a href="page_saved_station.htm">saved-station</a> dialog [A]</li>
-</ul>
+    <ul>
+      <li>editar ou inserir o comentário da base e salvá-lo. [T]</li>
+      <li>marcar a base atual como "base ativa": novas medidas partirão desta base.</li>
+      <li>mostrar a linha de trena, caso tenha sido previamente ocultada.</li>
+      <li>forçar a exibição/ocultação das medidas auxiliares da base.</li>
+      <li>opções para criar corte na base.</li>
+      <li>ir para a janela de <a href="page_saved_station.htm">bases gravadas</a> [A].</li>
+    </ul>
 
-<b>Active station</b><br>
-The "active" station is where the next downloaded shots will be attached. When a leg is downloaded (or inserted) the new station becomes the "active" station. By changing the "active" station you can continue surveying from a station in the middle of the survey. The active station is shown green in the shot data list.<br><p>
+    <h2>
+      Base ativa
+    </h2>
 
-<p id="midline_hiding"><b>Midline hiding</b></p>
-Hiding parts of the midline is useful when the survey is complicated or goes over itself.
-In this case it is useful to see only the relevant portion of the midline, by hiding what lies beyond a station.
-If the midline beyond a station is hidden, the station is highlighted:
-violet if the hidden midline lies between them and the sketch origin station, red otherwise.
-Stations in the part of midline behind a "red" station, are not automatically saved as Therion station points. Therefore, by choosing the sketch origin station inside the scrap and marking stations as barrier you can avoid spurious stations in the scrap file.
-<br>
-The display of the midline can be limited through the property edit dialog of leg shots.
-When the midline beyond the station is hidden, there is a button to revert and show it in the station edit dialog.<br><p>
+    <p>
+      A "base ativa" é onde as próximas medidas serão automaticamente anexadas.
+      Quando uma visada é baixada (ou inserida manualmente) a nova base da visada se torna a "base ativa" automaticamente.
+      Mudando a "base ativa" você pode continuar a medição a partir de uma base no meio do desenho.
+      A base ativa é exibida em verde na lista de medidas.
+    </p>
 
-<img src="hiding_stations.png" alt="hiding stations"><br><p>
+    <h2 id="midline_hiding">
+      Ocultar trechos da linha de trena
+    </h2>
 
-<b>Station splays</b><br>
-The display of the station splays can be forced to override the global setting of the sketch.
-If showing is forced, the splays are shown even when they are hidden globally.
-If hiding is forced, the splays are not shown even when they are displayed globally.<br>
-This flag does NOT affect the edit-selection of splays; the selection green dots are always displayed
-according to the global setting.<br><p>
+    <p>
+      Ocultar partes da linha de trena é útil quando o desenho é complicado ou se sobrepõe.
+      Neste caso é útil ver apenas a porção relevante da linha de trena.
+      A forma de se fazer isso é ocultando o que está além de uma determinada base.
+      Se a linha de trena além de uma base estiver oculta, a base é destacada por cores: violeta se a parte oculta da linha de trena estiver entre ela e a base de referência do croqui, vermelha caso ela esteja entre a base de referência do croqui e a parte oculta da linha de trena.
+      Bases na parte oculta da linha de trena atrás de uma estação "vermelha" não são automaticamente salvas como pontos do tipo base nos arquivos Therion exportados.
+      Portanto, escolhendo a base de origem do croqui dentro do desenho e marcando as bases adequadas como barreira você pode evitar a presença de bases espúrias no arquivo exportado do croqui.
+    </p>
 
-<b>At-station x-section</b><br>
-X-sections can be created at stations.
-In plan view they are in the vertical plane (their plane is determined by the azimuth).
-In profile view, x-section can have an inclination. However when selected through the "stations" checkboxes
-they are vertical if the legs inclination is below a specified value (a setting), otherwise they are
-horizontal.
-<br>
+    <p>
+      A exibição da linha de trena pode ser limitada através da caixa de diálogo de edição de medidas.
+      Quando a linha de trena além da base está oculta, há um botão na caixa de diálogo de edição da base para reverter esta configuração mostrando novamente a parte oculta da linha de trena.
+    </p>
 
-If the station has only two legs attached the plane of the x-section can be inferred by TopoDroid
-(the bisecant of the angle between the two legs, or perpendicular to the leg of there is only one).
-There remains only the ambiguity about from which side
-of the plane the x-section is looked at. This is resolved providing two buttons that specify the direction of 
-view with a pair of stations.
-<br>
+    <p>
+      <img src="hiding_stations.png" alt="hiding stations">
+    </p>
 
-With the last button the user can pick the x-section direction pointing with the <a href="page_photo_dialog.htm">TopoDroid camera</a>.
-<br><p>
+    <h2>
+      Medidas auxiliares da base
+    </h2>
 
-At-station x-sections can be "private" to the sketch in which they have been defined or shared
-among all the sketches. In the latter case, in all the sketches the edit dialog of the station opens
-the same x-section. In the former case, an at-station x-section is re-opened only through
-the station edit dialog in the sketch where it has been defined.<br><p>
+    <p>
+      A apresentação das medidas auxiliares da base pode ser forçada sobreescrevendo a configuração global do croqui.
+      Se a exibição for forçada em uma base, suas medidas auxiliares são exibidas mesmo que devessem estar ocultas de acordo com a configuração global.
+      Se a ocultação for forçada, as medidas auxiliares não são exibidas mesmo que estejam configuradas para serem exibidas globalmente.
+      Esta marca NÃO afeta a seleção de medidas auxiliares; os pontos verdes de seleção são sempre exibidos de acordo com a configuração global.
+    </p>
 
-In either case the x-section is exported only in the sketch that contains the section point,
-ie, in the sketch where is has been defined.<br><p>
+    <h2>
+      Corte na base
+    </h2>
 
-The choice between "private" and "shared" at-station x-sections is made when the survey is created
-and cannot be modified afterward. When at-station x-sections are private, you may enter a nickname to
-distinguish x-sections at the same station in different sketches.
-<br><p>
+    <p>
+      Cortes podem ser criados nas bases.
+      Na planta baixa eles são planos alinhados verticalmente, tendo sua orientação definida por seu azimute.
+      Na vista em perfil, os cortes podem ter uma inclinação.
+      No entanto, quando selecionados através das caixas de seleção "bases" eles são verticais se a inclinação das visadas for menor do que o valor definido na configuração <i>Desenho croqui > Lim hor corte H</i>, caso contrário são horizontais.
+    </p>
 
-The name of an at-station x-section in the plan view is composed of the "survey_name", "xs", the "station_name"
-and, if the x-sections are private, the "sketch_name". For example, "survey-xs-0-1p".
-The name of an at-station x-section in the profile view has "xh" instead of "xs".
-<br><p>
+    <p>
+      Se a base tiver no máximo duas visadas, o azimute do plano de corte pode ser inferido pelo TopoDroidX: será definido pela bissetriz do ângulo entre as duas visadas, caso haja duas visadas na base, ou perpendicular à visada se houver apenas uma.
+      Resta apenas definir de qual lado do plano a seção transversal é vista.
+      Isso é resolvido através de dois botões que especificam a direção da vista através da ordem das bases: a vista é definida como se estivesse na primeira base olhando para a segunda.
+    </p>
 
-The at-station x-sections can have a comment, just like the section-line x-sections.<br><p>
+    <p>
+      Através do botão <i>Bússola</i> <img src="btn_compass.png" class="app_button"> o usuário pode definir a direção do corte na base usando a bússola de seu dispositivo Android.
+      Se a base tiver mais de duas visadas, o azimute do plano de corte deve ser definido manualmente.
+    </p>
 
+    <p>
+      Cortes nas bases podem ser "privados", ou seja, exclusivos do croqui onde foram criados ou compartilhados com todos os croquis.
+      No último caso, em todos os croquis a caixa de diálogo de edição da base abre o mesmo corte.
+      No primeiro caso, um mesmo corte na base só pode ser acessado através da caixa de diálogo de edição da base no croqui onde o corte foi definido.
+    </p>
 
+    <p>
+      Em ambos os casos o corte só é exportado junto com o croqui onde foi definido.
+    </p>
 
-</body></html>
+    <p>
+      A escolha entre cortes nas bases "privados" ou "compartilhados" é feita quando o croqui é criado e não pode ser modificada posteriormente.
+      Quando cortes nas bases são "privados", você pode inserir um nome para distingui-los de outros cortes na mesma base em croquis diferentes.
+    </p>
+
+    <p>
+      O nome de um corte em uma base na planta baixa é composto pelo "nome da topo", "xs" e o "nome da base""nome do croqui", "corte", o "nome da estação".
+      Se os cortes forem privados é adicionado também o "nome do croqui".
+      Por exemplo, "topo-xs-0-1p".
+      O nome de um corte em uma base em um perfil tem o "xs" substituído por "xh".
+    </p>
+
+    <p>
+      Os cortes em bases podem ter um comentário, assim como os cortes definidos através de linhas de corte.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-14</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">8653c1d33</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
