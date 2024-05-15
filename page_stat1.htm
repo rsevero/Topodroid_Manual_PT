@@ -1,31 +1,61 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Estatísticas da topo</h1>
 
-<h3>SURVEY DATA INFO</h3>
+    <p>
+      Esta caixa de diálogo é apresentada quando você clica no botão <i>Info</i> <img src="btn_info.png" class="app_button"> na janela <u>Informações da topo</u>.
+    </p>
 
-This dialog is opened from the <i>Info</i> button of the <u>Survey Info window</u>.<br><p>
+    <p>
+      As informações da topo apresentadas
+      </p>
 
-The survey data info are
-<ul>
-<li>number of (regular) legs, their total length and projected length (on horizontal plane)</li>
-<li>number of duplicate legs</li>
-<li>number of surface leg</li>
-<li>number of splay shots</li>
-<li>number of stations</li>
-<li>number of cycles in the midline graph</li>
-<li>number of disconnected surveys (this is 1 if the legs are all attached together in one survey)</li>
-<li>number of bluetooth devices, and number of data from each device</li>
-<li>the first and last dates of the survey data</li>
-<li>std. deviation of the absolute value of the magnetic field (percent)</li>
-<li>std. deviation of the absolute value of the acceleration field (percent)</li>
-<li>std. deviation of the magnetic dip angle (degrees)</li>
-</ul><br><p>
+    <ul>
+      <li><i>Visadas</i>: quantidade de visadas regulares,extensão total e extensão projetada (no plano horizontal).</li>
+      <li><i>Visadas duplicadas</i>: quantidade e extensão total.</li>
+      <li><i>Visadas de superfície</i>: quantidade e extensão total.</li>
+      <li><i>Medidas auxiliares</i>: quantidade.</li>
+      <li><i>Bases</i>: quantidade.</li>
+      <li><i>Poligonais</i>: quantidade de poligonais identificadas na linha de trena.</li>
+      <li>
+        <i>Linhas de trena</i>: quantidade de topografias desconectadas.
+        Normalmente haverá somente uma, indicando que todas as visadas estão conectadas à única linha de trena existente.</li>
+      <li><i>Dispositivos</i>: quantidade de dispositivos bluetooth, e quantidade de dados de cada dispositivo.</li>
+      <li><i>Datas</i>: datas inicial e final.</li>
+      <li><i>Desvio padrão da aceleração (G)</i>: desvio padrão do valor absoluto dos valores de aceleração da gravidade (percentual).</li>
+      <li><i>Desvio padrão magnético (M)</i>: desvio padrão do valor absoluto do campo magnético (percentual)</li>
+      <li><i>Desvio padrão mergulho</i>: desvio padrão do ângulo de inclinação do campo magnético magnética (mergulho) em graus.</li>
+    </ul>
 
-The last three are also displayed as histograms.
-These plots are centered about the mean of the values that falls within the bounds.<br>
-The yellow lines mark the value of the accuracy threshold setting (percent for G and M, 
-degrees for the dip). These values are shown besides the histograms.<br>
-<p>
+    <p>
+      Os últimos três são exibidos também como histogramas.
+      Estes gráficos são centrados na média dos valores que caem dentro dos limites aceitos.
+    </p>
 
-Length are in the units set in the app settings.<br><p> 
+    <p>
+      As linhas amarelas marcam o valor da configuração do limiar de precisão (percentual para G e M,
+      graus para o mergulho).
+    </p>
 
-</body></html>
+    <p>
+      Estes valores são mostrados ao lado dos histogramas.
+    </p>
+
+    <p>
+      As medidas de comprimento são apresentadas nas unidades configuradas no aplicativo.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-15</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">a3c5122d8</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
