@@ -1,53 +1,90 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Estatísticas croqui</h1>
 
-<h3>SKETCH STATISTICS</h3>
+    <p>
+      Esta caixa de diálogo é apresentada quando você clica na opção de menu <i>Estatísticas</i> na janela <u>Desenho</u> (vista em planta ou perfil).
+      Ela exibe tanto estatísticas relativas a redução de dados quanto estatísticas relacionadas ao croqui.
+    </p>
 
-This dialog is opened from the <i>Stats</i> menu of the <u>Drawing window</u> (plan or profile view).
-It displays both data-reduction statistics and sketch related statistics.<br><p>
+    <p>
+      As estatísticas de redução de dados são
+    </p>
 
+    <ul>
+      <li><i>Visadas</i>: quantidade de visadas (regulares), extensão total e projeção horizontal.</li>
+      <li><i>Visadas duplicadas</i>: quantidade e extensão total.</li>
+      <li><i>Visadas de superfície</i>: quantidade de visadas de superfície e extensão total.</li>
+      <li><i>Medidas auxiliares</i>: quantidade.</li>
+      <li><i>Bases</i>: quantidade.</li>
+      <li><i>Erro médio posição visadas</i>: diferença média das posições das 3 medidas de cada visada.</li>
+      <li>
+        <i>Visadas desconectadas</i>: quantidade de visadas não conectadas ao croqui, se houver, e extensão total.
+        Clicando nesta linha abre-se a caixa de diálogo com a lista de visadas desconectadas.
+      </li>
+      <li>
+        <i>Loops</i>: quantidade de visadas entre as mesmas bases, incluindo as contra visadas.
+        Não se trata das 3 medidas repetidas que definem automaticamente uma visada, se trata de visadas diferentes entre as mesmas bases.
+        Este item só é apresentado se houver algum loop definido.
+      </li>
+      <li>
+        <i>Trechos de linhas de trena</i>: quantidade de trechos de linhas de trena desconectados entre si.
+        Este item só é apresentado se houver mais de um trecho de linha de trena na topo.
+      </li>
+      <li><i>Base referência do croqui</i>: base de referência do croqui.</li>
+      <li><i>Extensão total</i>: comprimento da linha de trena.</li>
+      <li><i>Comprimento 3D</i>: comprimento da linha de trena em perfil.</li>
+      <li><i>Projeção horizontal</i>: comprimento da linha de trena em planta baixa.</li>
+      <li><i>Oeste Leste Norte Sul</i>: as extensões do croqui nas quatro direções a partir da base de referência.</li>
+      <li><i>Desnível croqui</i>: desníveis do croqui, tanto positivo quanto negativo, em relação ao seu centro.</li>
+      <li><i>Desnível cavidade</i>: desnível da caverna em relação à base de referência.</li>
+      <li><i>Erro médio azimute visadas</i>: erro médio de azimute entre medidas de uma mesma visada.</li>
+      <li>
+        Número de poligonais fechadas, aquelas usadas na compensação de fechamento e aquelas não usadas.
+      </li>
 
-The data-reduction statistics are
-<ul>
-<li>number of (regular) legs, sketch legs, their total, profile, and plan lengths</li>
-<li>number of duplicate legs, sketch duplicate legs, and their total length</li>
-<li>number of surface leg, sketch surface legs, and their total length</li>
-<li>number of splay shots, and sketch splay shots</li>
-<li>number of stations, and sketch stations</li>
-<li>number of shots not attached to the sketch if any, and their total length. Tapping this line opens the dialog
-with the list of unattached shots.</li>
-<li>number of cycles (including the backshot-cycles) if any.</li>
-<li>number of disconnected survey components if greater than 1.
-(This is 1 if the legs are all attached together in one survey)</li>
-</ul>
+    </ul>
 
-Other sketch related statistics are
-<ul>
-<li>sketch origin (zero station)</li>
-<li>the midline length</li>
-<li>profile-view (3D) midline length</li>
-<li>plan-view midline length</li>
-<li>the sketch extension (West, East, North and South)</li>
-<li>the sketch denivelations, both positive (above the origin) and negative (below the origin)</li>
-<li>the survey data vertical denivelation form the sketch origin</li>
-<li>average angle error between shots of the same leg [degrees]</li>
-<li>the number of loops, those used in closure compensation and those not used</li>
-</ul>
-<br><p>
+    <p>
+      Para cada poligonal fechada, são apresentados os seguintes dados:
+    </p>
 
-For each loop:
-<ul>
-<li>closing shot</li>
-<li>number of loop shots</li>
-<li>closing error: 3d length over total loop length</li>
-<li>horizontal and vertical error lengths</li>
-<li>percent error: ratio between error and loop length</li>
-<li>estimated shot angle error [degrees]. This is the error times the square root of the number of shots and divided by the length.
-The result, in radians, is converted to degrees. </li>
-</ul>
-<br><p>
+    <ul>
+      <li>visada de fechamento</li>
+      <li><i>Entre colchetes</i>: número de visadas</li>
+      <li>erro de fechamento: comprimento 3D sobre comprimento total da poligonal</li>
+      <li><i>Entre parênteses</i>: comprimentos dos erros horizontal e vertical</li>
+      <li><i>Erro percentual</i>: razão entre o erro e o comprimento da poligonal</li>
+      <li>
+        <i>Erro estimado de azimute da visada em graus</i>: este é o erro vezes a raiz quadrada do número de visadas dividido pelo comprimento.
+        O resultado, em radianos, é convertido para graus.
+      </li>
+    </ul>
 
-Length are in the units set in the app settings.<br><p>
+    <p>
+      As medidas de comprimento são apresentadas nas unidades configuradas no aplicativo.
+    </p>
 
-Tapping on the loop closure entry switches the text between the closure error, and the list of loop stations.<br><p> 
+    <p>
+      Clicar em uma linha de poligonal fechada alterna as informações apresentadas entre os erros de fechamento acima descritos e a lista de bases da poligonal.
+    </p>
 
-</body></html>
+    <p>
+      Nas linhas onde há dois valores separados por uma cerquilha (#), o primeiro valor é o valor total da topo, e o segundo é o valor de redução de dados, ou seja, o valor para o trecho contínuo da linha de trena que contém a base de referência deste croqui.
+      Estes dois valores são diferentes quando a linha de trena contém mais de um trecho contínuo.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-22</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">c349cf0c8</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
