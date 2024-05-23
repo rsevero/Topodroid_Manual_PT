@@ -1,59 +1,124 @@
-<html><body>
-<h3>AREA TOOLS</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Ferramentas de desenho de área</h1>
 
-The "area" tools are defined in text files.<br><p>
+    <p>
+      As ferramentas de desenho de área são definidas em arquivos de texto.
+    </p>
 
-Two area tools, "user" and "water", are built in the programs.
-The others are loaded from the TopoDroid private folder <i>area</i>.
-This directory is populated with the area tools packaged in the distribution apk.
-You can delete the tools you do not need, edit the ones you want to change, and
-add new ones that are not provided in the apk.<br><p>
+    <p>
+      Duas ferramentas de área, "usuário" e "água", são definidas internamente no aplicativo.
+      As outras são carregadas da pasta privada <i>area</i> do TopoDroidX.
+      Este diretório é populado com as ferramentas de área empacotadas no arquivo <i>apk</i> de instalação do aplicativo.
+      Você pode excluir as ferramentas que não precisa, editar as que deseja alterar e adicionar novas que não são fornecidas no apk.
+    </p>
 
-The area tool file contains lines specifying the property of the drawing tool.
-<ul>
-<li>"symbol area" [mandatory]</li>
-<li>"name NAME", where NAME is the area default name [mandatory]</li>
-<li>translated names, eg, "name-es ..." [optional]</li>
-<li>"th_name NAME", where NAME is the Therion name. The filename must be the same as the Therion name, without the possible prefix "u": [mandatory]</li>
-<li>"color rgb alpha" (rgb and alpha in hex format, for example '0x0000ff' is blue, and '0x99' is semi-transparent) [mandatory]</li>
-<li>"close-horizontal" [optional, false if missing]</li>
-<li>"orientable" [optional, false if missing]</li>
-<li>"level" view_flag [optional, 1 if missing]</li>
-<li>"bitmap WIDTH HEIGHT X_TILE Y_TILE" starts of the bitmap pattern. The tile modes can be M (mirror) or R (repeat). This line must be followed by HEIGHT lines of length WIDTH with the bitmap pixels (1: foreground, 0: background).</li>
-<li>"endbitmap" marks the end of a bitmap</li>
-<li>"roundtrip VALUE" [optional, for SVG-roundtrip, VALUE can be 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - default 3]</li>
-<li>"endsymbol"</li>
-</ul>
+    <p>
+      Os arquivos de definição de ferramentas de área contém linhas especificando as propriedades da ferramenta de desenho:
+    </p>
 
-<b>Name</b><br>
-Refer to the <a href="page_symbol_point.htm">Point Tool</a> for how to specify the names.
-<br><p> 
+    <ul>
+      <li><i>symbol area</i>: linha de abertura que identifica um arquivo de definição de ferramenta do tipo área [obrigatória].</li>
+      <li><i>name NAME</i> onde NAME é o nome padrão da área [obrigatório].</li>
+      <li><i>nomes traduzidos</i>: por exemplo, "name-pt", "name-es", etc. [opcional].</li>
+      <li>
+        <i>th_name NAME</i>: onde NAME é o nome Therion.
+        O nome do arquivo deve ser o mesmo que o nome Therion, sem o possível prefixo "u:" [obrigatório].
+      </li>
+      <li>
+        <i>color RGB ALPHA</i>: RGB e ALPHA, em formato hexadecimal, definem a cor e a opacidade usadas ao desenhar a área em questão.
+        Por exemplo: '0x0000ff' é azul, e '0x99' é semi-transparente. [obrigatório].
+      </li>
+      <li><i>close-horizontal</i>: falso se ausente [opcional].</li>
+      <li><i>orientable</i>: falso se ausente [opcional].</li>
+      <li>
+        <i>level</i>: indica a quais camadas de visualização esta ferramenta está associada.
+        1 se ausente [opcional].
+      </li>
+      <li>
+        <i>bitmap WIDTH HEIGHT X_TILE Y_TILE</i>: início do padrão de bitmap usado para representar a área na tela de desenho do croqui.
+        Os modos de repetição podem ser M (espelho) ou R (repetir).
+        Esta linha deve ser seguida por HEIGHT linhas de comprimento WIDTH com os pixels do bitmap (1: cor definida em <i>color</i> acima, 0: cor de fundo).
+      </li>
+      <li><i>endbitmap</i>: marca o final de um bitmap.</li>
+      <li><i>roundtrip VALUE</i> [opcional, para SVG-roundtrip VALUE pode ser 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - padrão 3].</li>
+    </ul>
 
-<b>Close-horizontal</b><br>
-If this attribute is set the area border is closed horizontally in the profile view
-and in the x-sections.<br>
-If the Y coordinate of the last point of the drawn line is close to that of the first point,
-the area border is interrupted at the first point that has Y coordinate close to that of the 
-first point.
-By this means you can draw areas with a flat horizontal top (or bottom) profile.<br>
-If the Y coordinates of the drawn line endpoints differ too much, the border is closed with a 
-slant segment.<br><p>
+    <h2>
+      Nome
+    </h2>
 
-Currently, this attribute it is only set for the built-in "water" tool.<br><p>
+    <p>
+      Consulte a página <a href="page_symbol_point.htm">Ferramenta de ponto</a> para saber como especificar os nomes.
+    </p>
 
-<b>Bitmap pattern</b><br>
-With this option you can specify a background pattern, eg, for differentiating rock
-formations.<br><p>
+    <h2>
+      <i>Close-horizontal</i>
+    </h2>
 
-This attribute is not used in any tool packaged in the apk.<br><p>
+    <p>
+      Se este atributo estiver definido, a borda da área é fechada horizontalmente na vista de perfil e nos cortes.
+    </p>
 
-<b>Orientation</b><br>
-If the attribute "orientable" is set, the area pattern can be rotated through the area edit dialog.<br>
-Area patterns are not used in the default symbol set. Shading is preferred for performance.<br><p>
+    <p>
+      Se a coordenada Y do último ponto da linha desenhada estiver próxima à do primeiro ponto, a borda da área é interrompida no primeiro ponto que tem a coordenada Y igual à do primeiro ponto.
+      Dessa forma, você pode desenhar áreas com uma linha superior (ou inferior) perfeitamente horizontal.
+      Se as coordenadas Y dos pontos inicial e final da área desenhada diferirem muito, a borda é fechada com um segmento inclinado.
+    </p>
 
-<b>Level</b><br>
-The "level" attribute takes value the flag for the views enabled on this area items.<br>
-The flag is a number sum of 1 (base), 2 (floor), 4 (fills), 8 (ceiling), and 16 (artifacts).
-<br><p>
+    <p>
+      Atualmente, este atributo é definido apenas para a ferramenta interna de desenho de área tipo "água".
+    </p>
 
-</body></html>
+    <h2>
+      <i>Bitmap pattern</i>
+    </h2>
+
+    <p>
+      Com esta opção, você pode especificar um padrão de fundo, por exemplo, para diferenciar formações rochosas.
+    </p>
+
+    <p>
+      Os padrões de área não são usados no conjunto de símbolos padrão.
+      A coloração chapada definida através do atributo <i>color</i> é preferido por questões de desempenho à opção de padronagem definida através do atributo <i>bitmap</i>.
+    </p>
+
+    <p>
+      Este atributo não é usado em nenhuma ferramenta disponível no arquivo <i>apk</i> de instalação do aplicativo.
+    </p>
+
+    <h2>
+      Orientação
+    </h2>
+
+    <p>
+      Se o atributo "orientable" estiver definido, o padrão de área pode ser rotacionado através da caixa de diálogo de edição de área.
+    </p>
+
+    <h2>
+      <i>Level</i>
+    </h2>
+
+    <p>
+      O atributo "level" define o valor da flag que especifica em quais camadas os itens desta área devem ser apresentados.
+    </p>
+
+    <p>
+      A flag é um número que é a soma de 1 (Base), 2 (Fundo), 4 (Decoração), 8 (Cobertura) e 16 (Avulsos).
+      Veja mais detalhes em <a href="page_drawing_refs.htm#layers">Camadas</a>.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-23</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e2bc82591</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
