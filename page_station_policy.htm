@@ -3,7 +3,21 @@
     <link rel="stylesheet" href="manual.css">
     <h1>Métodos de nomeamento de bases</h1>
 
-    <p>
+    <h2>
+      Índice
+    </h2>
+
+    <ul>
+      <li><a href="#introduction">Introdução</a></li>
+      <li><a href="#automatic-naming">Métodos disponíveis</a></li>
+      <li><a href="#origin-station">Base de origem</a></li>
+      <li><a href="#backshot">Método <i>contra, aux, visada</i></a></li>
+      <li><a href="#magnetic-anomaly">Método <i>anomalia magnética</i></a></li>
+      <li><a href="#availability">Disponibilidade de métodos de nomeamento automático de bases X níveis de recursos</a></li>
+      <li><a href="#blunder-shot">Medida errada de visada</a></li>
+    </ul>
+
+    <p id="#introduction">
       Quando você recebe dados via bluetooth o TopoDroidX pode automaticamente atribuir nomes de bases às medidas recebidas.
       Uma medição repetida é considerada uma visada, as outras são tratadas como medidas auxiliares.
       Se você seguir um método ao fazer medições, o nomeamento automático de bases do TopoDroidX pode ser muito útil.
@@ -11,9 +25,9 @@
       Você pode selecionar aquela que se encaixa em seu método de trabalho através da opção de configuração <i>Dados topo > Nomear bases</i>.
     </p>
 
-    <p>
-      Os métodos disponíveis para nomear automaticamente bases são:
-    </p>
+    <h2 id="#automatic-naming">
+      Métodos disponíveis
+    </h2>
 
     <ol start="0">
       <li><i>nenhum</i>: desabilita a funcionalidade de nomeamento automático de bases do TopoDroidX.</li>
@@ -56,7 +70,7 @@
 
     <img src="survey_policy.png">
 
-    <h2>
+    <h2 id="#origin-station">
       Base de origem
     </h2>
 
@@ -72,42 +86,87 @@
       A base de origem selecionada manualmente é apresentada em verde em ambas as telas.
     </p>
 
-    <h2>
+    <h2 id="backshot">
       Método <i>contra, aux, visada</i>
     </h2>
 
-At each station you take the backshot to the previous station, next the splay shots, and finally the forward shot to the next station.<br>
-Backsight shots are checked: if a shot is not close to the opposite of the previous leg, it is not considered a backsight shot.<br>
-The backsight shots are marked "duplicate".<br><p>
+    <p>
+      Em cada base você obtém a contra visada para a base anterior a partir da visada recém criada, depois as medidas auxiliares a partir dessa nova visada e, por último, a visada para a próxima base.
+    </p>
 
-<i>Tripod</i> policy<br>
-At station "1" you take splays and then shots to the station "2". Then you move into station "3", take shots to station "2", then splays, then shots
-to station "4". Move to station "5" and so on.<br><p>
+    <p>
+      As contra visadas são verificadas: se uma visada não está próxima da base anterior, ela não é considerada uma contra visada.
+    </p>
 
-<i>Magnetic anomaly compensation</i> [Tester level]<br>
-The magnetic anomaly compensation is done estimating at each station the
-"local" magnetic declination by comparing the azimuths of the leg reaching to the station and the backsight leg. The azimuth of all the shots at the station are then corrected with the "local" declination. An overall declination remains because the declination at the first station cannot be determined. Furthermore the survey azimuth angles become relative as in a traverse, therefore the angle errors add up instead of compensating.<br>
-The magnetic anomaly compensation requires taking backsight shots. However, with magnetic anomaly compensation the check whether a shot is a backsight does not take the azimuth into account. The magnetic anomaly compensation is carried out during the data reduction (for the sketches).<br><p>
+    <p>
+      As medidas da contra visada são marcadas como "duplicadas".
+    </p>
 
-<i>TopoRobot</i> policy<br>
-The "TopoRobot" policy is just like the first, but station names follow the TopoRobot convention.<br><p>
+    <h2 id="magnetic-anomaly">
+      Método <i>anomalia magnética</i> [T]
+    </h2>
 
-<i>Station naming policy and activity levels</i><br>
-Certain station naming policy are only enabled at high activity levels:
-<ul>
-<li>"Tripod" requires "advanced" level</li>
-<li>"Magnetic anomaly" requires "expert" level</li>
-<li>"TopoRobot" requires "tester" level</li>
-</ul><br>
-Reducing the activity level when one of these is active, automatically set the station policy to the default policy (splays + foreshot).
-The policy is automatically reinstated again if the activity level is raised to the required value or above.<br><p>
+    <p>
+      A compensação de anomalia magnética é feita estimando em cada base a declinação magnética "local" comparando os azimutes da visada que chega à base e da contra visada.
+      Os azimutes de todas as medidas obtidas a partir da base são então corrigidos com a declinação magnética "local".
+      Uma declinação geral permanece porque a declinação na primeira estação não pode ser determinada.
+      Além disso, os ângulos de azimute da topo são calculados, uns em relação aos outros, portanto os erros de ângulo se acumulam em vez de se compensarem.
+    </p>
 
-<i>Blunder leg-shot</i> [T]<br>
-A <i>blunder shot</i> is an intermediate leg shot that happened to be off-target.
-Typical leg sequences with blunders 'B' are "A-B-A-A" and "A-A-B-A".<br>
-Blunder leg-shot detection is an experimental feature of the <i>default station naming policy</i>.
-It must be enabled with a custom setting.<br>
-Blunder shots are detected and marked as blank entry that will be hidden when the list is refreshed.<br>
-Blunder shots can be recovered.<br><p>
+    <p>
+      A compensação de anomalia magnética requer a tomada de contra visadas.
+      No entanto, com a compensação de anomalia magnética, a verificação se uma medida é uma contra visada não leva em conta seu azimute.
+      A compensação de anomalia magnética é realizada durante a redução de dados (preparação da linha de trena para os croquis).
+    </p>
 
-</body></html>
+    <h2 id="availability">
+     Disponibilidade de métodos de nomeamento automático de bases X níveis de recursos
+    </h2>
+
+    <p>
+      Alguns métodos de nomeamento de bases só são habilitados em níveis de recursos mais elevados:
+    </p>
+
+    <ul>
+      <li>"Tripé" requer nível "avançado".</li>
+      <li>"Anomalia magnética" requer nível "especialista".</li>
+      <li>"TopoRobot" requer nível "teste".</li>
+    </ul>
+
+    <p>
+      Reduzir o nível de recursos quando um desses métodos está selecionado automaticamente altera o método usado para o método padrão: <i>aux, visada</i>.
+      O método original é automaticamente resselecionado quando o nível de recursos é aumentado novamente.
+    </p>
+
+    <h2 id="blunder-shot">
+      Medida errada de visada [T]
+    </h2>
+
+    <p>
+      Uma <i>medida errada intra visada</i> é uma medida onde se errou o alvo durante a produção da sequência de três medidas similares que definem uma nova visada.
+      Sequências típicas de "medidas erradas intra visada" (aqui identificada como "B") são "A-B-A-A" e "A-A-B-A".
+    </p>
+
+    <p>
+      O recurso de detecção de <i>medida errada inter visada</i> é um um recurso experimental do método de nomeamento automático padrão <i>aux, visada</i>.
+      É controlado pela opção de configuração <i>Especiais > Dados topo > Medida errada intra visada</i>.
+    </p>
+
+    <p>
+      As medidas erradas intra visada são detectadas e marcadas como em branco sendo, dessa maneira, ocultadas quando a lista de medidas for redesenhada.
+      As medidas erradas intra visada podem ser recuperadas.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-23</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">342717f86</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
