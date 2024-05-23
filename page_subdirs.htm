@@ -1,36 +1,65 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Estrutura de diretórios do TopoDroidX</h1>
 
-<h3>TopoDroid SUBDIRECTORIES</h3>
+    <p>
+      Esta página reune algumas informações sobre como o TopoDroidX organiza e armazena os dados das topos, os dados de calibração e os croquis.
+    </p>
 
-Here is some background about how the survey data, the calibration data, and the sketches are stored.<br><p>
+    <p>
+      O aplicativo cria seu diretório base padrão no <i>armazenamento externo primário</i>: "Documents/TDX".
+      Este diretório não é removido quando você desinstala o aplicativo.
+      Neste diretório, o aplicativo cria a pasta de topos "TopoDroid" com o banco de dados SQLite "distox14.sqlite" onde são armazenados os dados da topos, os arquivos de croquis das topos e outros arquivos das topos.<br>
+    </p>
 
-The app creates its default base directory in the <i>primary external storage</i>, "Documents/TDX".
-This directory is not removed when you uninstall the app. 
-In this directory the app creates the surveys folder "TopoDroid" with the SQLite database "distox14.sqlite" that stores the survey data,
-the surveys sketch files, and other surveys files.<br><p>
+    <p>
+      O aplicativo também cria subdiretórios para os diferentes tipos de arquivos.
+    </p>
 
-The app also creates subdirectories for the different types of files.<br>
-The following subdirectories are created only in the app private directory, that is
-"Android/data/com.topodroid.TDX/files" in the <i>primary external storage</i>.
-<ul style="margin-top: 0">
-<li><b>bin</b>: firmware files (DistoX v. 2 and BLE)</li>
-<li><b>ccsv</b>: CSV text files of exported calibrations (DistoX only)</li>
-<li><b>dump</b>: memory dump files (DistoX only)</li>
-<li><b>symbol</b>: drawing tools files (points, lines, areas)</li>
-<li><b>man</b>: user manual translation</li>
-</ul>
-"bin" is used to store firmware files, both the factory files included in TopoDroid and the firmware dumps read from a DistoX2.<br>
-The database "device10.sqlite", with the calibration data, and the device information is in this directory.<br><p>
+    <p>
+      Os subdiretórios abaixo são criados no diretório privado do aplicativo, ou seja,
+      "Android/data/com.topodroid.TDX/files" no <i>armazenamento externo primário</i>.
+    </p>
 
-<!-- A <b>zip</b> folder is created in the project folder "TDX/TopoDroid". -->
-For each survey a survey-folder (named after the survey name) is created, with
-the following folders:
-<ul style="margin-top: 0">
-<li><b>audio</b>: <i>audio</i> comments (wav files)</li>
-<li><b>note</b>: survey annotations text file</li>
-<li><b>photo</b>: survey pictures (jpg files)</li>
-<li><b>tdr</b>: binary sketch files</li>
-<li><b>out</b>: exported files</li>
-</ul>
+    <ul>
+      <li><b>bin</b>: arquivos de firmware (DistoX v. 2 e BLE).</li>
+      <li><b>ccsv</b>: arquivos de texto CSV da exportação de calibrações (apenas DistoX).</li>
+      <li><b>dump</b>: arquivos de descarga de memória (apenas DistoX).</li>
+      <li><b>symbol</b>: arquivos das ferramentas de desenho (pontos, linhas, áreas).</li>
+      <li><b>man</b>: tradução do manual do usuário.</li>
+    </ul>
 
-</body></html>
+    <p>
+      O diretório "bin" é usado para armazenar arquivos de firmware, tanto os arquivos de fábrica incluídos no TopoDroidX quanto os arquivos de firmware baixados de uma DistoX2.
+    </p>
+
+    <p>
+      O banco de dados "device10.sqlite" com os dados de calibração e as informações do dispositivo está também neste diretório.<br>
+    </p>
+
+    <p>
+      Para cada topo é criada uma pasta de topo (nomeada com o nome do topo) que contém os seguintes subdiretórios:
+    </p>
+
+    <ul>
+      <li><b>audio</b>: comentários de áudio (arquivos wav).</li>
+      <li><b>note</b>: arquivo de texto com anotações da topo.</li>
+      <li><b>photo</b>: fotos da topo (arquivos jpg).</li>
+      <li><b>tdr</b>: arquivos binários que contém os croquis.</li>
+      <li><b>out</b>: arquivos exportados.</li>
+    </ul>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-23</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">342717f86</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
