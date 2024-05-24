@@ -1,53 +1,110 @@
-<html><body>
-<h3>POINT TOOLS</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Ferramentas de desenho de ponto</h1>
 
+    <p>
+      As ferramentas de desenho de ponto são definidas em arquivos de texto.
+    </p>
 
-The "point" tools are defined in text files.<br><p>
+    <p>
+      Três ferramentas de ponto: "usuário", "corte" e "rótulo" são definidas internamente no aplicativo.
+      As outras são carregadas da pasta privada do TopoDroidX <i>line</i>.
+      Esta pasta é populada com as ferramentas de ponto empacotadas no arquivo <i>apk</i> de instalação do aplicativo.
+      Você pode excluir as ferramentas que não precisa, editar as que deseja alterar e adicionar novas que não são fornecidas no apk.
+    </p>
 
-Two point tools, "user", "section", and "label" (text), are built in the programs.
-The others are loaded from the TopoDroid private folder <i>point</i>.
-This directory is populated with the point tools packaged in the distribution apk.
-You can delete the tools you do not need, edit the ones you want to change, and
-add new ones that are not provided in the apk.<br><p>
+    <p>
+      Os arquivos de definição de ferramentas de ponto contém linhas especificando as propriedades da ferramenta de desenho:
+    </p>
 
-The point tool file contains lines specifying the property of the drawing tool.
-<ul>
-<li>"symbol point" [mandatory]</li>
-<li>"name NAME", where NAME is the point default name [mandatory]</li>
-<li>translated names, eg, "name-es ..." [translated names are optional]</li>
-<li>"th_name NAME", where NAME is the Therion name. The filename must be the same as the Therion name, without the possible prefix "u": [mandatory]</li>
-<li>"color rgb" (rgb in hex format, for example red is '0xff0000') [mandatory]</li>
-<li>"orientation FLAG" [optional, false if missing, true if FLAG is '1' or 'yes']</li>
-<li>"has_text FLAG" [optional, false if missing, true if FLAG is '1' or 'yes']</li>
-<li>"roundtrip VALUE" [optional, for SVG-roundtrip, VALUE can be 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - default 4]</li>
-<li>"level" view_flag [optional, viewing level of the point; if missing level is set to 1]</li>
-<li>"path" begins the point symbol path. This is specified with the following commands
-<ul>
-<li>"moveTo X Y"</li>
-<li>"lineTo X Y"</li>
-<li>"cubicTo X1 Y1 X2 Y2 X Y"</li>
-<li>"addCircle X Y R": (X,Y) center, R radius</li>
-<li>"arcTo X0 Y0 X1 Y1 FROM_ANGLE SPAN_ANGLE": (X0,Y0 - X1,Y1) bounding rectangle, angles in degrees, 0 along X-axis, direction is CW</li>
-</ul>
-<li>"endpath" marks the end of the tool path</li>
-<li>"endsymbol"</li>
-</ul>
+    <ul>
+      <li><i>symbol point</i>: linha de abertura que identifica um arquivo de definição de ferramenta do tipo ponto [obrigatória].</li>
+      <li><i>name NAME</i> onde NAME é o nome padrão do ponto [obrigatório].</li>
+      <li><i>nomes traduzidos</i>: por exemplo, "name-pt", "name-es", etc. [opcional].</li>
+      <li>
+        <i>th_name NAME</i>: onde NAME é o nome Therion.
+        O nome do arquivo deve ser o mesmo que o nome Therion, sem o possível prefixo "u:" [obrigatório].
+      </li>
+      <li>
+        <i>color RGB</i> (RGB em formato hexadecimal, por exemplo '0xff0000' é vermelho) [obrigatório].
+      </li>
+      <li><i>orientation FLAG</i> [opcional, falso se ausente, verdadeiro se '1' ou 'yes'].</li>
+      <li><i>has_text FLAG</i> [opcional, falso se ausente verdadeiro se '1' ou 'yes'].</li>
+      <li><i>roundtrip VALUE</i> [opcional, para SVG-roundtrip, VALUE pode ser 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - padrão 4].</li>
+      <li><i>level</i> indica a quais camadas de visualização esta ferramenta está associada.
+        1 se ausente [opcional].</li>
+      <li>
+        <i>path</i> inicia a definição do desenho do símbolo de ponto.
+        Este é especificado com os seguintes comandos:
+        <ul>
+          <li><i>moveTo X Y</i></li>
+          <li><i>lineTo X Y</i></li>
+          <li><i>cubicTo X1 Y1 X2 Y2 X Y</i></li>
+          <li><i>addCircle X Y R</i>: (X,Y) centro, R raio</li>
+          <li><i>arcTo X0 Y0 X1 Y1 FROM_ANGLE SPAN_ANGLE</i>: (X0,Y0 - X1,Y1) retângulo circundante, ângulos em graus, 0 ao longo do eixo X, direção é horária</li>
+        </ul>
+      </li>
+      <li><i>endpath</i> marca o final da definição do desenho do símbolo.</li>
+    </ul>
 
-<b>Name</b><br>
-The English point "name" is mandatory.<br>
-Translation of the name in other languages are optional.<br>
-Names must not contain spaces; use underscore '_' in their place.<br>
-The Therion name must coincide with the filename. This may cause a problem when the Therion name contains
-a dash '-' and this is an illegal character in filenames. In this case use the equal character '=' in the filename,
-the script that creates the zip archive of the symbols files replaces '=' with '-' in the filenames.<br>
-Therion names and filename must not contain spaces.<br><p>
+    <h2>
+      <i>Name</i>
+    </h2>
 
-<b>Orientation</b><br>
-If the attribute "orientation" is set, the point symbol can be drawn at an angle, and it can be rotated.<br><p>
+    <p>
+      A propriedade "name" (que deve conter o nome do tipo de ponto em inglês) é obrigatória.
+    </p>
 
-<b>Level</b><br>
-The "level" attribute takes value the flag for the views enabled on this point items.<br>
-The flag is a number sum of 1 (base), 2 (floor), 4 (fills), 8 (ceiling), and 16 (artifacts).
-<br><p>
+    <p>
+      A tradução do nome em outros idiomas é opcional.
+    </p>
 
-</body></html>
+    <p>
+      Os nomes não devem conter espaços; use o sublinhado '_' em seu lugar.
+    </p>
+
+    <p>
+      O nome Therion deve coincidir com o nome do arquivo.
+      Isso pode causar um problema quando o nome Therion contém um hífen '-' pois este é um caractere ilegal em nomes de arquivos.
+      Neste caso, use o caractere igual '=' no nome do arquivo, o script que cria o arquivo zip dos arquivos de símbolos substitui '=' por '-' nos nomes dos arquivos.
+    </p>
+
+    <p>
+      Os nomes Therion e de arquivos não devem conter espaços.
+    </p>
+
+    <h2>
+      <i>Orientation</i>
+    </h2>
+
+    <p>
+      Se o atributo "orientation" estiver definido como verdadeiro, o símbolo de ponto poderá ser rotacionado.
+    </p>
+
+    <h2>
+      <i>Level</i>
+    </h2>
+
+    <p>
+      O atributo "level" define o valor da flag que especifica em quais camadas os itens deste tipo de ponto devem ser apresentados.
+    </p>
+
+    <p>
+      A flag é um número que é a soma de 1 (Base), 2 (Fundo), 4 (Decoração), 8 (Cobertura) e 16 (Avulsos).
+      Veja mais detalhes em <a href="page_drawing_refs.htm#layers">Camadas</a>.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-24</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">19c7c7665</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
