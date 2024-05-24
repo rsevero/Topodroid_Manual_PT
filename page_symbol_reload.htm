@@ -1,64 +1,85 @@
-<html><body>
-<h3>DRAWING TOOL SETS</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Conjuntos de símbolos de desenho</h1>
 
-The drawing tools are divided in three <i>types</i>: points, lines, or areas (regions).<br><p>
+    <p>
+      As ferramentas de desenho são divididas em três <i>categorias</i>: pontos, linhas e áreas (regiões).
+    </p>
 
-TopoDroid comes with one default set of drawing tools, and other eight additional sets [T].
-Overall that makes more than 200 points, 60 lines, and 30 areas.
-The basic speleology set has about 40 points, 15 lines, and less than 10 areas.
-<br><p>
+    <p>
+      O TopoDroidX vem com um conjunto padrão de ferramentas de desenho e outros oito conjuntos adicionais [T].
+      No total são mais de 200 pontos, 60 linhas e 30 áreas.
+      O conjunto básico de espeleologia tem cerca de 40 pontos, 15 linhas e menos de 10 áreas.
+    </p>
 
-The drawing tool files are stored in the subfolders of <i>com.topodroid.TDX/files</i>.
-These files can be edited and modified, or even deleted.
-Furthermore, if other custom tool files
-are placed in the proper subfolder, TopoDroid will load and use them.
-<br><p>
+    <p>
+      Os arquivos de símbolos de desenho são armazenados nas subpastas de <i>com.topodroid.TDX/files</i>.
+      Esses arquivos podem ser editados e modificados, ou mesmo excluídos.
+      Além disso, se outros arquivos de símbolos personalizados forem colocados na subpasta apropriada, o TopoDroidX os carregará e usará.
+    </p>
 
-Eight <i>system</i> tools are always present:
-the three "user" symbols, points "label" and "section",
-lines "wall" and "section", and area "water".
-These tools are not stored as files, and cannot be changed.
-A custom tool file with the same name as one of these tools is skipped.
-<br><p>
+    <p>
+      Oito símbolos <i>do sistema</i> estão sempre disponíveis: os três símbolos "usuário" (ponto, linha e área), os pontos "rótulo" e "corte", as linhas "parede" e "corte" e a área "água".
+      Essas ferramentas não são armazenadas em arquivos e não podem ser alteradas.
+      Um arquivo de símbolo personalizado com o mesmo nome de um desses símbolos é ignorado.
+    </p>
 
-By default only the speleology tools are installed.
-The installation of additional tools is enabled through a setting [G].
-A few tools are included in more than one set.
-The additional symbol sets are provided mostly as examples of custom symbols.
-<br><p>
+    <p>
+      Por padrão, apenas o conjunto de símbolos <i>espeleologia</i> é instalado.
+      A instalação de conjuntos de símbolos adicionais é habilitada através da opção de configuração <i>Especiais > Paleta</i> [G].
+      Alguns símbolos estão incluídos em mais de um conjunto.
+      Os conjuntos de símbolos adicionais são fornecidos principalmente como exemplos de símbolos personalizados.
+    </p>
 
-To install additional tool sets tap the
-the <i>PALETTE</i> menu [G] of the <u>Main window</u>.
-The coming dialog lists the sets of tools.
-Check the tool sets you want to add and press the button <i>Install</i>.
-<br>
-If you press the button <i>Replace</i> the currently installed tools are
-removed before installing the tool sets you selected.
-<br>
-<p>
+    <p>
+      Para instalar conjuntos de símbolos adicionais, toque no menu <i>PALETA</i> [G] da rtela <u>Principal</u>.
+      A caixa de diálogo que aparece lista os conjuntos de símbolos disponíveis.
+      Marque os conjuntos de símbolos que deseja adicionar e pressione o botão <i>Instalar</i>.
+    </p>
 
-After installing new tool sets you must enable the tools you need, using the
-<i>Palette</i> button of the <u>Main window</u>.
-The choice of enabled tools is stored in the database and is not lost when 
-tool files are removed, therefore you will find them enabled if you re-install
-the set later.
-<br><p>
+    <p>
+      Se você pressionar o botão <i>Substituir</i>, os símbolos atualmente instalados são removidos antes de instalar os conjuntos de símbolos que você selecionou.
+    </p>
 
-<b>Tool groups</b>
-The tools of each type are further divided in <i>groups</i> (classes).
-A tool can belong to a group or have no group.
-<br><p>
+    <p>
+      Depois de instalar novos conjuntos de símbolos, você deve habilitar os símbolos que realmente pretende usar.
+      Isto é feito clicando no botão <i>Paleta</i> <img src="btn_tools.png" class="app_button"> da tela <u>Principal</u>.
+      A escolha dos símbolos habilitados é armazenada no banco de dados e não é perdida quando os arquivos de símbolos são removidos, portanto você os encontrará habilitados se reinstalar o conjunto mais tarde.
+    </p>
 
-Groups are used in one way:
-<ol>
-<li>when a sketch is opened, and an item type is not found, TopoDroid tries to substitute
-it for another type in the same group. If there is none, the "user" tool is used.</li>
-</ol>
-<br><p>
+    <h2>
+      Conjuntos de símbolos
+    </h2>
 
-The tools groups are displayed in the tool enabling dialog.
-Group names are in English.
-<br><p>
+    <p>
+      Os símbolos de cada categoria são subdivididos em <i>grupos</i> (classes).
+      Um símbolo pode pertencer a um grupo ou não ter grupo.
+    </p>
 
+    <p>
+      Os grupos são usados de uma maneira:
+      <blockquote>
+        quando um croqui é aberto, e um símbolo não é encontrado, o TopoDroidX tenta substituí-lo por outro símbolo no mesmo grupo.
+        Se não houver nenhum, o símbolo "usuário" é usado.
+      </blockquote>
+    </p>
 
-</body></html>
+    <p>
+      Os grupos de símbolos são exibidos na caixa de diálogo de habilitação de símbolos.
+      Os nomes dos grupos estão em inglês.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-24</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ebbd7c1ee</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
