@@ -1,65 +1,119 @@
-<html><body>
-<h3>PROJECT MANAGER - Project window</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Gerenciador de Projetos - Tela Projeto</h1>
 
-The cave <u>Project window</u> is opened tapping a project name in the listing of the <u>Project Manager window</u>.<br><p>
+    <p>
+      A tela <u>Projeto</u> é aberta ao se clicar em um nome de projeto na lista do <u>Gerenciador de Projetos</u>.
+    </p>
 
-It displays the list of surveys that comprise the project. The list is empty if the project has no
-surveys.<br>
-Each survey can be selected for further actions by tapping its checkbox.<br><p>
+    <p>
+      Exibe a lista de topos que compõem o projeto.
+      A lista fica vazia se ainda não houver nenhuma topo adicionada ao projeto.
+    </p>
 
-<b>Menus</b><br>
-<ul>
-<li>Close the window</li>
-<li>Export the cave project (Therion or Survex)</li>
-<li>Delete the cave project</li>
-<li>Help</li>
-</ul><br>
+    <p>
+      Cada topo pode ser selecionado para ações adicionais ao se tocar em sua caixa de seleção.
+    </p>
 
-<b>Buttons</b><br>
-<ul>
-<li><i>insert</i> surveys</li>
-<li><i>remove</i> the selected surveys</li>
-<li>2D <i>display</i> of the selected surveys, in plan view</li>
-<li>display the survey <i>geo-points</i></li>
-<li>list the project <i>equates</i></li>
-<li><i>3d view</i> of the project</li>
-</ul><br>
+    <h2>
+      Menu
+    </h2>
 
-The <i>insert</i> button display the list of surveys in the TopoDroid database.
-Surveys are added to the project by tapping their checkboxes and confirming with 
-the <i>OK</i> button.<br><p> 
+    <ul>
+      <li><i>Fechar</i>: fecha a janela.</li>
+      <li><i>Exportar</i>: exporta o projeto de caverna em formato Therion ou Survex.</li>
+      <li><i>Apagar</i>: remove o projeto de caverna.</li>
+      <li><i>Ajuda</i></li>
+    </ul>
 
-<b>Project 3D view</b><br>
-The project is displays in the 3D viewer beginning with the first survey.<br>
-The following surveys are shown in the 3D only if they are (directly or indirectly) connected to
-the first survey.<br><p>
+    <h2>
+      Botões
+    </h2>
 
-If several surveys are georeferenced, they can all be displayed in 3D, together with the
-connected surveys.<br><p>
+    <ul>
+      <li><img src="btn_add.png" class="app_button"> <i>inserir</i> topos.</li>
+      <li><img src="btn_drop.png" class="app_button"> <i>remover</i> as topos selecionadas.</li>
+      <li><img src="btn_view.png" class="app_button"> <i>visualização 2D</i> dos topos selecionados, em planta.</li>
+      <li><img src="btn_geopoint.png" class="app_button"> <i>pontos geográficos</i>: exibir os pontos geográficos da topo.</li>
+      <li><img src="btn_equates.png" class="app_button"> <i>equates</i>: listar os <i>equates</i> do projeto usados na exportação para Therion e Survex.</li>
+      <li><img src="btn_3d.png" class="app_button"> <i>visualização 3D</i> do projeto</li>
+    </ul>
 
+    <p>
+      O botão <i>inserir</i> exibe a lista de topos no banco de dados do TopoDroid.
+      As topos são adicionadas ao projeto ao se tocar em suas caixas de seleção e confirmar com o botão <i>OK</i>.
+    </p>
 
-<b>Surveys 2D plan view</b><br>
+    <h2>
+      Visualização 3D
+    </h2>
 
-This window display surveys in plan view, with midline and station names.
-<br>
-Each survey has a different color. After a while the colors repeat therefore you should display
-only two or three surveys at a time.
-Equates are shown as dashed red lines, and equated stations have a round background.
-The size of the station names is equal to that in the <u>Drawing window</u>.
-<br>
-The view can be panned and zoomed.
-A survey can be grabbed (tap on a station: it gets circled) and dragged around while the other surveys do not move.
-In this way you can overlap stations of different surveys that you want to equate.
-When they overlap circle them both by tapping the point: you can then insert the equate between them with the "add equate" button.
+    <p>
+      O projeto é exibido na visualização 3D a partir da primeira topo.
+      As topos seguintes são mostradas na visualização 3D apenas se estiverem (direta ou indiretamente) conectados à primeira topo.
+    </p>
 
-It has two buttons:<br>
-<ul style="margin-top:0">
-<li><i>Add equate</i>: opens a dialog saying which stations are to be equated. 
-In order to manually add an equate between surveys of the cave project, tap the "OK" button".</li>
-<li><i>List equates</i> between surveys of the cave  project.</li>
-</ul><br><p>
+    <p>
+      Se várias topos estiverem georreferenciadas, todas podem ser exibidas em 3D, juntamente com as topos conectadas.
+    </p>
 
-<b>Equates</b><br>
-You can drop an equate by tapping its entry in the dialog listing the equates of the cave project.<br><p>
+    <h2>
+      Visualização 2D
+    </h2>
 
-</body></html>
+    <p>
+      A visualização 2D exibe as topos em planta, com linha de trena e nomes das bases.
+    </p>
+
+    <p>
+      Cada topo tem uma cor diferente.
+      Após uma determinada quantidade de topos as cores se repetem, portanto você deve exibir apenas duas ou três topos por vez.
+      Os <i>equates</i> são mostrados como linhas tracejadas vermelhas, e as bases equacionadas têm um fundo redondo.
+      O tamanho dos nomes das bases é igual ao usado na tela <u>Desenho</u>.
+    </p>
+
+    <p>
+      A visualização pode ser movida e ampliada.
+      Uma topo pode ser agarrada (toque em uma base: ela ganha um fundo circular) e arrastada enquanto as outras topos não se movem.
+      Dessa forma, você pode sobrepor topos de diferentes projetos que deseja equacionar.
+      Quando elas se sobrepõem, circule-as tocando no ponto: você pode então inserir o <i>equate</i> entre elas com o botão <i>equate</i> <img src="btn_equates.png" class="app_button">.
+    </p>
+
+    <h3>
+      Botões
+    </h3>
+
+    <p>
+      São apresentados quatro botões:
+    </p>
+
+    <ul>
+      <li><i>Adicionar equate</i>: abre um diálogo dizendo quais topos devem ser equacionadas.
+      Para adicionar manualmente um equate entre topos do projeto de caverna, toque no botão <i>OK</i>.</li>
+      <li><i>Listar equates</i> entre topos do projeto de caverna.</li>
+      <li><i>Reduzir número de bases identificadas</i></li>
+      <li><i>Aumentar número de bases identificadas</i></li>
+    </ul>
+
+    <h3>
+      <i>Equates</i>
+    </h3>
+
+    <p>
+      Na caixa de diálogo apresentada ao clicar no botão <i>Listar equates</i> você pode remover um equate clicando em sua entrada na lista.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-24</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">c3a6554c4</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
