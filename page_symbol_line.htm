@@ -1,57 +1,127 @@
-<html><body>
-<h3>LINE_TOOLS</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Ferramentas de desenho de linha</h1>
 
-The "line" tools are defined in text files.<br><p>
+    <p>
+      As ferramentas de desenho de linha são definidas em arquivos de texto.
+    </p>
 
-Two line tools, "user", "section", and "wall", are built in the programs.
-The others are loaded from the TopoDroid private folder <i>line</i>.
-This directory is populated with the line tools packaged in the distribution apk.
-You can delete the tools you do not need, edit the ones you want to change, and
-add new ones that are not provided in the apk.<br><p>
+    <p>
+      Três ferramentas de linha: "usuário", "corte" e "parede" são definidas internamente no aplicativo.
+      As outras são carregadas da pasta privada do TopoDroidX <i>line</i>.
+      Esta pasta é populada com as ferramentas de linha empacotadas no arquivo <i>apk</i> de instalação do aplicativo.
+      Você pode excluir as ferramentas que não precisa, editar as que deseja alterar e adicionar novas que não são fornecidas no apk.
+    </p>
 
-The line tool file contains lines specifying the property of the drawing tool.
-<ul>
-<li>"symbol line" [mandatory]</li>
-<li>"name NAME", where NAME is the line default name [mandatory]</li>
-<li>translated names, eg, "name-es ..." [optional]</li>
-<li>"th_name NAME", where NAME is the Therion name. The filename must be the same as the Therion name, without the possible prefix "u": [mandatory]</li>
-<lI>"group GROUP", specifies the group this line belongs to [optional, default no group]</li>
-<li>"color rgb alpha" (rgb and alpha in hex format, for example '0x00ff00' is green, and '0xff' is fully opaque) [rgb mandatory, alpha is optional,
-if not specified 0xff is taken]</li>
-<li>"width SIZE", line width in units of the <i>line width</i> setting [optional, default 1]</li>
-<li>"dash PATTERN", example "15 5" [optional dash pattern]</li>
-<li>"style STYLE" where STYLE can be 'straight' or 'xN' [optional]</li>
-<li>"effect" begins the line path-effect and is followed by path commands, and closed by</li>
-<li>"endeffect"</li>
-<li>"roundtrip VALUE" [optional, for SVG-roundtrip, VALUE can be 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - default 3]</li>
-<li>"level" view_flag [optional, 1 if missing]</li>
-<li>"endsymbol"</li>
-</ul>
+    <p>
+      Os arquivos de definição de ferramentas de linha contém linhas especificando as propriedades da ferramenta de desenho:
+    </p>
 
-<b>Name</b><br>
-Refer to the <a href="page_symbol_point.htm">Point Tool</a> for how to specify the names.
-<br><p> 
+    <ul>
+      <li><i>symbol line</i>: linha de abertura que identifica um arquivo de definição de ferramenta do tipo linha [obrigatória].</li>
+      <li><i>name NAME</i> onde NAME é o nome padrão da linha [obrigatório].</li>
+      <li><i>nomes traduzidos</i>: por exemplo, "name-pt", "name-es", etc. [opcional].</li>
+      <li>
+        <i>th_name NAME</i>: onde NAME é o nome Therion.
+        O nome do arquivo deve ser o mesmo que o nome Therion, sem o possível prefixo "u:" [obrigatório].
+      </li>
+      <li>
+        <i>group GROUP</i>: especifica o grupo ao qual esta linha pertence [opcional, padrão sem grupo].
+      </li>
+      <li>
+        <i>color RGB ALPHA</i> (RGB e ALPHA em formato hexadecimal, por exemplo '0x00ff00' é verde, e '0xff' é totalmente opaco) [RGB obrigatório, ALPHA é opcional,
+        se não especificado, 0xff é o valor padrão].
+      </li>
+      <li><i>width SIZE</i>, largura da linha em unidades da opção de configuração <i>Desenho croqui > Espess linha</i> [opcional, padrão 1].</li>
+      <li><i>dash PATTERN</i>, exemplo "15 5" [padrão de traço, opcional].</li>
+      <li><i>style STYLE</i> onde STYLE pode ser 'straight' ou 'xN' [opcional].</li>
+      <li><i>effect</i> inicia o padrão de desenho da linha e é seguido por comandos de definição de caminho, e fechado por</li>
+      <li><i>endeffect</i>.</li>
+      <li><i>roundtrip VALUE</i> [opcional, para SVG-roundtrip, VALUE pode ser 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - padrão 3].</li>
+      <li><i>level</i> indica a quais camadas de visualização esta ferramenta está associada.
+        1 se ausente [opcional].</li>
+      <li><i>endsymbol</i>: finaliza o arquivo de definição de linha.</li>
+    </ul>
 
-<b>Group</b><br>
-This attribute is used to replace a missing symbol with the group symbol.<br><p>
+    <h2>
+      <i>Name</i>
+    </h2>
 
-<b>Dash</b><br>
-The "dash" directive specifies that the line is drawn with a dashed scheme.
-For example, "dash 15 5" means that the line is drawn with segments of 15 units, separated by 5 units spaces.
-<br><p>
+    <p>
+      Consulte a página <a href="page_symbol_point.htm">Ferramenta de ponto</a> para saber como especificar os nomes.
+    </p>
 
-<b>Style</b><br> 
-The "style" directive is used to draw lines using sparse points.<br>
-A "style x3" means that the line is drawn using one every three points. The effect is that the line is less "curvy".<br>
-If you want straight segments us "style straight".
-<br><p>
+    <h2>
+      <i>Group</i>
+    </h2>
 
-<b>Effect path</b><br>
-This option is used to define lines with complex style.<br><p>
+    <p>
+      Este atributo é usado para substituir um símbolo ausente pelo símbolo do grupo.
+    </p>
 
-<b>Level</b><br>
-The "level" attribute takes value the flag for the views enabled on this line items.<br>
-The flag is a number sum of 1 (base), 2 (floor), 4 (fills), 8 (ceiling), and 16 (artifacts).
-<br><p>
+    <h2>
+      <i>Dash</i>
+    </h2>
 
-</body></html>
+    <p>
+      A diretiva "dash" especifica que a linha é tracejada de acordo com um esquema que alterna traços e espaços vazios.
+      Por exemplo, "dash 15 5" significa que a linha é desenhada com traços de 15 unidades de extensão seguidos por espacos vazios com 5 unidades de extensão.
+    </p>
+
+    <h2>
+      <i>Style</i>
+    </h2>
+
+    <p>
+      A diretiva "style" é usada para desenhar linhas usando pontos esparsos.
+      Por exemplo, "style x3" significa que a linha é desenhada usando um a cada três pontos. O efeito é que a linha é menos "curva".
+      Se você deseja segmentos retos, use "style straight".
+
+    <h2>
+      <i>Effect</i>
+    </h2>
+
+    <p>
+      Esta opçõa é usada para definir linhas cujo desenho segue algum padrão complexo..
+    </p>
+
+    <h2>
+      <i>Level</i>
+    </h2>
+
+    <p>
+      O atributo "level" define o valor da flag que especifica em quais camadas os itens desta área devem ser apresentados.
+    </p>
+
+    <p>
+      A flag é um número que é a soma de 1 (Base), 2 (Fundo), 4 (Decoração), 8 (Cobertura) e 16 (Avulsos).
+      Veja mais detalhes em <a href="page_drawing_refs.htm#layers">Camadas</a>.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-24</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-23</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e2bc82591</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
+</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
