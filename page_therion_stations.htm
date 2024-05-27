@@ -1,13 +1,39 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Pontos tipo Base - Therion</h1>
 
-<h3>Therion STATION POINTS</h3>
+    <p>
+      Desenhos em formato <i>Therion</i> devem, ou conter  uma definição de escala ou ter pelo menos duas bases para que o <i>Therion</i> possa calcular a escala.<br><p>
+    </p>
 
-<i>Therion</i> scraps must have a scale defined or at least two stations so that <i>Therion</i> can compute their scale.i<br><p>
+    <p>
+      O TopoDroidX pode incluir automaticamente no arquivo <i>th2</i> exportado as bases que estão dentro do polígono convexo do croqui.
+      Isso é controlado pela opção de configuração <i>Especiais > Importar/Exportar > Bases</i> que é habilitada por padrão.
+      Para mapas de cavernas simples esta funcionalidade está ok.
+    </p>
 
-TopoDroid has an option to automatically write into the scrap file all the stations that fall in the convex hull of the sketch. This is enabled by default, and for simple cave maps it is ok.<br><p>
+    <p>
+      No entanto, isso pode não ser conveniente se você estiver trabalhando com o <i>xtherion</i> e as bases de outras partes da caverna estiverem dentro do croqui e houver muitas bases "espúrias".
+      Neste caso, você pode querer desabilitar esta opção e decidir por si mesmo quais bases adicionar ao croqui.
+      Quando a opção de configuração <i>Especiais > Importar/Exportar > Bases</i> está desabilitada, a caixa de diálogo de edição de bases da tela <u>Desenho</u> inclui uma opção para "Inserir/Remover base no arquivo th2 exportado".
+    </p>
 
-However this may not be convenient if you work with xtherion and stations from other portions of the survey fall inside the scrap and there are many "spurious" station points. In this case you might want to disable this option and decide by yourself which station to add to the scrap. When the "Therion station points" option is disabled, the sketch edit dialog of stations has an option to mark the station as "Therion station point".<br><p>
+    <p>
+      Alternativamente, você pode deixar a opção de configuração <i>Especiais > Importar/Exportar > Bases</i> habilitada e marcar <a href="page_sketch_station.htm#midline_hiding">bases "barreira"</a> para limitar os pontos de bases a serem incluídos automaticamente.
+      O TopoDroidX não adiciona ao arquivo Therion bases que estão além de uma base "barreira".
+    </p>
 
-Alternatively, you can let the "Therion station points" option enabled, and mark "barrier" stations to limit the automatic station points. In fact TopoDroid does not add to the Therion file stations that are beyond a "barrier" station.<br><p>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
-</body></html>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-27</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">f396fdf89</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
