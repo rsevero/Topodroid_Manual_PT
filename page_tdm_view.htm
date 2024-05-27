@@ -1,32 +1,78 @@
-<html><body>
-<h3>Project Plan View</h3>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Gerenciador de Projetos - Visualização em planta baixa</h1>
 
-The <u>Project Plan View window</u> displays selected surveys of the cave project
-on the horizontal plane (thus in plan view).
-<br><p>
+    <p>
+      A janela de <u>Visualização em planta baixa</u> é apresentada ao se clicar no botão <i>Planta baixa</i> <img src="btn_view.png" class="app_button"> na tela <u>Gerenciador de Projetos</u>.
+      Ela exibe as topos selecionadas do projeto no plano horizontal, ou seja, em planta baixa.
+    </p>
 
-The display can be panned and zoomed in/out.<br>
-By selecting a station of one survey (tapping on its name) that survey can be
-dragged around while keeping the others fixed.<br><p>
+    <p>
+      Apresenta as topos selecionadas do projeto no plano horizontal (ou seja, em planta baixa), com linha de trena e nomes de bases.
+    </p>
 
-By this means the station can be brought close to a station of another survey.<br>
-The two stations can be selected at the same time with a tap nearby, and an
-"equate" between the two stations added to the cave project.<br><p>
+    <p>
+      Cada topo tem uma cor diferente.
+      Após uma certa quantidade de topos as cores se repetem, portanto você deve exibir apenas duas ou três topos por vez.
+    </p>
 
-When two stations are "equated", they are joined by a dotted line in the plan view.<br><p>
+    <p>
+      A exibição pode ser movida e ampliada/reduzida.
+    </p>
 
-Equates can be also added manually through the <a href="page_tdm_equate_new.htm">Equate Dialog</a>.
-The list of equates is shown with the <a href="page_tdm_equates.htm">Equates Dialog</a>,
-through which they can be removed from the cave project.<br><p>
+    <p>
+      Ao selecionar uma base de uma topo (tocando em seu nome) essa topo pode ser arrastada enquanto as outras topos permanecem fixas.
+      Dessa maneira a base pode ser aproximada de uma base de outra topo.
+    </p>
 
-<b>Menus</b><br>
-<ul>
-<li><i>Add</i> one equate</li>
-<li><i>List</i> all equates</li>
-<li>Display <i>fewer</i> station names</li>
-<li>Display <i>more</i> station names</li>
-</ul>
-<br><p>
+    <p>
+      As duas bases podem ser selecionadas ao mesmo tempo com um clique próximo, e um <i>equate</i> associando as duas bases adicionado ao projeto de caverna.
+    </p>
 
+    <p>
+      Os <i>equates</i> são mostrados como linhas tracejadas vermelhas, e as bases que fazem partes de <i>equates</i> têm um fundo redondo.
+    </p>
 
-</body></html>
+    <p>
+      O tamanho dos nomes das bases é igual ao usado na tela <u>Desenho</u>.
+    </p>
+
+    <p>
+      <i>Equates</i> também podem ser adicionados manualmente através da caixa de diálogo <a href="page_tdm_equate_new.htm">Novo <i>Equate</i></a>.
+    </p>
+
+    <h2>
+      Menus
+    </h2>
+
+    <ul>
+      <li><img src="btn_equate.png" class="app_button"> <a href="page_tdm_equate_new">Adicionar <i>Equate</i></a>: abre um diálogo dizendo quais topos devem ser equacionadas.
+      Para adicionar manualmente um equate entre topos do projeto de caverna, toque no botão <i>OK</i>.</li>
+      <li><img src="btn_equates.png" class="app_button"> <a href="page_tdm_equates.htm">Listar <i>Equates</i></a> entre topos do projeto de caverna.</li>
+      <li><img src="btn_numbers_minus.png" class="app_button"> <i>Reduzir número de bases identificadas</i></li>
+      <li><img src="btn_numbers_plus.png" class="app_button"> <i>Aumentar número de bases identificadas</i></li>
+    </ul>
+
+    <h2>
+      Lista de <i>Equates</i>
+    </h2>
+
+    <p>
+      A caixa de diálogo <a href="page_tdm_equates.htm">Equates</a> é apresentada ao clicar no botão <i>Listar equates</i> <img src="btn_equates.png" class="app_button">.
+      Com ela você pode remover um equate tocando em sua entrada na lista do diálogo.<br>
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-27</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ab86bde9d</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
