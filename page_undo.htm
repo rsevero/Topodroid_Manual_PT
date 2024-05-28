@@ -1,16 +1,49 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Pilha "Desfazer"</h1>
 
-<h3>THE UNDO STACK</h3>
+    <p>
+      O TopoDroidX implementa uma pilha "Desfazer".
+      É uma lista ordenada de ações de desenho, apagamento e edição.
+      Quando você desenha algo, uma ação de desenho é registrada no topo da pilha.
+      Desfazer significa mover o ponteiro da pilha para baixo (além de afetar o desenho do croqui). Refazer move o ponteiro da pilha para cima (e adiciona o desenho ao croqui).
+    </p>
 
-TopoDroid implements undo/redo with a stack of draw/erase/edit actions. When you draw something a draw action is put at the top of the stack. Undoing amounts to moving the stack pointer down the stack (beside affecting the sketch drawing). Redoing moves the stack pointer up (and add the drawing to the sketch).<br><p>
+    <p>
+      O efeito de "emendar linha" durante o desenho na pilha de desfazer é que uma nova linha não é criada, e a linha que foi continuada (alterada) é movida para o topo da pilha "Desfazer".
+    </p>
 
-The effect of the "continuation" drawing on the undo stack is that a new line is not created, and the line that has been continued is moved on top of the undo stack.<br><p>
+    <p>
+      Ações de apagamento e edição também podem ser desfeitas/refeitas.
+      No entanto, seu efeito na pilha não é tão simples quanto para ações de desenho.
+    </p>
 
-Erase and edit actions can also be undone/redone. However their effect on the stack is not as straightforward as for drawing.<br><p>
+    <p>
+      Apagar é uma operação de rasterização, enquanto o desenho é feito de itens vetoriais.
+      Os pontos dos itens vetoriais que estão sob a região apagada são removidos.
+      Isso afeta a pilha de desfazer de duas maneiras.
+      Se um item é completamente apagado (por exemplo, um ponto), ele é removido da pilha.
+      Desfazer a ação de apagar coloca o item de volta, mas no topo da pilha.
+      Apagar o meio de uma linha remove o objeto de linha da pilha e o substitui por duas linhas que são adicionadas no topo da pilha.
+    </p>
 
-Erasing is a raster operation while the drawing is made of vector items. The points of the vector items that come under the erased region are removed. This affects the undo stack in two way. Is an item is completely erased (eg, a point item), it is dropped from the stack. Undoing the erase action puts the item back, but at the top of the stack. Erasing the middle of a line remove the line object from the stack and replaces it with two lines that are added on the top of the stack.<br><p>
-For example, erasing can change the position of a line in the undo stack. Erasing the middle of a line drops the line from the stack and puts the two end pieces at the top of the stack. A following "undo" removes the two pieces and puts the line back, however at the top of the stack.<br><p>
+    <p>
+      Por exemplo, apagar pode mudar a posição de uma linha na pilha de desfazer.
+      Apagar o meio de uma linha remove a linha da pilha e coloca as duas peças finais no topo da pilha.
+      Um "desfazer" subsequente remove as duas peças e coloca a linha de volta, no entanto, no topo da pilha.
+    </p>
 
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-28</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ee553cab2</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
 
-</body></html>
+  </body>
+</html>
