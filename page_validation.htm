@@ -1,29 +1,53 @@
-<html><body>
+<html>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Validação de calibração da DistoX</h1>
 
-<h3>DistoX CALIBRATION VALIDATION</h3>
+    <p>
+      A validação de calibração é uma ferramenta para verificar a qualidade da calibração de uma DistoX comparando-a com outra calibração.
+      Uma calibração pode ser validada contra outra calibração da mesma DistoX.
+    </p>
 
-A calibration can be validated against another calibration of the same DistoX.<br><p>
+    <h2>
+      Lista de calibração
+    </h2>
 
-<b>Calibration list</b><br><p>
+    <p>
+      O menu <u>Validação</u> exibe a lista das outras calibrações daquela DistoX permitindo que você escolha qual delas validar, clicando em sua entrada.
+    </p>
 
-With the <u>Validation</u> menu you get the list of the other calibrations of that DistoX,
-and you choose which one to validate with, by tapping its entry.<br><p>
+    <h2>
+      Resultado da validação de calibração
+    </h2>
 
-<b>Calibration validation result</b><br><p>
+    <p>
+      A caixa de diálogo de resultado de validação exibe
+    </p>
 
-The validation result dialog displays
-<ul>
-<li>(blue) "accuracy" of the second calibration on the data of this calibration. For each group of data
-the direction of the average of the group data is computed, as well as those of individual data.
-The accuracy is reported as average and std deviation of the difference between the directions
-of individual data and that of the average [degrees]</li>
-<li>(red) "accuracy" of the current calibration on the data of the second calibration.</li>
-<li>(grey) "precision" of the calibrations, measured as average, std deviation and maximum of the angle
-differences between the direction computed with the two calibrations, on the data of both.</li>
-</ul>
-<br><p>
+    <ul>
+      <li>
+        (azul) "acurácia" da segunda calibração em relação aos dados desta calibração.
+        Para cada grupo de dados é calculada a direção da média do grupo, bem como a direção dos dados individuais.
+        A acurácia é relatada como média e desvio padrão da diferença entre as direções dos dados individuais e a da média. [graus]
+      </li>
+      <li>(vermelho) "acurácia" da calibração atual em relação aos dados da segunda calibração.</li>
+      <li>(cinza) "precisão" das calibrações, medida como média, desvio padrão e máximo das diferenças de ângulo entre a direção calculada com as duas calibrações, nos dados de ambas.</li>
+    </ul>
 
-The yellow vertical line marks 0.5&deg;, and the red line 1.0&deg;.<br>
+    <p>
+      A linha vertical amarela marca 0,5° e a linha vermelha 1,0°.
+    </p>
 
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
-</body></html>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-28</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ee553cab2</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
