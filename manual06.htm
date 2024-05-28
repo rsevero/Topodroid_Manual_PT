@@ -1,232 +1,298 @@
 <html>
-<body>
-  <link rel="stylesheet" href="manual.css">
-  <h2>[6] TELA DADOS TOPO</h2>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>[6] TELA DADOS TOPO</h1>
 
-  <p>A <u>tela dados topo</u> apresenta a relação de medidas da topo.</p>
+    <p>
+      A <u>tela dados topo</u> apresenta a relação de medidas da topo.
+    </p>
 
-  <p>O título apresenta o nome da topo e, se estiver com a configuração <u>Tipo de Conexão DistoX</u> em modo "multi", o dispositivo ativo no momento.
-  A cor do título indica o método atual para <a href="page_station_policy.htm">nomear bases</a>:</p>
+    <p>
+      O título apresenta o nome da topo e, se estiver com a configuração <u>Tipo de Conexão DistoX</u> em modo "multi", o dispositivo ativo no momento.
+      A cor do título indica o método atual para <a href="page_station_policy.htm">nomear bases</a>:
+    </p>
 
-  <ul>
-    <li>azul: método "Aux, visada" ou "Visada, aux".
-    Visadas para frente.</li>
-    <li>azul escuro: método "Aux, contra" ou "Contra, aux".
-    Visadas para trás.</li>
-    <li>rosa: método "Tripé".</li>
-    <li>violeta: método "Contra, aux, visada".
-    Visada para trás mais visada para frente.</li>
-    <li>vermelho: método "Anomalia magnética".</li>
-    <li>laranja: método "TopoRobot".</li>
-  </ul>
+    <ul>
+      <li>azul: método "Aux, visada" ou "Visada, aux".
+      Visadas para frente.</li>
+      <li>azul escuro: método "Aux, contra" ou "Contra, aux".
+      Visadas para trás.</li>
+      <li>rosa: método "Tripé".</li>
+      <li>violeta: método "Contra, aux, visada".
+      Visada para trás mais visada para frente.</li>
+      <li>vermelho: método "Anomalia magnética".</li>
+      <li>laranja: método "TopoRobot".</li>
+    </ul>
 
-  <p>Algumas características das medidas obtidas são indicadas através das cores de fundo e de texto dos dados da medida e dos nomes das bases.</p>
+    <p>
+      Algumas características das medidas obtidas são indicadas através das cores de fundo e de texto dos dados da medida e dos nomes das bases.
+    </p>
 
-  <p>O TopoDroidX distingue quatro tipos de medidas através de diferentes cores: "visada", "visada repetida", "auxiliar" e "em branco".
-  As medidas auxiliares podem ser classificadas em "seção" (X), horizontal (H), vertical (V) e "scan" (medidas obtidas no modo scan).
-  <a href="page_shot_edit1.htm">Tipos medidas auxiliares</a> X-H-V são desabilitadas por padrão [T].</p>
+    <p>
+      O TopoDroidX distingue quatro tipos de medidas através de diferentes cores: "visada", "visada repetida", "auxiliar" e "em branco".
+      As medidas auxiliares podem ser classificadas em "seção" (X), horizontal (H), vertical (V) e "scan" (medidas obtidas no modo scan).
+      <a href="page_shot_edit1.htm">Tipos medidas auxiliares</a> X-H-V são desabilitadas por padrão [T].
+    </p>
 
-  <p>Cores do texto dos dados das medidas:</p>
-  <ol>
-    <li>[branco] "visada" (a primeira medida de um grupo de medidas repetidas): esta medida tem tanto a base DE como a base PARA definidos.</li>
-    <li>[cinza] "visada repetida" (as medidas seguintes de um grupo de medidas repetidas): estas medidas não precisam ter suas bases definidas.</li>
-    <li>[azul] "auxiliar": só tem uma base definida, normalmente a base DE.</li>
-    <li>[verde] "auxiliar" (X).</li>
-    <li>[azul escuro] "auxiliar" (H/V).</li>
-    <li>[verde claro] "auxiliar" scan</li>
-    <li>[laranja] bases "em branco", ou seja, possui dados, mas não tem nenhuma de suas bases definidas.</li>
-    <li>[amarelo]: contravisada (método "Contra, aux, visada")</li>
-    <li>[violeta]: visada vazia, ou seja, que não possui dados.</li>
-  </ol>
-  <p>
+    <h2>
+      Cores do texto dos dados das medidas
+    </h2>
+    <ol>
+      <li>[branco] "visada" (a primeira medida de um grupo de medidas repetidas): esta medida tem tanto a base DE como a base PARA definidos.</li>
+      <li>[cinza] "visada repetida" (as medidas seguintes de um grupo de medidas repetidas): estas medidas não precisam ter suas bases definidas.</li>
+      <li>[azul] "auxiliar": só tem uma base definida, normalmente a base DE.</li>
+      <li>[verde] "auxiliar" (X).</li>
+      <li>[azul escuro] "auxiliar" (H/V).</li>
+      <li>[verde claro] "auxiliar" scan</li>
+      <li>[laranja] bases "em branco", ou seja, possui dados, mas não tem nenhuma de suas bases definidas.</li>
+      <li>[amarelo]: contravisada (método "Contra, aux, visada")</li>
+      <li>[violeta]: visada vazia, ou seja, que não possui dados.</li>
+    </ol>
 
-  <p>Cores de fundo dos dados das medidas:</p>
+    <h2>
+      Cores de fundo dos dados das medidas
+    </h2>
 
-  <ul>
-    <li>[avermelhado] medidas <a href="page_accuracy.htm">não confiáveis</a>, ou seja, medidas com valores anormais em algum dos campos (somente DistoX).</li>
-    <li>[laranja] medida curta</li>
-    <li>[cinza] medida comentada</li>
-  </ul>
+    <ul>
+      <li>[avermelhado] medidas <a href="page_accuracy.htm">não confiáveis</a>, ou seja, medidas com valores anormais em algum dos campos (somente DistoX).</li>
+      <li>[laranja] medida curta</li>
+      <li>[cinza] medida comentada</li>
+    </ul>
 
-  <p>Cor do texto do nome da base:</p>
-  <ul>
-    <li>[verde claro] base ativa no momento.</li>
-  </ul>
+    <h2>
+      Cor do texto do nome da base
+    </h2>
 
-  <p>Cor de fundo do nome da base:</p>
-  <ul>
-    <li>[verde escuro] últimas medidas baixadas.</li>
-    <li>[cinza] medida produzida no modo "multishot".</li>
-    <li>[amarelo escuro] dados de contravisada da DistoX.</li>
-  </ul>
+    <ul>
+      <li>[verde claro] base ativa no momento.</li>
+    </ul>
 
-  <p><img src="shots_list.png" alt="shots list" /></p>
+    <h2>
+      Cor de fundo do nome da base
+    </h2>
 
-  <h3>Nomes de bases</h3>
+    <ul>
+      <li>[verde escuro] últimas medidas baixadas.</li>
+      <li>[cinza] medida produzida no modo "multishot".</li>
+      <li>[amarelo escuro] dados de contravisada da DistoX.</li>
+    </ul>
 
-  <p>Os nomes das bases são propriedades da medida assim como o azimute e a distância. 
-  Ao contrário destas, entretanto, os nomes das bases são usados para unir as visadas para formar a linha de trena.
-  Isso afeta tanto a linha de trena quando os croquis.</p>
+    <p><img src="shots_list.png" alt="shots list" /></p>
 
-  <p>Quando o nome de uma base é alterado, a linha de trena também pode sofrer modificações.</p>
+    <h2>
+      Nomes de bases
+    </h2>
 
-  <p>Se a base tiver um corte anexado, ele é desconectado da linha de trena e pode ser posteriormente anexado a outra base.</p>
+    <p>
+      Os nomes das bases são propriedades da medida assim como o azimute e a distância.
+      Ao contrário destas, entretanto, os nomes das bases são usados para unir as visadas para formar a linha de trena.
+      Isso afeta tanto a linha de trena quando os croquis.
+    </p>
 
-  <p>Um croqui (planta baixa ou perfil) pode ser desconectado da linha de trena se o nome da sua "base referência" for alterada.</p>
+    <p>
+      Quando o nome de uma base é alterado, a linha de trena também pode sofrer modificações.
+    </p>
 
-  <h3>AÇÕES</h3>
-  <ul>
-    <li>um clique simples nos dados da medida abre a <a href="page_shot_edit1.htm">caixa de edição</a>.</li>
-    <li>um clique simples na base: mostra/esconde as medidas auxiliares da base (apenas se estiver desmarcada “Medidas auxiliares” na opção de visualização).</li>
-    <li>um clique longo na base: seleciona/deseleciona a <a href="page_current.htm">base ativa</a>.</li>
-  </ul>
+    <p>
+      Se a base tiver um corte anexado, ele é desconectado da linha de trena e pode ser posteriormente anexado a outra base.
+    </p>
 
-  <h3>BOTÕES</h3>
-  <ul>
-    <li><img src="btn_download.png" class="app_button"> <a href="page_download.htm">Download</a> de dados</li>
-    <li><img src="btn_bluetooth.png" class="app_button"> <a href="page_bluetooth.htm">Bluetooth</a></li>
-    <li><img src="btn_mode.png" class="app_button"> <a href="page_displaymode.htm">Quais medidas apresentar</a></li>
-    <li><img src="btn_sketch.png" class="app_button"> <a href="page_plot_list.htm">Croquis</a></li>
-    <li><img src="btn_note.png" class="app_button"> <a href="page_survey_notes.htm">Comentários</a> sobre a topo</li>
-    <li><img src="btn_plus.png" class="app_button"> Inserir uma medida <a href="page_man_data.htm">manualmente</a></li>
-    <li><img src="btn_station.png" class="app_button"> <a href="page_saved_station.htm">Bases gravadas</a></li>
-    <li><img src="btn_azimuth.png" class="app_button"> <a href="page_azimuth.htm">Direção no perfil retificado</a></li>
-    <li><img src="btn_search.png" class="app_button"> <a href="page_search.htm">Pesquisa de bases e visadas</a></li>
-    <li><img src="btn_refresh.png" class="app_button"> "Atualizar" relação de medidas</li>
-  </ul>
+    <p>
+      Um croqui (planta baixa ou perfil) pode ser desconectado da linha de trena se o nome da sua "base referência" for alterada.
+    </p>
 
-  <p><b>Cliques longos:</b></p>
-  <ul>
-    <li>"Download": troca o dispositivo de medida (somente com o tipo de conexão "multi" para a DistoX).</li>
-    <li>"Croqui": abre imediatamente o último croqui utilizado.</li>
-    <li>"Dados manuais": entrada dos dados de calibração dos instrumentos.</li>
-    <li>"Pesquisa": segue para o próximo resultado.</li>
-  </ul>
+    <h2>
+      Ações
+    </h2>
 
-  <p>Botões apresentados no modo multisseleção:</p>
-  <ul>
-    <li><img src="btn_left.png" class="app_button"> Define a direção das bases no perfil retificado para a <i>esquerda</i>.</li>
-    <li><img src="btn_multishot_flip_extend.png" class="app_button"> Inverte a direção das bases no perfil retificado.</li>
-    <li><img src="btn_right.png" class="app_button"> Define a direção das bases no perfil retificado para a <i>direita</i>.
-    </li>
-    <li><img src="btn_multishot_special_actions.png" class="app_button"> Ações especiais. [T]</li>
-    <li><img src="btn_multiselection_delete.png" class="app_button"> <i>Apaga</i> as medidas e as armazena no registro de medidas apagadas.
-    Alerta: as medidas auxiliares atreladas a uma base apagada são também apagadas.</li>
-    <li><img src="btn_multiselection_cut.png" class="app_button"> <i>Copia</i> as medidas e as armazena no registro temporário de medidas.</li>
-    <li><img src="btn_clear.png" class="app_button"> <i>Fecha</i> o modo multisseleção.</li>
-  </ul>
+    <ul>
+      <li>um clique simples nos dados da medida abre a <a href="page_shot_edit1.htm">caixa de edição</a>.</li>
+      <li>um clique simples na base: mostra/esconde as medidas auxiliares da base (apenas se estiver desmarcada “Medidas auxiliares” na opção de visualização).</li>
+      <li>um clique longo na base: seleciona/deseleciona a <a href="page_current.htm">base ativa</a>.</li>
+    </ul>
 
-  <h3>Caixa de diálogo Desenhos</h3>
-  <p>Através da caixa de diálogo <u>Desenhos</u> você pode criar um novo croqui ou abrir um croqui pré-existente.
-  Há um botão para a criação de um novo croqui e uma relação com duas colunas dos croquis já criados.
-  Os itens na coluna da esquerda abrem as plantas baixas e os da direita abrem os perfis.
-  Você pode mudar de um croqui para outro dentro da tela <u>Desenho</u>.
-  </p>
+    <h2>
+      Botões
+    </h2>
 
-  <h3>MENUS</h3>
-  <ul>
-    <li><u>Fechar</u>: fecha a topo atual</li>
-    <li><u>Info topo</u>: abre a tela de informações sobre a topo</li>
-    <li><u>Restaurar/colar</u>: <a href="page_undelete.htm">restaurar</a> ou <u>colar</u> item apagado (medida ou croqui) [N]/[E]</li>
-    <li><u>Foto</u>: fotos armazenadas nesta topo [A]</li>
-    <li><u>Áudio</u>: áudios armazenados nesta topo [T]</li>
-    <li><u>Sensor</u>: dados de sensores diversos armazenados nesta topo [E]</li>
-    <li><u>3D</u>: <a href="manual15.htm">Visualizador 3D</a> [N]</li>
-    <li><u>Dispositivo</u>: abre a tela dispositivos</li>
-    <li><u>Configurações</u></li>
-    <li><u>Ajuda</u> [N]</li>
-  </ul>
+    <ul>
+      <li><img src="btn_download.png" class="app_button"> <a href="page_download.htm">Download</a> de dados</li>
+      <li><img src="btn_bluetooth.png" class="app_button"> <a href="page_bluetooth.htm">Bluetooth</a></li>
+      <li><img src="btn_mode.png" class="app_button"> <a href="page_displaymode.htm">Quais medidas apresentar</a></li>
+      <li><img src="btn_sketch.png" class="app_button"> <a href="page_plot_list.htm">Croquis</a></li>
+      <li><img src="btn_note.png" class="app_button"> <a href="page_survey_notes.htm">Comentários</a> sobre a topo</li>
+      <li><img src="btn_plus.png" class="app_button"> Inserir uma medida <a href="page_man_data.htm">manualmente</a></li>
+      <li><img src="btn_station.png" class="app_button"> <a href="page_saved_station.htm">Bases gravadas</a></li>
+      <li><img src="btn_azimuth.png" class="app_button"> <a href="page_azimuth.htm">Direção no perfil retificado</a></li>
+      <li><img src="btn_search.png" class="app_button"> <a href="page_search.htm">Pesquisa de bases e visadas</a></li>
+      <li><img src="btn_refresh.png" class="app_button"> "Atualizar" relação de medidas</li>
+    </ul>
 
-  <h3>CONFIGURAÇÕES TOPO</h3>
-  <ul>
-    <li><i>Equipe</i>: a equipe padrão de topo. Este valor é usado como valor inicial do campo "Equipe" quando você cria uma nova topo.
-    Inclua o seu nome e os dos espeleólogos com quem costuma mapear. [padrão vazio]</li>
-    <li><i>Nomear bases</i>: seleciona o <a href="page_station_policy.htm">método automático de nomeamento de bases.</a> [padrão "Aux, visada"]</li>
-    <li><i>Tipo nome base</i> define o tipo de nomes de bases: "alfanumérico" ou "numérico" [padrão "alfanumérico"]</li>
-    <li><i>Nome base inicial</i>: o nome inicial padrão novas topos. Pode ser alterado na caixa de diálogo <i>Nova topo</i>. [padrão "0"]</li>
-    <li><i>Tamanho miniaturas</i>: tamanho das fotos miniaturas [padrão 200, mín 80, máx 400] [A]</li>
-    <li><i>Base editável</i>: define se os nomes das bases são editáveis na relação de medidas [padrão "não"] [E]</li>
-    <li><i>Formato exportação dados</i>: formato padrão de exportação de dados [padrão "nenhum"]</li>
-    <li><i>Origem fixa croqui</i>: define se a mesma base de origem será sugerida para todos os croquis ou não [padrão "não"]</li>
-    <li><i>Cortes compartilhados</i>: define se os cortes das bases devem ser compartilhados entre croquis [padrão "não"]</li>
-    <li><i>UNIDADES</i>
-      <ul>
-        <li><i>Unidade distância</i>: "metros" ou "pés" [padrão "metros"]</li>
-        <li><i>Unidade ângulo</i>: "graus" ou "grados" [padrão "graus"]</li>
-        <li><i>Unidade grade croqui</i>: tamanho da célula da grade dos croquis: "metros", "jardas", "2 pés" ou "0,1 metro" [padrão "metros"]</li>
-        <li><i>Unidade régua</i>: a mesma da célula da grade dos croquis ("célula grade"), "metros" ou "pés" [padrão "célula grade"]</li>
-      </ul>
-    </li>
-    <li><i>DADOS MEDIDAS</i>
-      <ul>
-        <li><i>Tolerância visadas</i>: o percentual de tolerância angular entre duas medidas consecutivas para criar uma visada [padrão 0,05, mín 0].
-        A tolerância da distância é o produto desta valor e a distância.</li>
-        <li><i>Compr máx medida</i>: medidas mais longas são marcadas como apagadas [padrão 50 m, mín 20 m]</li>
-        <li><i>Compr mín medida</i>: medidas mais curtas são apresentadas com um fundo laranja [padrão 0 m]</li>
-        <li><i>Qt mín medidas/visada</i>: quantidade mínima de medidas consecutivas similares para que uma nova base seja criada automaticamente [padrão 3, mín 2, máx 4] [E]</li>
-        <li><i>Lim vert aux</i>: diferença máxima do azimute da medida em relação à direção da normal do azimute de referência para que a visada tenha sua <a href="page_azimuth.htm">direção no perfil retificado</a> definida automaticamente como vertical. [padrão 10, mín 0, máx 90] [N]</li>
-        <li><i>Lim inclin OLNS</i>: (Therion "vthreshold") - limite para identificação de medidas auxiliares como Oeste-Leste-Norte-Sul (OLNS): inclinação maior do que este valor será considerada OLNS [padrão 80, mín 0, máx 90] [N]</li>
-        <li><i>Ref fixa retif perfil</i>: ou fixa ou relativiza em relação ao azimute da <a href="page_azimuth.htm">referência do perfil retificado</a> [padrão "relativa" (desligado)] [A]</li>
-        <li>define se os <i>botões "Ant/Próx"</i> devem ser apresentados na caixa de diálogo de medidas [padrão "sim"] [A]</li>
-        <li><i>Contravisada</i>: define se os campos de contra azimute e inclinação invertida serão apresentados na caixa de diálogo de inserção manual de medidas [N] [padrão "não"] [A]</li>
-        <li><i>Aviso visada</i>: tipo de aviso usado ao reconhecer automaticamente visada: "nenhum", "som" ou "vibração" [padrão "nenhum"] [N]</li>
-        <li><i>Contra visada DistoX</i>: Para quando a DistoX estiver no modo "contra visada" [padrão "não"] [N]</li>
-      </ul>
-    </li>
-    <li><i><a href="page_fixed_list.htm">LOCALIZAÇÃO</a></i></li>
-    <li><i><a href="page_accuracy.htm">ACURÁCIA</a></i></li>
-  </ul>
+    <h3>
+      Cliques longos
+    </h3>
 
-  <p style="font-size:90%">
-    <a href="page_geek.htm">Especiais</a>: <i>Medidas recentes e seu limite de tempo</i>, <i>Medidas parcial em perfis retificados</i>, <i>Classes de medidas auxiliares e suas cores</i>, <i>Modo mergulho</i>, <i>Sensores</i> e:</p>
+    <ul>
+      <li>"Download": troca o dispositivo de medida (somente com o tipo de conexão "multi" para a DistoX).</li>
+      <li>"Croqui": abre imediatamente o último croqui utilizado.</li>
+      <li>"Dados manuais": entrada dos dados de calibração dos instrumentos.</li>
+      <li>"Pesquisa": segue para o próximo resultado.</li>
+    </ul>
 
-  <ul>
-    <li><i>Fechamento poligonal</i>: compensação de erro de fechamento de poligonais. É recomendável não ativar esse recurso para que você consiga ver no croqui os erros de fechamento e, eventualmente, corrigí-los ainda na caverna [padrão "nenhum"] [N]</li>
-    <li><i>Temporização medida</i>: segundos de espera antes de capturar a medida [padrão 10, mín 0] [N]</li>
-    <li><i>Bip temporizador</i>: percentual de volume do bip do temporizador [N] [padrão 50, mín 10, máx 100] [N]</li>
-  </ul>
+    <h3>
+      Botões apresentados no modo multisseleção
+    </h3>
 
-  <p>Para sair da tela de dados topo, dê um clique duplo no botão <i>VOLTAR</i> de seu aparelho Android.</p>
+    <ul>
+      <li><img src="btn_left.png" class="app_button"> Define a direção das bases no perfil retificado para a <i>esquerda</i>.</li>
+      <li><img src="btn_multishot_flip_extend.png" class="app_button"> Inverte a direção das bases no perfil retificado.</li>
+      <li><img src="btn_right.png" class="app_button"> Define a direção das bases no perfil retificado para a <i>direita</i>.
+      </li>
+      <li><img src="btn_multishot_special_actions.png" class="app_button"> Ações especiais. [T]</li>
+      <li><img src="btn_multiselection_delete.png" class="app_button"> <i>Apaga</i> as medidas e as armazena no registro de medidas apagadas.
+      Alerta: as medidas auxiliares atreladas a uma base apagada são também apagadas.</li>
+      <li><img src="btn_multiselection_cut.png" class="app_button"> <i>Copia</i> as medidas e as armazena no registro temporário de medidas.</li>
+      <li><img src="btn_clear.png" class="app_button"> <i>Fecha</i> o modo multisseleção.</li>
+    </ul>
 
-  <p>Se o backup automático estiver habilitado e o formato de dados padrão estiver definido, os dados serão automaticamente exportados quando a tela de dados topo for fechada.</p>
+    <h2>
+      Caixa de diálogo Desenhos
+    </h2>
 
-  <p><b>Alerta</b></p>
+    <p>
+      Através da caixa de diálogo <u>Desenhos</u> você pode criar um novo croqui ou abrir um croqui pré-existente.
+      Há um botão para a criação de um novo croqui e uma relação com duas colunas dos croquis já criados.
+      Os itens na coluna da esquerda abrem as plantas baixas e os da direita abrem os perfis.
+      Você pode mudar de um croqui para outro dentro da tela <u>Desenho</u>.
+    </p>
 
-  <p>A primeira linha de dados pode não ser atualizada depois de uma edição ou um clique devido a um problema do Android.
-  O botão "Atualizar" pode ser usado para pedir que a relação seja redesenhada nesses casos.</p>
+    <h2>
+      Menu
+    </h2>
 
-  <p><b>Compensação fechamento poligonal</b></p>
+    <ul>
+      <li><u>Fechar</u>: fecha a topo atual</li>
+      <li><u>Info topo</u>: abre a tela de informações sobre a topo</li>
+      <li><u>Restaurar/colar</u>: <a href="page_undelete.htm">restaurar</a> ou <u>colar</u> item apagado (medida ou croqui) [N]/[E]</li>
+      <li><u>Foto</u>: fotos armazenadas nesta topo [A]</li>
+      <li><u>Áudio</u>: áudios armazenados nesta topo [T]</li>
+      <li><u>Sensor</u>: dados de sensores diversos armazenados nesta topo [E]</li>
+      <li><u>3D</u>: <a href="manual15.htm">Visualizador 3D</a> [N]</li>
+      <li><u>Dispositivo</u>: abre a tela dispositivos</li>
+      <li><u>Configurações</u></li>
+      <li><u>Ajuda</u> [N]</li>
+    </ul>
 
-  <p>É recomendável não ativar o recurso de compensação de fechamento de poligonal para que eventuais erros de fechamento possam ser visualizados e corrigidos ainda na cavidade.
-  Essa é a configuração padrão.</p>
+    <h2>
+      Configurações topo
+    </h2>
 
-  <p>De qualquer maneira o TopoDroidX implementa alguns métodos de compensação de erros de fechamento de poligonais:</p>
+    <ul>
+      <li><i>Equipe</i>: a equipe padrão de topo. Este valor é usado como valor inicial do campo "Equipe" quando você cria uma nova topo.
+      Inclua o seu nome e os dos espeleólogos com quem costuma mapear. [padrão vazio]</li>
+      <li><i>Nomear bases</i>: seleciona o <a href="page_station_policy.htm">método automático de nomeamento de bases.</a> [padrão "Aux, visada"]</li>
+      <li><i>Tipo nome base</i> define o tipo de nomes de bases: "alfanumérico" ou "numérico" [padrão "alfanumérico"]</li>
+      <li><i>Nome base inicial</i>: o nome inicial padrão novas topos. Pode ser alterado na caixa de diálogo <i>Nova topo</i>. [padrão "0"]</li>
+      <li><i>Tamanho miniaturas</i>: tamanho das fotos miniaturas [padrão 200, mín 80, máx 400] [A]</li>
+      <li><i>Base editável</i>: define se os nomes das bases são editáveis na relação de medidas [padrão "não"] [E]</li>
+      <li><i>Formato exportação dados</i>: formato padrão de exportação de dados [padrão "nenhum"]</li>
+      <li><i>Origem fixa croqui</i>: define se a mesma base de origem será sugerida para todos os croquis ou não [padrão "não"]</li>
+      <li><i>Cortes compartilhados</i>: define se os cortes das bases devem ser compartilhados entre croquis [padrão "não"]</li>
+      <li><i>Unidades</i>
+        <ul>
+          <li><i>Unidade distância</i>: "metros" ou "pés" [padrão "metros"]</li>
+          <li><i>Unidade ângulo</i>: "graus" ou "grados" [padrão "graus"]</li>
+          <li><i>Unidade grade croqui</i>: tamanho da célula da grade dos croquis: "metros", "jardas", "2 pés" ou "0,1 metro" [padrão "metros"]</li>
+          <li><i>Unidade régua</i>: a mesma da célula da grade dos croquis ("célula grade"), "metros" ou "pés" [padrão "célula grade"]</li>
+        </ul>
+      </li>
+      <li><i>Dados medidas</i>
+        <ul>
+          <li><i>Tolerância visadas</i>: o percentual de tolerância angular entre duas medidas consecutivas para criar uma visada [padrão 0,05, mín 0].
+          A tolerância da distância é o produto desta valor e a distância.</li>
+          <li><i>Compr máx medida</i>: medidas mais longas são marcadas como apagadas [padrão 50 m, mín 20 m]</li>
+          <li><i>Compr mín medida</i>: medidas mais curtas são apresentadas com um fundo laranja [padrão 0 m]</li>
+          <li><i>Qt mín medidas/visada</i>: quantidade mínima de medidas consecutivas similares para que uma nova base seja criada automaticamente [padrão 3, mín 2, máx 4] [E]</li>
+          <li><i>Lim vert aux</i>: diferença máxima do azimute da medida em relação à direção da normal do azimute de referência para que a visada tenha sua <a href="page_azimuth.htm">direção no perfil retificado</a> definida automaticamente como vertical. [padrão 10, mín 0, máx 90] [N]</li>
+          <li><i>Lim inclin OLNS</i>: (Therion "vthreshold") - limite para identificação de medidas auxiliares como Oeste-Leste-Norte-Sul (OLNS): inclinação maior do que este valor será considerada OLNS [padrão 80, mín 0, máx 90] [N]</li>
+          <li><i>Ref fixa retif perfil</i>: ou fixa ou relativiza em relação ao azimute da <a href="page_azimuth.htm">referência do perfil retificado</a> [padrão "relativa" (desligado)] [A]</li>
+          <li>define se os <i>botões "Ant/Próx"</i> devem ser apresentados na caixa de diálogo de medidas [padrão "sim"] [A]</li>
+          <li><i>Contravisada</i>: define se os campos de contra azimute e inclinação invertida serão apresentados na caixa de diálogo de inserção manual de medidas [N] [padrão "não"] [A]</li>
+          <li><i>Aviso visada</i>: tipo de aviso usado ao reconhecer automaticamente visada: "nenhum", "som" ou "vibração" [padrão "nenhum"] [N]</li>
+          <li><i>Contra visada DistoX</i>: Para quando a DistoX estiver no modo "contra visada" [padrão "não"] [N]</li>
+        </ul>
+      </li>
+      <li><i><a href="page_fixed_list.htm">Localização</a></i></li>
+      <li><i><a href="page_accuracy.htm">Acurácia</a></i></li>
+      <li><a href="page_geek.htm">Especiais</a>
+        <ul>
+          <li><i>Medidas recentes e seu limite de tempo</i></li>
+          <li><i>Medidas parcial em perfis retificados</i></li>
+          <li><i>Classes de medidas auxiliares e suas cores</i></li>
+          <li><i>Modo mergulho</i></li>
+          <li><i>Sensores</i></li>
+          <li><i>Fechamento poligonal</i>: compensação de erro de fechamento de poligonais. É recomendável não ativar esse recurso para que você consiga ver no croqui os erros de fechamento e, eventualmente, corrigí-los ainda na caverna [padrão "nenhum"] [N]</li>
+          <li><i>Temporização medida</i>: segundos de espera antes de capturar a medida [padrão 10, mín 0] [N]</li>
+          <li><i>Bip temporizador</i>: percentual de volume do bip do temporizador [N] [padrão 50, mín 10, máx 100] [N]</li>
+        </ul>
+      </li>
+    </ul>
 
-  <ul>
-    <li>"Normal" [E]: distribui os erros em todos os trechos que compõem a poligonal.</li>
-    <li>"Proporcional" [E]: os erros são distribuídos proporcionalmente a "relevância" dos trechos.</li>
-    <li>"Seletiva" [T]: a compensação só é aplicada nas poligonais cujo erro seja menor que um determinado percentual (opção "Limite poligonal") do comprimento total da poligonal.
-    As poligonais cujo limite esteja acima do limite serão apresentadas em violeta. </li>
-    <li>"Triângulos" [T]: é baseado em <a href="page_trilateration.htm">trilateração</a></li>
-  </ul>
+    <p>
+      Para sair da tela de dados topo, dê um clique duplo no botão <i>VOLTAR</i> de seu aparelho Android.
+    </p>
 
-<div style="float: left; margin-bottom: 10pt;">
-    <div>
-        <a href="manual05.htm">&lt; Dados Calibração</a> |
-        <a href="manual07.htm">Medidas Topo &gt;</a>
+    <p>
+      Se o backup automático estiver habilitado e o formato de dados padrão estiver definido, os dados serão automaticamente exportados quando a tela de dados topo for fechada.
+    </p>
+
+    <h2>
+      Alerta
+    </h2>
+
+    <p>
+      A primeira linha de dados pode não ser atualizada depois de uma edição ou um clique devido a um problema do Android.
+      O botão "Atualizar" pode ser usado para pedir que a relação seja redesenhada nesses casos.
+    </p>
+
+    <h2>
+      Compensação fechamento poligonal
+    </h2>
+
+    <p>
+      É recomendável não ativar o recurso de compensação de fechamento de poligonal para que eventuais erros de fechamento possam ser visualizados e corrigidos ainda na cavidade.
+      Essa é a configuração padrão.
+    </p>
+
+    <p>
+      De qualquer maneira o TopoDroidX implementa alguns métodos de compensação de erros de fechamento de poligonais:
+    </p>
+
+    <ul>
+      <li>"Normal" [E]: distribui os erros em todos os trechos que compõem a poligonal.</li>
+      <li>"Proporcional" [E]: os erros são distribuídos proporcionalmente a "relevância" dos trechos.</li>
+      <li>"Seletiva" [T]: a compensação só é aplicada nas poligonais cujo erro seja menor que um determinado percentual (opção "Limite poligonal") do comprimento total da poligonal.
+      As poligonais cujo limite esteja acima do limite serão apresentadas em violeta. </li>
+      <li>"Triângulos" [T]: é baseado em <a href="page_trilateration.htm">trilateração</a></li>
+    </ul>
+
+    <div style="float: left; margin-bottom: 10pt;">
+        <div>
+            <a href="manual05.htm">&lt; Dados Calibração</a> |
+            <a href="manual07.htm">Medidas Topo &gt;</a>
+        </div>
+        <div>
+          <a href="manual16.htm">Principais funcionalidades</a> |
+          <a href="manual17.htm">Índice remissivo</a>
+      </div>
     </div>
-    <div>
-      <a href="manual16.htm">Principais funcionalidades</a> |
-      <a href="manual17.htm">Índice remissivo</a>
-  </div>
-</div>
 
-<footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
-  <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-  <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-</footer>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
 
-</body>
+  </body>
 </html>
