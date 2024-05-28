@@ -1,26 +1,39 @@
 <html>
-<body>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Fechamento de poligonal "por triângulos"</h1>
 
-<h3>TRILATERATION</h3>
+    <p>
+      "Trilateração" é um método especial de fechamento de poligonais baseado em triângulos.
+      Seu uso é recomendado em topos curtas em ambientes com anomalias magnéticas pois os azimutes são calculados medindo os comprimentos dos triângulos, confiando no fato de que os ângulos de um triângulo são determinados por seus lados.
+      Os dados de inclinação obtidos pelo dispositivo de medidas são usados para as inclinações.
+    </p>
 
-<div style="font-size=90%">
-Trilateration is a special "loop compensation" applied to triangles.
-It can be used in short surveys in non-uniform magnetic environment
-as the azimuths are computed by measuring the sides of triangles, relying on the fact that
-the angles of a triangle are determined by its sides.
-The values measured by the device are used for the inclinations.
-<br><p>
+    <p>
+      A trilateração é habilitada escolhendo a opção "Por triângulos" na configuração <i>Especiais > Dados topo > Fech poligonal</i>.
+    </p>
 
-Trilateration is enabled by setting the <i>Loop compensation</i> to "Triangles".<br><p>
+    <p>
+      A topo deve ser feita de uma rede (ou escada) de triângulos.
+      Para isso você mede 0-1, 1-2 e 0-2.
+      Daí segue 2-3 e 1-3, e assim por diante.
+    </p>
 
-The survey should be made of a net (or a ladder) of triangles. Therefore you measure 0-1, 1-2, and 0-2;
-then 2-3 and 1-3, and so on.<br><p>
+    <p>
+      O algoritmo de trilateração realiza uma estimativa global para os azimutes sendo, dessa maneira, bastante lento.
+      Portanto, é aconselhável não usá-lo para topos grandes.
+    </p>
 
-The trilateration algorithm carries out a global estimate for the angle azimuths, and is rather slow.
-Therefore it is advisable not to use it for large surveys.
-<br><p>
-</div>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-28</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e513a4eac</span></p>
+        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
 
-</body>
+  </body>
 </html>
