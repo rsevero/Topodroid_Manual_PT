@@ -54,6 +54,47 @@ function carregarHTML($arquivo) {
   return $dom;
 }
 
+function getTerminalWidth() {
+  $output = [];
+  exec('stty size 2>&1', $output);
+
+  if (count($output) > 0 && preg_match('/^\d+\s+(\d+)$/', $output[0], $matches)) {
+    return (int)$matches[1];
+  }
+
+  return 80;
+}
+
+function showProgressBar($done, $total, $availableWidth = 40) {
+  if ($total === 0) return;
+
+  $size = $availableWidth - 20;
+
+  $progress = ($done / $total);
+  $bar = floor($progress * $size);
+
+  $status_bar = "\r[";
+  $status_bar .= str_repeat("=", $bar);
+  if ($bar < $size) {
+    $status_bar .= ">";
+    $status_bar .= str_repeat(" ", $size - $bar);
+  } else {
+    $status_bar .= "=";
+  }
+
+  $percent = number_format($progress * 100, 0);
+
+  $status_bar .= "] $percent%  $done/$total";
+
+  echo "$status_bar  ";
+
+  if ($done === $total) {
+    echo "\n";
+  }
+
+  flush();
+}
+
 function verificarTraducaoAtualizada($arquivo, $commitId) {
   $currentDir = getcwd();
   chdir(ORIGINAL_DIR);
@@ -156,7 +197,17 @@ if (!empty($missingOriginalFiles)) {
   }
 }
 
+$countTranslatedFiles = count($translatedFiles);
+if ($countTranslatedFiles === 0) {
+  echo "No files to check.\n";
+  exit(0);
+}
+
+$countNeedsTranslation = 0;
+$processedFiles = 0;
+$terminalWidth = getTerminalWidth();
 foreach ($translatedFiles as $key => $value) {
+  showProgressBar($processedFiles++, $countTranslatedFiles, $terminalWidth);
   if ($value !== true) {
     continue;
   }
@@ -173,11 +224,13 @@ foreach ($translatedFiles as $key => $value) {
     $translatedFiles[$key] += verificarTraducaoAtualizada($key, $commit);
   }
 }
+showProgressBar($processedFiles, $countTranslatedFiles, $terminalWidth);
 
 foreach ($translatedFiles as $key => $value) {
   if (is_array($value) && key_exists('status', $value) && ($value['status'] === TranslationStatus::OK)) {
     continue;
   }
+  $countNeedsTranslation++;
   echo "File: $key - Status:\n";
   print_r($value);
   if ($value['status'] === TranslationStatus::OUTDATED) {
@@ -185,3 +238,5 @@ foreach ($translatedFiles as $key => $value) {
   }
   echo "\n";
 }
+
+echo "Files that need translation: $countNeedsTranslation\n";
