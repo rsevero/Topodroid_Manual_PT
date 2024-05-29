@@ -25,13 +25,15 @@ function getFilesWithExtension($dir, $extension) {
   if ($handle = opendir($dir)) {
     while (false !== ($file = readdir($handle))) {
       if (pathinfo($file, PATHINFO_EXTENSION) === $extension) {
-        $files[$file] = true;
+        $files[] = $file;
       }
     }
     closedir($handle);
   } else {
     return "Error: Unable to open directory '$dir'.\n";
   }
+  natcasesort($files);
+  $files = array_fill_keys($files, true);
   return $files;
 }
 
