@@ -1,59 +1,85 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h1>Geração de logs</h1>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Geração de logs</h1>
 
-        <p>Arquivos de log são importantes nos momentos em que o app não se comporta conforme esperado.
-        Por exemplo quando o resultado de um cálculo não é igual ao obtido por outros meios ou quando os dados informados pelo usuário não são devidmente reconhecidos.</p>
+    <p>
+      Arquivos de log são importantes nos momentos em que o app não se comporta conforme esperado.
+      Por exemplo quando o resultado de um cálculo não é igual ao obtido por outros meios ou quando os dados informados pelo usuário não são devidmente reconhecidos.
+    </p>
 
-        <p>A geração de arquivos de log é controlada através da opção de menu <u>Log</u> na tela <i>Principal</i>.</p>
+    <p>
+      A geração de arquivos de log é controlada através da opção de menu <u>Log</u> na tela <i>Principal</i>.
+    </p>
 
-The log messages can be sent either to <i>system</i> log-stream,
-or to a log file, which is save in the base TopoDroid folder. 
-The system log  can be inspected from a PC via USB with programs such as "adb".
-The log file can be opened in "append-mode", with log messages appended to the existing logs, or
-"overwrite mode".<br><p>
+    <p>
+      Os arquivos de log podem ser enviados para o log do <i>sistema</i> ou para um arquivo de log, que é salvo na pasta base do TopoDroidX.
+      O log do sistema pode ser inspecionado a partir de um PC via USB com programas como "adb".
+      O arquivo de log pode ser aberto em modo "anexar", com mensagens de log anexadas aos logs existentes, ou em modo de "sobrescrever".
+    </p>
 
-There are several log-flags to limit the logs to those necessary to find the cause of the problem. By default only "error" (i.e., when the program detects something that should not have happened) are logged.<br><p>
+    <p>
+      Existem várias opções de log para limitar os logs àqueles necessários para encontrar a causa do problema.
+      Por padrão, apenas mensagens do tipo "erro" (ou seja, quando o programa detecta algo que não deveria ter acontecido) são registrados.
+    </p>
 
-Logs [E] are different from software crashes. Crashes are due to the program misbehaving in the system, and are detected by the system, that ends the program. You should report crashes (and ANR) via Google Play so that a stack trace is attached and they can be fixed more easily.<br>
+    <p>
+      Os logs [E] são diferentes dos travamentos do software.
+      Os travamentos são devidos ao programa se comportando mal no sistema e são detectados pelo sistema, que encerra o programa.
+      Você deve relatar travamentos (e ANR) através de um email para o desenvolvedor para que um rastreamento de pilha seja anexado e eles possam ser corrigidos mais facilmente.
+    </p>
 
-Refer to TopoDroid website for how to have crashes and ANR reported.<br><p>
+    <p>
+      Consulte o site do TopoDroidX para saber como relatar travamentos e ANR.
+    </p>
 
-<b>Log flags</b><br>
-<ul>
-<li>Debug</li>
-<li>Error</li>
-<li>Main window</li>
-<li>Permissions</li>
-<li>Preferences</li>
-<li>User input</li>
-<li>File paths</li>
-<li>Sketch i/o</li>
-<li>Bluetooth</li>
-<li>BT communication</li>
-<li>BT device</li>
-<li>BT protocol</li>
-<li>Device window</li>
-<li>Calibration</li>
-<li>Database</li>
-<li>Units</li>
-<li>Shot data</li>
-<li>Shot management</li>
-<li>Station namings</li>
-<li>Survey note</li>
-<li>Statistics</li>
-<li>Data reduction</li>
-<li>Fixed points</li>
-<li>Geolocation</li>
-<li>Photo</li>
-<li>Sensors</li>
-<li>Sketches</li>
-<li>Bezier curves</li>
-<li>Therion import/export</li>
-<li>cSurvey export</li>
-<li>PocketTopo import</li>
-<li>ZIP archives</li>
-</ul>
+    <h2>
+      Opções de log
+    </h2>
 
-</body></html>
+    <ul>
+      <li>Debug</li>
+      <li>Error</li>
+      <li>Janela principal</li>
+      <li>Permissões</li>
+      <li>Preferências</li>
+      <li>Entrada do usuário</li>
+      <li>Caminhos de arquivo</li>
+      <li>Entrada/saída de croquis</li>
+      <li>Bluetooth</li>
+      <li>Comunicação BT</li>
+      <li>Dispositivo BT</li>
+      <li>Calibração</li>
+      <li>Banco de dados</li>
+      <li>Unidades</li>
+      <li>Dados de tiro</li>
+      <li>Gerenciamento de tiro</li>
+      <li>Nomes de estações</li>
+      <li>Nota de levantamento</li>
+      <li>Estatísticas</li>
+      <li>Redução de dados</li>
+      <li>Pontos fixos</li>
+      <li>Geolocalização</li>
+      <li>Foto</li>
+      <li>Sensores</li>
+      <li>Croquis</li>
+      <li>Curvas de Bezier</li>
+      <li>Importação/exportação Therion</li>
+      <li>Exportação cSurvey</li>
+      <li>Importação PocketTopo</li>
+      <li>Arquivos ZIP</li>
+    </ul>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-29</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">9cc6e0406</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+    </footer>
+
+  </body>
+</html>
