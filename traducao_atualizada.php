@@ -65,6 +65,8 @@ if (!empty($missingTranslationFiles)) {
 }
 
 if (!empty($missingOriginalFiles)) {
+  $missingOriginalFiles = array_keys($missingOriginalFiles);
+  natcasesort($missingOriginalFiles);
   echo "Translated files without original file:\n";
   foreach ($missingOriginalFiles as $file => $value) {
       echo "  $file\n";
