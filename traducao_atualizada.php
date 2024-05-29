@@ -153,7 +153,7 @@ if ($argc !== 1) {
   exit(1);
 }
 
-$translationDir = realpath(TRANSLATION_DIR);
+$translationDir =  realpath(TRANSLATION_DIR);
 if (DEBUG) {
   echo "Translation directory: '$translationDir'\n";
 }
@@ -235,6 +235,9 @@ foreach ($translatedFiles as $key => $value) {
   print_r($value);
   if ($value['status'] === TranslationStatus::OUTDATED) {
     echo "Git command for changes:\ngit diff " . $value['lastTranslatedCommit'] . ".. $key\n";
+  }
+  else if ($value['status'] === TranslationStatus::UNTRANSLATED) {
+    echo "cp command :\ncp -v $originalDir/$key $translationDir\n";
   }
   echo "\n";
 }
