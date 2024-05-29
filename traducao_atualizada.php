@@ -5,6 +5,15 @@ define('TRANSLATION_DIR', './');
 define('ORIGINAL_DIR', '../topodroid/assets/man/');
 define('MAN_PAGE_EXTENSION', 'htm');
 
+enum TranslationStatus: string
+{
+  case OK = 'OK';
+  case OUTDATED = 'OUTDATED';
+  case MISSING_FILE = 'MISSING_FILE';
+  case UNTRANSLATED = 'UNTRANSLATED';
+  case ERROR = 'ERROR';
+}
+
 function getFilesWithExtension($dir, $extension) {
   if (!is_dir($dir)) {
     return "Error: Directory '$dir' does not exist.\n";
@@ -24,6 +33,25 @@ function getFilesWithExtension($dir, $extension) {
   return $files;
 }
 
+function lerCommit($dom) {
+  $commitElement = $dom->getElementById('last-update-commit');
+  if ($commitElement) {
+      $lastCommit = $commitElement->nodeValue;
+      return $lastCommit;
+  } else {
+      return false;
+  }
+}
+
+function carregarHTML($arquivo) {
+  $html = file_get_contents($arquivo);
+  $dom = new DOMDocument();
+  libxml_use_internal_errors(true);
+  $dom->loadHTML($html);
+  libxml_clear_errors();
+  return $dom;
+
+}
 
 if ($argc !== 1) {
     echo "Usage: traducao_atualizada.php\n";
@@ -61,6 +89,7 @@ if (!empty($missingTranslationFiles)) {
   echo "Files whose translated does not exist:\n";
   foreach ($missingTranslationFiles as $file) {
       echo "  $file\n";
+      $translatedFiles[$file]['status'] = TranslationStatus::MISSING_FILE;
   }
 }
 
@@ -71,4 +100,27 @@ if (!empty($missingOriginalFiles)) {
   foreach ($missingOriginalFiles as $file => $value) {
       echo "  $file\n";
   }
+}
+
+foreach ($translatedFiles as $key => $value) {
+  if ($value !== true) {
+    continue;
+  }
+
+  $dom = carregarHTML($key);
+  $commit = lerCommit($dom);
+
+  $translatedFiles[$key] = [];
+  if ($commit === false) {
+    $translatedFiles[$key]['status'] = TranslationStatus::UNTRANSLATED;
+  }
+  else {
+    $translatedFiles[$key]['commit'] = $commit;
+  }
+}
+
+foreach ($translatedFiles as $key => $value) {
+  echo "File: $key - Status:\n";
+  print_r($value);
+  echo "\n";
 }
