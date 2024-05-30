@@ -197,12 +197,28 @@ function verificarRevisaoAtualizada($arquivo) {
     $translatedFiles[$arquivo]['revisionStatus'] = RevisionStatus::OUTDATED;
     $translatedFiles[$arquivo]['firstCommitForRevision'] =
       getCommitAfterDate($timestampLastUpdate);
+    $translatedFiles[$arquivo]['relevantCommitsForRevision'] = getRelevantCommitsForRevision(
+      $translatedFiles[$arquivo]['firstCommitForRevision'],
+      $arquivo
+    );
   }
+}
+
+function getRelevantCommitsForRevision($firstCommit, $file) {
+  exec("git log $firstCommit..HEAD --format='%h' -- $file", $gitLogOutput, $return_var);
+
+  $commits = [];
+
+  foreach($gitLogOutput as $commit) {
+    $commits[] = $commit;
+  }
+
+  return $commits;
 }
 
 function getCommitAfterDate($timestamp) {
   exec(
-    "git rev-list --all --reverse --after=$timestamp | head -n1",
+    "git rev-list --all --reverse --after=$timestamp | head -n1 | xargs git rev-parse --short",
     $gitLogOutput,
     $return_var
   );
@@ -314,6 +330,37 @@ foreach ($translatedFiles as $key => $value) {
 }
 showProgressBar($processedFiles, $countTranslatedFiles, $terminalWidth);
 
+$countNeedsRevision = 0;
+echo "\n\n----------------------------------------------\n";
+echo "Arquivos que precisam de revisão:\n\n";
+foreach ($translatedFiles as $key => $value) {
+  if (is_array($value)
+    && key_exists('revisionStatus', $value)
+    && ($value['revisionStatus'] === RevisionStatus::OK)) {
+    continue;
+  }
+  $countNeedsRevision++;
+
+  if ($value['revisionStatus'] === RevisionStatus::OUTDATED) {
+    echo "------------------------\n";
+  }
+
+  echo "File: $key - Status: {$value['revisionStatus']->value}\n";
+
+  if ($value['revisionStatus'] === RevisionStatus::OUTDATED) {
+    echo "\nGit command for relevant commits:\ngit log {$value['firstCommitForRevision']}..HEAD --oneline -- $key\n";
+    echo "\nGit commands for changes in each relevant commit:\n";
+    foreach ($value['relevantCommitsForRevision'] as $commit) {
+      echo "git diff $commit^ $commit $key\n";
+    }
+    echo "------------------------\n";
+  }
+  echo "\n";
+}
+
+echo "Files that need revision: $countNeedsRevision\n";
+echo "----------------------------------------------\n\n";
+
 $countNeedsTranslation = 0;
 echo "\n\n----------------------------------------------\n";
 echo "Arquivos que precisam de tradução:\n\n";
@@ -336,25 +383,4 @@ foreach ($translatedFiles as $key => $value) {
 }
 
 echo "Files that need translation: $countNeedsTranslation\n";
-echo "----------------------------------------------\n\n";
-
-$countNeedsRevision = 0;
-echo "\n\n----------------------------------------------\n";
-echo "Arquivos que precisam de revisão:\n\n";
-foreach ($translatedFiles as $key => $value) {
-  if (is_array($value)
-    && key_exists('revisionStatus', $value)
-    && ($value['revisionStatus'] === RevisionStatus::OK)) {
-    continue;
-  }
-  $countNeedsRevision++;
-  echo "File: $key - Status: {$value['revisionStatus']->value}\n";
-
-  if ($value['revisionStatus'] === RevisionStatus::OUTDATED) {
-    echo "Git command for changes:\ngit log {$value['firstCommitForRevision']}..HEAD -- $key\n";
-  }
-  echo "\n";
-}
-
-echo "Files that need revision: $countNeedsRevision\n";
 echo "----------------------------------------------\n\n";
