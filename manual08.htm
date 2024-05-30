@@ -1,98 +1,139 @@
 <html>
-<body>
+  <body>
     <link rel="stylesheet" href="manual.css">
-    <h2>[8] INFO TOPO</h2>
+    <h1>[8] Info topo</h1>
 
-    <p>A opção <i>Info Topo</i> do menu da tela <u>Medidas Topo</u> abre a tela <u>Info Topo</u>.
-    Outra forma de acessá-la é dando um clique longo na linha da topo da tela <u>principal</u>.</p>
+    <p>
+      A opção <i>Info Topo</i> do menu da tela <u>Medidas Topo</u> abre a tela <u>Info Topo</u>.
+      Outra forma de acessá-la é dando um clique longo na linha da topo da tela <u>principal</u>.
+    </p>
 
-    <p>As seguintes informações sobre a topo são apresentadas:</p>
+    <p>
+      As seguintes informações sobre a topo são apresentadas:
+    </p>
+
     <ul>
-        <li>nome (não editável)</li>
-        <li>data</li>
-        <li>equipe: não deve ficar vazia.
+      <li>nome (não editável)</li>
+      <li>data</li>
+      <li>
+        equipe: não deve ficar vazia.
         A caixa de diálogo apresentará um alerta nesse caso ao ser fechada.
         É possível forçar uma equipe vazia tentando fechar a caixa de diálogo um segunda vez.
-        </li>
-        <li>declinação magnética (se definida)</li>
-        <li>descrição</li>
-        <li>indicação de que os cortes são ou não comparttilhados entre oscroquis</li>
-        <li>indica se o modo de dados e o <i>normal</i> ou <i>mergulho</i> [T]
-        </li>
+      </li>
+      <li>declinação magnética (se definida)</li>
+      <li>descrição</li>
+      <li>indicação de que os cortes são ou não comparttilhados entre oscroquis</li>
+      <li>indica se o modo de dados e o <i>normal</i> ou <i>mergulho</i> [T]</li>
     </ul>
 
-    <p>A declinação magnética só pode ser fornecida em graus decimais.
-    O intervalo de valores aceito é [-360&deg;; 360&deg;].
-    Valores fora deste intervalo são considerados "indefinidos".</p>
+    <p>
+      A declinação magnética só pode ser fornecida em graus decimais.
+      O intervalo de valores aceito é [-360&deg;; 360&deg;].
+      Valores fora deste intervalo são considerados "indefinidos".
+    </p>
 
-    <h3>AÇÕES</h3>
+    <h2>
+      Ações
+    </h2>
+
     <ul>
-        <li><img src="btn_note.png" class="app_button"> comentários sobre a topo</li>
-        <li><img src="btn_info.png" class="app_button"> <a href="page_stat1.htm">Resumo topo</a></li>
-        <li><img src="btn_3d.png" class="app_button"> Visualização 3D (Cave3D) [A]</li>
-        <li><img src="btn_gps.png" class="app_button"> <a href="page_fixed_list.htm">pontos georreferenciados</a> [A]</li>
-        <li><img src="btn_photo.png" class="app_button"> lista de fotos.
-            Clique em um item da lista para editar sua descrição ou apagá-la [A]
-        </li>
-        <li><img src="btn_sensor.png" class="app_button"> medidas dos sensores. 
-        Clique em um item para editar seu comentário ou apagar a medida [T]</li>
+      <li><img src="btn_note.png" class="app_button"> comentários sobre a topo</li>
+      <li><img src="btn_info.png" class="app_button"> <a href="page_stat1.htm">Resumo topo</a></li>
+      <li><img src="btn_3d.png" class="app_button"> Visualização 3D (Cave3D) [A]</li>
+      <li><img src="btn_gps.png" class="app_button"> <a href="page_fixed_list.htm">pontos georreferenciados</a> [A]</li>
+      <li>
+        <img src="btn_photo.png" class="app_button"> lista de fotos.
+        Clique em um item da lista para editar sua descrição ou apagá-la [A]
+      </li>
+      <li>
+        <img src="btn_sensor.png" class="app_button"> medidas dos sensores.
+        Clique em um item para editar seu comentário ou apagar a medida [T]
+      </li>
     </ul>
 
-    <h3>MENUS</h3>
+    <h2>
+      Menus
+    </h2>
+
     <ul>
-        <li><u>Fechar</u> </li>
-        <li><u>Exportar</u></li>
-        <li><u>Renomear</u> [T]</li>
-        <li><u>Apagar</u> [A]</li>
-        <li><u>Cor padrão</u>: remove as cores personalizadas das medidas auxiliares [T]</li>
-        <li><a href="page_survey_calib.htm">Ajustes de instrumentos</a> [E]</li>
-        <li><a href="page_calib_check.htm">Verificar calibração</a> [E]</li>
-        <li><u>Configurações</u> (as mesmas da tela <u>Medidas Topo</u>)</li>
-        <li><u>Ajuda</u></li>
+      <li><u>Fechar</u> </li>
+      <li><u>Exportar</u></li>
+      <li><u>Renomear</u> [T]</li>
+      <li><u>Apagar</u> [A]</li>
+      <li><u>Cor padrão</u>: remove as cores personalizadas das medidas auxiliares [T]</li>
+      <li><a href="page_survey_calib.htm">Ajustes de instrumentos</a> [E]</li>
+      <li><a href="page_calib_check.htm">Verificar calibração</a> [E]</li>
+      <li><u>Configurações</u> (as mesmas da tela <u>Medidas Topo</u>)</li>
+      <li><u>Ajuda</u></li>
     </ul>
 
-    <h3>Caixa de diálogo Exportar Topo</h3>
-    <p>A caixa de diálogo de exportação apresenta uma lista suspensa de opções com os formatos de exportação disponíveis: <i>Compass</i>, <i>cSurvey</i>, <i>Survex</i>, <i>PocketTopo</i>, <i>Polygon</i>, <i>GHTopo</i>, <i>Grottolf</i>, <i>Therion</i>, <i>Topo</i>, <i>TopoRobot</i>, <i>VisualTopo</i>, <i>Walls</i> e <i>WinKarst</i>.</p>
+    <h2>
+      Caixa de diálogo Exportar Topo
+    </h2>
 
-    <p>Além disso as medidas da topo podem ser exportadas como <i>DXF (LibreCAD)</i>, arquivo de texto <i>CSV</i> e <i>shapefile (QGIS)</i>.</p>
+    <p>
+      A caixa de diálogo de exportação apresenta uma lista suspensa de opções com os formatos de exportação disponíveis: <i>Compass</i>, <i>cSurvey</i>, <i>Survex</i>, <i>PocketTopo</i>, <i>Polygon</i>, <i>GHTopo</i>, <i>Grottolf</i>, <i>Therion</i>, <i>Topo</i>, <i>TopoRobot</i>, <i>VisualTopo</i>, <i>Walls</i> e <i>WinKarst</i>.
+    </p>
 
-    <p>Se a topo tiver uma base georeferênciada (com coordenadas geográficas registradas)poderá também ser exportada como <i>KML (GoogleEarth)</i>, <i>GeoJSON</i>, <i>OziExplorer</i> e arquivo de <i>trilha</i> (PLT).
-    Estas exportações falharão se nenhuma base da topo estiver georeferênciada.</p>
+    <p>
+      Além disso as medidas da topo podem ser exportadas como <i>DXF (LibreCAD)</i>, arquivo de texto <i>CSV</i> e <i>shapefile (QGIS)</i>.
+    </p>
 
-    <p>Por último você pode exportar um arquivo <i>ZIP</i> que conterá todas as informações da topo.</p>
+    <p>
+      Se a topo tiver uma base georeferênciada (com coordenadas geográficas registradas)poderá também ser exportada como <i>KML (GoogleEarth)</i>, <i>GeoJSON</i>, <i>OziExplorer</i> e arquivo de <i>trilha</i> (PLT).
+      Estas exportações falharão se nenhuma base da topo estiver georeferênciada.
+    </p>
 
-    <p>Existem inúmeras configurações de exportação que controlam a forma como o TopoDroidX traduz os dados da topo para os diversos formatos de exportação.</p>
+    <p>
+      Por último você pode exportar um arquivo <i>ZIP</i> que conterá todas as informações da topo.
+    </p>
 
-    <h3>Caixa de diálogo Apagar [A]</h3>
-    <p>A caixa de diálogo <u>Apagar</u> pede confirmação para apgar a topo.
-    Apagar uma topo é uma ação que não pode ser desfeita: a topo e todas as suas informações associadas (fotos, notas, croqui, etc.), exceto o arquivo zip, são apagadas.
-    Por favor tenha certeza de exportar um backup da topo em formato <i>ZIP</i> antes de apagar uma topo.</p>
+    <p>
+      Existem inúmeras configurações de exportação que controlam a forma como o TopoDroidX traduz os dados da topo para os diversos formatos de exportação.
+    </p>
 
-    <h3>Caixa de diálogo Renomear</h3>
-    <p>Através desta caixa de diálogo você pode renomear uma topo.
-    A ação de renomeação falhará se já houver uma topo com o novo nome proposto.</p>
+    <h2>
+      Caixa de diálogo Apagar [A]
+    </h2>
 
-    <p>As informações no banco de dados, o arquivo de notas, os arquivos binários dos croquis e o diretório de imagens e sons são todos renomeados.
-    Entretanto as referências as seções "scrap" (do Therion) nos croquis só são atualizadas quando cada croqui for aberto novamente.
-    Desta maneira é recomendável abrir e fechar todos os croquis após renomear uma topo.</p>
+    <p>
+      A caixa de diálogo <u>Apagar</u> pede confirmação para apgar a topo.
+      Apagar uma topo é uma ação que não pode ser desfeita: a topo e todas as suas informações associadas (fotos, notas, croqui, etc.), exceto o arquivo zip, são apagadas.
+      Por favor tenha certeza de exportar um backup da topo em formato <i>ZIP</i> antes de apagar uma topo.
+    </p>
+
+    <h2>
+      Caixa de diálogo Renomear
+    </h2>
+
+    <p>
+      Através desta caixa de diálogo você pode renomear uma topo.
+      A ação de renomeação falhará se já houver uma topo com o novo nome proposto.
+    </p>
+
+    <p>
+      As informações no banco de dados, o arquivo de notas, os arquivos binários dos croquis e o diretório de imagens e sons são todos renomeados.
+      Entretanto as referências as seções "scrap" (do Therion) nos croquis só são atualizadas quando cada croqui for aberto novamente.
+      Desta maneira é recomendável abrir e fechar todos os croquis após renomear uma topo.
+    </p>
 
     <div style="float: left; margin-bottom: 10pt;">
-        <div>
-            <a href="manual07.htm">&lt; Medidas Topo</a> |
-            <a href="manual09.htm">Tela Desenho &gt;</a>
-        </div>
-        <div>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </div>
+      <div>
+        <a href="manual07.htm">&lt; Medidas Topo</a> |
+        <a href="manual09.htm">Tela Desenho &gt;</a>
+      </div>
+      <div>
+        <a href="manual16.htm">Principais funcionalidades</a> |
+        <a href="manual17.htm">Índice remissivo</a>
+      </div>
     </div>
-    
+
     <footer style="font-size: 80%; font-style: italic; clear: both;">
-        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
-        <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-        <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
-      
-</body>
+
+  </body>
 </html>
