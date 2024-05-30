@@ -1,65 +1,83 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h1>Inserção de ponto georreferenciado</h1>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Inserção de ponto georreferenciado</h1>
 
-        <p>Essa caixa de diálogo é apresentada ao se clicar no botão <i>Criar</i> <img src="btn_plus.png" class="app_button"> na tela <a href="page_fixed_list.htm">Geopontos</a>.</p>
+    <p>
+      Essa caixa de diálogo é apresentada ao se clicar no botão <i>Criar</i> <img src="btn_plus.png" class="app_button"> na tela <a href="page_fixed_list.htm">Geopontos</a>.
+    </p>
 
-        <p>Essa caixa de diálogo apresenta seis caixas de texto</p>
+    <p>
+      Essa caixa de diálogo apresenta seis caixas de texto
+    </p>
 
-        <ul>
-            <li><b>Base</b>: nome da base a qual se quer associar as coordenadas geográficas</li>
-            <li><b>Longitude</b>: gg:mm:ss.sss</li>
-            <li><b>Latitude</b>: gg:mm:ss.sss</li>
-            <li><b>Alt. geóide</b>: em metros</li>
-            <li><b>Acurácia</b>: em metros</li>
-            <li><b>Comentário</b></li>
-        </ul>
+    <ul>
+      <li><b>Base</b>: nome da base a qual se quer associar as coordenadas geográficas</li>
+      <li><b>Longitude</b>: gg:mm:ss.sss</li>
+      <li><b>Latitude</b>: gg:mm:ss.sss</li>
+      <li><b>Alt. geóide</b>: em metros</li>
+      <li><b>Acurácia</b>: em metros</li>
+      <li><b>Comentário</b></li>
+    </ul>
 
-        <p>O nome da base informado aqui deve ser exatamente igual ao usado na tela <u>Dados topo</u> incluindo o uso de letras maiúsculas e minúsculas.</p>
+    <p>
+      O nome da base informado aqui deve ser exatamente igual ao usado na tela <u>Dados topo</u> incluindo o uso de letras maiúsculas e minúsculas.
+    </p>
 
-        <p>À esquerda do campo <i>Longitude</i> há um botão para definir se a longitude é oriental (à leste, positiva: L) ou ocidental (à oeste, negativa: O). Clicando no botão é alternado entre L e O.</p>
+    <p>
+      À esquerda do campo <i>Longitude</i> há um botão para definir se a longitude é oriental (à leste, positiva: L) ou ocidental (à oeste, negativa: O). Clicando no botão é alternado entre L e O.
+    </p>
 
-        <p>À esquerda do campo <i>Latitude</i> há um botão para definir se a latitude é boreal (à norte, positiva: N) ou austral (à sul, negativa: S). Clicando no botão é alternado entre N e S.</p>
+    <p>
+      À esquerda do campo <i>Latitude</i> há um botão para definir se a latitude é boreal (à norte, positiva: N) ou austral (à sul, negativa: S). Clicando no botão é alternado entre N e S.
+    </p>
 
-        <p>Tanto a longitude quanto a latitude podem ser informadas no formato graus:minutos:segundos (gg:mm:ss.sss) ou no formato de graus decimais (dd.dddddd).
-        Separadores alternativos aos dois pontos também aceitos: espaço, aspas simples e símbolo de grau. Separados alternativos ao ponto decimal também aceitos: vírgula e barra.</p>
+    <p>
+      Tanto a longitude quanto a latitude podem ser informadas no formato graus:minutos:segundos (gg:mm:ss.sss) ou no formato de graus decimais (dd.dddddd).
+      Separadores alternativos aos dois pontos também aceitos: espaço, aspas simples e símbolo de grau. Separados alternativos ao ponto decimal também aceitos: vírgula e barra.
+    </p>
 
-        <p>A longitude e a latitude podem ter sinais negativos.</p>   
+    <p>
+      A longitude e a latitude podem ter sinais negativos.
+    </p>
 
-        <p>Altitudes devem ser informadas em metros em relação à geóide e podem ser negativas.</p>
+    <p>
+      Altitudes devem ser informadas em metros em relação à geóide e podem ser negativas.
+    </p>
 
-        <p>Botões:</p>
+    <h2>
+      Botões
+    </h2>
 
-        <ul>
-            <li>
-                <b>Colar</b>: coordenadas disponíveis na área de tranferência no formato "lat,long[,alt]" são copiadas da área de transferência para os respectivos campos de texto.
-                Com esse botão você pode incluir coordenadas obtidas através do app <i>GPS Test</i>.
-                Verifique a altitude ao transferir as coordenadas do <i>GPS Test</i> para a área de transferência.
-            </li>
-            <li><b>Mapa</b>: abre o app de mapa (assumindo que haja um instalado no dispositivo) para que apresente o ponto.</li>
-            <li>
-                <b>Proj4</b>: abre o app Proj4 através do qual você pode converter coordenadas em outros Sistemas de Referência de Coordenadas (SRC).
-                No Proj4 você deverá selecionar o SRC adequado e informar as coordenadas nos campos da esquerda: longitude/leste, latitude/norte e altura em relação à geóide.
-                As unidades de altitude e coordenadas cartográficas são o metro.
-                As unidades de coordenadas geográficas podem tanto ser graus decimais como graus:minutos:segundos.
-                A seguir clique na seta de conversão para que sejam convertidas para coordenadas geográficas no datum WGS84 e enviadas para o TopoDroidX.
-            </li>
-            <li><b>Gravar</b>: grava os dados de georeferenciamento da base no banco de dados.</li>
-        </ul>
-        
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
+    <ul>
+      <li>
+        <b>Colar</b>: coordenadas disponíveis na área de tranferência no formato "lat,long[,alt]" são copiadas da área de transferência para os respectivos campos de texto.
+        Com esse botão você pode incluir coordenadas obtidas através do app <i>GPS Test</i>.
+        Verifique a altitude ao transferir as coordenadas do <i>GPS Test</i> para a área de transferência.
+      </li>
+      <li><b>Mapa</b>: abre o app de mapa (assumindo que haja um instalado no dispositivo) para que apresente o ponto.</li>
+      <li>
+        <b>Proj4</b>: abre o app Proj4 através do qual você pode converter coordenadas em outros Sistemas de Referência de Coordenadas (SRC).
+        No Proj4 você deverá selecionar o SRC adequado e informar as coordenadas nos campos da esquerda: longitude/leste, latitude/norte e altura em relação à geóide.
+        As unidades de altitude e coordenadas cartográficas são o metro.
+        As unidades de coordenadas geográficas podem tanto ser graus decimais como graus:minutos:segundos.
+        A seguir clique na seta de conversão para que sejam convertidas para coordenadas geográficas no datum WGS84 e enviadas para o TopoDroidX.
+      </li>
+      <li><b>Gravar</b>: grava os dados de georeferenciamento da base no banco de dados.</li>
+    </ul>
 
-        <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-20</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">69a594deb</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-        </footer>
-          
-    </body>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-20</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">69a594deb</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
