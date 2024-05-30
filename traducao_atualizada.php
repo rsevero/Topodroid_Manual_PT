@@ -47,6 +47,13 @@ function lerCommit($dom) {
   }
 }
 
+function getCommit($arquivo) {
+  $dom = carregarHTML($arquivo);
+  $commit = lerCommit($dom);
+
+  return $commit;
+}
+
 function carregarHTML($arquivo) {
   $html = file_get_contents($arquivo);
   $dom = new DOMDocument();
@@ -98,13 +105,18 @@ function showProgressBar($done, $total, $availableWidth = 40) {
 }
 
 function verificarTraducaoAtualizada($arquivo, $commitId) {
+  static $identifiedCommits = [];
+
   $currentDir = getcwd();
   chdir(ORIGINAL_DIR);
-  exec("git cat-file -t $commitId 2>&1", $gitCatFileOutput, $return_var);
-  if ($return_var !== 0) {
 
-    chdir($currentDir);
-    return TranslationStatus::NONEXISTENT_COMMIT;
+  if (!key_exists($commitId, $identifiedCommits)) {
+    exec("git cat-file -t $commitId 2>&1", $gitCatFileOutput, $return_var);
+    if ($return_var !== 0) {
+      chdir($currentDir);
+      return TranslationStatus::NONEXISTENT_COMMIT;
+    }
+    $identifiedCommits[$commitId] = true;
   }
 
   exec("git log --pretty=format:'%H' $commitId.. -- $arquivo", $gitLogOutput, $return_var);
@@ -114,10 +126,8 @@ function verificarTraducaoAtualizada($arquivo, $commitId) {
     return TranslationStatus::MISSING_FILE_IN_GIT;
   }
 
-  $fileChanged = count($gitLogOutput) > 0;
-
   chdir($currentDir);
-  if ($fileChanged) {
+  if (count($gitLogOutput) > 0) {
     return [
       'status' => TranslationStatus::OUTDATED,
     ];
@@ -192,8 +202,7 @@ foreach ($translatedFiles as $key => $value) {
     continue;
   }
 
-  $dom = carregarHTML($key);
-  $commit = lerCommit($dom);
+  $commit = getCommit($key);
 
   $translatedFiles[$key] = [];
   if ($commit === false) {
@@ -207,7 +216,9 @@ foreach ($translatedFiles as $key => $value) {
 showProgressBar($processedFiles, $countTranslatedFiles, $terminalWidth);
 
 foreach ($translatedFiles as $key => $value) {
-  if (is_array($value) && key_exists('status', $value) && ($value['status'] === TranslationStatus::OK)) {
+  if (is_array($value)
+    && key_exists('status', $value)
+    && ($value['status'] === TranslationStatus::OK)) {
     continue;
   }
   $countNeedsTranslation++;
