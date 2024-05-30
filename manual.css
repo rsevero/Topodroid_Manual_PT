@@ -27,3 +27,8 @@ p, ul {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+
+.footnote {
+  font-style: italic;
+  font-size: 90%;
+}
