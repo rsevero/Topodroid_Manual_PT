@@ -4,6 +4,7 @@ define('DEBUG', true);
 define('TRANSLATION_DIR', './');
 define('ORIGINAL_DIR', '../topodroid/assets/man/');
 define('MAN_PAGE_EXTENSION', 'htm');
+define('SECONDS_PER_DAY', 24 * 60 * 60);
 
 enum TranslationStatus: string
 {
@@ -14,6 +15,14 @@ enum TranslationStatus: string
   case UNTRANSLATED = 'UNTRANSLATED';
   case ERROR = 'ERROR';
   case NONEXISTENT_COMMIT = 'NONEXISTENT_COMMIT';
+}
+
+enum RevisionStatus: string
+{
+  case OK = 'OK';
+  case OUTDATED = 'OUTDATED';
+  case MISSING_REVISION = 'MISSING_REVISION';
+  case WAITING_TRANSLATION = 'WAITING_TRANSLATION';
 }
 
 function getFilesWithExtension($dir, $extension) {
@@ -47,11 +56,22 @@ function lerCommit($dom) {
   }
 }
 
-function getCommit($arquivo) {
-  $dom = carregarHTML($arquivo);
-  $commit = lerCommit($dom);
+function lerRevisao($dom) {
+  $revisionElement = $dom->getElementById('revision');
+  if ($revisionElement) {
+    return $revisionElement->nodeValue;
+  } else {
+    return false;
+  }
+}
 
-  return $commit;
+function lerDataUltimaAtualizacao($dom) {
+  $lastUpdateElement = $dom->getElementById('last-update-date');
+  if ($lastUpdateElement) {
+    return $lastUpdateElement->nodeValue;
+  } else {
+    return false;
+  }
 }
 
 function carregarHTML($arquivo) {
@@ -129,13 +149,90 @@ function verificarTraducaoAtualizada($arquivo, $commitId) {
   chdir($currentDir);
   if (count($gitLogOutput) > 0) {
     return [
-      'status' => TranslationStatus::OUTDATED,
+      'translationStatus' => TranslationStatus::OUTDATED,
     ];
   } else {
     return [
-      'status' => TranslationStatus::OK,
+      'translationStatus' => TranslationStatus::OK,
     ];
   }
+}
+
+function readTranslationRevisionData($arquivo) {
+  global $translatedFiles;
+
+  $dom = carregarHTML($arquivo);
+  $commit = lerCommit($dom);
+
+  $translatedFiles[$arquivo] = [];
+  $translatedFiles[$arquivo]['revision'] = lerRevisao($dom);
+  $translatedFiles[$arquivo]['dateLastUpdate'] = lerDataUltimaAtualizacao($dom);
+  $translatedFiles[$arquivo]['lastTranslatedCommit'] = $commit;
+
+  if ($commit === false) {
+    $translatedFiles[$arquivo]['translationStatus'] = TranslationStatus::ERROR;
+    return;
+  }
+}
+
+function verificarRevisaoAtualizada($arquivo) {
+  global $translatedFiles;
+
+  if ($translatedFiles[$arquivo]['translationStatus'] !== TranslationStatus::OK) {
+    $translatedFiles[$arquivo]['revisionStatus'] = RevisionStatus::WAITING_TRANSLATION;
+    return;
+  }
+
+  if ($translatedFiles[$arquivo]['revision'] === false) {
+    $translatedFiles[$arquivo]['revisionStatus'] = RevisionStatus::MISSING_REVISION;
+    return;
+  }
+
+  $timestampLastUpdate = strtotime($translatedFiles[$arquivo]['dateLastUpdate'])
+    + SECONDS_PER_DAY;
+  $timestampLastCommit = getCommitTimestamp($translatedFiles[$arquivo]['lastTranslatedCommit']);
+  if ($timestampLastUpdate >= $timestampLastCommit) {
+    $translatedFiles[$arquivo]['revisionStatus'] = RevisionStatus::OK;
+  } else {
+    $translatedFiles[$arquivo]['revisionStatus'] = RevisionStatus::OUTDATED;
+    $translatedFiles[$arquivo]['firstCommitForRevision'] =
+      getCommitAfterDate($timestampLastUpdate);
+  }
+}
+
+function getCommitAfterDate($timestamp) {
+  exec(
+    "git rev-list --all --reverse --after=$timestamp | head -n1",
+    $gitLogOutput,
+    $return_var
+  );
+
+  if ($return_var !== 0) {
+    return false;
+  }
+
+  return $gitLogOutput[0];
+}
+
+function getCommitTimestamp($commitId) {
+  static $commitTimestamps = [];
+
+  if (key_exists($commitId, $commitTimestamps)) {
+    return $commitTimestamps[$commitId];
+  }
+
+  $currentDir = getcwd();
+  chdir(ORIGINAL_DIR);
+  exec("git show -s --format=%ct $commitId", $gitShowOutput, $return_var);
+  chdir($currentDir);
+
+  if ($return_var !== 0) {
+    return false;
+  }
+
+  $commitTimestamps[$commitId] = (int)$gitShowOutput[0];
+
+  return $commitTimestamps[$commitId];
 }
 
 if ($argc !== 1) {
@@ -174,7 +271,7 @@ if (!empty($missingTranslationFiles)) {
   echo "Files whose translated does not exist:\n";
   foreach ($missingTranslationFiles as $file) {
     echo "  $file\n";
-    $translatedFiles[$file]['status'] = TranslationStatus::MISSING_FILE_IN_DIRECTORY;
+    $translatedFiles[$file]['translationStatus'] = TranslationStatus::MISSING_FILE_IN_DIRECTORY;
   }
 }
 
@@ -193,44 +290,71 @@ if ($countTranslatedFiles === 0) {
   exit(0);
 }
 
-$countNeedsTranslation = 0;
 $processedFiles = 0;
 $terminalWidth = getTerminalWidth();
 foreach ($translatedFiles as $key => $value) {
   showProgressBar($processedFiles++, $countTranslatedFiles, $terminalWidth);
+
+  readTranslationRevisionData($key);
   if ($value !== true) {
     continue;
   }
 
-  $commit = getCommit($key);
+  $commit = $translatedFiles[$key]['lastTranslatedCommit'];
 
-  $translatedFiles[$key] = [];
   if ($commit === false) {
-    $translatedFiles[$key]['status'] = TranslationStatus::UNTRANSLATED;
+    $translatedFiles[$key]['translationStatus'] = TranslationStatus::UNTRANSLATED;
   }
   else {
     $translatedFiles[$key]['lastTranslatedCommit'] = $commit;
     $translatedFiles[$key] += verificarTraducaoAtualizada($key, $commit);
   }
+
+  verificarRevisaoAtualizada($key);
 }
 showProgressBar($processedFiles, $countTranslatedFiles, $terminalWidth);
 
+$countNeedsTranslation = 0;
+echo "\n\n----------------------------------------------\n";
+echo "Arquivos que precisam de tradução:\n\n";
 foreach ($translatedFiles as $key => $value) {
   if (is_array($value)
-    && key_exists('status', $value)
-    && ($value['status'] === TranslationStatus::OK)) {
+    && key_exists('translationStatus', $value)
+    && ($value['translationStatus'] === TranslationStatus::OK)) {
     continue;
   }
   $countNeedsTranslation++;
-  echo "File: $key - Status:\n";
-  print_r($value);
-  if ($value['status'] === TranslationStatus::OUTDATED) {
+  echo "File: $key - Status: {$value['translationStatus']->value}\n";
+
+  if ($value['translationStatus'] === TranslationStatus::OUTDATED) {
     echo "Git command for changes:\ngit diff " . $value['lastTranslatedCommit'] . ".. $key\n";
   }
-  else if ($value['status'] === TranslationStatus::UNTRANSLATED) {
-    echo "cp command :\ncp -v $originalDir/$key $translationDir\n";
+  else if ($value['translationStatus'] === TranslationStatus::UNTRANSLATED) {
+    echo "cp command:\ncp -v $originalDir/$key $translationDir\n";
   }
   echo "\n";
 }
 
 echo "Files that need translation: $countNeedsTranslation\n";
+echo "----------------------------------------------\n\n";
+
+$countNeedsRevision = 0;
+echo "\n\n----------------------------------------------\n";
+echo "Arquivos que precisam de revisão:\n\n";
+foreach ($translatedFiles as $key => $value) {
+  if (is_array($value)
+    && key_exists('revisionStatus', $value)
+    && ($value['revisionStatus'] === RevisionStatus::OK)) {
+    continue;
+  }
+  $countNeedsRevision++;
+  echo "File: $key - Status: {$value['revisionStatus']->value}\n";
+
+  if ($value['revisionStatus'] === RevisionStatus::OUTDATED) {
+    echo "Git command for changes:\ngit log {$value['firstCommitForRevision']}..HEAD -- $key\n";
+  }
+  echo "\n";
+}
+
+echo "Files that need revision: $countNeedsRevision\n";
+echo "----------------------------------------------\n\n";
