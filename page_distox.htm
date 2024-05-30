@@ -34,14 +34,14 @@
 
     <ul>
       <li><i>DIST</i>: ligar dispositivo / ligar laser | medir</li>
-      <li><i>CLR</i>: cancelar opeção atual / desligar laser</li>
+      <li><i>CLR</i>: cancelar operação atual / desligar laser</li>
       <li><i>CLR (2 segundos)</i>: desligar dispositivo</li>
       <li><i>MEM</i>: visualizar medidas em memória</li>
       <li><i>REF</i>: alternar ponto zero da medida de distância</li>
     </ul>
 
     <h2>
-      DistoX2 - X310
+      DistoX2/DistoBLE - X310
     </h2>
 
     <ul>
@@ -55,24 +55,28 @@
       Cliques longos (2 segundos)
     </h3>
 
+    <p>
+      Para acionar as opções que envolvem mais de uma tecla, todas devem ser pressionadas simultaneamente.
+    </p>
+
     <ul>
       <li><i>DIST (laser ligado)</i>: medir</li>
       <li><i>CLR</i>: desligar dispositivo</li>
-      <li><i>CLR+SMART</i>: alternar modo "calibração"</li>
-      <li><i>CLR+MEM</i>: apagar medidas não enviadas</li>
-      <li><i>CLR+FUNC</i>: alternar modo bluetooth</li>
-      <li><i>CLR+MINUS</i>: desligar ativando modo "travado para ligar" (indicado para quando for transportar o dispositivo e quiser diminiur o risco de que ligue sozinha)</li>
+      <li><i>CLR/SMART</i>: alternar modo "calibraçãopage_distox.htm"</li>
+      <li><i>CLR/MEM</i>: apagar medidas não enviadas</li>
+      <li><i>CLR/FUNC</i>: alternar modo bluetooth</li>
+      <li><i>CLR/MINUS</i>: desligar ativando modo "travado para ligar" (indicado para quando for transportar o dispositivo e quiser diminiur o risco de que ligue sozinha)</li>
       <li><i>REF</i>: alterna referência de medida de distância para a frente do dispositivo</li>
-      <li><i>REF+FUNC</i>: alterna referência de medida de distância para a fundo recuado do dispositivo</li>
-      <li><i>REF+PLUS</i>: alterna iluminação de fundo de tela</li>
-      <li><i>REF+MINUS</i>: alterna beep sonoro</li>
+      <li><i>REF/FUNC</i>: alterna referência de medida de distância para a fundo recuado do dispositivo</li>
+      <li><i>REF/PLUS</i>: alterna iluminação de fundo de tela</li>
+      <li><i>REF/MINUS</i>: alterna beep sonoro</li>
       <li><i>MEM</i>: unidade de distância</li>
-      <li><i>MEM+SMART</i>: unidade de ângulos (graus/radianos)</li>
-      <li><i>MEM+FUNC</i>: alterna modo "medir sem armazenar na memória"</li>
-      <li><i>MEM+MINUS</i>: alterna modo contra visada (a partir da firmware versão 2.4)</li>
-      <li><i>SMART+MINUS</i>: alterna verificação de três medidas (a partir da firmware versão 2.4)</li>
+      <li><i>MEM/SMART</i>: unidade de ângulos (graus/radianos)</li>
+      <li><i>MEM/FUNC</i>: alterna modo "medir sem armazenar na memória"</li>
+      <li><i>MEM/MINUS</i>: alterna modo contra visada (a partir da firmware versão 2.4)</li>
+      <li><i>SMART/MINUS</i>: alterna verificação de três medidas (a partir da firmware versão 2.4)</li>
       <li>
-        <i>DIST+PLUS</i>: modo de medição contínua.
+        <i>DIST/PLUS</i>: modo de medição contínua.
         CLEAR desliga este modo. (a partir da firmware versão 2.6)
       </li>
     </ul>
@@ -81,28 +85,44 @@
       Cliques extra longos (5 segundos)
     </h3>
 
+    <p>
+      Para acionar as opções que envolvem mais de uma tecla, todas devem ser pressionadas simultaneamente.
+    </p>
+
     <ul>
-      <li><i>FUNC+SMART</i>: trocar tipo de bateria</li>
-      <li><i>FUNC+CLR+MEM</i>: reiniciar para valores de fábrica</li>
-      <li><i>DIST+PLUS+MINUS (ao ligar)</i>: entrar no modo bootloader</li>
+      <li><i>FUNC/SMART</i>: trocar tipo de bateria</li>
+      <li><i>FUNC/CLR/MEM</i>: reiniciar para valores de fábrica</li>
+      <li><i>DIST/PLUS/MINUS (ao ligar)</i>: entrar no modo bootloader</li>
     </ul>
 
     <h3>
       Informações extras da medidas
     </h3>
 
+    <p>
+      Para visualizar essas informações, use a tecla <i>SMART</i>.
+    </p>
+
     <ol>
       <li>azimute, distância horizontal, distância vertical, distância</li>
       <li>rotação e mergulho</li>
       <li>M e G</li>
-      <li>valores brutos dos acelerômetros internos x,y,z<a href="#footnote-1"><sup>*</sup></a></li>
-      <li>valores brutos dos acelerômetros separados x,y,z<a href="#footnote-1"><sup>*</sup></a></li>
-      <li>valores brutos dos magnetômetros x,y,z<a href="#footnote-1"><sup>*</sup></a></li>
+      <li>valores brutos dos acelerômetros internos x,y,z<span class="superscrit">1</span></li>
+      <li>valores brutos dos acelerômetros separados x,y,z<span class="superscrit">1</span></li>
+      <li>valores brutos dos magnetômetros x,y,z<span class="superscrit">1</span></li>
     </ol>
+
+    <p id="footnote-1" class="footnote">
+      <span class="superscrit">1</span> Não faça medidas neste modo.
+    </p>
 
     <h3>
       Info dispositivo
     </h3>
+
+    <p>
+      Para visualizar essas informações, use a tecla <i>FUNC</i>.
+    </p>
 
     <ol>
       <li>nível da bateria</li>
@@ -117,12 +137,17 @@
     </h2>
 
     <ul>
-      <li><i>AREA (referência no fundo)</i>: apresentação contínua de azimute e inclinação<a href="#footnote-1"><sup>*</sup></a></li>
-      <li><i>AREA+REF (referência frontal)</i>: apresentação contínua de rotação e mergulho<a href="#footnote-1"><sup>*</sup></a></li>
-      <li><i>AREA*2</i>: versão da firmware e número de série</li>
+      <li><i>AREA (referência no fundo)</i>: apresentação contínua de azimute e inclinação<span class="superscrit">2</span></li>
+      <li><i>AREA+REF (referência frontal)</i>: apresentação contínua de rotação e mergulho<span class="superscrit">2</span></li>
+      <li><i>AREA+AREA</i>: versão da firmware e número de série</li>
       <li><i>UNITS</i>: troca luz de fundo</li>
-      <li><i>AREA*2+REF*2+CLR</i>: alterna modo "medir sem armazenar na memória"</li>
+      <li><i>AREA+AREA+REF+REF+CLR</i>: alterna modo "medir sem armazenar na memória"</li>
+      <li><i>MEM[10 vezes]+UNITS</i>: alterna modo de calibração</li>
     </ul>
+
+    <p id="footnote-1" class="footnote">
+      <span class="superscrit">2</span> Não faça medidas neste modo.
+    </p>
 
     <h3>
       Cliques longos (2 segundos)
@@ -131,20 +156,27 @@
     <ul>
       <li><i>UNITS (referência no fundo)</i>: unidade de distância</li>
       <li><i>UNITS (referência frontal)</i>: alterna unidade de ângulos e Bluetooth</li>
-      <li><i>MEM*10+UNITS</i>: alterna modo calibração</li>
     </ul>
 
     <h3>
       Cliques extra longos (5 segundos)
     </h3>
 
+    <p>
+      Para acionar as opções que envolvem mais de uma tecla, todas devem ser pressionadas simultaneamente.
+    </p>
+
     <ul>
-      <li><i>CLR+PLUS</i>: alterna beep</li>
+      <li><i>CLR/PLUS</i>: alterna beep</li>
     </ul>
 
     <h3>
       Sequência de unidade de ângulos e Bluetooth
     </h3>
+
+    <p>
+      Para alterar essas configurações, use a tecla <i>UNITS</i>.
+    </p>
 
     <ul>
       <li>bússola e Bluetooth desligados</li>
@@ -154,10 +186,6 @@
       <li>bússola ligada em grados e Bluetooth ligado</li>
     </ul>
 
-    <p id="footnote-1" class="footnote">
-      * Não faça medidas neste modo.
-    </p>
-
     <p>
       <a href="manual16.htm">Principais funcionalidades</a> |
       <a href="manual17.htm">Índice remissivo</a>
@@ -165,7 +193,7 @@
 
     <footer style="font-size: 80%; font-style: italic; clear: both;">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">968580d20</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>

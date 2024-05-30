@@ -32,3 +32,8 @@ p, ul {
   font-style: italic;
   font-size: 90%;
 }
+
+.superscrit {
+  font-size: 60%;
+  vertical-align: super;
+}
