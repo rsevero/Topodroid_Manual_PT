@@ -1,53 +1,73 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h3>Visualizador 3D - Superfície DEM</h3>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Visualizador 3D - Superfície DEM</h1>
 
-        <p>A superfície DEM (<i>Digital Elevantion Model</i> ou Modelo Digital de Elevação) pode ser apresentada se estiver embutida em um arquivo de modelo (por exemplo um arquivo lox) ou tenha sido adicionada ao modelo 3D atual.</p>
+    <p>
+      A superfície DEM (<i>Digital Elevantion Model</i> ou Modelo Digital de Elevação) pode ser apresentada se estiver embutida em um arquivo de modelo (por exemplo um arquivo lox) ou tenha sido adicionada ao modelo 3D atual.
+    </p>
 
-        <p>O botão <img style="background-color: black" width="36" height="36" src="btn_3d_surface_off.png"><img style="background-color: black" width="36" height="36" src="btn_3d_surface_on.png"> <i>Superfície</i> da tela <u>Visualizador 3D</u> liga e desliga a apresentação da superfície DEM.</p>
+    <p>
+      O botão <img style="background-color: black" width="36" height="36" src="btn_3d_surface_off.png"><img style="background-color: black" width="36" height="36" src="btn_3d_surface_on.png"> <i>Superfície</i> da tela <u>Visualizador 3D</u> liga e desliga a apresentação da superfície DEM.
+    </p>
 
-        <p>A caixa de diálogo é aberta através da opção de menu <i>Superfície DEM</i> da tela <u>Visualizador 3D</u>.</p>
+    <p>
+      A caixa de diálogo é aberta através da opção de menu <i>Superfície DEM</i> da tela <u>Visualizador 3D</u>.
+    </p>
 
-        <p>É usada para carregar a superfície DEM, uma textura a ser aplicada sobre a DEM e ajustar sua opacidade:</p>
- 
-        <ul>
-            <li>um botão para carregar um arquivo DEM</li>
-            <li>um botão para carregar um arquivo de textura, se o modelo tiver uma superfície DEM definida</li>
-            <li>uma barra móvel para ajsutar a opacidade da superfície</li>
-            <li>um checkbox para controlar a apresentação da projeção do modelo no superfície DEM</li>
-            <li>um checkbox para controlar a apresentação da textura na superfície (se houver uma definida)</li>
-        </ul>
+    <p>
+      É usada para carregar a superfície DEM, uma textura a ser aplicada sobre a DEM e ajustar sua opacidade:
+    </p>
 
-        <p><b>Arquivo DEM</b></p>
+    <ul>
+      <li>um botão para carregar um arquivo DEM</li>
+      <li>um botão para carregar um arquivo de textura, se o modelo tiver uma superfície DEM definida</li>
+      <li>uma barra móvel para ajsutar a opacidade da superfície</li>
+      <li>um checkbox para controlar a apresentação da projeção do modelo no superfície DEM</li>
+      <li>um checkbox para controlar a apresentação da textura na superfície (se houver uma definida)</li>
+    </ul>
 
-        <p>O Visualizador 3D suporta arquivos DEM no formato ascii ou formato de grade do Therion.</p>
+    <h2>
+      Arquivo DEM
+    </h2>
 
-        <p><b>Arquivo de textura</b></p>
+    <p>
+      O Visualizador 3D suporta arquivos DEM no formato ascii ou formato de grade do Therion.
+    </p>
 
-        <p>O Visualizador 3D suporta texturas nos formatos:</p>
+    <h2>
+      Arquivo de textura
+    </h2>
 
-        <ul>
-            <li>imagem GeoTIFF;</li>
-            <li>mapa OSM.</li>
-        </ul>
+    <p>
+      O Visualizador 3D suporta texturas nos formatos:
+    </p>
 
-        <p>Tanto o arquivo DEM como o de textura devem ter coordenadas no mesmo Sistema Cartográfico de Referência de Coordenadas do modelo 3D pois o Visualizador 3D não executa nenhuma conversão de coordenadas.</p>
+    <ul>
+      <li>imagem GeoTIFF;</li>
+      <li>mapa OSM.</li>
+    </ul>
 
-        <p>Arquivos OSM usam sempre coordenadas no datum WGS84.
-        Esse valores podem ser usados com modelos com coordenadas em UTM mas a conversão é aproximada.</p>
+    <p>
+      Tanto o arquivo DEM como o de textura devem ter coordenadas no mesmo Sistema Cartográfico de Referência de Coordenadas do modelo 3D pois o Visualizador 3D não executa nenhuma conversão de coordenadas.
+    </p>
 
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
-        
-        <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-        </footer>
-          
-    </body>
+    <p>
+      Arquivos OSM usam sempre coordenadas no datum WGS84.
+      Esse valores podem ser usados com modelos com coordenadas em UTM mas a conversão é aproximada.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
