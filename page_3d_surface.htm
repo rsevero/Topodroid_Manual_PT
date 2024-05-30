@@ -4,7 +4,7 @@
     <h1>Visualizador 3D - Superfície DEM</h1>
 
     <p>
-      A superfície DEM (<i>Digital Elevantion Model</i> ou Modelo Digital de Elevação) pode ser apresentada se estiver embutida em um arquivo de modelo (por exemplo um arquivo lox) ou tenha sido adicionada ao modelo 3D atual.
+      A superfície DEM (<i>Digital Elevantion Model</i> ou Modelo Digital de Elevação) pode ser incluída em modelos doTopoDroidX ou apresentada se estiver embutida em um arquivo de modelo (por exemplo um arquivo lox).
     </p>
 
     <p>
@@ -21,7 +21,7 @@
 
     <ul>
       <li>um botão para carregar um arquivo DEM</li>
-      <li>um botão para carregar um arquivo de textura, se o modelo tiver uma superfície DEM definida</li>
+      <li>um botão para carregar um arquivo de textura, depois que um DEM tiver sido carregado (ou o modelo já contiver um DEM)</li>
       <li>uma barra móvel para ajsutar a opacidade da superfície</li>
       <li>um checkbox para controlar a apresentação da projeção do modelo no superfície DEM</li>
       <li>um checkbox para controlar a apresentação da textura na superfície (se houver uma definida)</li>
@@ -32,7 +32,7 @@
     </h2>
 
     <p>
-      O Visualizador 3D suporta arquivos DEM no formato ascii ou formato de grade do Therion.
+      O Visualizador 3D suporta arquivos DEM no formato ascii ou formato de grade do Therion (veja o manual do Therion para obter mais detalhes sobre os formatos de arquivo e sistemas de referência de coordenadas).
     </p>
 
     <h2>
@@ -49,7 +49,8 @@
     </ul>
 
     <p>
-      Tanto o arquivo DEM como o de textura devem ter coordenadas no mesmo Sistema Cartográfico de Referência de Coordenadas do modelo 3D pois o Visualizador 3D não executa nenhuma conversão de coordenadas.
+      Tanto o arquivo DEM como o de textura X-Y devem ter coordenadas no mesmo Sistema Cartográfico de Referência de Coordenadas do modelo 3D pois o Visualizador 3D não executa nenhuma conversão de coordenadas.
+      O Sistema Cartográfico de Referência de Coordenadas do modelo 3D pode ser alterado na caixa de diálogo de base georeferenciada.
     </p>
 
     <p>
