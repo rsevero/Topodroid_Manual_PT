@@ -1,75 +1,101 @@
 <html>
-<body>
-	<link rel="stylesheet" href="manual.css">
-	<h2>[4] TELA CALIBRAÇÃO DistoX</h2>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>[4] Tela calibração DistoX</h1>
 
-	<p><b>Somente para DistoX, DistoX2 e DistoXBLE</b></p>
+    <h2>
+      Somente para DistoX, DistoX2 e DistoXBLE
+    </h2>
 
-	<p>Ao clicar no botão <i>Calibração</i> da tela <u>Dispositivos</u> é apresentada a lista de <a href="page_calib_dialog.htm">calibrações</a> disponíveis para o dispositivo selecionado.
-	Você pode abrir uma calibração pré-existente ou criar uma nova.
-	Em todos os casos você será levado para a <u>tela calibração</u>.</p>
+    <p>
+      Ao clicar no botão <i>Calibração</i> da tela <u>Dispositivos</u> é apresentada a lista de <a href="page_calib_dialog.htm">calibrações</a> disponíveis para o dispositivo selecionado.
+      Você pode abrir uma calibração pré-existente ou criar uma nova.
+      Em todos os casos você será levado para a <u>tela calibração</u>.
+    </p>
 
-	<p>A tela <u>Calibração</u> tem campos para:</p>
-	<ul>
-		<li><i>Nome</i>: cada calibração deve ter um nome único.</li>
-		<li><i>Data</i></li>
-		<li><i>Descrição</i></li>
-		<li><i>Inclinação magnética</i>: em graus, se calculada pelo algoritmo de calibração</li>
-		<li><i>Algoritmo</i>: seleção do algoritmo de calibração.
-		A opção "auto", onde o TopoDroidX escolhe qual algoritmo usar, vem selecionada por padrão.</li>
-	</ul>
+    <p>
+      A tela <u>Calibração</u> tem campos para:
+    </p>
 
-	<p>e campos rádio para seleção do algoritmo de calibração.
-	A opção "auto", onde o TopoDroidX escolhe qual algoritmo usar, vem selecionada por padrão.</p>
+    <ul>
+      <li><i>Nome</i>: cada calibração deve ter um nome único.</li>
+      <li><i>Data</i></li>
+      <li><i>Descrição</i></li>
+      <li><i>Inclinação magnética</i>: em graus, se calculada pelo algoritmo de calibração</li>
+      <li>
+        <i>Algoritmo</i>: seleção do algoritmo de calibração.
+        A opção "auto", onde o TopoDroidX escolhe qual algoritmo usar, vem selecionada por padrão.
+      </li>
+    </ul>
 
-	<h3>BOTÕES</h3>
-	<ul>
-		<li><img src="btn_save.png" class="app_button"> grava os dados da calibração no banco de dados.</li>
-		<li><img src="btn_open.png" class="app_button"> apresenta a tela <u>Dados Calibração</u>.</li>
-		<li><img src="btn_read.png" class="app_button"> apresenta os coeficientes de calibração armazenados no banco de dados.</li>
-	</ul>
+    <p>
+      e campos rádio para seleção do algoritmo de calibração.
+      A opção "auto", onde o TopoDroidX escolhe qual algoritmo usar, vem selecionada por padrão.
+    </p>
 
-	<h3>MENUS</h3>
-	<ul>
-		<li><a href="page_calib_import.htm">Exportar</a> a calibração.</li>
-		<li><u>Apagar</u> a calibração e seus dados do banco de dados (estão ação não pode ser desfeita).</li>
-		<li><u>Configurações</u></li>
-		<li><u>Ajuda</u></li>
-	</ul>
+    <h2>
+      Botões
+    </h2>
 
-	<h3>CONFIGURAÇÕES CALIBRAÇÃO (somente para a DistoX)</h3>
-	<ul>
-		<li><i>Regra agrupamento</i>: como agrupar os dados de calibração em <ahref="page_groups.htm">grupos</a> [padrão "De 4 em 4"]</li>
-		<li><i>Tolerância grupos</i>: limite a partir do qual os dados de calibração com grande distância angular para a média do grupo serão destacados [padrão 40 mín 0]</li>
-		<li><i>Erro</i>: o cálculo dos coeficientes de variação termina se a variação de todos os coeficientes em uma iteração é menor do queeste valor [padrão 10<sup>-6</sup>, mín 0].</li>
-		<li><i>Iterações algoritmo</i>: quantidade máxima de iterações do algoritmo de calibração [padrão 200, mín 50].</li>
-		<li><i>Download dados remotos</i>: fazer download de dados remotos decalibração imediatamente.</li>
-		<li><i>Dados brutos</i>: por padrão o TopoDroidX apresenta o azimute, a inclinação e a rotação.
-		Ative essa opção se quiser que sejam também apresentados os dados brutos da calibração (os componentes G e M), sejam em decimal ou hexadecimal. [padrão "nenhum"]</li>
-		<li><i>Algoritmo</i>: pode ser 0 (Automático), 1 (Linear) ou 2 (Não linear). 
-		Se a opção "tipo de algoritmo" de uma calibração é deixada em "Automático" e esta configuração não estiver em "Automático" o algoritmo escolhido por esta configuração será utilizado para calcular a calibração.
-		Se ambos estiverem em "Automático" o algoritmo a ser utilizado será escolhido automaticamente pelo TopoDroidX levando em consideração o modelo e versão de firmware da DistoX. [padrão "Automático"]</li>
-	</ul>
+    <ul>
+      <li><img src="btn_save.png" class="app_button"> grava os dados da calibração no banco de dados.</li>
+      <li><img src="btn_open.png" class="app_button"> apresenta a tela <u>Dados Calibração</u>.</li>
+      <li><img src="btn_read.png" class="app_button"> apresenta os coeficientes de calibração armazenados no banco de dados.</li>
+    </ul>
 
-	<p><a href="page_calib_howto.htm">Instruções de calibração</a></p>
+    <h2>
+      Menus
+    </h2>
+
+    <ul>
+      <li><a href="page_calib_import.htm">Exportar</a> a calibração.</li>
+      <li><u>Apagar</u> a calibração e seus dados do banco de dados (estão ação não pode ser desfeita).</li>
+      <li><u>Configurações</u></li>
+      <li><u>Ajuda</u></li>
+    </ul>
+
+    <h2>
+      Configurações calibração (somente para a DistoX)
+    </h2>
+
+    <ul>
+      <li><i>Regra agrupamento</i>: como agrupar os dados de calibração em <ahref="page_groups.htm">grupos</a> [padrão "De 4 em 4"]</li>
+      <li><i>Tolerância grupos</i>: limite a partir do qual os dados de calibração com grande distância angular para a média do grupo serão destacados [padrão 40 mín 0]</li>
+      <li><i>Erro</i>: o cálculo dos coeficientes de variação termina se a variação de todos os coeficientes em uma iteração é menor do queeste valor [padrão 10<sup>-6</sup>, mín 0].</li>
+      <li><i>Iterações algoritmo</i>: quantidade máxima de iterações do algoritmo de calibração [padrão 200, mín 50].</li>
+      <li><i>Download dados remotos</i>: fazer download de dados remotos decalibração imediatamente.</li>
+      <li>
+        <i>Dados brutos</i>: por padrão o TopoDroidX apresenta o azimute, a inclinação e a rotação.
+        Ative essa opção se quiser que sejam também apresentados os dados brutos da calibração (os componentes G e M), sejam em decimal ou hexadecimal. [padrão "nenhum"]
+      </li>
+      <li>
+        <i>Algoritmo</i>: pode ser 0 (Automático), 1 (Linear) ou 2 (Não linear).
+        Se a opção "tipo de algoritmo" de uma calibração é deixada em "Automático" e esta configuração não estiver em "Automático" o algoritmo escolhido por esta configuração será utilizado para calcular a calibração.
+        Se ambos estiverem em "Automático" o algoritmo a ser utilizado será escolhido automaticamente pelo TopoDroidX levando em consideração o modelo e versão de firmware da DistoX. [padrão "Automático"]
+      </li>
+    </ul>
+
+    <p>
+      <a href="page_calib_howto.htm">Instruções de calibração</a>
+    </p>
 
     <div style="float: left; margin-bottom: 10pt;">
-        <div>
-            <a href="manual03.htm">&lt; Tela Dispositivos</a> |
-            <a href="manual05.htm">Dados Calibração &gt;</a>
-        </div>
-		<div>
-			<a href="manual16.htm">Principais funcionalidades</a> |
-			<a href="manual17.htm">Índice remissivo</a>
-		</div>
-	</div>
-	
-	<footer style="font-size: 80%; font-style: italic; clear: both;">
-		<p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-		<p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
-		<p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-		<p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-	</footer>
-	  
-</body>
+      <div>
+        <a href="manual03.htm">&lt; Tela Dispositivos</a> |
+        <a href="manual05.htm">Dados Calibração &gt;</a>
+      </div>
+      <div>
+        <a href="manual16.htm">Principais funcionalidades</a> |
+        <a href="manual17.htm">Índice remissivo</a>
+      </div>
+    </div>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
