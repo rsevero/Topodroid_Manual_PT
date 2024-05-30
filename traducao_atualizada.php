@@ -100,48 +100,26 @@ function showProgressBar($done, $total, $availableWidth = 40) {
 function verificarTraducaoAtualizada($arquivo, $commitId) {
   $currentDir = getcwd();
   chdir(ORIGINAL_DIR);
-  exec("git cat-file -t $commitId 2>&1", $output, $return_var);
+  exec("git cat-file -t $commitId 2>&1", $gitCatFileOutput, $return_var);
   if ($return_var !== 0) {
+
     chdir($currentDir);
     return TranslationStatus::NONEXISTENT_COMMIT;
   }
 
-  exec("git log --pretty=format:'%H' -- $arquivo", $output, $return_var);
+  exec("git log --pretty=format:'%H' $commitId.. -- $arquivo", $gitLogOutput, $return_var);
   if ($return_var !== 0) {
+
     chdir($currentDir);
     return TranslationStatus::MISSING_FILE_IN_GIT;
   }
 
-  $fileChanged = false;
-  $first = true;
-  $tamCommitId = strlen($commitId);
-  // print "Arquivo: '$arquivo'\n";
-  foreach ($output as $commit) {
-    if ($commit == 'commit') {
-      continue;
-    }
-    $commitAbreviado = substr($commit, 0, $tamCommitId);
-    // print "commit registrado: '$commitId' - commit abreviado: '$commitAbreviado' - commit completo: '$commit'\n";
-    if ($first) {
-      $originalLastCommit = $commitAbreviado;
-    }
-    if ($commitAbreviado === $commitId) {
-      if ($first) {
-        break;
-      }
-      else {
-        $fileChanged = true;
-        break;
-      }
-    }
-    $first = false;
-  }
+  $fileChanged = count($gitLogOutput) > 0;
 
   chdir($currentDir);
   if ($fileChanged) {
     return [
       'status' => TranslationStatus::OUTDATED,
-      'originalLastCommit' => $originalLastCommit,
     ];
   } else {
     return [
