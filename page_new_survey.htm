@@ -19,25 +19,19 @@
             <li><i>Declinação magnética</i></li>
             <li><i>Descrição</i></li>
             <li><i>Cortes não compartilhados</i></li>
-            <li><i>Modo mergulho de dados</i> [T]</li>
+            <li><i>Modo mergulho de dados</i> [T]</li> Disponível se a configuração <i>Modo mergulho</i> em <i>Especiais</i> >> <i>Dados topo</i> estiver ativada.
         </ul>
 
         <p>
             O <i>nome</i> é obrigatório.
             Os nomes das topos são usados para listar as topos na <u>Tela principal</u> e o TopoDroidX distingue as topos pelo nome (embora cada topo tenha um id numérico único no banco de dados).
-        </p>
-        <p>
             O nome deve ser único no banco de dados.
             Nomes que diferem somente pela caixa de letras não são diferentes porque o sistema de arquivos é insensível à caixa de letras.
             O TopoDroidX apresenta um alerta se o novo nome de topo coincide com o nome de uma topo existente exceto pela caixa de letras.
         </p>
 
-        <h2>
-            ALERTA
-        </h2>
-
         <p>
-            O nome da topo não pode conter espaços, nem os caracteres '/' (barra, que é o separador de diretórios), ':' (dois pontos), '*' (asterisco) e '\' (barra invertida).
+            <b>ALERTA: </b>O nome da topo não pode conter espaços, nem os caracteres '/' (barra, que é o separador de diretórios), ':' (dois pontos), '*' (asterisco) e '\' (barra invertida).
             Barras invertidas são eliminadas.
             Espaços são substituídos por '_' (sublinhado), barras e dois pontos por hífens '-', e asteriscos por '+' (mais).
         </p>
@@ -53,7 +47,7 @@
         </p>
 
         <p>
-            A <i>descrição</i> pode ser deixada vazia mas é uma boa prática escrever uma descrição para a topo.
+            O campo <i>base inicial [0]</i> não é obrigatório. Caso seja deixado em branco a base inicial é definida por padrão como <i>0 (zero)</i>, e a primeira medida é considerada <i>DE 0 PARA 1</i> (podendo ser alterado manualmente caso necessário).
         </p>
 
         <p>
@@ -62,6 +56,10 @@
             A declinação deve ser inserida em graus decimais.
             O intervalo aceito de valores é [-360°, 360°].
             Qualquer valor fora deste intervalo é considerado como "não definido".
+        </p>
+
+        <p>
+            A <i>descrição</i> pode ser deixada vazia mas é uma boa prática escrever uma descrição para a topo.
         </p>
 
         <p>
@@ -90,8 +88,8 @@
         <h2>Botões</h2>
 
         <ul>
-            <li><i>Salvar</i>: a nova topo é adicionada ao banco de dados.</li>
             <li><i>Abrir</i>: salva e abre a tela <i>Dados medidas</i> imediatamente.</li>
+            <li><i>Gravar</i>: a nova topo é adicionada ao banco de dados.</li>
         </ul>
 
         <p>
@@ -100,9 +98,10 @@
         </p>
 
         <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-08</span></p>
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-04</span></p>
             <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">9c277c159</span></p>
             <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
         </footer>
 
     </body>
