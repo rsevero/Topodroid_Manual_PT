@@ -4,11 +4,11 @@
         <h1>Dados da foto</h1>
 
         <p>
-            Esta caixa de diálogo é aberta a partir do botão <i>Foto</i> <img src="btn_photo.png" class="app_button"> na versão extendida da tela <i>Dados medida</i>, ou quando um ponto do tipo "foto" ou uma foto de corte são inseridos na tela <u>Desenho</u>.
+            Esta caixa de diálogo é aberta a partir do botão <i>Foto</i> <img src="btn_photo.png" class="app_button"> existente na caixa de diálogo <i>Edição de medida</i> (na tela <u>Dados topo</u>, após um clique curto em uma medida e um clique no botão <i>Mais</i>) ou quando um ponto do tipo "foto" é inserido na tela <u>Desenho</u>.
         </p>
 
         <p>
-            Há um campo de texto para o <b>comentário</b> da foto que você vai tirar, e uma caixa de seleção para a escolha da implementação de câmera a ser utilizada.
+            Na caixa de diálogo aberta, há um campo de texto para o <b>comentário</b> da foto que será tirada, e uma caixa de seleção para a escolha da implementação de câmera a ser utilizada. No caso de foto associada à medida, é indicada a visada ou medida auxiliar relacionada e, no caso da foto associada a um "ponto" no croqui, há um campo adicional para informar o tamanho. 
         </p>
 
         <p>
@@ -46,7 +46,7 @@
         </p>
 
         <p>
-            Quando usada para registrar a image para um ponto do tipo "foto" ou a iamge para um corte do tipo "foto" a câmera do TopoDroidX exibe uma "mira" centralizada sobre a imagem.
+            Quando usada para registrar a imagem para um ponto do tipo "foto" a câmera do TopoDroidX exibe uma "mira" centralizada sobre a imagem.
         </p>
 
         <p>
@@ -59,9 +59,9 @@
         </p>
 
         <ul>
-            <li><b>Câmera</b>: Em vermelho: pronto, toque para tirar uma foto. Em azul: em espera, toque para ativar a câmera.</li>
-            <li><b>Salvar</b>: salva a imagem. Desativado até que uma imagem seja tirada.</li>
-            <li><b>Voltar</b>: fecha a janela sem salvar a imagem.</li>
+            <li><b>Câmera</b>: o ícone do botão pode estar vermelho ou azul:<ul><li><img src="btn_camera_red.png" class="app_button">: pronto, toque para tirar uma foto.</li> <li><img src="btn_photo.png" class="app_button">: em espera, toque para reativar a câmera.</li></ul></li>
+            <li><img src="btn_save_off.png" class="app_button">: salva a imagem. Desativado até que uma imagem seja tirada.</li>
+            <li><img src="btn_clear.png" class="app_button">: fecha a janela sem salvar a imagem.</li>
         </ul>
 
         <p>
@@ -71,6 +71,10 @@
         <p>
             Os botões de zoom são exibidos tocando na tela na parte inferior do meio.
             Para passar por etapas de zoom grandes, toque rapidamente nos botões de zoom.
+        </p>
+
+        <p>
+            <b>Obs.</b> Apenas uma foto é associada a cada ponto inserido no croqui. Mais de uma foto pode ser tirada por medida, e nesse caso, as fotos são acessadas na  <a href="page.photo.list.htm">Lista de fotos</a>.   
         </p>
 
         <h2>Implementação da câmera</h2>
@@ -97,9 +101,10 @@
         </p>
 
         <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-09</span></p>
+            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-05</span></p>
             <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">266bd6b41</span></p>
             <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
         </footer>
 
     </body>
