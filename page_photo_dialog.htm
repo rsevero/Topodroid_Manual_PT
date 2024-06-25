@@ -1,111 +1,111 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h1>Dados da foto</h1>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Dados da foto</h1>
 
-        <p>
-            Esta caixa de diálogo é aberta a partir do botão <i>Foto</i> <img src="btn_photo.png" class="app_button"> existente na caixa de diálogo <i>Edição de medida</i> (na tela <u>Dados topo</u>, após um clique curto em uma medida e um clique no botão <i>Mais</i>) ou quando um ponto do tipo "foto" é inserido na tela <u>Desenho</u>.
-        </p>
+    <p>
+      Esta caixa de diálogo é aberta a partir do botão <i>Foto</i> <img src="btn_photo.png" class="app_button"> existente na caixa de diálogo <i>Edição de medida</i> (na tela <u>Dados topo</u>, após um clique curto em uma medida e um clique no botão <i>Mais</i>) ou quando um ponto do tipo "foto" é inserido na tela <u>Desenho</u>.
+    </p>
 
-        <p>
-            Na caixa de diálogo aberta, há um campo de texto para o <b>comentário</b> da foto que será tirada, e uma caixa de seleção para a escolha da implementação de câmera a ser utilizada. No caso de foto associada à medida, é indicada a visada ou medida auxiliar relacionada e, no caso da foto associada a um "ponto" no croqui, há um campo adicional para informar o tamanho. 
-        </p>
+    <p>
+      Na caixa de diálogo aberta, há um campo de texto para o <b>comentário</b> da foto que será tirada, e uma caixa de seleção para a escolha da implementação de câmera a ser utilizada. No caso de foto associada à medida, é indicada a visada ou medida auxiliar relacionada e, no caso da foto associada a um "ponto" no croqui, há um campo adicional para informar o tamanho.
+    </p>
 
-        <p>
-            Botões:
-        </p>
+    <p>
+      Botões:
+    </p>
 
-        <ul>
-            <li><b>OK</b>: fecha a caixa de diálogo e inicia o processo de captura da imagem.</li>
-            <li><b>Cancelar</b>: fecha a caixa de diálogo.</li>
-        </ul>
+    <ul>
+      <li><b>OK</b>: fecha a caixa de diálogo e inicia o processo de captura da imagem.</li>
+      <li><b>Cancelar</b>: fecha a caixa de diálogo.</li>
+    </ul>
 
-        <p>
-            O TopoDroid contém uma implementação simples de uma câmera.
-            Seu recurso especial é que armazena o azimute e a inclinação do dispositivo em <i>tags exif</i> no arquivo de imagem.
-            O azimute é armazenado como GPS_LONGITUDE e a inclinação como GPS_LATITUDE (com sinal).
-        </p>
+    <p>
+      O TopoDroidX contém uma implementação simples de uma câmera.
+      Seu recurso especial é que armazena o azimute e a inclinação do dispositivo em <i>tags exif</i> no arquivo de imagem.
+      O azimute é armazenado como GPS_LONGITUDE e a inclinação como GPS_LATITUDE (com sinal).
+    </p>
 
-        <p>
-            As seguintes <i>tags exif</i> são definidas pelo TopoDroid:
-        </p>
+    <p>
+      As seguintes <i>tags exif</i> são definidas pelo TopoDroid:
+    </p>
 
-        <ul>
-            <li><i>Software</i>: "TopoDroid" e sua versão, separados por um espaço [Android 7 e acima]</li>
-            <li><i>Orientação</i>: orientação da imagem.</li>
-            <li><i>Data e hora</i> [aaaa.MM.dd]</li>
-            <li><i>Latitude GPS</i>: inclinação [1/100&deg;]</li>
-            <li><i>Ref. Latitude GPS</i>: "N" ou "S"</li>
-            <li><i>Longitude GPS</i>: azimute [1/100&deg;]</li>
-            <li><i>Ref. Longitude GPS</i>: "E"</li>
-            <li><i>Descrição da imagem</i>: azimute e inclinação em 1/100&deg;, separados por um espaço</li>
-        </ul>
+    <ul>
+      <li><i>Software</i>: "TopoDroid" e sua versão, separados por um espaço [Android 7 e acima]</li>
+      <li><i>Orientação</i>: orientação da imagem.</li>
+      <li><i>Data e hora</i> [aaaa.MM.dd]</li>
+      <li><i>Latitude GPS</i>: inclinação [1/100&deg;]</li>
+      <li><i>Ref. Latitude GPS</i>: "N" ou "S"</li>
+      <li><i>Longitude GPS</i>: azimute [1/100&deg;]</li>
+      <li><i>Ref. Longitude GPS</i>: "E"</li>
+      <li><i>Descrição da imagem</i>: azimute e inclinação em 1/100&deg;, separados por um espaço</li>
+    </ul>
 
-        <p>
-            A implementação de câmera do TopoDroidX não é tão rica em recursos quanto a de um aplicativo de "câmera" normal, mas armazena a direção da visão (azimute e inclinação) nas fotos.
-        </p>
+    <p>
+      A implementação de câmera do TopoDroidX não é tão rica em recursos quanto a de um aplicativo de "câmera" normal, mas armazena a direção da visão (azimute e inclinação) nas fotos.
+    </p>
 
-        <p>
-            Quando usada para registrar a imagem para um ponto do tipo "foto" a câmera do TopoDroidX exibe uma "mira" centralizada sobre a imagem.
-        </p>
+    <p>
+      Quando usada para registrar a imagem para um ponto do tipo "foto" a câmera do TopoDroidX exibe uma "mira" centralizada sobre a imagem.
+    </p>
 
-        <p>
-            O TopoDroidX usa os sensores do dispositivo Android para obter a direção (azimute e inclinação).
-            Um aviso é exibido se a precisão do sensor é baixa ou se houver uma falha no sensor.
-        </p>
+    <p>
+      O TopoDroidX usa os sensores do dispositivo Android para obter a direção (azimute e inclinação).
+      Um aviso é exibido se a precisão do sensor é baixa ou se houver uma falha no sensor.
+    </p>
 
-        <p>
-            A câmera do TopoDroidX tem três botões no canto inferior direito.
-        </p>
+    <p>
+      A câmera do TopoDroidX tem três botões no canto inferior direito.
+    </p>
 
-        <ul>
-            <li><b>Câmera</b>: o ícone do botão pode estar vermelho ou azul:<ul><li><img src="btn_camera_red.png" class="app_button">: pronto, toque para tirar uma foto.</li> <li><img src="btn_photo.png" class="app_button">: em espera, toque para reativar a câmera.</li></ul></li>
-            <li><img src="btn_save_off.png" class="app_button">: salva a imagem. Desativado até que uma imagem seja tirada.</li>
-            <li><img src="btn_clear.png" class="app_button">: fecha a janela sem salvar a imagem.</li>
-        </ul>
+    <ul>
+      <li><b>Câmera</b>: o ícone do botão pode estar vermelho ou azul:<ul><li><img src="btn_camera_red.png" class="app_button">: pronto, toque para tirar uma foto.</li> <li><img src="btn_photo.png" class="app_button">: em espera, toque para reativar a câmera.</li></ul></li>
+      <li><img src="btn_save_off.png" class="app_button">: salva a imagem. Desativado até que uma imagem seja tirada.</li>
+      <li><img src="btn_clear.png" class="app_button">: fecha a janela sem salvar a imagem.</li>
+    </ul>
 
-        <p>
-            A câmera do TopoDroidX tem dois modos de operação: <i>retrato</i> e <i>paisagem</i>. Quando o dispositivo Android está na vertical, a imagem é capturada em formato retrato. Quando o dispositivo Android é virado para a esquerda ou para a direita, a imagem é capturada em formato paisagem.
-        </p>
+    <p>
+      A câmera do TopoDroidX tem dois modos de operação: <i>retrato</i> e <i>paisagem</i>. Quando o dispositivo Android está na vertical, a imagem é capturada em formato retrato. Quando o dispositivo Android é virado para a esquerda ou para a direita, a imagem é capturada em formato paisagem.
+    </p>
 
-        <p>
-            Os botões de zoom são exibidos tocando na tela na parte inferior do meio.
-            Para passar por etapas de zoom grandes, toque rapidamente nos botões de zoom.
-        </p>
+    <p>
+      Os botões de zoom são exibidos tocando na tela na parte inferior do meio.
+      Para passar por etapas de zoom grandes, toque rapidamente nos botões de zoom.
+    </p>
 
-        <p>
-            <b>Obs.</b> Apenas uma foto é associada a cada ponto inserido no croqui. Mais de uma foto pode ser tirada por medida, e nesse caso, as fotos são acessadas na  <a href="page.photo.list.htm">Lista de fotos</a>.   
-        </p>
+    <p>
+      <b>Obs.</b> Apenas uma foto é associada a cada ponto inserido no croqui. Mais de uma foto pode ser tirada por medida, e nesse caso, as fotos são acessadas na <a href="page.photo.list.htm">Lista de fotos</a>.
+    </p>
 
-        <h2>Implementação da câmera</h2>
+    <h2>Implementação da câmera</h2>
 
-        <p>
-            O TopoDroidX tem duas implementações de câmera: a primeira usa a antiga API de câmera do Android, a segunda usa a nova API do Android: camera2.
-        </p>
+    <p>
+      O TopoDroidX tem duas implementações de câmera: a primeira usa a antiga API de câmera do Android, a segunda usa a nova API do Android: camera2.
+    </p>
 
-        <p>
-            A implementação padrão de câmera é a antiga.
-        </p>
+    <p>
+      A implementação padrão de câmera é a antiga.
+    </p>
 
-        <p>
-            Com a nova API camera2 há um limite de cinco tentativas de captura de imagem, após o qual o botão <i>câmera</i> não está mais disponível.
-        </p>
+    <p>
+      Com a nova API camera2 há um limite de cinco tentativas de captura de imagem, após o qual o botão <i>câmera</i> não está mais disponível.
+    </p>
 
-        <p>
-            Um alerta é apresentado se houver uma falha na gravação da imagem JPEG.
-        </p>
+    <p>
+      Um alerta é apresentado se houver uma falha na gravação da imagem JPEG.
+    </p>
 
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
-        <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-05</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">266bd6b41</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
-        </footer>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-05</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">266bd6b41</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
+    </footer>
 
-    </body>
+  </body>
 </html>
