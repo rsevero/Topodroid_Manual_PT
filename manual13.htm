@@ -7,10 +7,11 @@
     <ul>
       <li><a href="#import">Importar Topo</a>
         <ul>
-          <li><a href="#import_compass">Importação Compass</a></li>
-          <li><a href="#import_pockettopo">Importação PocketTopo</a></li>
-          <li><a href="#import_therion">Importação Therion</a></li>
-          <li><a href="#import_zip">Importação Zip</a></li>
+          <li><a href="#import_compass">Compass</a></li>
+          <li><a href="#import_bric_csv">CSV gerado pela BRIC</a></li>
+          <li><a href="#import_pockettopo">PocketTopo</a></li>
+          <li><a href="#import_therion">Therion</a></li>
+          <li><a href="#import_zip">Zip</a></li>
         </ul>
       </li>
       <li><a href="#export">Exportar Topo</a>
@@ -91,13 +92,14 @@
     </p>
     <ul>
       <li>CaveSniper</li>
-      <li>Compass</li>
-      <li>PocketTopo: incluindo croquis</li>
+      <li><a href="#import_compass">Compass</a></li>
+      <li><a href="#import_bric_csv">CSV gerado pela BRIC</a></li>
+      <li><a href="#import_pockettopo">PocketTopo</a></li>
       <li>Survex</li>
-      <li>Therion: somente dados da linha de trena.</li>
+      <li><a href="#import_therion">Therion</a></li>
       <li>VisualTopo</li>
       <li>Walls</li>
-      <li>ZIP: arquivos zip do TopoDroidX</li>
+      <li><a href="#import_zip">Zip</a></li>
     </ul>
 
     <p>
@@ -108,10 +110,17 @@
       Na importação de outros formatos, se tiverem dados EDTC, estes serão convertidos para medidas auxiliares apresentadas em verde.
     </p>
 
+    <h3 id="import_bric_csv">CSV gerado pela BRIC</h3>
+
+    <p>
+      Os dados da topo importados de arquivos CSV gerados pela BRIC contêm somente distância, azimute e inclinação.
+      Os dados da topo devem ser editados após a importação para adicionar as outras informações.
+    </p>
+
     <h3 id="import_zip">Importação Zip</h3>
 
     <p>
-      A importação de arquivos Zip falha se a versão do banco de dados dos dados a serem importados for excessivamente antiga ou se for mais nova do que a usada pelo TopoDroidX instalado.
+      A importação de arquivos Zip criados pelo TopoDroid ou TopoDroidX falha se a versão do banco de dados dos dados a serem importados for excessivamente antiga ou se for mais nova do que a usada pelo TopoDroidX instalado.
     </p>
 
     <p>
@@ -1206,7 +1215,7 @@
 
     <footer style="font-size: 80%; font-style: italic; clear: both;">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">d661fec64</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">83cd04f04</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
