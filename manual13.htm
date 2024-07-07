@@ -3,6 +3,55 @@
     <link rel="stylesheet" href="manual.css">
     <h1>[13] Importar Exportar</h1>
 
+    <h2 id="index">Índice</h2>
+    <ul>
+      <li><a href="#import">Importar Topo</a>
+        <ul>
+          <li><a href="#import_compass">Importação Compass</a></li>
+          <li><a href="#import_pockettopo">Importação PocketTopo</a></li>
+          <li><a href="#import_therion">Importação Therion</a></li>
+          <li><a href="#import_zip">Importação Zip</a></li>
+        </ul>
+      </li>
+      <li><a href="#export">Exportar Topo</a>
+        <ul>
+          <li><a href="#export_compass">Compass</a></li>
+          <li><a href="#export_csurvey">cSurvey</a></li>
+          <li><a href="#export_csv">CSV</a></li>
+          <li><a href="#export_dxf">DXF</a></li>
+          <li><a href="#export_geojson">GeoJSON</a></li>
+          <li><a href="#export_ghtopo">GHTopo</a></li>
+          <li><a href="#export_gpx">GPX</a></li>
+          <li><a href="#export_grottolf">Grottolf</a></li>
+          <li><a href="#export_kml">KML</a></li>
+          <li><a href="#export_ptopo">PocketTopo</a></li>
+          <li><a href="#export_polygon">Polygon</a></li>
+          <li><a href="#export_shp">Shapefile</a></li>
+          <li><a href="#export_survex">Survex</a></li>
+          <li><a href="#export_therion">Therion</a></li>
+          <li><a href="#export_topo">Topo</a></li>
+          <li><a href="#export_trobot">TopoRobot</a></li>
+          <li><a href="#export_vtopo">VisualTopo</a></li>
+          <li><a href="#export_walls">Walls</a></li>
+          <li><a href="#export_winkarst">WinKarst</a></li>
+        </ul>
+      </li>
+      <li><a href="#export_sketch">Exportação de croquis</a>
+        <ul>
+          <li><a href="#export_sketch_cave3d">Cave3D</a></li>
+          <li><a href="#export_sketch_csx">cSurvey</a></li>
+          <li><a href="#export_sketch_dxf">DXF</a></li>
+          <li><a href="#export_sketch_pdf">PDF file</a></li>
+          <li><a href="#export_sketch_shp">SHP (ShapeFile)</a></li>
+          <li><a href="#export_sketch_svg">SVG</a></li>
+          <li><a href="#export_sketch_th2">Therion</a></li>
+          <li><a href="#export_sketch_tunnel">Tunnel</a></li>
+          <li><a href="#export_sketch_xvi">XVI (xTherion)</a></li>
+        </ul>
+      </li>
+      <li><a href="#setting_import_export">Configurações IMPORTAR/EXPORTAR</a></li>
+    </ul>
+
     <p>
       Quando tiver terminado, por segurança, exporte os dados da linha de trena e os croquis para o seu formato predileto e copie os arquivos exportados para seu PC, onde poderá terminar de desenhar seus mapas.
     </p>
@@ -133,31 +182,31 @@
       O TopoDroidX exporta os dados da topo para os seguintes softwares espeleológicos:
     </p>
     <ul>
-      <li><a href="#compass">Compass</a></li>
-      <li><a href="#csurvey">cSurvey</a></li>
-      <li><a href="#ghtopo">GHTopo</a></li>
-      <li><a href="#grottolf">Grottolf</a></li>
-      <li><a href="#ptopo">PocketTopo</a></li>
-      <li><a href="#polygon">Polygon</a></li>
-      <li><a href="#survex">Survex</a></li>
-      <li><a href="#therion">Therion</a></li>
-      <li><a href="#topo">Topo</a></li>
-      <li><a href="#trobot">TopoRobot</a></li>
-      <li><a href="#vtopo">VisualTopo</a></li>
-      <li><a href="#walls">Walls</a></li>
-      <li><a href="#winkarst">WinKarst</a></li>
+      <li><a href="#export_compass">Compass</a></li>
+      <li><a href="#export_csurvey">cSurvey</a></li>
+      <li><a href="#export_ghtopo">GHTopo</a></li>
+      <li><a href="#export_grottolf">Grottolf</a></li>
+      <li><a href="#export_ptopo">PocketTopo</a></li>
+      <li><a href="#export_polygon">Polygon</a></li>
+      <li><a href="#export_survex">Survex</a></li>
+      <li><a href="#export_therion">Therion</a></li>
+      <li><a href="#export_topo">Topo</a></li>
+      <li><a href="#export_trobot">TopoRobot</a></li>
+      <li><a href="#export_vtopo">VisualTopo</a></li>
+      <li><a href="#export_walls">Walls</a></li>
+      <li><a href="#export_winkarst">WinKarst</a></li>
     </ul>
 
     <p>
       Além disso, exporta também os dados da topo nos seguintes formatos:
     </p>
     <ul>
-      <li><a href="#csv">CSV</a></li>
-      <li><a href="#dxf">DXF</a></li>
-      <li><a href="#geojson">GeoJSON</a></li>
-      <li><a href="#gpx">GPX</a></li>
-      <li><a href="#kml">KML</a></li>
-      <li><a href="#shp">Shapefile</a></li>
+      <li><a href="#export_csv">CSV</a></li>
+      <li><a href="#export_dxf">DXF</a></li>
+      <li><a href="#export_geojson">GeoJSON</a></li>
+      <li><a href="#export_gpx">GPX</a></li>
+      <li><a href="#export_kml">KML</a></li>
+      <li><a href="#export_shp">Shapefile</a></li>
     </ul>
 
     <p>S
@@ -658,15 +707,15 @@
     </p>
 
     <ul>
-      <li><a href="#cave3d">Cave3D</a></li>
-      <li><a href="#csx">cSurvey</a></li>
-      <li><a href="#dxf2">DXF</a></li>
-      <li><a href="#pdf">PDF file</a></li>
-      <li><a href="#shp2">SHP (ShapeFile)</a></li>
-      <li><a href="#svg">SVG</a></li>
-      <li><a href="#th2">Therion</a></li>
-      <li><a href="#tunnel">Tunnel</a></li>
-      <li><a href="#xvi">XVI (xTherion)</a></li>
+      <li><a href="#export_sketch_cave3d">Cave3D</a></li>
+      <li><a href="#export_sketch_csx">cSurvey</a></li>
+      <li><a href="#export_sketch_dxf">DXF</a></li>
+      <li><a href="#export_sketch_pdf">PDF file</a></li>
+      <li><a href="#export_sketch_shp">SHP (ShapeFile)</a></li>
+      <li><a href="#export_sketch_svg">SVG</a></li>
+      <li><a href="#export_sketch_th2">Therion</a></li>
+      <li><a href="#export_sketch_tunnel">Tunnel</a></li>
+      <li><a href="#export_sketch_xvi">XVI (xTherion)</a></li>
     </ul>
 
     <h3 id="export_sketch_csx">cSurvey (.csx)</h3>
