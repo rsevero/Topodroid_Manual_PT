@@ -1,833 +1,1224 @@
 <html>
   <body>
     <link rel="stylesheet" href="manual.css">
-<h2>[13] IMPORTAR EXPORTAR</h2>
+    <h1>[13] Importar Exportar</h1>
+
+    <h2 id="index">Índice</h2>
+    <ul>
+      <li><a href="#import">Importar Topo</a>
+        <ul>
+          <li><a href="#import_compass">Compass</a></li>
+          <li><a href="#import_bric_csv">CSV gerado pela BRIC</a></li>
+          <li><a href="#import_pockettopo">PocketTopo</a></li>
+          <li><a href="#import_therion">Therion</a></li>
+          <li><a href="#import_zip">Zip</a></li>
+        </ul>
+      </li>
+      <li><a href="#export">Exportar Topo</a>
+        <ul>
+          <li><a href="#export_compass">Compass</a></li>
+          <li><a href="#export_csurvey">cSurvey</a></li>
+          <li><a href="#export_csv">CSV</a></li>
+          <li><a href="#export_dxf">DXF</a></li>
+          <li><a href="#export_geojson">GeoJSON</a></li>
+          <li><a href="#export_ghtopo">GHTopo</a></li>
+          <li><a href="#export_gpx">GPX</a></li>
+          <li><a href="#export_grottolf">Grottolf</a></li>
+          <li><a href="#export_kml">KML</a></li>
+          <li><a href="#export_ptopo">PocketTopo</a></li>
+          <li><a href="#export_polygon">Polygon</a></li>
+          <li><a href="#export_shp">Shapefile</a></li>
+          <li><a href="#export_survex">Survex</a></li>
+          <li><a href="#export_therion">Therion</a></li>
+          <li><a href="#export_topo">Topo</a></li>
+          <li><a href="#export_trobot">TopoRobot</a></li>
+          <li><a href="#export_vtopo">VisualTopo</a></li>
+          <li><a href="#export_walls">Walls</a></li>
+          <li><a href="#export_winkarst">WinKarst</a></li>
+        </ul>
+      </li>
+      <li><a href="#export_sketch">Exportação de croquis</a>
+        <ul>
+          <li><a href="#export_sketch_cave3d">Cave3D</a></li>
+          <li><a href="#export_sketch_csx">cSurvey</a></li>
+          <li><a href="#export_sketch_dxf">DXF</a></li>
+          <li><a href="#export_sketch_pdf">PDF file</a></li>
+          <li><a href="#export_sketch_shp">SHP (ShapeFile)</a></li>
+          <li><a href="#export_sketch_svg">SVG</a></li>
+          <li><a href="#export_sketch_th2">Therion</a></li>
+          <li><a href="#export_sketch_tunnel">Tunnel</a></li>
+          <li><a href="#export_sketch_xvi">XVI (xTherion)</a></li>
+        </ul>
+      </li>
+      <li><a href="#setting_import_export">Configurações IMPORTAR/EXPORTAR</a></li>
+    </ul>
+
+    <p>
+      Quando tiver terminado, por segurança, exporte os dados da linha de trena e os croquis para o seu formato predileto e copie os arquivos exportados para seu PC, onde poderá terminar de desenhar seus mapas.
+    </p>
+
+    <p>
+      O arquivo zip é um backup completo de sua topo e contém todas as informações necessárias para restaurar os dados da topo em um banco de dadose/ou para transferir a topo para o TopoDroidX em outro aparelho Android.
+    </p>
+
+    <p>
+      Os dados da linha de trena e o arquivo zip são exportados a partir da tela <u>Info Topo</u>.
+      Os croquis são exportados a partir da tela <u>Desenhar</u> (agrupados em um só croqui) e a partir da tela <u>Visão Geral</u> (todos os croquis de uma mesma visualização em um único arquivo).
+    </p>
+
+    <p>
+      Os arquivos zip do TopoDroidX são armazenados no subdiretório <i>zip</i> abaixo do diretório <i>TDX/TopoDroidX</i>.
+    </p>
+
+    <p>
+      Os arquivos com os dados da linha de trena e com os croquis são armazenados dentro do subdiretório <i>out</i> no diretório da topo, dentro de <i>TDX/TopoDroidX</i>.
+    </p>
+
+    <p>
+      Modelos 3D são exportados utilizando a opção de menu EXPORTAR, a partir da tela 3D. O destino do arquivo é escolhido através do gerenciador de arquivos do sistema operacional.
+    </p>
+
+    <h2 id="import">Importar Topo</h2>
+
+    <p>
+      O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos externos em diversos formatos.
+      Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
+      Os arquivos a serem importados serão selecionados através da interface do sistema.
+      Os nomes dos arquivos não podem incluir dois pontos (:).
+    </p>
+
+    <p>
+      Os seguintes formatos podem ser importados:
+    </p>
+    <ul>
+      <li>CaveSniper</li>
+      <li><a href="#import_compass">Compass</a></li>
+      <li><a href="#import_bric_csv">CSV gerado pela BRIC</a></li>
+      <li><a href="#import_pockettopo">PocketTopo</a></li>
+      <li>Survex</li>
+      <li><a href="#import_therion">Therion</a></li>
+      <li>VisualTopo</li>
+      <li>Walls</li>
+      <li><a href="#import_zip">Zip</a></li>
+    </ul>
+
+    <p>
+      A importação de um arquivo falha se já houver uma topo com o mesmo nome no TopoDroidX, ou se a versão do banco de dados for antiga demais ou mais velha do que a do TopoDroidX atual.
+    </p>
+
+    <p>
+      Na importação de outros formatos, se tiverem dados EDTC, estes serão convertidos para medidas auxiliares apresentadas em verde.
+    </p>
+
+    <h3 id="import_bric_csv">CSV gerado pela BRIC</h3>
+
+    <p>
+      Os dados da topo importados de arquivos CSV gerados pela BRIC contêm somente distância, azimute e inclinação.
+      Os dados da topo devem ser editados após a importação para adicionar as outras informações.
+    </p>
+
+    <h3 id="import_zip">Importação Zip</h3>
+
+    <p>
+      A importação de arquivos Zip criados pelo TopoDroid ou TopoDroidX falha se a versão do banco de dados dos dados a serem importados for excessivamente antiga ou se for mais nova do que a usada pelo TopoDroidX instalado.
+    </p>
+
+    <p>
+      Os códigos de erro são:
+    </p>
+
+    <ul>
+      <li>1: error de entrada/saída (<i>IO error</i>)</li>
+      <li>2: versão do TopoDroidX muito antiga</li>
+      <li>3: banco de dados muito antigo no arquivo zip</li>
+      <li>4: banco de dados muito novo no arquivo zip</li>
+      <li>5: nome da topo diferente do nome do arquivo zip</li>
+      <li>6: topo já existente</li>
+      <li>7: falha ao abrir banco de dados</li>
+      <li>8: erro SQL no zip</li>
+      <li>9: erro de formato de número</li>
+      <li>10: erro no formato do arquivo manifest</li>
+      <li>11: arquivo manifest não encontrado</li>
+      <li>12: erro de entrada/saída (IO error) no arquivo manifest</li>
+      <li>13: erro inesperado</li>
+    </ul>
+
+    <p>
+      <b>Obs.:</b> as cores costumizadas das medidas auxiliares não são importadas a não ser que a opção de configuração apropriada esteja ativada.
+    </p>
+
+    <h3 id="import_therion">Importação Therion</h3>
+
+    <p>
+      Somente arquivos Therion no modo de dados "normal" são aceitos para importação.
+    </p>
+
+    <p>
+      O comando "declination" é reconhecido.
+      Os valores de azimute lidos são corrigidos pela declinação.
+    </p>
+
+    <p>
+      A hierarquia da topo pode ser anexada aos nomes das bases. [T]
+    </p>
+
+    <p>
+      O TopoDroidX não importa croquis do Therion.
+    </p>
+
+    <h3 id="import_pockettopo">Importação PocketTopo</h3>
+
+    <p>
+      O TopoDroidX importa tanto os dados da topo quanto os croquis.
+      As cores usadas no PocketTopo são relacionadas a diferentes símbolos de desenho do TopoDroidX (pontos e linhas).
+      Essa correlação de cores (PocketTopo X símbolos TopoDroidX) pode ser alterada através da opções de configuração <i>Importar/Exportar >> Importar >> Esquema cor</i>.
+    </p>
+
+    <h3 id="import_compass">Importação Compass</h3>
+
+    <p>
+      O TopoDroidX converte uma topo Compass do modo <i>normal</i> para o modo <i>mergulho [A] se a opção de configuração i>Importar/Exportar >> Importar >> Estimar ref retif perfil</i> estiver habilitada [G].</i>
+    </p>
+
+    <p>
+      <b>Obs.</b>: A importação pode falhar (e dar pane no app) devido a algum erro no banco de dados que o TopoDroidX não detecte.
+      Se isso acontecer, apague a topo importada parcialmente e repita a importação.
+    </p>
+
+    <h2 id="export">Exportar Topo</h2>
+
+    <p>
+      O TopoDroidX exporta os dados da topo para os seguintes softwares espeleológicos:
+    </p>
+    <ul>
+      <li><a href="#export_compass">Compass</a></li>
+      <li><a href="#export_csurvey">cSurvey</a></li>
+      <li><a href="#export_ghtopo">GHTopo</a></li>
+      <li><a href="#export_grottolf">Grottolf</a></li>
+      <li><a href="#export_ptopo">PocketTopo</a></li>
+      <li><a href="#export_polygon">Polygon</a></li>
+      <li><a href="#export_survex">Survex</a></li>
+      <li><a href="#export_therion">Therion</a></li>
+      <li><a href="#export_topo">Topo</a></li>
+      <li><a href="#export_trobot">TopoRobot</a></li>
+      <li><a href="#export_vtopo">VisualTopo</a></li>
+      <li><a href="#export_walls">Walls</a></li>
+      <li><a href="#export_winkarst">WinKarst</a></li>
+    </ul>
+
+    <p>
+      Além disso, exporta também os dados da topo nos seguintes formatos:
+    </p>
+    <ul>
+      <li><a href="#export_csv">CSV</a></li>
+      <li><a href="#export_dxf">DXF</a></li>
+      <li><a href="#export_geojson">GeoJSON</a></li>
+      <li><a href="#export_gpx">GPX</a></li>
+      <li><a href="#export_kml">KML</a></li>
+      <li><a href="#export_shp">Shapefile</a></li>
+    </ul>
+
+    <p>S
+      e a topo não for georeferenciada, os dados da topo não poderão ser exportados nos últimos quatro formatos.
+    </p>
+
+    <p>
+      Pontos georeferenciados são exportados com coordenads lat/long em graus decimais e altitude acima do nível médio do mar [m].
+    </p>
+
+    <p>
+      Medidas auxiliares H e V são exportadas como medidas auxiliares comuns.
+    </p>
+
+    <p>
+      A caixa de diálogo para exportar os dados da topo somente lista os formatos habilitados na configuração <i>Importar/Exportar > Habilitar</i>.
+    </p>
+
+    <h3 id="export_compass">Compass (.dat)</h3>
+
+    <p>
+      O formato de arquivos <i>Compass</i> é suportado tanto para importação como para exportação.
+    </p>
+
+    <p>
+      São suportados tanto o modo de dados "normal" quanto o modo "mergulho".
+    </p>
+
+    <p>
+      As unidades dos dados lidos devem ser "pés" e "graus" que serão convertidos para "metros e "graus" no TopoDroidX.
+    </p>
+
+    <p>
+      Tanto na janela de exportação quanto na págin de configurações <i>Importar/exportar >> Compass </i> constam as seguintes opções:
+    </p>
+    <ul>
+      <li><u>Pref base</u>: se ativado, será incluído o prefixo no início do nome de cada base, prefixo a ser determinado no ato de exportação.</li>
+      <li><u>Aux Compass</u>: habilita a exportação das medidas auxiliares.</li>
+      <li><u>Inverter Esq/Dir Compass</u>: inverte as medidas na exportação para o Compass.</li>
+    </ul>
+
+    <h3 id="export_csurvey">cSurvey (.csx)</h3>
+
+    <p>
+      Os arquivos cSurvey gerados pelo TopoDroidX são compatíveis com a versão 1.20 e superiores do cSurvey.
+    </p>
+
+    <p>
+      A exportação de arquivos <i>cSurvey</i> a partir da tela <u>Info Topo</u> inclui somente os dados da topo e não os croquis.
+    </p>
+
+    <p>
+      Para exportar croquis (planta baixa e perfil) para o <i>cSurvey</i>, faça a exportação na tela <u>Desenhar</u>.
+    </p>
+
+    <p>
+      A exportação <i>cSurvey</i> inclui as medidas de calibração e os arquivos de mídia (fotos e áudios).
+    </p>
+
+    <p>
+      Configurações:
+    </p>
+    <ul>
+    <li><u>Pref base</u>: se definido, será automaticamente incluído no início do nome de cada base.</li>
+    </ul>
+
+    <h3 id="export_survex">Survex (.svx)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados como arquivos <i>Survex</i>.
+    </p>
+
+    <p>
+      Os dados são exportados nas unidades definidas nas opções do usuário.
+    </p>
+
+    <p>
+      Configurações:
+    </p>
+    <ul>
+      <li><u>Term linha Survex</u>: a terminação de linha pode ser Linux ou Windows</li>
+      <li><u>Base aux Survex</u>: inclui às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada.</li>
+      <li><u>EDTC Survex</u>: incluir EDTC nos arquivos Survex exportados.</li>
+    </ul>
+
+    <h3 id="export_therion">Therion (.th)</h3>
+
+    <p>
+      Os dados da topo são exportados no formato <i>Therion</i> usando o modo "normal".
+    </p>
+
+    <p>
+      O nome da topo é usado como o nome da caverna no Therion com os "sublinhados" substituídos por espaços.
+    </p>
+
+    <p>
+      Os dados são exportados nas unidades definidas nas opções do usuário.
+    </p>
+
+    <p>
+      Os nomes dos integrantes da equipe são incluídos nos comentários.
+    </p>
+
+    <p>
+      A equipe definida no TopoDroidX é repartida em comandos <i>team</i> do Therion.
+      Os nomes dos integrantes da equipe devem estar listados pelo último sobrenome eventualmente precedido de um nome/sequência de abreviações.
+      Por exemplo a equipe "A.W. Smith, B. Ford" será transformada em <i>team "A.W. Smith"</i> e <i>team "B. Ford"</i>.
+    </p>
+
+    <p>
+      Os comentários e marcações de tipo de bases precedem os dados da linha de trena.
+    </p>
+
+    <p>
+      Medidas auxiliares de cortes são exportadas com a base destino "-" (hífen).
+      As outras são exportadas com a base final "." (ponto).
+    </p>
+
+    <p>
+      Comentários são exportados como textos comentados (#).
+    </p>
+
+    <p>
+      No perfil retificado a sintaxe "extend &lt;flag&gt;" é utilizada antes de cada visada com o <i>flag</i> setado para "left", "right" ou "vert".
+      Para medidas auxiliares que não tenham direção no perfil retificado definida, o TopoDroidX escreve "# extend auto" como um texto comentado pois este não é um comando Therion válido.
+    </p>
+
+    <p>
+      Projeções parciais no perfil retificado são suportadas no Therion a partir da versão 5.2.2 e são devidamente exportadas se a opção correspondente for habilitada.
+    </p>
+
+    <p>
+      As coordenadas geográficas (longitude, latitude e altitude) são exportadas como textos comentados.
+      Se o ponto usa coordenadas CRS personalizadas, elas também são incluídas precedidas do nome CRS correspondente.
+    </p>
+
+    <p>
+      Além disso, são incluídos ao final como textos comentados os comandos "input" para cada arquivo th2 e para as definições dos mapas de cada croqui.
+      Esses textos precisam ser descomentados para que sejam efetivamente incluídos na saída PDF do Therion.
+    </p>
+
+    <p>
+      Os arquivos <i>Therion</i> exportados incluem as medidas de verificação de calibração como textos comentados.
+    </p>
+
+    <p>
+      Configurações <i>Importar/exportar >> Therion</i>:
+    </p>
+    <ul>
+      <li><u>Comando config Therion</u>: quando habilitada um arquivo thconfig simples com comandos de configuração do Therion é criado. [A]</li>
+      <li><u>Mapa Therion início</u>: quando habilitada faz com que os comandos "map" sejam posicionados antes dos dados da linha de trena. [A]</li>
+      <li><u>Med Aux Therion</u>: adiciona linhas "u:splay" aos arquivos th2. [A]</li>
+      <li><u>EDTC Survex/Therion</u>: inclui medidas auxiliares EDTC (esquerda/direita/teto/chão) nos arquivos exportados. [A]</li>
+      <li><u>Escala Therion</u>: inclui a escala na exportação de arquivos th2/xvi. [E] </li>
+      <li><u>Imagem XVI</u>: quando habilitado insere a imagem xvi no arquivo th2. [E] </li>
+    </ul>
+
+    <p>
+      A leitura de arquivos <i>Therion</i> pelo TopoDroidX é limitada.
+      Somente dados no formato "normal" são compreendidos.
+      Os comandos Therion "units", "flag", "extend", "mark" e "station" são reconhecidos.
+    </p>
+
+    <p>
+      Pontos com coordenadas geográficas ("fix") são lidos mas não são considerados pois o comando "cs" não é suportado.
+    </p>
+
+    <h3 id="export_toporobot">TopoRobot (.trb)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>TopoRobot</i>.
+      A política de nomeação de bases <i>TopoRobot</i> precisa ter sido selecionada.
+      Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses nomes serão usados.
+    </p>
+
+    <h3 id="export_visualtopo">VisualTopo (.tro, .trox)</h3>
+
+    <p>
+      Arquivos no formato <i>VisualTopo</i> são suportados tanto para exportação como para importação.
+    </p>
+
+    <p>
+      Medidas auxiliares são incluídas se estiverem habilitadas.
+    </p>
+
+    <p>
+      Por padrão as medidas auxiliares EDTC são referenciadas às bases PARA mas esse comportamento pode ser alterado para que referenciem as bases DE.
+    </p>
+
+    <p>
+      As unidades de medida usadas são "metros" e "graus".
+    </p>
+
+    <p>
+      Configurações auxiliares estão disponíveis em <i>IMPORTAR/EXPORTAR >> Visual Topo</i>:
+    </p>
+    <ul>
+      <li><u>Aux VisualTopo</u>: define se as medidas auxiliares serão incluídas. [A]</li>
+      <li><u>EDTC em DE</u>: quando habilitado, as medidas auxiliares são referenciadas às bases DE. [N]</li>
+      <li><u>Formato Trox</u>: por padrão os dados são gravados no formato "tro". [N]</li>
+    </ul>
+
+    <h3 id="export_walls">Walls (.srv)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>Walls</i> (testado parcialmente).
+    </p>
+
+    <p>
+      As unidades de medidas são as definidas pelo usuário.
+    </p>
+
+    <p>
+      Se a opção <i>IMPORTAR/EXPORTAR >> Compass >> Aux Compass/Walls</i> estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas". [A]
+      Do contrário, são exportadas como "medidas anônimas".
+    </p>
+
+    <p>
+      Configurações:
+    </p>
+    <ul>
+      <li><b>Aux Compass/Walls</b>: exportar medidas auxiliares em arquivos Compass/Walls como "12 12-1" ou como "12 -".</li>
+    </ul>
+
+    <h3 id="export_winkarst">WinKarst (.sur)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>WinKarst</i> (não testado).
+    </p>
+
+    <p>
+      Configurações:
+    </p>
+    <ul>
+      <li><u>Pref base</u>: um prefixo sreá incluído nos nomes das bases no arquivo exportado.</li>
+    </ul>
+
+    <h3 id="export_pockettopo">PocketTopo (.top)</h3>
+
+    <p>
+      Arquivos no formato <i>PocketTopo</i> são suportados tanto para exportação como para importação.
+    </p>
+
+    <p>
+      Os arquivos PocketTopo exportados contém somente os dados da topo.
+    </p>
+
+    <p>
+      Se a configuração <i>Dados Topo >> Nomear bases</i> estiver na opção <i>TopoRobot</i> e os nomes das bases seguirem o padrão TopoRobot — "series.number" —, esses nomes são usados na exportação, do contrário os nomes das bases são convertidos em números.
+      As letras são substituídas por dois dígitos cada.
+      Por exemplo, 'a' é substituído por '00', 'b' por '01' e assim sucessivamente, 'A' por '50', 'B' por '51' e assim por diante.
+      Todos os outros caracteres, não alfanuméricos são substituídos por '99'.
+    </p>
+
+    <p>
+      Os perfis "outline" e "profile" são importados.
+      O <i>PocketTopo</i> só utiliza algumas poucas cores para distinguir tipos de linhas, desta forma é usado um <a href="page_pt_cmap.htm">mapeamento</a> de cores para tipos de linhas do TopoDroidX.
+      Esse mapeamento pode ser alterado através da configuração <i>IMPORTAR/EXPORTAR >> IMPORTAR >> Esquema cor</i>.
+    </p>
+
+    <p>
+      Pode acontecer que o croqui importado não esteja alinhado com os dados da topo.
+      Nessa situação você pode arrastar o croqui na tela de <u>desenho</u> para que encaixe na linha de trena.
+    </p>
+
+    <h3 id="export_polygon">Polygon (.cave)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>Polygon</i>.
+    </p>
+
+    <p>
+      Pontos com coordenadas geográficas são exportados como lat-long.
+    </p>
+
+    <h3 id="export_ghtopo">GHTopo (.gtx)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>GHTopo</i> (testado parcialmente).
+    </p>
+
+    <h3 id="export_grottolf">Grottolf (.grt)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>Grottolf</i> (não testado).
+    </p>
+
+    <p>
+      Se a primeira base tiver coordenadas geográficas, elas são exportadas, do contrário, são usadas coordenadas locais.
+      O perfil nas bases é calculado projetando as medidas auxiliares no plano vertical perpendicular à visada.
+    </p>
+
+    <h3 id="export_topo">Topo (.cav)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>Topo</i>.
+    </p>
+
+    <p>
+      Configurações (em configurações "Survex"):
+    </p>
+
+    <ul>
+      <li><u>Term linha Survex/Topo</u> pode ser formato Linux ou Windows.</li>
+    </ul>
+
+    <h3 id="export_csv">CSV (.csv)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato <i>CSV</i> (campos separados por vírgulas):
+    </p>
+
+    <ul>
+      <li>Bases DE e PARA</li>
+      <li>Distância, azimute e inclinação</li>
+      <li>direção no perfil retificado</li>
+    </ul>
+
+    <p>
+      Os comentários das medidas não são exportados.
+      Um cabeçalho indicando o conteúdo de cada coluna é anexado aos dados.
+    </p>
+
+    <p>
+      Os dados brutos também podem ser exportados em formato CSV.
+      Nesse caso cada linha de dados é composta por:
+    </p>
+
+    <ul>
+      <li>ID</li>
+      <li>Bases DE e PARA</li>
+      <li>Distância, azimute, inclinação e rotação</li>
+      <li>Aceleração, campo magnético e mergulho</li>
+      <li>Carimbo de horário, tipo (dispositivo ou manual) e endereço do dispositivo</li>
+      <li>Direção no perfil retificado, categoria, tipo, situação e comentário</li>
+    </ul>
+
+    <p>
+      Na exportação de dados brutos as visadas não têm seus valores calculados (média), são exportados em formato original, individualmente.
+    </p>
+
+    <p>
+      Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> CSV</i>: [T]
+    </p>
+
+    <ul>
+      <li><u>CSV bruto</u>: habilita a exportação de dados brutos em formato CSV</li>
+      <li><u>Separ campo CSV</u>: escolhe o tipo de separador de campos nos arquivos CSV exportados (vírgula, traço vertical ou tabulação)</li>
+      <li><u>Separ linha CSV</u>: separador de linhas nos arquivos CSV exportados (Linux ou Windows)</li>
+    </ul>
+
+    <h3 id="export_dxf">DXF (.dxf)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados no formato 3D DXF <i>LibreCAD</i> com as camadas:
+    </p>
+
+    <ul>
+      <li>bases</li>
+      <li>visadas</li>
+      <li>medidas auxiliares</li>
+    </ul>
+
+    <p>
+      Os dados são exportados com correção relativa à declinação magnética.
+    </p>
+
+    <p>
+      Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> DXF</i>: [T]
+    </p>
+
+    <ul>
+      <li><u>Final aux</u>: as medidas auxiliares exportadas possuem a extremidade final com marcas em cruz.</li>
+      <li><u>Versão</u>: permite selecionar a versão de destino entre R12, R13 e R14.</li>
+      <li><u>Splines</u>: habilita a interpolação cúbica de splines.</li>
+      <li><u>Referência</u>: inclui os eixos XY na exportação de croquis DXF.</li>
+      <li><u>Camadas croquis</u>: habilita a criação de camadas DXF por croquis.</li>
+    </ul>
+
+    <h3 id="export_kml">KML (.kml)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados como arquivo KML no formato <i>Keyhole Markup Language</i> se houver alguma base geoferenciada.
+    </p>
+
+    <p>
+      Se a topo tiver partes desconectadas entre si, o arquivo de trilhas exportado conterá todas as partes que contarem com alguma base georeferenciada.
+      Os dados são exportados com correção relativa à declinação magnética.
+    </p>
+
+    <p>
+      Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]
+    </p>
 
-<p>Quando tiver terminado, por segurança, exporte os dados da linha de trena e os croquis para o seu formato predileto e copie os arquivos exportados para seu PC, onde poderá terminar de desenhar seus mapas.</p>
-
-<p>O arquivo zip é um backup completo de sua topo e contém todas as informações necessárias para restaurar os dados da topo em um banco de dadose/ou para transferir a topo para o TopoDroidX em outro aparelho Android.</p>
-
-<p>Os dados da linha de trena e o arquivo zip são exportados a partir da tela <u>Info Topo</u>.
-Os croquis são exportados a partir da tela <u>Desenhar</u> (agrupados em um só croqui) e a partir da tela <u>Visão Geral</u> (todos os croquis de uma mesma visualização em um único arquivo).</p>
-
-<p>Os arquivos zip do TopoDroidX são armazenados no subdiretório <i>zip</i> abaixo do diretório <i>TDX/TopoDroidX</i>.</p>
-
-<p>Os arquivos com os dados da linha de trena e com os croquis são armazenados dentro do subdiretório <i>out</i> no diretório da topo, dentro de <i>TDX/TopoDroidX</i>.</p>
-
-<p>Modelos 3D são exportados utilizando a opção de menu EXPORTAR, a partir da tela 3D. O destino do arquivo é escolhido através do gerenciador de arquivos do sistema operacional.</p>
-
-<h3>IMPORTAR TOPO</h3>
-
-<p>O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos externos em diversos formatos.
-Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
-Os arquivos a serem importados serão selecionados através da interface do sistema.
-Os nomes dos arquivos não podem incluir dois pontos (:).</p>
-
-<p>Os seguintes formatos podem ser importados:</p>
-<ul>
-  <li>CaveSniper</li>
-  <li>Compass</li>
-  <li>PocketTopo: incluindo croquis</li>
-  <li>Survex</li>
-  <li>Therion: somente dados da linha de trena.</li>
-  <li>VisualTopo</li>
-  <li>Walls</li>
-  <li>ZIP: arquivos zip do TopoDroidX</li>
-</ul>
-
-<p>A importação de um arquivo falha se já houver uma topo com o mesmo nome no TopoDroidX, ou se a versão do banco de dados for antiga demais ou mais velha do que a do TopoDroidX atual.</p>
-
-<p>Na importação de outros formatos, se tiverem dados EDTC, estes serão convertidos para medidas auxiliares apresentadas em verde.</p>
-
-<p><b>Importação Zip</b></p>
-
-<p>A importação de arquivos Zip falha se a versão do banco de dados dos dados a serem importados for excessivamente antiga ou se for mais nova do que a usada pelo TopoDroidX instalado.</p>
-
-<p>Os códigos de erro são:</p>
-
-<ul>
-  <li>1: error de entrada/saída (<i>IO error</i>)</li>
-  <li>2: versão do TopoDroidX muito antiga</li>
-  <li>3: banco de dados muito antigo no arquivo zip</li>
-  <li>4: banco de dados muito novo no arquivo zip</li>
-  <li>5: nome da topo diferente do nome do arquivo zip</li>
-  <li>6: topo já existente</li>
-  <li>7: falha ao abrir banco de dados</li>
-  <li>8: erro SQL no zip</li>
-  <li>9: erro de formato de número</li>
-  <li>10: erro no formato do arquivo manifest</li>
-  <li>11: arquivo manifest não encontrado</li>
-  <li>12: erro de entrada/saída (IO error) no arquivo manifest</li>
-  <li>13: erro inesperado</li>
-</ul>
-
-<p><b>Obs.:</b> as cores costumizadas das medidas auxiliares não são importadas a não ser que a opção de configuração apropriada esteja ativada.</p>
-
-<p><b>Importação Therion</b></p>
-
-<p>Somente arquivos Therion no modo de dados "normal" são aceitos para importação.</p>
-
-<p>O comando "declination" é reconhecido.
-Os valores de azimute lidos são corrigidos pela declinação.</p>
-
-<p>A hierarquia da topo pode ser anexada aos nomes das bases. [T]</p>
-
-<p>O TopoDroidX não importa croquis do Therion.</p>
-
-<p><b>Importação PocketTopo</b></p>
-
-<p>O TopoDroidX importa tanto os dados da topo quanto os croquis.
-As cores usadas no PocketTopo são relacionadas a diferentes símbolos de desenho do TopoDroidX (pontos e linhas).
-Essa correlação de cores (P)ocketTopo X símbolos TopoDroidX) pode ser alterada através da opções de configuração <i>Importar/Exportar >> Importar >> Esquema cor</i>.</p>
-
-<p><b>Importação Compass</b></p>
-
-<p>O TopoDroidX converte uma topo Compass do modo <i>normal</i> para o modo <i>mergulho [A] se a opção de configuração i>Importar/Exportar >> Importar >> Estimar ref retif perfil</i> estiver habilitada [G].</i></p>
-
-<p><b>Obs.</b>: A importação pode falhar (e dar pane no app) devido a algum erro no banco de dados que o TopoDroidX não detecte.
-Se isso acontecer, apague a topo importada parcialmente e repita a importação.</p>
-
-<h3>EXPORTAR TOPO</h3>
-
-<p>O TopoDroidX exporta os dados da topo para os seguintes softwares espeleológicos:</p>
-<ul>
-<li><a href="#compass">Compass</a></li>
-<li><a href="#csurvey">cSurvey</a></li>
-<li><a href="#ghtopo">GHTopo</a></li>
-<li><a href="#grottolf">Grottolf</a></li>
-<li><a href="#ptopo">PocketTopo</a></li>
-<li><a href="#polygon">Polygon</a></li>
-<li><a href="#survex">Survex</a></li>
-<li><a href="#therion">Therion</a></li>
-<li><a href="#topo">Topo</a></li>
-<li><a href="#trobot">TopoRobot</a></li>
-<li><a href="#vtopo">VisualTopo</a></li>
-<li><a href="#walls">Walls</a></li>
-<li><a href="#winkarst">WinKarst</a></li>
-</ul>
-
-<p>Além disso, exporta também os dados da topo nos seguintes formatos:</p>
-<ul>
-<li><a href="#csv">CSV</a></li>
-<li><a href="#dxf">DXF</a></li>
-<li><a href="#geojson">GeoJSON</a></li>
-<li><a href="#gpx">GPX</a></li>
-<li><a href="#kml">KML</a></li>
-<li><a href="#shp">Shapefile</a></li>
-</ul>
-
-<p>Se a topo não for georeferenciada, os dados da topo não poderão ser exportados nos últimos quatro formatos.</p>
-
-<p>Pontos georeferenciados são exportados com coordenads lat/long em graus decimais e altitude acima do nível médio do mar [m].</p>
-
-<p>Medidas auxiliares H e V são exportadas como medidas auxiliares comuns.</p>
-
-<p>A caixa de diálogo para exportar os dados da topo somente lista os formatos habilitados na configuração <i>Importar/Exportar > Habilitar</i>.</p>
-
-<p><b id="compass">Compass</b> (.dat)</p>
-
-<p>O formato de arquivos <i>Compass</i> é suportado tanto para importação como para exportação.</p>
-
-<p>São suportados tanto o modo de dados "normal" quanto o modo "mergulho".</p>
-
-<p>As unidades dos dados lidos devem ser "pés" e "graus" que serão convertidos para "metros e "graus" no TopoDroidX.</p>
-
-<p>Tanto na janela de exportação quanto na págin de configurações <i>Importar/exportar >> Compass </i> constam as seguintes opções:</p>
-<ul>
-<li><u>Pref base</u>: se ativado, será incluído o prefixo no início do nome de cada base, prefixo a ser determinado no ato de exportação.</li>
-<li><u>Aux Compass</u>: habilita a exportação das medidas auxiliares.</li>
-<li><u>Inverter Esq/Dir Compass</u>: inverte as medidas na exportação para o Compass.</li>
-</ul>
-
-<p><b id="csurvey">cSurvey</b> (.csx)</p>
-
-<p>Os arquivos cSurvey gerados pelo TopoDroidX são compatíveis com a versão 1.20 e superiores do cSurvey.</p>
-
-<p>A exportação de arquivos <i>cSurvey</i> a partir da tela <u>Info Topo</u> inclui somente os dados da topo e não os croquis.</p>
-
-<p>Para exportar croquis (planta baixa e perfil) para o <i>cSurvey</i>, faça a exportação na tela <u>Desenhar</u>.</p>
-
-<p>A exportação <i>cSurvey</i> inclui as medidas de calibração e os arquivos de mídia (fotos e áudios).</p>
-
-<p>Configurações:</p>
-<ul>
-<li><u>Pref base</u>: se definido, será automaticamente incluído no início do nome de cada base.</li>
-</ul>
-
-<p><b id="survex">Survex</b> (.svx)</p>
-
-<p>Os dados da topo podem ser exportados como arquivos <i>Survex</i>.</p>
-
-<p>Os dados são exportados nas unidades definidas nas opções do usuário.</p>
-
-<p>Configurações:</p>
-<ul>
-<li><u>Term linha Survex</u>: a terminação de linha pode ser Linux ou Windows</li>
-<li><u>Base aux Survex</u>: inclui às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada.</li>
-<li><u>EDTC Survex</u>: incluir EDTC nos arquivos Survex exportados.</li>
-</ul>
-
-<p><b id="therion">Therion</b> (.th)</p>
-
-<p>Os dados da topo são exportados no formato <i>Therion</i> usando o modo "normal".</p>
-
-<p>O nome da topo é usado como o nome da caverna no Therion com os "sublinhados" substituídos por espaços.</p>
-
-<p>Os dados são exportados nas unidades definidas nas opções do usuário.</p>
-
-<p>Os nomes dos integrantes da equipe são incluídos nos comentários.</p>
-
-<p>A equipe definida no TopoDroidX é repartida em comandos <i>team</i> do Therion.
-Os nomes dos integrantes da equipe devem estar listados pelo último sobrenome eventualmente precedido de um nome/sequência de abreviações.
-Por exemplo a equipe "A.W. Smith, B. Ford" será transformada em <i>team "A.W. Smith"</i> e <i>team "B. Ford"</i>.</p>
-
-<p>Os comentários e marcações de tipo de bases precedem os dados da linha de trena.</p>
-
-<p>Medidas auxiliares de cortes são exportadas com a base destino "-" (hífen).
-As outras são exportadas com a base final "." (ponto).</p>
-
-<p>Comentários são exportados como textos comentados (#).</p>
-
-<p>No perfil retificado a sintaxe "extend &lt;flag&gt;" é utilizada antes de cada visada com o <i>flag</i> setado para "left", "right" ou "vert".
-Para medidas auxiliares que não tenham direção no perfil retificado definida, o TopoDroidX escreve "# extend auto" como um texto comentado pois este não é um comando Therion válido.</p>
-
-<p>Projeções parciais no perfil retificado são suportadas no Therion a partir da versão 5.2.2 e são devidamente exportadas se a opção correspondente for habilitada.</p>
-
-<p>As coordenadas geográficas (longitude, latitude e altitude) são exportadas como textos comentados.
-Se o ponto usa coordenadas CRS personalizadas, elas também são incluídas precedidas do nome CRS correspondente.</p>
-
-<p>Além disso, são incluídos ao final como textos comentados os comandos "input" para cada arquivo th2 e para as definições dos mapas de cada croqui.
-Esses textos precisam ser descomentados para que sejam efetivamente incluídos na saída PDF do Therion.</p>
-
-<p>Os arquivos <i>Therion</i> exportados incluem as medidas de verificação de calibração como textos comentados.</p>
-
-<p>Configurações <i>Importar/exportar >> Therion</i>:</p>
-<ul>
-<li><u>Comando config Therion</u>: quando habilitada um arquivo thconfig simples com comandos de configuração do Therion é criado. [A]</li>
-<li><u>Mapa Therion início</u>: quando habilitada faz com que os comandos "map" sejam posicionados antes dos dados da linha de trena. [A]</li>
-<li><u>Med Aux Therion</u>: adiciona linhas "u:splay" aos arquivos th2. [A]</li>
-<li><u>EDTC Survex/Therion</u>: inclui medidas auxiliares EDTC (esquerda/direita/teto/chão) nos arquivos exportados. [A]</li>
-<li><u>Escala Therion</u>: inclui a escala na exportação de arquivos th2/xvi. [E] </li>
-<li><u>Imagem XVI</u>: quando habilitado insere a imagem xvi no arquivo th2. [E] </li>
-</ul>
-
-<p>A leitura de arquivos <i>Therion</i> pelo TopoDroidX é limitada.
-Somente dados no formato "normal" são compreendidos.
-Os comandos Therion "units", "flag", "extend", "mark" e "station" são reconhecidos.</p>
-
-<p>Pontos com coordenadas geográficas ("fix") são lidos mas não são considerados pois o comando "cs" não é suportado.</p>
-
-<p><b id="trobot">TopoRobot</b> (.trb)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>TopoRobot</i>.
-A política de nomeação de bases <i>TopoRobot</i> precisa ter sido selecionada.
-Se os nomes das bases seguirem a convenção do TopoRobot "series.number", esses nomes serão usados.</p>
-
-<p><b id="vtopo">VisualTopo</b> (.tro, .trox)</p>
-
-<p>Arquivos no formato <i>VisualTopo</i> são suportados tanto para exportação como para importação.</p>
-
-<p>Medidas auxiliares são incluídas se estiverem habilitadas.</p>
-
-<p>Por padrão as medidas auxiliares EDTC são referenciadas às bases PARA mas esse comportamento pode ser alterado para que referenciem as bases DE.</p>
-
-<p>As unidades de medida usadas são "metros" e "graus".</p>
-
-<p>Configurações auxiliares estão disponíveis em <i>IMPORTAR/EXPORTAR >> Visual Topo</i>:</p>
-<ul>
-<li><u>Aux VisualTopo</u>: define se as medidas auxiliares serão incluídas. [A]</li>
-<li><u>EDTC em DE</u>: quando habilitado, as medidas auxiliares são referenciadas às bases DE. [N]</li>
-<li><u>Formato Trox</u>: por padrão os dados são gravados no formato "tro". [N]</li>
-</ul>
-
-<p><b id="walls">Walls</b> (.srv)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>Walls</i> (testado parcialmente).</p>
-
-<p>As unidades de medidas são as definidas pelo usuário.</p>
-
-<p>Se a opção <i>IMPORTAR/EXPORTAR >> Compass >> Aux Compass/Walls</i> estiver habilitada, as medidas auxiliares são exportadas como medidas "nomeadas". [A]
-Do contrário, são exportadas como "medidas anônimas".</p>
-
-<p>Configurações:</p>
-<ul>
-  <li><b>Aux Compass/Walls</b>: exportar medidas auxiliares em arquivos Compass/Walls como "12 12-1" ou como "12 -".</li>
-</ul>
-
-<p><b id="winkarst">WinKarst</b> (.sur)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>WinKarst</i> (não testado).</p>
-
-<p>Configurações:</p>
-<ul>
-<li><u>Pref base</u>: um prefixo sreá incluído nos nomes das bases no arquivo exportado.</li>
-</ul>
-
-<p><b id="ptopo">PocketTopo</b> (.top)</p>
-
-<p>Arquivos no formato <i>PocketTopo</i> são suportados tanto para exportação como para importação.</p>
-
-<p>Os arquivos PocketTopo exportados contém somente os dados da topo.</p>
-
-<p>Se a configuração <i>Dados Topo >> Nomear bases</i> estiver na opção <i>TopoRobot</i> e os nomes das bases seguirem o padrão TopoRobot — "series.number" —, esses nomes são usados na exportação, do contrário os nomes das bases são convertidos em números.
-As letras são substituídas por dois dígitos cada.
-Por exemplo, 'a' é substituído por '00', 'b' por '01' e assim sucessivamente, 'A' por '50', 'B' por '51' e assim por diante.
-Todos os outros caracteres, não alfanuméricos são substituídos por '99'.</p>
-
-<p>Os perfis "outline" e "profile" são importados.
-O <i>PocketTopo</i> só utiliza algumas poucas cores para distinguir tipos de linhas, desta forma é usado um <a href="page_pt_cmap.htm">mapeamento</a> de cores para tipos de linhas do TopoDroidX.
-Esse mapeamento pode ser alterado através da configuração <i>IMPORTAR/EXPORTAR >> IMPORTAR >> Esquema cor</i>.</p>
-
-<p>Pode acontecer que o croqui importado não esteja alinhado com os dados da topo.
-Nessa situação você pode arrastar o croqui na tela de <u>desenho</u> para que encaixe na linha de trena.</p>
-
-<p><b id="polygon">Polygon</b> (.cave)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>Polygon</i>.</p>
-
-<p>Pontos com coordenadas geográficas são exportados como lat-long.</p>
-
-<p><b id="ghtopo">GHTopo</b> (.gtx)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>GHTopo</i> (testado parcialmente).</p>
-
-<p><b id="grottolf">Grottolf</b> (.grt)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>Grottolf</i> (não testado).</p>
-
-<p>Se a primeira base tiver coordenadas geográficas, elas são exportadas, do contrário, são usadas coordenadas locais.
-O perfil nas bases é calculado projetando as medidas auxiliares no plano vertical perpendicular à visada.</p>
-
-
-<p><b id="topo">Topo</b> (.cav)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>Topo</i>.</p>
-
-<p>Configurações (em configurações "Survex"):</p>
-
-<ul>
-<li><u>Term linha Survex/Topo</u> pode ser formato Linux ou Windows.</li>
-</ul>
-
-<p><b id="csv">CSV</b> (.csv)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>CSV</i> (campos separados por vírgulas):</p>
-
-<ul>
-<li>Bases DE e PARA</li>
-<li>Distância, azimute e inclinação</li>
-<li>direção no perfil retificado</li>
-</ul>
-
-<p>Os comentários das medidas não são exportados.
-Um cabeçalho indicando o conteúdo de cada coluna é anexado aos dados.</p>
-
-<p>Os dados brutos também podem ser exportados em formato CSV.
-Nesse caso cada linha de dados é composta por:</p>
-
-<ul>
-<li>ID</li>
-<li>Bases DE e PARA</li>
-<li>Distância, azimute, inclinação e rotação</li>
-<li>Aceleração, campo magnético e mergulho</li>
-<li>Carimbo de horário, tipo (dispositivo ou manual) e endereço do dispositivo</li>
-<li>Direção no perfil retificado, categoria, tipo, situação e comentário</li>
-</ul>
-
-<p>Na exportação de dados brutos as visadas não têm seus valores calculados (média), são exportados em formato original, individualmente. </p>
-
-<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> CSV</i>: [T]</p>
-
-<ul>
-<li><u>CSV bruto</u>: habilita a exportação de dados brutos em formato CSV</li>
-<li><u>Separ campo CSV</u>: escolhe o tipo de separador de campos nos arquivos CSV exportados (vírgula, traço vertical ou tabulação)</li>
-<li><u>Separ linha CSV</u>: separador de linhas nos arquivos CSV exportados (Linux ou Windows)</li>
-</ul>
-
-<p><b id="dxf">DXF</b> (.dxf)</p>
-
-<p>Os dados da topo podem ser exportados no formato 3D DXF <i>LibreCAD</i> com as camadas:</p>
-
-<ul>
-<li>bases</li>
-<li>visadas</li>
-<li>medidas auxiliares</li>
-</ul>
-
-<p>Os dados são exportados com correção relativa à declinação magnética.</p>
-
-<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> DXF</i>: [T]</p>
-
-<ul>
-<li><u>Final aux</u>: as medidas auxiliares exportadas possuem a extremidade final com marcas em cruz.</li>
-<li><u>Versão</u>: permite selecionar a versão de destino entre R12, R13 e R14.</li>
-<li><u>Splines</u>: habilita a interpolação cúbica de splines.</li>
-<li><u>Referência</u>: inclui os eixos XY na exportação de croquis DXF.</li>
-<li><u>Camadas croquis</u>: habilita a criação de camadas DXF por croquis.</li>
-</ul>
-
-<p><b id="kml">KML</b> (.kml)</p>
-
-<p>Os dados da topo podem ser exportados como arquivo KML no formato <i>Keyhole Markup Language</i> se houver alguma base geoferenciada.</p>
-
-<p>Se a topo tiver partes desconectadas entre si, o arquivo de trilhas exportado conterá todas as partes que contarem com alguma base georeferenciada.
-Os dados são exportados com correção relativa à declinação magnética.</p>
-
-<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]</p>
-
-<ul>
-<li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
-<li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
-</ul>
-
-<p><b id="geojson">GeoJSON</b> (.json)</p>
-
-<p>Os dados da topo podem ser exportados como arquivo <i>GeoJSON</i> (conforme definido no <a href="https://www.rfc-editor.org/rfc/rfc7946">RFC 7946</a>) se houver alguma base geoferenciada.</p>
-
-<p>Medidas são exportadas como <i>LineString</i> e bases como <i>Point</i>.</p>
-
-<p>Se a topo tiver partes desconectadas entre si, o arquivo exportado conterá todas as partes que contarem com alguma base georeferenciada.
-Os dados são exportados com correção relativa à declinação magnética.</p>
-
-<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]</p>
-
-<ul>
-<li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
-<li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
-</ul>
-
-<p><b id="gpx">GPX</b> (.gpx)</p>
-
-<p>Os arquivos <i>GPX</i>  (.gpx) exportados incluem as bases como pontos de passagem (<i>waypoints</i>) e a linha de trena como trajeto (<i>track</i>).</p>
-
-<p><b id="shp">Shapefile</b> (.shp .shx .dbf)</p>
-
-<p>Os dados da topo podem ser exportados no formato <i>ShapeFile</i>.</p>
-
-<p>É criado um shapefile para as bases e outro para as medidas (visadas e medidas auxiliares).
-</p>
-
-<p>Se a topo tiver partes desconectadas entre si, será criado um shapefile para cada partes que contar com alguma base georeferenciada.</p>
-
-<p>Cada shapefile é composto por três arquivos: dados (.shp), índice (.shx) e atributos (.dbf).
-Os três arquivos são compactados no formato zip. O arquivo zip é gravado no diretório "shp" com a extensão ".shz".</p>
-
-<p>Se houver ao menos uma base georeferenciada e a configuração <i>IMPORTAR/EXPORTAR >> SHP >> Croqui georeferenciado</i> estiver habilitada, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
-Do contrário os dados serão exportados no sistema local de coordenadas sem correção relativa à declinação magnética.</p>
-
-<p>O arquivo DBF das bases contém somente o campo "nome".</p>
-
-<p>O arquivo DBF das medidas contém os seguintes campos:</p>
-
-<ul>
-<li><i>type</i>: ou "leg" (visada) ou "splay" (medida auxiliar)</li>
-<li><i>from</i>: base DE</li>
-<li><i>to</i>: base PARA ("-" nas medidas auxiliares)</li>
-<li><i>flag</i>: categoria da medida em formato hexadecimal:
-  <ul>
-    <li>1: superfície</li>
-    <li>2: duplicada</li>
-    <li>4: comentada</li>
-  </ul>
-</li>
-<li><i>comment</i>: comentário</li>
-</ul>
-
-<p>Configurações disponíveis em:</p>
-
-<ul>
-  <li><i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]
     <ul>
       <li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
       <li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
     </ul>
-  </li>
-  <li><i>IMPORTAR/EXPORTAR >> ShapeFile</i>: [T]
+
+    <h3 id="export_geojson">GeoJSON (.json)</h3>
+
+    <p>
+      Os dados da topo podem ser exportados como arquivo <i>GeoJSON</i> (conforme definido no <a href="https://www.rfc-editor.org/rfc/rfc7946">RFC 7946</a>) se houver alguma base geoferenciada.
+    </p>
+
+    <p>
+      Medidas são exportadas como <i>LineString</i> e bases como <i>Point</i>.
+    </p>
+
+    <p>
+      Se a topo tiver partes desconectadas entre si, o arquivo exportado conterá todas as partes que contarem com alguma base georeferenciada.
+      Os dados são exportados com correção relativa à declinação magnética.
+    </p>
+
+    <p>
+      Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]
+    </p>
+
     <ul>
-      <li><u>Croqui georeferenciado</u>: habilita a exportação do croqui no formato WGS84, lat-long</li>
+      <li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
+      <li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
     </ul>
-  </li>
-</ul>
 
-<h4 style="text-transform: uppercase;">Exportação de croquis</h3>
+    <h3 id="export_gpx">GPX (.gpx)</h3>
 
-<p>O TopoDroidX exporta croquis nos seguintes formatos:</p>
+    <p>
+      Os arquivos <i>GPX</i>  (.gpx) exportados incluem as bases como pontos de passagem (<i>waypoints</i>) e a linha de trena como trajeto (<i>track</i>).
+    </p>
 
-<ul>
-<li><a href="#cave3d">Cave3D</a></li>
-<li><a href="#csx">cSurvey</a></li>
-<li><a href="#dxf2">DXF</a></li>
-<li><a href="#pdf">PDF file</a></li>
-<li><a href="#shp2">SHP (ShapeFile)</a></li>
-<li><a href="#svg">SVG</a></li>
-<li><a href="#th2">Therion</a></li>
-<li><a href="#tunnel">Tunnel</a></li>
-<li><a href="#xvi">XVI (xTherion)</a></li>
-</ul>
+    <h3 id="export_shp">Shapefile (.shp .shx .dbf)</h3>
 
-<p><b id="csx">cSurvey</b> (.csx)</p>
+    <p>
+      Os dados da topo podem ser exportados no formato <i>ShapeFile</i>.
+    </p>
 
-<p>Os arquivos exportados no formato <i>cSurvey</i> podem ser lidos no cSurvey versão 1.20 ou superior.</p>
+    <p>
+      É criado um shapefile para as bases e outro para as medidas (visadas e medidas auxiliares).
+    </p>
 
-<p>Estes arquivos contém tanto a planta baixa como o perfil, além dos dados da topo.
-Se houverem sido definidos pontos do tipo "corte", os croquis dos cortes são incluídos no local definido pelo ponto.</p>
+    <p>
+      Se a topo tiver partes desconectadas entre si, será criado um shapefile para cada partes que contar com alguma base georeferenciada.
+    </p>
 
-<p>O atributo cSurvey "cave" é definido com o nome da topo, e o atributo "branch" com o nome do croqui (sem o sufixo "p" ou "s").
-As visadas, medidas auxiliares e elementos dos croquis compartilham esses atributos.</p>
+    <p>
+      Cada shapefile é composto por três arquivos: dados (.shp), índice (.shx) e atributos (.dbf).
+      Os três arquivos são compactados no formato zip. O arquivo zip é gravado no diretório "shp" com a extensão ".shz".
+    </p>
 
-<p>Se a topo contém um só croqui, ele será uma exportação completa do trabalho (com exceção dos cortes).
-Se a topo for composta de mais de um croqui, você precisará exprotar cada croqui individualmente e mesclar os arquivos no <i>cSurvey</i>.</p>
+    <p>
+      Se houver ao menos uma base georeferenciada e a configuração <i>IMPORTAR/EXPORTAR >> SHP >> Croqui georeferenciado</i> estiver habilitada, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
+      Do contrário os dados serão exportados no sistema local de coordenadas sem correção relativa à declinação magnética.
+    </p>
 
-<p>Os elementos dos croquis são distribuídos em camadas apropriadas do <i>cSurvey</i>.</p>
+    <p>
+      O arquivo DBF das bases contém somente o campo "nome".
+    </p>
 
-<p>Na caixa de diálogo de exportação será oferecida a opção para acrescentar o prefixo da caverna aos nomes das bases.</p>
+    <p>
+      O arquivo DBF das medidas contém os seguintes campos:
+    </p>
 
-<p>Configurações:</p>
-
-<ul>
-<li><i> IMPORTAR/EXPORTAR >> cSurvey >> Pref base</i>: incluir prefixo nos nomes das bases. [N[</li>
-<li><i> IMPORTAR/EXPORTAR >> Espaçamento ponto</i>: distância máxima entre pontos em uma linha suave exportada. [E]</li>
-</ul>
-
-<p><b id="th2">Therion</b> (.th2)</p>
-
-<p>Os croquis são exportados no formato <i>Therion</i> com um croqui por arquivo, se exportados a partir da tela de <u>Desenho</u>, ou em um único arquivo contendo todos os croquis com a mesma visualização (planta baixa, perfil retificado ou projetado) se exportado a partir da tela <u>Visão geral</u>.
-Neste último caso haverá um "scrap" para cada croqui.
-Os croquis dos cortes são incluídos se houverem pontos do tipo "corte" definidos.</p>
-
-<p>O nome dos <i>scraps</i> Therion são compostos pelo nome da topo, nome do croqui e um sufixo (ou "p" para planta baixa ou "s" para perfil).</p>
-
-<p>Para croquis com diversos desenhos, é adicionado ao final do nome do <i>scrap</i> Therion, um número identificando o desenho, começando com 1.</p>
-
-<p>Os nomes dos <i>scraps</i> Therion dos cortes são compostos pelo nome da topo, um código de duas letras e um número.</p>
-
-<p>Quando um croqui com pontos do tipo "corte" é exportado através da caixa de diálogo "Exportar", os cortes cujos pontos correspondentes do tipo "corte" estiverem definidos serão também exportados.</p>
-
-<p>Se o croqui contiver símbolos não suportados pelo Therion, você deverá incluir o prefixo "u:" nos nomes dos símbolos não suportados antes de ler o arquivo th2 no Therion.</p>
-
-<p>Na caixa de diálogo de exportação serão oferecidas as opções de configuração:</p>
-
-<ul>
-  <li><u>Medidas auxiliares</u>: adicionar linhas "u:splay" aos arquivos th2.</li>
-  <li><u>Imagem XVI</u>: incluir um comando xtherion no arquivo th2 para ler a imagem XVI do croqui.</li>
-  <li><u>Planta baixa e perfil</u>: produzir arquivos th2 tanto para a plana baixa como para o perfil deste croqui.</li>
-  <li><u>Escala 1:</u> define escala dos arquivos th2/xvi produzidos.</li>
-  <li><u>Espaçamento pontos</u>: espaçamento mínimo entre pontos consecutivos de linhas.</li>
-</ul>
-
-<p>Configurações:</p>
-
-<ul>
-  <li><u>Ponto corte</u>: criar automaticamente ponto de corte atrelado a cada novo corte indicando posição onde apresentar o croqui do corte.</li>
-</ul>
-
-<p>Imagens no formato XVI não são automaticamente exportadas com os arquivos "th2" do Therion mesmo que seja incluído o comando xTherion para lê-las pois essas imagens não possuem nenhuma informação além da já presente no arquivo "th2".
-O comando de leitura de imagem XVI pode ser usado para carregar no xTherion uma imagem XVI criada por outro programa.</p>
-
-<p><b id="tunnel">Tunnel</b> (.xml)</p>
-
-<p>Os croquis podem ser exportados no formato <i>Tunnel</i> (.xml).</p>
-
-<p>Os arquivos são gravados no subdiretório "tnl".</p>
-
-<p>Os tipos de linhas abaixo são convertidos para linhas Tunnel: parede, presumida, poço, chaminé e rampa (desnível).
-Todos os outros tipos de linhas são convertidos para linhas Tunnel do tipo "details".</p>
-
-<p>Bordas de áreas são convertidas para linhas Tunnel do tipo "filled".</p>
-
-<p>Os seguintes tipos de pontos são convertidos para pontos Tunnel: água, areia, argila, arqueo, blocos, canudo, coluna, corrente de ar, cortina, escorrimento, estalactite, estalagmite, fluxo de água, gradiente, guâno, lama, pipoca e seixos.
-Todos os outros tipos de pontos são convertidos para pontos Tunnel do tipo "bedrock".</p>
-
-<p><b id="xvi">xTherion</b> (.xvi)</p>
-
-<p>Os arquivos XVI exportados podem ser inseridos como imagens de fundo no xTherion.</p>
-
-<p>As linhas do tipo "parede" são vermelhas, "rampas" são laranjas, "corte" são cinzas e todas as outras são marrons.
-Bordas de áreas são pretas.
-Os ícones dos pontos são representados de uma maneira simplificada.
-A representação de textos suporta somente os caracteres latinos, os dígitos e alguns poucos caracteres especiais ('+', '-', '/', '_', '&gt;', '&lt;', '?').
-Outros caracteres são representados por um "diamante".</p>
-
-<p>A célula da grade é de 1 m.</p>
-
-<p>Configuração oferecida na caixa de diálogo de exportação:</p>
-
-<ul>
-  <li><u>Medidas auxiliares</u>: adicionar as medidas auxiliares no arquivo XVI.</li>
-</ul>
-
-<p>Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> Therion</i> que afetam a exportação de arquivos XVI:</p>
-
-<ul>
-  <li><u>Escala Therion</u>: escala de exportação dos arquivos XVI.</li>
-</ul>
-
-<p><b id="cave3d">Cave3D</b> (.c3d)</p>
-
-<p>Os croquis exportados no formato <i>Cave3D</i> (.c3d) podem ser carregados como modelos 3D no Visualizador 3D.</p>
-
-<p><b id="dxf2">DXF</b> (.dxf)</p>
-
-<p>Os croquis podem ser exportados como arquivos <i>DXF</i> 2D.</p>
-
-<p>Você pode definir camadas para tipos de símbolos (pontos, linhas e áreas) ou para níveis.
-Use a coordenada Z para separar desenhos ou níveis.
-Os arquivos DXF suportam somente alguns poucos tipos básicos de linhas.</p>
-
-<p>Os croquis podem ser exportados como arquivos DXF nas seguintes versões: <i>R12 (AC1009)</i>, <i>R13 (AC1012)</i> e <i>R14 (AC1014)</i>.
-No caso de arquivos na versão R12 as áreas são exportadas somente com as bordas e não são preenchidas.</p>
-
-<p>É possível incluir nos arquivos DXF tanto os cortes (aqueles que tiverem um ponto tipo "corte" correspondente definido) e os eixos X-Y.</p>
-
-<p>Configurações oferecidas na caixa de diálogo de exportação:</p>
-
-<ul>
-<li><u>Versão</u>: com as opções 9 para R12 (AC1009), 12 para R13 (AC1012) e 14 para R14 (AC1014) [padrão 9].</li>
-<li><u>Incluir cortes</u>: se a linha "corte" tem um ponto "corte" definido, o croqui do corte é inserido na exportação na posição definida pelo ponto "corte".</li>
-<li><u>Incluir referência XY</u>: define se os eixos de referência XY devem ser incluídos.</li>
-<li><u>Camadas croquis</u>: camadas nos arquivos DXF por desenhos ou tipos [padrão "desenhos"].</li>  
-</ul>
-
-<p><b id="pdf">PDF</b> (.pdf)</p>
-
-<p>Os croquis podem ser exportados como arquivos <i>PDF</i>.</p>
-
-<p>Os arquivos PDF dos croquis podem ser usados como uma forma rápida de compartilhar a topo em um formato que todos podem abrir.</p>
-
-<p>O arquivo PDF tem uma única página com fundo branco e incluí somente os itens de referência (bases, medidas auxiliares, grade, etc.) que são apresentados na tela.</p>
-
-<p>Os textos, a escala e as bases são reduzidos em 1/4.
-A grade de 1 m não é desenhada para escalas menores que 1:100.
-As cores de alguns itens (por exemplo rótulos) são invertidas para aumentar sua visibilidade.</p>
-
-<p>Na caixa de diálogo de exportação é oferecida a opção de definição da escala.</p>
-
-<p><b id="shp2">Shapefile</b> (.shp)</p>
-
-<p>Os croquis podem ser exportados como <i>Shapefile</i> com bases, visadas e linhas.</p>
-
-<p>Cada shapefile é composto por três arquivos: dados (.shp), índice (.shx) e atributos (.dbf).
-Os três arquivos são compactados no formato zip. O arquivo zip é gravado no diretório "shp" com a extensão ".shz".</p>
-
-<p>Se houver ao menos uma base georeferenciada e a opção apropriada tiver sido marcada na caixa de diálogo de exportação, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
-Do contrário os dados serão exportados no sistema local de coordenadas sem correção relativa à declinação magnética.</p>
-
-<p>O arquivo DBF dos pontos contém os seguintes campos:</p>
-<ul>
-<li><i>name</i>: nome do ponto</li>
-<li><i>orientation</i>: orientação</li>
-<li><i>level</i></li>
-<li><i>scrap</i></li>
-<li><i>text</i>: comentário (truncado para 128 caracteres)</li>
-</ul>
-
-<p>O arquivo DBF "extra" contém os seguintes campos:</p>
-<ul>
-<li><i>name</i>: nome</li>
-<li><i>orientation</i>: orientação</li>
-<li><i>level</i></li>
-<li><i>scrap</i></li>
-<li><i>text</i>: comentário (truncado para 128 caracteres)</li>
-<li><i>file</i>: nome do arquivo</li>
-</ul>
-
-<p>O arquivo DBF das linhas e áreas contém os seguintes campos:</p>
-<ul>
-<li><i>type</i>: distingue linhas de áreas</li>
-<li><i>name</i>: nome da linha ou área</li>
-<li><i>level</i></li>
-<li><i>scrap</i></li>
-</ul>
-
-<p>O arquivo DBF das bases contém o seguinte campo:</p>
-<ul>
-<li><i>name</i>: nome da base</li>
-</ul>
-
-<p>O arquivo DBF das medidas contém os seguintes campos:</p>
-<ul>
-<li><i>type</i>: "leg" (visada) ou "splay" (medida auxiliar)</li>
-<li><i>from</i>: base DE</li>
-<li><i>to</i>: base PARA ("-' para medidas auxiliares)</li>
-<li><i>flag</i>: categoria da medida em formato hexadecimal:
-  <ul>
-    <li>1: superfície</li>
-    <li>2: duplicada</li>
-    <li>4: comentada</li>
-  </ul>
-</li>
-</ul>
-
-<p><b id="svg">SVG</b> (.svg)</p>
-
-<p>Os croquis podem ser exportados como arquivos <i>SVG</i>.</p>
-
-<p>Os itens são organizados em camadas: <i>áreas</i>, <i>bases</i>, <i>grades</i>, <i>linhas</i>, <i>medidas auxiliares</i>, <i>pontos</i> e <i>visadas</i>.</p>
-
-<p>Essas camadas estão sob uma camada global <i>canvas</i>.</p>
-
-<p>Cada desenho tem as suas camadas <i>pontos</i>, <i>linhas</i> e <i>áreas</i>.</p>
-
-<p>A escala de exportação é 1:100, ou outra configurável na caixa de diálogo de exportação.</p>
-
-<p>Se a configuração <i>Especiais >> Dados Medida Auxiliar >> Classes aux</i> estiver habilitada, as medidas auxiliares receberão cores relativas a suas classes: as normais em cinza, as horizontais em verde-água claro, as verticais em azul-aço e as de cortes em azul-céu claro.
-As classes de medidas auxiliares não são suportadas em exportações "round-trip".</p>
-
-<p>Linhas estilizadas são exportadas sem seus estilos mas sua direção pode ser indicada habilitando a configuração "Direção da linha".</p>
-
-<p>Configurações auxiliares são oferecidas na caixa de diálogo de exportação:</p>
-
-<ul>
-  <li><i>Circuito</i>: croquis são exportados prontos para circuitos Walls/Compass [padrão não].
-  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Circuito SVG</i>. [N]</li>
-  <li><i>Grade</i>: inclui grade no arquivo exportado (tamanho da célula na unidade atual da grade) [padrão não].
-  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Grade</i>. [N]</li>
-  <li><i>Orientação da linha</i>: incluir marca indicando orientação da linha [padrão não].
-  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Orient linha</i>. [N]</li>
-  <li><i>Medidas auxiliares</i>: inclui as medidas auxiliares no arquivo exportado.
-  Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Medidas auxiliares</i>. [N]</li>
-  <li><i>Incluir cortes</i>: inclui os cortes no arquivo exportado.</li>
-  <li><i>Escala</i>: permite especificar a escala de exportação.</li>
-</ul>
-
-<p>Outras configurações que influenciam nesta exportação são:</p>
-
-<ul>
-  <li><i>Especiais >> SVG</i>:
     <ul>
-      <li><i>Programa alvo</i>: programa SVG alvo para exportação: Inkscape ou Illustrator. Isso altera a escala usada na exportação. [N]</li>
-      <li><i>Ponto corte</i>: se ponto "corte" são automaticamente atrelados a linhas "corte", o croqui do corte é inserido no arquivo exportado na posição definida pelo ponto. [N]</li>
-      <li><i>Espess linha</i>: define a espessura das linhas nos arquivos SVG exportados como rótulos, ícones, linhas, bordas de áreas, linhas da grade, visadas e marcas de direção em linhas. [N]</li>
+      <li><i>type</i>: ou "leg" (visada) ou "splay" (medida auxiliar)</li>
+      <li><i>from</i>: base DE</li>
+      <li><i>to</i>: base PARA ("-" nas medidas auxiliares)</li>
+      <li><i>flag</i>: categoria da medida em formato hexadecimal:
+        <ul>
+          <li>1: superfície</li>
+          <li>2: duplicada</li>
+          <li>4: comentada</li>
+        </ul>
+      </li>
+      <li><i>comment</i>: comentário</li>
     </ul>
-  </li>
-  <li><i>IMPORTAR/EXPORTAR</i>:
+
+    <p>
+      Configurações disponíveis em:
+    </p>
+
     <ul>
-      <li><i>Espaçamento ponto</i>: distância máxima entre pontos interpolados em linhas suaves. [E]</li>
+      <li><i>IMPORTAR/EXPORTAR >> KML/GeoJSON/ShapeFile</i>: [T]
+        <ul>
+          <li><u>Incluir base</u>: incluir bases no arquivo KML/GeoJSON/ShapeFile exportado</li>
+          <li><u>Incluir aux</u>: incluir medidas auxilares no arquivo KML/GeoJSON/ShapeFile exportado</li>
+        </ul>
+      </li>
+      <li><i>IMPORTAR/EXPORTAR >> ShapeFile</i>: [T]
+        <ul>
+          <li><u>Croqui georeferenciado</u>: habilita a exportação do croqui no formato WGS84, lat-long</li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li><i>Desenho croqui >> Desenho</i>:
+
+    <h2 id="export_sketch">Exportação de croquis</h2>
+
+    <p>
+      O TopoDroidX exporta croquis nos seguintes formatos:
+    </p>
+
     <ul>
-      <li><i>Tam nome base</i>: tamanho do nome das bases [padrão 20]. [B]</li>
+      <li><a href="#export_sketch_cave3d">Cave3D</a></li>
+      <li><a href="#export_sketch_csx">cSurvey</a></li>
+      <li><a href="#export_sketch_dxf">DXF</a></li>
+      <li><a href="#export_sketch_pdf">PDF file</a></li>
+      <li><a href="#export_sketch_shp">SHP (ShapeFile)</a></li>
+      <li><a href="#export_sketch_svg">SVG</a></li>
+      <li><a href="#export_sketch_th2">Therion</a></li>
+      <li><a href="#export_sketch_tunnel">Tunnel</a></li>
+      <li><a href="#export_sketch_xvi">XVI (xTherion)</a></li>
     </ul>
-  </li>
-</ul>
 
-<h3>Configurações IMPORTAR/EXPORTAR</h3>
+    <h3 id="export_sketch_csx">cSurvey (.csx)</h3>
 
-<ul>
-  <li><i>Form export dados</i>: formato padrão de exportação de dados [padrão nenhum] [B]</li>
-  <li><i>Form export croqui</i>: formato padrão de exportação de croquis [padrão nenhum] [B]</li>
-  <li><i>Form export aut croqui</i>: se definido, os croquis serão automaticamente exportados no formato escolhido quando fechados.
-  Os arquivos exportados são gravados no subdiretório "out" do diretório da topo.
-  A exportação automática de croquis cria uma carga extra no app e, por isso, não é definida por padrão. [N]</li>
-  <li><i>Âng aux EDTC</i>: ângulo mínimo necessário entre uma medida auxiliar e uma visada para ser considerada uma medida auxiliar EDTC em arquivos Compass, Topodroid, TopoRobot, WinKarst, Polygon e VisualTopo. [A]</li>
-  <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares teto/chão. [A]</li>
-  <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares esquerda e direita. [A]</li>
-  <li><i>Espaçamento ponto</i>: distância máxima entre pontos em uma linha suave exportada (m). [E]</li>
-  <li><b>Habilitar</b>: lista todos os formatos suportados pelo topoDroidX para exportação permitindo ao usuário escolher quais serão disponibilizadas no momento da exportação.
-  </li>
-  <li><b>Compass</b>:
+    <p>
+      Os arquivos exportados no formato <i>cSurvey</i> podem ser lidos no cSurvey versão 1.20 ou superior.
+    </p>
+
+    <p>
+      Estes arquivos contém tanto a planta baixa como o perfil, além dos dados da topo.
+      Se houverem sido definidos pontos do tipo "corte", os croquis dos cortes são incluídos no local definido pelo ponto.
+    </p>
+
+    <p>
+      O atributo cSurvey "cave" é definido com o nome da topo, e o atributo "branch" com o nome do croqui (sem o sufixo "p" ou "s").
+      As visadas, medidas auxiliares e elementos dos croquis compartilham esses atributos.
+    </p>
+
+    <p>
+      Se a topo contém um só croqui, ele será uma exportação completa do trabalho (com exceção dos cortes).
+      Se a topo for composta de mais de um croqui, você precisará exprotar cada croqui individualmente e mesclar os arquivos no <i>cSurvey</i>.
+    </p>
+
+    <p>
+      Os elementos dos croquis são distribuídos em camadas apropriadas do <i>cSurvey</i>.
+    </p>
+
+    <p>
+      Na caixa de diálogo de exportação será oferecida a opção para acrescentar o prefixo da caverna aos nomes das bases.
+    </p>
+
+    <p>
+      Configurações:
+    </p>
+
     <ul>
-      <li><i>Inverter Esq/Dir</i>: inverter Esquerda e Direita na exportação para o Compass.</li>
+      <li><i> IMPORTAR/EXPORTAR >> cSurvey >> Pref base</i>: incluir prefixo nos nomes das bases. [N[</li>
+      <li><i> IMPORTAR/EXPORTAR >> Espaçamento ponto</i>: distância máxima entre pontos em uma linha suave exportada. [E]</li>
     </ul>
-  </li>
-<li><b>Compass/cSurvey/WinKarst</b>:
-  <ul>
-  <li><i>Pref base</i>: incluir prefixo nos nomes das bases na exportação [padrão não].</li>
-  </ul>
-</li>
-<li><b>Compass/TopoRobot/WinKarst/Polygon/VisualTopo</b>:
-  <ul>
-  <li><i>Âng aux EDTC</i>: ângulo mínimo entre uma medida auxiliar e uma visada para ser uma medida auxiliar EDTC [padrão 0.0].
-  Essa configuração também é usada nos arquivos <b>Therion/Survex</b> se EDTC estiver habilitada para eles.</li>
-  <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares Teto/Chão [padrão 0].</li>
-  <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares Esquerda/Direita [padrão 90].</li>
-  </ul>
-</li>
-<li><b>Compass/VisualTopo</b>:
-  <ul>
-    <li><i>Estimar ref. retif. perfil</i>: estimar referência para retificação do perfil na importação de arquivos <b>Compass/VisualTopo</b> [padrão sim]</li>
-  </ul>
-</li>
-<li><b>DXF</b>:
-  <ul>
-    <li><i>Final aux</i>: marcar final de medida auxiliar DXF com cruzes [padrão não].</li>
-    <li><i>Versão</i>: para o arquivo exportado: R12, R13 ou R14.
-    Na versão R12 as linhas Bézier são convertidas em sequências de segmentos de reta e as áreas não são preenchidas.
-    Nas versões R13 e R14 são usados splines e preenchimentos de áreas mas esses recursos ainda estão sendo testados.</li>
-    <li><i>Splines</i>: interpolação cúbica de splines DXF [padrão sim].</li>
-    <li><i>Referência</i>: incluir eixos XY na exportação de croquis DXF [padrão não].</li>
-    <li><i>Camadas croquis</i>: criar camadas DXF por croquis [padrão sim].</li>
-  </ul>
-</li>
-<li><b>KML/GeoJSON</b>:
-  <ul>
-    <li><i>Incluir base</i>: incluir bases nos arquivos KML/GeoJSON/ShapeFile exportados [padrão sim].</li>
-    <li><i>Incluir aux</i>: incluir medidas auxiliares nos arquivos KML/GeoJSON/ShapeFile exportados [padrão não].</li>
-  </ul>
-</li>
-<li><b>PocketTopo</b>:
-  <ul>
-    <li><i>Esquema cor</i>: mapeamento de cores do PocketTopo para itens do croqui.</li> 
-  </ul> 
-</li>
-<li><b>Survex</b>:
-  <ul>
-    <li><i>Base aux</i>: incluir às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada [padrão não].</li>
-  </ul>
-</li>
-<li><b>Survex/Topo</b>:
-<ul>
-  <li><i>Term linha</i>: terminação de linha Survex/Topo (Linux ou Windows) [padrão Linux].</li>
-</ul>
-</li>
-<li><b>SVG</b>:
-  <ul>
-    <li><i>Programa alvo</i>: programa SVG alvo para exportação [Inkscape].</li>
-    <li><i>Grade</i>: incluir grade no arquivo SVG/XVI exportado [padrão não].</li>
-    <li><i>Orient linha</i>: incluir indicadores de orientação de linha nos arquivos SVG exportados [padrão não].</li>
-    <li><i>Espess ELEMENTO</i>: configurações independentes para definir as espessuras das linhas nos seguintes elementos (ponto, rótulo, linha, grade, medidas, marca de orientação de linha)</li>
-  </ul>
-</li>
-<li><b>Therion</b>:
-<ul> 
-  <li><i>Mapa Therion início</i> mapas Therion antes dos dados da topo [padrão não]</li>
-  <li><i>Bases Therion</i>: incluir automaticamente bases aos arquivos Therion.
-    Se você quer usar os arquivos de croquis no Therion, eles precisam ter os pontos das bases para definir sua escala.
-    Você pode escolher manualmente quais pontos incluir editando o croqui à mão ou deixar o TopomanDroidX incluir as bases.
-    Dessa maneira serão incluídas todas as bases que estiverem "dentro" do desenho (dentro do envólucro convexo do desenho). [padrão sim]</li>
-  <li><i>Med aux Therion</i>: adicionar linhas "u:splay" aos arquivos th2 [padrão sim].</li>
-</ul>
-</li>
-<li><b>Therion/Survex</b>:
-  <ul>
-    <li><i>EDTC</i>: incluir EDTC nos arquivos Survex/Therion exportados [padrão não].</li>
-  </ul>
-</li>
-</ul>
 
-<p><a href="page_finalmap.htm">O mapa final</a><br>
-<a href="page_3d_export.htm">Exportação de modelo 3D</a><br>
-<a href="page_tdm_export.htm">Exportação de projeto</a><br>
-<a href="page_calib_import.htm">Importação e exportação de calibrações</a></p>
+    <h3 id="export_sketch_th2">Therion (.th2)</h3>
 
-<div style="float: left; margin-bottom: 10pt;">
-  <div>
-      <a href="manual12.htm">&lt; Visão geral</a> |
-      <a href="manual14.htm">Gerenciador de Projetos &gt;</a>
-  </div>
-  <div>
-    <a href="manual16.htm">Principais funcionalidades</a> |
-    <a href="manual17.htm">Índice remissivo</a>
-</div>
-</div>
+    <p>
+      Os croquis são exportados no formato <i>Therion</i> com um croqui por arquivo, se exportados a partir da tela de <u>Desenho</u>, ou em um único arquivo contendo todos os croquis com a mesma visualização (planta baixa, perfil retificado ou projetado) se exportado a partir da tela <u>Visão geral</u>.
+      Neste último caso haverá um "scrap" para cada croqui.
+      Os croquis dos cortes são incluídos se houverem pontos do tipo "corte" definidos.
+    </p>
 
-<footer style="font-size: 80%; font-style: italic; clear: both;">
-  <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
-  <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">d661fec64</span></p>
-  <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-  <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-</footer>
+    <p>
+      O nome dos <i>scraps</i> Therion são compostos pelo nome da topo, nome do croqui e um sufixo (ou "p" para planta baixa ou "s" para perfil).
+    </p>
 
-</body>
+    <p>
+      Para croquis com diversos desenhos, é adicionado ao final do nome do <i>scrap</i> Therion, um número identificando o desenho, começando com 1.
+    </p>
+
+    <p>
+      Os nomes dos <i>scraps</i> Therion dos cortes são compostos pelo nome da topo, um código de duas letras e um número.
+    </p>
+
+    <p>
+      Quando um croqui com pontos do tipo "corte" é exportado através da caixa de diálogo "Exportar", os cortes cujos pontos correspondentes do tipo "corte" estiverem definidos serão também exportados.
+    </p>
+
+    <p>
+      Se o croqui contiver símbolos não suportados pelo Therion, você deverá incluir o prefixo "u:" nos nomes dos símbolos não suportados antes de ler o arquivo th2 no Therion.
+    </p>
+
+    <p>
+      Na caixa de diálogo de exportação serão oferecidas as opções de configuração:
+    </p>
+
+    <ul>
+      <li><u>Medidas auxiliares</u>: adicionar linhas "u:splay" aos arquivos th2.</li>
+      <li><u>Imagem XVI</u>: incluir um comando xtherion no arquivo th2 para ler a imagem XVI do croqui.</li>
+      <li><u>Planta baixa e perfil</u>: produzir arquivos th2 tanto para a plana baixa como para o perfil deste croqui.</li>
+      <li><u>Escala 1:</u> define escala dos arquivos th2/xvi produzidos.</li>
+      <li><u>Espaçamento pontos</u>: espaçamento mínimo entre pontos consecutivos de linhas.</li>
+    </ul>
+
+    <p>
+      Configurações:
+    </p>
+
+    <ul>
+      <li><u>Ponto corte</u>: criar automaticamente ponto de corte atrelado a cada novo corte indicando posição onde apresentar o croqui do corte.</li>
+    </ul>
+
+    <p>
+      Imagens no formato XVI não são automaticamente exportadas com os arquivos "th2" do Therion mesmo que seja incluído o comando xTherion para lê-las pois essas imagens não possuem nenhuma informação além da já presente no arquivo "th2".
+      O comando de leitura de imagem XVI pode ser usado para carregar no xTherion uma imagem XVI criada por outro programa.
+    </p>
+
+    <h3 id="export_sketch_tunnel">Tunnel (.xml)</h3>
+
+    <p>
+      Os croquis podem ser exportados no formato <i>Tunnel</i> (.xml).
+    </p>
+
+    <p>
+      Os arquivos são gravados no subdiretório "tnl".
+    </p>
+
+    <p>
+      Os tipos de linhas abaixo são convertidos para linhas Tunnel: parede, presumida, poço, chaminé e rampa (desnível).
+      Todos os outros tipos de linhas são convertidos para linhas Tunnel do tipo "details".
+    </p>
+
+    <p>
+      Bordas de áreas são convertidas para linhas Tunnel do tipo "filled".
+    </p>
+
+    <p>
+      Os seguintes tipos de pontos são convertidos para pontos Tunnel: água, areia, argila, arqueo, blocos, canudo, coluna, corrente de ar, cortina, escorrimento, estalactite, estalagmite, fluxo de água, gradiente, guâno, lama, pipoca e seixos.
+      Todos os outros tipos de pontos são convertidos para pontos Tunnel do tipo "bedrock".
+    </p>
+
+    <h3 id="export_sketch_xvi">xTherion (.xvi)</h3>
+
+    <p>
+      Os arquivos XVI exportados podem ser inseridos como imagens de fundo no xTherion.
+    </p>
+
+    <p>
+      As linhas do tipo "parede" são vermelhas, "rampas" são laranjas, "corte" são cinzas e todas as outras são marrons.
+      Bordas de áreas são pretas.
+      Os ícones dos pontos são representados de uma maneira simplificada.
+      A representação de textos suporta somente os caracteres latinos, os dígitos e alguns poucos caracteres especiais ('+', '-', '/', '_', '&gt;', '&lt;', '?').
+      Outros caracteres são representados por um "diamante".
+    </p>
+
+    <p>
+      A célula da grade é de 1 m.
+    </p>
+
+    <p>
+      Configuração oferecida na caixa de diálogo de exportação:
+    </p>
+
+    <ul>
+      <li><u>Medidas auxiliares</u>: adicionar as medidas auxiliares no arquivo XVI.</li>
+    </ul>
+
+    <p>
+      Configurações disponíveis em <i>IMPORTAR/EXPORTAR >> Therion</i> que afetam a exportação de arquivos XVI:<
+      /p>
+
+    <ul>
+      <li><u>Escala Therion</u>: escala de exportação dos arquivos XVI.</li>
+    </ul>
+
+    <h3 id="export_sketch_cave3d">Cave3D (.c3d)</h3>
+
+    <p>
+      Os croquis exportados no formato <i>Cave3D</i> (.c3d) podem ser carregados como modelos 3D no Visualizador 3D.
+    </p>
+
+    <h3 id="export_sketch_dxf">DXF (.dxf)</h3>
+
+    <p>
+      Os croquis podem ser exportados como arquivos <i>DXF</i> 2D.
+    </p>
+
+    <p>
+      Você pode definir camadas para tipos de símbolos (pontos, linhas e áreas) ou para níveis.
+      Use a coordenada Z para separar desenhos ou níveis.
+      Os arquivos DXF suportam somente alguns poucos tipos básicos de linhas.
+    </p>
+
+    <p>
+      Os croquis podem ser exportados como arquivos DXF nas seguintes versões: <i>R12 (AC1009)</i>, <i>R13 (AC1012)</i> e <i>R14 (AC1014)</i>.
+      No caso de arquivos na versão R12 as áreas são exportadas somente com as bordas e não são preenchidas.
+    </p>
+
+    <p>
+      É possível incluir nos arquivos DXF tanto os cortes (aqueles que tiverem um ponto tipo "corte" correspondente definido) e os eixos X-Y.
+    </p>
+
+    <p>
+      Configurações oferecidas na caixa de diálogo de exportação:
+    </p>
+
+    <ul>
+      <li><u>Versão</u>: com as opções 9 para R12 (AC1009), 12 para R13 (AC1012) e 14 para R14 (AC1014) [padrão 9].</li>
+      <li><u>Incluir cortes</u>: se a linha "corte" tem um ponto "corte" definido, o croqui do corte é inserido na exportação na posição definida pelo ponto "corte".</li>
+      <li><u>Incluir referência XY</u>: define se os eixos de referência XY devem ser incluídos.</li>
+      <li><u>Camadas croquis</u>: camadas nos arquivos DXF por desenhos ou tipos [padrão "desenhos"].</li>
+    </ul>
+
+    <h3 id="export_sketch_pdf">PDF (.pdf)</h3>
+
+    <p>
+      Os croquis podem ser exportados como arquivos <i>PDF</i>.
+    </p>
+
+    <p>
+      Os arquivos PDF dos croquis podem ser usados como uma forma rápida de compartilhar a topo em um formato que todos podem abrir.
+    </p>
+
+    <p>
+      O arquivo PDF tem uma única página com fundo branco e incluí somente os itens de referência (bases, medidas auxiliares, grade, etc.) que são apresentados na tela.
+    </p>
+
+    <p>
+      Os textos, a escala e as bases são reduzidos em 1/4.
+      A grade de 1 m não é desenhada para escalas menores que 1:100.
+      As cores de alguns itens (por exemplo rótulos) são invertidas para aumentar sua visibilidade.
+    </p>
+
+    <p>
+      Na caixa de diálogo de exportação é oferecida a opção de definição da escala.
+    </p>
+
+    <h3 id="export_sketch_shp">Shapefile (.shp)</h3>
+
+    <p>
+      Os croquis podem ser exportados como <i>Shapefile</i> com bases, visadas e linhas.
+    </p>
+
+    <p>
+      Cada shapefile é composto por três arquivos: dados (.shp), índice (.shx) e atributos (.dbf).
+    Os três arquivos são compactados no formato zip. O arquivo zip é gravado no diretório "shp" com a extensão ".shz".
+  </p>
+
+    <p>
+      Se houver ao menos uma base georeferenciada e a opção apropriada tiver sido marcada na caixa de diálogo de exportação, os dados serão exportados no datum WGS84 e terão sido corrigidos em relação à declinação magnética local.
+      Do contrário os dados serão exportados no sistema local de coordenadas sem correção relativa à declinação magnética.
+    </p>
+
+    <p>
+      O arquivo DBF dos pontos contém os seguintes campos:
+    </p>
+    <ul>
+      <li><i>name</i>: nome do ponto</li>
+      <li><i>orientation</i>: orientação</li>
+      <li><i>level</i></li>
+      <li><i>scrap</i></li>
+      <li><i>text</i>: comentário (truncado para 128 caracteres)</li>
+    </ul>
+
+    <p>
+      O arquivo DBF "extra" contém os seguintes campos:
+    </p>
+    <ul>
+      <li><i>name</i>: nome</li>
+      <li><i>orientation</i>: orientação</li>
+      <li><i>level</i></li>
+      <li><i>scrap</i></li>
+      <li><i>text</i>: comentário (truncado para 128 caracteres)</li>
+      <li><i>file</i>: nome do arquivo</li>
+    </ul>
+
+    <p>
+      O arquivo DBF das linhas e áreas contém os seguintes campos:
+    </p>
+    <ul>
+      <li><i>type</i>: distingue linhas de áreas</li>
+      <li><i>name</i>: nome da linha ou área</li>
+      <li><i>level</i></li>
+      <li><i>scrap</i></li>
+    </ul>
+
+    <p>
+      O arquivo DBF das bases contém o seguinte campo:
+    </p>
+    <ul>
+      <li><i>name</i>: nome da base</li>
+    </ul>
+
+    <p>
+      O arquivo DBF das medidas contém os seguintes campos:
+    </p>
+    <ul>
+      <li><i>type</i>: "leg" (visada) ou "splay" (medida auxiliar)</li>
+      <li><i>from</i>: base DE</li>
+      <li><i>to</i>: base PARA ("-' para medidas auxiliares)</li>
+      <li><i>flag</i>: categoria da medida em formato hexadecimal:
+        <ul>
+          <li>1: superfície</li>
+          <li>2: duplicada</li>
+          <li>4: comentada</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 id="export_sketch_svg">SVG (.svg)</h3>
+
+    <p>
+      Os croquis podem ser exportados como arquivos <i>SVG</i>.
+    </p>
+
+    <p>
+      Os itens são organizados em camadas: <i>áreas</i>, <i>bases</i>, <i>grades</i>, <i>linhas</i>, <i>medidas auxiliares</i>, <i>pontos</i> e <i>visadas</i>.
+    </p>
+
+    <p>
+      Essas camadas estão sob uma camada global <i>canvas</i>.
+    </p>
+
+    <p>
+      Cada desenho tem as suas camadas <i>pontos</i>, <i>linhas</i> e <i>áreas</i>.
+    </p>
+
+    <p>
+      A escala de exportação é 1:100, ou outra configurável na caixa de diálogo de exportação.
+    </p>
+
+    <p>
+      Se a configuração <i>Especiais >> Dados Medida Auxiliar >> Classes aux</i> estiver habilitada, as medidas auxiliares receberão cores relativas a suas classes: as normais em cinza, as horizontais em verde-água claro, as verticais em azul-aço e as de cortes em azul-céu claro.
+      As classes de medidas auxiliares não são suportadas em exportações "round-trip".
+    </p>
+
+    <p>
+      Linhas estilizadas são exportadas sem seus estilos mas sua direção pode ser indicada habilitando a configuração "Direção da linha".
+    </p>
+
+    <p>
+      Configurações auxiliares são oferecidas na caixa de diálogo de exportação:
+    </p>
+
+    <ul>
+      <li>
+        <i>Circuito</i>: croquis são exportados prontos para circuitos Walls/Compass [padrão não].
+        Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Circuito SVG</i>. [N]
+      </li>
+      <li>
+        <i>Grade</i>: inclui grade no arquivo exportado (tamanho da célula na unidade atual da grade) [padrão não].
+        Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Grade</i>. [N]
+      </li>
+      <li>
+        <i>Orientação da linha</i>: incluir marca indicando orientação da linha [padrão não].
+        Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Orient linha</i>. [N]
+      </li>
+      <li>
+        <i>Medidas auxiliares</i>: inclui as medidas auxiliares no arquivo exportado.
+        Também disponível através da opção de configuração <i>IMPORTAR/EXPORTAR >> SVG >> Medidas auxiliares</i>. [N]
+      </li>
+      <li><i>Incluir cortes</i>: inclui os cortes no arquivo exportado.</li>
+      <li><i>Escala</i>: permite especificar a escala de exportação.</li>
+    </ul>
+
+    <p>
+      Outras configurações que influenciam nesta exportação são:
+    </p>
+
+    <ul>
+      <li><i>Especiais >> SVG</i>:
+        <ul>
+          <li>
+            <i>Programa alvo</i>: programa SVG alvo para exportação: Inkscape ou Illustrator.
+            Isso altera a escala usada na exportação. [N]
+          </li>
+          <li><i>Ponto corte</i>: se ponto "corte" são automaticamente atrelados a linhas "corte", o croqui do corte é inserido no arquivo exportado na posição definida pelo ponto. [N]</li>
+          <li><i>Espess linha</i>: define a espessura das linhas nos arquivos SVG exportados como rótulos, ícones, linhas, bordas de áreas, linhas da grade, visadas e marcas de direção em linhas. [N]</li>
+        </ul>
+      </li>
+      <li><i>IMPORTAR/EXPORTAR</i>:
+        <ul>
+          <li><i>Espaçamento ponto</i>: distância máxima entre pontos interpolados em linhas suaves. [E]</li>
+        </ul>
+      </li>
+      <li><i>Desenho croqui >> Desenho</i>:
+        <ul>
+          <li><i>Tam nome base</i>: tamanho do nome das bases [padrão 20]. [B]</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="setting_import_export">Configurações IMPORTAR/EXPORTAR</h2>
+
+    <ul>
+      <li><i>Form export dados</i>: formato padrão de exportação de dados [padrão nenhum] [B]</li>
+      <li><i>Form export croqui</i>: formato padrão de exportação de croquis [padrão nenhum] [B]</li>
+      <li>
+        <i>Form export aut croqui</i>: se definido, os croquis serão automaticamente exportados no formato escolhido quando fechados.
+        Os arquivos exportados são gravados no subdiretório "out" do diretório da topo.
+        A exportação automática de croquis cria uma carga extra no app e, por isso, não é definida por padrão. [N]
+      </li>
+      <li><i>Âng aux EDTC</i>: ângulo mínimo necessário entre uma medida auxiliar e uma visada para ser considerada uma medida auxiliar EDTC em arquivos Compass, Topodroid, TopoRobot, WinKarst, Polygon e VisualTopo. [A]</li>
+      <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares teto/chão. [A]</li>
+      <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares esquerda e direita. [A]</li>
+      <li><i>Espaçamento ponto</i>: distância máxima entre pontos em uma linha suave exportada (m). [E]</li>
+      <li><b>Habilitar</b>: lista todos os formatos suportados pelo topoDroidX para exportação permitindo ao usuário escolher quais serão disponibilizadas no momento da exportação.
+      </li>
+      <li><b>Compass</b>:
+        <ul>
+          <li><i>Inverter Esq/Dir</i>: inverter Esquerda e Direita na exportação para o Compass.</li>
+        </ul>
+      </li>
+      <li><b>Compass/cSurvey/WinKarst</b>:
+        <ul>
+        <li><i>Pref base</i>: incluir prefixo nos nomes das bases na exportação [padrão não].</li>
+        </ul>
+      </li>
+      <li><b>Compass/TopoRobot/WinKarst/Polygon/VisualTopo</b>:
+        <ul>
+        <li>
+          <i>Âng aux EDTC</i>: ângulo mínimo entre uma medida auxiliar e uma visada para ser uma medida auxiliar EDTC [padrão 0.0].
+          Essa configuração também é usada nos arquivos <b>Therion/Survex</b> se EDTC estiver habilitada para eles.
+        </li>
+        <li><i>Incl mín TC</i>: inclinação mínima das medidas auxiliares Teto/Chão [padrão 0].</li>
+        <li><i>Incl máx ED</i>: inclinação máxima das medidas auxiliares Esquerda/Direita [padrão 90].</li>
+        </ul>
+      </li>
+      <li><b>Compass/VisualTopo</b>:
+        <ul>
+          <li><i>Estimar ref. retif. perfil</i>: estimar referência para retificação do perfil na importação de arquivos <b>Compass/VisualTopo</b> [padrão sim]</li>
+        </ul>
+      </li>
+      <li><b>DXF</b>:
+        <ul>
+          <li><i>Final aux</i>: marcar final de medida auxiliar DXF com cruzes [padrão não].</li>
+          <li>
+            <i>Versão</i>: para o arquivo exportado: R12, R13 ou R14.
+            Na versão R12 as linhas Bézier são convertidas em sequências de segmentos de reta e as áreas não são preenchidas.
+            Nas versões R13 e R14 são usados splines e preenchimentos de áreas mas esses recursos ainda estão sendo testados.
+          </li>
+          <li><i>Splines</i>: interpolação cúbica de splines DXF [padrão sim].</li>
+          <li><i>Referência</i>: incluir eixos XY na exportação de croquis DXF [padrão não].</li>
+          <li><i>Camadas croquis</i>: criar camadas DXF por croquis [padrão sim].</li>
+        </ul>
+      </li>
+      <li><b>KML/GeoJSON</b>:
+        <ul>
+          <li><i>Incluir base</i>: incluir bases nos arquivos KML/GeoJSON/ShapeFile exportados [padrão sim].</li>
+          <li><i>Incluir aux</i>: incluir medidas auxiliares nos arquivos KML/GeoJSON/ShapeFile exportados [padrão não].</li>
+        </ul>
+      </li>
+      <li><b>PocketTopo</b>:
+        <ul>
+          <li><i>Esquema cor</i>: mapeamento de cores do PocketTopo para itens do croqui.</li>
+        </ul>
+      </li>
+      <li><b>Survex</b>:
+        <ul>
+          <li><i>Base aux</i>: incluir às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada [padrão não].</li>
+        </ul>
+      </li>
+      <li><b>Survex/Topo</b>:
+      <ul>
+        <li><i>Term linha</i>: terminação de linha Survex/Topo (Linux ou Windows) [padrão Linux].</li>
+      </ul>
+      </li>
+      <li><b>SVG</b>:
+        <ul>
+          <li><i>Programa alvo</i>: programa SVG alvo para exportação [Inkscape].</li>
+          <li><i>Grade</i>: incluir grade no arquivo SVG/XVI exportado [padrão não].</li>
+          <li><i>Orient linha</i>: incluir indicadores de orientação de linha nos arquivos SVG exportados [padrão não].</li>
+          <li><i>Espess ELEMENTO</i>: configurações independentes para definir as espessuras das linhas nos seguintes elementos (ponto, rótulo, linha, grade, medidas, marca de orientação de linha)</li>
+        </ul>
+      </li>
+      <li><b>Therion</b>:
+      <ul>
+        <li><i>Mapa Therion início</i> mapas Therion antes dos dados da topo [padrão não]</li>
+        <li>
+          <i>Bases Therion</i>: incluir automaticamente bases aos arquivos Therion.
+          Se você quer usar os arquivos de croquis no Therion, eles precisam ter os pontos das bases para definir sua escala.
+          Você pode escolher manualmente quais pontos incluir editando o croqui à mão ou deixar o TopomanDroidX incluir as bases.
+          Dessa maneira serão incluídas todas as bases que estiverem "dentro" do desenho (dentro do envólucro convexo do desenho). [padrão sim]
+        </li>
+        <li><i>Med aux Therion</i>: adicionar linhas "u:splay" aos arquivos th2 [padrão sim].</li>
+      </ul>
+      </li>
+      <li><b>Therion/Survex</b>:
+        <ul>
+          <li><i>EDTC</i>: incluir EDTC nos arquivos Survex/Therion exportados [padrão não].</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>
+      <a href="page_finalmap.htm">O mapa final</a><br>
+      <a href="page_3d_export.htm">Exportação de modelo 3D</a><br>
+      <a href="page_tdm_export.htm">Exportação de projeto</a><br>
+      <a href="page_calib_import.htm">Importação e exportação de calibrações</a>
+    </p>
+
+    <div style="float: left; margin-bottom: 10pt;">
+      <div>
+        <a href="manual12.htm">&lt; Visão geral</a> |
+        <a href="manual14.htm">Gerenciador de Projetos &gt;</a>
+      </div>
+      <div>
+        <a href="manual16.htm">Principais funcionalidades</a> |
+        <a href="manual17.htm">Índice remissivo</a>
+      </div>
+    </div>
+
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">83cd04f04</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
