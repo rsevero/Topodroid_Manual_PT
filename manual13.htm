@@ -35,6 +35,7 @@
           <li><a href="#export_vtopo">VisualTopo</a></li>
           <li><a href="#export_walls">Walls</a></li>
           <li><a href="#export_winkarst">WinKarst</a></li>
+          <li><a href="#export_zip">Zip (.zip)</a></li>
         </ul>
       </li>
       <li><a href="#export_sketch">Exportação de croquis</a>
@@ -58,6 +59,7 @@
     </p>
 
     <p>
+      Por segurança, é recomendável também exportar os dados da topo para um arquivo zip e transferí-lo para outro dispostivo, email ou computador.
       O arquivo zip é um backup completo de sua topo e contém todas as informações necessárias para restaurar os dados da topo em um banco de dadose/ou para transferir a topo para o TopoDroidX em outro aparelho Android.
     </p>
 
@@ -79,13 +81,6 @@
     </p>
 
     <h2 id="import">Importar Topo</h2>
-
-    <p>
-      O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos externos em diversos formatos.
-      Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
-      Os arquivos a serem importados serão selecionados através da interface do sistema.
-      Os nomes dos arquivos não podem incluir dois pontos (:).
-    </p>
 
     <p>
       Os seguintes formatos podem ser importados:
@@ -118,6 +113,13 @@
     </p>
 
     <h3 id="import_zip">Importação Zip</h3>
+
+    <p>
+      O TopoDroidX é capaz de importar dados de topo de um arquivo zip criado pelo próprio TopoDroidX e também de arquivos externos em diversos formatos.
+      Para importar arquivos em formatos externos ou arquivos zip, clique no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
+      Os arquivos a serem importados serão selecionados através da interface do sistema.
+      Os nomes dos arquivos não podem incluir dois pontos (:).
+    </p>
 
     <p>
       A importação de arquivos Zip criados pelo TopoDroid ou TopoDroidX falha se a versão do banco de dados dos dados a serem importados for excessivamente antiga ou se for mais nova do que a usada pelo TopoDroidX instalado.
@@ -216,6 +218,7 @@
       <li><a href="#export_gpx">GPX</a></li>
       <li><a href="#export_kml">KML</a></li>
       <li><a href="#export_shp">Shapefile</a></li>
+      <li><a href="#export_zip">Zip</a></li>
     </ul>
 
     <p>S
@@ -708,6 +711,16 @@
         </ul>
       </li>
     </ul>
+
+    <h3 id="export_zip">Zip (.zip)</h3>
+
+    <p>
+      Arquivos Zip são exportados a partir da tela <u>Info Topo</u>, na opção de menu "Exportar".
+    </p>
+
+    <p>
+      Habilitando a caixa de opção <i>Compartilhar</i> na caixa de diálogo de exportação, o arquivo zip será compartilhado imediatamente após a exportação. Se você tiver definido um aplicativo personalizado para lidar com arquivos zip exportados, você pode substituir os aplicativos disponibilizados pelo sistema no compartilhamento invocado especificando sua "categoria". Isso é feito habilitando a opção de configuração <i>Especiais > Importar/Exportar > Cat compart zip</i>.
+    </p>
 
     <h2 id="export_sketch">Exportação de croquis</h2>
 
@@ -1214,8 +1227,8 @@
     </div>
 
     <footer style="font-size: 80%; font-style: italic; clear: both;">
-      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">83cd04f04</span></p>
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-07-20</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">311841080</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
