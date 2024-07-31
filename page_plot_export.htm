@@ -1,80 +1,80 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h1>Exportação de croquis</h1>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>Exportação de croquis</h1>
 
-        <p>
-            Os croquis são armazenados no formato binário do TopoDroidX e podem ser exportados como
-        </p>
+    <p>
+      Os croquis são armazenados no formato binário do TopoDroidX e podem ser exportados como
+    </p>
 
-        <ul>
-            <li><i>Therion</i>: arquivo ".th2"</li>
-            <li><i>cSurvey</i>: arquivo ".csx"</li>
-            <li><i>DXF</i>: arquivo 2D compatível com <i>LibreCAD/AutoCAD</i></li>
-            <li><i>SVG</i>: arquivo compatível com <i>Inkscape/Adobe Illustrator</i></li>
-            <li><i>Shapefile</i>: arquivo compatível com <i>QGIS</i></li>
-            <li><i>PDF</i></li>
-            <li><i>XVI</i>: arquivo de imagem <i>xtherion</i> ".xvi"</li>
-        </ul>
+    <ul>
+      <li><i>Therion</i>: arquivo ".th2"</li>
+      <li><i>cSurvey</i>: arquivo ".csx"</li>
+      <li><i>DXF</i>: arquivo 2D compatível com <i>LibreCAD/AutoCAD</i></li>
+      <li><i>SVG</i>: arquivo compatível com <i>Inkscape/Adobe Illustrator</i></li>
+      <li><i>Shapefile</i>: arquivo compatível com <i>QGIS</i></li>
+      <li><i>PDF</i></li>
+      <li><i>XVI</i>: arquivo de imagem <i>xtherion</i> ".xvi"</li>
+    </ul>
 
-        <p>
-            Além da exportação, há uma opção para salvar automaticamente um croqui em um dos formatos de exportação suportados sempre que o croqui é fechado.
-        </p>
+    <p>
+      Além da exportação, há uma opção para salvar automaticamente um croqui em um dos formatos de exportação suportados sempre que o croqui é fechado.
+    </p>
 
-        <p>
-            Os arquivos de exportação <b>cSurvey</b> contém tanto os croquis de planta quanto de perfil.
-            Se os pontos do tipo "corte" estiverem definidos, ele também contém os cortes.
-            Os cortes não são incluídos nos arquivos cSurvey.
-        </p>
+    <p>
+      Os arquivos de exportação <b>cSurvey</b> contém tanto os croquis de planta quanto de perfil.
+      Se os pontos do tipo "corte" estiverem definidos, ele também contém os cortes.
+      Os cortes não são incluídos nos arquivos cSurvey.
+    </p>
 
-        <p>
-            Os croquis podem ser exportados como arquivos <b>DXF</b> 2D. As versões de DXF suportadas são 9, 12 e 14.
-        </p>
+    <p>
+      Os croquis podem ser exportados como arquivos <b>DXF</b> 2D. As versões de DXF suportadas são 9, 12 e 14.
+    </p>
 
-        <p>
-            A exportação de arquivos <b>shapefile</b> inclui bases, medidas e croquis. Todos os objetos de desenho são convertidos para segmentos de linhas retas.
-            As tabelas de atributos contêm os dados do objeto (por exemplo, tipo de ponto, orientação, etc).
-            Os arquivos que compõem uma exportação de shapefile são compactados em um arquivo zip.
-        </p>
+    <p>
+      A exportação de arquivos <b>shapefile</b> inclui bases, medidas e croquis. Todos os objetos de desenho são convertidos para segmentos de linhas retas.
+      As tabelas de atributos contêm os dados do objeto (por exemplo, tipo de ponto, orientação, etc).
+      Os arquivos que compõem uma exportação de shapefile são compactados em um arquivo zip.
+    </p>
 
-        <p>
-            Algumas configurações de exportação, específicas do formato selecionado, podem ser substituídas na caixa de diálogo de exportação.
-        </p>
+    <p>
+      Algumas configurações de exportação, específicas do formato selecionado, podem ser substituídas na caixa de diálogo de exportação.
+    </p>
 
-        <h2>Exportação da Visão Geral</h2>
+    <h2>Exportação da Visão Geral</h2>
 
-        <p>
-            Os croquis também podem ser exportados da tela <u>Visão Geral</u> (acessada no menu da tela <u> Desenho</u>) nos seguintes formatos:
-        </p>
+    <p>
+      Os croquis também podem ser exportados da tela <u>Visão Geral</u> (acessada no menu da tela <u>Desenho</u>) nos seguintes formatos:
+    </p>
 
-        <ul>
-            <li><i>Therion</i>: arquivo ".th2"</li>
-            <li><i>DXF</i>: arquivo 2D compatível com <i>LibreCAD/AutoCAD</i></li>
-            <li><i>SVG</i>: arquivo compatível com <i>Inkscape/Adobe Illustrator</i></li>
-            <li><i>Shapefile</i>: arquivo compatível com <i>QGIS</i></li>
-            <li><i>PDF</i></li>
-            <li><i>XVI</i>: arquivo de imagem <i>xtherion</i> ".xvi"</li>
-        </ul>
+    <ul>
+      <li><i>Therion</i>: arquivo ".th2"</li>
+      <li><i>DXF</i>: arquivo 2D compatível com <i>LibreCAD/AutoCAD</i></li>
+      <li><i>SVG</i>: arquivo compatível com <i>Inkscape/Adobe Illustrator</i></li>
+      <li><i>Shapefile</i>: arquivo compatível com <i>QGIS</i></li>
+      <li><i>PDF</i></li>
+      <li><i>XVI</i>: arquivo de imagem <i>xtherion</i> ".xvi"</li>
+    </ul>
 
-        <p>
-            A exportação na tela <u>Visão Geral</u> inclui todos os croquis da visualização atual (tanto planta como perfil).
-        </p>
+    <p>
+      A exportação na tela <u>Visão Geral</u> inclui todos os croquis da visualização atual (tanto planta como perfil).
+    </p>
 
-        <p>
-            Se houver pontos do tipo "corte", os cortes também são incluídos.
-        </p>
+    <p>
+      Se houver pontos do tipo "corte", os cortes também são incluídos.
+    </p>
 
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
-        <footer style="font-size: 80%; font-style: italic; clear: both;">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-05</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">8bd3688f7</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
-        </footer>
+    <footer style="font-size: 80%; font-style: italic; clear: both;">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-05</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">8bd3688f7</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
+    </footer>
 
-    </body>
+  </body>
 </html>
