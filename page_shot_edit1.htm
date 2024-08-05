@@ -17,7 +17,7 @@
         Contra visadas produzidas por uma DistoX no modo "contra visada" (opção de configuração <i>Especiais > Dados topo > Contra visada DistoX</i>) são marcadas com '*'.
       </li>
       <li>
-        <i>diferenças de aceleração, campo magnético e inclinação magnética</i>: valores calculados em relação aos valores médios respectivos.
+        <i>diferenças de aceleração, campo magnético e inclinação magnética</i>: valores calculados em relação aos respectivos valores médios.
         Apenas para medidas DistoX2.
       </li>
       <li><i>data e hora</i>: indica quando a medida foi obtida.</li>
@@ -33,7 +33,7 @@
       <li><b>seta para a direita</b>: carrega a próxima medida.</li>
       <li><b>comentário</b> da medida.</li>
       <li>
-        <b>direção da medida no perfil retificado</b>: "esquerda", "vertical", "direita".
+        <b>direção da medida no perfil retificado</b>: "Esquerda", "Vertical", "Direita".
         Se nenhuma das três caixas de seleção for marcada, a visada não será apresentada no perfil retificado.
       </li>
     </ul>
@@ -47,7 +47,7 @@
 
     <ul>
       <li><img src="btn_duplicate.png" class="app_button"> marcar como "duplicada" [A]</li>
-      <li><img src="btn_surface.png" class="app_button"> marcar como "superfície" [A]</li>
+      <li><img src="btn_surface_no.png" class="app_button"> marcar como "superfície" [A]</li>
       <li><img src="btn_comment.png" class="app_button"> marcar como "comentada" [A]</li>
       <li>
         <img src="btn_leg_after.png" class="app_button"> a medida pertence à visada imediatamente anterior.
@@ -63,23 +63,23 @@
       <li>
         <img src="btn_numbers.png" class="app_button"> renomear as bases das medidas a partir desta visada seguindo a regra de nomeamento de bases atual.
         Ambas as bases DE e PARA devem ter sido especificadas.
-        Renomeia as bases das medidas auxiliares também, mantendo a relação entre medidas auxiliares e bases se a opção de configuração <i>Especiais> dados topo > Renomear base aux</i> estiver habilitada.
+        Renomeia as bases das medidas auxiliares também, mantendo a relação entre medidas auxiliares e bases se a opção de configuração <i>Especiais> Dados topo > Renomear base aux</i> estiver habilitada.
         <b>
           CUIDADO!
           Esta ação pode afetar muitas medidas e só pode ser desfeita manualmente.
         </b>
       </li>
       <li><img src="btn_splays_no.png" class="app_button"> aplicar a mudança de base a todas as medidas auxiliares adjacentes à medida auxiliar atual que estejam ligadas à mesma base, tratando-as como um grupo de medidas auxiliares.</li>
-      <li><img src="btn_plan_profile.png" class="app_button"> mostrar a medida auxiliares na planta e no perfil, ou só na planta, ou só no perfil ou em nenhum dos dois. [A]</li>
-      <li><img src="btn_xsplay.png" class="app_button"> limpar (ou definir) a classe de medida auxiliar para esta medida auxiliar, e possivelmente as medidas auxiliares anteriores [A]</li>
+      <li><img src="btn_plan_profile.png" class="app_button"> mostrar a medida auxiliar na planta e no perfil, ou só na planta, ou só no perfil ou em nenhum dos dois. [A]</li>
+      <li><img src="btn_xsplay.png" class="app_button"> limpar (ou definir) a classe de medida auxiliar para esta medida auxiliar, e possivelmente para as medidas auxiliares anteriores [A]</li>
     </ul>
 
     <h2>Botões (linha inferior)</h2>
     <ul>
-      <li><b>OK</b>: salvar as alterações e fechar a caixa de diálogo</li>
-      <li><b>Salvar</b>: salvar as alterações sem fechar a caixa de diálogo</li>
-      <li><b>Mais/Menos</b>: mostrar/ocultar ações adicionais [A]</li>
       <li><b>Cancelar</b>: fechar a caixa de diálogo sem salvar</li>
+      <li><b>Gravar</b>: salvar as alterações sem fechar a caixa de diálogo</li>
+      <li><b>Mais/Menos</b>: mostrar/ocultar ações adicionais [A]</li>
+      <li><b>OK</b>: salvar as alterações e fechar a caixa de diálogo</li>
     </ul>
 
     <p>
@@ -163,8 +163,8 @@
       </p>
 
       <p>
-        As classes de medidas auxiliares também podem ser definidas atravé da multisseleção de medidas.
-        Na muiltisseleção é possível selecionar medidas auxiliares não contíguas e atribuir a todas a mesma classe.
+        As classes de medidas auxiliares também podem ser definidas através da multisseleção de medidas.
+        Na multisseleção é possível selecionar medidas auxiliares não contíguas e atribuir a todas a mesma classe.
       </p>
 
       <p>
@@ -193,18 +193,12 @@
         <li><img src="btn_shot.png" class="app_button"> incluir manualmente uma medida antes desta</li>
         <li><img src="btn_split.png" class="app_button"> <a href="page_survey_split_move.htm">dividir a topo</a> nesta medida (criar uma nova topo ou anexar a outra topo)</li>
         <li><b>Cor</b>: define a cor, apenas para medidas auxiliares</li>
-        <li><img src="btn_delete.png" class="app_button"> excluir a medida</li>
         <li><img src="btn_calib_check.png" class="app_button"> marcar a medida como "de calibração" (apenas para visadas)</li>
+        <li><img src="btn_delete.png" class="app_button"> excluir a medida</li>
       </ul>
 
       <p>
         Em se tratando de visadas, há também campos para incluir medidas EDTC (Esquerda/Direita/Teto/Chão) intermediárias.
-      </p>
-
-      <p>
-        O botão <b>Apagar</b> <img src="btn_delete.png" class="app_button"> não remove medidas do banco de dados.
-        A medida é marcada como "apagada" e pode ser recuperada posteriormente através da caixa de diálogo <a href="./page_undelete.htm">Restaurar</a>.
-        Se a medida for a primeira de uma visada, você também pode excluir todas as medidas da visada, marcando a caixa de seleção ao lado dos botões.
       </p>
 
       <p>
@@ -213,6 +207,12 @@
         Essas medidas não são usadas na topo e seus dados devem ser obtidos em ângulos de rotação diferentes do dispositivo de medição.
         Elas são registradas no banco de dados e são um registro da confiabilidade da calibração do dispositivo quando a topo foi feita.
         Elas podem ser exibidas com a caixa de diálogo <a href="./page_undelete.htm">Restaurar</a>.
+      </p>
+
+      <p>
+        O botão <b>Apagar</b> <img src="btn_delete.png" class="app_button"> não remove medidas do banco de dados.
+        A medida é marcada como "apagada" e pode ser recuperada posteriormente através da caixa de diálogo <a href="./page_undelete.htm">Restaurar</a>.
+        Se a medida for a primeira de uma visada, você também pode excluir todas as medidas da visada, marcando a caixa de seleção ao lado dos botões.
       </p>
 
       <h2>
@@ -257,7 +257,7 @@
       </h2>
 
       <p>
-        Para medidas auxiliares há também um botão para atribuir uma cor à medida.
+        Para medidas auxiliares há também um botão para atribuir uma cor à medida, caso a opção de configuração <i>Especiais > Dados medida auxiliar > Cores aux</i> seja diferente de "nenhum".
         A lista de medidas não é atualizada imediatamente com as cores.
         Para exibir a medida com cor, pressione o botão "Atualizar".
       </p>
@@ -268,9 +268,10 @@
       </p>
 
       <footer style="font-size: 80%; font-style: italic; clear: both;">
-        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-25</span></p>
+        <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-08-05</span></p>
         <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e3100483c</span></p>
         <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+        <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
       </footer>
 
     </body>
