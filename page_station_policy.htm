@@ -17,7 +17,11 @@
       <li><a href="#blunder-shot">Medida errada de visada</a></li>
     </ul>
 
-    <p id="#introduction">
+    <h2 id="#introduction">
+      Introdução
+    </h2>
+
+    <p>
       Quando você recebe dados via bluetooth o TopoDroidX pode automaticamente atribuir nomes de bases às medidas recebidas.
       Uma medição repetida é considerada uma visada, as outras são tratadas como medidas auxiliares.
       Se você seguir um método ao fazer medições, o nomeamento automático de bases do TopoDroidX pode ser muito útil.
@@ -41,7 +45,7 @@
         <i>tripé</i>: é similar ao método anterior &mdash; <i>contra, aux, visada</i> &mdash;  mas visa diminuir a quantidade de locais onde o tripé precisa ser instalado reduzindo a quantidade de locais onde medidas serão produzidas.
         <b>Por exempl</b>o: na base 1 você obtém medidas auxiliares e faz a visada para a base 2.
         Move o tripé para a base 3, pulando a base 2 e faz a contra visada para 2, as medidas auxiliares em 3 e a visada para 4.
-        Move o tripé diretamente para a base 5, pulnado a base 4 e faz a contra visada para 4, as medidas auxiliares em 5 e a visada para 6 e assim sucessivamente. [A]
+        Move o tripé diretamente para a base 5, pulando a base 4 e faz a contra visada para 4, as medidas auxiliares em 5 e a visada para 6 e assim sucessivamente. [A]
         </li>
       <li><i>anomalia magnética</i>: as medidas devem ser obtidas da mesma forma que no método 3 acima &mdash; <i>contra, aux, visada</i> &mdash; mas o tratamento dos dados obtidos é realizado de uma forma diferente, detalhada abaixo. [E]</li>
       <li><i>visada, aux</i>: na base DE você obtém primeiro a visada (medidas repetidas para a nova base a ser criada) e depois as medidas auxiliares.</li>
@@ -77,8 +81,8 @@
     <p>
       Cada vez que o nomeamento automático de bases é ativado, ele usa como base de origem a última base criada (ou penúltima para os métodos <i>contra</i> e <i>tripé</i>).
       Se a topo ainda não tem nenhuma base criada, usa como base de origem a base inicial da topo (definida no momento da criação da topo).
-      Portanto, as medidas já existentes não são modificadas, e todas as novas medidas obtidas serão atribuídas a bases poteriores a última base criada.
-      Isso pode afetar a base de medidas auxiliares imediatamente após a última visada, quando o método de nomeamento automático des bases é alterado.
+      Portanto, as medidas já existentes não são modificadas, e todas as novas medidas obtidas serão atribuídas a bases posteriores à última base criada.
+      Isso pode afetar a base de medidas auxiliares imediatamente após a última visada, quando o método de nomeamento automático de bases é alterado.
     </p>
 
     <p>
@@ -163,9 +167,10 @@
     </p>
 
     <footer style="font-size: 80%; font-style: italic; clear: both;">
-      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-23</span></p>
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-08-16</span></p>
       <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">9cc6e0406</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
     </footer>
 
   </body>
