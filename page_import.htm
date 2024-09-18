@@ -6,19 +6,42 @@
     </h1>
 
     <p>
-      Essa caixa de diálogo é acessada com um clique no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
+      O TopoDroidX importa dados de topo de arquivos zip criados pelo TopoDroidX ou de arquivos em alguns outros formatos.
     </p>
 
     <p>
-      Apresenta a lista de formatos suportados: dat (Compass), svx (Survex), th (Therion), tro e trox (VisualTopo), csn (CaveSniper), top (PocketTopo) e arquivos zip do TopoDroidX.
+      A caixa de diálogo de improtação é apresentada ao clicar-se no botão <i>Importar</i> <img src="btn_import.png" class="app_button"> na tela <u>Principal</u>.
+      O arquivo a ser importado é selecionado através da tela padrão de seleção de arquivos do Android.
+      O nome do arquivo a ser importado não pode conter o caracter "dois pontos" ':'.
     </p>
 
     <p>
-      O arquivo a ser importado é selecionado através da tela padrão do Android.
+      A caixa de diálogo de importação apresenta a lista de formatos suportados:
     </p>
+
+    <ul>
+      <li><i>Zip</i>: arquivos zip criados pelo próprio TopoDroidX</li>
+      <li><i>Compass</i>: dat</li>
+      <li><i>Survex</i>: svx</li>
+      <li><i>Therion</i>: somente medidas, th</li>
+      <li><i>VisualTopo</i>: tro e trox</li>
+      <li><i>Walls</i>: srv</li>
+      <li><i>TopoRobot</i></li>
+      <li><i>PocketTopo</i>: incluindo croquis, top</li>
+      <li><i>CaveSniper</i>: csn</li>
+      <li><i>CSV da BRIC</i>: csv</li>
+    </ul>
 
     <p>
       A importação de alguns formatos pode ser configurada através de opções específicas.
+    </p>
+
+    <p>
+      A importação falha se já houver uma topo com o mesmo nome no TopoDroidX.
+    </p>
+
+    <p>
+      Na importação de arquivos em formatos que contém dados EDTC (esquerda/direita/teto/chão), o TopoDroidX converte-os para medidas auxiliares (apresentadas em verde).
     </p>
 
     <h2>
@@ -31,6 +54,30 @@
       <li><i>Modo de dados 'mergulho'</i>: habilita importação de arquivos no modo 'mergulho'. [T]</li>
     </ul>
 
+    <p>
+      O TopoDroidX converte os arquivos do compass do modo <i>normal</i> para o modo <i>mergulho</i> [T] se a opção <i>Especiais >> Importar/Exportar >> Form dado importação</i> estiver configurada como <i>mergulho</i> [G].
+    </p>
+
+    <h2>
+      Survex (svx)
+    </h2>
+
+    <p>
+      A sintaxe dos arquivos Survex é parcialmente suportada.
+    </p>
+
+    <h2>
+      Therion (th)
+    </h2>
+
+    <p>
+      Somente arquivo Therion com dados de medidas em formato de dados "normal" são suportados.
+      O comando "declination" é considerado: os valores de aximute lidos são corrigidos pela declinação informada.
+      Se os nomes das bases não se chocarem com nomes já existentes, as bases podem ser importadas somente com seus nomes originais.
+      Do contrário, deverão ser importadas com nomes extendidos, ou seja, com o nome da topo adicionada ao nome original da base.
+      O TopoDroidX não importa croquis do Therion.
+    </p>
+
     <h2>
       VisualTopo (tro, trox)
     </h2>
@@ -40,6 +87,30 @@
       <li><i>Importar EDTC</i>: quando habilitada, os valores das medidas EDTC são importados e convertidos para medidas auxiliares.</li>
       <li><i>Visada antes de EDTC</i>: quando habilitada, as medidas EDTC são importadas após a respectiva visada.</li>
     </ul>
+
+    <p>
+      O TopoDroidX pode também importar topos criadas como <i>Prof</i> no lugar de <i>Clino</i> no formato "trox".
+      Os dados importados são armazenados em formato <i>mergulho</i>.
+    </p>
+
+    <h2>
+      PocketTopo (top)
+    </h2>
+
+    <p>
+      O TopDroidX importa tanto os dados de medidas como os croquis do PocketTopo.
+      O processo de importação faz uma conversão das cores usadas no PocketTopo para os tipos de pontos e linhas do TopoDroidX.
+      Essa conversão pode ser configurada através da opção <i>Importar/Exportar >> Importar >> Mapa cor PocketTopot</i>.
+    </p>
+
+    <h2>
+      CSV da BRIC (csv)
+    </h2>
+
+    <p>
+      Dados importados a partir de arquivos CSV criados pela BRIC contém somente distância, azimute e inclinação.
+      Os dados da topo importados precisam ser editados para que sejam incluídas as outras informações desejadas.
+    </p>
 
     <h3>
       Observação
@@ -56,7 +127,7 @@
 
     <footer style="font-size: 80%; font-style: italic; clear: both;">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-24</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">8223d431a</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">5bc54fcac</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
     </footer>
