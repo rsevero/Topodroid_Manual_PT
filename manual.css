@@ -37,3 +37,9 @@ p, ul {
   font-size: 60%;
   vertical-align: super;
 }
+
+footer.padrao {
+  font-size: 80%;
+  font-style: italic;
+  clear: both;
+}
