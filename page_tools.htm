@@ -5,9 +5,10 @@
 
     <h2>Índice</h2>
     <ul>
-      <li><a href="#caixa-de-dialogo">Caixa de diálogo de ferramenta de desenho</a></li>
+      <li><a href="#paleta-global">Paleta de ferramentas de desenho global</a></li>
+      <li><a href="#paleta-da-topo">Paleta de ferramentas de desenho da topo</a></li>
+      <li><a href="#caixa-de-dialogo">Caixa de diálogo de ferramenta de desenho do croqui</a></li>
       <li><a href="#paleta-de-croqui">Paleta de croqui</a></li>
-      <li><a href="#paleta-global">Paleta global</a></li>
       <li><a href="#ferramentas-personalizadas">Ferramentas de desenho personalizadas</a></li>
     </ul>
 
@@ -32,13 +33,52 @@
 
     <ul>
       <li>com a caixa de diálogo de escolha de ferramenta de desenho;</li>
-      <li>no nível do croqui;</li>
+      <li>no nível da topo/croqui;</li>
       <li>no nível do projeto (diretório);</li>
       <li>no sistema de arquivos.</li>
     </ul>
 
+    <p>
+      As ferramentas de desenho são carregadas de arquivos na pasta privada do aplicativo.
+      Quando os arquivos de ferramentas de desenho são atualizados, o TopoDroidX não instala as novas ferramentas automaticamente.
+    </p>
+
+    <h2 id="paleta-global">
+      Paleta de ferramentas de desenho global
+    </h2>
+
+    <p>
+      Exceto pelas ferramentas de desenho do "sistema", sempre disponíveis, o TopoDroid carrega as ferramenta de desenho de arquivos armazenados no subdiretório "symbol" da pasta privada do aplicativo.
+    </p>
+
+    <p>
+      As ferramentas de desenho do sistema são os pontos "usuário", "rótulo" e "corte", as linhas "usuário", "parede" e "corte" e as áreas "usuário" e "água".
+      Essas ferramentas estão sempre habilitadas e disponíveis.
+    </p>
+
+    <p>
+      O botão <i>Paleta</i> <img src="btn_tools.png" class="app_button"> da tela <u>Principal</u> abre a caixa de diálogo para habilitar as ferramentas de desenho.
+      Você deve fazer isso separadamente para pontos, linhas e áreas.
+    </p>
+
+    <p>
+      Quando você cria um novo croqui, sua paleta é inicializada com as ferramentas habilitadas da paleta global.
+    </p>
+
+    <h2 id="paleta-da-topo">
+      Paleta de ferramentas de desenho da topo
+    </h2>
+
+    <p>
+      As ferramentas de desenho habilitadas na topo são, por padrão, as disponíveis na paleta global.
+    </p>
+
+    <p>
+      Se você abrir um croqui antigo que tenha ferramentas que não estão habilitadas por padrão, essas são adicionadas à paleta da topo.
+    </p>
+
     <h2 id="caixa-de-dialogo">
-      Caixa de diálogo de ferramenta de desenho
+      Caixa de diálogo de ferramenta de desenho do croqui
     </h2>
 
     <p>
@@ -50,6 +90,10 @@
       Cada ferramenta exibe sua representação gráfica, o nome da ferramenta e o grupo da ferramenta, se houver.
     </p>
 
+    <p>
+      Quando você cria um croqui, a paleta de croqui é inicializada com as ferramentas habilitadas na paleta da topo.
+    </p>
+
     <h2 id="paleta-de-croqui">
       Paleta de croqui
     </h2>
@@ -57,38 +101,17 @@
     <p>
       Cada croqui tem sua própria paleta.
       Quando você fecha o croqui, ele é salvo com um cabeçalho listando sua paleta.
-      Quando você o reabre, a paleta é definida como a paleta do croqui.
-      Se o croqui contiver itens que não estiverem na paleta, eles serão adicionados.
-      Se um item não estiver entre as ferramentas de desenho, ele será substituído pela ferramenta "usuário".
+      Quando você o reabre, a paleta é mesclada com a paleta da topo.
+      Se o croqui contiver itens que não estiverem na paleta da topo, eles serão adicionados à paleta da topo.
+      Se um item não estiver entre as ferramentas de desenho habilitadas globalmente, ele será substituído pela ferramenta "usuário".
       As ferramentas "usuário" (ponto, linha e área) estão sempre na paleta.
     </p>
 
     <p>
-      A paleta de croqui é especificada através da opção de menu <i>Paleta</i> da tela <u>Desenho</u>.
-      Isso abre uma caixa de diálogo que permite decidir quais ferramentas habilitar na paleta de croqui.
-      Você habilita e desabilita as ferramentas conforme necessário e, em seguida, fecha a caixa de diálogo (com o botão <i>Voltar</i> do dispositivo Android) para salvar as alterações.
-      Você deve fazer isso independentemente para pontos, linhas e áreas.
-    </p>
-
-    <h2 id="paleta-global">
-      Paleta global
-    </h2>
-
-    <p>
-      Além das ferramentas de desenho do sistema, sempre disponíveis, o TopoDroidX carrega as ferramentas de desenho de arquivos armazenados no subdiretório "symbol" do diretório base "TopoDroid".
-      As ferramentas de desenho do sistema são os pontos "usuário" e "rótulo", as linhas "usuário" e "parede" e as áreas "usuário" e "água".
-      Essas ferramentas estão sempre habilitadas.
-    </p>
-
-    <p>
-      O botão <i>Paleta</i> <img src="btn_tools.png" class="app_button"> da tela <u>Principal</u> define os arquivos de ferramentas de desenho a serem carregados.
-      Na caixa de diálogo que aparece, você seleciona as ferramentas a serem carregadas.
-      A lista de arquivos a serem carregados é salva no banco de dados do projeto.
-      Assim como na paleta de croqui, você deve fazer isso independentemente para pontos, linhas e áreas.
-    </p>
-
-    <p>
-      Quando as ferramentas de desenho são atualizadas, o TopoDroidX não instala automaticamente as novas ferramentas.
+      A paleta do croqui é definida através da opção de menu <i>Paleta</i> da tela <u>Desenho</u>.
+      Isso abre uma caixa de diálogo que permite decidir quais ferramentas habilitar na paleta do croqui.
+      Você liga e desliga as ferramentas conforme necessário e fecha a caixa de diálogo (com o botão <i>Voltar</i>) para salvar as alterações.
+      Você deve fazer isso separadamente para pontos, linhas e áreas.
     </p>
 
     <h2 id="ferramentas-personalizadas">
@@ -118,6 +141,28 @@
       As ferramentas de desenho do "sistema" não podem ser modificadas nem excluídas.
     </p>
 
+    <h2 id="conjuntos-adicionais">
+      Conjuntos adicionais de ferramentas de desenho
+    </h2>
+
+    <p>
+      O TopoDroidX oferece os seguintes conjuntos adicionais de ferramentas de desenho:
+    </p>
+
+    <ul>
+      <li>Mineração</li>
+      <li>Geologia</li>
+      <li>Arqueologia</li>
+      <li>Antrópico</li>
+      <li>Paleologia</li>
+      <li>Biologia</li>
+      <li>Karst</li>
+    </ul>
+
+    <p>
+      Para instalar conjuntos adicionais de ferramentas de desenho, a opção de configuração <i>Especiais >> Paleta</i> deve estar habilitada.
+    </p>
+
     <p>
       <a href="manual16.htm">Principais funcionalidades</a> |
       <a href="manual17.htm">Índice remissivo</a>
@@ -125,7 +170,7 @@
 
     <footer class="padrao">
         <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-08-17</span></p>
-        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">e513a4eac</span></p>
+        <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">0076bbb21</span></p>
         <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
         <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
     </footer>
