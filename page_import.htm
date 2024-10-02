@@ -20,16 +20,16 @@
     </p>
 
     <ul>
-      <li><i>Zip</i>: arquivos zip criados pelo próprio TopoDroidX</li>
-      <li><i>Compass</i>: dat</li>
-      <li><i>Survex</i>: svx</li>
-      <li><i>Therion</i>: somente medidas, th</li>
-      <li><i>VisualTopo</i>: tro e trox</li>
-      <li><i>Walls</i>: srv</li>
-      <li><i>TopoRobot</i></li>
-      <li><i>PocketTopo</i>: incluindo croquis, top</li>
       <li><i>CaveSniper</i>: csn</li>
-      <li><i>CSV da BRIC</i>: csv</li>
+      <li><a href="#compass">Compass</a>: dat</li>
+      <li><a href="#csv_bric">CSV da BRIC</a>: csv</li>
+      <li><a href="#pockettopo">PocketTopo</a>: incluindo croquis, top</li>
+      <li><a href="#survex">Survex</a>: svx</li>
+      <li><a href="#therion">Therion</a>: somente medidas, th</li>
+      <li><a href="#toporobot">TopoRobot</a></li>
+      <li><a href="#visualtopo">VisualTopo</a>: tro e trox</li>
+      <li><a href="#walls">Walls</a>: srv</li>
+      <li><a href="#zip">Zip</a>: arquivos zip criados pelo próprio TopoDroidX</li>
     </ul>
 
     <p>
@@ -44,7 +44,7 @@
       Na importação de arquivos em formatos que contém dados EDTC (esquerda/direita/teto/chão), o TopoDroidX converte-os para medidas auxiliares (apresentadas em verde).
     </p>
 
-    <h2>
+    <h2 id="compass">
       Compass (dat)
     </h2>
 
@@ -58,12 +58,31 @@
       O TopoDroidX converte os arquivos do compass do modo <i>normal</i> para o modo <i>mergulho</i> [T] se a opção <i>Especiais >> Importar/Exportar >> Form dado importação</i> estiver configurada como <i>mergulho</i> [G].
     </p>
 
-    <h2>
+    <h2 id="csv_bric">
+      CSV da BRIC (csv)
+    </h2>
+
+    <p>
+      Dados importados a partir de arquivos CSV criados pela BRIC contém somente distância, azimute e inclinação.
+      Os dados da topo importados precisam ser editados para que sejam incluídas as outras informações desejadas.
+    </p>
+
+    <h2 id="pockettopo">
+      PocketTopo (top)
+    </h2>
+
+    <p>
+      O TopDroidX importa tanto os dados de medidas como os croquis do PocketTopo.
+      O processo de importação faz uma conversão das cores usadas no PocketTopo para os tipos de pontos e linhas do TopoDroidX.
+      Essa conversão pode ser configurada através da opção <i>Importar/Exportar >> Importar >> Mapa cor PocketTopot</i>.
+    </p>
+
+    <h2 id="survex">
       Survex (svx)
     </h2>
 
     <p>
-      A sintaxe dos arquivos Survex é parcialmente suportada.
+      A sintaxe dos arquivos Survex é suportada parcialmente.
     </p>
 
     <p>
@@ -75,9 +94,13 @@
       O TopoDroidX só tem suporte para sessões de topo simples. Portanto, dados de arquivos multi-sessão são mesclados em uma única topo.
     </p>
 
-    <h2>
+    <h2 id="therion">
       Therion (th)
     </h2>
+
+    <p>
+      A sintaxe dos arquivos Therion é suportada parcialmente.
+    </p>
 
     <p>
       Somente arquivo Therion com dados de medidas em formato de dados "normal" são suportados.
@@ -87,9 +110,21 @@
       O TopoDroidX não importa croquis do Therion.
     </p>
 
-    <h2>
+    <h2 id="toporobot">
+      TopoRobot
+    </h2>
+
+    <p>
+      A importação de arquivos TopoRobot é bastante experimental.
+    </p>
+
+    <h2 id="visualtopo">
       VisualTopo (tro, trox)
     </h2>
+
+    <p>
+      A sintaxe dos arquivos VisualTopo é suportada parcialmente.
+    </p>
 
     <ul>
       <li><i>Formato de arquivo Trox</i></li>
@@ -102,31 +137,25 @@
       Os dados importados são armazenados em formato <i>mergulho</i>.
     </p>
 
-    <h2>
-      PocketTopo (top)
+    <h2 id="walls">
+      Walls (srv)
     </h2>
 
     <p>
-      O TopDroidX importa tanto os dados de medidas como os croquis do PocketTopo.
-      O processo de importação faz uma conversão das cores usadas no PocketTopo para os tipos de pontos e linhas do TopoDroidX.
-      Essa conversão pode ser configurada através da opção <i>Importar/Exportar >> Importar >> Mapa cor PocketTopot</i>.
+      A sintaxe dos arquivos Walls é suportada parcialmente.
     </p>
 
-    <h2>
-      CSV da BRIC (csv)
+    <p>
+       A importação de arquivos Walls pode resultar em uma topo com trechos de linha de trena desconectados.
+    </p>
+
+    <h2 id="zip">
+      Zip
     </h2>
 
     <p>
-      Dados importados a partir de arquivos CSV criados pela BRIC contém somente distância, azimute e inclinação.
-      Os dados da topo importados precisam ser editados para que sejam incluídas as outras informações desejadas.
-    </p>
-
-    <h3>
-      Observação
-    </h3>
-
-    <p>
-      A importação pode falhar (e derrubar o APP) devido a um erro no banco de dados que o TopoDroidX não consiga interceptar.
+      O TopoDroidX importa arquivos zip criados pelo próprio TopoDroidX.
+      Estes arquivos contém uma cópia completa da topo, incluindo medidas, croquis e outras informações sendo a melhor opção apra se fazer backups de topos.
     </p>
 
     <p>
@@ -136,7 +165,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-05-24</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">f460aa84c</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">d952c2c8a</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
     </footer>
