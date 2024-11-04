@@ -1,86 +1,125 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h3>CROQUI: MEDIDA</h3>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>
+      Croqui: medida
+    </h1>
 
-        <p>Essa caixa de diálogo pode ser acessada após selecionar uma medida (visada ou auxiliar) e clicar no botão <i>Editar</i> <img src="btn_item.png" class="app_button"> na tela <u>Desenho</u> no modo "editar".</p>
+    <p>
+      Essa caixa de diálogo pode ser acessada após selecionar uma medida (visada ou auxiliar) e clicar no botão <i>Editar</i> <img src="btn_item.png" class="app_button"> na tela <u>Desenho</u> no modo "editar".
+    </p>
 
-        <p>Propriedades da medida:</p>
+    <p>
+      Propriedades da medida:
+    </p>
 
-        <ul>
-            <li>Distância (D), Azimute (A) e Inclinação (I)</li>
-            <li><b>Bases</b> e <b>Tipo de medida</b>: <i>&lt; D &gt;</i> (para frente), <i>&lt; B &gt;</i> (contra) e <i>&lt; M &gt;</i> (manual)</li>
-            <li><b>Comentário</b></li>
-            <li><b>Direção no perfil retificado</b>: "esquerda" (-1), "vertical" (0), or "direita" (+1)</li>
-            <li><b>Projeção escalonada no pefil retificado</b>: barra de rolagem para definir extensão da visada no perfil retificado (só disponível durante a visualização de perfil retificado e se a configuração <i>Especiais >> Dados topo >> Proj vis escala</i> estiver habilitada) [T]</li>
-            <li><img src="btn_duplicate.png" class="app_button"> Marcar como "duplicada"</li>
-            <li><img src="btn_surface.png" class="app_button"> Marcar como "de superfície"</li>
-            <li><img src="btn_comment.png" class="app_button"> Marcar como "comentada"</li>
-            <li><b>Ocultar a partir da base</b>: checkboxes para indicar a partir de qual base da visada a linha de trena deve ser oculta (só disponível para visadas)</li>
-            <li><b>Cor</b>: só disponível para medidas auxiliares e se a configuração <i>Especiais >> Dados medida auxiliar >> Cores aux</i> estiver habilitada</li>
-        </ul>
+    <ul>
+      <li>Distância (D), Azimute (A) e Inclinação (I)</li>
+      <li><b>Bases</b> e <b>Tipo de medida</b>: <i>&lt; D &gt;</i> (para frente), <i>&lt; B &gt;</i> (contra) e <i>&lt; M &gt;</i> (manual)</li>
+      <li><b>Comentário</b></li>
+      <li><b>Direção no perfil retificado</b>: "esquerda" (-1), "vertical" (0), or "direita" (+1)</li>
+      <li><b>Projeção escalonada no pefil retificado</b>: barra de rolagem para definir extensão da visada no perfil retificado (só disponível durante a visualização de perfil retificado e se a configuração <i>Especiais >> Dados topo >> Proj vis escala</i> estiver habilitada) [T]</li>
+      <li><img src="btn_duplicate.png" class="app_button"> Marcar como "duplicada"</li>
+      <li><img src="btn_surface.png" class="app_button"> Marcar como "de superfície"</li>
+      <li><img src="btn_comment.png" class="app_button"> Marcar como "comentada"</li>
+      <li><b>Ocultar a partir da base</b>: checkboxes para indicar a partir de qual base da visada a linha de trena deve ser oculta (só disponível para visadas)</li>
+      <li><b>Cor</b>: só disponível para medidas auxiliares e se a configuração <i>Especiais >> Dados medida auxiliar >> Cores aux</i> estiver habilitada</li>
+    </ul>
 
-        <p>A visada é apresentada em laranga se a medida estiver inconsistente com as outras medidas da mesma visada e em vermelho se for detectado algum indício de anomalia magnética.</p>
+    <p>
+      A visada é apresentada em laranga se a medida estiver inconsistente com as outras medidas da mesma visada e em vermelho se for detectado algum indício de anomalia magnética.
+    </p>
 
-        <p>O botão <b>Gravar</b> confirma as alterações e fecha a caixa de diálogo.</p>
+    <p>
+      O botão <b>Gravar</b> confirma as alterações e fecha a caixa de diálogo.
+    </p>
 
-        <p>Um alerta será apresentado se, após a edição da visada, ela diferir de outra visada entre as mesmas bases por mais de um quarto de seu comprimento ou 15&deg;.</p>
+    <p>
+      Um alerta será apresentado se, após a edição da visada, ela diferir de outra visada entre as mesmas bases por mais de um quarto de seu comprimento ou 15&deg;.
+    </p>
 
-        <p>Tanto o botão <b>Cancelar</b> do TopoDroidX quanto o botão <i>Voltar</i> do Android fecham a caixa de diálogo sem gravar as alterações realizadas.</p>
+    <p>
+      Tanto o botão <b>Cancelar</b> do TopoDroidX quanto o botão <i>Voltar</i> do Android fecham a caixa de diálogo sem gravar as alterações realizadas.
+    </p>
 
-        <p><b>Ocultando partes da linha de trena</b></p>
+    <h2>
+      Ocultando partes da linha de trena
+    </h2>
 
-        <p>Quando se tratar de visadas, são apresentados checkboxes para indicar a partir de qual base da visada a linha de trena deve ser ocultada.
-        As bases a partir das quais a linha de trena será ocultada serão apresentadas em vermelho ou violeta no croqui.
-        O ocultamento de partes da linha de trena pode ser desfeito na caixa de diálogo da base limítrofe.</p>
+    <p>
+      Quando se tratar de visadas, são apresentados checkboxes para indicar a partir de qual base da visada a linha de trena deve ser ocultada.
+      As bases a partir das quais a linha de trena será ocultada serão apresentadas em vermelho ou violeta no croqui.
+      O ocultamento de partes da linha de trena pode ser desfeito na caixa de diálogo da base limítrofe.
+    </p>
 
-        <p><b>Projeção de visadas no perfil retificado</b> [T]</p> 
+    <h2>
+      Projeção de visadas no perfil retificado [T]
+    </h2>
 
-        <p>No perfil retificado as visadas são, normalmente, desenhadas para a esquerda, direita ou na vertical (ou não desenhadas em absoluto).
-        A escolha entre essas opções é feita através das opções "esquerda" (-1), "vertical" (0), "direita" (-1) ou nenhuma opção marcada.</p> 
+    <p>
+      No perfil retificado as visadas são, normalmente, desenhadas para a esquerda, direita ou na vertical (ou não desenhadas em absoluto).
+      A escolha entre essas opções é feita através das opções "esquerda" (-1), "vertical" (0), "direita" (-1) ou nenhuma opção marcada.
+    </p>
 
-        <p>Quando uma visada é selecionada no perfil retificado uma barra horizontal amarela é desenhada a partir de seu ponto mediano.
-        Arrastando a partir do ponto mediano ao longo desta barra é possível alterar rapidamente a direção da visada no perfil retificado.</p>
+    <p>
+      Quando uma visada é selecionada no perfil retificado uma barra horizontal amarela é desenhada a partir de seu ponto mediano.
+      Arrastando a partir do ponto mediano ao longo desta barra é possível alterar rapidamente a direção da visada no perfil retificado.
+    </p>
 
-        <p><b>Projeção escalonada de visada no perfil retificado</b> [T]</p>
+    <h2>
+      Projeção escalonada de visada no perfil retificado [T]
+    </h2>
 
-        <p>Também é possível definir uma projeção escalonada de visadas no perfil retificado: um valor fracional entre -1,5 e 1,5 no lugar das três opções inteiras -1 (esquerda), 0 (vertical) e 1 (direita).
-        Por padrão o fator de projeção das visdas é um valor inteiro com a parte fracional zerada.
-        Através da barra de rolagem abaixo dos checkboxes das opções de direção padrão é possível alterar tanto a parte inteira quanto a fracional do fator de projeção.</p>
+    <p>
+      Também é possível definir uma projeção escalonada de visadas no perfil retificado: um valor fracional entre -1,5 e 1,5 no lugar das três opções inteiras -1 (esquerda), 0 (vertical) e 1 (direita).
+      Por padrão o fator de projeção das visdas é um valor inteiro com a parte fracional zerada.
+      Através da barra de rolagem abaixo dos checkboxes das opções de direção padrão é possível alterar tanto a parte inteira quanto a fracional do fator de projeção.
+    </p>
 
-        <p>A parte fracional do fator de projeção é zerado quando:</p>
+    <p>
+      A parte fracional do fator de projeção é zerado quando:
+    </p>
 
-        <ul>
-            <li>a direção no perfil retificado é alterada através de uma ação de multisseleção (exceto pela ação "espelhar")</li>
-            <li>a direção no perfil retificado é alterada usando a linha amarela central na tela <u>Desenho</u></li>
-            <li>a direção no perfil retificado é alterada na caixa de diálogo da tela <u>Dados topo</u></li>
-            <li>a direção no perfil retificado é definida pelo TopoDroidX</li>
-        </ul>
+    <ul>
+      <li>a direção no perfil retificado é alterada através de uma ação de multisseleção (exceto pela ação "espelhar")</li>
+      <li>a direção no perfil retificado é alterada usando a linha amarela central na tela <u>Desenho</u></li>
+      <li>a direção no perfil retificado é alterada na caixa de diálogo da tela <u>Dados topo</u></li>
+      <li>a direção no perfil retificado é definida pelo TopoDroidX</li>
+    </ul>
 
-        <p>Para poder definir um fator de projeção fracional a configuração <i>Especiais >> Dados topo >> Proj vis escala</i> precisa estar habilitada.
-        Como a maioria dos programas de desenho de mapas não tem suporte para uma projeção escalonada, essa opção é desabilitada por padrão.</p>
+    <p>
+      Para poder definir um fator de projeção fracional a configuração <i>Especiais >> Dados topo >> Proj vis escala</i> precisa estar habilitada.
+      Como a maioria dos programas de desenho de mapas não tem suporte para uma projeção escalonada, essa opção é desabilitada por padrão.
+    </p>
 
-        <p><b>Cor medidas auxiliares</b> [T]</p>
+    <h2>
+      Cor medidas auxiliares [T]
+    </h2>
 
-        <p>É possível atribuir uma cor a cada medida auxiliar.
-        A cor é armazenada no banco de dados sendo, dessa maneira, compartilhada entre os vários croquis.</p>
+    <p>
+      É possível atribuir uma cor a cada medida auxiliar.
+      A cor é armazenada no banco de dados sendo, dessa maneira, compartilhada entre os vários croquis.
+    </p>
 
-        <p>A funcionalidade de coloração de medidas auxiliares é controlada pela configuração <i>Especiais >> Dados medida auxiliar >> Cores aux</i> [T]: nenhuma, livre ou paleta.</p>
+    <p>
+      A funcionalidade de coloração de medidas auxiliares é controlada pela configuração <i>Especiais >> Dados medida auxiliar >> Cores aux</i> [T]: nenhuma, livre ou paleta.
+    </p>
 
-        <p>A caixa de diálogo de cor tem um botão através do qual é possível remover a cor específica da medida auxiliar.</p>
-        
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
-        
-        <footer class="padrao">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-        </footer>
-          
-    </body>
+    <p>
+      A caixa de diálogo de cor tem um botão através do qual é possível remover a cor específica da medida auxiliar.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer class="padrao">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
-
