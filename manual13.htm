@@ -21,7 +21,6 @@
           <li><a href="#export_csv">CSV</a></li>
           <li><a href="#export_dxf">DXF</a></li>
           <li><a href="#export_geojson">GeoJSON</a></li>
-          <li><a href="#export_ghtopo">GHTopo</a></li>
           <li><a href="#export_gpx">GPX</a></li>
           <li><a href="#export_grottolf">Grottolf</a></li>
           <li><a href="#export_kml">KML</a></li>
@@ -47,7 +46,6 @@
           <li><a href="#export_sketch_shp">SHP (ShapeFile)</a></li>
           <li><a href="#export_sketch_svg">SVG</a></li>
           <li><a href="#export_sketch_th2">Therion</a></li>
-          <li><a href="#export_sketch_tunnel">Tunnel</a></li>
           <li><a href="#export_sketch_xvi">XVI (xTherion)</a></li>
         </ul>
       </li>
@@ -196,7 +194,6 @@
     <ul>
       <li><a href="#export_compass">Compass</a></li>
       <li><a href="#export_csurvey">cSurvey</a></li>
-      <li><a href="#export_ghtopo">GHTopo</a></li>
       <li><a href="#export_grottolf">Grottolf</a></li>
       <li><a href="#export_ptopo">PocketTopo</a></li>
       <li><a href="#export_polygon">Polygon</a></li>
@@ -495,12 +492,6 @@
       Pontos com coordenadas geográficas são exportados como lat-long.
     </p>
 
-    <h3 id="export_ghtopo">GHTopo (.gtx)</h3>
-
-    <p>
-      Os dados da topo podem ser exportados no formato <i>GHTopo</i> (testado parcialmente).
-    </p>
-
     <h3 id="export_grottolf">Grottolf (.grt)</h3>
 
     <p>
@@ -752,7 +743,6 @@
       <li><a href="#export_sketch_shp">SHP (ShapeFile)</a></li>
       <li><a href="#export_sketch_svg">SVG</a></li>
       <li><a href="#export_sketch_th2">Therion</a></li>
-      <li><a href="#export_sketch_tunnel">Tunnel</a></li>
       <li><a href="#export_sketch_xvi">XVI (xTherion)</a></li>
     </ul>
 
@@ -845,30 +835,6 @@
     <p>
       Imagens no formato XVI não são automaticamente exportadas com os arquivos "th2" do Therion mesmo que seja incluído o comando xTherion para lê-las pois essas imagens não possuem nenhuma informação além da já presente no arquivo "th2".
       O comando de leitura de imagem XVI pode ser usado para carregar no xTherion uma imagem XVI criada por outro programa.
-    </p>
-
-    <h3 id="export_sketch_tunnel">Tunnel (.xml)</h3>
-
-    <p>
-      Os croquis podem ser exportados no formato <i>Tunnel</i> (.xml).
-    </p>
-
-    <p>
-      Os arquivos são gravados no subdiretório "tnl".
-    </p>
-
-    <p>
-      Os tipos de linhas abaixo são convertidos para linhas Tunnel: parede, presumida, poço, chaminé e rampa (desnível).
-      Todos os outros tipos de linhas são convertidos para linhas Tunnel do tipo "details".
-    </p>
-
-    <p>
-      Bordas de áreas são convertidas para linhas Tunnel do tipo "filled".
-    </p>
-
-    <p>
-      Os seguintes tipos de pontos são convertidos para pontos Tunnel: água, areia, argila, arqueo, blocos, canudo, coluna, corrente de ar, cortina, escorrimento, estalactite, estalagmite, fluxo de água, gradiente, guâno, lama, pipoca e seixos.
-      Todos os outros tipos de pontos são convertidos para pontos Tunnel do tipo "bedrock".
     </p>
 
     <h3 id="export_sketch_xvi">xTherion (.xvi)</h3>
@@ -1244,7 +1210,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">f1b852a0e</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">7b4b7df09</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
