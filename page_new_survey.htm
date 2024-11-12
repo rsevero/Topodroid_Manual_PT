@@ -1,109 +1,123 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h1>Nova topo</h1>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>
+      Nova topo
+    </h1>
 
-        <p>
-            Esta caixa de diálogo é apresentada ao clicar-se no botão <i>Adicionar</i> <img src="btn_plus.png" class="app_button"> na tela <u>Principal</u>.
-        </p>
+    <p>
+      Esta caixa de diálogo é apresentada ao clicar-se no botão <i>Adicionar</i> <img src="btn_plus.png" class="app_button"> na tela <u>Principal</u>.
+    </p>
 
-        <p>
-            Informações sobre a nova topo:
-        </p>
+    <p>
+      Informações sobre a nova topo:
+    </p>
 
-        <ul>
-            <li><i>Nome</i></li>
-            <li><i>Data</i></li>
-            <li><i>Equipe</i></li>
-            <li><i>Base inicial</i></li>
-            <li><i>Declinação magnética</i></li>
-            <li><i>Descrição</i></li>
-            <li><i>Cortes não compartilhados</i></li>
-            <li><i>Modo mergulho de dados</i> [T]: disponível se a configuração <i>Especiais > Dados topo > Modo mergulho</i> estiver ativada.</li>
-        </ul>
+    <ul>
+      <li><i>Nome</i></li>
+      <li><i>Data</i></li>
+      <li><i>Equipe</i></li>
+      <li><i>Base inicial</i></li>
+      <li><i>Declinação magnética</i></li>
+      <li><i>Descrição</i></li>
+      <li><i>Cortes não compartilhados</i></li>
+      <li><i>Modo mergulho de dados</i> [T]: disponível se a configuração <i>Especiais > Dados topo > Modo mergulho</i> estiver ativada.</li>
+    </ul>
 
-        <p>
-            O <i>nome</i> é obrigatório.
-            Os nomes das topos são usados para listar as topos na <u>Tela principal</u> e o TopoDroidX distingue as topos pelo nome (embora cada topo tenha um id numérico único no banco de dados).
-            O nome deve ser único no banco de dados.
-            Nomes que diferem somente pela caixa de letras não são diferentes porque o sistema de arquivos é insensível à caixa de letras.
-            O TopoDroidX apresenta um alerta se o novo nome de topo coincide com o nome de uma topo existente exceto pela caixa de letras.
-        </p>
+    <p>
+      O <i>nome</i> é obrigatório.
+      Os nomes das topos são usados para listar as topos na <u>Tela principal</u> e o TopoDroidX distingue as topos pelo nome (embora cada topo tenha um id numérico único no banco de dados).
+      O nome deve ser único no banco de dados.
+      Nomes que diferem somente pela caixa de letras não são diferentes porque o sistema de arquivos é insensível à caixa de letras.
+      O TopoDroidX apresenta um alerta se o novo nome de topo coincide com o nome de uma topo existente exceto pela caixa de letras.
+    </p>
 
-        <p>
-            <b>ALERTA: </b>O nome da topo não pode conter espaços, nem os caracteres '/' (barra, que é o separador de diretórios), ':' (dois pontos), '*' (asterisco) e '\' (barra invertida).
-            Barras invertidas são eliminadas.
-            Espaços são substituídos por '_' (sublinhado), barras e dois pontos por hífens '-', e asteriscos por '+' (mais).
-        </p>
+    <p>
+      <b>ALERTA: </b>O nome da topo não pode conter espaços, nem os caracteres '/' (barra, que é o separador de diretórios), ':' (dois pontos), '*' (asterisco) e '\' (barra invertida).
+      Barras invertidas são eliminadas.
+      Espaços são substituídos por '_' (sublinhado), barras e dois pontos por hífens '-', e asteriscos por '+' (mais).
+    </p>
 
-        <p>
-            A <i>data</i> é escrita no formato "aaaa.mm.dd".
-            Por exemplo, 6 de janeiro de 2015 é "2015.01.06".
-            É pré-definida para a data atual.
-        </p>
+    <p>
+      A <i>data</i> é escrita no formato "aaaa.mm.dd".
+      Por exemplo, 6 de janeiro de 2015 é "2015.01.06".
+      É pré-definida para a data atual.
+    </p>
 
-        <p>
-            O campo <i>equipe</i> é obrigatório e não pode ser deixado em branco.
-        </p>
+    <p>
+      O campo <i>Equipe</i> pode ser um texto simples com os nomes dos integrantes da equipe, ou os nomes podem ser separados por vírgula ou ponto e vírgula para melhor exportação para Therion/Survex.
+      Também é possível usar a caixa de diálogo <a href="page_team.htm">Equipe</a> para inserir cada um dos nomes dos integrantes da equipe.
+    </p>
 
-        <p>
-            O campo <i>base inicial [0]</i> não é obrigatório.
-            Caso seja deixado em branco a base inicial é definida por padrão como <i>0 (zero)</i>, e a primeira medida é considerada <i>DE 0 PARA 1</i> (podendo ser alterado manualmente caso necessário).
-        </p>
+    <p>
+      A configuração <i>Especiais > Nomes equipe</i> controla como o campo equipe deve ser preenchido e como ele é tratado nas exportações.
+    </p>
 
-        <p>
-            A <i>declinação magnética</i> é "não definida" por padrão.
-            Se você sabe a declinação magnética você pode entrar aqui, caso contrário você pode procurar na web depois de ter encontrado as coordenadas de um ponto fixo (digamos, a entrada da caverna) com o GNSS [A].
-            A declinação deve ser inserida em graus decimais.
-            O intervalo aceito de valores é [-360°, 360°].
-            Qualquer valor fora deste intervalo é considerado como "não definido".
-        </p>
+    <p>
+      O campo <i>Equipe</i> deve ser preenchido, caso contrário a caixa de diálogo apresenta um aviso ao ser salva.
+      O campo <i>Equipe</i> pode ser forçado a ficar vazio pressionando o botão "Gravar" uma segunda vez.
+    </p>
 
-        <p>
-            A <i>descrição</i> pode ser deixada vazia mas é uma boa prática escrever uma descrição para a topo.
-        </p>
+    <p>
+      O campo <i>base inicial [0]</i> não é obrigatório.
+      Caso seja deixado em branco a base inicial é definida por padrão como <i>0 (zero)</i>, e a primeira medida é considerada <i>DE 0 PARA 1</i> (podendo ser alterado manualmente caso necessário).
+    </p>
 
-        <p>
-            Se a caixa de seleção <i>Cortes não compartilhados</i> estiver marcada, os cortes de seção transversal (x-sections) não são compartilhados entre os croquis da topo.
-            Se a caixa de seleção não estiver marcada, os cortes de seção transversal são compartilhados entre os croquis da topo.
-            Esta escolha deve ser feita quando a topo é criada e não pode ser modificada posteriormente porque afeta os croquis existentes.
-        </p>
+    <p>
+      A <i>declinação magnética</i> é "não definida" por padrão.
+      Se você sabe a declinação magnética você pode entrar aqui, caso contrário você pode procurar na web depois de ter encontrado as coordenadas de um ponto fixo (digamos, a entrada da caverna) com o GNSS [A].
+      A declinação deve ser inserida em graus decimais.
+      O intervalo aceito de valores é [-360°, 360°].
+      Qualquer valor fora deste intervalo é considerado como "não definido".
+    </p>
 
-        <p>
-            O <i>modo mergulho de dados</i> é um recurso experimental.
-            Os dados podem ser inseridos somente manualmente, e no seguinte formato:
-            <ul>
-                <li>Base DE</li>
-                <li>Base PARA</li>
-                <li>Profundidade na base DE</li>
-                <li>Azimute da direção DE-PARA</li>
-                <li>Distância entre as bases DE e PARA</li>
-                <li>EDTC na base DE (opcional)</li>
-            </ul>
-        </p>
+    <p>
+      A <i>descrição</i> pode ser deixada vazia mas é uma boa prática escrever uma descrição para a topo.
+    </p>
 
-        <p>
-            No modo mergulho não são aceitas contravisadas.
-        </p>
+    <p>
+      Se a caixa de seleção <i>Cortes não compartilhados</i> estiver marcada, os cortes de seção transversal (x-sections) não são compartilhados entre os croquis da topo.
+      Se a caixa de seleção não estiver marcada, os cortes de seção transversal são compartilhados entre os croquis da topo.
+      Esta escolha deve ser feita quando a topo é criada e não pode ser modificada posteriormente porque afeta os croquis existentes.
+    </p>
 
-        <h2>Botões</h2>
+    <p>
+      O <i>modo mergulho de dados</i> é um recurso experimental.
+      Os dados podem ser inseridos somente manualmente, e no seguinte formato:
+      <ul>
+        <li>Base DE</li>
+        <li>Base PARA</li>
+        <li>Profundidade na base DE</li>
+        <li>Azimute da direção DE-PARA</li>
+        <li>Distância entre as bases DE e PARA</li>
+        <li>EDTC na base DE (opcional)</li>
+      </ul>
+    </p>
 
-        <ul>
-            <li><i>Abrir</i>: salva e abre a tela <i>Dados medidas</i> imediatamente.</li>
-            <li><i>Gravar</i>: a nova topo é adicionada ao banco de dados.</li>
-        </ul>
+    <p>
+      No modo mergulho não são aceitas contravisadas.
+    </p>
 
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
+    <h2>
+      Botões
+    </h2>
 
-        <footer class="padrao">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-04</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">9c277c159</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
-        </footer>
+    <ul>
+      <li><i>Abrir</i>: salva e abre a tela <i>Dados medidas</i> imediatamente.</li>
+      <li><i>Gravar</i>: a nova topo é adicionada ao banco de dados.</li>
+    </ul>
 
-    </body>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer class="padrao">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-04</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">4bdeb2e02</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>

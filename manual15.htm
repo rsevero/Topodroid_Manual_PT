@@ -168,12 +168,6 @@
       Essa funcionalidade é controlada pela configuração <i>Importar/Exportar >> GPX track único</i>.
     </p>
 
-    <!-- <p>
-      O modelo é exportado em um sistema de referência métrica projetada centralizada no primeiro ponto com coordenadas geográficas.
-      O eixo Y é o norte magnético ou geográfico a depender de a declinação magnética ter sido definida ou não.
-      Se o modelo for georeferenciado, o centro terá um deslocamento calculado a partir do meridiano central e do equador.
-    </p> -->
-
     <p>
       Se o modelo estiver georeferenciado as exportações KML, GPX e shapefile são exportadas com coordenadas geográficas WGS84.
     </p>
@@ -240,22 +234,70 @@
     <h3>Superfície</h3>
 
     <p>
-      Se o modelo 3D (Therion ou Loch) contar com dados de superfície (Digital Elevation Model/DEM) a superfície será apresentada em cinza ou com textura (se disponível).
+      Para modelos Topodroid, uma superfície (Modelo Digital de Elevação) pode ser adicionada a partir de um arquivo DEM.
+      Se modelos Therion ou Loch carregados externamente contiverem dados de superfície (Modelo Digital de Elevação e opcionalmente uma textura), a superfície pode ser apresentada em cinza ou com a textura.
     </p>
 
     <p>
-      A caixa de diálogo de superfície conta com um botão para carregar um arquivo DEM.
-      Os formatos suportados são ascii (.asc ou .ascii) e grade therion (.grid).
-      Somente a parte relevante do arquivo DEM é carregado.
+      A caixa de diálogo de superfície tem um botão para carregar um arquivo DEM a partir de um arquivo.
+      Os formatos suportados são ASCII (extensões .asc ou .ascii) e grade Therion (extensão .grid).
     </p>
 
     <p>
-      A topo e os dados DEM devem estar no mesmo Sistema Cartográfico de Referência de Coordenadas.
-      Se a topo tiver somente coordenadas long-lat (WGS84), o datum WGS84 será usado.
+      Somente a parte relevante do arquivo DEM é carregada.
+      A extensão do DEM deve cobrir toda a área do modelo.
     </p>
 
     <p>
-      A área representada pelo DEM deve cobrir a área do modelo 3D.
+      O arquivo no formato ESRI ASCII deve conter um cabeçalho como no exemplo a seguir:
+    </p>
+
+    <pre>
+      ncols 374
+      nrows 225
+      xllcorner 7.444608
+      yllcorner 46.947922
+      cellsize 0.000213
+      NODATA_value -99.00
+      567.1 567.2 ...
+      ...
+    </pre>
+
+    <p>
+      Se o número de linhas ou colunas for negativo, os dados estão em ordem reversa.
+      Essa opção não está incluída no formato ESRI original!
+    </p>
+
+    <p>
+      O arquivo Therion grid deve conter um cabeçalho como no exemplo a seguir e pode conter comentários em linhas iniciadas com "#":
+    </p>
+
+    <pre>
+      grid 7.444608 46.947922 0.000213 0.000213 374 225
+      567.1 567.2 ...
+      ...
+    </pre>
+
+    <h3>
+      Sistemas de Referência de Coordenadas (CRS - <i>Coordinate Reference Systems</i>):
+    </h3>
+
+    <p>
+      As bases fixas da topo e o arquivo de dados DEM devem estar no mesmo Sistema  (cartográfico) de Referência de Coordenadas.
+    </p>
+
+    <p>
+      Por padrão, é utilizado o WGS84, então as coordenadas e o tamanho da célula devem ser informados em graus (com seis ou mais casas decimais para uma boa acurácia).
+    </p>
+
+    <p>
+      Para usar um CRS diferente, todas as bases fixas devem ser transformadas para esse outro CRS usando o botão "Converter" na respectiva caixa de diálogo "Geo-Pontos".
+      Aviso: o app "Proj4" deve estar instalado (não use a versão da Play Store mas sim a versão mais atual do site do Topodroid).
+      Verifique a caixa de diálogo INFO do Visualizador 3D para verificar se o CRS requerido está efetivamente em uso.
+    </p>
+
+    <p>
+      Os dados DEM devem estar agora nesse sistema de referência ao invés de WGS-84 (dependendo do CRS usado, o tamanho da célula pode estar agora em metros).
     </p>
 
     <p>
@@ -386,7 +428,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-25</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">63c3fc06f</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">4bdeb2e02</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
