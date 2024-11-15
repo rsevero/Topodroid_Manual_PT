@@ -294,12 +294,18 @@
     </p>
 
     <p>
+      O conteúdo do campo "Equipe" é incluído comentado por padrão.
+      Se a configuração <i>Dados topo > Nomes equipe</i> estiver definida como algo diferente de "Texto simples", a informação de equipe disponível no TopoDroidX é analisada e dividida em comandos <i>team</i> do Survex.
+    </p>
+
+    <p>
       Configurações:
     </p>
     <ul>
       <li><u>Term linha Survex</u>: a terminação de linha pode ser Linux ou Windows</li>
       <li><u>Base aux Survex</u>: inclui às medidas auxiliares nos arquivos Survex exportados uma base PARA cujo nome é composto da base DE com uma letra adicionada.</li>
-      <li><u>EDTC Survex</u>: incluir EDTC nos arquivos Survex exportados.</li>
+      <li><u>EDTC</u>: incluir EDTC nos arquivos Survex exportados.</li>
+      <li><u>EPSG para cs out</u>: código EPSG a ser usado no comando "cs out" do Survex</li>
     </ul>
 
     <h3 id="export_therion">Therion (.th)</h3>
@@ -321,9 +327,8 @@
     </p>
 
     <p>
-      A equipe definida no TopoDroidX é repartida em comandos <i>team</i> do Therion.
-      Os nomes dos integrantes da equipe devem estar listados pelo último sobrenome eventualmente precedido de um nome/sequência de abreviações.
-      Por exemplo a equipe "A.W. Smith, B. Ford" será transformada em <i>team "A.W. Smith"</i> e <i>team "B. Ford"</i>.
+      O conteúdo do campo "Equipe" é incluído comentado por padrão.
+      Se a configuração <i>Dados topo > Nomes equipe</i> estiver definida como algo diferente de "Texto simples", a informação de equipe disponível no TopoDroidX é analisada e dividida em comandos <i>team</i> do Therion.
     </p>
 
     <p>
@@ -715,7 +720,7 @@
       Se você tiver definido um aplicativo personalizado para lidar com arquivos zip exportados, você pode substituir os aplicativos disponibilizados pelo sistema no compartilhamento invocado especificando sua "categoria".
       Isso é feito habilitando a opção de configuração <i>Especiais > Importar/Exportar > Cat compart zip</i>.
     </p>
-    
+
     <p>
       Os arquivos Zip exportados são armazenados no subdiretório <i>zip</i> dentro do diretório base do TopoDroidX (normalmente <i>TopoDroid</i>).
     </p>
@@ -1210,7 +1215,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-03</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">7b4b7df09</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">f223474ad</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
