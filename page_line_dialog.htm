@@ -1,76 +1,90 @@
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h1>Editor de pontos de linha</h1>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>
+      Editor de pontos de linha
+    </h1>
 
-        <p>Esta caixa de diálogo é apresentada quando o botão <i>Editar</i> <img src="btn_item.png" class="app_button"> é clicado com um ponto de uma linha já selecionado na tela <u>Desenho</u>.</p>
+    <p>
+      Esta caixa de diálogo é apresentada quando o botão <i>Editar</i> <img src="btn_item.png" class="app_button"> é clicado com um ponto de uma linha já selecionado na tela <u>Desenho</u>.
+    </p>
 
-        <h2>Propriedades</h2>
+    <h2>
+      Propriedades
+    </h2>
+    <ul>
+      <li><b>Tipo de linha</b>: o tipo não pode ser alterado para "corte"</li>
+      <li><b>Opções</b>: usado exclusivamente na exportação para o Therion</li>
+      <li>
+        <b>Contorno</b>: "fora", "dentro" ou indefinido (quando nenhuma opção é selecionada).
+        Indica se a parte a ser tornada invisível do croqui está para fora ou para dentro da linha.
+        Opção relevante para a exportação no formato Therion.
+      </li>
+      <li>
+        <b>Camadas</b>: indica em quais <a href="page_drawing_refs.htm#layers">camadas</a> o ponto será apresentado.
+        Disponível quando a opção de configuração <i>Especiais >> Desenho croqui >> Camadas</i> não for "nenhuma" [T]
+      </li>
+    </ul>
+
+    <h2>Botões</h2>
+    <ul>
+        <li><img src="btn_reverse.png" class="app_button"> <i>Inverter</i>: inverte a direção da linha. Usado na exportação para o Therion.</li>
+        <li><img src="btn_straight.png" class="app_button"> <i>Reta</i>: transforma uma linha curva (Bézier) em uma polilinha (uma linha composta de segmentos de reta consecutivos).</li>
+        <li>
+          <img src="btn_decimate.png" class="app_button"> <i>Simplificar</i>: simplifica a linha apagando pontos intermediários.
+          A quantidade de pontos das linhas pode ser reduzida apagando-se um ponto a cada dois (clique simples) ou um ponto a cada quatro (clique duplo).
+        </li>
+        <li><img src="btn_close_no.png" class="app_button"> <i>Fechar/abrir</i>: alterna a linha entre fechada e aberta (quando fechada, adiciona um ponto no final da linha com a mesma posição do ponto inicial).</li>
+        <li><i>Cancelar</i>: fecha a caixa de diálogo descartando as alterações.</li>
+        <li><i>Ok</i>: grava as alterações.</li>
+    </ul>
+
+    <h2>
+      Linha de corte
+    </h2>
+
+    <p>
+      Linhas de corte são especiais pois são associadas a cortes (tanto na forma de croquis quanto na forma de fotos).
+      Dessa maneira contam com outros campos:
+    </p>
+
+    <ul>
+      <li>
+        <i>Ícone da foto</i>: versão reduzida da foto e informações (azimute, inclinação, data e hora), se o corte contar com uma foto.
+        Clicando-se na versão reduzida, a foto é apresentada.
+      </li>
+      <li><i>comentário sobre o corte</i>: campo de texto livre.</li>
+      <li>Quatro botões de ação:
         <ul>
-            <li><b>Tipo de linha</b>: o tipo não pode ser alterado para "corte"</li>
-            <li><b>Opções</b>: usado exclusivamente na exportação para o Therion</li>
-            <li><b>Contorno</b>: "fora", "dentro" ou indefinido (quando nenhuma opção é selecionada).
-            Indica se a parte a ser tornada invisível do croqui está para fora ou para dentro da linha.
-            Opção relevante para a exportação no formato Therion.</li>
-            <li><b>Camadas</b>: indica em quais <a href="page_drawing_refs.htm#layers">camadas</a> o ponto será apresentado.
-            Disponível quando a opção de configuração <i>Especiais >> Desenho croqui >> Camadas</i> não for "nenhuma" [T]</li>
+          <li>
+            <img src="btn_photo.png" class="app_button"> <i>Foto</i>: ativa a câmera para captura de uma imagem.
+            Na janela para captura de foto, 3 botões são apresentados no canto inferior direito:
+            <ul>
+              <li><img src="btn_camera_red.png" class="app_button"> dispara a foto;</li>
+              <li><img src="btn_save_off.png" class="app_button"> inclui a foto no corte;<li> <img src="btn_clear.png" class="app_button"> descarta a foto.</li>
+            </ul>
+          </li>
+          <li><img src="btn_sketch.png" class="app_button"> <i>Croqui</i>: abre uma nova tela de desenho para o corte.</li>
+          <li><img src="btn_delete.png" class="app_button"> <i>Apagar</i>: apaga o corte</li>
+          <li>
+            <img src="btn_ok.png" class="app_button"> <i>Gravar</i>: grava as edições no campo comentário.
+            Este botão só é disponibilizado se há algum conteúdo no campo comentário ou se uma foto foi incluída no corte.
+          </li>
         </ul>
+      </li>
+    </ul>
 
-        <h2>Botões</h2>
-        <ul>
-            <li><img src="btn_reverse.png" class="app_button"> <i>Inverter</i>: inverte a direção da linha. Usado na exportação para o Therion.</li>
-            <li><img src="btn_straight.png" class="app_button"> <i>Reta</i>: transforma uma linha curva (Bézier) em uma polilinha (uma linha composta de segmentos de reta consecutivos).</li>
-            <li>
-              <img src="btn_decimate.png" class="app_button"> <i>Simplificar</i>: simplifica a linha apagando pontos intermediários.
-              A quantidade de pontos das linhas pode ser reduzida apagando-se um ponto a cada dois (clique simples) ou um ponto a cada quatro (clique duplo).
-            </li>
-            <li><img src="btn_close_no.png" class="app_button"> <i>Fechar/abrir</i>: alterna a linha entre fechada e aberta (quando fechada, adiciona um ponto no final da linha com a mesma posição do ponto inicial).</li>
-            <li><i>Cancelar</i>: fecha a caixa de diálogo descartando as alterações.</li>
-            <li><i>Ok</i>: grava as alterações.</li>
-        </ul>
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
 
-        <h2>Linha de corte</h2>
+    <footer class="padrao">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-02</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ba8b4790c</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
+    </footer>
 
-        <p>Linhas de corte são especiais pois são associadas a cortes (tanto na forma de croquis quanto na forma de fotos).
-        Dessa maneira contam com outros campos:</p>
-
-        <ul>
-            <li>
-              <i>Ícone da foto</i>: versão reduzida da foto e informações (azimute, inclinação, data e hora), se o corte contar com uma foto.
-              Clicando-se na versão reduzida, a foto é apresentada.
-            </li>
-            <li><i>comentário sobre o corte</i>: campo de texto livre.</li>
-            <li>Quatro botões de ação:
-                <ul>
-                    <li>
-                      <img src="btn_photo.png" class="app_button"> <i>Foto</i>: ativa a câmera para captura de uma imagem.
-                      Na janela para captura de foto, 3 botões são apresentados no canto inferior direito:
-                      <ul>
-                        <li><img src="btn_camera_red.png" class="app_button"> dispara a foto;</li>
-                        <li><img src="btn_save_off.png" class="app_button"> inclui a foto no corte;<li> <img src="btn_clear.png" class="app_button"> descarta a foto.</li>
-                      </ul>
-                    </li>
-                    <li><img src="btn_sketch.png" class="app_button"> <i>Croqui</i>: abre uma nova tela de desenho para o corte.</li>
-                    <li><img src="btn_delete.png" class="app_button"> <i>Apagar</i>: apaga o corte</li>
-                    <li>
-                      <img src="btn_ok.png" class="app_button"> <i>Gravar</i>: grava as edições no campo comentário.
-                      Este botão só é disponibilizado se há algum conteúdo no campo comentário ou se uma foto foi incluída no corte.
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
-
-        <footer class="padrao">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-02</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">ba8b4790c</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
-        </footer>
-
-    </body>
+  </body>
 </html>
