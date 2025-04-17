@@ -191,7 +191,7 @@
       <li><img src="btn_tools.png" class="app_button"> <i><a href="page_tools_list.htm">Escolha de símbolo</a></i>.</li>
       <li><img src="btn_splay_display_mode.png" class="app_button"> <i>modo de apresentação de medidas auxiliares</i>: como linhas ou como pontos com borda.
       </li>
-      <li><img src="btn_cont.png" class="app_button"> <i>Unir</i>: somente para linhas e se a opção <i></i> estiver desabilitada. Quando o recurso <i>Unir</i> estiver ativado, as linhas iniciadas ou terminadas próximas a outra linha do mesmo grupo se unida a ela. O recurso "Unir" não tem nenhum efeito sobre as linhas que não podem ser unidas (linha de corte, por exemplo).</li>
+      <li><img src="btn_cont.png" class="app_button"> <i>Unir</i>: somente para linhas. Quando o recurso <i>Unir</i> estiver ativado, as linhas iniciadas ou terminadas próximas a outra linha do mesmo grupo será unida a ela. O recurso "Unir" não tem nenhum efeito sobre as linhas que não podem ser unidas (linha de corte, por exemplo).</li>
     </ul>
 
     <p>
@@ -336,7 +336,7 @@
       <li><i>Bases gravadas</i>: apresenta bases gravadas em laranja.</li>
       <li><i>Só visada redesenha</i>: somente atualiza a linha de trena quando recebe novas visadas.</li>
       <li><i>Transformação afim</i>: Habilita transformação afim em croquis (altera proporções e posição).</li>
-      <li><i>Camadas</i>: usar camadas na tela de desenho. As opções são: “nenhum”, “por símbolo” e “por item”.</li>
+      <li><i>Camadas (visualizações na tela de desenho)</i>: usar camadas na tela de desenho. As opções são: “nenhum”, “por símbolo” e “por item”.</li>
       <li><i>Tam papel milimetrado</i>: ajuste de escala para papel milimetrado.</li>
       <li><i>Corte inclinado</i>: visualização de perfis de cortes inclinados.</li>
       <li><i>Projeção oblíqua</i>: ângula máximo aceito para projeções oblíquas.</li>
@@ -409,12 +409,19 @@
 
     <p>
       Um clique longo no botão <i>Escolha de símbolo</i> alternadamente liga e desliga o modo "retracejar".
-      Quando o modo "retracejar" está ativo, o indicador de linha/área no botão estará em branco.
-      A parcela retracejada da linha/área não é transformada (Bézier, unir a pontos próximos, grau de detalhamento da linha, etc.).
     </p>
 
     <p>
-      Para retracejar uma parte de uma linha, desenhe uma nova linha que comece e/ou termine próxima a essa linha.
+      Quando o modo "retracejar" está ativo, o indicador de linha/área no botão estará em branco.
+      As opções <i>Retracejar</i> e <i>Unir</i> são mutuamente exclusivas.
+    </p>
+
+    <p>
+      Linhas do tipo "corte" e todos os tipos de linhas fechadas não podem ser retracejadas
+    </p>
+
+    <p>
+      Para retracejar uma parte de uma linha, desenhe uma nova linha que comece e/ou termine próxima a essa linha. A parte retracejada de uma linha/área não sofre nenhuma transformação (curva Bèzier, simplificação, etc.) e é desenhada como trechos de linhas retas.
     </p>
 
     <p>
@@ -541,7 +548,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-04-17</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">a263be89d</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">188e7f97b</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
