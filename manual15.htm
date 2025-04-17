@@ -63,7 +63,10 @@
     <ul>
       <li><i>Projeção</i>: ajusta a distância focal da perspectiva.</li>
       <li><i>Bases</i>: liga e desliga a possibilidade de selecionar bases.</li>
-      <li><i>Cor</i>: define as cores da topo e seleciona as topos a serem apresentadas ou ocultadas.</li>
+      <li>
+        <i>Cor</i>: define as cores da topo e seleciona as topos a serem apresentadas ou ocultadas.
+        Até o Android versão 9 os nomes de bases são apresentados mesmo quando a linha de trena não é apresentada.
+      </li>
       <li><i>Grade</i>: abre a caixa de diálogo <i>Visadas visíveis</i> (apresentação de visadas de superfície, duplicadas e comentadas).</li>
     </ul>
 
@@ -112,6 +115,7 @@
           <li><i>Buffer DEM</i>: extensão do modelo de superfície DEM ao redor da topo a ser carregada do arquivo DEM.</li>
           <li><i>Tam máx DEM</i>: Tamanho máximo da superfície DEM em cada direção [padrão 400 células].</li>
           <li><i>Redução DEM</i>: Modo de redução DEM (subamostragem ou cortar) [padrão subamostragem].</li>
+          <li><i>Diretório raiz para texturas</i>: </li>
         </ul>
         </li>
         <li>
@@ -331,6 +335,11 @@
     </p>
 
     <p>
+      <b>Observação</b>: arquivos de textura GeoTIFF são lidos por código nativo, portanto o caminho de armazenamento (geralmente terminando com ":") precisa ser substituído pelo caminho do sistema de arquivos (geralmente "/sdcard/"): se isso não for especificado corretamente a textura GeoTIFF falha ao carregar.
+      O nome do arquivo GeoTIFF com o prefixo "storage" é mostrado em uma mensagem de "toast".
+    </p>
+
+    <p>
       É possível visualizar um ponto (apresentado em amarelo) na superfície informando as coordenadas leste/norte do ponto no Sistema Cartográfico de Referência de Coordenadas do modelo.
     </p>
 
@@ -427,7 +436,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-25</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">a13cff04b</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">188e7f97b</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
