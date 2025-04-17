@@ -14,8 +14,9 @@
       <li><i>DistoX</i>: primeira versão</li>
       <li><i>DistoX2</i>: segunda versão</li>
       <li><i>DistoXBLE</i>: terceira versão</li>
-      <li><i>SAP5</i>: (Shetland Attack Pony), somente os modelos com Bluetooth</li>
-      <li><i>BRIC4</i>: (Bluetooth Ruggerized Integrated Cartographer)</li>
+      <li><i>SAP5 e SAP6</i>: (Shetland Attack Pony), somente os modelos com Bluetooth</li>
+      <li><i>BRIC4 e BRIC5</i>: (Bluetooth Ruggerized Integrated Cartographer)</li>
+      <li><i>Cavway X1</i></li>
     </ul>
 
     <p>
@@ -29,7 +30,7 @@
     </p>
 
     <p>
-      SAP5 e BRIC4 somente funcionam no modo <i>contínuo</i>.
+      SAP e BRIC somente funcionam no modo <i>contínuo</i>.
     </p>
 
     <p>
@@ -42,7 +43,7 @@
     </p>
 
     <h2>
-      SAP5 - Shetland Attack Pony
+      Shetland Attack Pony (SAP)
     </h2>
 
     <p>
@@ -55,16 +56,16 @@
     </p>
 
     <p>
-      A partir desse momento o SAP5 será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
-      Aparecerá listado como "SAP XX MAC_ADDRESS" onde "XX" é o código de duas letras do SAP5, por exemplo "HG" e MAC_ADDRESS é o endereço MAC do SAP5.
+      A partir desse momento o SAP será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
+      Aparecerá listado como "SAP XX MAC_ADDRESS" onde "XX" é o código de duas letras do SAP, por exemplo "HG" e MAC_ADDRESS é o endereço MAC do SAP.
     </p>
 
     <p>
-      Para selecionar o SAP5 como dispostivo atual. clique nela na lista de dispositivos conhecidos.
+      Para selecionar o SAP como dispostivo atual. clique nela na lista de dispositivos conhecidos.
     </p>
 
     <p>
-      Enquanto conectado, o SAP5 vai transferir as medidas realizadas para o app, independente dos dados serem ou não armazenados no dispositivo.
+      Enquanto conectado, o SAP vai transferir as medidas realizadas para o app, independente dos dados serem ou não armazenados no dispositivo.
     </p>
 
     <p>
@@ -77,6 +78,10 @@
     </ul>
 
     <p>
+      O protocolo de transmissão de dados do SAP6 incluí uma confirmação.
+    </p>
+
+    <p>
       O SAP5 mantém os dados capturados em sua memória interna e podem ser obtidos através de um arquivo Survex, usando o software "SAP PonyTrainer".
     </p>
 
@@ -85,11 +90,11 @@
     </p>
 
     <h2>
-      BRIC4
+      BRIC
     </h2>
 
     <p>
-      O TopoDroidX tem suporte para o BRIC versão 4.
+      O TopoDroidX tem suporte para o BRIC versão 4 e 5.
     </p>
 
     <p>
@@ -97,16 +102,16 @@
     </p>
 
     <p>
-      A aprtir desse momento o BRIC4 será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
-      Aparecerá listado como "Bric4 CODE MAC_ADDRESS" onde CODE é o código de 4 dígitos do BRIC4, por exemplo "0039" e MAC_ADDRESS é o endereço MAC do BRIC4.
+      A partir desse momento o BRIC será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
+      Aparecerá listado como "BRICX CODE MAC_ADDRESS" onde X é 4 ou 5, CODE é o código de 4 dígitos do BRIC, por exemplo "0039" e MAC_ADDRESS é o endereço MAC do BRIC.
     </p>
 
     <p>
-      Para selecionar o BRIC4 como dispositivo atual é só clicar na linha dele na lista de dispositivos conhecidos.
+      Para selecionar o BRIC como dispositivo atual é só clicar na linha dele na lista de dispositivos conhecidos.
     </p>
 
     <p>
-      A partir do momento em que tiver sido conectado a um aparelho Android, o BRIC4 lembra da conexão, mesmo após ter sido desligado permanecendo, dessa maneira, "sempre conectado".
+      A partir do momento em que tiver sido conectado a um aparelho Android, o BRIC lembra da conexão, mesmo após ter sido desligado permanecendo, dessa maneira, "sempre conectado".
     </p>
 
     <p>
@@ -115,22 +120,22 @@
     </p>
 
     <p>
-      O protocolo de transmissão do BRIC4 incluí a confirmação do recebimento dos dados pelo Android mas <u>não incluí</u> a confirmação de recebimento dos dados pelo app.
+      O protocolo de transmissão do BRIC incluí a confirmação do recebimento dos dados pelo Android mas <u>não incluí</u> a confirmação de recebimento dos dados pelo app.
       O protocolo tem um atraso de alguns segundos entre a conexão e a primeira transmissão de dados e o TopoDroidX tem um atraso de um segundo entre o recebimento do último dado antes de fechar a conexão.
       Dessa maneira normalmente nenhum dado será perdido mas isso não é garantido e medidas <u>são perdidas</u> se o app não for avisado pelo Android antes de que a próxima medida seja recebida.
     </p>
 
     <p>
-      O BRIC4 armazena os dados na sua memória interna em arquivos csv.
+      O BRIC armazena os dados na sua memória interna em arquivos csv.
       Se conectado a um computador através de um cabo USB, o dispositivo aparece como um dispositivo de memória externo e os arquivos csv podem ser copaidos para o computador.
     </p>
 
     <p>
-      A calibração do BRIC4 é realizada pelo prórpio dispositivo e não depende de um app externo.
+      A calibração do BRIC é realizada pelo prórpio dispositivo e não depende de um app externo.
     </p>
 
     <p>
-      O BRIC4 pode ser controlado através do app.
+      O BRIC pode ser controlado através do app.
       É possível ligar e desligar o laser além de disparar a captura de medidas.
       O BRIC4 tem também o modo "escanear" onde medidas são capturadas continuamente, uma por segundo aproximadamente.
     </p>
@@ -147,7 +152,34 @@
     </ul>
 
     <p>
-      Quando todos os dados são recebidos, o TopoDroidX armazena os códigos de erro do BRIC4 e seus valores no comentário da medida.
+      Quando todos os dados são recebidos, o TopoDroidX armazena os códigos de erro do BRIC e seus valores no comentário da medida.
+    </p>
+
+    <h2>
+      Cavway
+    </h2>
+
+    <p>
+      O TopoDroidX tem suporte para o Cavway versão X1.
+    </p>
+
+    <p>
+      O dispositivo deve ter sido previamente pareado com o Android usando o app <i>Configurações</i> do Android.
+    </p>
+
+    <p>
+      A partir desse momento o Cavway será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
+      Aparecerá listado como "CVWYn CODE MAC_ADDRESS" onde "n" é 1, para "X1", CODE é o código de 4 dígitos do Cavway, por exemplo "0002" e MAC_ADDRESS é o endereço MAC do Cavway.
+    </p>
+
+    <p>
+      Para selecionar o Cavway como dispositivo atual é só clicar na linha dele na lista de dispositivos conhecidos.
+    </p>
+
+    <p>
+      A calibração do Cavway é realizada pelo próprio dispositivo e não depende de um app externo.
+      Entretanto os dados de calibração podem ser baixados no app, e a calibração pode ser computada no TopoDroidX, e enviada para o dispositivo.
+      O cálculo da calibração no Cavway e no TopoDroidX são iguais.
     </p>
 
     <p>
@@ -157,7 +189,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">0fcd4b4b4</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
