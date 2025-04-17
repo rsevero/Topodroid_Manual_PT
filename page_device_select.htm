@@ -1,109 +1,166 @@
 
 <html>
-    <body>
-        <link rel="stylesheet" href="manual.css">
-        <h3>SELECIONAR DISPOSITIVO</h3>
+  <body>
+    <link rel="stylesheet" href="manual.css">
+    <h1>
+      Selecionar dispositivo
+    </h1>
 
-        <p>O TopoDroidX suporta os seguintes dispositivos:</p>
+    <p>
+      O TopoDroidX suporta os seguintes dispositivos:
+    </p>
 
-        <ul>
-            <li><i>DistoX</i>: primeira versão</li>
-            <li><i>DistoX2</i>: segunda versão</li>
-            <li><i>DistoXBLE</i>: terceira versão</li>
-            <li><i>SAP5</i>: (Shetland Attack Pony), somente os modelos com Bluetooth</li>
-            <li><i>BRIC4</i>: (Bluetooth Ruggerized Integrated Cartographer)</li>
-        </ul>
+    <ul>
+      <li><i>DistoX</i>: primeira versão</li>
+      <li><i>DistoX2</i>: segunda versão</li>
+      <li><i>DistoXBLE</i>: terceira versão</li>
+      <li><i>SAP5</i>: (Shetland Attack Pony), somente os modelos com Bluetooth</li>
+      <li><i>BRIC4</i>: (Bluetooth Ruggerized Integrated Cartographer)</li>
+    </ul>
 
-        <p>Todos os dispositivos devem ser previamente pareados com o Android.</p>
+    <p>
+      Todos os dispositivos devem ser previamente pareados com o Android.
+    </p>
 
-        <p>Normalmente o TopoDroidX trabalha com um só dispositivo por vez.
-        Os dados podem ser baixados continuamente (modo <i>contínuo</i>) ou em lotes (modo <i>por demanda</i>).
-        A diferença entre os dois modos é que no modo <i>contínuo</i> permanece ativo após o download dos dados ter terminado ou mesmo a conexão ao dispositivo ter sido fechada enquanto no modo <i>por demanda</i> o download é finalizado.</p>
+    <p>
+      Normalmente o TopoDroidX trabalha com um só dispositivo por vez.
+      Os dados podem ser baixados continuamente (modo <i>contínuo</i>) ou em lotes (modo <i>por demanda</i>).
+      A diferença entre os dois modos é que no modo <i>contínuo</i> permanece ativo após o download dos dados ter terminado ou mesmo a conexão ao dispositivo ter sido fechada enquanto no modo <i>por demanda</i> o download é finalizado.
+    </p>
 
-        <p>SAP5 e BRIC4 somente funcionam no modo <i>contínuo</i>.</p>
+    <p>
+      SAP5 e BRIC4 somente funcionam no modo <i>contínuo</i>.
+    </p>
 
-        <p>Com as DistoXs o TopoDroidX pode trabalhar com mais de um dispositov ao mesmo tempo apesar de que os dados sõ são baixados de um dispositivo por vez.</p>
+    <p>
+      Com as DistoXs o TopoDroidX pode trabalhar com mais de um dispositov ao mesmo tempo apesar de que os dados sõ são baixados de um dispositivo por vez.
+    </p>
 
-        <p>O modo de <i>download de dados</i> deve ser alterado para <i>multi</i>.
-        Quando isso é feito, um clique longo no botão <i>download</i> abre a caixa de diálogo para escolher de qual DistoX se quer baixar dados.</p>
+    <p>
+      O modo de <i>download de dados</i> deve ser alterado para <i>multi</i>.
+      Quando isso é feito, um clique longo no botão <i>download</i> abre a caixa de diálogo para escolher de qual DistoX se quer baixar dados.
+    </p>
 
-        <p><b>SAP5 - Shetland Attack Pony</b></p>
+    <h2>
+      SAP5 - Shetland Attack Pony
+    </h2>
 
-        <p>O TopoDroidX tem suporte para o Shetland Attack Pony, versão 5 (SAP5) com bluetooth.</p>
+    <p>
+      O TopoDroidX tem suporte para o Shetland Attack Pony, versão 5 (SAP5) com bluetooth.
+    </p>
 
-        <p>O dispositivo deve ter sido previamente pareado com o Android usando o app <i>Configurações</i> do Android.
-        O código PIN é "000000" (seis zeros).</p>
+    <p>
+      O dispositivo deve ter sido previamente pareado com o Android usando o app <i>Configurações</i> do Android.
+      O código PIN é "000000" (seis zeros).
+    </p>
 
-        <p>A partir desse momento o SAP5 será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
-        Aparecerá listado como "SAP XX MAC_ADDRESS" onde "XX" é o código de duas letras do SAP5, por exemplo "HG" e MAC_ADDRESS é o endereço MAC do SAP5.</p>
+    <p>
+      A partir desse momento o SAP5 será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
+      Aparecerá listado como "SAP XX MAC_ADDRESS" onde "XX" é o código de duas letras do SAP5, por exemplo "HG" e MAC_ADDRESS é o endereço MAC do SAP5.
+    </p>
 
-        <p>Para selecionar o SAP5 como dispostivo atual. clique nela na lista de dispositivos conhecidos.</p>
+    <p>
+      Para selecionar o SAP5 como dispostivo atual. clique nela na lista de dispositivos conhecidos.
+    </p>
 
-        <p>Enquanto conectado, o SAP5 vai transferir as medidas realizadas para o app, independente dos dados serem ou não armazenados no dispositivo.</p>
+    <p>
+      Enquanto conectado, o SAP5 vai transferir as medidas realizadas para o app, independente dos dados serem ou não armazenados no dispositivo.
+    </p>
 
-        <p>O protocolo de transmissão do SAP5 não inclui uma confirmação do recebimento dos dados, dessa maneira:</p>
-        
-        <ul>
-            <li>se o SAP5 não estiver conectado, os dados <u>não são transferidos</u> para o app.</li>
-            <li>no momento em que o SAP5 for conectado os dados ainda não transferidos <u>não serão transferidos</u> para o app.</li>
-        </ul>
+    <p>
+      O protocolo de transmissão do SAP5 não inclui uma confirmação do recebimento dos dados, dessa maneira:
+    </p>
 
-        <p>O SAP5 mantém os dados capturados em sua memória interna e podem ser obtidos através de um arquivo Survex, usando o software "SAP PonyTrainer".</p>
+    <ul>
+      <li>se o SAP5 não estiver conectado, os dados <u>não são transferidos</u> para o app.</li>
+      <li>no momento em que o SAP5 for conectado os dados ainda não transferidos <u>não serão transferidos</u> para o app.</li>
+    </ul>
 
-        <p>A calibração do SAP5 é realizada através do próprio dispostivo e não utiliza um app externo.</p>
+    <p>
+      O SAP5 mantém os dados capturados em sua memória interna e podem ser obtidos através de um arquivo Survex, usando o software "SAP PonyTrainer".
+    </p>
 
-        <p><b>BRIC4</b></p>
+    <p>
+      A calibração do SAP5 é realizada através do próprio dispostivo e não utiliza um app externo.
+    </p>
 
-        <p>O TopoDroidX tem suporte para o BRIC versão 4.</p>
+    <h2>
+      BRIC4
+    </h2>
 
-        <p></p>
-        <p>O dispositivo deve ter sido previamente pareado com o Android usando o app <i>Configurações</i> do Android.</p>
+    <p>
+      O TopoDroidX tem suporte para o BRIC versão 4.
+    </p>
 
-        <p>A aprtir desse momento o BRIC4 será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
-        Aparecerá listado como "Bric4 CODE MAC_ADDRESS" onde CODE é o código de 4 dígitos do BRIC4, por exemplo "0039" e MAC_ADDRESS é o endereço MAC do BRIC4.</p>
+    <p>
+      O dispositivo deve ter sido previamente pareado com o Android usando o app <i>Configurações</i> do Android.
+    </p>
 
-        <p>Para selecionar o BRIC4 como dispositivo atual é só clicar na linha dele na lista de dispositivos conhecidos.</p>
+    <p>
+      A aprtir desse momento o BRIC4 será apresentado na lista de dispositivos conhecidos na tela <i>Dispostivos</i>.
+      Aparecerá listado como "Bric4 CODE MAC_ADDRESS" onde CODE é o código de 4 dígitos do BRIC4, por exemplo "0039" e MAC_ADDRESS é o endereço MAC do BRIC4.
+    </p>
 
-        <p>A partir do momento em que tiver sido conectado a um aparelho Android, o BRIC4 lembra da conexão, mesmo após ter sido desligado permanecendo, dessa maneira, "sempre conectado".</p> 
+    <p>
+      Para selecionar o BRIC4 como dispositivo atual é só clicar na linha dele na lista de dispositivos conhecidos.
+    </p>
 
-        <p>Quando o TopoDroidX é conectado, as medidas armazenadas no BRIC4 são imediatamente transferidas para o Android.
-        Se o TopoDroidX não estiver conectado, os dados são mantidos em memória e transferidos quando o app for aberto.</p>
+    <p>
+      A partir do momento em que tiver sido conectado a um aparelho Android, o BRIC4 lembra da conexão, mesmo após ter sido desligado permanecendo, dessa maneira, "sempre conectado".
+    </p>
 
-        <p>O protocolo de transmissão do BRIC4 incluí a confirmação do recebimento dos dados pelo Android mas <u>não incluí</u> a confirmação de recebimento dos dados pelo app.
-        O protocolo tem um atraso de alguns segundos entre a conexão e a primeira transmissão de dados e o TopoDroidX tem um atraso de um segundo entre o recebimento do último dado antes de fechar a conexão.
-        Dessa maneira normalmente nenhum dado será perdido mas isso não é garantido e medidas <u>são perdidas</u> se o app não for avisado pelo Android antes de que a próxima medida seja recebida.</p>
+    <p>
+      Quando o TopoDroidX é conectado, as medidas armazenadas no BRIC4 são imediatamente transferidas para o Android.
+      Se o TopoDroidX não estiver conectado, os dados são mantidos em memória e transferidos quando o app for aberto.
+    </p>
 
-        <p>O BRIC4 armazena os dados na sua memória interna em arquivos csv.
-        Se conectado a um computador através de um cabo USB, o dispositivo aparece como um dispositivo de memória externo e os arquivos csv podem ser copaidos para o computador.</p>
+    <p>
+      O protocolo de transmissão do BRIC4 incluí a confirmação do recebimento dos dados pelo Android mas <u>não incluí</u> a confirmação de recebimento dos dados pelo app.
+      O protocolo tem um atraso de alguns segundos entre a conexão e a primeira transmissão de dados e o TopoDroidX tem um atraso de um segundo entre o recebimento do último dado antes de fechar a conexão.
+      Dessa maneira normalmente nenhum dado será perdido mas isso não é garantido e medidas <u>são perdidas</u> se o app não for avisado pelo Android antes de que a próxima medida seja recebida.
+    </p>
 
-        <p>A calibração do BRIC4 é realizada pelo prórpio dispositivo e não depende de um app externo.</p>
+    <p>
+      O BRIC4 armazena os dados na sua memória interna em arquivos csv.
+      Se conectado a um computador através de um cabo USB, o dispositivo aparece como um dispositivo de memória externo e os arquivos csv podem ser copaidos para o computador.
+    </p>
 
-        <p>O BRIC4 pode ser controlado através do app.
-        é possível ligar e desligar o laser além de disparar a captura de medidas.
-        O BRIC4 tem também o modo "escanear" onde medidas são capturadas continuamente, uma por segundo aproximadamente.</p>
+    <p>
+      A calibração do BRIC4 é realizada pelo prórpio dispositivo e não depende de um app externo.
+    </p>
 
-        <p>O TopoDroidX pode usar três protocolos de dados diferentes (escolhidos através da opção de configuração <i>Especiais >> Dispositivos >> Modo BRIC</i>):</p>
+    <p>
+      O BRIC4 pode ser controlado através do app.
+      É possível ligar e desligar o laser além de disparar a captura de medidas.
+      O BRIC4 tem também o modo "escanear" onde medidas são capturadas continuamente, uma por segundo aproximadamente.
+    </p>
 
-        <ul>
-            <li><i>Só principais</i>: recebe somente os dados principais (distância, azimute e inclinação) não incluindo o ID da medida atribuído pelo BRIC4.</li>
-            <li><i>Todos com índice</i>: recebe todos os dados e usa o ID atribuído pelo BRIC4.</li> 
-            <li><i>Todos sem índice</i>: recebe todos os dados mas não usa o ID atribuído pelo BRIC4.
-            O TopoDroidX cria seu próprio índice.</li> 
-        </ul>
+    <p>
+      O TopoDroidX pode usar três protocolos de dados diferentes (escolhidos através da opção de configuração <i>Especiais >> Dispositivos >> Modo BRIC</i>):
+    </p>
 
-        <p>Quando todos os dados são recebidos, o TopoDroidX armazena os códigos de erro do BRIC4 e seus valores no comentário da medida.</p>
+    <ul>
+      <li><i>Só principais</i>: recebe somente os dados principais (distância, azimute e inclinação) não incluindo o ID da medida atribuído pelo BRIC4.</li>
+      <li><i>Todos com índice</i>: recebe todos os dados e usa o ID atribuído pelo BRIC4.</li>
+      <li><i>Todos sem índice</i>: recebe todos os dados mas não usa o ID atribuído pelo BRIC4.
+      O TopoDroidX cria seu próprio índice.</li>
+    </ul>
 
-        <p>
-            <a href="manual16.htm">Principais funcionalidades</a> |
-            <a href="manual17.htm">Índice remissivo</a>
-        </p>
-        
-        <footer class="padrao">
-            <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-            <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
-            <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
-            <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
-        </footer>
-          
-    </body>
+    <p>
+      Quando todos os dados são recebidos, o TopoDroidX armazena os códigos de erro do BRIC4 e seus valores no comentário da medida.
+    </p>
+
+    <p>
+      <a href="manual16.htm">Principais funcionalidades</a> |
+      <a href="manual17.htm">Índice remissivo</a>
+    </p>
+
+    <footer class="padrao">
+      <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">efecb8977</span></p>
+      <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
+      <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
+    </footer>
+
+  </body>
 </html>
