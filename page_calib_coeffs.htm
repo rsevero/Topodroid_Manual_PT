@@ -23,12 +23,14 @@
 
     <ul>
       <li>um histograma com os erros residuais dos dados de calibração;</li>
-      <li>o erro médio (e o "delta" do algoritmo original);</li>
-      <li>o desvio padrão da distribuição de erro;</li>
-      <li>o erro máximo;</li>
+      <li>o erro médio [graus];</li>
+      <li>o "delta" do algoritmo original;</li>
+      <li>o desvio padrão da distribuição de erro [graus];</li>
+      <li>o erro máximo [graus];</li>
       <li>a quantidade de iterações necessárias para o cálculo dos coeficientes;</li>
-      <li>o ângulo médio entre o campo magnético e a vertical (mergulho magnético);</li>
-      <li>a diferença média entre os ângulos de rotação do dispositivo de medida calculada usando-se os vetores G e M disponíveis nos dados de cada grupo de medidas.</li>
+      <li>o ângulo médio entre o campo magnético e a vertical (mergulho magnético) [graus];</li>
+      <li>a diferença média entre os ângulos de rotação do dispositivo de medida calculada usando-se os vetores G e M disponíveis nos dados de cada grupo de medidas [graus];</li>
+      <li>dados estatísticos (média, desvio padrão e máximo [graus]) das diferenças das direções medidas pelos 2 sensores: somente para dispositivos com 2 conjuntos de sensores.</li>
     </ul>
 
     <p>
@@ -58,7 +60,7 @@
     </p>
 
     <p>
-      A caixa de diálogo tem um botão <i>Enviar</i> que envia os coeficientes de calibração calculados para a DistoX.
+      Após o cálculo dos coeficientes de calibração, a caixa de diálogo apresenta um botão para <b>gravar</b> os coeficientes na DistoX.
     </p>
 
     <p>
@@ -72,7 +74,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2023-06-15</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">968580d20</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">188e7f97b</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Edvard Magalhães <i>&lt;edvard3@gmail.com&gt;</i></span></p>
     </footer>
