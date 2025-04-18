@@ -1,14 +1,17 @@
 <html>
   <body>
     <link rel="stylesheet" href="manual.css">
-    <h1>Dados da foto</h1>
+    <h1>
+      Dados da foto
+    </h1>
 
     <p>
       Esta caixa de diálogo é aberta a partir do botão <i>Foto</i> <img src="btn_photo.png" class="app_button"> existente na caixa de diálogo <i>Edição de medida</i> (na tela <u>Dados topo</u>, após um clique curto em uma medida e um clique no botão <i>Mais</i>) ou quando um ponto do tipo "foto" é inserido na tela <u>Desenho</u>.
     </p>
 
     <p>
-      Na caixa de diálogo aberta, há um campo de texto para o <b>comentário</b> da foto que será tirada, e uma caixa de seleção para a escolha da implementação de câmera a ser utilizada. No caso de foto associada à medida, é indicada a visada ou medida auxiliar relacionada e, no caso da foto associada a um "ponto" no croqui, há um campo adicional para informar o tamanho.
+      Na caixa de diálogo aberta, há um campo de texto para o <b>comentário</b> da foto que será tirada.
+      No caso de foto associada à medida, é indicada a visada ou medida auxiliar relacionada e, no caso da foto associada a um "ponto" no croqui, há um campo adicional para informar o tamanho.
     </p>
 
     <p>
@@ -55,14 +58,27 @@
     </p>
 
     <p>
-      A câmera do TopoDroidX tem três botões no canto inferior direito.
+      A câmera do TopoDroidX exibe seus botões no canto inferior direito.
     </p>
 
     <ul>
-      <li><b>Câmera</b>: o ícone do botão pode estar vermelho ou azul:<ul><li><img src="btn_camera_red.png" class="app_button">: pronto, toque para tirar uma foto.</li> <li><img src="btn_photo.png" class="app_button">: em espera, toque para reativar a câmera.</li></ul></li>
-      <li><img src="btn_save_off.png" class="app_button">: salva a imagem. Desativado até que uma imagem seja tirada.</li>
+      <li><b>Câmera</b>: o ícone do botão pode estar vermelho ou azul:
+        <ul>
+          <li><img src="btn_camera_red.png" class="app_button">: pronto, toque para tirar uma foto.</li>
+          <li><img src="btn_photo.png" class="app_button">: em espera, toque para reativar a câmera.</li>
+        </ul>
+      </li>
+      <li></li>
+      <li>
+        <img src="btn_save_off.png" class="app_button">: salva a foto (JPEG) ou o desenho (PNG).
+      </li>
       <li><img src="btn_clear.png" class="app_button">: fecha a janela sem salvar a imagem.</li>
     </ul>
+
+    <p>
+      Um alerta é apresentado se a imagem JPEG não estiver disponível.
+      VocÊ deve esperar um instante e tentar novamente.
+    </p>
 
     <p>
       A câmera do TopoDroidX tem dois modos de operação: <i>retrato</i> e <i>paisagem</i>. Quando o dispositivo Android está na vertical, a imagem é capturada em formato retrato. Quando o dispositivo Android é virado para a esquerda ou para a direita, a imagem é capturada em formato paisagem.
@@ -84,15 +100,12 @@
     </p>
 
     <p>
-      A implementação padrão de câmera é a antiga.
+      Do Android versão 5 em diante o TopoDroid usa a nova interface de câmera.
+      Em sistemas mais antigos, usa a interface antiga.
     </p>
 
     <p>
       Com a nova API camera2 há um limite de cinco tentativas de captura de imagem, após o qual o botão <i>câmera</i> não está mais disponível.
-    </p>
-
-    <p>
-      Um alerta é apresentado se houver uma falha na gravação da imagem JPEG.
     </p>
 
     <p>
@@ -102,7 +115,7 @@
 
     <footer class="padrao">
       <p style="margin:0;">Última atualização: <span id="last-update-date" style="font-style: normal;">2024-06-05</span></p>
-      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">266bd6b41</span></p>
+      <p style="margin:0 0 10px 0;">Referente ao commit: <span id="last-update-commit" style="font-style: normal;">6bcf139a6</span></p>
       <p style="margin:0;">Tradução: <span id="translation" style="font-style: normal;">Rodrigo Severo<i> &lt;rsev@pm.me&gt;</i></span></p>
       <p style="margin:0;">Revisão: <span id="revision" style="font-style: normal;">Renata Andrade <i>&lt;reandrad@yahoo.com.br&gt;</i></span></p>
     </footer>
